@@ -186,9 +186,8 @@ rdf:langString rdf:type rdfs:Datatype .
 ###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#solves
 :solves rdf:type owl:ObjectProperty ;
         rdfs:domain :User ;
-        rdfs:range :Questionaire ,
-                   :RType_Exercise ,
-                   :Test .
+        rdfs:range :Assesment ,
+                   :Questionaire .
 
 
 ###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#storedIn
@@ -207,11 +206,10 @@ rdf:langString rdf:type rdfs:Datatype .
 
 ###  http://purl.org/dc/elements/1.1/title
 <http://purl.org/dc/elements/1.1/title> rdf:type owl:DatatypeProperty ;
-                                        rdfs:domain :Job ,
+                                        rdfs:domain :Assesment ,
+                                                    :Job ,
                                                     :KnowledgeTopic ,
-                                                    :RType_Exercise ,
                                                     :Skill ,
-                                                    :Test ,
                                                     <https://github.com/tibonto/educor#EducationalResource> .
 
 
@@ -231,7 +229,6 @@ rdf:langString rdf:type rdfs:Datatype .
                                        rdfs:domain :Exercise ,
                                                    :RDMTool ,
                                                    :Skill ,
-                                                   :Test ,
                                                    <https://github.com/tibonto/educor#EducationalResource> ;
                                        rdfs:range xsd:string ;
                                        rdfs:label "description"@en .
@@ -312,6 +309,11 @@ rdf:langString rdf:type rdfs:Datatype .
         <http://www.w3.org/2004/02/skos/core#example> "\\\"4\\\", 4, \\\"The answer is 4\\\""@en .
 
 
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Assesment
+:Assesment rdf:type owl:Class ;
+           rdfs:subClassOf :LearningResourceType .
+
+
 ###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#AssurePhase
 :AssurePhase rdf:type owl:Class ;
              rdfs:subClassOf :DataLifeCyclePhase .
@@ -375,7 +377,7 @@ rdf:langString rdf:type rdfs:Datatype .
 :Exercise rdf:type owl:Class ;
           owl:equivalentClass [ rdf:type owl:Restriction ;
                                 owl:onProperty :hasLearningResource ;
-                                owl:allValuesFrom :RType_Exercise
+                                owl:allValuesFrom :Assesment
                               ] ;
           rdfs:subClassOf <https://github.com/tibonto/educor#EducationalResource> .
 
@@ -513,11 +515,6 @@ rdf:langString rdf:type rdfs:Datatype .
          rdfs:comment "Research Data Management tool to be made available via the platform"@en .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#RType_Exercise
-:RType_Exercise rdf:type owl:Class ;
-                rdfs:subClassOf :LearningResourceType .
-
-
 ###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Recommendation
 :Recommendation rdf:type owl:Class .
 
@@ -570,14 +567,14 @@ rdf:langString rdf:type rdfs:Datatype .
              rdfs:subClassOf :UserRole .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Test
-:Test rdf:type owl:Class ;
-      rdfs:subClassOf :LearningResourceType .
-
-
 ###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Text
 :Text rdf:type owl:Class ;
       rdfs:subClassOf :ResourceAttachment .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#TextBook
+:TextBook rdf:type owl:Class ;
+          rdfs:subClassOf :LearningResourceType .
 
 
 ###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#User
