@@ -8,16 +8,19 @@ Select * {?learningpath ec:hasLearningGoal ?lg. ?learningpath ec:consistsOfKnowl
 – Q2(Q4): How to retrieve required OERs for a certain job skill?
 Select * {?Skill requiresKnowledgeTopic ?Kt. ?Kt hasLearningResource ?Lo}
 – Q3: How to provide an OER to a user with a specific access mode?
-```Select * {?user ec:hasProfile ?up. ?up accessibility ?ac. ?Lo accessibility ?ac}
+```
+Select * {?user ec:hasProfile ?up. ?up accessibility ?ac. ?Lo accessibility ?ac}
 SELECT * WHERE {
     ?userProfile            ec:accessibility              ?accessibility.
 		?userProfile            ec:definesLearningPath        ?learningPath.
 		?learningPath           ec:consistsOfKnowledge        ?knowledgeTopic.
 		?knowledgeTopic         ec:hasEducationalResource     ?EducationalResource.
     ?EducationalResource    ec:accessibility              ?accessibility. }
-	```
-- Q7: How to provide OERs for a specific Job? (Use case 4)
-	```SELECT * WHERE {?job ec:hasSkill ?skill. 
+```
+# Q7: How to provide OERs for a specific Job? (Use case 4)
+============
+```
+SELECT * WHERE {?job ec:hasSkill ?skill. 
 	?skill ec:requiresKnowledgeTopic ?Kt. 
 	?Kt ec:hasLearningResource ?Lo}
 ```	
