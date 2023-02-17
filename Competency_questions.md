@@ -1,13 +1,12 @@
-– Q5: What is required to generate a personalized learning path?
-- Q6: How to personalize a learning recommendation based on a user’s psychological state?
-- Q7 UC: Learnpath according to target job:
-
-=========================
-- Q1: How to retrieve OERs from multiple sources for a learning goal?
+# Q1: How to retrieve OERs from multiple sources for a learning goal?
+```
 Select * {?learningpath ec:hasLearningGoal ?lg. ?learningpath ec:consistsOfKnowledge ?Kt. ?Kt ec:hasLearningResource ?Lo} 
-– Q2(Q4): How to retrieve required OERs for a certain job skill?
+```
+# Q2(Q4): How to retrieve required OERs for a certain job skill?
+```
 Select * {?Skill requiresKnowledgeTopic ?Kt. ?Kt hasLearningResource ?Lo}
-– Q3: How to provide an OER to a user with a specific access mode?
+```
+# Q3: How to provide an OER to a user with a specific access mode?
 ```
 Select * {?user ec:hasProfile ?up. ?up accessibility ?ac. ?Lo accessibility ?ac}
 SELECT * WHERE {
@@ -17,6 +16,10 @@ SELECT * WHERE {
 		?knowledgeTopic         ec:hasEducationalResource     ?EducationalResource.
     ?EducationalResource    ec:accessibility              ?accessibility. }
 ```
+– Q5: What is required to generate a personalized learning path?
+- Q6: How to personalize a learning recommendation based on a user’s psychological state?
+- Q7 UC: Learnpath according to target job:
+
 # Q7: How to provide OERs for a specific Job? (Use case 4)
 ============
 ```
