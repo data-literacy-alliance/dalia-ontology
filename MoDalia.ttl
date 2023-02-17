@@ -1,0 +1,651 @@
+@prefix : <http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/abdel/ontologies/2023/0/modalia> .
+
+<http://www.semanticweb.org/abdel/ontologies/2023/0/modalia> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+<http://www.w3.org/2004/02/skos/core#example> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/1999/02/22-rdf-syntax-ns#langString
+rdf:langString rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#belongsToPhase
+:belongsToPhase rdf:type owl:ObjectProperty ;
+                rdfs:domain :RDMResource ;
+                rdfs:range :DataLifeCyclePhase .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#canCarryOut
+:canCarryOut rdf:type owl:ObjectProperty ;
+             rdfs:domain :Skill ;
+             rdfs:range :RDMTask .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#canPerform
+:canPerform rdf:type owl:ObjectProperty ;
+            rdfs:domain :RDMTool ;
+            rdfs:range :RDMTask .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#consistsOfKnowledge
+:consistsOfKnowledge rdf:type owl:ObjectProperty ;
+                     rdfs:domain :LearningPath ;
+                     rdfs:range :KnowledgeTopic .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#definesLearningPath
+:definesLearningPath rdf:type owl:ObjectProperty ;
+                     rdfs:domain :UserProfile ;
+                     rdfs:range :LearningPath .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#essentialFor
+:essentialFor rdf:type owl:ObjectProperty ;
+              rdfs:domain :Skill ;
+              rdfs:range :Job ;
+              rdfs:label "is essential for"@en .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#generateUserLogs
+:generateUserLogs rdf:type owl:ObjectProperty ;
+                  rdfs:domain :User ;
+                  rdfs:range :UserLogs .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#givesProficiencyLevel
+:givesProficiencyLevel rdf:type owl:ObjectProperty ;
+                       rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
+                       rdfs:range :Proficiency .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#hasAttachment
+:hasAttachment rdf:type owl:ObjectProperty ;
+               rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
+               rdfs:range :ResourceAttachment .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#hasLearningGoal
+:hasLearningGoal rdf:type owl:ObjectProperty ;
+                 rdfs:domain :LearningPath ;
+                 rdfs:range :LearningGoal .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#hasLearningResource
+:hasLearningResource rdf:type owl:ObjectProperty ;
+                     rdfs:domain :KnowledgeTopic ;
+                     rdfs:range <https://github.com/tibonto/educor#EducationalResource> .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#hasLearningType
+:hasLearningType rdf:type owl:ObjectProperty ,
+                          owl:FunctionalProperty ;
+                 rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
+                 rdfs:range :LearningResourceType .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#hasParentDomain
+:hasParentDomain rdf:type owl:ObjectProperty ;
+                 rdfs:domain :KnowledgeDomain ;
+                 rdfs:range :KnowledgeDomain .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#hasProfile
+:hasProfile rdf:type owl:ObjectProperty ;
+            rdfs:domain :User ;
+            rdfs:range :UserProfile .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#hasQuality
+:hasQuality rdf:type owl:ObjectProperty ;
+            rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
+            rdfs:range :ContentQuality .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#isLessProficientThan
+:isLessProficientThan rdf:type owl:ObjectProperty ;
+                      owl:inverseOf :isMoreProficientThan ;
+                      rdfs:domain :Proficiency ;
+                      rdfs:range :Proficiency .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#isMoreProficientThan
+:isMoreProficientThan rdf:type owl:ObjectProperty ,
+                               owl:TransitiveProperty ;
+                      rdfs:domain :Proficiency ;
+                      rdfs:range :Proficiency .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#nextPhase
+:nextPhase rdf:type owl:ObjectProperty ;
+           rdfs:domain :DataLifeCyclePhase ;
+           rdfs:range :DataLifeCyclePhase ;
+           rdfs:label "has next phase"@en .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#optionalFor
+:optionalFor rdf:type owl:ObjectProperty ;
+             rdfs:domain :Skill ;
+             rdfs:range :Job ;
+             rdfs:label "is optional for"@en .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#prerequisites
+:prerequisites rdf:type owl:ObjectProperty ;
+               rdfs:domain :KnowledgeTopic ;
+               rdfs:range :KnowledgeTopic .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#relatedTo
+:relatedTo rdf:type owl:ObjectProperty ;
+           rdfs:domain :RDMTool ;
+           rdfs:range :RDMResource .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#requiresKnowledge
+:requiresKnowledge rdf:type owl:ObjectProperty ;
+                   rdfs:domain :Skill ;
+                   rdfs:range :KnowledgeTopic .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#requiresProficiencyLevel
+:requiresProficiencyLevel rdf:type owl:ObjectProperty ;
+                          rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
+                          rdfs:range :Proficiency .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#satisfies
+:satisfies rdf:type owl:ObjectProperty ;
+           rdfs:domain :RDMTool ;
+           rdfs:range :QualityStandards ;
+           rdfs:label "satisfies"@en .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#solves
+:solves rdf:type owl:ObjectProperty ;
+        rdfs:domain :User ;
+        rdfs:range :Questionaire ,
+                   :RType_Exercise ,
+                   :Test .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#storedIn
+:storedIn rdf:type owl:ObjectProperty ;
+          rdfs:domain :AcademicParameter ,
+                      :LearningGoal ,
+                      :LearningPreference ,
+                      :Recommendation ;
+          rdfs:range :UserProfile ;
+          rdfs:label "is stored in"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:DatatypeProperty ;
+                                        rdfs:domain :Job ,
+                                                    :KnowledgeTopic ,
+                                                    :RType_Exercise ,
+                                                    :Skill ,
+                                                    :Test ,
+                                                    <https://github.com/tibonto/educor#EducationalResource> .
+
+
+###  http://purl.org/dc/elements/1.1/type
+<http://purl.org/dc/elements/1.1/type> rdf:type owl:DatatypeProperty ;
+                                       rdfs:subPropertyOf owl:topDataProperty ;
+                                       rdfs:domain :Exercise ,
+                                                   :Recommendation ,
+                                                   :Skill ;
+                                       rdfs:range rdfs:Literal ;
+                                       rdfs:label "type"@en .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:DatatypeProperty ;
+                                       rdfs:subPropertyOf owl:topDataProperty ;
+                                       rdfs:domain :Exercise ,
+                                                   :RDMTool ,
+                                                   :Skill ,
+                                                   :Test ,
+                                                   <https://github.com/tibonto/educor#EducationalResource> ;
+                                       rdfs:range xsd:string ;
+                                       rdfs:label "description"@en .
+
+
+###  http://purl.org/dc/terms/language
+<http://purl.org/dc/terms/language> rdf:type owl:DatatypeProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:DatatypeProperty ;
+                                   rdfs:domain <https://github.com/tibonto/educor#EducationalResource> .
+
+
+###  http://schema.org/email
+<http://schema.org/email> rdf:type owl:DatatypeProperty ,
+                                   owl:FunctionalProperty ;
+                          rdfs:domain :User ;
+                          rdfs:range xsd:string .
+
+
+###  http://schema.org/keywords
+<http://schema.org/keywords> rdf:type owl:DatatypeProperty ;
+                             rdfs:domain :RDMTask ,
+                                         :Skill ;
+                             rdfs:range rdf:langString ,
+                                        xsd:string .
+
+
+###  http://schema.org/name
+<http://schema.org/name> rdf:type owl:DatatypeProperty ;
+                         rdfs:domain :Contributer .
+
+
+###  http://schema.org/timeRequired
+<http://schema.org/timeRequired> rdf:type owl:DatatypeProperty ;
+                                 rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
+                                 rdfs:range xsd:dateTime .
+
+
+###  http://schema.org/url
+<http://schema.org/url> rdf:type owl:DatatypeProperty ;
+                        rdfs:domain :RDMTool ,
+                                    <https://github.com/tibonto/educor#EducationalResource> ;
+                        rdfs:range xsd:anyURI .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#studyPlan
+:studyPlan rdf:type owl:DatatypeProperty ;
+           rdfs:domain :LearningPath ;
+           rdfs:range rdf:langString .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#AcademicParameter
+:AcademicParameter rdf:type owl:Class ;
+                   <http://www.w3.org/2004/02/skos/core#example> "It contains the quantitative parameters regarding a user performance"@en .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Accessability
+:Accessability rdf:type owl:Class ;
+               rdfs:label "Accessibility"@en ;
+               <http://www.w3.org/2004/02/skos/core#example> "It describes the user access and content accessibility rights. It can be used as a plugin point to connect with other ontologies."@en .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#AnalzyePhase
+:AnalzyePhase rdf:type owl:Class ;
+              rdfs:subClassOf :DataLifeCyclePhase .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Answer
+:Answer rdf:type owl:Class ;
+        rdfs:label "Answer"@en ;
+        <http://www.w3.org/2004/02/skos/core#definition> "The input of a user in an exercise or test. It can have many different types, such as string, integer, or text."@en ;
+        <http://www.w3.org/2004/02/skos/core#example> "\\\"4\\\", 4, \\\"The answer is 4\\\""@en .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#AssurePhase
+:AssurePhase rdf:type owl:Class ;
+             rdfs:subClassOf :DataLifeCyclePhase .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Audio
+:Audio rdf:type owl:Class ;
+       rdfs:subClassOf :ResourceAttachment .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#AuthorRole
+:AuthorRole rdf:type owl:Class ;
+            rdfs:subClassOf :UserRole .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Best-Practices
+:Best-Practices rdf:type owl:Class ;
+                rdfs:subClassOf :LearningResourceType .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#CaseStudy
+:CaseStudy rdf:type owl:Class ;
+           rdfs:subClassOf :LearningResourceType .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Code
+:Code rdf:type owl:Class ;
+      rdfs:subClassOf :ResourceAttachment .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#CollectPhase
+:CollectPhase rdf:type owl:Class ;
+              rdfs:subClassOf :DataLifeCyclePhase .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#ContentQuality
+:ContentQuality rdf:type owl:Class ;
+                rdfs:label "Content Quality"@en .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Contributer
+:Contributer rdf:type owl:Class ;
+             rdfs:comment "The author of the OER"@en .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#DataLifeCyclePhase
+:DataLifeCyclePhase rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#DescribePhase
+:DescribePhase rdf:type owl:Class ;
+               rdfs:subClassOf :DataLifeCyclePhase .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#DiscoverPhase
+:DiscoverPhase rdf:type owl:Class ;
+               rdfs:subClassOf :DataLifeCyclePhase .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Exercise
+:Exercise rdf:type owl:Class ;
+          owl:equivalentClass [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasLearningResource ;
+                                owl:allValuesFrom :RType_Exercise
+                              ] ;
+          rdfs:subClassOf <https://github.com/tibonto/educor#EducationalResource> .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Experiment
+:Experiment rdf:type owl:Class ;
+            rdfs:subClassOf :LearningResourceType .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Image
+:Image rdf:type owl:Class ;
+       rdfs:subClassOf :ResourceAttachment .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#IntegratePhase
+:IntegratePhase rdf:type owl:Class ;
+                rdfs:subClassOf :DataLifeCyclePhase .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Job
+:Job rdf:type owl:Class ;
+     <http://www.w3.org/2004/02/skos/core#definition> "name of a profession"@en ;
+     <http://www.w3.org/2004/02/skos/core#example> "Software Developer"@en .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#JupyterNotebook
+:JupyterNotebook rdf:type owl:Class ;
+                 rdfs:subClassOf :LearningResourceType .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#KnowledgeDomain
+:KnowledgeDomain rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#KnowledgeTopic
+:KnowledgeTopic rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#LearningGoal
+:LearningGoal rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#LearningPath
+:LearningPath rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#LearningPreference
+:LearningPreference rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#LearningResourceType
+:LearningResourceType rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Lecture
+:Lecture rdf:type owl:Class ;
+         rdfs:subClassOf :LearningResourceType .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Organisation
+:Organisation rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Person
+:Person rdf:type owl:Class ;
+        rdfs:subClassOf :ProviderType .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#PlanPhase
+:PlanPhase rdf:type owl:Class ;
+           rdfs:subClassOf :DataLifeCyclePhase .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#PreservePhase
+:PreservePhase rdf:type owl:Class ;
+               rdfs:subClassOf :DataLifeCyclePhase .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Proficiency
+:Proficiency rdf:type owl:Class ;
+             owl:equivalentClass [ rdf:type owl:Class ;
+                                   owl:oneOf ( :Beginner
+                                               :Competent
+                                               :Expert
+                                               :Novice
+                                               :Proficient
+                                             )
+                                 ] .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Provider
+:Provider rdf:type owl:Class ;
+          rdfs:comment "Repository that proviedes OER"@en ;
+          <http://www.w3.org/2004/02/skos/core#example> "OERSI or Dataone"@en .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#ProviderType
+:ProviderType rdf:type owl:Class ;
+              rdfs:label "Provider Type"@en .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#QualityStandards
+:QualityStandards rdf:type owl:Class ;
+                  rdfs:subClassOf :RDMTask .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Question
+:Question rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Questionaire
+:Questionaire rdf:type owl:Class ;
+              rdfs:subClassOf :LearningResourceType .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#RDMResource
+:RDMResource rdf:type owl:Class ;
+             rdfs:subClassOf <https://github.com/tibonto/educor#EducationalResource> ;
+             rdfs:comment "OER related to Reseearch Data Management"@en .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#RDMSkill
+:RDMSkill rdf:type owl:Class ;
+          rdfs:subClassOf :Skill ;
+          rdfs:comment "Research Data Managment Skill"@en .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#RDMTask
+:RDMTask rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#RDMTool
+:RDMTool rdf:type owl:Class ;
+         owl:disjointWith :Skill ;
+         rdfs:comment "Research Data Management tool to be made available via the platform"@en .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#RType_Exercise
+:RType_Exercise rdf:type owl:Class ;
+                rdfs:subClassOf :LearningResourceType .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Recommendation
+:Recommendation rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#ResearcherRole
+:ResearcherRole rdf:type owl:Class ;
+                rdfs:subClassOf :UserRole .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Researchers
+:Researchers rdf:type owl:Class ;
+             rdfs:subClassOf :TargetGroup .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#ResourceAttachment
+:ResourceAttachment rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Service
+:Service rdf:type owl:Class ;
+         rdfs:subClassOf :ProviderType .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Skill
+:Skill rdf:type owl:Class ;
+       rdfs:comment "Job Skill, ability to perform some tasks."@en .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Slides
+:Slides rdf:type owl:Class ;
+        rdfs:subClassOf :ResourceAttachment .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#StudentRole
+:StudentRole rdf:type owl:Class ;
+             rdfs:subClassOf :UserRole .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Students
+:Students rdf:type owl:Class ;
+          rdfs:subClassOf :TargetGroup .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#TargetGroup
+:TargetGroup rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#TeacherRole
+:TeacherRole rdf:type owl:Class ;
+             rdfs:subClassOf :UserRole .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Test
+:Test rdf:type owl:Class ;
+      rdfs:subClassOf :LearningResourceType .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Text
+:Text rdf:type owl:Class ;
+      rdfs:subClassOf :ResourceAttachment .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#User
+:User rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#UserLogs
+:UserLogs rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#UserProfile
+:UserProfile rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#UserRole
+:UserRole rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Video
+:Video rdf:type owl:Class ;
+       rdfs:subClassOf :ResourceAttachment .
+
+
+###  http:/schema.org/Organisation
+<http:/schema.org/Organisation> rdf:type owl:Class ;
+                                rdfs:subClassOf :ProviderType .
+
+
+###  https://github.com/tibonto/educor#EducationalResource
+<https://github.com/tibonto/educor#EducationalResource> rdf:type owl:Class .
+
+
+###  https://w3id.org/ccso/ccso#LearningOutcome
+<https://w3id.org/ccso/ccso#LearningOutcome> rdf:type owl:Class ;
+                                             rdfs:comment "The learning outcomes, specific knowledge, skills and competences, which the students will acquire with the successful completion of the course." .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Beginner
+:Beginner rdf:type owl:NamedIndividual ,
+                   :Proficiency ;
+          :isMoreProficientThan :Novice .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Competent
+:Competent rdf:type owl:NamedIndividual ,
+                    :Proficiency ;
+           :isMoreProficientThan :Beginner .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Expert
+:Expert rdf:type owl:NamedIndividual ,
+                 :Proficiency ;
+        :isMoreProficientThan :Proficient .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Novice
+:Novice rdf:type owl:NamedIndividual ,
+                 :Proficiency .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Proficient
+:Proficient rdf:type owl:NamedIndividual ,
+                     :Proficiency ;
+            :isMoreProficientThan :Competent .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
