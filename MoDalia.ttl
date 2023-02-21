@@ -480,8 +480,7 @@ rdf:langString rdf:type rdfs:Datatype .
 
 
 ###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#QualityStandards
-:QualityStandards rdf:type owl:Class ;
-                  rdfs:subClassOf :RDMTask .
+:QualityStandards rdf:type owl:Class .
 
 
 ###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Question
@@ -502,7 +501,8 @@ rdf:langString rdf:type rdfs:Datatype .
 ###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#RDMSkill
 :RDMSkill rdf:type owl:Class ;
           rdfs:subClassOf :Skill ;
-          rdfs:comment "Research Data Managment Skill"@en .
+          rdfs:comment "Research Data Managment Skill"@en ;
+          <http://www.w3.org/2004/02/skos/core#definition> "The ability to carry out tasks."@en .
 
 
 ###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#RDMTask
