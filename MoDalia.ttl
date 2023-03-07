@@ -179,7 +179,7 @@ rdf:langString rdf:type rdfs:Datatype .
 ###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#satisfies
 :satisfies rdf:type owl:ObjectProperty ;
            rdfs:domain :RDMTool ;
-           rdfs:range :QualityStandards ;
+           rdfs:range :QualityStandard ;
            rdfs:label "satisfies"@en .
 
 
@@ -223,6 +223,12 @@ rdf:langString rdf:type rdfs:Datatype .
                                        rdfs:label "type"@en .
 
 
+###  http://purl.org/dc/terms/dateCreated
+<http://purl.org/dc/terms/dateCreated> rdf:type owl:DatatypeProperty ;
+                                       rdfs:domain :RDMTool ;
+                                       rdfs:range xsd:dateTime .
+
+
 ###  http://purl.org/dc/terms/description
 <http://purl.org/dc/terms/description> rdf:type owl:DatatypeProperty ;
                                        rdfs:subPropertyOf owl:topDataProperty ;
@@ -243,6 +249,24 @@ rdf:langString rdf:type rdfs:Datatype .
                                    rdfs:domain <https://github.com/tibonto/educor#EducationalResource> .
 
 
+###  http://schema.org/citation
+<http://schema.org/citation> rdf:type owl:DatatypeProperty ;
+                             rdfs:domain :RDMTool ;
+                             rdfs:range xsd:string .
+
+
+###  http://schema.org/dateModified
+<http://schema.org/dateModified> rdf:type owl:DatatypeProperty ;
+                                 rdfs:domain :RDMTool ;
+                                 rdfs:range xsd:dateTime .
+
+
+###  http://schema.org/downloadUrl
+<http://schema.org/downloadUrl> rdf:type owl:DatatypeProperty ;
+                                rdfs:domain :RDMTool ;
+                                rdfs:range xsd:anyURI .
+
+
 ###  http://schema.org/email
 <http://schema.org/email> rdf:type owl:DatatypeProperty ,
                                    owl:FunctionalProperty ;
@@ -256,6 +280,12 @@ rdf:langString rdf:type rdfs:Datatype .
                                          :Skill ;
                              rdfs:range rdf:langString ,
                                         xsd:string .
+
+
+###  http://schema.org/maintainer
+<http://schema.org/maintainer> rdf:type owl:DatatypeProperty ;
+                               rdfs:domain :RDMTool ;
+                               rdfs:range xsd:string .
 
 
 ###  http://schema.org/name
@@ -465,7 +495,9 @@ rdf:langString rdf:type rdfs:Datatype .
                                                :Novice
                                                :Proficient
                                              )
-                                 ] .
+                                 ] ;
+             <http://www.w3.org/2004/02/skos/core#definition> """Benner’s Novice to Expert
+The five stages of proficiency in the novice to expert model are: novice, advanced beginner, competent, proficient, and expert (Benner, 1982)."""@en .
 
 
 ###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Provider
@@ -479,8 +511,8 @@ rdf:langString rdf:type rdfs:Datatype .
               rdfs:label "Provider Type"@en .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#QualityStandards
-:QualityStandards rdf:type owl:Class .
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#QualityStandard
+:QualityStandard rdf:type owl:Class .
 
 
 ###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Question
