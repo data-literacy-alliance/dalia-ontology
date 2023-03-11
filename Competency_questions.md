@@ -24,7 +24,7 @@ SELECT * WHERE {
 
 ## Q7: How to provide OERs for a specific Job? (Use case 4 in proposal)
 ```
-SELECT * WHERE {?job ec:hasSkill ?skill. 
+SELECT * WHERE {?skill ec:essentialFor ?job. 
 	?skill ec:requiresKnowledgeTopic ?Kt. 
 	?Kt ec:hasLearningResource ?Lo}
 ```	
