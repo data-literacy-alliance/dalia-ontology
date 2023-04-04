@@ -1,4 +1,5 @@
 @prefix : <http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#> .
+@prefix ec: <https://github.com/tibonto/educor#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -52,14 +53,14 @@ rdf:langString rdf:type rdfs:Datatype .
 
 ###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#consistsOfKnowledge
 :consistsOfKnowledge rdf:type owl:ObjectProperty ;
-                     rdfs:domain :LearningPath ;
-                     rdfs:range :KnowledgeTopic .
+                     rdfs:domain ec:LearningPath ;
+                     rdfs:range ec:KnowledgeTopic .
 
 
 ###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#definesLearningPath
 :definesLearningPath rdf:type owl:ObjectProperty ;
                      rdfs:domain :UserProfile ;
-                     rdfs:range :LearningPath .
+                     rdfs:range ec:LearningPath .
 
 
 ###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#essentialFor
@@ -77,32 +78,32 @@ rdf:langString rdf:type rdfs:Datatype .
 
 ###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#givesProficiencyLevel
 :givesProficiencyLevel rdf:type owl:ObjectProperty ;
-                       rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
+                       rdfs:domain ec:EducationalResource ;
                        rdfs:range :Proficiency .
 
 
 ###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#hasAttachment
 :hasAttachment rdf:type owl:ObjectProperty ;
-               rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
+               rdfs:domain ec:EducationalResource ;
                rdfs:range :ResourceAttachment .
 
 
 ###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#hasLearningGoal
 :hasLearningGoal rdf:type owl:ObjectProperty ;
-                 rdfs:domain :LearningPath ;
-                 rdfs:range :LearningGoal .
+                 rdfs:domain ec:LearningPath ;
+                 rdfs:range ec:LearningGoal .
 
 
 ###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#hasLearningResource
 :hasLearningResource rdf:type owl:ObjectProperty ;
-                     rdfs:domain :KnowledgeTopic ;
-                     rdfs:range <https://github.com/tibonto/educor#EducationalResource> .
+                     rdfs:domain ec:KnowledgeTopic ;
+                     rdfs:range ec:EducationalResource .
 
 
 ###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#hasLearningType
 :hasLearningType rdf:type owl:ObjectProperty ,
                           owl:FunctionalProperty ;
-                 rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
+                 rdfs:domain ec:EducationalResource ;
                  rdfs:range :LearningResourceType .
 
 
@@ -120,7 +121,7 @@ rdf:langString rdf:type rdfs:Datatype .
 
 ###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#hasQuality
 :hasQuality rdf:type owl:ObjectProperty ;
-            rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
+            rdfs:domain ec:EducationalResource ;
             rdfs:range :ContentQuality .
 
 
@@ -154,8 +155,8 @@ rdf:langString rdf:type rdfs:Datatype .
 
 ###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#prerequisites
 :prerequisites rdf:type owl:ObjectProperty ;
-               rdfs:domain :KnowledgeTopic ;
-               rdfs:range :KnowledgeTopic .
+               rdfs:domain ec:KnowledgeTopic ;
+               rdfs:range ec:KnowledgeTopic .
 
 
 ###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#relatedTo
@@ -167,36 +168,38 @@ rdf:langString rdf:type rdfs:Datatype .
 ###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#requiresKnowledge
 :requiresKnowledge rdf:type owl:ObjectProperty ;
                    rdfs:domain :Skill ;
-                   rdfs:range :KnowledgeTopic .
+                   rdfs:range ec:KnowledgeTopic .
 
 
 ###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#requiresProficiencyLevel
 :requiresProficiencyLevel rdf:type owl:ObjectProperty ;
-                          rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
+                          rdfs:domain ec:EducationalResource ;
                           rdfs:range :Proficiency .
 
 
 ###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#satisfies
 :satisfies rdf:type owl:ObjectProperty ;
            rdfs:domain :RDMTool ;
-           rdfs:range :QualityStandards ;
+           rdfs:range :QualityStandard ;
            rdfs:label "satisfies"@en .
 
 
 ###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#solves
 :solves rdf:type owl:ObjectProperty ;
         rdfs:domain :User ;
-        rdfs:range :Questionaire ,
-                   :RType_Exercise ,
-                   :Test .
+        rdfs:range :Assesment ,
+                   :Questionaire .
 
 
 ###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#storedIn
 :storedIn rdf:type owl:ObjectProperty ;
-          rdfs:domain :AcademicParameter ,
-                      :LearningGoal ,
-                      :LearningPreference ,
-                      :Recommendation ;
+          rdfs:domain [ rdf:type owl:Class ;
+                        owl:unionOf ( ec:AcademicParameter
+                                      ec:LearningGoal
+                                      ec:LearningPreference
+                                      ec:Recommendation
+                                    )
+                      ] ;
           rdfs:range :UserProfile ;
           rdfs:label "is stored in"@en .
 
@@ -207,32 +210,45 @@ rdf:langString rdf:type rdfs:Datatype .
 
 ###  http://purl.org/dc/elements/1.1/title
 <http://purl.org/dc/elements/1.1/title> rdf:type owl:DatatypeProperty ;
-                                        rdfs:domain :Job ,
-                                                    :KnowledgeTopic ,
-                                                    :RType_Exercise ,
-                                                    :Skill ,
-                                                    :Test ,
-                                                    <https://github.com/tibonto/educor#EducationalResource> .
+                                        rdfs:domain [ rdf:type owl:Class ;
+                                                      owl:unionOf ( :Assesment
+                                                                    :Job
+                                                                    :Skill
+                                                                    ec:EducationalResource
+                                                                    ec:KnowledgeTopic
+                                                                  )
+                                                    ] .
 
 
 ###  http://purl.org/dc/elements/1.1/type
 <http://purl.org/dc/elements/1.1/type> rdf:type owl:DatatypeProperty ;
                                        rdfs:subPropertyOf owl:topDataProperty ;
-                                       rdfs:domain :Exercise ,
-                                                   :Recommendation ,
-                                                   :Skill ;
+                                       rdfs:domain [ rdf:type owl:Class ;
+                                                     owl:unionOf ( :Exercise
+                                                                   :Skill
+                                                                   ec:Recommendation
+                                                                 )
+                                                   ] ;
                                        rdfs:range rdfs:Literal ;
                                        rdfs:label "type"@en .
+
+
+###  http://purl.org/dc/terms/dateCreated
+<http://purl.org/dc/terms/dateCreated> rdf:type owl:DatatypeProperty ;
+                                       rdfs:domain :RDMTool ;
+                                       rdfs:range xsd:dateTime .
 
 
 ###  http://purl.org/dc/terms/description
 <http://purl.org/dc/terms/description> rdf:type owl:DatatypeProperty ;
                                        rdfs:subPropertyOf owl:topDataProperty ;
-                                       rdfs:domain :Exercise ,
-                                                   :RDMTool ,
-                                                   :Skill ,
-                                                   :Test ,
-                                                   <https://github.com/tibonto/educor#EducationalResource> ;
+                                       rdfs:domain [ rdf:type owl:Class ;
+                                                     owl:unionOf ( :Exercise
+                                                                   :RDMTool
+                                                                   :Skill
+                                                                   ec:EducationalResource
+                                                                 )
+                                                   ] ;
                                        rdfs:range xsd:string ;
                                        rdfs:label "description"@en .
 
@@ -243,7 +259,25 @@ rdf:langString rdf:type rdfs:Datatype .
 
 ###  http://purl.org/dc/terms/license
 <http://purl.org/dc/terms/license> rdf:type owl:DatatypeProperty ;
-                                   rdfs:domain <https://github.com/tibonto/educor#EducationalResource> .
+                                   rdfs:domain ec:EducationalResource .
+
+
+###  http://schema.org/citation
+<http://schema.org/citation> rdf:type owl:DatatypeProperty ;
+                             rdfs:domain :RDMTool ;
+                             rdfs:range xsd:string .
+
+
+###  http://schema.org/dateModified
+<http://schema.org/dateModified> rdf:type owl:DatatypeProperty ;
+                                 rdfs:domain :RDMTool ;
+                                 rdfs:range xsd:dateTime .
+
+
+###  http://schema.org/downloadUrl
+<http://schema.org/downloadUrl> rdf:type owl:DatatypeProperty ;
+                                rdfs:domain :RDMTool ;
+                                rdfs:range xsd:anyURI .
 
 
 ###  http://schema.org/email
@@ -255,10 +289,19 @@ rdf:langString rdf:type rdfs:Datatype .
 
 ###  http://schema.org/keywords
 <http://schema.org/keywords> rdf:type owl:DatatypeProperty ;
-                             rdfs:domain :RDMTask ,
-                                         :Skill ;
+                             rdfs:domain [ rdf:type owl:Class ;
+                                           owl:unionOf ( :RDMTask
+                                                         :Skill
+                                                       )
+                                         ] ;
                              rdfs:range rdf:langString ,
                                         xsd:string .
+
+
+###  http://schema.org/maintainer
+<http://schema.org/maintainer> rdf:type owl:DatatypeProperty ;
+                               rdfs:domain :RDMTool ;
+                               rdfs:range xsd:string .
 
 
 ###  http://schema.org/name
@@ -268,20 +311,20 @@ rdf:langString rdf:type rdfs:Datatype .
 
 ###  http://schema.org/timeRequired
 <http://schema.org/timeRequired> rdf:type owl:DatatypeProperty ;
-                                 rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
+                                 rdfs:domain ec:EducationalResource ;
                                  rdfs:range xsd:dateTime .
 
 
 ###  http://schema.org/url
 <http://schema.org/url> rdf:type owl:DatatypeProperty ;
                         rdfs:domain :RDMTool ,
-                                    <https://github.com/tibonto/educor#EducationalResource> ;
+                                    ec:EducationalResource ;
                         rdfs:range xsd:anyURI .
 
 
 ###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#studyPlan
 :studyPlan rdf:type owl:DatatypeProperty ;
-           rdfs:domain :LearningPath ;
+           rdfs:domain ec:LearningPath ;
            rdfs:range rdf:langString .
 
 
@@ -289,37 +332,26 @@ rdf:langString rdf:type rdfs:Datatype .
 #    Classes
 #################################################################
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#AcademicParameter
-:AcademicParameter rdf:type owl:Class ;
-                   <http://www.w3.org/2004/02/skos/core#example> "It contains the quantitative parameters regarding a user performance"@en .
-
-
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Accessability
-:Accessability rdf:type owl:Class ;
-               rdfs:label "Accessibility"@en ;
-               <http://www.w3.org/2004/02/skos/core#example> "It describes the user access and content accessibility rights. It can be used as a plugin point to connect with other ontologies."@en .
-
-
 ###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#AnalzyePhase
 :AnalzyePhase rdf:type owl:Class ;
-              rdfs:subClassOf :DataLifeCyclePhase .
+              rdfs:subClassOf :DataLifeCyclePhase ;
+              owl:disjointWith :AssurePhase ,
+                               :CollectPhase ,
+                               :DescribePhase ,
+                               :DiscoverPhase ,
+                               :IntegratePhase ,
+                               :PlanPhase ,
+                               :PreservePhase .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Answer
-:Answer rdf:type owl:Class ;
-        rdfs:label "Answer"@en ;
-        <http://www.w3.org/2004/02/skos/core#definition> "The input of a user in an exercise or test. It can have many different types, such as string, integer, or text."@en ;
-        <http://www.w3.org/2004/02/skos/core#example> "\\\"4\\\", 4, \\\"The answer is 4\\\""@en .
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Assesment
+:Assesment rdf:type owl:Class ;
+           rdfs:subClassOf :LearningResourceType .
 
 
 ###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#AssurePhase
 :AssurePhase rdf:type owl:Class ;
              rdfs:subClassOf :DataLifeCyclePhase .
-
-
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Audio
-:Audio rdf:type owl:Class ;
-       rdfs:subClassOf :ResourceAttachment .
 
 
 ###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#AuthorRole
@@ -375,19 +407,14 @@ rdf:langString rdf:type rdfs:Datatype .
 :Exercise rdf:type owl:Class ;
           owl:equivalentClass [ rdf:type owl:Restriction ;
                                 owl:onProperty :hasLearningResource ;
-                                owl:allValuesFrom :RType_Exercise
+                                owl:allValuesFrom :Assesment
                               ] ;
-          rdfs:subClassOf <https://github.com/tibonto/educor#EducationalResource> .
+          rdfs:subClassOf ec:EducationalResource .
 
 
 ###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Experiment
 :Experiment rdf:type owl:Class ;
             rdfs:subClassOf :LearningResourceType .
-
-
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Image
-:Image rdf:type owl:Class ;
-       rdfs:subClassOf :ResourceAttachment .
 
 
 ###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#IntegratePhase
@@ -397,6 +424,9 @@ rdf:langString rdf:type rdfs:Datatype .
 
 ###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Job
 :Job rdf:type owl:Class ;
+     owl:disjointWith :KnowledgeDomain ,
+                      :RDMTool ;
+     rdfs:seeAlso "http://schema.org/Occupation"@en ;
      <http://www.w3.org/2004/02/skos/core#definition> "name of a profession"@en ;
      <http://www.w3.org/2004/02/skos/core#example> "Software Developer"@en .
 
@@ -407,23 +437,9 @@ rdf:langString rdf:type rdfs:Datatype .
 
 
 ###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#KnowledgeDomain
-:KnowledgeDomain rdf:type owl:Class .
-
-
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#KnowledgeTopic
-:KnowledgeTopic rdf:type owl:Class .
-
-
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#LearningGoal
-:LearningGoal rdf:type owl:Class .
-
-
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#LearningPath
-:LearningPath rdf:type owl:Class .
-
-
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#LearningPreference
-:LearningPreference rdf:type owl:Class .
+:KnowledgeDomain rdf:type owl:Class ;
+                 <http://www.w3.org/2004/02/skos/core#definition> "knowledge of a specific, specialized discipline or field"@en ;
+                 <http://www.w3.org/2004/02/skos/core#example> "An example of knowledge domain can be Biology or Chemistry"@en .
 
 
 ###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#LearningResourceType
@@ -463,7 +479,9 @@ rdf:langString rdf:type rdfs:Datatype .
                                                :Novice
                                                :Proficient
                                              )
-                                 ] .
+                                 ] ;
+             <http://www.w3.org/2004/02/skos/core#definition> """Benner’s Novice to Expert
+The five stages of proficiency in the novice to expert model are: novice, advanced beginner, competent, proficient, and expert (Benner, 1982)."""@en .
 
 
 ###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Provider
@@ -477,13 +495,8 @@ rdf:langString rdf:type rdfs:Datatype .
               rdfs:label "Provider Type"@en .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#QualityStandards
-:QualityStandards rdf:type owl:Class ;
-                  rdfs:subClassOf :RDMTask .
-
-
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Question
-:Question rdf:type owl:Class .
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#QualityStandard
+:QualityStandard rdf:type owl:Class .
 
 
 ###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Questionaire
@@ -493,33 +506,26 @@ rdf:langString rdf:type rdfs:Datatype .
 
 ###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#RDMResource
 :RDMResource rdf:type owl:Class ;
-             rdfs:subClassOf <https://github.com/tibonto/educor#EducationalResource> ;
+             rdfs:subClassOf ec:EducationalResource ;
              rdfs:comment "OER related to Reseearch Data Management"@en .
 
 
 ###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#RDMSkill
 :RDMSkill rdf:type owl:Class ;
           rdfs:subClassOf :Skill ;
-          rdfs:comment "Research Data Managment Skill"@en .
+          rdfs:comment "Research Data Managment Skill"@en ;
+          <http://www.w3.org/2004/02/skos/core#definition> "The ability to carry out tasks."@en .
 
 
 ###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#RDMTask
-:RDMTask rdf:type owl:Class .
+:RDMTask rdf:type owl:Class ;
+         <http://www.w3.org/2004/02/skos/core#example> "Data Collection and Description"@en .
 
 
 ###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#RDMTool
 :RDMTool rdf:type owl:Class ;
          owl:disjointWith :Skill ;
          rdfs:comment "Research Data Management tool to be made available via the platform"@en .
-
-
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#RType_Exercise
-:RType_Exercise rdf:type owl:Class ;
-                rdfs:subClassOf :LearningResourceType .
-
-
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Recommendation
-:Recommendation rdf:type owl:Class .
 
 
 ###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#ResearcherRole
@@ -543,6 +549,7 @@ rdf:langString rdf:type rdfs:Datatype .
 
 ###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Skill
 :Skill rdf:type owl:Class ;
+       owl:disjointWith ec:KnowledgeTopic ;
        rdfs:comment "Job Skill, ability to perform some tasks."@en .
 
 
@@ -570,14 +577,9 @@ rdf:langString rdf:type rdfs:Datatype .
              rdfs:subClassOf :UserRole .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Test
-:Test rdf:type owl:Class ;
-      rdfs:subClassOf :LearningResourceType .
-
-
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Text
-:Text rdf:type owl:Class ;
-      rdfs:subClassOf :ResourceAttachment .
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#TextBook
+:TextBook rdf:type owl:Class ;
+          rdfs:subClassOf :LearningResourceType .
 
 
 ###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#User
@@ -596,18 +598,87 @@ rdf:langString rdf:type rdfs:Datatype .
 :UserRole rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Video
-:Video rdf:type owl:Class ;
-       rdfs:subClassOf :ResourceAttachment .
-
-
 ###  http:/schema.org/Organisation
 <http:/schema.org/Organisation> rdf:type owl:Class ;
                                 rdfs:subClassOf :ProviderType .
 
 
+###  https://github.com/tibonto/educor#AcademicParameter
+ec:AcademicParameter rdf:type owl:Class ;
+                     <http://www.w3.org/2004/02/skos/core#example> "It contains the quantitative parameters regarding a user performance"@en .
+
+
+###  https://github.com/tibonto/educor#Accessability
+ec:Accessability rdf:type owl:Class ;
+                 rdfs:label "Accessibility"@en ;
+                 <http://www.w3.org/2004/02/skos/core#example> "It describes the user access and content accessibility rights. It can be used as a plugin point to connect with other ontologies."@en .
+
+
+###  https://github.com/tibonto/educor#Answer
+ec:Answer rdf:type owl:Class ;
+          rdfs:label "Answer"@en ;
+          <http://www.w3.org/2004/02/skos/core#definition> "The input of a user in an exercise or test. It can have many different types, such as string, integer, or text."@en ;
+          <http://www.w3.org/2004/02/skos/core#example> "\\\"4\\\", 4, \\\"The answer is 4\\\""@en .
+
+
 ###  https://github.com/tibonto/educor#EducationalResource
-<https://github.com/tibonto/educor#EducationalResource> rdf:type owl:Class .
+ec:EducationalResource rdf:type owl:Class .
+
+
+###  https://github.com/tibonto/educor#KnowledgeTopic
+ec:KnowledgeTopic rdf:type owl:Class ;
+                  rdfs:label "KnowledgeTopic"@en ;
+                  rdfs:seeAlso "https://w3id.org/ccso/ccso#Topic"@en ;
+                  <http://www.w3.org/2004/02/skos/core#definition> "A single node representing a learning module based on the domain ontology. It contains all the learning material for the specific learning module."@en ;
+                  <http://www.w3.org/2004/02/skos/core#example> "A knowledge topic can be the “Quadratic equations” in the domain of Mathematics Algebra"@en .
+
+
+###  https://github.com/tibonto/educor#LearningGoal
+ec:LearningGoal rdf:type owl:Class ;
+                rdfs:comment "The Learning Goal can vary depending on the personalisation level. For example a user might care to learn some specific topics and not all the skill set."@en ;
+                rdfs:label "LearningGoal"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "The reach point of a learning path. The completion of a set of knowledge topics which can lead to mastering a skill. The learning goal in our design can be a Skill or a Knowledge Topic"@en ;
+                <http://www.w3.org/2004/02/skos/core#example> "A learning goal could be the skill \\\"Python Programming\\\" or the last Knowledge Topic in this skill set the \\\"Virtual environments in Python\\\""@en .
+
+
+###  https://github.com/tibonto/educor#LearningPath
+ec:LearningPath rdf:type owl:Class .
+
+
+###  https://github.com/tibonto/educor#LearningPreference
+ec:LearningPreference rdf:type owl:Class .
+
+
+###  https://github.com/tibonto/educor#Question
+ec:Question rdf:type owl:Class .
+
+
+###  https://github.com/tibonto/educor#Recommendation
+ec:Recommendation rdf:type owl:Class .
+
+
+###  https://schema.org/audio
+<https://schema.org/audio> rdf:type owl:Class ;
+                           rdfs:subClassOf :ResourceAttachment ;
+                           rdfs:label "Audio"@en .
+
+
+###  https://schema.org/image
+<https://schema.org/image> rdf:type owl:Class ;
+                           rdfs:subClassOf :ResourceAttachment ;
+                           rdfs:label "Image"@en .
+
+
+###  https://schema.org/text
+<https://schema.org/text> rdf:type owl:Class ;
+                          rdfs:subClassOf :ResourceAttachment ;
+                          rdfs:label "Text"@en .
+
+
+###  https://schema.org/video
+<https://schema.org/video> rdf:type owl:Class ;
+                           rdfs:subClassOf :ResourceAttachment ;
+                           rdfs:label "Video"@en .
 
 
 ###  https://w3id.org/ccso/ccso#LearningOutcome
