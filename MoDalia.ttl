@@ -16,9 +16,9 @@
                                                                <http://purl.org/dc/elements/1.1/description> """MoDalia: An Ontology for Educational Material in RDM and Data Science
 
 . The ontology is developed in OWL in Protege 5.0.0."""@en ;
-                                                               <http://purl.org/dc/terms/abstract> "With the increased dependence on online learning platformsand educational resource repositories, a unified representation of digitallearning  resources  becomes  essential  to  support  a  dynamic  and  multi-source learning experience. We introduce the EduCOR ontology, an edu-cational,  career-oriented  ontology  that  provides  a  foundation  for  representing  online  learning  resources  for  personalised  learning  systems.The ontology is designed to enable learning material repositories to offer learning path recommendations, which correspond to the user’s learning goals,  academic  and  psychological  parameters,  and  the  labour-market skills  that  are  achieved  from  the  learning  path.  We  present  the  multi-ple patterns that compose the EduCOR ontology, highlighting its cross-domain applicability and integrability with other ontologies. A demonstration of the proposed ontology on the real-life learning platform eDoer is discussed as a use-case. We evaluate the EduCOR ontology using both gold standard and task-based approaches. The comparison ofEduCOR to three gold schemata, and its application in two use-cases,shows its coverage and adaptability to multiple OER repositories, which allows generating user-centric and labour-market oriented recommendations."@en ;
-                                                               <http://purl.org/dc/terms/created> "2021-04-19" ;
-                                                               <http://purl.org/dc/terms/publisher> "TIB – Leibniz Information Centre for Science and Technology, Hannover, Germany" ;
+                                                               <http://purl.org/dc/terms/abstract> "The aim of DALIA project is to build a platform for learning material for Research Data Management (RDA) and Data Science. The platform is based on a knowledge graph. We introduce MoDalia, the base ontology of DALIA knowledge graph. Modalia inherits some modules from EduCOR. It includes also modelling of micro -credentials and certificates."@en ;
+                                                               <http://purl.org/dc/terms/created> "2023-08-15" ;
+                                                               <http://purl.org/dc/terms/publisher> "ULB TUDa – University and State Library, Technical University, Darmstadt, Germany" ;
                                                                owl:versionInfo "0.0.1 - first version"@en .
 
 #################################################################
@@ -128,6 +128,13 @@ rdf:langString rdf:type rdfs:Datatype .
 :hasAttachment rdf:type owl:ObjectProperty ;
                rdfs:domain ec:EducationalResource ;
                rdfs:range :ResourceAttachment .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#hasKnowledgeTopic
+:hasKnowledgeTopic rdf:type owl:ObjectProperty ;
+                   owl:inverseOf :hasLearningResource ;
+                   rdfs:domain ec:EducationalResource ;
+                   rdfs:range ec:KnowledgeTopic .
 
 
 ###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#hasLearningGoal
@@ -247,8 +254,8 @@ rdf:langString rdf:type rdfs:Datatype .
 ###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#solves
 :solves rdf:type owl:ObjectProperty ;
         rdfs:domain :User ;
-        rdfs:range :Assesment ,
-                   :Questionaire .
+        rdfs:range :Assessment ,
+                   :Questionnaire .
 
 
 ###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#storedIn
@@ -271,7 +278,7 @@ rdf:langString rdf:type rdfs:Datatype .
 ###  http://purl.org/dc/elements/1.1/title
 <http://purl.org/dc/elements/1.1/title> rdf:type owl:DatatypeProperty ;
                                         rdfs:domain [ rdf:type owl:Class ;
-                                                      owl:unionOf ( :Assesment
+                                                      owl:unionOf ( :Assessment
                                                                     :Job
                                                                     :MicroCredential
                                                                     :Skill
@@ -387,8 +394,8 @@ rdf:langString rdf:type rdfs:Datatype .
                         rdfs:range xsd:anyURI .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#accessableForFree
-:accessableForFree rdf:type owl:DatatypeProperty ;
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#accessibleForFree
+:accessibleForFree rdf:type owl:DatatypeProperty ;
                    rdfs:domain ec:EducationalResource ;
                    rdfs:range xsd:boolean .
 
@@ -480,8 +487,8 @@ rdf:langString rdf:type rdfs:Datatype .
 #    Classes
 #################################################################
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#AnalzyePhase
-:AnalzyePhase rdf:type owl:Class ;
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#AnalyzePhase
+:AnalyzePhase rdf:type owl:Class ;
               rdfs:subClassOf :DataLifeCyclePhase ;
               owl:disjointWith :AssurePhase ,
                                :CollectPhase ,
@@ -492,9 +499,9 @@ rdf:langString rdf:type rdfs:Datatype .
                                :PreservePhase .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Assesment
-:Assesment rdf:type owl:Class ;
-           rdfs:subClassOf :LearningResourceType .
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Assessment
+:Assessment rdf:type owl:Class ;
+            rdfs:subClassOf :LearningResourceType .
 
 
 ###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#AssurePhase
@@ -507,9 +514,9 @@ rdf:langString rdf:type rdfs:Datatype .
             rdfs:subClassOf :UserRole .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#BachlorStudent
-:BachlorStudent rdf:type owl:Class ;
-                rdfs:subClassOf :TargetGroup .
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#BachelorStudent
+:BachelorStudent rdf:type owl:Class ;
+                 rdfs:subClassOf :TargetGroup .
 
 
 ###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Best-Practices
@@ -574,7 +581,7 @@ rdf:langString rdf:type rdfs:Datatype .
 :Exercise rdf:type owl:Class ;
           owl:equivalentClass [ rdf:type owl:Restriction ;
                                 owl:onProperty :hasLearningResource ;
-                                owl:allValuesFrom :Assesment
+                                owl:allValuesFrom :Assessment
                               ] ;
           rdfs:subClassOf ec:EducationalResource .
 
@@ -671,7 +678,7 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 
 ###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Provider
 :Provider rdf:type owl:Class ;
-          rdfs:comment "Repository that proviedes OER"@en ;
+          rdfs:comment "Repository that provides OER"@en ;
           <http://www.w3.org/2004/02/skos/core#example> "OERSI or Dataone"@en .
 
 
@@ -684,15 +691,15 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 :QualityStandard rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Questionaire
-:Questionaire rdf:type owl:Class ;
-              rdfs:subClassOf :LearningResourceType .
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Questionnaire
+:Questionnaire rdf:type owl:Class ;
+               rdfs:subClassOf :LearningResourceType .
 
 
 ###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#RDMResource
 :RDMResource rdf:type owl:Class ;
              rdfs:subClassOf ec:EducationalResource ;
-             rdfs:comment "OER related to Reseearch Data Management"@en .
+             rdfs:comment "OER related to Research Data Management"@en .
 
 
 ###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#RDMSkill
@@ -791,8 +798,8 @@ ec:AcademicParameter rdf:type owl:Class ;
                      <http://www.w3.org/2004/02/skos/core#example> "It contains the quantitative parameters regarding a user performance"@en .
 
 
-###  https://github.com/tibonto/educor#Accessability
-ec:Accessability rdf:type owl:Class ;
+###  https://github.com/tibonto/educor#Accessibility
+ec:Accessibility rdf:type owl:Class ;
                  rdfs:label "Accessibility"@en ;
                  <http://www.w3.org/2004/02/skos/core#example> "It describes the user access and content accessibility rights. It can be used as a plugin point to connect with other ontologies."@en .
 
