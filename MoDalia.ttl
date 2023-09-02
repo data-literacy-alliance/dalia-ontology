@@ -81,12 +81,6 @@ rdf:langString rdf:type rdfs:Datatype .
              rdfs:range :RDMTask .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#canPerform
-:canPerform rdf:type owl:ObjectProperty ;
-            rdfs:domain :RDMTool ;
-            rdfs:range :RDMTask .
-
-
 ###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#consistsOfKnowledge
 :consistsOfKnowledge rdf:type owl:ObjectProperty ;
                      rdfs:domain ec:LearningPath ;
@@ -128,6 +122,18 @@ rdf:langString rdf:type rdfs:Datatype .
 :hasAttachment rdf:type owl:ObjectProperty ;
                rdfs:domain ec:EducationalResource ;
                rdfs:range :ResourceAttachment .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#hasContributor
+:hasContributor rdf:type owl:ObjectProperty ;
+                rdfs:domain ec:EducationalResource ;
+                rdfs:range :Contributer .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#hasDiscipline
+:hasDiscipline rdf:type owl:ObjectProperty ;
+               rdfs:domain :RDMResource ;
+               rdfs:range :RDMDiscipline .
 
 
 ###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#hasKnowledgeTopic
@@ -174,22 +180,47 @@ rdf:langString rdf:type rdfs:Datatype .
             rdfs:range :UserProfile .
 
 
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#hasProvider
+:hasProvider rdf:type owl:ObjectProperty ;
+             rdfs:domain ec:EducationalResource ;
+             rdfs:range :Provider .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#hasProviderType
+:hasProviderType rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Provider ;
+                 rdfs:range :ProviderType .
+
+
 ###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#hasQuality
 :hasQuality rdf:type owl:ObjectProperty ;
             rdfs:domain ec:EducationalResource ;
             rdfs:range :ContentQuality .
 
 
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#hasRating
+:hasRating rdf:type owl:ObjectProperty ;
+           rdfs:domain ec:EducationalResource ;
+           rdfs:range :RatingIndicator .
+
+
 ###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#hasTargetGroup
 :hasTargetGroup rdf:type owl:ObjectProperty ;
-                rdfs:domain :LearningObjectiveMatrix ;
+                rdfs:domain :LearningObjectiveMatrixEntry ;
                 rdfs:range :TargetGroup .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#hasUser
+:hasUser rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf owl:topObjectProperty ;
+         rdfs:domain :RatingIndicator ;
+         rdfs:range :User .
 
 
 ###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#isCoveredIn
 :isCoveredIn rdf:type owl:ObjectProperty ;
              rdfs:domain :RDMTopic ;
-             rdfs:range :LearningObjectiveMatrix .
+             rdfs:range :LearningObjectiveMatrixEntry .
 
 
 ###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#isLessProficientThan
@@ -228,7 +259,6 @@ rdf:langString rdf:type rdfs:Datatype .
 
 ###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#relatedTo
 :relatedTo rdf:type owl:ObjectProperty ;
-           rdfs:domain :RDMTool ;
            rdfs:range :RDMResource .
 
 
@@ -246,7 +276,6 @@ rdf:langString rdf:type rdfs:Datatype .
 
 ###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#satisfies
 :satisfies rdf:type owl:ObjectProperty ;
-           rdfs:domain :RDMTool ;
            rdfs:range :QualityStandard ;
            rdfs:label "satisfies"@en .
 
@@ -303,24 +332,12 @@ rdf:langString rdf:type rdfs:Datatype .
 
 ###  http://purl.org/dc/terms/dateCreated
 <http://purl.org/dc/terms/dateCreated> rdf:type owl:DatatypeProperty ;
-                                       rdfs:domain [ rdf:type owl:Class ;
-                                                     owl:unionOf ( :RDMTool
-                                                                   ec:EducationalResource
-                                                                 )
-                                                   ] ;
                                        rdfs:range xsd:dateTime .
 
 
 ###  http://purl.org/dc/terms/description
 <http://purl.org/dc/terms/description> rdf:type owl:DatatypeProperty ;
                                        rdfs:subPropertyOf owl:topDataProperty ;
-                                       rdfs:domain [ rdf:type owl:Class ;
-                                                     owl:unionOf ( :Exercise
-                                                                   :RDMTool
-                                                                   :Skill
-                                                                   ec:EducationalResource
-                                                                 )
-                                                   ] ;
                                        rdfs:range xsd:string ;
                                        rdfs:label "description"@en .
 
@@ -336,19 +353,16 @@ rdf:langString rdf:type rdfs:Datatype .
 
 ###  http://schema.org/citation
 <http://schema.org/citation> rdf:type owl:DatatypeProperty ;
-                             rdfs:domain :RDMTool ;
                              rdfs:range xsd:string .
 
 
 ###  http://schema.org/dateModified
 <http://schema.org/dateModified> rdf:type owl:DatatypeProperty ;
-                                 rdfs:domain :RDMTool ;
                                  rdfs:range xsd:dateTime .
 
 
 ###  http://schema.org/downloadUrl
 <http://schema.org/downloadUrl> rdf:type owl:DatatypeProperty ;
-                                rdfs:domain :RDMTool ;
                                 rdfs:range xsd:anyURI .
 
 
@@ -372,7 +386,6 @@ rdf:langString rdf:type rdfs:Datatype .
 
 ###  http://schema.org/maintainer
 <http://schema.org/maintainer> rdf:type owl:DatatypeProperty ;
-                               rdfs:domain :RDMTool ;
                                rdfs:range xsd:string .
 
 
@@ -389,8 +402,7 @@ rdf:langString rdf:type rdfs:Datatype .
 
 ###  http://schema.org/url
 <http://schema.org/url> rdf:type owl:DatatypeProperty ;
-                        rdfs:domain :RDMTool ,
-                                    ec:EducationalResource ;
+                        rdfs:domain ec:EducationalResource ;
                         rdfs:range xsd:anyURI .
 
 
@@ -444,7 +456,7 @@ rdf:langString rdf:type rdfs:Datatype .
 
 ###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#hasLearningObjective
 :hasLearningObjective rdf:type owl:DatatypeProperty ;
-                      rdfs:domain :LearningObjectiveMatrix ;
+                      rdfs:domain :LearningObjectiveMatrixEntry ;
                       rdfs:range xsd:string .
 
 
@@ -598,8 +610,7 @@ rdf:langString rdf:type rdfs:Datatype .
 
 ###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Job
 :Job rdf:type owl:Class ;
-     owl:disjointWith :KnowledgeDomain ,
-                      :RDMTool ;
+     owl:disjointWith :KnowledgeDomain ;
      rdfs:seeAlso "http://schema.org/Occupation"@en ;
      <http://www.w3.org/2004/02/skos/core#definition> "name of a profession"@en ;
      <http://www.w3.org/2004/02/skos/core#example> "Software Developer"@en .
@@ -616,8 +627,8 @@ rdf:langString rdf:type rdfs:Datatype .
                  <http://www.w3.org/2004/02/skos/core#example> "An example of knowledge domain can be Biology or Chemistry"@en .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#LearningObjectiveMatrix
-:LearningObjectiveMatrix rdf:type owl:Class .
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#LearningObjectiveMatrixEntry
+:LearningObjectiveMatrixEntry rdf:type owl:Class .
 
 
 ###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#LearningResourceType
@@ -642,9 +653,9 @@ rdf:langString rdf:type rdfs:Datatype .
 :Organisation rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Person
-:Person rdf:type owl:Class ;
-        rdfs:subClassOf :ProviderType .
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#PersonProviderType
+:PersonProviderType rdf:type owl:Class ;
+                    rdfs:subClassOf :ProviderType .
 
 
 ###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#PhDStudent
@@ -696,6 +707,11 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
                rdfs:subClassOf :LearningResourceType .
 
 
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#RDMDiscipline
+:RDMDiscipline rdf:type owl:Class ;
+               <http://www.w3.org/2004/02/skos/core#example> "e.g Engineering"@en .
+
+
 ###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#RDMResource
 :RDMResource rdf:type owl:Class ;
              rdfs:subClassOf ec:EducationalResource ;
@@ -714,14 +730,12 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
          <http://www.w3.org/2004/02/skos/core#example> "Data Collection and Description"@en .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#RDMTool
-:RDMTool rdf:type owl:Class ;
-         owl:disjointWith :Skill ;
-         rdfs:comment "Research Data Management tool to be made available via the platform"@en .
-
-
 ###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#RDMTopic
 :RDMTopic rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#RatingIndicator
+:RatingIndicator rdf:type owl:Class .
 
 
 ###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#ResearcherRole
@@ -733,9 +747,9 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 :ResourceAttachment rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Service
-:Service rdf:type owl:Class ;
-         rdfs:subClassOf :ProviderType .
+###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#ServiceProviderType
+:ServiceProviderType rdf:type owl:Class ;
+                     rdfs:subClassOf :ProviderType .
 
 
 ###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Skill
@@ -788,9 +802,9 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 :UserRole rdf:type owl:Class .
 
 
-###  http:/schema.org/Organisation
-<http:/schema.org/Organisation> rdf:type owl:Class ;
-                                rdfs:subClassOf :ProviderType .
+###  http:/schema.org/OrganisationProviderType
+<http:/schema.org/OrganisationProviderType> rdf:type owl:Class ;
+                                            rdfs:subClassOf :ProviderType .
 
 
 ###  https://github.com/tibonto/educor#AcademicParameter
@@ -882,11 +896,6 @@ ec:Recommendation rdf:type owl:Class .
 #################################################################
 #    Individuals
 #################################################################
-
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#
-<http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#> rdf:type owl:NamedIndividual ;
-                                                              <http://purl.org/dc/terms/language> "en" .
-
 
 ###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Beginner
 :Beginner rdf:type owl:NamedIndividual ,
