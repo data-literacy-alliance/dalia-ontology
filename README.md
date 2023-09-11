@@ -10,15 +10,15 @@ The Ontology is in Work packages 11 and 12 in the project proposal. Initial draf
 - Added Job class and relations with Skill class (essentialFor and optionalFor)
 
 ## Patterns
-A RDM pattern
-B Educational resource pattern
-C Skill pattern
-D Learning path pattern
-E Recommendation pattern
-F User profile pattern
-G Assessment pattern
-H User achievement pattern
-I User role pattern
+- A RDM pattern
+- B Educational resource pattern
+- C Skill pattern
+- D Learning path pattern
+- E Recommendation pattern
+- F User profile pattern
+- G Assessment pattern
+- H User achievement pattern
+- I User role pattern
 
 ## References:
 Ilkou, E. et al. (2021). EduCOR: An Educational and Career-Oriented Recommendation Ontology. In: Hotho, A., et al. The Semantic Web – ISWC 2021. ISWC 2021. Lecture Notes in Computer Science(), vol 12922. Springer, Cham. https://doi.org/10.1007/978-3-030-88361-4_32
