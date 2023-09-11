@@ -1,13 +1,13 @@
-@prefix : <http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#> .
+@prefix : <https://git.rwth-aachen.de/dalia/dalia-ontology#> .
 @prefix ec: <https://github.com/tibonto/educor#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#> .
+@base <https://git.rwth-aachen.de/dalia/dalia-ontology#> .
 
-<http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#> rdf:type owl:Ontology ;
+<https://git.rwth-aachen.de/dalia/dalia-ontology#> rdf:type owl:Ontology ;
                                                                owl:versionIRI <https://github.com/tibonto/educor#/0.0.1> ;
                                                                <http://purl.org/dc/elements/1.1/contributor> "Dr. Abdelmoneim Amer Desouki" ,
                                                                                                              "Dr. Marc Fuhrmans" ,
@@ -17,7 +17,7 @@
 
 . The ontology is developed in OWL in Protege 5.0.0."""@en ;
                                                                <http://purl.org/dc/terms/abstract> "The aim of DALIA project is to build a platform for learning material for Research Data Management (RDA) and Data Science. The platform is based on a knowledge graph. We introduce MoDalia, the base ontology of DALIA knowledge graph. Modalia inherits some modules from EduCOR. It includes also modelling of micro -credentials and certificates."@en ;
-                                                               <http://purl.org/dc/terms/created> "2023-08-15" ;
+                                                               <http://purl.org/dc/terms/created> "2023-09-11" ;
                                                                <http://purl.org/dc/terms/publisher> "ULB TUDa – University and State Library, Technical University, Darmstadt, Germany" ;
                                                                owl:versionInfo "0.0.1 - first version"@en .
 
@@ -69,224 +69,224 @@ rdf:langString rdf:type rdfs:Datatype .
 #    Object Properties
 #################################################################
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#belongsToPhase
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#belongsToPhase
 :belongsToPhase rdf:type owl:ObjectProperty ;
                 rdfs:domain :RDMResource ;
                 rdfs:range :DataLifeCyclePhase .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#canCarryOut
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#canCarryOut
 :canCarryOut rdf:type owl:ObjectProperty ;
              rdfs:domain :Skill ;
              rdfs:range :RDMTask .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#consistsOfKnowledge
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#consistsOfKnowledge
 :consistsOfKnowledge rdf:type owl:ObjectProperty ;
                      rdfs:domain ec:LearningPath ;
                      rdfs:range ec:KnowledgeTopic .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#definesLearningPath
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#definesLearningPath
 :definesLearningPath rdf:type owl:ObjectProperty ;
                      rdfs:domain :UserProfile ;
                      rdfs:range ec:LearningPath .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#essentialFor
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#essentialFor
 :essentialFor rdf:type owl:ObjectProperty ;
               rdfs:domain :Skill ;
               rdfs:range :Job ;
               rdfs:label "is essential for"@en .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#generateUserLogs
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#generateUserLogs
 :generateUserLogs rdf:type owl:ObjectProperty ;
                   rdfs:domain :User ;
                   rdfs:range ec:UserLogs .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#givesProficiencyLevel
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#givesProficiencyLevel
 :givesProficiencyLevel rdf:type owl:ObjectProperty ;
                        rdfs:domain ec:EducationalResource ;
                        rdfs:range :Proficiency .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#hasAchievement
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#hasAchievement
 :hasAchievement rdf:type owl:ObjectProperty ;
                 rdfs:domain :User ;
                 rdfs:range :UserAchievement .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#hasAttachment
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#hasAttachment
 :hasAttachment rdf:type owl:ObjectProperty ;
                rdfs:domain ec:EducationalResource ;
                rdfs:range :ResourceAttachment .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#hasContributor
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#hasContributor
 :hasContributor rdf:type owl:ObjectProperty ;
                 rdfs:domain ec:EducationalResource ;
                 rdfs:range :Contributer .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#hasDiscipline
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#hasDiscipline
 :hasDiscipline rdf:type owl:ObjectProperty ;
                rdfs:domain :RDMResource ;
                rdfs:range :RDMDiscipline .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#hasKnowledgeTopic
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#hasKnowledgeTopic
 :hasKnowledgeTopic rdf:type owl:ObjectProperty ;
                    owl:inverseOf :hasLearningResource ;
                    rdfs:domain ec:EducationalResource ;
                    rdfs:range ec:KnowledgeTopic .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#hasLearningGoal
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#hasLearningGoal
 :hasLearningGoal rdf:type owl:ObjectProperty ;
                  rdfs:domain ec:LearningPath ;
                  rdfs:range ec:LearningGoal .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#hasLearningResource
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#hasLearningResource
 :hasLearningResource rdf:type owl:ObjectProperty ;
                      rdfs:domain ec:KnowledgeTopic ;
                      rdfs:range ec:EducationalResource .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#hasLearningType
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#hasLearningType
 :hasLearningType rdf:type owl:ObjectProperty ,
                           owl:FunctionalProperty ;
                  rdfs:domain ec:EducationalResource ;
                  rdfs:range :LearningResourceType .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#hasMicroCredential
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#hasMicroCredential
 :hasMicroCredential rdf:type owl:ObjectProperty ;
                     rdfs:domain :UserAchievement ;
                     rdfs:range :MicroCredential .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#hasParentDomain
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#hasParentDomain
 :hasParentDomain rdf:type owl:ObjectProperty ;
                  rdfs:domain :KnowledgeDomain ;
                  rdfs:range :KnowledgeDomain .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#hasProfile
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#hasProfile
 :hasProfile rdf:type owl:ObjectProperty ;
             rdfs:domain :User ;
             rdfs:range :UserProfile .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#hasProvider
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#hasProvider
 :hasProvider rdf:type owl:ObjectProperty ;
              rdfs:domain ec:EducationalResource ;
              rdfs:range :Provider .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#hasProviderType
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#hasProviderType
 :hasProviderType rdf:type owl:ObjectProperty ;
                  rdfs:domain :Provider ;
                  rdfs:range :ProviderType .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#hasQuality
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#hasQuality
 :hasQuality rdf:type owl:ObjectProperty ;
             rdfs:domain ec:EducationalResource ;
             rdfs:range :ContentQuality .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#hasRating
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#hasRating
 :hasRating rdf:type owl:ObjectProperty ;
            rdfs:domain ec:EducationalResource ;
            rdfs:range :RatingIndicator .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#hasTargetGroup
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#hasTargetGroup
 :hasTargetGroup rdf:type owl:ObjectProperty ;
                 rdfs:domain :LearningObjectiveMatrixEntry ;
                 rdfs:range :TargetGroup .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#hasUser
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#hasUser
 :hasUser rdf:type owl:ObjectProperty ;
          rdfs:subPropertyOf owl:topObjectProperty ;
          rdfs:domain :RatingIndicator ;
          rdfs:range :User .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#isCoveredIn
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#isCoveredIn
 :isCoveredIn rdf:type owl:ObjectProperty ;
              rdfs:domain :RDMTopic ;
              rdfs:range :LearningObjectiveMatrixEntry .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#isLessProficientThan
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#isLessProficientThan
 :isLessProficientThan rdf:type owl:ObjectProperty ;
                       owl:inverseOf :isMoreProficientThan ;
                       rdfs:domain :Proficiency ;
                       rdfs:range :Proficiency .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#isMoreProficientThan
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#isMoreProficientThan
 :isMoreProficientThan rdf:type owl:ObjectProperty ,
                                owl:TransitiveProperty ;
                       rdfs:domain :Proficiency ;
                       rdfs:range :Proficiency .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#nextPhase
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#nextPhase
 :nextPhase rdf:type owl:ObjectProperty ;
            rdfs:domain :DataLifeCyclePhase ;
            rdfs:range :DataLifeCyclePhase ;
            rdfs:label "has next phase"@en .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#optionalFor
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#optionalFor
 :optionalFor rdf:type owl:ObjectProperty ;
              rdfs:domain :Skill ;
              rdfs:range :Job ;
              rdfs:label "is optional for"@en .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#prerequisites
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#prerequisites
 :prerequisites rdf:type owl:ObjectProperty ;
                rdfs:domain ec:KnowledgeTopic ;
                rdfs:range ec:KnowledgeTopic .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#relatedTo
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#relatedTo
 :relatedTo rdf:type owl:ObjectProperty ;
            rdfs:range :RDMResource .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#requiresKnowledge
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#requiresKnowledge
 :requiresKnowledge rdf:type owl:ObjectProperty ;
                    rdfs:domain :Skill ;
                    rdfs:range ec:KnowledgeTopic .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#requiresProficiencyLevel
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#requiresProficiencyLevel
 :requiresProficiencyLevel rdf:type owl:ObjectProperty ;
                           rdfs:domain ec:EducationalResource ;
                           rdfs:range :Proficiency .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#satisfies
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#satisfies
 :satisfies rdf:type owl:ObjectProperty ;
            rdfs:label "satisfies"@en .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#solves
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#solves
 :solves rdf:type owl:ObjectProperty ;
         rdfs:domain :User ;
         rdfs:range :Assessment ,
                    :Questionnaire .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#storedIn
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#storedIn
 :storedIn rdf:type owl:ObjectProperty ;
           rdfs:domain [ rdf:type owl:Class ;
                         owl:unionOf ( ec:AcademicParameter
@@ -405,80 +405,80 @@ rdf:langString rdf:type rdfs:Datatype .
                         rdfs:range xsd:anyURI .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#accessibleForFree
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#accessibleForFree
 :accessibleForFree rdf:type owl:DatatypeProperty ;
                    rdfs:domain ec:EducationalResource ;
                    rdfs:range xsd:boolean .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#certificateEndDate
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#certificateEndDate
 :certificateEndDate rdf:type owl:DatatypeProperty ;
                     rdfs:domain :Certificate ;
                     rdfs:range xsd:dateTime .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#certificateName
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#certificateName
 :certificateName rdf:type owl:DatatypeProperty ;
                  rdfs:domain :Certificate ;
                  rdfs:range xsd:string .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#certificateStartDate
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#certificateStartDate
 :certificateStartDate rdf:type owl:DatatypeProperty ;
                       rdfs:domain :Certificate ;
                       rdfs:range xsd:dateTime .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#certificateUrl
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#certificateUrl
 :certificateUrl rdf:type owl:DatatypeProperty ;
                 rdfs:domain :Certificate ;
                 rdfs:range xsd:anyURI .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#hasGrade
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#hasGrade
 :hasGrade rdf:type owl:DatatypeProperty ;
           rdfs:domain :UserAchievement ;
           rdfs:range xsd:string .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#hasGrantDate
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#hasGrantDate
 :hasGrantDate rdf:type owl:DatatypeProperty ;
               rdfs:domain :UserAchievement ;
               rdfs:range xsd:dateTime .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#hasInterval
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#hasInterval
 :hasInterval rdf:type owl:DatatypeProperty ;
              rdfs:domain :MicroCredential ;
              rdfs:range rdfs:Literal .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#hasLearningObjective
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#hasLearningObjective
 :hasLearningObjective rdf:type owl:DatatypeProperty ;
                       rdfs:domain :LearningObjectiveMatrixEntry ;
                       rdfs:range xsd:string .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#isItClassRoom
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#isItClassRoom
 :isItClassRoom rdf:type owl:DatatypeProperty ;
                rdfs:subPropertyOf owl:topDataProperty ;
                rdfs:domain ec:EducationalResource ;
                rdfs:range xsd:boolean .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#microCredentialUrl
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#microCredentialUrl
 :microCredentialUrl rdf:type owl:DatatypeProperty ;
                     rdfs:domain :MicroCredential ;
                     rdfs:range xsd:anyURI .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#studyPlan
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#studyPlan
 :studyPlan rdf:type owl:DatatypeProperty ;
            rdfs:domain ec:LearningPath ;
            rdfs:range rdf:langString .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#viewCount
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#viewCount
 :viewCount rdf:type owl:DatatypeProperty ;
            rdfs:domain [ rdf:type owl:Class ;
                          owl:unionOf ( :Exercise
@@ -498,7 +498,7 @@ rdf:langString rdf:type rdfs:Datatype .
 #    Classes
 #################################################################
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#AnalyzePhase
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#AnalyzePhase
 :AnalyzePhase rdf:type owl:Class ;
               rdfs:subClassOf :DataLifeCyclePhase ;
               owl:disjointWith :AssurePhase ,
@@ -510,87 +510,87 @@ rdf:langString rdf:type rdfs:Datatype .
                                :PreservePhase .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Assessment
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#Assessment
 :Assessment rdf:type owl:Class ;
             rdfs:subClassOf :LearningResourceType .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#AssurePhase
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#AssurePhase
 :AssurePhase rdf:type owl:Class ;
              rdfs:subClassOf :DataLifeCyclePhase .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#AuthorRole
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#AuthorRole
 :AuthorRole rdf:type owl:Class ;
             rdfs:subClassOf :UserRole .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#BachelorStudent
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#BachelorStudent
 :BachelorStudent rdf:type owl:Class ;
                  rdfs:subClassOf :TargetGroup .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Best-Practices
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#Best-Practices
 :Best-Practices rdf:type owl:Class ;
                 rdfs:subClassOf :LearningResourceType .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#CaseStudy
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#CaseStudy
 :CaseStudy rdf:type owl:Class ;
            rdfs:subClassOf :LearningResourceType .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Certificate
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#Certificate
 :Certificate rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Code
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#Code
 :Code rdf:type owl:Class ;
       rdfs:subClassOf :ResourceAttachment .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#CollectPhase
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#CollectPhase
 :CollectPhase rdf:type owl:Class ;
               rdfs:subClassOf :DataLifeCyclePhase .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#ContentQuality
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#ContentQuality
 :ContentQuality rdf:type owl:Class ;
                 rdfs:label "Content Quality"@en .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Contributer
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#Contributer
 :Contributer rdf:type owl:Class ;
              rdfs:comment "The author of the OER"@en .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#CuratorRole
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#CuratorRole
 :CuratorRole rdf:type owl:Class ;
              rdfs:subClassOf :UserRole .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#DataLifeCyclePhase
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#DataLifeCyclePhase
 :DataLifeCyclePhase rdf:type owl:Class ;
                     rdfs:label "DataLifeCyclePhase"@en ;
                     <http://www.w3.org/2004/02/skos/core#definition> "One of the eight known phases of data life cycle."@en .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#DataSteward
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#DataSteward
 :DataSteward rdf:type owl:Class ;
              rdfs:subClassOf :TargetGroup .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#DescribePhase
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#DescribePhase
 :DescribePhase rdf:type owl:Class ;
                rdfs:subClassOf :DataLifeCyclePhase .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#DiscoverPhase
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#DiscoverPhase
 :DiscoverPhase rdf:type owl:Class ;
                rdfs:subClassOf :DataLifeCyclePhase .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Exercise
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#Exercise
 :Exercise rdf:type owl:Class ;
           owl:equivalentClass [ rdf:type owl:Restriction ;
                                 owl:onProperty :hasLearningResource ;
@@ -599,17 +599,17 @@ rdf:langString rdf:type rdfs:Datatype .
           rdfs:subClassOf ec:EducationalResource .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Experiment
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#Experiment
 :Experiment rdf:type owl:Class ;
             rdfs:subClassOf :LearningResourceType .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#IntegratePhase
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#IntegratePhase
 :IntegratePhase rdf:type owl:Class ;
                 rdfs:subClassOf :DataLifeCyclePhase .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Job
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#Job
 :Job rdf:type owl:Class ;
      owl:disjointWith :KnowledgeDomain ;
      rdfs:seeAlso "http://schema.org/Occupation"@en ;
@@ -617,93 +617,93 @@ rdf:langString rdf:type rdfs:Datatype .
      <http://www.w3.org/2004/02/skos/core#example> "Software Developer"@en .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#JupyterNotebook
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#JupyterNotebook
 :JupyterNotebook rdf:type owl:Class ;
                  rdfs:subClassOf :LearningResourceType .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#KnowledgeDomain
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#KnowledgeDomain
 :KnowledgeDomain rdf:type owl:Class ;
                  <http://www.w3.org/2004/02/skos/core#definition> "knowledge of a specific, specialized discipline or field"@en ;
                  <http://www.w3.org/2004/02/skos/core#example> "An example of knowledge domain can be Biology or Chemistry"@en .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#LPAuditory
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#LPAuditory
 :LPAuditory rdf:type owl:Class ;
             rdfs:subClassOf ec:LearningPreference ;
             <http://www.w3.org/2004/02/skos/core#definition> "Auditory learning (music, discussion, lectures)"@en .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#LPKinesthetic
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#LPKinesthetic
 :LPKinesthetic rdf:type owl:Class ;
                rdfs:subClassOf ec:LearningPreference ;
                <http://www.w3.org/2004/02/skos/core#definition> "Kinesthetic learning (movement, experiments, hands-on activities)"@en .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#LPReading
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#LPReading
 :LPReading rdf:type owl:Class ;
            rdfs:subClassOf ec:LearningPreference ;
            <http://www.w3.org/2004/02/skos/core#definition> "Reading and writing (making lists, reading textbooks, taking notes)"@en .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#LPVisual
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#LPVisual
 :LPVisual rdf:type owl:Class ;
           rdfs:subClassOf ec:LearningPreference ;
           <http://www.w3.org/2004/02/skos/core#definition> "Visual learning (pictures, movies, diagrams)"@en .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#LearningObjectiveMatrixEntry
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#LearningObjectiveMatrixEntry
 :LearningObjectiveMatrixEntry rdf:type owl:Class ;
                               rdfs:label "LearningObjectiveMatrixEntry"@en .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#LearningResourceType
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#LearningResourceType
 :LearningResourceType rdf:type owl:Class ;
                       <http://www.w3.org/2004/02/skos/core#definition> "The type of the learning resource can be lecture, experiment, Assessment, etc."@en .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Lecture
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#Lecture
 :Lecture rdf:type owl:Class ;
          rdfs:subClassOf :LearningResourceType .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#MasterStudent
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#MasterStudent
 :MasterStudent rdf:type owl:Class ;
                rdfs:subClassOf :TargetGroup .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#MicroCredential
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#MicroCredential
 :MicroCredential rdf:type owl:Class ;
                  rdfs:label "MicroCredential"@en .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Organization
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#Organization
 :Organization rdf:type owl:Class ;
               rdfs:label <Organization> ;
               rdfs:seeAlso <http://xmlns.com/foaf/0.1/Organization> .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#PersonProviderType
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#PersonProviderType
 :PersonProviderType rdf:type owl:Class ;
                     rdfs:subClassOf :ProviderType .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#PhDStudent
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#PhDStudent
 :PhDStudent rdf:type owl:Class ;
             rdfs:subClassOf :TargetGroup .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#PlanPhase
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#PlanPhase
 :PlanPhase rdf:type owl:Class ;
            rdfs:subClassOf :DataLifeCyclePhase .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#PreservePhase
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#PreservePhase
 :PreservePhase rdf:type owl:Class ;
                rdfs:subClassOf :DataLifeCyclePhase .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Proficiency
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#Proficiency
 :Proficiency rdf:type owl:Class ;
              owl:equivalentClass [ rdf:type owl:Class ;
                                    owl:oneOf ( :Beginner
@@ -717,118 +717,122 @@ rdf:langString rdf:type rdfs:Datatype .
 The five stages of proficiency in the novice to expert model are: novice, advanced beginner, competent, proficient, and expert (Benner, 1982)."""@en .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Provider
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#Provider
 :Provider rdf:type owl:Class ;
           rdfs:comment "Repository that provides OER"@en ;
           <http://www.w3.org/2004/02/skos/core#example> "OERSI or Dataone"@en .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#ProviderType
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#ProviderType
 :ProviderType rdf:type owl:Class ;
               rdfs:label "Provider Type"@en .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Questionnaire
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#Questionnaire
 :Questionnaire rdf:type owl:Class ;
                rdfs:subClassOf :LearningResourceType .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#RDMDiscipline
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#RDMDiscipline
 :RDMDiscipline rdf:type owl:Class ;
                <http://www.w3.org/2004/02/skos/core#example> "e.g Engineering"@en .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#RDMResource
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#RDMResource
 :RDMResource rdf:type owl:Class ;
              rdfs:subClassOf ec:EducationalResource ;
              rdfs:comment "OER related to Research Data Management"@en .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#RDMSkill
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#RDMSkill
 :RDMSkill rdf:type owl:Class ;
           rdfs:subClassOf :Skill ;
           rdfs:comment "Research Data Managment Skill"@en ;
           <http://www.w3.org/2004/02/skos/core#definition> "The ability to carry out tasks."@en .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#RDMTask
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#RDMTask
 :RDMTask rdf:type owl:Class ;
          <http://www.w3.org/2004/02/skos/core#example> "Data Collection and Description"@en .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#RDMTopic
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#RDMTopic
 :RDMTopic rdf:type owl:Class ;
           <http://www.w3.org/2004/02/skos/core#definition> "Topic related to research data management"@en .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#RatingIndicator
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#RatingIndicator
 :RatingIndicator rdf:type owl:Class ;
                  <http://www.w3.org/2004/02/skos/core#definition> "Is a URI that relates a User and an OER and have predicate schema:rating" .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#ResearcherRole
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#ResearcherRole
 :ResearcherRole rdf:type owl:Class ;
                 rdfs:subClassOf :UserRole .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#ResourceAttachment
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#ResourceAttachment
 :ResourceAttachment rdf:type owl:Class ;
                     rdfs:label "ResourceAttachment"@en .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#ServiceProviderType
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#ServiceProviderType
 :ServiceProviderType rdf:type owl:Class ;
                      rdfs:subClassOf :ProviderType .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Skill
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#Skill
 :Skill rdf:type owl:Class ;
        owl:disjointWith ec:KnowledgeTopic ;
        rdfs:comment "Job Skill, ability to perform some tasks."@en .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Slides
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#Slides
 :Slides rdf:type owl:Class ;
         rdfs:subClassOf :ResourceAttachment .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#StudentRole
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#StudentRole
 :StudentRole rdf:type owl:Class ;
              rdfs:subClassOf :UserRole .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#TargetGroup
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#TargetGroup
 :TargetGroup rdf:type owl:Class ;
              rdfs:label "TargetGroup"@en .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#TeacherRole
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#TeacherRole
 :TeacherRole rdf:type owl:Class ;
              rdfs:subClassOf :UserRole .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#TextBook
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#TextBook
 :TextBook rdf:type owl:Class ;
           rdfs:subClassOf :LearningResourceType .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#User
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#User
 :User rdf:type owl:Class ;
       rdfs:label "User"@en ;
       rdfs:seeAlso <http://xmlns.com/foaf/0.1/Person> ;
       <http://www.w3.org/2004/02/skos/core#definition> "Registered user in the system, can have different roles i.e learner , teacher , curator, etc"@en .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#UserAchievement
-:UserAchievement rdf:type owl:Class .
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#UserAchievement
+:UserAchievement rdf:type owl:Class ;
+                 rdfs:label "UserAchievement"@en ;
+                 <http://www.w3.org/2004/02/skos/core#definition> "User achievemtns are micro-credentials obtained by a specific user"@en .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#UserProfile
-:UserProfile rdf:type owl:Class .
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#UserProfile
+:UserProfile rdf:type owl:Class ;
+             rdfs:label "UserProfile"@en .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#UserRole
-:UserRole rdf:type owl:Class .
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#UserRole
+:UserRole rdf:type owl:Class ;
+          rdfs:label "UserRole"@en .
 
 
 ###  http:/schema.org/OrganisationProviderType
@@ -942,30 +946,30 @@ ec:UserLogs rdf:type owl:Class ;
 #    Individuals
 #################################################################
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Beginner
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#Beginner
 :Beginner rdf:type owl:NamedIndividual ,
                    :Proficiency ;
           :isMoreProficientThan :Novice .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Competent
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#Competent
 :Competent rdf:type owl:NamedIndividual ,
                     :Proficiency ;
            :isMoreProficientThan :Beginner .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Expert
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#Expert
 :Expert rdf:type owl:NamedIndividual ,
                  :Proficiency ;
         :isMoreProficientThan :Proficient .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Novice
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#Novice
 :Novice rdf:type owl:NamedIndividual ,
                  :Proficiency .
 
 
-###  http://www.semanticweb.org/abdel/ontologies/2023/0/modalia#Proficient
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#Proficient
 :Proficient rdf:type owl:NamedIndividual ,
                      :Proficiency ;
             :isMoreProficientThan :Competent .
