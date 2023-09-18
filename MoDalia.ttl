@@ -8,18 +8,26 @@
 @base <https://git.rwth-aachen.de/dalia/dalia-ontology#> .
 
 <https://git.rwth-aachen.de/dalia/dalia-ontology#> rdf:type owl:Ontology ;
-                                                               owl:versionIRI <https://github.com/tibonto/educor#/0.0.1> ;
-                                                               <http://purl.org/dc/elements/1.1/contributor> "Dr. Abdelmoneim Amer Desouki" ,
-                                                                                                             "Dr. Marc Fuhrmans" ,
-                                                                                                             "Dr. Petra Steiner" ;
-                                                               <http://purl.org/dc/elements/1.1/creator> "DALIA project" ;
-                                                               <http://purl.org/dc/elements/1.1/description> """MoDalia: An Ontology for Educational Material in RDM and Data Science
+                                                    owl:versionIRI <https://github.com/tibonto/educor#/0.0.1> ;
+                                                    <http://purl.org/dc/elements/1.1/contributor> "Dr. Abdelmoneim Amer Desouki" ,
+                                                                                                  "Dr. Marc Fuhrmans" ,
+                                                                                                  "Dr. Petra C. Steiner" ;
+                                                    <http://purl.org/dc/elements/1.1/creator> "DALIA project" ;
+                                                    <http://purl.org/dc/elements/1.1/description> """MoDalia: An Ontology for Educational Material in RDM and Data Science
 
 . The ontology is developed in OWL in Protege 5.0.0."""@en ;
-                                                               <http://purl.org/dc/terms/abstract> "The aim of DALIA project is to build a platform for learning material for Research Data Management (RDA) and Data Science. The platform is based on a knowledge graph. We introduce MoDalia, the base ontology of DALIA knowledge graph. Modalia inherits some modules from EduCOR. It includes also modelling of micro -credentials and certificates."@en ;
-                                                               <http://purl.org/dc/terms/created> "2023-09-11" ;
-                                                               <http://purl.org/dc/terms/publisher> "ULB TUDa – University and State Library, Technical University, Darmstadt, Germany" ;
-                                                               owl:versionInfo "0.0.1 - first version"@en .
+                                                    <http://purl.org/dc/terms/abstract> "The aim of DALIA project is to build a platform for learning material for Research Data Management (RDA) and Data Science. The platform is based on a knowledge graph. We introduce MoDalia, the base ontology of DALIA knowledge graph. Modalia inherits some modules from EduCOR. It includes also modelling of micro -credentials and certificates."@en ;
+                                                    <http://purl.org/dc/terms/created> "2023-09-11" ;
+                                                    <http://purl.org/dc/terms/publisher> "ULB TUDa – University and State Library, Technical University, Darmstadt, Germany" ;
+                                                    rdfs:comment """MoDalia reuses elements from the following ontologies:
+- DCTERMS = Dublin Core Terms  
+- OWL = Web Ontology Language  
+- RDF = Resource Description Framework  
+- RDFS = RDF Schema  
+- SCHEMA = schema.org  
+- SKOS = Simple Knowledge Organization System  
+- EC = EduCOR"""@en ;
+                                                    owl:versionInfo "0.0.1 - first version"@en .
 
 #################################################################
 #    Annotation properties
@@ -72,206 +80,236 @@ rdf:langString rdf:type rdfs:Datatype .
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#belongsToPhase
 :belongsToPhase rdf:type owl:ObjectProperty ;
                 rdfs:domain :RDMResource ;
-                rdfs:range :DataLifeCyclePhase .
+                rdfs:range :DataLifeCyclePhase ;
+                rdfs:label "belongsToPhase" .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#canCarryOut
 :canCarryOut rdf:type owl:ObjectProperty ;
              rdfs:domain :Skill ;
-             rdfs:range :RDMTask .
+             rdfs:range :RDMTask ;
+             rdfs:label "canCarryOut" .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#consistsOfKnowledge
 :consistsOfKnowledge rdf:type owl:ObjectProperty ;
                      rdfs:domain ec:LearningPath ;
-                     rdfs:range ec:KnowledgeTopic .
+                     rdfs:range ec:KnowledgeTopic ;
+                     rdfs:label "consistsOfKnowledge" .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#definesLearningPath
 :definesLearningPath rdf:type owl:ObjectProperty ;
                      rdfs:domain :UserProfile ;
-                     rdfs:range ec:LearningPath .
+                     rdfs:range ec:LearningPath ;
+                     rdfs:label "definesLearningPath" .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#essentialFor
 :essentialFor rdf:type owl:ObjectProperty ;
               rdfs:domain :Skill ;
               rdfs:range :Job ;
-              rdfs:label "is essential for"@en .
+              rdfs:label "essentialFor"@en .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#generateUserLogs
 :generateUserLogs rdf:type owl:ObjectProperty ;
                   rdfs:domain :User ;
-                  rdfs:range ec:UserLogs .
+                  rdfs:range ec:UserLogs ;
+                  rdfs:label "generateUserLogs" .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#givesProficiencyLevel
 :givesProficiencyLevel rdf:type owl:ObjectProperty ;
                        rdfs:domain ec:EducationalResource ;
-                       rdfs:range :Proficiency .
+                       rdfs:range :Proficiency ;
+                       rdfs:label "givesProficiencyLevel" .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#hasAchievement
 :hasAchievement rdf:type owl:ObjectProperty ;
                 rdfs:domain :User ;
-                rdfs:range :UserAchievement .
+                rdfs:range :UserAchievement ;
+                rdfs:label "hasAchievement" .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#hasAttachment
 :hasAttachment rdf:type owl:ObjectProperty ;
                rdfs:domain ec:EducationalResource ;
-               rdfs:range :ResourceAttachment .
+               rdfs:range :ResourceAttachment ;
+               rdfs:label "hasAttachment" .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#hasContributor
 :hasContributor rdf:type owl:ObjectProperty ;
                 rdfs:domain ec:EducationalResource ;
-                rdfs:range :Contributer .
+                rdfs:range :Contributer ;
+                rdfs:label "hasContributor" .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#hasDiscipline
 :hasDiscipline rdf:type owl:ObjectProperty ;
                rdfs:domain :RDMResource ;
-               rdfs:range :RDMDiscipline .
+               rdfs:range :RDMDiscipline ;
+               rdfs:label "hasDiscipline" .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#hasKnowledgeTopic
 :hasKnowledgeTopic rdf:type owl:ObjectProperty ;
                    owl:inverseOf :hasLearningResource ;
                    rdfs:domain ec:EducationalResource ;
-                   rdfs:range ec:KnowledgeTopic .
+                   rdfs:range ec:KnowledgeTopic ;
+                   rdfs:label "hasKnowledgeTopic" .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#hasLearningGoal
 :hasLearningGoal rdf:type owl:ObjectProperty ;
                  rdfs:domain ec:LearningPath ;
-                 rdfs:range ec:LearningGoal .
+                 rdfs:range ec:LearningGoal ;
+                 rdfs:label "hasLearningGoal" .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#hasLearningResource
 :hasLearningResource rdf:type owl:ObjectProperty ;
                      rdfs:domain ec:KnowledgeTopic ;
-                     rdfs:range ec:EducationalResource .
+                     rdfs:range ec:EducationalResource ;
+                     rdfs:label "hasLearningResource" .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#hasLearningType
 :hasLearningType rdf:type owl:ObjectProperty ,
                           owl:FunctionalProperty ;
                  rdfs:domain ec:EducationalResource ;
-                 rdfs:range :LearningResourceType .
+                 rdfs:range :LearningResourceType ;
+                 rdfs:label "hasLearningType" .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#hasMicroCredential
 :hasMicroCredential rdf:type owl:ObjectProperty ;
                     rdfs:domain :UserAchievement ;
-                    rdfs:range :MicroCredential .
+                    rdfs:range :MicroCredential ;
+                    rdfs:label "hasMicroCredential" .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#hasParentDomain
 :hasParentDomain rdf:type owl:ObjectProperty ;
                  rdfs:domain :KnowledgeDomain ;
-                 rdfs:range :KnowledgeDomain .
+                 rdfs:range :KnowledgeDomain ;
+                 rdfs:label "hasParentDomain" .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#hasProfile
 :hasProfile rdf:type owl:ObjectProperty ;
             rdfs:domain :User ;
-            rdfs:range :UserProfile .
+            rdfs:range :UserProfile ;
+            rdfs:label "hasProfile" .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#hasProvider
 :hasProvider rdf:type owl:ObjectProperty ;
              rdfs:domain ec:EducationalResource ;
-             rdfs:range :Provider .
+             rdfs:range :Provider ;
+             rdfs:label "hasProvider" .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#hasProviderType
 :hasProviderType rdf:type owl:ObjectProperty ;
                  rdfs:domain :Provider ;
-                 rdfs:range :ProviderType .
+                 rdfs:range :ProviderType ;
+                 rdfs:label "hasProviderType" .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#hasQuality
 :hasQuality rdf:type owl:ObjectProperty ;
             rdfs:domain ec:EducationalResource ;
-            rdfs:range :ContentQuality .
+            rdfs:range :ContentQuality ;
+            rdfs:label "hasQuality" .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#hasRating
 :hasRating rdf:type owl:ObjectProperty ;
            rdfs:domain ec:EducationalResource ;
-           rdfs:range :RatingIndicator .
+           rdfs:range :RatingIndicator ;
+           rdfs:label "hasRating"@en .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#hasTargetGroup
 :hasTargetGroup rdf:type owl:ObjectProperty ;
                 rdfs:domain :LearningObjectiveMatrixEntry ;
-                rdfs:range :TargetGroup .
+                rdfs:range :TargetGroup ;
+                rdfs:label "hasTargetGroup"@en .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#hasUser
 :hasUser rdf:type owl:ObjectProperty ;
          rdfs:subPropertyOf owl:topObjectProperty ;
          rdfs:domain :RatingIndicator ;
-         rdfs:range :User .
+         rdfs:range :User ;
+         rdfs:label "hasUser"@en .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#isCoveredIn
 :isCoveredIn rdf:type owl:ObjectProperty ;
              rdfs:domain :RDMTopic ;
-             rdfs:range :LearningObjectiveMatrixEntry .
+             rdfs:range :LearningObjectiveMatrixEntry ;
+             rdfs:label "isCoveredIn"@en .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#isLessProficientThan
 :isLessProficientThan rdf:type owl:ObjectProperty ;
                       owl:inverseOf :isMoreProficientThan ;
                       rdfs:domain :Proficiency ;
-                      rdfs:range :Proficiency .
+                      rdfs:range :Proficiency ;
+                      rdfs:label "isLessProficientThan"@en .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#isMoreProficientThan
 :isMoreProficientThan rdf:type owl:ObjectProperty ,
                                owl:TransitiveProperty ;
                       rdfs:domain :Proficiency ;
-                      rdfs:range :Proficiency .
+                      rdfs:range :Proficiency ;
+                      rdfs:label "isMoreProficientThan"@en .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#nextPhase
 :nextPhase rdf:type owl:ObjectProperty ;
            rdfs:domain :DataLifeCyclePhase ;
            rdfs:range :DataLifeCyclePhase ;
-           rdfs:label "has next phase"@en .
+           rdfs:label "nextPhase"@en .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#optionalFor
 :optionalFor rdf:type owl:ObjectProperty ;
              rdfs:domain :Skill ;
              rdfs:range :Job ;
-             rdfs:label "is optional for"@en .
+             rdfs:label "optionalFor"@en .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#prerequisites
 :prerequisites rdf:type owl:ObjectProperty ;
                rdfs:domain ec:KnowledgeTopic ;
-               rdfs:range ec:KnowledgeTopic .
+               rdfs:range ec:KnowledgeTopic ;
+               rdfs:label "prerequisites"@en .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#relatedTo
 :relatedTo rdf:type owl:ObjectProperty ;
-           rdfs:range :RDMResource .
+           rdfs:range :RDMResource ;
+           rdfs:label "relatedTo"@en .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#requiresKnowledge
 :requiresKnowledge rdf:type owl:ObjectProperty ;
                    rdfs:domain :Skill ;
-                   rdfs:range ec:KnowledgeTopic .
+                   rdfs:range ec:KnowledgeTopic ;
+                   rdfs:label "requiresKnowledge"@en .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#requiresProficiencyLevel
 :requiresProficiencyLevel rdf:type owl:ObjectProperty ;
                           rdfs:domain ec:EducationalResource ;
-                          rdfs:range :Proficiency .
+                          rdfs:range :Proficiency ;
+                          rdfs:label "requiresProficiencyLevel"@en .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#satisfies
@@ -283,7 +321,8 @@ rdf:langString rdf:type rdfs:Datatype .
 :solves rdf:type owl:ObjectProperty ;
         rdfs:domain :User ;
         rdfs:range :Assessment ,
-                   :Questionnaire .
+                   :Questionnaire ;
+        rdfs:label "solves"@en .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#storedIn
@@ -296,7 +335,7 @@ rdf:langString rdf:type rdfs:Datatype .
                                     )
                       ] ;
           rdfs:range :UserProfile ;
-          rdfs:label "is stored in"@en .
+          rdfs:label "storedIn"@en .
 
 
 #################################################################
@@ -313,7 +352,8 @@ rdf:langString rdf:type rdfs:Datatype .
                                                                     ec:EducationalResource
                                                                     ec:KnowledgeTopic
                                                                   )
-                                                    ] .
+                                                    ] ;
+                                        rdfs:label "title"@en .
 
 
 ###  http://purl.org/dc/elements/1.1/type
@@ -331,7 +371,8 @@ rdf:langString rdf:type rdfs:Datatype .
 
 ###  http://purl.org/dc/terms/dateCreated
 <http://purl.org/dc/terms/dateCreated> rdf:type owl:DatatypeProperty ;
-                                       rdfs:range xsd:dateTime .
+                                       rdfs:range xsd:dateTime ;
+                                       rdfs:label "dateCreated"@en .
 
 
 ###  http://purl.org/dc/terms/description
@@ -342,7 +383,9 @@ rdf:langString rdf:type rdfs:Datatype .
 
 
 ###  http://purl.org/dc/terms/language
-<http://purl.org/dc/terms/language> rdf:type owl:DatatypeProperty .
+<http://purl.org/dc/terms/language> rdf:type owl:DatatypeProperty ;
+                                    rdfs:range xsd:language ;
+                                    rdfs:label "language"@en .
 
 
 ###  http://purl.org/dc/terms/license
@@ -357,19 +400,22 @@ rdf:langString rdf:type rdfs:Datatype .
 
 ###  http://schema.org/dateModified
 <http://schema.org/dateModified> rdf:type owl:DatatypeProperty ;
-                                 rdfs:range xsd:dateTime .
+                                 rdfs:range xsd:dateTime ;
+                                 rdfs:label "dateModified"@en .
 
 
 ###  http://schema.org/downloadUrl
 <http://schema.org/downloadUrl> rdf:type owl:DatatypeProperty ;
-                                rdfs:range xsd:anyURI .
+                                rdfs:range xsd:anyURI ;
+                                rdfs:label "downloadUrl"@en .
 
 
 ###  http://schema.org/email
 <http://schema.org/email> rdf:type owl:DatatypeProperty ,
                                    owl:FunctionalProperty ;
                           rdfs:domain :User ;
-                          rdfs:range xsd:string .
+                          rdfs:range xsd:string ;
+                          rdfs:label "email"@en .
 
 
 ###  http://schema.org/keywords
@@ -380,90 +426,105 @@ rdf:langString rdf:type rdfs:Datatype .
                                                        )
                                          ] ;
                              rdfs:range rdf:langString ,
-                                        xsd:string .
+                                        xsd:string ;
+                             rdfs:label "keywords"@en .
 
 
 ###  http://schema.org/maintainer
 <http://schema.org/maintainer> rdf:type owl:DatatypeProperty ;
-                               rdfs:range xsd:string .
+                               rdfs:range xsd:string ;
+                               rdfs:label "maintainer"@en .
 
 
 ###  http://schema.org/name
 <http://schema.org/name> rdf:type owl:DatatypeProperty ;
-                         rdfs:domain :Contributer .
+                         rdfs:domain :Contributer ;
+                         rdfs:label "name"@en .
 
 
 ###  http://schema.org/timeRequired
 <http://schema.org/timeRequired> rdf:type owl:DatatypeProperty ;
                                  rdfs:domain ec:EducationalResource ;
-                                 rdfs:range xsd:dateTime .
+                                 rdfs:range xsd:dateTime ;
+                                 rdfs:label "timeRequired"@en .
 
 
 ###  http://schema.org/url
 <http://schema.org/url> rdf:type owl:DatatypeProperty ;
                         rdfs:domain ec:EducationalResource ;
-                        rdfs:range xsd:anyURI .
+                        rdfs:range xsd:anyURI ;
+                        rdfs:label "url"@en .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#accessibleForFree
 :accessibleForFree rdf:type owl:DatatypeProperty ;
                    rdfs:domain ec:EducationalResource ;
-                   rdfs:range xsd:boolean .
+                   rdfs:range xsd:boolean ;
+                   rdfs:label "accessibleForFree"@en .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#certificateEndDate
 :certificateEndDate rdf:type owl:DatatypeProperty ;
                     rdfs:domain :Certificate ;
-                    rdfs:range xsd:dateTime .
+                    rdfs:range xsd:dateTime ;
+                    rdfs:label "certificateEndDate"@en .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#certificateName
 :certificateName rdf:type owl:DatatypeProperty ;
                  rdfs:domain :Certificate ;
-                 rdfs:range xsd:string .
+                 rdfs:range xsd:string ;
+                 rdfs:label "certificateName"@en .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#certificateStartDate
 :certificateStartDate rdf:type owl:DatatypeProperty ;
                       rdfs:domain :Certificate ;
-                      rdfs:range xsd:dateTime .
+                      rdfs:range xsd:dateTime ;
+                      rdfs:label "certificateStartDate"@en .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#certificateUrl
 :certificateUrl rdf:type owl:DatatypeProperty ;
                 rdfs:domain :Certificate ;
-                rdfs:range xsd:anyURI .
+                rdfs:range xsd:anyURI ;
+                rdfs:label "certificateUrl"@en .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#hasGrade
 :hasGrade rdf:type owl:DatatypeProperty ;
           rdfs:domain :UserAchievement ;
-          rdfs:range xsd:string .
+          rdfs:range xsd:string ;
+          rdfs:label "hasGrade"@en .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#hasGrantDate
 :hasGrantDate rdf:type owl:DatatypeProperty ;
               rdfs:domain :UserAchievement ;
-              rdfs:range xsd:dateTime .
+              rdfs:range xsd:dateTime ;
+              rdfs:label "hasGrantDate"@en .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#hasInterval
 :hasInterval rdf:type owl:DatatypeProperty ;
              rdfs:domain :MicroCredential ;
-             rdfs:range rdfs:Literal .
+             rdfs:range rdfs:Literal ;
+             rdfs:label "hasInterval"@en .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#hasLearningObjective
 :hasLearningObjective rdf:type owl:DatatypeProperty ;
                       rdfs:domain :LearningObjectiveMatrixEntry ;
-                      rdfs:range xsd:string .
+                      rdfs:range xsd:string ;
+                      rdfs:label "hasLearningObjective"@en .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#isItClassRoom
 :isItClassRoom rdf:type owl:DatatypeProperty ;
                rdfs:subPropertyOf owl:topDataProperty ;
                rdfs:domain ec:EducationalResource ;
-               rdfs:range xsd:boolean .
+               rdfs:range xsd:boolean ;
+               rdfs:label "isItClassRoom"@en .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#microCredentialUrl
@@ -475,7 +536,8 @@ rdf:langString rdf:type rdfs:Datatype .
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#studyPlan
 :studyPlan rdf:type owl:DatatypeProperty ;
            rdfs:domain ec:LearningPath ;
-           rdfs:range rdf:langString .
+           rdfs:range rdf:langString ;
+           rdfs:label "studyPlan"@en .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#viewCount
@@ -485,18 +547,19 @@ rdf:langString rdf:type rdfs:Datatype .
                                        ec:EducationalResource
                                      )
                        ] ;
-           rdfs:range xsd:int .
-
-
-###  https://schema.org/language
-<https://schema.org/language> rdf:type owl:DatatypeProperty ;
-                              rdfs:domain ec:EducationalResource ;
-                              rdfs:range xsd:language .
+           rdfs:range xsd:int ;
+           rdfs:label "viewCount"@en .
 
 
 #################################################################
 #    Classes
 #################################################################
+
+###  http:/schema.org/OrganisationProviderType
+<http:/schema.org/OrganisationProviderType> rdf:type owl:Class ;
+                                            rdfs:subClassOf :ProviderType ;
+                                            rdfs:label "OrganisationProviderType"@en .
+
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#AnalyzePhase
 :AnalyzePhase rdf:type owl:Class ;
@@ -507,17 +570,20 @@ rdf:langString rdf:type rdfs:Datatype .
                                :DiscoverPhase ,
                                :IntegratePhase ,
                                :PlanPhase ,
-                               :PreservePhase .
+                               :PreservePhase ;
+              rdfs:label "AnalyzePhase"@en .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#Assessment
 :Assessment rdf:type owl:Class ;
-            rdfs:subClassOf :LearningResourceType .
+            rdfs:subClassOf :LearningResourceType ;
+            rdfs:label "Assessment"@en .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#AssurePhase
 :AssurePhase rdf:type owl:Class ;
-             rdfs:subClassOf :DataLifeCyclePhase .
+             rdfs:subClassOf :DataLifeCyclePhase ;
+             rdfs:label "AssurePhase"@en .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#AuthorRole
@@ -527,21 +593,25 @@ rdf:langString rdf:type rdfs:Datatype .
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#BachelorStudent
 :BachelorStudent rdf:type owl:Class ;
-                 rdfs:subClassOf :TargetGroup .
+                 rdfs:subClassOf :TargetGroup ;
+                 rdfs:label "BachelorStudent"@en .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#Best-Practices
 :Best-Practices rdf:type owl:Class ;
-                rdfs:subClassOf :LearningResourceType .
+                rdfs:subClassOf :LearningResourceType ;
+                rdfs:label "Best-Practices"@en .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#CaseStudy
 :CaseStudy rdf:type owl:Class ;
-           rdfs:subClassOf :LearningResourceType .
+           rdfs:subClassOf :LearningResourceType ;
+           rdfs:label "CaseStudy"@en .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#Certificate
-:Certificate rdf:type owl:Class .
+:Certificate rdf:type owl:Class ;
+             rdfs:label "Certificate" .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#Code
@@ -551,7 +621,8 @@ rdf:langString rdf:type rdfs:Datatype .
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#CollectPhase
 :CollectPhase rdf:type owl:Class ;
-              rdfs:subClassOf :DataLifeCyclePhase .
+              rdfs:subClassOf :DataLifeCyclePhase ;
+              rdfs:label "CollectPhase"@en .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#ContentQuality
@@ -561,12 +632,19 @@ rdf:langString rdf:type rdfs:Datatype .
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#Contributer
 :Contributer rdf:type owl:Class ;
-             rdfs:comment "The author of the OER"@en .
+             rdfs:comment "Contributed to OER with some contribution type"@en ;
+             rdfs:label "Contributor"@en .
+
+
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#ContributorType
+:ContributorType rdf:type owl:Class ;
+                 rdfs:label "ContributorType" .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#CuratorRole
 :CuratorRole rdf:type owl:Class ;
-             rdfs:subClassOf :UserRole .
+             rdfs:subClassOf :UserRole ;
+             rdfs:label "CuratorRole"@en .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#DataLifeCyclePhase
@@ -577,17 +655,20 @@ rdf:langString rdf:type rdfs:Datatype .
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#DataSteward
 :DataSteward rdf:type owl:Class ;
-             rdfs:subClassOf :TargetGroup .
+             rdfs:subClassOf :TargetGroup ;
+             rdfs:label "DataSteward"@en .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#DescribePhase
 :DescribePhase rdf:type owl:Class ;
-               rdfs:subClassOf :DataLifeCyclePhase .
+               rdfs:subClassOf :DataLifeCyclePhase ;
+               rdfs:label "DescribePhase"@en .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#DiscoverPhase
 :DiscoverPhase rdf:type owl:Class ;
-               rdfs:subClassOf :DataLifeCyclePhase .
+               rdfs:subClassOf :DataLifeCyclePhase ;
+               rdfs:label "DiscoverPhase"@en .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#Exercise
@@ -596,22 +677,26 @@ rdf:langString rdf:type rdfs:Datatype .
                                 owl:onProperty :hasLearningResource ;
                                 owl:allValuesFrom :Assessment
                               ] ;
-          rdfs:subClassOf ec:EducationalResource .
+          rdfs:subClassOf ec:EducationalResource ;
+          rdfs:label "Exercise"@en .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#Experiment
 :Experiment rdf:type owl:Class ;
-            rdfs:subClassOf :LearningResourceType .
+            rdfs:subClassOf :LearningResourceType ;
+            rdfs:label "Experiment"@en .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#IntegratePhase
 :IntegratePhase rdf:type owl:Class ;
-                rdfs:subClassOf :DataLifeCyclePhase .
+                rdfs:subClassOf :DataLifeCyclePhase ;
+                rdfs:label "IntegratePhase"@en .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#Job
 :Job rdf:type owl:Class ;
      owl:disjointWith :KnowledgeDomain ;
+     rdfs:label "Job"@en ;
      rdfs:seeAlso "http://schema.org/Occupation"@en ;
      <http://www.w3.org/2004/02/skos/core#definition> "name of a profession"@en ;
      <http://www.w3.org/2004/02/skos/core#example> "Software Developer"@en .
@@ -619,11 +704,13 @@ rdf:langString rdf:type rdfs:Datatype .
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#JupyterNotebook
 :JupyterNotebook rdf:type owl:Class ;
-                 rdfs:subClassOf :LearningResourceType .
+                 rdfs:subClassOf :LearningResourceType ;
+                 rdfs:label "JupyterNotebook"@en .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#KnowledgeDomain
 :KnowledgeDomain rdf:type owl:Class ;
+                 rdfs:label "KnowledgeDomain"@en ;
                  <http://www.w3.org/2004/02/skos/core#definition> "knowledge of a specific, specialized discipline or field"@en ;
                  <http://www.w3.org/2004/02/skos/core#example> "An example of knowledge domain can be Biology or Chemistry"@en .
 
@@ -631,24 +718,28 @@ rdf:langString rdf:type rdfs:Datatype .
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#LPAuditory
 :LPAuditory rdf:type owl:Class ;
             rdfs:subClassOf ec:LearningPreference ;
+            rdfs:label "LPAuditory"@en ;
             <http://www.w3.org/2004/02/skos/core#definition> "Auditory learning (music, discussion, lectures)"@en .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#LPKinesthetic
 :LPKinesthetic rdf:type owl:Class ;
                rdfs:subClassOf ec:LearningPreference ;
+               rdfs:label "LPKinesthetic"@en ;
                <http://www.w3.org/2004/02/skos/core#definition> "Kinesthetic learning (movement, experiments, hands-on activities)"@en .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#LPReading
 :LPReading rdf:type owl:Class ;
            rdfs:subClassOf ec:LearningPreference ;
+           rdfs:label "LPReading"@en ;
            <http://www.w3.org/2004/02/skos/core#definition> "Reading and writing (making lists, reading textbooks, taking notes)"@en .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#LPVisual
 :LPVisual rdf:type owl:Class ;
           rdfs:subClassOf ec:LearningPreference ;
+          rdfs:label "LPVisual"@en ;
           <http://www.w3.org/2004/02/skos/core#definition> "Visual learning (pictures, movies, diagrams)"@en .
 
 
@@ -659,17 +750,20 @@ rdf:langString rdf:type rdfs:Datatype .
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#LearningResourceType
 :LearningResourceType rdf:type owl:Class ;
+                      rdfs:label "LearningResourceType"@en ;
                       <http://www.w3.org/2004/02/skos/core#definition> "The type of the learning resource can be lecture, experiment, Assessment, etc."@en .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#Lecture
 :Lecture rdf:type owl:Class ;
-         rdfs:subClassOf :LearningResourceType .
+         rdfs:subClassOf :LearningResourceType ;
+         rdfs:label "Lecture"@en .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#MasterStudent
 :MasterStudent rdf:type owl:Class ;
-               rdfs:subClassOf :TargetGroup .
+               rdfs:subClassOf :TargetGroup ;
+               rdfs:label "MasterStudent"@en .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#MicroCredential
@@ -679,28 +773,32 @@ rdf:langString rdf:type rdfs:Datatype .
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#Organization
 :Organization rdf:type owl:Class ;
-              rdfs:label <Organization> ;
+              rdfs:label "Organization" ;
               rdfs:seeAlso <http://xmlns.com/foaf/0.1/Organization> .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#PersonProviderType
 :PersonProviderType rdf:type owl:Class ;
-                    rdfs:subClassOf :ProviderType .
+                    rdfs:subClassOf :ProviderType ;
+                    rdfs:label "PersonProviderType"@en .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#PhDStudent
 :PhDStudent rdf:type owl:Class ;
-            rdfs:subClassOf :TargetGroup .
+            rdfs:subClassOf :TargetGroup ;
+            rdfs:label "PhDStudent"@en .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#PlanPhase
 :PlanPhase rdf:type owl:Class ;
-           rdfs:subClassOf :DataLifeCyclePhase .
+           rdfs:subClassOf :DataLifeCyclePhase ;
+           rdfs:label "PlanPhase"@en .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#PreservePhase
 :PreservePhase rdf:type owl:Class ;
-               rdfs:subClassOf :DataLifeCyclePhase .
+               rdfs:subClassOf :DataLifeCyclePhase ;
+               rdfs:label "PreservePhase"@en .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#Proficiency
@@ -713,6 +811,7 @@ rdf:langString rdf:type rdfs:Datatype .
                                                :Proficient
                                              )
                                  ] ;
+             rdfs:label "Proficiency"@en ;
              <http://www.w3.org/2004/02/skos/core#definition> """Benner’s Novice to Expert
 The five stages of proficiency in the novice to expert model are: novice, advanced beginner, competent, proficient, and expert (Benner, 1982)."""@en .
 
@@ -720,6 +819,7 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#Provider
 :Provider rdf:type owl:Class ;
           rdfs:comment "Repository that provides OER"@en ;
+          rdfs:label "Provider"@en ;
           <http://www.w3.org/2004/02/skos/core#example> "OERSI or Dataone"@en .
 
 
@@ -730,45 +830,53 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#Questionnaire
 :Questionnaire rdf:type owl:Class ;
-               rdfs:subClassOf :LearningResourceType .
+               rdfs:subClassOf :LearningResourceType ;
+               rdfs:label "Questionnaire"@en .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#RDMDiscipline
 :RDMDiscipline rdf:type owl:Class ;
+               rdfs:label "RDMDiscipline"@en ;
                <http://www.w3.org/2004/02/skos/core#example> "e.g Engineering"@en .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#RDMResource
 :RDMResource rdf:type owl:Class ;
              rdfs:subClassOf ec:EducationalResource ;
-             rdfs:comment "OER related to Research Data Management"@en .
+             rdfs:comment "OER related to Research Data Management"@en ;
+             rdfs:label "RDMResource"@en .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#RDMSkill
 :RDMSkill rdf:type owl:Class ;
           rdfs:subClassOf :Skill ;
           rdfs:comment "Research Data Managment Skill"@en ;
+          rdfs:label "RDMSkill"@en ;
           <http://www.w3.org/2004/02/skos/core#definition> "The ability to carry out tasks."@en .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#RDMTask
 :RDMTask rdf:type owl:Class ;
+         rdfs:label "RDMTask"@en ;
          <http://www.w3.org/2004/02/skos/core#example> "Data Collection and Description"@en .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#RDMTopic
 :RDMTopic rdf:type owl:Class ;
+          rdfs:label "RDMTopic"@en ;
           <http://www.w3.org/2004/02/skos/core#definition> "Topic related to research data management"@en .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#RatingIndicator
 :RatingIndicator rdf:type owl:Class ;
+                 rdfs:label "RatingIndicator"@en ;
                  <http://www.w3.org/2004/02/skos/core#definition> "Is a URI that relates a User and an OER and have predicate schema:rating" .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#ResearcherRole
 :ResearcherRole rdf:type owl:Class ;
-                rdfs:subClassOf :UserRole .
+                rdfs:subClassOf :UserRole ;
+                rdfs:label "ResearcherRole"@en .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#ResourceAttachment
@@ -778,7 +886,8 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#ServiceProviderType
 :ServiceProviderType rdf:type owl:Class ;
-                     rdfs:subClassOf :ProviderType .
+                     rdfs:subClassOf :ProviderType ;
+                     rdfs:label "ServiceProviderType"@en .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#Skill
@@ -789,12 +898,14 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#Slides
 :Slides rdf:type owl:Class ;
-        rdfs:subClassOf :ResourceAttachment .
+        rdfs:subClassOf :ResourceAttachment ;
+        rdfs:label "Slides"@en .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#StudentRole
 :StudentRole rdf:type owl:Class ;
-             rdfs:subClassOf :UserRole .
+             rdfs:subClassOf :UserRole ;
+             rdfs:label "StudentRole"@en .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#TargetGroup
@@ -804,12 +915,14 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#TeacherRole
 :TeacherRole rdf:type owl:Class ;
-             rdfs:subClassOf :UserRole .
+             rdfs:subClassOf :UserRole ;
+             rdfs:label "TeacherRole"@en .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#TextBook
 :TextBook rdf:type owl:Class ;
-          rdfs:subClassOf :LearningResourceType .
+          rdfs:subClassOf :LearningResourceType ;
+          rdfs:label "TextBook"@en .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#User
@@ -833,11 +946,6 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#UserRole
 :UserRole rdf:type owl:Class ;
           rdfs:label "UserRole"@en .
-
-
-###  http:/schema.org/OrganisationProviderType
-<http:/schema.org/OrganisationProviderType> rdf:type owl:Class ;
-                                            rdfs:subClassOf :ProviderType .
 
 
 ###  https://github.com/tibonto/educor#AcademicParameter
@@ -939,7 +1047,8 @@ ec:UserLogs rdf:type owl:Class ;
 
 ###  https://w3id.org/ccso/ccso#LearningOutcome
 <https://w3id.org/ccso/ccso#LearningOutcome> rdf:type owl:Class ;
-                                             rdfs:comment "The learning outcomes, specific knowledge, skills and competences, which the students will acquire with the successful completion of the course." .
+                                             rdfs:comment "The learning outcomes, specific knowledge, skills and competences, which the students will acquire with the successful completion of the course." ;
+                                             rdfs:label "LearningOutcome"@en .
 
 
 #################################################################
@@ -958,6 +1067,21 @@ ec:UserLogs rdf:type owl:Class ;
            :isMoreProficientThan :Beginner .
 
 
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#ContactPerson
+:ContactPerson rdf:type owl:NamedIndividual ,
+                        :ContributorType .
+
+
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#Creator
+:Creator rdf:type owl:NamedIndividual ,
+                  :ContributorType .
+
+
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#DataCurator
+:DataCurator rdf:type owl:NamedIndividual ,
+                      :ContributorType .
+
+
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#Expert
 :Expert rdf:type owl:NamedIndividual ,
                  :Proficiency ;
@@ -973,6 +1097,11 @@ ec:UserLogs rdf:type owl:Class ;
 :Proficient rdf:type owl:NamedIndividual ,
                      :Proficiency ;
             :isMoreProficientThan :Competent .
+
+
+###  https://git.rwth-aachen.de/dalia/dalia-ontology#Sponsor
+:Sponsor rdf:type owl:NamedIndividual ,
+                  :ContributorType .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
