@@ -611,7 +611,9 @@ rdf:langString rdf:type rdfs:Datatype .
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#Certificate
 :Certificate rdf:type owl:Class ;
-             rdfs:label "Certificate" .
+             rdfs:label "Certificate" ;
+             <http://www.w3.org/2004/02/skos/core#definition> "A certificate obtained by user."@en ;
+             <http://www.w3.org/2004/02/skos/core#example> "SCRUM Professional I"@en .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#Code
@@ -627,7 +629,9 @@ rdf:langString rdf:type rdfs:Datatype .
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#ContentQuality
 :ContentQuality rdf:type owl:Class ;
-                rdfs:label "Content Quality"@en .
+                rdfs:label "Content Quality"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "Educational quality of an OER"@en ;
+                <http://www.w3.org/2004/02/skos/core#example> "High quality"@en .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#Contributer
@@ -638,7 +642,8 @@ rdf:langString rdf:type rdfs:Datatype .
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#ContributorType
 :ContributorType rdf:type owl:Class ;
-                 rdfs:label "ContributorType" .
+                 rdfs:label "ContributorType" ;
+                 <http://www.w3.org/2004/02/skos/core#example> "Creator ( Author )"@en .
 
 
 ###  https://git.rwth-aachen.de/dalia/dalia-ontology#CuratorRole
@@ -951,6 +956,7 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 ###  https://github.com/tibonto/educor#AcademicParameter
 ec:AcademicParameter rdf:type owl:Class ;
                      rdfs:label "AcademicParameter"@en ;
+                     <http://www.w3.org/2004/02/skos/core#definition> "It contains the quantitative parameters regarding a user performance"@en ;
                      <http://www.w3.org/2004/02/skos/core#example> "It contains the quantitative parameters regarding a user performance"@en .
 
 
