@@ -14,13 +14,13 @@
                                                                                     "Dr. Marc Fuhrmans (https://orcid.org/0000-0002-9826-018X), Technische Universität Darmstadt (https://ror.org/05n911h24, https://isni.org/isni/0000000109401669)" ,
                                                                                     "Dr. Petra C. Steiner (https://orcid.org/0000-0001-8997-2620), Technische Universität Darmstadt (https://ror.org/05n911h24, https://isni.org/isni/0000000109401669)" ;
                                       <http://purl.org/dc/elements/1.1/creator> "BMBF DALIA project" ;
-									  dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
                                       <http://purl.org/dc/elements/1.1/description> """MoDalia: An Ontology for Educational Material in RDM and Data Science
 
 . The ontology is developed in OWL in Protege 5.5.0."""@en ;
-                                      <http://purl.org/dc/terms/abstract> "The aim of DALIA project is to build a platform for learning material for Research Data Management (RDM) and Data Science. The platform is based on a knowledge graph. We introduce MoDalia, the base ontology of DALIA knowledge graph. Modalia inherits some modules from EduCOR. It includes also modelling of micro -credentials and certificates."@en ;
-                                      <http://purl.org/dc/terms/created> "2023-09-11" ;
-                                      <http://purl.org/dc/terms/publisher> "ULB TUDa – University and State Library, Technical University, Darmstadt, Germany" ;
+                                      dcterms:abstract "The aim of DALIA project is to build a platform for learning material for Research Data Management (RDM) and Data Science. The platform is based on a knowledge graph. We introduce MoDalia, the base ontology of DALIA knowledge graph. Modalia inherits some modules from EduCOR. It includes also modelling of micro -credentials and certificates."@en ;
+                                      dcterms:created "2023-09-11" ;
+                                      dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+                                      dcterms:publisher "ULB TUDa – University and State Library, Technical University, Darmstadt, Germany" ;
                                       rdfs:comment """MoDalia reuses elements from the following ontologies:
 - DCTERMS = Dublin Core Terms  
 - OWL = Web Ontology Language  
@@ -45,19 +45,20 @@
 
 ###  http://purl.org/dc/elements/1.1/description
 <http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty ;
-                                              rdfs:domain _:genid-nodeid-node1hc4rhmeex14 .
+                                              rdfs:domain _:genid-nodeid-genid-d04f80d70a7546069c5bf05e784fead3-genid-nodeid-node1hc4rhmeex14 ,
+                                                          _:genid-nodeid-node1hck74ieex6 .
 
 
 ###  http://purl.org/dc/terms/abstract
-<http://purl.org/dc/terms/abstract> rdf:type owl:AnnotationProperty .
+dcterms:abstract rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/created
-<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
+dcterms:created rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/publisher
-<http://purl.org/dc/terms/publisher> rdf:type owl:AnnotationProperty .
+dcterms:publisher rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.w3.org/2004/02/skos/core#definition
@@ -238,7 +239,11 @@ rdf:langString rdf:type rdfs:Datatype .
 
 ###  https://purl.org/ontology/modalia#hasTargetGroup
 :hasTargetGroup rdf:type owl:ObjectProperty ;
-                rdfs:domain :LearningGoalMatrixEntry ;
+                rdfs:domain [ rdf:type owl:Class ;
+                              owl:unionOf ( ec:EducationalResource
+                                            :LearningGoalMatrixEntry
+                                          )
+                            ] ;
                 rdfs:range :TargetGroup ;
                 rdfs:label "hasTargetGroup"@en .
 
@@ -346,13 +351,7 @@ rdf:langString rdf:type rdfs:Datatype .
 #################################################################
 
 ###  http://purl.org/dc/elements/1.1/description
-<http://purl.org/dc/elements/1.1/description> rdf:type owl:DatatypeProperty ;
-                                              rdfs:domain [ rdf:type owl:Class ;
-                                                            owl:unionOf ( ec:EducationalResource
-                                                                          ec:KnowledgeTopic
-                                                                          :KnowledgeDomain
-                                                                        )
-                                                          ] .
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:DatatypeProperty .
 
 
 ###  http://purl.org/dc/elements/1.1/title
@@ -384,27 +383,27 @@ rdf:langString rdf:type rdfs:Datatype .
 
 
 ###  http://purl.org/dc/terms/dateCreated
-<http://purl.org/dc/terms/dateCreated> rdf:type owl:DatatypeProperty ;
-                                       rdfs:range xsd:dateTime ;
-                                       rdfs:label "dateCreated"@en .
+dcterms:dateCreated rdf:type owl:DatatypeProperty ;
+                    rdfs:range xsd:dateTime ;
+                    rdfs:label "dateCreated"@en .
 
 
 ###  http://purl.org/dc/terms/description
-<http://purl.org/dc/terms/description> rdf:type owl:DatatypeProperty ;
-                                       rdfs:subPropertyOf owl:topDataProperty ;
-                                       rdfs:range xsd:string ;
-                                       rdfs:label "description"@en .
+dcterms:description rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf owl:topDataProperty ;
+                    rdfs:range xsd:string ;
+                    rdfs:label "description"@en .
 
 
 ###  http://purl.org/dc/terms/language
-<http://purl.org/dc/terms/language> rdf:type owl:DatatypeProperty ;
-                                    rdfs:range xsd:language ;
-                                    rdfs:label "language"@en .
+dcterms:language rdf:type owl:DatatypeProperty ;
+                 rdfs:range xsd:language ;
+                 rdfs:label "language"@en .
 
 
 ###  http://purl.org/dc/terms/license
-<http://purl.org/dc/terms/license> rdf:type owl:DatatypeProperty ;
-                                   rdfs:domain ec:EducationalResource .
+dcterms:license rdf:type owl:DatatypeProperty ;
+                rdfs:domain ec:EducationalResource .
 
 
 ###  http://schema.org/citation
@@ -430,6 +429,12 @@ rdf:langString rdf:type rdfs:Datatype .
                           rdfs:domain :User ;
                           rdfs:range xsd:string ;
                           rdfs:label "email"@en .
+
+
+###  http://schema.org/identifier
+<http://schema.org/identifier> rdf:type owl:DatatypeProperty ;
+                               rdfs:domain ec:EducationalResource ;
+                               rdfs:range xsd:string .
 
 
 ###  http://schema.org/keywords
@@ -460,6 +465,7 @@ rdf:langString rdf:type rdfs:Datatype .
 <http://schema.org/timeRequired> rdf:type owl:DatatypeProperty ;
                                  rdfs:domain ec:EducationalResource ;
                                  rdfs:range xsd:dateTime ;
+                                 rdfs:comment "in format [hh:]mi:ss"@en ;
                                  rdfs:label "timeRequired"@en .
 
 
@@ -503,6 +509,15 @@ rdf:langString rdf:type rdfs:Datatype .
                 rdfs:domain :Certificate ;
                 rdfs:range xsd:anyURI ;
                 rdfs:label "certificateUrl"@en .
+
+
+###  https://purl.org/ontology/modalia#hasDOI
+:hasDOI rdf:type owl:DatatypeProperty ;
+        rdfs:domain ec:EducationalResource ;
+        rdfs:range xsd:string ;
+        rdfs:comment "the DOI of the resource if exists."@en ;
+        rdfs:label "hasDOI"@en ;
+        <http://www.w3.org/2004/02/skos/core#example> "example: 10.18450/dataman/90" .
 
 
 ###  https://purl.org/ontology/modalia#hasGrade
