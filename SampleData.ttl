@@ -1,0 +1,55 @@
+
+@prefix : <https://purl.org/ontology/modalia#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <	http://www.w3.org/2004/02/skos/core#> .
+@base <https://purl.org/ontology/modalia> .
+
+:KD1 a :KnowledgeDomain .
+:KD1 dc:title "generic, general"@en .
+:KD1 dc:description "generic, general"@en . 
+ 
+# Was sind Forschungsdaten?
+# https://www.cms.hu-berlin.de/de/dl/dataman/support/material
+# row 29: https://docs.google.com/spreadsheets/d/1zsxpuFgkf9duk-sCum5gmm7_9p9sQOPFCPxnS66WKhc/edit#gid=0 
+:E5 a :EducationalResource;
+   dc:title "Was sind Forschungsdaten?";
+   dc:description "An online tutorial by the research data management initiative of the Humboldt University in Berlin." ;
+   dcterms:langauge "de";
+   :hasQuality 9;
+   :requiresProficiencyLevel :Novice ;
+   :givesProficiencyLevel  :Beginner ;
+   schema:keywords "research data" ;
+  dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+   schema:url <https://www.cms.hu-berlin.de/de/dl/dataman/support/material> ;
+   :hasLearningType :Tutorial ;
+   schema:author "Anja Rosenbaum" ;
+   schema:dateCreated "02-12-2016"^^xsd:date ;
+   schema:timeRequired "7:11" ;
+   schema:identifier "DOI:10.18450/dataman/90" ;
+   :hasDOI "10.18450/dataman/90" ;
+   :accessibleForFree "true"^^xsd:boolean ;
+   :hasAttachment <https://w3id.org/kim/hcrt/video> ;
+   :hasTargetGroup :MasterStudent, :BachelorStudent .
+   
+#Provider/repository
+:E5 :hasProvider [
+                  a :Provider ;
+				  schema:name "Humboldt University in Berlin";
+				  :hasProviderType :OrganisationProviderType
+				  ] .
+#topics
+:KT1 a :KnowledgeTopic ;
+     dc:title "Research data definition" ;
+	 :hasKnowledgeDomain :KD1;
+	 :hasLearningResource :E5 .
+:KT2 a :KnowledgeTopic ;
+     dc:title "Research data subdivisions" ;
+	 :hasKnowledgeDomain :KD1;
+	 :hasLearningResource :E5 .
