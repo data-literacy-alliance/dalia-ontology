@@ -11,9 +11,12 @@
 @prefix skos: <	http://www.w3.org/2004/02/skos/core#> .
 @base <https://purl.org/ontology/modalia> .
 
-:KD1 a :KnowledgeDomain .
-:KD1 dc:title "generic, general"@en .
-:KD1 dc:description "generic, general"@en . 
+:KD1 a :KnowledgeDomain ;
+ dc:title "generic, general"@en ;
+ dc:description "generic, general"@en . 
+:KD2 a :KnowledgeDomain ;
+ dc:title "Chemistry"@en ;
+ dc:description "Chemistry domain"@en . 
  
 # Was sind Forschungsdaten?
 # https://www.cms.hu-berlin.de/de/dl/dataman/support/material
@@ -53,3 +56,101 @@
      dc:title "Research data subdivisions" ;
 	 :hasKnowledgeDomain :KD1;
 	 :hasLearningResource :E5 .
+#############################################################
+# Datenmanagement nach Plan
+# https://www.rwth-aachen.de/cms/root/Forschung/Forschungsdatenmanagement/Weiterbildungsangebote/~udzt/Lehrvideos/
+# row 24: https://docs.google.com/spreadsheets/d/1zsxpuFgkf9duk-sCum5gmm7_9p9sQOPFCPxnS66WKhc/edit#gid=0 
+:E6 a :EducationalResource;
+   dc:title "Datenmanagement nach Plan";
+   dc:description "Das Lehrvideo „Datenmanagement nach Plan“ erklärt kurz, was ein Datenmanagementplan (DMP) ist und welche Vorteile er für die Forschung bietet."@de ;
+   dcterms:langauge "de";
+   :hasQuality 9;
+   :requiresProficiencyLevel :Novice ;
+   :givesProficiencyLevel  :Beginner ;
+   schema:keywords "data management plan", "DMP" ;
+  dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+   schema:url <https://www.rwth-aachen.de/cms/root/Forschung/Forschungsdatenmanagement/Weiterbildungsangebote/~udzt/Lehrvideos/> ;
+   :hasLearningType :Tutorial ;
+   schema:author ("Dominik Schmitz" "Daniela Hausen" "Ute Trautwein-Bruns") ;
+   schema:dateCreated "26-02-2019"^^xsd:date ;
+   schema:timeRequired "5:20" ;
+   schema:identifier "DOI: 10.18154/RWTH-2018-231100" ;
+   :hasDOI "10.18154/RWTH-2018-231100" ;
+   :accessibleForFree "true"^^xsd:boolean ;
+   :hasAttachment <https://w3id.org/kim/hcrt/video> ;
+   :hasTargetGroup :MasterStudent, :PhDStudent .
+   
+#Provider/repository
+:E6 :hasProvider [
+                  a :Provider ;
+				  schema:name "RWTH Aachen University";
+				  :hasProviderType :OrganisationProviderType
+				  ] .
+#topics
+:KT3 a :KnowledgeTopic ;
+     dc:title "data management plan (DMP)" ;
+	 :hasKnowledgeDomain :KD1;
+	 :hasLearningResource :E6 .
+#############################################################
+#############################################################
+# Research data in chemistry
+# https://www.cms.hu-berlin.de/de/dl/dataman/support/material
+# row 32: https://docs.google.com/spreadsheets/d/1zsxpuFgkf9duk-sCum5gmm7_9p9sQOPFCPxnS66WKhc/edit#gid=0 
+:E7 a :EducationalResource;
+   dc:title "Research data in chemistry";
+   dc:description "Ein Online-Tutorial der Forschungsdatenmanagement-Initiative der Humboldt-Universität zu Berlin zum Thema Forschungsdaten in den Naturwissenschaften am Beispiel der Chemie."@de ;
+   dcterms:langauge "de";
+   :hasQuality 9;
+   :requiresProficiencyLevel :Beginner ;
+   :givesProficiencyLevel  :Beginner ;
+   schema:keywords "research data", "chemistry" ;
+  dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+   schema:url <https://www.cms.hu-berlin.de/de/dl/dataman/support/material> ;
+   :hasLearningType :Tutorial ;
+   schema:author "Kerstin Helbig" ;
+   schema:dateCreated "27-03-2018"^^xsd:date ;
+   schema:timeRequired "4:50" ;
+   schema:identifier "DOI: 10.18450/dataman/96" ;
+   :hasDOI "10.18450/dataman/96" ;
+   :accessibleForFree "true"^^xsd:boolean ;
+   :hasAttachment <https://w3id.org/kim/hcrt/video> ;
+   :hasTargetGroup :MasterStudent, :PhDStudent .
+   
+#Provider/repository
+:E6 :hasProvider [
+                  a :Provider ;
+				  schema:name "Humboldt University in Berlin";
+				  :hasProviderType :OrganisationProviderType
+				  ] .
+#topics
+:KT4 a :KnowledgeTopic ;
+     dc:title "research data in the natural sciences using chemistry as an example." ;
+	 :hasKnowledgeDomain :KD2;
+	 :hasLearningResource :E7 .
+#############################################################
+#Introduction to RDM
+:E2 a :EducationalResource;
+   dc:title "Introduction to Research Data Management at Aalto University";
+   dcterms:langauge "en";
+   :hasQuality 9;
+   schema:author ( "Lucie Hradecká" "Dr Kati Laakso" "Dr Essi Viitanen") ;
+   :requiresProficiencyLevel :Novice;
+   :givesProficiencyLevel  :Beginner;
+   schema:keywords "research data management";
+  dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+  schema:url <https://aoe.fi/api/v1/download/file/introductiontordmaaltouniversity-1635228191840.pptx> ;
+   :hasLearningType :Lecture ;
+   schema:dateCreated "05-10-2021"^^xsd:date ;
+   :accessibleForFree "true"^^xsd:boolean ;
+   :hasAttachment <https://w3id.org/kim/hcrt/slide> .
+ #Provider/repository
+:E2 :hasProvider [
+                  a :Provider ;
+				  schema:name "Aalto University, Finland";
+				  :hasProviderType :OrganisationProviderType
+				  ] .
+#topics
+:KT5 a :KnowledgeTopic ;
+     dc:title "Research data management" ;
+	 :hasKnowledgeDomain :KD1;
+	 :hasLearningResource :E2 . 
