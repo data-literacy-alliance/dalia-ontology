@@ -45,8 +45,8 @@
 
 ###  http://purl.org/dc/elements/1.1/description
 <http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty ;
-                                              rdfs:domain _:genid-nodeid-genid-d04f80d70a7546069c5bf05e784fead3-genid-nodeid-node1hc4rhmeex14 ,
-                                                          _:genid-nodeid-node1hck74ieex6 .
+                                              rdfs:domain _:genid-nodeid-genid-be681880b6a749d09a10a4d021766d65-DC921386F2D8778C6B5E5DEA877A64AA ,
+                                                          _:genid-nodeid-genid-be681880b6a749d09a10a4d021766d65-genid-nodeid-node1hck74ieex6 .
 
 
 ###  http://purl.org/dc/terms/abstract
@@ -464,9 +464,9 @@ dcterms:license rdf:type owl:DatatypeProperty ;
 ###  http://schema.org/timeRequired
 <http://schema.org/timeRequired> rdf:type owl:DatatypeProperty ;
                                  rdfs:domain ec:EducationalResource ;
-                                 rdfs:range xsd:dateTime ;
-                                 rdfs:comment "in format [hh:]mi:ss"@en ;
-                                 rdfs:label "timeRequired"@en .
+                                 rdfs:comment "in format xsd:duration"@en ;
+                                 rdfs:label "timeRequired"@en ;
+                                 <http://www.w3.org/2004/02/skos/core#example> "\"PT7M11S\"^^xsd:duration" .
 
 
 ###  http://schema.org/url
@@ -1116,13 +1116,19 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 ###  https://purl.org/ontology/modalia#Beginner
 :Beginner rdf:type owl:NamedIndividual ,
                    :Proficiency ;
+          :isLessProficientThan :Competent ,
+                                :Expert ,
+                                :Proficient ;
           :isMoreProficientThan :Novice .
 
 
 ###  https://purl.org/ontology/modalia#Competent
 :Competent rdf:type owl:NamedIndividual ,
                     :Proficiency ;
-           :isMoreProficientThan :Beginner .
+           :isLessProficientThan :Expert ,
+                                 :Proficient ;
+           :isMoreProficientThan :Beginner ,
+                                 :Novice .
 
 
 ###  https://purl.org/ontology/modalia#ContactPerson
@@ -1143,18 +1149,28 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 ###  https://purl.org/ontology/modalia#Expert
 :Expert rdf:type owl:NamedIndividual ,
                  :Proficiency ;
-        :isMoreProficientThan :Proficient .
+        :isMoreProficientThan :Beginner ,
+                              :Competent ,
+                              :Novice ,
+                              :Proficient .
 
 
 ###  https://purl.org/ontology/modalia#Novice
 :Novice rdf:type owl:NamedIndividual ,
-                 :Proficiency .
+                 :Proficiency ;
+        :isLessProficientThan :Beginner ,
+                              :Competent ,
+                              :Expert ,
+                              :Proficient .
 
 
 ###  https://purl.org/ontology/modalia#Proficient
 :Proficient rdf:type owl:NamedIndividual ,
                      :Proficiency ;
-            :isMoreProficientThan :Competent .
+            :isLessProficientThan :Expert ;
+            :isMoreProficientThan :Beginner ,
+                                  :Competent ,
+                                  :Novice .
 
 
 ###  https://purl.org/ontology/modalia#Sponsor
