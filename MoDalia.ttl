@@ -237,6 +237,12 @@ rdf:langString rdf:type rdfs:Datatype .
            rdfs:label "hasRating"@en .
 
 
+###  https://purl.org/ontology/modalia#hasRole
+:hasRole rdf:type owl:ObjectProperty ;
+         rdfs:domain :User ;
+         rdfs:range :UserRole .
+
+
 ###  https://purl.org/ontology/modalia#hasTargetGroup
 :hasTargetGroup rdf:type owl:ObjectProperty ;
                 rdfs:domain [ rdf:type owl:Class ;

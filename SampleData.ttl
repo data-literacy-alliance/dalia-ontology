@@ -18,6 +18,12 @@
  dc:title "Chemistry"@en ;
  dc:description "Chemistry domain"@en . 
  
+ :user1 a :User ;
+    :UserID "u1" ;
+    :Username "dalia1" ;
+    :Email "ad@dalia.com" ;
+    :hasRole   :CuratorRole .
+	
 # Was sind Forschungsdaten?
 # https://www.cms.hu-berlin.de/de/dl/dataman/support/material
 # row 29: https://docs.google.com/spreadsheets/d/1zsxpuFgkf9duk-sCum5gmm7_9p9sQOPFCPxnS66WKhc/edit#gid=0 
