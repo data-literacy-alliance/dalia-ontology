@@ -201,13 +201,13 @@ Creative Commons may be contacted at https://creativecommons.org.
 In the following are reported the right and liability declaration of all ontologies which have been imported or extended within Metadata4ing:
 
 
-<details><summary><h2>Public domain ontologies</h2></summary>
+# <details><summary><h2>Public domain ontologies</h2></summary>
 
-|Ontology                                                                    |Rights                                                                               |
-|----------------------------------------------------------------------------|-------------------------------------------------------------------------------------|
-|[Relation Ontology](https://obofoundry.org/ontology/ro.html) (prefix `obo:`)|[Public Domain Dedication (CC-0)](https://creativecommons.org/publicdomain/zero/1.0/)|
+# |Ontology                                                                    |Rights                                                                               |
+# |----------------------------------------------------------------------------|-------------------------------------------------------------------------------------|
+# |[Relation Ontology](https://obofoundry.org/ontology/ro.html) (prefix `obo:`)|[Public Domain Dedication (CC-0)](https://creativecommons.org/publicdomain/zero/1.0/)|
 
-</details>
+# </details>
 
 <details><summary><h2>Ontologies with permissive open source license</h2></summary>
 
