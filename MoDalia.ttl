@@ -1,4 +1,5 @@
 @prefix : <https://purl.org/ontology/modalia#> .
+@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
 @prefix ec: <https://github.com/tibonto/educor#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -45,8 +46,8 @@
 
 ###  http://purl.org/dc/elements/1.1/description
 <http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty ;
-                                              rdfs:domain _:genid-nodeid-genid-be681880b6a749d09a10a4d021766d65-DC921386F2D8778C6B5E5DEA877A64AA ,
-                                                          _:genid-nodeid-genid-be681880b6a749d09a10a4d021766d65-genid-nodeid-node1hck74ieex6 .
+                                              rdfs:domain _:genid-nodeid-genid-69ee2cfa48fb42c7a188ded625f0f340-18E6830392664DAABCCD4D071EBEA5DA ,
+                                                          _:genid-nodeid-genid-69ee2cfa48fb42c7a188ded625f0f340-6D924935802838D667C01A2B0C115447 .
 
 
 ###  http://purl.org/dc/terms/abstract
@@ -80,6 +81,12 @@ rdf:langString rdf:type rdfs:Datatype .
 #################################################################
 #    Object Properties
 #################################################################
+
+###  http://id.loc.gov/ontologies/bibframe/contribution
+bf:contribution rdf:type owl:ObjectProperty ;
+                rdfs:domain ec:EducationalResource ;
+                rdfs:label "contribution"@en .
+
 
 ###  https://purl.org/ontology/modalia#belongsToPhase
 :belongsToPhase rdf:type owl:ObjectProperty ;
@@ -142,13 +149,6 @@ rdf:langString rdf:type rdfs:Datatype .
                rdfs:domain ec:EducationalResource ;
                rdfs:range :ResourceAttachment ;
                rdfs:label "hasAttachment" .
-
-
-###  https://purl.org/ontology/modalia#hasContributor
-:hasContributor rdf:type owl:ObjectProperty ;
-                rdfs:domain ec:EducationalResource ;
-                rdfs:range :Contributor ;
-                rdfs:label "hasContributor" .
 
 
 ###  https://purl.org/ontology/modalia#hasDiscipline
@@ -961,6 +961,7 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 
 ###  https://purl.org/ontology/modalia#RDMTopic
 :RDMTopic rdf:type owl:Class ;
+          rdfs:subClassOf ec:KnowledgeTopic ;
           rdfs:label "RDMTopic"@en ;
           <http://www.w3.org/2004/02/skos/core#definition> "Topic related to research data management"@en .
 
