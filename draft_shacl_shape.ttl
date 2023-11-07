@@ -1,0 +1,28 @@
+@prefix schema: <http://www.schema.org/> .
+@prefix ec:   <https://github.com/tibonto/educor#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh:   <http://www.w3.org/ns/shacl#> .
+@prefix xml:  <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <https://purl.org/ontology/modalia#> .
+
+:UserShape a sh:NodeShape;
+   sh:targetClass :User ;
+   sh:property [                  # name
+    sh:path     schema:name ;
+    sh:minCount 1;
+    sh:maxCount 1;
+    sh:datatype xsd:string ;
+  ] ;
+  sh:property [                   # email
+   sh:path schema:email ;
+   sh:minCount 1;
+   sh:maxCount 1;
+  ] .
+  
+ec:EducationalResource-dateCreated
+        rdf:type     sh:PropertyShape ;
+        sh:datatype  xsd:dateTime ;
+        sh:path      schema:dateCreated .

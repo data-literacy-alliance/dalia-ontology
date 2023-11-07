@@ -9,6 +9,7 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix schema: <http://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
 @base <https://purl.org/ontology/modalia> .
 
 :KD1 a :KnowledgeDomain ;
@@ -21,8 +22,8 @@
  :user1 a :User ;
     :UserID "u1" ;
     :Username "dalia1" ;
-    :Email "ad@dalia.com" ;
-    :hasRole   :CuratorRole .
+    schema:email "ad@dalia.com" ;
+    :hasUserRole   :CuratorRole .
 	
 # Was sind Forschungsdaten?
 # https://www.cms.hu-berlin.de/de/dl/dataman/support/material
@@ -45,6 +46,10 @@
    :hasDOI "10.18450/dataman/90" ;
    :accessibleForFree "true"^^xsd:boolean ;
    :hasAttachment <https://w3id.org/kim/hcrt/video> ;
+   bf:contribution [ 
+           a bf:Contribution ;
+		   bf:role :DataCurator ;
+	       bf:agent :user1  ] ;
    :hasTargetGroup :MasterStudent, :BachelorStudent .
    
 #Provider/repository
