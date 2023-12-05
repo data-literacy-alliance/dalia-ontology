@@ -46,8 +46,8 @@
 
 ###  http://purl.org/dc/elements/1.1/description
 <http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty ;
-                                              rdfs:domain _:genid-nodeid-genid-69ee2cfa48fb42c7a188ded625f0f340-18E6830392664DAABCCD4D071EBEA5DA ,
-                                                          _:genid-nodeid-genid-69ee2cfa48fb42c7a188ded625f0f340-6D924935802838D667C01A2B0C115447 .
+                                              rdfs:domain _:genid-nodeid-genid-7f3fc2d6a290412ca101eef4304bb7f9-03C25B3A957720AE4A216990B854A6BC ,
+                                                          _:genid-nodeid-genid-7f3fc2d6a290412ca101eef4304bb7f9-1C347B939C3E71D223D6E8C4D2A32974 .
 
 
 ###  http://purl.org/dc/terms/abstract
@@ -109,6 +109,12 @@ bf:contribution rdf:type owl:ObjectProperty ;
                      rdfs:label "consistsOfKnowledge" .
 
 
+###  https://purl.org/ontology/modalia#createdBy
+:createdBy rdf:type owl:ObjectProperty ;
+           rdfs:domain :Community ;
+           rdfs:range :User .
+
+
 ###  https://purl.org/ontology/modalia#definesLearningPath
 :definesLearningPath rdf:type owl:ObjectProperty ;
                      rdfs:domain :UserProfile ;
@@ -149,6 +155,16 @@ bf:contribution rdf:type owl:ObjectProperty ;
                rdfs:domain ec:EducationalResource ;
                rdfs:range :ResourceAttachment ;
                rdfs:label "hasAttachment" .
+
+
+###  https://purl.org/ontology/modalia#hasCommunity
+:hasCommunity rdf:type owl:ObjectProperty ;
+              rdfs:domain [ rdf:type owl:Class ;
+                            owl:unionOf ( ec:EducationalResource
+                                          ec:LearningPath
+                                        )
+                          ] ;
+              rdfs:range :Community .
 
 
 ###  https://purl.org/ontology/modalia#hasDiscipline
@@ -193,6 +209,13 @@ bf:contribution rdf:type owl:ObjectProperty ;
                     rdfs:domain :UserAchievement ;
                     rdfs:range :MicroCredential ;
                     rdfs:label "hasMicroCredential" .
+
+
+###  https://purl.org/ontology/modalia#hasOwner
+:hasOwner rdf:type owl:ObjectProperty ,
+                   owl:FunctionalProperty ;
+          rdfs:domain :Community ;
+          rdfs:range :User .
 
 
 ###  https://purl.org/ontology/modalia#hasParentDomain
@@ -277,12 +300,27 @@ bf:contribution rdf:type owl:ObjectProperty ;
                       rdfs:label "isLessProficientThan"@en .
 
 
+###  https://purl.org/ontology/modalia#isMemberOf
+:isMemberOf rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            rdfs:domain :User ;
+            rdfs:range :Community .
+
+
 ###  https://purl.org/ontology/modalia#isMoreProficientThan
 :isMoreProficientThan rdf:type owl:ObjectProperty ,
                                owl:TransitiveProperty ;
                       rdfs:domain :Proficiency ;
                       rdfs:range :Proficiency ;
                       rdfs:label "isMoreProficientThan"@en .
+
+
+###  https://purl.org/ontology/modalia#isNewVersionOf
+:isNewVersionOf rdf:type owl:ObjectProperty ,
+                         owl:TransitiveProperty ,
+                         owl:IrreflexiveProperty ;
+                rdfs:domain ec:EducationalResource ;
+                rdfs:range ec:EducationalResource .
 
 
 ###  https://purl.org/ontology/modalia#nextPhase
@@ -366,12 +404,14 @@ bf:contribution rdf:type owl:ObjectProperty ;
                                                       owl:unionOf ( ec:EducationalResource
                                                                     ec:KnowledgeTopic
                                                                     :Assessment
+                                                                    :Community
                                                                     :Job
                                                                     :KnowledgeDomain
                                                                     :MicroCredential
                                                                     :Skill
                                                                   )
                                                     ] ;
+                                        rdfs:range xsd:string ;
                                         rdfs:label "title"@en .
 
 
@@ -390,6 +430,11 @@ bf:contribution rdf:type owl:ObjectProperty ;
 
 ###  http://purl.org/dc/terms/dateCreated
 dcterms:dateCreated rdf:type owl:DatatypeProperty ;
+                    rdfs:domain [ rdf:type owl:Class ;
+                                  owl:unionOf ( ec:EducationalResource
+                                                :Community
+                                              )
+                                ] ;
                     rdfs:range xsd:dateTime ;
                     rdfs:label "dateCreated"@en .
 
@@ -397,6 +442,13 @@ dcterms:dateCreated rdf:type owl:DatatypeProperty ;
 ###  http://purl.org/dc/terms/description
 dcterms:description rdf:type owl:DatatypeProperty ;
                     rdfs:subPropertyOf owl:topDataProperty ;
+                    rdfs:domain [ rdf:type owl:Class ;
+                                  owl:unionOf ( ec:EducationalResource
+                                                ec:KnowledgeTopic
+                                                :Community
+                                                :KnowledgeDomain
+                                              )
+                                ] ;
                     rdfs:range xsd:string ;
                     rdfs:label "description"@en .
 
@@ -480,6 +532,12 @@ dcterms:license rdf:type owl:DatatypeProperty ;
                         rdfs:domain ec:EducationalResource ;
                         rdfs:range xsd:anyURI ;
                         rdfs:label "url"@en .
+
+
+###  http://schema.org/version
+<http://schema.org/version> rdf:type owl:DatatypeProperty ;
+                            rdfs:domain ec:EducationalResource ;
+                            rdfs:range xsd:string .
 
 
 ###  https://purl.org/ontology/modalia#accessibleForFree
@@ -742,6 +800,12 @@ ec:UserLogs rdf:type owl:Class ;
 :CollectPhase rdf:type owl:Class ;
               rdfs:subClassOf :DataLifeCyclePhase ;
               rdfs:label "CollectPhase"@en .
+
+
+###  https://purl.org/ontology/modalia#Community
+:Community rdf:type owl:Class ;
+           rdfs:label "Community"@en ;
+           <http://www.w3.org/2004/02/skos/core#definition> "A Community gathers users (members) and educational resources/learning paths similar  Zenodo communities"@en .
 
 
 ###  https://purl.org/ontology/modalia#ContentQuality

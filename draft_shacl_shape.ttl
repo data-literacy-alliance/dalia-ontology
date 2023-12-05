@@ -6,6 +6,7 @@
 @prefix sh:   <http://www.w3.org/ns/shacl#> .
 @prefix xml:  <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix : <https://purl.org/ontology/modalia#> .
 
 :UserShape a sh:NodeShape;
@@ -16,13 +17,35 @@
     sh:maxCount 1;
     sh:datatype xsd:string ;
   ] ;
-  sh:property [                   # email
+  sh:property [                   # email, unique?
    sh:path schema:email ;
    sh:minCount 1;
    sh:maxCount 1;
   ] .
   
-ec:EducationalResource-dateCreated
-        rdf:type     sh:PropertyShape ;
-        sh:datatype  xsd:dateTime ;
-        sh:path      schema:dateCreated .
+:EducationalResourceShape a  sh:NodeShape;
+        sh:targetClass :EducationalResource ;
+        sh:property [                  # url
+           sh:path   schema:url
+           sh:datatype  xsd:anyURI  ; 
+		   sh:minCount 1;
+		   sh:maxCount 1;
+		] ; 
+		sh:property [                  # title
+           sh:path   dc:title
+           sh:datatype xsd:string  ; 
+		   sh:minCount 1;
+		   sh:maxCount 1;
+		] ; 
+		sh:property [                  # dateCreated
+           sh:path   schema:dateCreated
+           sh:datatype  xsd:dateTime ; 
+		   sh:maxCount 1;
+		] ;
+		sh:property [                  # hasLearningType
+           sh:path   :hasLearningType
+           sh:class     :LearningResourceType  ; 
+		   sh:maxCount 1;
+		] ;
+               .
+		
