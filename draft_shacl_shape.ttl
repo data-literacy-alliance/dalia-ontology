@@ -47,5 +47,18 @@
            sh:class     :LearningResourceType  ; 
 		   sh:maxCount 1;
 		] ;
+		sh:property [                  # accessibleForFree
+           sh:path   :accessibleForFree
+           sh:datatype  xsd:boolean ; 
+		   sh:maxCount 1;
+		] ;
+		sh:property [                  # requiresProficiencyLevel
+           sh:path   :requiresProficiencyLevel
+           sh:class     :ProficiencyLevel  ; 
+		] ;
+		sh:property [                  # givesProficiencyLevel
+           sh:path   :givesProficiencyLevel
+           sh:class     :ProficiencyLevel  ; 
+		] ;
                .
 		
