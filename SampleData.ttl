@@ -31,7 +31,7 @@
 :E5 a :EducationalResource;
    dc:title "Was sind Forschungsdaten?";
    dc:description "An online tutorial by the research data management initiative of the Humboldt University in Berlin." ;
-   dcterms:langauge "de";
+   dcterms:language "de";
    :hasQuality 9;
    :requiresProficiencyLevel :Novice ;
    :givesProficiencyLevel  :Beginner ;
@@ -44,7 +44,7 @@
    schema:timeRequired "PT7M11S"^^xsd:duration ;
    schema:identifier "DOI:10.18450/dataman/90" ;
    :hasDOI "10.18450/dataman/90" ;
-   :accessibleForFree "true"^^xsd:boolean ;
+   schema:isAccessibleForFree "true"^^xsd:boolean ;
    :hasAttachment <https://w3id.org/kim/hcrt/video> ;
    bf:contribution [ 
            a bf:Contribution ;
@@ -74,7 +74,7 @@
 :E6 a :EducationalResource;
    dc:title "Datenmanagement nach Plan";
    dc:description "Das Lehrvideo „Datenmanagement nach Plan“ erklärt kurz, was ein Datenmanagementplan (DMP) ist und welche Vorteile er für die Forschung bietet."@de ;
-   dcterms:langauge "de";
+   dcterms:language "de";
    :hasQuality 9;
    :requiresProficiencyLevel :Novice ;
    :givesProficiencyLevel  :Beginner ;
@@ -87,7 +87,7 @@
    schema:timeRequired "PT5M20S"^^xsd:duration ;
    schema:identifier "DOI: 10.18154/RWTH-2018-231100" ;
    :hasDOI "10.18154/RWTH-2018-231100" ;
-   :accessibleForFree "true"^^xsd:boolean ;
+   schema:isAccessibleForFree "true"^^xsd:boolean ;
    :hasAttachment <https://w3id.org/kim/hcrt/video> ;
    :hasTargetGroup :MasterStudent, :PhDStudent .
    
@@ -110,7 +110,7 @@
 :E7 a :EducationalResource;
    dc:title "Research data in chemistry";
    dc:description "Ein Online-Tutorial der Forschungsdatenmanagement-Initiative der Humboldt-Universität zu Berlin zum Thema Forschungsdaten in den Naturwissenschaften am Beispiel der Chemie."@de ;
-   dcterms:langauge "de";
+   dcterms:language "de";
    :hasQuality 9;
    :requiresProficiencyLevel :Beginner ;
    :givesProficiencyLevel  :Beginner ;
@@ -123,7 +123,7 @@
    schema:timeRequired "PT4M50S"^^xsd:duration ;
    schema:identifier "DOI: 10.18450/dataman/96" ;
    :hasDOI "10.18450/dataman/96" ;
-   :accessibleForFree "true"^^xsd:boolean ;
+   schema:isAccessibleForFree "true"^^xsd:boolean ;
    :hasAttachment <https://w3id.org/kim/hcrt/video> ;
    :hasTargetGroup :MasterStudent, :PhDStudent .
    
@@ -142,7 +142,7 @@
 #Introduction to RDM
 :E2 a :EducationalResource;
    dc:title "Introduction to Research Data Management at Aalto University";
-   dcterms:langauge "en";
+   dcterms:language "en";
    :hasQuality 9;
    schema:author ( "Lucie Hradecká" "Dr Kati Laakso" "Dr Essi Viitanen") ;
    :requiresProficiencyLevel :Novice;
@@ -152,7 +152,7 @@
   schema:url <https://aoe.fi/api/v1/download/file/introductiontordmaaltouniversity-1635228191840.pptx> ;
    :hasLearningType :Lecture ;
    schema:dateCreated "2021-10-05"^^xsd:date ;
-   :accessibleForFree "true"^^xsd:boolean ;
+   schema:isAccessibleForFree "true"^^xsd:boolean ;
    :hasAttachment <https://w3id.org/kim/hcrt/slide> .
  #Provider/repository
 :E2 :hasProvider [

@@ -46,8 +46,8 @@
 
 ###  http://purl.org/dc/elements/1.1/description
 <http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty ;
-                                              rdfs:domain _:genid-nodeid-genid-7f3fc2d6a290412ca101eef4304bb7f9-03C25B3A957720AE4A216990B854A6BC ,
-                                                          _:genid-nodeid-genid-7f3fc2d6a290412ca101eef4304bb7f9-1C347B939C3E71D223D6E8C4D2A32974 .
+                                              rdfs:domain _:genid-nodeid-genid-014f7fd74735489498c3ebb96f11c280-14551FC2848A3F4EF2A3F47559A62FD0 ,
+                                                          _:genid-nodeid-genid-014f7fd74735489498c3ebb96f11c280-22838E273A66D06170B6F069737D78C1 .
 
 
 ###  http://purl.org/dc/terms/abstract
@@ -164,7 +164,8 @@ bf:contribution rdf:type owl:ObjectProperty ;
                                           ec:LearningPath
                                         )
                           ] ;
-              rdfs:range :Community .
+              rdfs:range :Community ;
+              rdfs:comment "The community of a learning resource or learning path" .
 
 
 ###  https://purl.org/ontology/modalia#hasDiscipline
@@ -390,6 +391,18 @@ bf:contribution rdf:type owl:ObjectProperty ;
           rdfs:label "storedIn"@en .
 
 
+###  https://schema.org#commentUserID
+<https://schema.org#commentUserID> rdf:type owl:ObjectProperty ;
+                                   rdfs:domain <https://schema.org#UserComment> ;
+                                   rdfs:range :User .
+
+
+###  https://schema.org#commentedOer
+<https://schema.org#commentedOer> rdf:type owl:ObjectProperty ;
+                                  rdfs:domain <https://schema.org#UserComment> ;
+                                  rdfs:range ec:EducationalResource .
+
+
 #################################################################
 #    Data properties
 #################################################################
@@ -495,6 +508,13 @@ dcterms:license rdf:type owl:DatatypeProperty ;
                                rdfs:range xsd:string .
 
 
+###  http://schema.org/isAccessibleForFree
+<http://schema.org/isAccessibleForFree> rdf:type owl:DatatypeProperty ;
+                                        rdfs:domain ec:EducationalResource ;
+                                        rdfs:range xsd:boolean ;
+                                        rdfs:label "accessibleForFree"@en .
+
+
 ###  http://schema.org/keywords
 <http://schema.org/keywords> rdf:type owl:DatatypeProperty ;
                              rdfs:domain [ rdf:type owl:Class ;
@@ -538,13 +558,6 @@ dcterms:license rdf:type owl:DatatypeProperty ;
 <http://schema.org/version> rdf:type owl:DatatypeProperty ;
                             rdfs:domain ec:EducationalResource ;
                             rdfs:range xsd:string .
-
-
-###  https://purl.org/ontology/modalia#accessibleForFree
-:accessibleForFree rdf:type owl:DatatypeProperty ;
-                   rdfs:domain ec:EducationalResource ;
-                   rdfs:range xsd:boolean ;
-                   rdfs:label "accessibleForFree"@en .
 
 
 ###  https://purl.org/ontology/modalia#certificateEndDate
@@ -653,6 +666,31 @@ dcterms:license rdf:type owl:DatatypeProperty ;
                        ] ;
            rdfs:range xsd:int ;
            rdfs:label "viewCount"@en .
+
+
+###  https://schema.org#commentDate
+<https://schema.org#commentDate> rdf:type owl:DatatypeProperty ;
+                                 rdfs:domain <https://schema.org#UserComment> ;
+                                 rdfs:range xsd:dateTimeStamp ;
+                                 <http://www.w3.org/2004/02/skos/core#definition> "The date of a user comment"@en .
+
+
+###  https://schema.org#commentID
+<https://schema.org#commentID> rdf:type owl:DatatypeProperty ;
+                               <http://www.w3.org/2004/02/skos/core#definition> "ID of a user comment"@en .
+
+
+###  https://schema.org#commentText
+<https://schema.org#commentText> rdf:type owl:DatatypeProperty ;
+                                 rdfs:domain <https://schema.org#UserComment> ;
+                                 rdfs:range xsd:string ;
+                                 <http://www.w3.org/2004/02/skos/core#definition> "The OER of a user comment"@en .
+
+
+###  https://schema.org#likesCount
+<https://schema.org#likesCount> rdf:type owl:DatatypeProperty ;
+                                rdfs:domain ec:EducationalResource ;
+                                rdfs:range xsd:int .
 
 
 #################################################################
@@ -1072,7 +1110,8 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 
 ###  https://purl.org/ontology/modalia#TargetGroup
 :TargetGroup rdf:type owl:Class ;
-             rdfs:label "TargetGroup"@en .
+             rdfs:label "TargetGroup"@en ;
+             <http://www.w3.org/2004/02/skos/core#definition> "The target group of the learning resource, e.g. students, data stewards, researchers, etc"@en .
 
 
 ###  https://purl.org/ontology/modalia#TeacherRole
@@ -1148,6 +1187,11 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 :Workshop rdf:type owl:Class ;
           rdfs:subClassOf :LearningResourceType ;
           rdfs:label "Workshop"@en .
+
+
+###  https://schema.org#UserComment
+<https://schema.org#UserComment> rdf:type owl:Class ;
+                                 <http://www.w3.org/2004/02/skos/core#definition> "Comment added by a user on an educational resource"@en .
 
 
 ###  https://schema.org/audio
