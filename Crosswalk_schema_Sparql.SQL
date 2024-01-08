@@ -10,9 +10,6 @@ CONSTRUCT {
             schema:name ?title ;
             schema:description ?description ;
             schema:inLanguage ?language ;
-            #schema:hasQuality ?quality ;
-            #schema:requiresProficiencyLevel ?requiresProficiencyLevel ;
-            #schema:givesProficiencyLevel ?givesProficiencyLevel ;
             schema:keywords ?keywords ;
             schema:license ?license ;
             schema:url ?url ;
@@ -35,32 +32,32 @@ CONSTRUCT {
          schema:isPartOf ?knowledgeDomain ;
          schema:about ?resource .
 }
-
 WHERE {
-    BIND(:E5 AS ?resource)
-    #?resource a :EducationalResource ;
+    #BIND(:E5 AS ?resource)
+    ?resource a mo:EducationalResource ;
     dc:title ?title  ;
 	schema:url ?url .
 
 	optional{  ?resource  dc:description ?description .}
+	optional{  ?resource schema:author/rdf:rest*/rdf:first ?author}
 	optional { ?resource dcterms:language ?language . }
 	optional{?resource dcterms:license ?license }
 	optional{?resource schema:dateCreated ?dateCreated .}
 	optional{?resource schema:timeRequired ?timeRequired }
 	optional{?resource schema:identifier ?identifier }
-	optional{?resource  :hasAttachment ?attachment }
-	optional{?resource :hasTargetGroup ?targetGroup }
-	optional{?resource :accessibleForFree ?free .}
+	optional{?resource  mo:hasAttachment ?attachment }
+	optional{?resource mo:hasTargetGroup ?targetGroup }
+	optional{?resource mo:accessibleForFree ?free .}
 	optional{?resource schema:keywords ?keywords }
-	optional{?resource   schema:author ?author }
-            optional{   ?resource :hasProvider ?provider .
-  ?provider schema:name ?providerName ;
-                :hasProviderType ?providerType .
-} .
- optional{ ?topic :hasLearningResource ?resource ;
+    optional{   ?resource mo:hasProvider ?provider .
+                ?provider schema:name ?providerName ;
+                mo:hasProviderType ?providerType .} .
+    optional{ ?topic mo:hasLearningResource ?resource ;
          dc:title ?topicName ;
-         :hasKnowledgeDomain ?knowledgeDomain .
-}
+         mo:hasKnowledgeDomain ?knowledgeDomain .
+    }
+	filter(?resource=mo:E6)
 }
 
-## Still Author
+
+## schema:title is title of Job

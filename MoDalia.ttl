@@ -102,6 +102,18 @@ bf:contribution rdf:type owl:ObjectProperty ;
              rdfs:label "canCarryOut" .
 
 
+###  https://purl.org/ontology/modalia#commentUserID
+:commentUserID rdf:type owl:ObjectProperty ;
+               rdfs:domain <https://schema.org#UserComment> ;
+               rdfs:range :User .
+
+
+###  https://purl.org/ontology/modalia#commentedOER
+:commentedOER rdf:type owl:ObjectProperty ;
+              rdfs:domain <https://schema.org#UserComment> ;
+              rdfs:range ec:EducationalResource .
+
+
 ###  https://purl.org/ontology/modalia#consistsOfKnowledge
 :consistsOfKnowledge rdf:type owl:ObjectProperty ;
                      rdfs:domain ec:LearningPath ;
@@ -120,6 +132,12 @@ bf:contribution rdf:type owl:ObjectProperty ;
                      rdfs:domain :UserProfile ;
                      rdfs:range ec:LearningPath ;
                      rdfs:label "definesLearningPath" .
+
+
+###  https://purl.org/ontology/modalia#educationalLevel
+:educationalLevel rdf:type owl:ObjectProperty ;
+                  rdfs:domain :User ;
+                  rdfs:range :EducationalLevel .
 
 
 ###  https://purl.org/ontology/modalia#essentialFor
@@ -380,27 +398,8 @@ bf:contribution rdf:type owl:ObjectProperty ;
 
 ###  https://purl.org/ontology/modalia#storedIn
 :storedIn rdf:type owl:ObjectProperty ;
-          rdfs:domain [ rdf:type owl:Class ;
-                        owl:unionOf ( ec:AcademicParameter
-                                      ec:LearningGoal
-                                      ec:LearningPreference
-                                      ec:Recommendation
-                                    )
-                      ] ;
           rdfs:range :UserProfile ;
           rdfs:label "storedIn"@en .
-
-
-###  https://schema.org#commentUserID
-<https://schema.org#commentUserID> rdf:type owl:ObjectProperty ;
-                                   rdfs:domain <https://schema.org#UserComment> ;
-                                   rdfs:range :User .
-
-
-###  https://schema.org#commentedOer
-<https://schema.org#commentedOer> rdf:type owl:ObjectProperty ;
-                                  rdfs:domain <https://schema.org#UserComment> ;
-                                  rdfs:range ec:EducationalResource .
 
 
 #################################################################
@@ -560,6 +559,11 @@ dcterms:license rdf:type owl:DatatypeProperty ;
                             rdfs:range xsd:string .
 
 
+###  http://w3id.org/nfdi4ing/metadata4ing#orcidId
+<http://w3id.org/nfdi4ing/metadata4ing#orcidId> rdf:type owl:DatatypeProperty ;
+                                                rdfs:domain :User .
+
+
 ###  https://purl.org/ontology/modalia#certificateEndDate
 :certificateEndDate rdf:type owl:DatatypeProperty ;
                     rdfs:domain :Certificate ;
@@ -586,6 +590,25 @@ dcterms:license rdf:type owl:DatatypeProperty ;
                 rdfs:domain :Certificate ;
                 rdfs:range xsd:anyURI ;
                 rdfs:label "certificateUrl"@en .
+
+
+###  https://purl.org/ontology/modalia#commentDate
+:commentDate rdf:type owl:DatatypeProperty ;
+             rdfs:domain <https://schema.org#UserComment> ;
+             rdfs:range xsd:dateTimeStamp ;
+             <http://www.w3.org/2004/02/skos/core#definition> "The date of a user comment"@en .
+
+
+###  https://purl.org/ontology/modalia#commentID
+:commentID rdf:type owl:DatatypeProperty ;
+           <http://www.w3.org/2004/02/skos/core#definition> "ID of a user comment"@en .
+
+
+###  https://purl.org/ontology/modalia#commentText
+:commentText rdf:type owl:DatatypeProperty ;
+             rdfs:domain <https://schema.org#UserComment> ;
+             rdfs:range xsd:string ;
+             <http://www.w3.org/2004/02/skos/core#definition> "The OER of a user comment"@en .
 
 
 ###  https://purl.org/ontology/modalia#hasDOI
@@ -668,25 +691,6 @@ dcterms:license rdf:type owl:DatatypeProperty ;
            rdfs:label "viewCount"@en .
 
 
-###  https://schema.org#commentDate
-<https://schema.org#commentDate> rdf:type owl:DatatypeProperty ;
-                                 rdfs:domain <https://schema.org#UserComment> ;
-                                 rdfs:range xsd:dateTimeStamp ;
-                                 <http://www.w3.org/2004/02/skos/core#definition> "The date of a user comment"@en .
-
-
-###  https://schema.org#commentID
-<https://schema.org#commentID> rdf:type owl:DatatypeProperty ;
-                               <http://www.w3.org/2004/02/skos/core#definition> "ID of a user comment"@en .
-
-
-###  https://schema.org#commentText
-<https://schema.org#commentText> rdf:type owl:DatatypeProperty ;
-                                 rdfs:domain <https://schema.org#UserComment> ;
-                                 rdfs:range xsd:string ;
-                                 <http://www.w3.org/2004/02/skos/core#definition> "The OER of a user comment"@en .
-
-
 ###  https://schema.org#likesCount
 <https://schema.org#likesCount> rdf:type owl:DatatypeProperty ;
                                 rdfs:domain ec:EducationalResource ;
@@ -701,13 +705,6 @@ dcterms:license rdf:type owl:DatatypeProperty ;
 <http:/schema.org/OrganisationProviderType> rdf:type owl:Class ;
                                             rdfs:subClassOf :ProviderType ;
                                             rdfs:label "OrganisationProviderType"@en .
-
-
-###  https://github.com/tibonto/educor#AcademicParameter
-ec:AcademicParameter rdf:type owl:Class ;
-                     rdfs:label "AcademicParameter"@en ;
-                     <http://www.w3.org/2004/02/skos/core#definition> "It contains the quantitative parameters regarding a user performance"@en ;
-                     <http://www.w3.org/2004/02/skos/core#example> "It contains the quantitative parameters regarding a user performance"@en .
 
 
 ###  https://github.com/tibonto/educor#Answer
@@ -895,6 +892,11 @@ ec:UserLogs rdf:type owl:Class ;
 :DiscoverPhase rdf:type owl:Class ;
                rdfs:subClassOf :DataLifeCyclePhase ;
                rdfs:label "DiscoverPhase"@en .
+
+
+###  https://purl.org/ontology/modalia#EducationalLevel
+:EducationalLevel rdf:type owl:Class ;
+                  <http://www.w3.org/2004/02/skos/core#definition> "The educational level of a user: Bachlor, Master or PhD"@en .
 
 
 ###  https://purl.org/ontology/modalia#Exercise
