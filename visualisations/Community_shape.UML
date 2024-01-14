@@ -1,0 +1,35 @@
+@startuml
+skinparam class {
+  BackgroundColor LightYellow
+}
+class Community {
+  <color:blue>:dct:description</color>  :xsd:String<sup>[1-1]</sup>
+  <color:blue>:dct:title</color>  :xsd:String<sup>[1-1]</sup>
+  <color:blue>:dct:createDate</color>  :xsd:Date<sup>[1-1]</sup>
+}
+
+class User {
+  <color:blue>:id</color>  :xsd:String<sup>[1-1]</sup>
+  <color:blue>:email</color>  :xsd:String<sup>[1-*]</sup>
+}
+
+class LearningPath {
+  <color:blue>:id</color>  :xsd:String <sup>[1-*]</sup>
+
+}
+
+class EducationalResource { 
+  <color:blue>dct:title</color>  :xsd:String <sup>[1-1]</sup>
+  <color:blue>:url</color>  :xsd:AnyURL<sup>[1-1]</sup>
+}
+
+Community <-- User : <color:blue> isMemberOf <sup>[1-*]</sup></color>
+Community --> User : <color:blue> hasOwner <sup>[1-1]</sup></color>
+Community --> User : <color:blue> createdBy <sup>[1-1]</sup></color>
+
+LearningPath --> Community : <color:blue> hasCommunity <sup>[1-*]</sup></color>
+EducationalResource --> Community : <color:blue> hasCommunity <sup>[1-*]</sup></color>
+
+hide circle
+hide empty members
+@enduml

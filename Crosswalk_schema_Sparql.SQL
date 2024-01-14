@@ -18,7 +18,7 @@ CONSTRUCT {
             schema:timeRequired ?timeRequired ;
             schema:identifier ?identifier ;
             schema:learningResourceType ?attachment ;
-            schema:hasTarget ?targetGroup ;
+            schema:audienceType ?targetGroup ;
 			schema:isAccessibleForFree ?free ;
 			schema:provider ?providerName .
             #--bf:contribution ?contribution .
