@@ -46,8 +46,8 @@
 
 ###  http://purl.org/dc/elements/1.1/description
 <http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty ;
-                                              rdfs:domain _:genid-nodeid-genid-014f7fd74735489498c3ebb96f11c280-14551FC2848A3F4EF2A3F47559A62FD0 ,
-                                                          _:genid-nodeid-genid-014f7fd74735489498c3ebb96f11c280-22838E273A66D06170B6F069737D78C1 .
+                                              rdfs:domain _:genid-nodeid-genid-2c263a049d2849918b785253cd917267-4548B8A69415182340455FD3D969A305 ,
+                                                          _:genid-nodeid-genid-2c263a049d2849918b785253cd917267-87D436A79048F823330C401450CED402 .
 
 
 ###  http://purl.org/dc/terms/abstract
@@ -186,6 +186,12 @@ bf:contribution rdf:type owl:ObjectProperty ;
               rdfs:comment "The community of a learning resource or learning path" .
 
 
+###  https://purl.org/ontology/modalia#hasCompetenceType
+:hasCompetenceType rdf:type owl:ObjectProperty ;
+                   rdfs:domain :LearningGoalMatrixEntry ;
+                   rdfs:range :CompetenceType .
+
+
 ###  https://purl.org/ontology/modalia#hasDiscipline
 :hasDiscipline rdf:type owl:ObjectProperty ;
                rdfs:domain :RDMResource ;
@@ -206,6 +212,12 @@ bf:contribution rdf:type owl:ObjectProperty ;
                  rdfs:domain ec:LearningPath ;
                  rdfs:range ec:LearningGoal ;
                  rdfs:label "hasLearningGoal" .
+
+
+###  https://purl.org/ontology/modalia#hasLearningLevel
+:hasLearningLevel rdf:type owl:ObjectProperty ;
+                  rdfs:domain :LearningGoalMatrixEntry ;
+                  rdfs:range :LearningLevel .
 
 
 ###  https://purl.org/ontology/modalia#hasLearningResource
@@ -813,6 +825,26 @@ ec:UserLogs rdf:type owl:Class ;
                 rdfs:label "Best-Practices"@en .
 
 
+###  https://purl.org/ontology/modalia#CTMethodological
+:CTMethodological rdf:type owl:Class ;
+                  rdfs:subClassOf :CompetenceType .
+
+
+###  https://purl.org/ontology/modalia#CTProfisional
+:CTProfisional rdf:type owl:Class ;
+               rdfs:subClassOf :CompetenceType .
+
+
+###  https://purl.org/ontology/modalia#CTSelf
+:CTSelf rdf:type owl:Class ;
+        rdfs:subClassOf :CompetenceType .
+
+
+###  https://purl.org/ontology/modalia#CTSocial
+:CTSocial rdf:type owl:Class ;
+          rdfs:subClassOf :CompetenceType .
+
+
 ###  https://purl.org/ontology/modalia#CaseStudy
 :CaseStudy rdf:type owl:Class ;
            rdfs:subClassOf :LearningResourceType ;
@@ -841,6 +873,11 @@ ec:UserLogs rdf:type owl:Class ;
 :Community rdf:type owl:Class ;
            rdfs:label "Community"@en ;
            <http://www.w3.org/2004/02/skos/core#definition> "A Community gathers users (members) and educational resources/learning paths similar  Zenodo communities"@en .
+
+
+###  https://purl.org/ontology/modalia#CompetenceType
+:CompetenceType rdf:type owl:Class ;
+                <http://www.w3.org/2004/02/skos/core#definition> "The different type of competences"@en .
 
 
 ###  https://purl.org/ontology/modalia#ContentQuality
@@ -944,9 +981,44 @@ ec:UserLogs rdf:type owl:Class ;
                  <http://www.w3.org/2004/02/skos/core#example> "An example of knowledge domain can be Biology or Chemistry"@en .
 
 
+###  https://purl.org/ontology/modalia#LLAnalysis
+:LLAnalysis rdf:type owl:Class ;
+            rdfs:subClassOf :LearningLevel .
+
+
+###  https://purl.org/ontology/modalia#LLApplication
+:LLApplication rdf:type owl:Class ;
+               rdfs:subClassOf :LearningLevel .
+
+
+###  https://purl.org/ontology/modalia#LLComprehension
+:LLComprehension rdf:type owl:Class ;
+                 rdfs:subClassOf :LearningLevel .
+
+
+###  https://purl.org/ontology/modalia#LLEvaluation
+:LLEvaluation rdf:type owl:Class ;
+              rdfs:subClassOf :LearningLevel .
+
+
+###  https://purl.org/ontology/modalia#LLKnowledge
+:LLKnowledge rdf:type owl:Class ;
+             rdfs:subClassOf :LearningLevel .
+
+
+###  https://purl.org/ontology/modalia#LLSynthesis
+:LLSynthesis rdf:type owl:Class ;
+             rdfs:subClassOf :LearningLevel .
+
+
 ###  https://purl.org/ontology/modalia#LearningGoalMatrixEntry
 :LearningGoalMatrixEntry rdf:type owl:Class ;
                          rdfs:label "LearningGoalMatrixEntry"@en .
+
+
+###  https://purl.org/ontology/modalia#LearningLevel
+:LearningLevel rdf:type owl:Class ;
+               <http://www.w3.org/2004/02/skos/core#definition> "The level of learning, is defined as six levels; strting from Knowledge and ending by Synthesis"@en .
 
 
 ###  https://purl.org/ontology/modalia#LearningResourceType
