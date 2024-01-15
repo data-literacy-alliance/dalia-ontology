@@ -976,34 +976,34 @@ ec:UserLogs rdf:type owl:Class ;
                  <http://www.w3.org/2004/02/skos/core#example> "An example of knowledge domain can be Biology or Chemistry"@en .
 
 
-###  https://purl.org/ontology/modalia#LLAnalyze
-:LLAnalyze rdf:type owl:Class ;
-           rdfs:subClassOf :LearningLevel .
+###  https://purl.org/ontology/modalia#LL1Remember
+:LL1Remember rdf:type owl:Class ;
+             rdfs:subClassOf :LearningLevel .
 
 
-###  https://purl.org/ontology/modalia#LLApply
-:LLApply rdf:type owl:Class ;
-         rdfs:subClassOf :LearningLevel .
+###  https://purl.org/ontology/modalia#LL2Understand
+:LL2Understand rdf:type owl:Class ;
+               rdfs:subClassOf :LearningLevel .
 
 
-###  https://purl.org/ontology/modalia#LLCreate
-:LLCreate rdf:type owl:Class ;
+###  https://purl.org/ontology/modalia#LL3Apply
+:LL3Apply rdf:type owl:Class ;
           rdfs:subClassOf :LearningLevel .
 
 
-###  https://purl.org/ontology/modalia#LLEvaluate
-:LLEvaluate rdf:type owl:Class ;
+###  https://purl.org/ontology/modalia#LL4Analyze
+:LL4Analyze rdf:type owl:Class ;
             rdfs:subClassOf :LearningLevel .
 
 
-###  https://purl.org/ontology/modalia#LLRemember
-:LLRemember rdf:type owl:Class ;
-            rdfs:subClassOf :LearningLevel .
+###  https://purl.org/ontology/modalia#LL5Evaluate
+:LL5Evaluate rdf:type owl:Class ;
+             rdfs:subClassOf :LearningLevel .
 
 
-###  https://purl.org/ontology/modalia#LLUnderstand
-:LLUnderstand rdf:type owl:Class ;
-              rdfs:subClassOf :LearningLevel .
+###  https://purl.org/ontology/modalia#LL6Create
+:LL6Create rdf:type owl:Class ;
+           rdfs:subClassOf :LearningLevel .
 
 
 ###  https://purl.org/ontology/modalia#LearningGoalMatrixEntry
