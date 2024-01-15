@@ -61,3 +61,5 @@ WHERE {
 
 
 ## schema:title is title of Job
+## proficiencyLevel => educationalLevel
+## AttachmentType 
