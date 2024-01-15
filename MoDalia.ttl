@@ -46,8 +46,8 @@
 
 ###  http://purl.org/dc/elements/1.1/description
 <http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty ;
-                                              rdfs:domain _:genid-nodeid-genid-2c263a049d2849918b785253cd917267-4548B8A69415182340455FD3D969A305 ,
-                                                          _:genid-nodeid-genid-2c263a049d2849918b785253cd917267-87D436A79048F823330C401450CED402 .
+                                              rdfs:domain _:genid-nodeid-genid-1a76c700ea454059bc1429c18bb61a9d-02F9E6EEF86F49E0EE9F96DC6915607B ,
+                                                          _:genid-nodeid-genid-1a76c700ea454059bc1429c18bb61a9d-522A0D4F42E3DFEA9E3D93F027A022ED .
 
 
 ###  http://purl.org/dc/terms/abstract
@@ -660,11 +660,6 @@ dcterms:license rdf:type owl:DatatypeProperty ;
                       rdfs:label "hasLearningObjective"@en .
 
 
-###  https://purl.org/ontology/modalia#hasLevel
-:hasLevel rdf:type owl:DatatypeProperty ;
-          rdfs:domain :LearningGoalMatrixEntry .
-
-
 ###  https://purl.org/ontology/modalia#hasRowID
 :hasRowID rdf:type owl:DatatypeProperty ;
           rdfs:domain :LearningGoalMatrixEntry ;
@@ -981,34 +976,34 @@ ec:UserLogs rdf:type owl:Class ;
                  <http://www.w3.org/2004/02/skos/core#example> "An example of knowledge domain can be Biology or Chemistry"@en .
 
 
-###  https://purl.org/ontology/modalia#LLAnalysis
-:LLAnalysis rdf:type owl:Class ;
-            rdfs:subClassOf :LearningLevel .
+###  https://purl.org/ontology/modalia#LL1Remember
+:LL1Remember rdf:type owl:Class ;
+             rdfs:subClassOf :LearningLevel .
 
 
-###  https://purl.org/ontology/modalia#LLApplication
-:LLApplication rdf:type owl:Class ;
+###  https://purl.org/ontology/modalia#LL2Understand
+:LL2Understand rdf:type owl:Class ;
                rdfs:subClassOf :LearningLevel .
 
 
-###  https://purl.org/ontology/modalia#LLComprehension
-:LLComprehension rdf:type owl:Class ;
-                 rdfs:subClassOf :LearningLevel .
+###  https://purl.org/ontology/modalia#LL3Apply
+:LL3Apply rdf:type owl:Class ;
+          rdfs:subClassOf :LearningLevel .
 
 
-###  https://purl.org/ontology/modalia#LLEvaluation
-:LLEvaluation rdf:type owl:Class ;
-              rdfs:subClassOf :LearningLevel .
+###  https://purl.org/ontology/modalia#LL4Analyze
+:LL4Analyze rdf:type owl:Class ;
+            rdfs:subClassOf :LearningLevel .
 
 
-###  https://purl.org/ontology/modalia#LLKnowledge
-:LLKnowledge rdf:type owl:Class ;
+###  https://purl.org/ontology/modalia#LL5Evaluate
+:LL5Evaluate rdf:type owl:Class ;
              rdfs:subClassOf :LearningLevel .
 
 
-###  https://purl.org/ontology/modalia#LLSynthesis
-:LLSynthesis rdf:type owl:Class ;
-             rdfs:subClassOf :LearningLevel .
+###  https://purl.org/ontology/modalia#LL6Create
+:LL6Create rdf:type owl:Class ;
+           rdfs:subClassOf :LearningLevel .
 
 
 ###  https://purl.org/ontology/modalia#LearningGoalMatrixEntry
