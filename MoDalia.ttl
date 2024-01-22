@@ -46,8 +46,8 @@
 
 ###  http://purl.org/dc/elements/1.1/description
 <http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty ;
-                                              rdfs:domain _:genid-nodeid-genid-1a76c700ea454059bc1429c18bb61a9d-02F9E6EEF86F49E0EE9F96DC6915607B ,
-                                                          _:genid-nodeid-genid-1a76c700ea454059bc1429c18bb61a9d-522A0D4F42E3DFEA9E3D93F027A022ED .
+                                              rdfs:domain _:genid-nodeid-genid-d66dccd242884681b8b93cdcc53f3ba4-882726B2368513DE7A66D83F6DC30702 ,
+                                                          _:genid-nodeid-genid-d66dccd242884681b8b93cdcc53f3ba4-F70FE42AF510A35D8356AEFB4E6C0173 .
 
 
 ###  http://purl.org/dc/terms/abstract
@@ -414,6 +414,25 @@ bf:contribution rdf:type owl:ObjectProperty ;
           rdfs:label "storedIn"@en .
 
 
+###  https://purl.org/ontology/modalia#userBookmarks
+:userBookmarks rdf:type owl:ObjectProperty ;
+               rdfs:domain :User ;
+               rdfs:range ec:EducationalResource .
+
+
+###  https://purl.org/ontology/modalia#userLikes
+:userLikes rdf:type owl:ObjectProperty ;
+           rdfs:domain :User ;
+           rdfs:range ec:EducationalResource .
+
+
+###  https://purl.org/ontology/modalia#userViews
+:userViews rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           rdfs:domain :User ;
+           rdfs:range ec:EducationalResource .
+
+
 #################################################################
 #    Data properties
 #################################################################
@@ -698,6 +717,11 @@ dcterms:license rdf:type owl:DatatypeProperty ;
            rdfs:label "viewCount"@en .
 
 
+###  https://schema.org#author
+<https://schema.org#author> rdf:type owl:DatatypeProperty ;
+                            rdfs:domain ec:EducationalResource .
+
+
 ###  https://schema.org#likesCount
 <https://schema.org#likesCount> rdf:type owl:DatatypeProperty ;
                                 rdfs:domain ec:EducationalResource ;
@@ -825,9 +849,9 @@ ec:UserLogs rdf:type owl:Class ;
                   rdfs:subClassOf :CompetenceType .
 
 
-###  https://purl.org/ontology/modalia#CTProfisional
-:CTProfisional rdf:type owl:Class ;
-               rdfs:subClassOf :CompetenceType .
+###  https://purl.org/ontology/modalia#CTProfessional
+:CTProfessional rdf:type owl:Class ;
+                rdfs:subClassOf :CompetenceType .
 
 
 ###  https://purl.org/ontology/modalia#CTSelf
