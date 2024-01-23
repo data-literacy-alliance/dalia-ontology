@@ -10,6 +10,7 @@
 @prefix schema: <http://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix ec: <https://github.com/tibonto/educor#> .
 @base <https://purl.org/ontology/modalia> .
 
 :KD1 a :KnowledgeDomain ;
@@ -28,7 +29,7 @@
 # Was sind Forschungsdaten?
 # https://www.cms.hu-berlin.de/de/dl/dataman/support/material
 # row 29: https://docs.google.com/spreadsheets/d/1zsxpuFgkf9duk-sCum5gmm7_9p9sQOPFCPxnS66WKhc/edit#gid=0 
-:E5 a :EducationalResource;
+:E5 a ec:EducationalResource;
    dc:title "Was sind Forschungsdaten?";
    dc:description "An online tutorial by the research data management initiative of the Humboldt University in Berlin." ;
    dcterms:language "de";
@@ -71,7 +72,7 @@
 # Datenmanagement nach Plan
 # https://www.rwth-aachen.de/cms/root/Forschung/Forschungsdatenmanagement/Weiterbildungsangebote/~udzt/Lehrvideos/
 # row 24: https://docs.google.com/spreadsheets/d/1zsxpuFgkf9duk-sCum5gmm7_9p9sQOPFCPxnS66WKhc/edit#gid=0 
-:E6 a :EducationalResource;
+:E6 a ec:EducationalResource;
    dc:title "Datenmanagement nach Plan";
    dc:description "Das Lehrvideo „Datenmanagement nach Plan“ erklärt kurz, was ein Datenmanagementplan (DMP) ist und welche Vorteile er für die Forschung bietet."@de ;
    dcterms:language "de";
@@ -107,7 +108,7 @@
 # Research data in chemistry
 # https://www.cms.hu-berlin.de/de/dl/dataman/support/material
 # row 32: https://docs.google.com/spreadsheets/d/1zsxpuFgkf9duk-sCum5gmm7_9p9sQOPFCPxnS66WKhc/edit#gid=0 
-:E7 a :EducationalResource;
+:E7 a ec:EducationalResource;
    dc:title "Research data in chemistry";
    dc:description "Ein Online-Tutorial der Forschungsdatenmanagement-Initiative der Humboldt-Universität zu Berlin zum Thema Forschungsdaten in den Naturwissenschaften am Beispiel der Chemie."@de ;
    dcterms:language "de";
@@ -140,7 +141,7 @@
 	 :hasLearningResource :E7 .
 #############################################################
 #Introduction to RDM
-:E2 a :EducationalResource;
+:E2 a ec:EducationalResource;
    dc:title "Introduction to Research Data Management at Aalto University";
    dcterms:language "en";
    :hasQuality 9;
