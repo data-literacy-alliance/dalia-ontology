@@ -19,6 +19,8 @@ The Ontology is in Work packages 11 and 12 in the project proposal. Initial draf
 - G Assessment pattern
 - H User achievement pattern
 - I User role pattern
+- J Community pattern
+
 
 ## References:
 - Ilkou, E. et al. (2021). EduCOR: An Educational and Career-Oriented Recommendation Ontology. In: Hotho, A., et al. The Semantic Web ISWC 2021. ISWC 2021. Lecture Notes in Computer Science(), vol 12922. Springer, Cham. https://doi.org/10.1007/978-3-030-88361-4_32
