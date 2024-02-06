@@ -46,16 +46,12 @@
 
 ###  http://purl.org/dc/elements/1.1/description
 <http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty ;
-                                              rdfs:domain _:genid-nodeid-genid-01f29e1b8da14cfba2a5a253be07ed78-48066F1ABF0384D50EAB9FA14A8DED14 ,
-                                                          _:genid-nodeid-genid-01f29e1b8da14cfba2a5a253be07ed78-DEA345A05AC37EE7CA3B306A359C8581 .
+                                              rdfs:domain _:genid-nodeid-genid-722fed45118c48f0b2b96667a876a462-174BFFEF3A201391035C5506B65ADE68 ,
+                                                          _:genid-nodeid-genid-722fed45118c48f0b2b96667a876a462-4EA13132D21BF9F833E06053BFA9E3AB .
 
 
 ###  http://purl.org/dc/terms/abstract
 dcterms:abstract rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/terms/created
-dcterms:created rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/publisher
@@ -474,8 +470,12 @@ bf:contribution rdf:type owl:ObjectProperty ;
 ###  http://purl.org/dc/terms/created
 dcterms:created rdf:type owl:DatatypeProperty ;
                 rdfs:subPropertyOf owl:topDataProperty ;
-                rdfs:domain ec:EducationalResource ,
-                            :Community .
+                rdfs:domain [ rdf:type owl:Class ;
+                              owl:unionOf ( ec:EducationalResource
+                                            :Community
+                                          )
+                            ] ;
+                rdfs:range xsd:dateTime .
 
 
 ###  http://purl.org/dc/terms/description
@@ -506,12 +506,6 @@ dcterms:license rdf:type owl:DatatypeProperty ;
 ###  http://schema.org/citation
 <http://schema.org/citation> rdf:type owl:DatatypeProperty ;
                              rdfs:range xsd:string .
-
-
-###  http://schema.org/dateModified
-<http://schema.org/dateModified> rdf:type owl:DatatypeProperty ;
-                                 rdfs:range xsd:dateTime ;
-                                 rdfs:label "dateModified"@en .
 
 
 ###  http://schema.org/downloadUrl
@@ -831,7 +825,9 @@ ec:UserLogs rdf:type owl:Class ;
 ###  https://purl.org/ontology/modalia#BachelorStudent
 :BachelorStudent rdf:type owl:Class ;
                  rdfs:subClassOf :TargetGroup ;
-                 rdfs:label "BachelorStudent"@en .
+                 rdfs:label "BachelorStudent"@en ;
+                 rdfs:seeAlso "http://vivoweb.org/ontology/core#UndergraduateStudent" ;
+                 <http://www.w3.org/2004/02/skos/core#definition> "Student in Bachelor's degree"@en .
 
 
 ###  https://purl.org/ontology/modalia#Best-Practices
@@ -1051,7 +1047,9 @@ ec:UserLogs rdf:type owl:Class ;
 ###  https://purl.org/ontology/modalia#MasterStudent
 :MasterStudent rdf:type owl:Class ;
                rdfs:subClassOf :TargetGroup ;
-               rdfs:label "MasterStudent"@en .
+               rdfs:label "MasterStudent"@en ;
+               rdfs:seeAlso "http://w3id.org/roh#MastersStudent" ;
+               <http://www.w3.org/2004/02/skos/core#definition> "A student in Master's degree"@en .
 
 
 ###  https://purl.org/ontology/modalia#MicroCredential
@@ -1074,7 +1072,9 @@ ec:UserLogs rdf:type owl:Class ;
 ###  https://purl.org/ontology/modalia#PhDStudent
 :PhDStudent rdf:type owl:Class ;
             rdfs:subClassOf :TargetGroup ;
-            rdfs:label "PhDStudent"@en .
+            rdfs:label "PhDStudent"@en ;
+            rdfs:seeAlso "http://vivoweb.org/ontology/core#GraduateStudent" ;
+            <http://www.w3.org/2004/02/skos/core#definition> "A student in PhD degree"@en .
 
 
 ###  https://purl.org/ontology/modalia#PlanPhase
