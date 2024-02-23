@@ -45,8 +45,8 @@
 
 ###  http://purl.org/dc/elements/1.1/description
 <http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty ;
-                                              rdfs:domain _:genid-nodeid-genid-795d9360fc284bc9b5010c04a38736cc-4688E4A1694A2B2F38B3A9D0FD7F0AC6 ,
-                                                          _:genid-nodeid-genid-795d9360fc284bc9b5010c04a38736cc-6877B1300BDC59C438A45D9B52EB6B60 .
+                                              rdfs:domain _:genid-nodeid-genid-498abde21c7243b7b2ae1549268841ad-D58D406BA13BC0C98B9F6BB9EC7B45EE ,
+                                                          _:genid-nodeid-genid-498abde21c7243b7b2ae1549268841ad-EBDD00AF5EB762D2BBB7E0B69F20665F .
 
 
 ###  http://purl.org/dc/terms/abstract
@@ -81,6 +81,12 @@ rdf:langString rdf:type rdfs:Datatype .
 bf:contribution rdf:type owl:ObjectProperty ;
                 rdfs:domain ec:EducationalResource ;
                 rdfs:label "contribution"@en .
+
+
+###  http://usefulinc.com/ns/doap#repository
+<http://usefulinc.com/ns/doap#repository> rdf:type owl:ObjectProperty ;
+                                          rdfs:domain ec:EducationalResource ;
+                                          rdfs:range <http://purl.org/spar/fabio/Repository> .
 
 
 ###  https://purl.org/ontology/modalia#belongsToPhase
@@ -730,6 +736,12 @@ dcterms:license rdf:type owl:DatatypeProperty ;
 #    Classes
 #################################################################
 
+###  http://purl.org/spar/fabio/Repository
+<http://purl.org/spar/fabio/Repository> rdf:type owl:Class ;
+                                        rdfs:isDefinedBy "Repository of OER"@en ;
+                                        <http://www.w3.org/2004/02/skos/core#example> "OERSI or Dataone"@en .
+
+
 ###  http:/schema.org/OrganisationProviderType
 <http:/schema.org/OrganisationProviderType> rdf:type owl:Class ;
                                             rdfs:subClassOf :ProviderType ;
@@ -1115,9 +1127,8 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 
 ###  https://purl.org/ontology/modalia#Provider
 :Provider rdf:type owl:Class ;
-          rdfs:comment "Repository that provides OER"@en ;
-          rdfs:label "Provider"@en ;
-          <http://www.w3.org/2004/02/skos/core#example> "OERSI or Dataone"@en .
+          rdfs:comment "Person, service or organisation that provides the OER"@en ;
+          rdfs:label "Provider"@en .
 
 
 ###  https://purl.org/ontology/modalia#ProviderType
@@ -1325,6 +1336,21 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 #    Individuals
 #################################################################
 
+###  http://w3id.org/nfdi4ing/metadata4ing#ContactPerson
+<http://w3id.org/nfdi4ing/metadata4ing#ContactPerson> rdf:type owl:NamedIndividual ,
+                                                               :ContributorRole .
+
+
+###  http://w3id.org/nfdi4ing/metadata4ing#DataCurator
+<http://w3id.org/nfdi4ing/metadata4ing#DataCurator> rdf:type owl:NamedIndividual ,
+                                                             :ContributorRole .
+
+
+###  http://w3id.org/nfdi4ing/metadata4ing#DataManager
+<http://w3id.org/nfdi4ing/metadata4ing#DataManager> rdf:type owl:NamedIndividual ,
+                                                             :ContributorRole .
+
+
 ###  https://purl.org/ontology/modalia#
 <https://purl.org/ontology/modalia#> rdf:type owl:NamedIndividual ;
                                      dcterms:created "2023-09-11" .
@@ -1346,20 +1372,6 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
                                  :Proficient ;
            :isMoreProficientThan :Beginner ,
                                  :Novice .
-
-
-###  https://purl.org/ontology/modalia#ContactPerson
-:ContactPerson rdf:type owl:NamedIndividual ,
-                        :ContributorRole .
-
-
-###  https://purl.org/ontology/modalia#Creator
-:Creator rdf:type owl:NamedIndividual .
-
-
-###  https://purl.org/ontology/modalia#DataCurator
-:DataCurator rdf:type owl:NamedIndividual ,
-                      :ContributorRole .
 
 
 ###  https://purl.org/ontology/modalia#Expert
