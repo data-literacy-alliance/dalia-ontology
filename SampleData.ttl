@@ -11,6 +11,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
 @prefix ec: <https://github.com/tibonto/educor#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @base <https://purl.org/ontology/modalia> .
 
 :KD1 a :KnowledgeDomain ;
@@ -56,7 +57,7 @@
 #Provider/repository
 :E5 :hasProvider [
                   a :Provider ;
-				  schema:name "Humboldt University in Berlin";
+				  foaf:name "Humboldt University in Berlin";
 				  :hasProviderType :OrganisationProviderType
 				  ] .
 #topics
@@ -95,7 +96,7 @@
 #Provider/repository
 :E6 :hasProvider [
                   a :Provider ;
-				  schema:name "RWTH Aachen University";
+				  foaf:name "RWTH Aachen University";
 				  :hasProviderType :OrganisationProviderType
 				  ] .
 #topics
@@ -129,9 +130,9 @@
    :hasTargetGroup :MasterStudent, :PhDStudent .
    
 #Provider/repository
-:E6 :hasProvider [
+:E7 :hasProvider [
                   a :Provider ;
-				  schema:name "Humboldt University in Berlin";
+				  foaf:name "Humboldt University in Berlin";
 				  :hasProviderType :OrganisationProviderType
 				  ] .
 #topics
@@ -158,7 +159,7 @@
  #Provider/repository
 :E2 :hasProvider [
                   a :Provider ;
-				  schema:name "Aalto University, Finland";
+				  foaf:name "Aalto University, Finland";
 				  :hasProviderType :OrganisationProviderType
 				  ] .
 #topics
