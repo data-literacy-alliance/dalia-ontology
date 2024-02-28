@@ -6,6 +6,7 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @base <https://purl.org/ontology/modalia#> .
 
@@ -518,80 +519,80 @@ dcterms:license rdf:type owl:DatatypeProperty ;
 
 
 ###  http://schema.org/citation
-<http://schema.org/citation> rdf:type owl:DatatypeProperty ;
-                             rdfs:range xsd:string .
+schema:citation rdf:type owl:DatatypeProperty ;
+                rdfs:range xsd:string .
 
 
 ###  http://schema.org/downloadUrl
-<http://schema.org/downloadUrl> rdf:type owl:DatatypeProperty ;
-                                rdfs:range xsd:anyURI ;
-                                rdfs:label "downloadUrl"@en .
+schema:downloadUrl rdf:type owl:DatatypeProperty ;
+                   rdfs:range xsd:anyURI ;
+                   rdfs:label "downloadUrl"@en .
 
 
 ###  http://schema.org/email
-<http://schema.org/email> rdf:type owl:DatatypeProperty ,
-                                   owl:FunctionalProperty ;
-                          rdfs:domain :User ;
-                          rdfs:range xsd:string ;
-                          rdfs:label "email"@en .
+schema:email rdf:type owl:DatatypeProperty ,
+                      owl:FunctionalProperty ;
+             rdfs:domain :User ;
+             rdfs:range xsd:string ;
+             rdfs:label "email"@en .
 
 
 ###  http://schema.org/identifier
-<http://schema.org/identifier> rdf:type owl:DatatypeProperty ;
-                               rdfs:domain ec:EducationalResource ;
-                               rdfs:range xsd:string .
+schema:identifier rdf:type owl:DatatypeProperty ;
+                  rdfs:domain ec:EducationalResource ;
+                  rdfs:range xsd:string .
 
 
 ###  http://schema.org/isAccessibleForFree
-<http://schema.org/isAccessibleForFree> rdf:type owl:DatatypeProperty ;
-                                        rdfs:domain ec:EducationalResource ;
-                                        rdfs:range xsd:boolean ;
-                                        rdfs:label "accessibleForFree"@en .
+schema:isAccessibleForFree rdf:type owl:DatatypeProperty ;
+                           rdfs:domain ec:EducationalResource ;
+                           rdfs:range xsd:boolean ;
+                           rdfs:label "accessibleForFree"@en .
 
 
 ###  http://schema.org/keywords
-<http://schema.org/keywords> rdf:type owl:DatatypeProperty ;
-                             rdfs:domain [ rdf:type owl:Class ;
-                                           owl:unionOf ( :RDMTask
-                                                         :Skill
-                                                       )
-                                         ] ;
-                             rdfs:range rdf:langString ,
-                                        xsd:string ;
-                             rdfs:label "keywords"@en .
+schema:keywords rdf:type owl:DatatypeProperty ;
+                rdfs:domain [ rdf:type owl:Class ;
+                              owl:unionOf ( :RDMTask
+                                            :Skill
+                                          )
+                            ] ;
+                rdfs:range rdf:langString ,
+                           xsd:string ;
+                rdfs:label "keywords"@en .
 
 
 ###  http://schema.org/maintainer
-<http://schema.org/maintainer> rdf:type owl:DatatypeProperty ;
-                               rdfs:range xsd:string ;
-                               rdfs:label "maintainer"@en .
+schema:maintainer rdf:type owl:DatatypeProperty ;
+                  rdfs:range xsd:string ;
+                  rdfs:label "maintainer"@en .
 
 
 ###  http://schema.org/name
-<http://schema.org/name> rdf:type owl:DatatypeProperty ;
-                         rdfs:domain :Contributor ;
-                         rdfs:label "name"@en .
+schema:name rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Contributor ;
+            rdfs:label "name"@en .
 
 
 ###  http://schema.org/timeRequired
-<http://schema.org/timeRequired> rdf:type owl:DatatypeProperty ;
-                                 rdfs:domain ec:EducationalResource ;
-                                 rdfs:comment "in format xsd:duration"@en ;
-                                 rdfs:label "timeRequired"@en ;
-                                 <http://www.w3.org/2004/02/skos/core#example> "\"PT7M11S\"^^xsd:duration" .
+schema:timeRequired rdf:type owl:DatatypeProperty ;
+                    rdfs:domain ec:EducationalResource ;
+                    rdfs:comment "in format xsd:duration"@en ;
+                    rdfs:label "timeRequired"@en ;
+                    <http://www.w3.org/2004/02/skos/core#example> "\"PT7M11S\"^^xsd:duration" .
 
 
 ###  http://schema.org/url
-<http://schema.org/url> rdf:type owl:DatatypeProperty ;
-                        rdfs:domain ec:EducationalResource ;
-                        rdfs:range xsd:anyURI ;
-                        rdfs:label "url"@en .
+schema:url rdf:type owl:DatatypeProperty ;
+           rdfs:domain ec:EducationalResource ;
+           rdfs:range xsd:anyURI ;
+           rdfs:label "url"@en .
 
 
 ###  http://schema.org/version
-<http://schema.org/version> rdf:type owl:DatatypeProperty ;
-                            rdfs:domain ec:EducationalResource ;
-                            rdfs:range xsd:string .
+schema:version rdf:type owl:DatatypeProperty ;
+               rdfs:domain ec:EducationalResource ;
+               rdfs:range xsd:string .
 
 
 ###  http://w3id.org/nfdi4ing/metadata4ing#orcidId
@@ -1351,9 +1352,9 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
                                                              :ContributorRole .
 
 
-###  https://purl.org/ontology/modalia#
-<https://purl.org/ontology/modalia#> rdf:type owl:NamedIndividual ;
-                                     dcterms:created "2023-09-11" .
+###  http://w3id.org/nfdi4ing/metadata4ing#Sponsor
+<http://w3id.org/nfdi4ing/metadata4ing#Sponsor> rdf:type owl:NamedIndividual ,
+                                                         :ContributorRole .
 
 
 ###  https://purl.org/ontology/modalia#Beginner
@@ -1399,11 +1400,6 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
             :isMoreProficientThan :Beginner ,
                                   :Competent ,
                                   :Novice .
-
-
-###  https://purl.org/ontology/modalia#Sponsor
-:Sponsor rdf:type owl:NamedIndividual ,
-                  :ContributorRole .
 
 
 #################################################################
