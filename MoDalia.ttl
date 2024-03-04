@@ -537,6 +537,33 @@ schema:email rdf:type owl:DatatypeProperty ,
              rdfs:label "email"@en .
 
 
+###  http://schema.org/familyName
+schema:familyName rdf:type owl:DatatypeProperty ;
+                  rdfs:domain [ rdf:type owl:Class ;
+                                owl:unionOf ( :Contributor
+                                              :User
+                                            )
+                              ] ;
+                  rdfs:label "familyName"@en .
+
+
+###  http://schema.org/fileSize
+schema:fileSize rdf:type owl:DatatypeProperty ;
+                rdfs:domain ec:EducationalResource ;
+                rdfs:range xsd:string .
+
+
+###  http://schema.org/givenName
+schema:givenName rdf:type owl:DatatypeProperty ;
+                 rdfs:domain [ rdf:type owl:Class ;
+                               owl:unionOf ( :Contributor
+                                             :User
+                                           )
+                             ] ;
+                 rdfs:range xsd:string ;
+                 rdfs:label "givenName"@en .
+
+
 ###  http://schema.org/identifier
 schema:identifier rdf:type owl:DatatypeProperty ;
                   rdfs:domain ec:EducationalResource ;
@@ -566,12 +593,6 @@ schema:keywords rdf:type owl:DatatypeProperty ;
 schema:maintainer rdf:type owl:DatatypeProperty ;
                   rdfs:range xsd:string ;
                   rdfs:label "maintainer"@en .
-
-
-###  http://schema.org/name
-schema:name rdf:type owl:DatatypeProperty ;
-            rdfs:domain :Contributor ;
-            rdfs:label "name"@en .
 
 
 ###  http://schema.org/timeRequired
@@ -1103,6 +1124,12 @@ ec:UserLogs rdf:type owl:Class ;
            rdfs:subClassOf :DataLifeCyclePhase ;
            rdfs:label "PlanPhase"@en ;
            <http://www.w3.org/2004/02/skos/core#definition> "First phase in data life cycle. Description of the data that will be compiled."@en .
+
+
+###  https://purl.org/ontology/modalia#Poster
+:Poster rdf:type owl:Class ;
+        rdfs:subClassOf :LearningResourceType ;
+        rdfs:label "Poster"@en .
 
 
 ###  https://purl.org/ontology/modalia#PreservePhase
