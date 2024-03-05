@@ -1,7 +1,7 @@
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX dc: <http://purl.org/dc/elements/1.1/>
 PREFIX dcterms: <http://purl.org/dc/terms/>
-PREFIX schema: <http://schema.org/>
+PREFIX schema: <https://schema.org/>
 PREFIX bf: <http://id.loc.gov/ontologies/bibframe/>
 PREFIX mo: <https://purl.org/ontology/modalia#> 
 PREFIX ec: <https://github.com/tibonto/educor#> 
@@ -41,7 +41,11 @@ WHERE {
 	schema:url ?url .
 
 	optional{  ?resource  dc:description ?description .}
-	optional{  ?resource schema:author/rdf:rest*/rdf:first ?author}
+	#optional{  ?resource schema:author/rdf:rest*/rdf:first ?author}
+	optional{  ?resource schema:author/rdf:rest*/rdf:first ?item.
+				?item schema:givenName ?gn.
+				?item schema:familyName ?fn
+				bind(concat(?gn,' ',?fn) as ?author)}
 	optional { ?resource dcterms:language ?language . }
 	optional{?resource dcterms:license ?license }
 	optional{?resource dcterms:created ?dateCreated .}
