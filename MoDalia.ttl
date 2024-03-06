@@ -46,8 +46,8 @@
 
 ###  http://purl.org/dc/elements/1.1/description
 <http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty ;
-                                              rdfs:domain _:genid-nodeid-genid-498abde21c7243b7b2ae1549268841ad-D58D406BA13BC0C98B9F6BB9EC7B45EE ,
-                                                          _:genid-nodeid-genid-498abde21c7243b7b2ae1549268841ad-EBDD00AF5EB762D2BBB7E0B69F20665F .
+                                              rdfs:domain _:genid-nodeid-genid-46ecb9ed6f2e4ce9906d6357156c69f6-2192590AFCAC13BB37E6DAB9F7BF325B ,
+                                                          _:genid-nodeid-genid-46ecb9ed6f2e4ce9906d6357156c69f6-F362430CF7D3CE3432161ABF26F25A25 .
 
 
 ###  http://purl.org/dc/terms/abstract
@@ -201,6 +201,12 @@ bf:contribution rdf:type owl:ObjectProperty ;
                rdfs:label "hasDiscipline" .
 
 
+###  https://purl.org/ontology/modalia#hasKnowledgeDomain
+:hasKnowledgeDomain rdf:type owl:ObjectProperty ;
+                    rdfs:domain ec:KnowledgeTopic ;
+                    rdfs:range :KnowledgeDomain .
+
+
 ###  https://purl.org/ontology/modalia#hasKnowledgeTopic
 :hasKnowledgeTopic rdf:type owl:ObjectProperty ;
                    owl:inverseOf :hasLearningResource ;
@@ -234,7 +240,8 @@ bf:contribution rdf:type owl:ObjectProperty ;
                           owl:FunctionalProperty ;
                  rdfs:domain ec:EducationalResource ;
                  rdfs:range :LearningResourceType ;
-                 rdfs:label "hasLearningType" .
+                 rdfs:label "hasLearningType" ;
+                 <http://www.w3.org/2004/02/skos/core#definition> "The value is the learning type of content of a learning resource (e.g Lecture)"@en .
 
 
 ###  https://purl.org/ontology/modalia#hasMicroCredential
@@ -573,8 +580,7 @@ schema:identifier rdf:type owl:DatatypeProperty ;
 ###  http://schema.org/isAccessibleForFree
 schema:isAccessibleForFree rdf:type owl:DatatypeProperty ;
                            rdfs:domain ec:EducationalResource ;
-                           rdfs:range xsd:boolean ;
-                           rdfs:label "accessibleForFree"@en .
+                           rdfs:range xsd:boolean .
 
 
 ###  http://schema.org/keywords
