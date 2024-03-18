@@ -17,7 +17,7 @@ The Ontology is in Work packages 11 and 12 in the project proposal. Initial draf
 - E Recommendation pattern
 - F User profile pattern
 - G Assessment pattern
-- H User achievement pattern
+- H User enrollment pattern
 - I User role pattern
 - J Community pattern
 
