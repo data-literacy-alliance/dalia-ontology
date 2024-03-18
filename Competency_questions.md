@@ -9,22 +9,12 @@ Select * {?learningpath ec:hasLearningGoal ?lg.
 Select * {?Skill requiresKnowledgeTopic ?Kt. 
 ?Kt hasLearningResource ?Lo}
 ```
-## Q3: How to provide an OER to a user with a specific access mode?
-```
-Select * {?user ec:hasProfile ?up. ?up accessibility ?ac. ?Lo accessibility ?ac}
-SELECT * WHERE {
-    ?userProfile            ec:accessibility              ?accessibility.
-		?userProfile            ec:definesLearningPath        ?learningPath.
-		?learningPath           ec:consistsOfKnowledge        ?knowledgeTopic.
-		?knowledgeTopic         ec:hasEducationalResource     ?EducationalResource.
-    ?EducationalResource    ec:accessibility              ?accessibility. }
-```
 ## Q5: What is required to generate a personalized learning path?
 ## Q6: How to personalize a learning recommendation based on a user’s psychological state?
 
 ## Q7: How to provide OERs for a specific Job? (Use case 4 in proposal)
 ```
-SELECT * WHERE {?job ec:hasSkill ?skill. 
+SELECT * WHERE {?skill ec:essentialFor ?job. 
 	?skill ec:requiresKnowledgeTopic ?Kt. 
 	?Kt ec:hasLearningResource ?Lo}
 ```	
