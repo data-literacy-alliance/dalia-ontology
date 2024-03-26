@@ -92,11 +92,11 @@ bf:contribution rdf:type owl:ObjectProperty ;
                                           rdfs:range <http://purl.org/spar/fabio/Repository> .
 
 
-###  https://github.com/tibonto/educor#hasLearningOutcome
-ec:hasLearningOutcome rdf:type owl:ObjectProperty ;
-                      rdfs:domain ec:KnowledgeTopic ;
-                      rdfs:range <https://w3id.org/ccso/ccso#LearningOutcome> ;
-                      <http://www.w3.org/2004/02/skos/core#definition> "The learning outcome of a knowledge topic"@en .
+###  https://github.com/tibonto/educor#consistsOfKnowledge
+ec:consistsOfKnowledge rdf:type owl:ObjectProperty ;
+                       rdfs:domain ec:LearningPath ;
+                       rdfs:range ec:KnowledgeTopic ;
+                       rdfs:label "consistsOfKnowledge" .
 
 
 ###  https://purl.org/ontology/modalia#belongsToArea
@@ -124,7 +124,11 @@ ec:hasLearningOutcome rdf:type owl:ObjectProperty ;
 
 ###  https://purl.org/ontology/modalia#belongsToPhase
 :belongsToPhase rdf:type owl:ObjectProperty ;
-                rdfs:domain :RDMResource ;
+                rdfs:domain [ rdf:type owl:Class ;
+                              owl:unionOf ( :RDMResource
+                                            :RDMTask
+                                          )
+                            ] ;
                 rdfs:range :DataLifeCyclePhase ;
                 rdfs:isDefinedBy "defines the data life cycle phase that the resource covers"@en ;
                 rdfs:label "belongsToPhase" .
@@ -151,13 +155,6 @@ ec:hasLearningOutcome rdf:type owl:ObjectProperty ;
               rdfs:range ec:EducationalResource ;
               rdfs:isDefinedBy "commentedOER"@en ,
                                "defines the OER that is commented in a user comment"@en .
-
-
-###  https://purl.org/ontology/modalia#consistsOfKnowledge
-:consistsOfKnowledge rdf:type owl:ObjectProperty ;
-                     rdfs:domain ec:LearningPath ;
-                     rdfs:range ec:KnowledgeTopic ;
-                     rdfs:label "consistsOfKnowledge" .
 
 
 ###  https://purl.org/ontology/modalia#covers
@@ -474,25 +471,6 @@ ec:hasLearningOutcome rdf:type owl:ObjectProperty ;
 #    Data properties
 #################################################################
 
-###  http://purl.org/dc/elements/1.1/title
-dc:title rdf:type owl:DatatypeProperty ;
-         rdfs:range xsd:string ;
-         rdfs:label "title"@en .
-
-
-###  http://purl.org/dc/elements/1.1/type
-dc:type rdf:type owl:DatatypeProperty ;
-        rdfs:subPropertyOf owl:topDataProperty ;
-        rdfs:domain [ rdf:type owl:Class ;
-                      owl:unionOf ( ec:Recommendation
-                                    :Exercise
-                                    :Skill
-                                  )
-                    ] ;
-        rdfs:range rdfs:Literal ;
-        rdfs:label "type"@en .
-
-
 ###  http://purl.org/dc/terms/created
 dcterms:created rdf:type owl:DatatypeProperty ;
                 rdfs:subPropertyOf owl:topDataProperty ;
@@ -535,8 +513,46 @@ dcterms:license rdf:type owl:DatatypeProperty ;
                 rdfs:domain ec:EducationalResource .
 
 
+###  http://purl.org/dc/terms/rights
+dcterms:rights rdf:type owl:DatatypeProperty ;
+               rdfs:domain ec:EducationalResource .
+
+
+###  http://purl.org/dc/terms/title
+dcterms:title rdf:type owl:DatatypeProperty ;
+              rdfs:domain [ rdf:type owl:Class ;
+                            owl:unionOf ( ec:EducationalResource
+                                          ec:KnowledgeTopic
+                                          :Community
+                                        )
+                          ] ;
+              rdfs:range xsd:string ;
+              rdfs:label "title"@en .
+
+
+###  http://purl.org/dc/terms/type
+dcterms:type rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty ;
+             rdfs:domain [ rdf:type owl:Class ;
+                           owl:unionOf ( ec:Recommendation
+                                         :Exercise
+                                         :Skill
+                                       )
+                         ] ;
+             rdfs:range rdfs:Literal ;
+             rdfs:isDefinedBy "The nature or genre of the resource."@en ;
+             rdfs:label "type"@en .
+
+
+###  http://schema.org/abstract
+schema:abstract rdf:type owl:DatatypeProperty ;
+                rdfs:domain ec:EducationalResource ;
+                rdfs:range xsd:string .
+
+
 ###  http://schema.org/citation
 schema:citation rdf:type owl:DatatypeProperty ;
+                rdfs:domain ec:EducationalResource ;
                 rdfs:range xsd:string .
 
 
@@ -587,6 +603,12 @@ schema:identifier rdf:type owl:DatatypeProperty ;
                   rdfs:range xsd:string .
 
 
+###  http://schema.org/image
+schema:image rdf:type owl:DatatypeProperty ;
+             rdfs:domain ec:EducationalResource ;
+             rdfs:range xsd:anyURI .
+
+
 ###  http://schema.org/isAccessibleForFree
 schema:isAccessibleForFree rdf:type owl:DatatypeProperty ;
                            rdfs:domain ec:EducationalResource ;
@@ -609,6 +631,13 @@ schema:keywords rdf:type owl:DatatypeProperty ;
 schema:maintainer rdf:type owl:DatatypeProperty ;
                   rdfs:range xsd:string ;
                   rdfs:label "maintainer"@en .
+
+
+###  http://schema.org/teaches
+schema:teaches rdf:type owl:DatatypeProperty ;
+               rdfs:domain ec:EducationalResource ;
+               rdfs:range xsd:string ;
+               rdfs:isDefinedBy "The item being described is intended to help a person learn the competency or learning outcome defined by the referenced term."@en .
 
 
 ###  http://schema.org/timeRequired
@@ -725,14 +754,6 @@ m4i:orcidId rdf:type owl:DatatypeProperty ;
 :hasRowID rdf:type owl:DatatypeProperty ;
           rdfs:domain :LearningGoalMatrixEntry ;
           rdfs:range xsd:integer .
-
-
-###  https://purl.org/ontology/modalia#isItClassRoom
-:isItClassRoom rdf:type owl:DatatypeProperty ;
-               rdfs:subPropertyOf owl:topDataProperty ;
-               rdfs:domain ec:EducationalResource ;
-               rdfs:range xsd:boolean ;
-               rdfs:label "isItClassRoom"@en .
 
 
 ###  https://purl.org/ontology/modalia#microCredentialUrl
@@ -1349,34 +1370,28 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
                                  <http://www.w3.org/2004/02/skos/core#definition> "Comment added by a user on an educational resource"@en .
 
 
-###  https://schema.org/audio
-<https://schema.org/audio> rdf:type owl:Class ;
-                           rdfs:subClassOf :ResourceAttachment ;
-                           rdfs:label "Audio"@en .
+###  https://schema.org/AudioObject
+<https://schema.org/AudioObject> rdf:type owl:Class ;
+                                 rdfs:subClassOf :ResourceAttachment ;
+                                 rdfs:label "Audio"@en .
 
 
-###  https://schema.org/image
-<https://schema.org/image> rdf:type owl:Class ;
-                           rdfs:subClassOf :ResourceAttachment ;
-                           rdfs:label "Image"@en .
+###  https://schema.org/ImageObject
+<https://schema.org/ImageObject> rdf:type owl:Class ;
+                                 rdfs:subClassOf :ResourceAttachment ;
+                                 rdfs:label "Image"@en .
 
 
-###  https://schema.org/text
-<https://schema.org/text> rdf:type owl:Class ;
+###  https://schema.org/Text
+<https://schema.org/Text> rdf:type owl:Class ;
                           rdfs:subClassOf :ResourceAttachment ;
                           rdfs:label "Text"@en .
 
 
-###  https://schema.org/video
-<https://schema.org/video> rdf:type owl:Class ;
-                           rdfs:subClassOf :ResourceAttachment ;
-                           rdfs:label "Video"@en .
-
-
-###  https://w3id.org/ccso/ccso#LearningOutcome
-<https://w3id.org/ccso/ccso#LearningOutcome> rdf:type owl:Class ;
-                                             rdfs:comment "The learning outcomes, specific knowledge, skills and competences, which the students will acquire with the successful completion of the course." ;
-                                             rdfs:label "LearningOutcome"@en .
+###  https://schema.org/VideoObject
+<https://schema.org/VideoObject> rdf:type owl:Class ;
+                                 rdfs:subClassOf :ResourceAttachment ;
+                                 rdfs:label "Video"@en .
 
 
 #################################################################
@@ -1446,6 +1461,13 @@ m4i:Sponsor rdf:type owl:NamedIndividual ,
             :isMoreProficientThan :Beginner ,
                                   :Competent ,
                                   :Novice .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+dcterms:license rdfs:label "license"@en .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
