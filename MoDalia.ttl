@@ -8,6 +8,7 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
 @prefix schema: <http://schema.org/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @base <https://purl.org/ontology/modalia#> .
@@ -86,10 +87,21 @@ bf:contribution rdf:type owl:ObjectProperty ;
                 rdfs:label "contribution"@en .
 
 
+###  http://purl.org/spar/fabio/hasDiscipline
+fabio:hasDiscipline rdf:type owl:ObjectProperty ;
+                    rdfs:domain [ rdf:type owl:Class ;
+                                  owl:unionOf ( ec:EducationalResource
+                                                ec:KnowledgeTopic
+                                              )
+                                ] ;
+                    rdfs:range :Discipline ;
+                    rdfs:label "hasDiscipline" .
+
+
 ###  http://usefulinc.com/ns/doap#repository
 <http://usefulinc.com/ns/doap#repository> rdf:type owl:ObjectProperty ;
                                           rdfs:domain ec:EducationalResource ;
-                                          rdfs:range <http://purl.org/spar/fabio/Repository> .
+                                          rdfs:range fabio:Repository .
 
 
 ###  https://github.com/tibonto/educor#consistsOfKnowledge
@@ -224,17 +236,6 @@ ec:consistsOfKnowledge rdf:type owl:ObjectProperty ;
                    rdfs:range :CompetenceType .
 
 
-###  https://purl.org/ontology/modalia#hasDiscipline
-:hasDiscipline rdf:type owl:ObjectProperty ;
-               rdfs:domain [ rdf:type owl:Class ;
-                             owl:unionOf ( ec:EducationalResource
-                                           ec:KnowledgeTopic
-                                         )
-                           ] ;
-               rdfs:range :Discipline ;
-               rdfs:label "hasDiscipline" .
-
-
 ###  https://purl.org/ontology/modalia#hasEnrollment
 :hasEnrollment rdf:type owl:ObjectProperty ;
                rdfs:domain :User ;
@@ -246,7 +247,7 @@ ec:consistsOfKnowledge rdf:type owl:ObjectProperty ;
 ###  https://purl.org/ontology/modalia#hasLearningGoal
 :hasLearningGoal rdf:type owl:ObjectProperty ;
                  rdfs:domain ec:LearningPath ;
-                 rdfs:range ec:LearningGoal ;
+                 rdfs:range :LearningObjective ;
                  rdfs:label "hasLearningGoal" .
 
 
@@ -796,9 +797,9 @@ m4i:orcidId rdf:type owl:DatatypeProperty ;
 #################################################################
 
 ###  http://purl.org/spar/fabio/Repository
-<http://purl.org/spar/fabio/Repository> rdf:type owl:Class ;
-                                        rdfs:isDefinedBy "Repository of OER"@en ;
-                                        <http://www.w3.org/2004/02/skos/core#example> "OERSI or Dataone"@en .
+fabio:Repository rdf:type owl:Class ;
+                 rdfs:isDefinedBy "Repository of OER"@en ;
+                 <http://www.w3.org/2004/02/skos/core#example> "OERSI or Dataone"@en .
 
 
 ###  http:/schema.org/OrganisationProviderType
@@ -828,14 +829,6 @@ ec:KnowledgeTopic rdf:type owl:Class ;
                   rdfs:seeAlso "https://w3id.org/ccso/ccso#Topic"@en ;
                   <http://www.w3.org/2004/02/skos/core#definition> "A single node representing a learning module based on the domain ontology. It contains all the learning material for the specific learning module."@en ;
                   <http://www.w3.org/2004/02/skos/core#example> "A knowledge topic can be the “Quadratic equations” in the domain of Mathematics Algebra"@en .
-
-
-###  https://github.com/tibonto/educor#LearningGoal
-ec:LearningGoal rdf:type owl:Class ;
-                rdfs:comment "The Learning Goal can vary depending on the personalisation level. For example a user might care to learn some specific topics and not all the skill set."@en ;
-                rdfs:label "LearningGoal"@en ;
-                <http://www.w3.org/2004/02/skos/core#definition> "The reach point of a learning path. The completion of a set of knowledge topics which can lead to mastering a skill. The learning goal in our design can be a Skill or a Knowledge Topic"@en ;
-                <http://www.w3.org/2004/02/skos/core#example> "A learning goal could be the skill \\\"Python Programming\\\" or the last Knowledge Topic in this skill set the \\\"Virtual environments in Python\\\""@en .
 
 
 ###  https://github.com/tibonto/educor#LearningPath
@@ -1019,6 +1012,7 @@ ec:UserLogs rdf:type owl:Class ;
 :Discipline rdf:type owl:Class ;
             rdfs:isDefinedBy "knowledge of a specific, specialized discipline or field"@en ;
             rdfs:label "Discipline"@en ;
+            rdfs:seeAlso "http://purl.org/spar/fabio/SubjectDiscipline"@en ;
             <http://www.w3.org/2004/02/skos/core#example> "e.g Engineering"@en .
 
 
@@ -1108,6 +1102,14 @@ ec:UserLogs rdf:type owl:Class ;
 ###  https://purl.org/ontology/modalia#LearningLevel
 :LearningLevel rdf:type owl:Class ;
                <http://www.w3.org/2004/02/skos/core#definition> "The level of learning, is defined as six levels; strting from Knowledge and ending by Synthesis"@en .
+
+
+###  https://purl.org/ontology/modalia#LearningObjective
+:LearningObjective rdf:type owl:Class ;
+                   rdfs:comment "The Learning Goal can vary depending on the personalisation level. For example a user might care to learn some specific topics and not all the skill set."@en ;
+                   rdfs:label "LearningObjective"@en ;
+                   rdfs:seeAlso "https://github.com/tibonto/educor#LearningGoal" ;
+                   <http://www.w3.org/2004/02/skos/core#definition> "Learning Objective as defined in learning objective matrix (LZM)"@en .
 
 
 ###  https://purl.org/ontology/modalia#LearningResourceType
