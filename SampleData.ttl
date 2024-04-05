@@ -12,14 +12,15 @@
 @prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
 @prefix ec: <https://github.com/tibonto/educor#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix fabio:	<http://purl.org/spar/fabio/>
 @base <https://purl.org/ontology/modalia> .
 
-:KD1 a :KnowledgeDomain ;
- dc:title "generic, general"@en ;
- dc:description "generic, general"@en . 
-:KD2 a :KnowledgeDomain ;
- dc:title "Chemistry"@en ;
- dc:description "Chemistry domain"@en . 
+:KD1 a fabio:Discipline ;
+ dcterms:title "generic, general"@en ;
+ dcterms:description "generic, general"@en . 
+:KD2 a fabio:Discipline ;
+ dcterms:title "Chemistry"@en ;
+ dcterms:description "Chemistry domain"@en . 
  
  :user1 a :User ;
     :UserID "u1" ;
@@ -31,8 +32,8 @@
 # https://www.cms.hu-berlin.de/de/dl/dataman/support/material
 # row 29: https://docs.google.com/spreadsheets/d/1zsxpuFgkf9duk-sCum5gmm7_9p9sQOPFCPxnS66WKhc/edit#gid=0 
 :E5 a ec:EducationalResource;
-   dc:title "Was sind Forschungsdaten?";
-   dc:description "An online tutorial by the research data management initiative of the Humboldt University in Berlin." ;
+   dcterms:title "Was sind Forschungsdaten?";
+   dcterms:description "An online tutorial by the research data management initiative of the Humboldt University in Berlin." ;
    dcterms:language "de";
    :hasQuality 9;
    :requiresProficiencyLevel :Novice ;
@@ -62,20 +63,20 @@
 				  ] .
 #topics
 :KT1 a :KnowledgeTopic ;
-     dc:title "Research data definition" ;
-	 :hasKnowledgeDomain :KD1;
+     dcterms:title "Research data definition" ;
+	 fabio:hasDiscipline :KD1;
 	 :hasLearningResource :E5 .
 :KT2 a :KnowledgeTopic ;
-     dc:title "Research data subdivisions" ;
-	 :hasKnowledgeDomain :KD1;
+     dcterms:title "Research data subdivisions" ;
+	 fabio:hasDiscipline :KD1;
 	 :hasLearningResource :E5 .
 #############################################################
 # Datenmanagement nach Plan
 # https://www.rwth-aachen.de/cms/root/Forschung/Forschungsdatenmanagement/Weiterbildungsangebote/~udzt/Lehrvideos/
 # row 24: https://docs.google.com/spreadsheets/d/1zsxpuFgkf9duk-sCum5gmm7_9p9sQOPFCPxnS66WKhc/edit#gid=0 
 :E6 a ec:EducationalResource;
-   dc:title "Datenmanagement nach Plan";
-   dc:description "Das Lehrvideo „Datenmanagement nach Plan“ erklärt kurz, was ein Datenmanagementplan (DMP) ist und welche Vorteile er für die Forschung bietet."@de ;
+   dcterms:title "Datenmanagement nach Plan";
+   dcterms:description "Das Lehrvideo „Datenmanagement nach Plan“ erklärt kurz, was ein Datenmanagementplan (DMP) ist und welche Vorteile er für die Forschung bietet."@de ;
    dcterms:language "de";
    :hasQuality 9;
    :requiresProficiencyLevel :Novice ;
@@ -101,8 +102,8 @@
 				  ] .
 #topics
 :KT3 a :KnowledgeTopic ;
-     dc:title "data management plan (DMP)" ;
-	 :hasKnowledgeDomain :KD1;
+     dcterms:title "data management plan (DMP)" ;
+	 fabio:hasDiscipline :KD1;
 	 :hasLearningResource :E6 .
 #############################################################
 #############################################################
@@ -110,8 +111,8 @@
 # https://www.cms.hu-berlin.de/de/dl/dataman/support/material
 # row 32: https://docs.google.com/spreadsheets/d/1zsxpuFgkf9duk-sCum5gmm7_9p9sQOPFCPxnS66WKhc/edit#gid=0 
 :E7 a ec:EducationalResource;
-   dc:title "Research data in chemistry";
-   dc:description "Ein Online-Tutorial der Forschungsdatenmanagement-Initiative der Humboldt-Universität zu Berlin zum Thema Forschungsdaten in den Naturwissenschaften am Beispiel der Chemie."@de ;
+   dcterms:title "Research data in chemistry";
+   dcterms:description "Ein Online-Tutorial der Forschungsdatenmanagement-Initiative der Humboldt-Universität zu Berlin zum Thema Forschungsdaten in den Naturwissenschaften am Beispiel der Chemie."@de ;
    dcterms:language "de";
    :hasQuality 9;
    :requiresProficiencyLevel :Beginner ;
@@ -137,13 +138,13 @@
 				  ] .
 #topics
 :KT4 a :KnowledgeTopic ;
-     dc:title "research data in the natural sciences using chemistry as an example." ;
-	 :hasKnowledgeDomain :KD2;
+     dcterms:title "research data in the natural sciences using chemistry as an example." ;
+	 fabio:hasDiscipline :KD2;
 	 :hasLearningResource :E7 .
 #############################################################
 #Introduction to RDM
 :E2 a ec:EducationalResource;
-   dc:title "Introduction to Research Data Management at Aalto University";
+   dcterms:title "Introduction to Research Data Management at Aalto University";
    dcterms:language "en";
    :hasQuality 9;
    schema:author ( "Lucie Hradecká" "Dr Kati Laakso" "Dr Essi Viitanen") ;
@@ -164,6 +165,6 @@
 				  ] .
 #topics
 :KT5 a :KnowledgeTopic ;
-     dc:title "Research data management" ;
-	 :hasKnowledgeDomain :KD1;
+     dcterms:title "Research data management" ;
+	 fabio:hasDiscipline :KD1;
 	 :hasLearningResource :E2 . 
