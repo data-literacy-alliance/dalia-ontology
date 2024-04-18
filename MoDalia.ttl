@@ -220,7 +220,7 @@ ec:consistsOfKnowledge rdf:type owl:ObjectProperty ;
 ###  https://purl.org/ontology/modalia#hasAttachment
 :hasAttachment rdf:type owl:ObjectProperty ;
                rdfs:domain ec:EducationalResource ;
-               rdfs:range :ResourceAttachment ;
+               rdfs:range :MediaType ;
                rdfs:label "hasAttachment" .
 
 
@@ -244,17 +244,16 @@ ec:consistsOfKnowledge rdf:type owl:ObjectProperty ;
                rdfs:label "hasEnrollment"@en .
 
 
-###  https://purl.org/ontology/modalia#hasLearningGoal
-:hasLearningGoal rdf:type owl:ObjectProperty ;
-                 rdfs:domain ec:LearningPath ;
-                 rdfs:range :LearningObjective ;
-                 rdfs:label "hasLearningGoal" .
-
-
 ###  https://purl.org/ontology/modalia#hasLearningLevel
 :hasLearningLevel rdf:type owl:ObjectProperty ;
                   rdfs:domain :LearningGoalMatrixEntry ;
                   rdfs:range :LearningLevel .
+
+
+###  https://purl.org/ontology/modalia#hasLearningObjective
+:hasLearningObjective rdf:type owl:ObjectProperty ;
+                      rdfs:domain ec:LearningPath ;
+                      rdfs:range :LearningObjective .
 
 
 ###  https://purl.org/ontology/modalia#hasLearningResource
@@ -747,8 +746,7 @@ m4i:orcidId rdf:type owl:DatatypeProperty ;
 ###  https://purl.org/ontology/modalia#hasLearningObjective
 :hasLearningObjective rdf:type owl:DatatypeProperty ;
                       rdfs:domain :LearningGoalMatrixEntry ;
-                      rdfs:range xsd:string ;
-                      rdfs:label "hasLearningObjective"@en .
+                      rdfs:range xsd:string .
 
 
 ###  https://purl.org/ontology/modalia#hasRowID
@@ -943,7 +941,7 @@ ec:UserLogs rdf:type owl:Class ;
 
 ###  https://purl.org/ontology/modalia#Code
 :Code rdf:type owl:Class ;
-      rdfs:subClassOf :ResourceAttachment .
+      rdfs:subClassOf :MediaType .
 
 
 ###  https://purl.org/ontology/modalia#CollectPhase
@@ -1132,6 +1130,11 @@ ec:UserLogs rdf:type owl:Class ;
                 <http://www.w3.org/2004/02/skos/core#definition> "A student in Master's degree"@en .
 
 
+###  https://purl.org/ontology/modalia#MediaType
+:MediaType rdf:type owl:Class ;
+           rdfs:label "MediaType"@en .
+
+
 ###  https://purl.org/ontology/modalia#MicroCredential
 :MicroCredential rdf:type owl:Class ;
                  rdfs:label "MicroCredential"@en .
@@ -1231,6 +1234,7 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 ###  https://purl.org/ontology/modalia#RDMTask
 :RDMTask rdf:type owl:Class ;
          rdfs:label "RDMTask"@en ;
+         owl:deprecated "" ;
          <http://www.w3.org/2004/02/skos/core#example> "Data Collection and Description"@en .
 
 
@@ -1253,11 +1257,6 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
                 rdfs:label "ResearcherRole"@en .
 
 
-###  https://purl.org/ontology/modalia#ResourceAttachment
-:ResourceAttachment rdf:type owl:Class ;
-                    rdfs:label "ResourceAttachment"@en .
-
-
 ###  https://purl.org/ontology/modalia#ServiceProviderType
 :ServiceProviderType rdf:type owl:Class ;
                      rdfs:subClassOf :ProviderType ;
@@ -1271,8 +1270,9 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 
 ###  https://purl.org/ontology/modalia#Slides
 :Slides rdf:type owl:Class ;
-        rdfs:subClassOf :ResourceAttachment ;
-        rdfs:label "Slides"@en .
+        rdfs:subClassOf :MediaType ;
+        rdfs:label "Slides"@en ;
+        rdfs:seeAlso "https://w3id.org/kim/hcrt/slide" .
 
 
 ###  https://purl.org/ontology/modalia#StudentRole
@@ -1374,26 +1374,26 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 
 ###  https://schema.org/AudioObject
 <https://schema.org/AudioObject> rdf:type owl:Class ;
-                                 rdfs:subClassOf :ResourceAttachment ;
-                                 rdfs:label "Audio"@en .
+                                 rdfs:subClassOf :MediaType ;
+                                 rdfs:label "AudioObject"@en .
 
 
 ###  https://schema.org/ImageObject
 <https://schema.org/ImageObject> rdf:type owl:Class ;
-                                 rdfs:subClassOf :ResourceAttachment ;
-                                 rdfs:label "Image"@en .
+                                 rdfs:subClassOf :MediaType ;
+                                 rdfs:label "ImageObject"@en .
 
 
 ###  https://schema.org/Text
 <https://schema.org/Text> rdf:type owl:Class ;
-                          rdfs:subClassOf :ResourceAttachment ;
+                          rdfs:subClassOf :MediaType ;
                           rdfs:label "Text"@en .
 
 
 ###  https://schema.org/VideoObject
 <https://schema.org/VideoObject> rdf:type owl:Class ;
-                                 rdfs:subClassOf :ResourceAttachment ;
-                                 rdfs:label "Video"@en .
+                                 rdfs:subClassOf :MediaType ;
+                                 rdfs:label "VideoObject"@en .
 
 
 #################################################################
@@ -1470,6 +1470,10 @@ m4i:Sponsor rdf:type owl:NamedIndividual ,
 #################################################################
 
 dcterms:license rdfs:label "license"@en .
+
+
+:hasLearningObjective rdfs:label "hasLearningObjective" ,
+                                 "hasLearningObjective"@en .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
