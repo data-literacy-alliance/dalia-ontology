@@ -796,7 +796,8 @@ m4i:orcidId rdf:type owl:DatatypeProperty ;
 
 ###  http://purl.org/ontology/bibo/Article
 <http://purl.org/ontology/bibo/Article> rdf:type owl:Class ;
-                                        rdfs:subClassOf :LearningResourceType .
+                                        rdfs:subClassOf :LearningResourceType ;
+                                        rdfs:label "Article"@en .
 
 
 ###  http://purl.org/ontology/bibo/Book
@@ -807,17 +808,20 @@ m4i:orcidId rdf:type owl:DatatypeProperty ;
 
 ###  http://purl.org/ontology/bibo/Report
 <http://purl.org/ontology/bibo/Report> rdf:type owl:Class ;
-                                       rdfs:subClassOf :LearningResourceType .
+                                       rdfs:subClassOf :LearningResourceType ;
+                                       rdfs:label "Report"@en .
 
 
 ###  http://purl.org/ontology/bibo/Thesis
 <http://purl.org/ontology/bibo/Thesis> rdf:type owl:Class ;
-                                       rdfs:subClassOf :LearningResourceType .
+                                       rdfs:subClassOf :LearningResourceType ;
+                                       rdfs:label "Thesis"@en .
 
 
 ###  http://purl.org/ontology/bibo/Webpage
 <http://purl.org/ontology/bibo/Webpage> rdf:type owl:Class ;
-                                        rdfs:subClassOf :LearningResourceType .
+                                        rdfs:subClassOf :LearningResourceType ;
+                                        rdfs:label "Webpage"@en .
 
 
 ###  http://purl.org/spar/fabio/Repository
@@ -928,22 +932,26 @@ ec:UserLogs rdf:type owl:Class ;
 
 ###  https://purl.org/ontology/modalia#CTMethodological
 :CTMethodological rdf:type owl:Class ;
-                  rdfs:subClassOf :CompetenceType .
+                  rdfs:subClassOf :CompetenceType ;
+                  rdfs:label "Methodological"@en .
 
 
 ###  https://purl.org/ontology/modalia#CTProfessional
 :CTProfessional rdf:type owl:Class ;
-                rdfs:subClassOf :CompetenceType .
+                rdfs:subClassOf :CompetenceType ;
+                rdfs:label "Professional"@en .
 
 
 ###  https://purl.org/ontology/modalia#CTSelf
 :CTSelf rdf:type owl:Class ;
-        rdfs:subClassOf :CompetenceType .
+        rdfs:subClassOf :CompetenceType ;
+        rdfs:label "Self"@en .
 
 
 ###  https://purl.org/ontology/modalia#CTSocial
 :CTSocial rdf:type owl:Class ;
-          rdfs:subClassOf :CompetenceType .
+          rdfs:subClassOf :CompetenceType ;
+          rdfs:label "Social"@en .
 
 
 ###  https://purl.org/ontology/modalia#Certificate
@@ -1412,12 +1420,14 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 
 ###  https://w3id.org/kim/hcrt/diagram
 <https://w3id.org/kim/hcrt/diagram> rdf:type owl:Class ;
-                                    rdfs:subClassOf :LearningResourceType .
+                                    rdfs:subClassOf :LearningResourceType ;
+                                    rdfs:label "Diagram"@en .
 
 
 ###  https://w3id.org/kim/hcrt/educational_game
 <https://w3id.org/kim/hcrt/educational_game> rdf:type owl:Class ;
-                                             rdfs:subClassOf :LearningResourceType .
+                                             rdfs:subClassOf :LearningResourceType ;
+                                             rdfs:label "Educational Game"@en .
 
 
 ###  https://w3id.org/kim/hcrt/experiment
@@ -1428,7 +1438,8 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 
 ###  https://w3id.org/kim/hcrt/simulation
 <https://w3id.org/kim/hcrt/simulation> rdf:type owl:Class ;
-                                       rdfs:subClassOf :LearningResourceType .
+                                       rdfs:subClassOf :LearningResourceType ;
+                                       rdfs:label "Simulation"@en .
 
 
 #################################################################
