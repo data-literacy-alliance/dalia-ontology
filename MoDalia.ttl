@@ -435,8 +435,8 @@ ec:consistsOfKnowledge rdf:type owl:ObjectProperty ;
 ###  https://purl.org/ontology/modalia#solves
 :solves rdf:type owl:ObjectProperty ;
         rdfs:domain :User ;
-        rdfs:range :Assessment ,
-                   :Questionnaire ;
+        rdfs:range :Questionnaire ,
+                   <https://w3id.org/kim/hcrt/assessment> ;
         rdfs:label "solves"@en .
 
 
@@ -794,6 +794,32 @@ m4i:orcidId rdf:type owl:DatatypeProperty ;
 #    Classes
 #################################################################
 
+###  http://purl.org/ontology/bibo/Article
+<http://purl.org/ontology/bibo/Article> rdf:type owl:Class ;
+                                        rdfs:subClassOf :LearningResourceType .
+
+
+###  http://purl.org/ontology/bibo/Book
+<http://purl.org/ontology/bibo/Book> rdf:type owl:Class ;
+                                     rdfs:subClassOf :LearningResourceType ;
+                                     rdfs:label "Book"@en .
+
+
+###  http://purl.org/ontology/bibo/Report
+<http://purl.org/ontology/bibo/Report> rdf:type owl:Class ;
+                                       rdfs:subClassOf :LearningResourceType .
+
+
+###  http://purl.org/ontology/bibo/Thesis
+<http://purl.org/ontology/bibo/Thesis> rdf:type owl:Class ;
+                                       rdfs:subClassOf :LearningResourceType .
+
+
+###  http://purl.org/ontology/bibo/Webpage
+<http://purl.org/ontology/bibo/Webpage> rdf:type owl:Class ;
+                                        rdfs:subClassOf :LearningResourceType .
+
+
 ###  http://purl.org/spar/fabio/Repository
 fabio:Repository rdf:type owl:Class ;
                  rdfs:isDefinedBy "Repository of OER"@en ;
@@ -880,12 +906,6 @@ ec:UserLogs rdf:type owl:Class ;
               <http://www.w3.org/2004/02/skos/core#definition> "The last phase in data life cycle."@en .
 
 
-###  https://purl.org/ontology/modalia#Assessment
-:Assessment rdf:type owl:Class ;
-            rdfs:subClassOf :LearningResourceType ;
-            rdfs:label "Assessment"@en .
-
-
 ###  https://purl.org/ontology/modalia#AssurePhase
 :AssurePhase rdf:type owl:Class ;
              rdfs:subClassOf :DataLifeCyclePhase ;
@@ -924,12 +944,6 @@ ec:UserLogs rdf:type owl:Class ;
 ###  https://purl.org/ontology/modalia#CTSocial
 :CTSocial rdf:type owl:Class ;
           rdfs:subClassOf :CompetenceType .
-
-
-###  https://purl.org/ontology/modalia#CaseStudy
-:CaseStudy rdf:type owl:Class ;
-           rdfs:subClassOf :LearningResourceType ;
-           rdfs:label "CaseStudy"@en .
 
 
 ###  https://purl.org/ontology/modalia#Certificate
@@ -1029,17 +1043,11 @@ ec:UserLogs rdf:type owl:Class ;
 :Exercise rdf:type owl:Class ;
           owl:equivalentClass [ rdf:type owl:Restriction ;
                                 owl:onProperty :hasLearningResource ;
-                                owl:allValuesFrom :Assessment
+                                owl:allValuesFrom <https://w3id.org/kim/hcrt/assessment>
                               ] ;
           rdfs:subClassOf ec:EducationalResource ;
           rdfs:label "Exercise"@en ;
           <http://www.w3.org/2004/02/skos/core#definition> "Some questions related to one or more knowledge topics."@en .
-
-
-###  https://purl.org/ontology/modalia#Experiment
-:Experiment rdf:type owl:Class ;
-            rdfs:subClassOf :LearningResourceType ;
-            rdfs:label "Experiment"@en .
 
 
 ###  https://purl.org/ontology/modalia#IntegratePhase
@@ -1298,12 +1306,6 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
              rdfs:label "TeacherRole"@en .
 
 
-###  https://purl.org/ontology/modalia#TextBook
-:TextBook rdf:type owl:Class ;
-          rdfs:subClassOf :LearningResourceType ;
-          rdfs:label "TextBook"@en .
-
-
 ###  https://purl.org/ontology/modalia#Tutorial
 :Tutorial rdf:type owl:Class ;
           rdfs:subClassOf :LearningResourceType ;
@@ -1394,6 +1396,39 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 <https://schema.org/VideoObject> rdf:type owl:Class ;
                                  rdfs:subClassOf :MediaType ;
                                  rdfs:label "VideoObject"@en .
+
+
+###  https://w3id.org/kim/hcrt/assessment
+<https://w3id.org/kim/hcrt/assessment> rdf:type owl:Class ;
+                                       rdfs:subClassOf :LearningResourceType ;
+                                       rdfs:label "Assessment"@en .
+
+
+###  https://w3id.org/kim/hcrt/case_study
+<https://w3id.org/kim/hcrt/case_study> rdf:type owl:Class ;
+                                       rdfs:subClassOf :LearningResourceType ;
+                                       rdfs:label "CaseStudy"@en .
+
+
+###  https://w3id.org/kim/hcrt/diagram
+<https://w3id.org/kim/hcrt/diagram> rdf:type owl:Class ;
+                                    rdfs:subClassOf :LearningResourceType .
+
+
+###  https://w3id.org/kim/hcrt/educational_game
+<https://w3id.org/kim/hcrt/educational_game> rdf:type owl:Class ;
+                                             rdfs:subClassOf :LearningResourceType .
+
+
+###  https://w3id.org/kim/hcrt/experiment
+<https://w3id.org/kim/hcrt/experiment> rdf:type owl:Class ;
+                                       rdfs:subClassOf :LearningResourceType ;
+                                       rdfs:label "Experiment"@en .
+
+
+###  https://w3id.org/kim/hcrt/simulation
+<https://w3id.org/kim/hcrt/simulation> rdf:type owl:Class ;
+                                       rdfs:subClassOf :LearningResourceType .
 
 
 #################################################################
