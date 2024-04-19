@@ -49,8 +49,8 @@ dc:creator rdf:type owl:AnnotationProperty .
 
 ###  http://purl.org/dc/elements/1.1/description
 dc:description rdf:type owl:AnnotationProperty ;
-               rdfs:domain _:genid-nodeid-genid-634d621c5fea41a982ebfe3cda08fa51-20C7DD2EC09E0A444826920986398B0C ,
-                           _:genid-nodeid-genid-634d621c5fea41a982ebfe3cda08fa51-B226A3B138F410822516E9A3A36C0A88 .
+               rdfs:domain _:genid-nodeid-genid-2b4cc5a0810d40fbba3806878cc114e2-95A973CC7DC5FC3B8879383C5700C2D2 ,
+                           _:genid-nodeid-genid-2b4cc5a0810d40fbba3806878cc114e2-C46B4209AE6449F44ADCB78C2D70D743 .
 
 
 ###  http://purl.org/dc/terms/abstract
@@ -712,7 +712,8 @@ schema:familyName rdf:type owl:DatatypeProperty ;
 ###  https://schema.org/fileSize
 schema:fileSize rdf:type owl:DatatypeProperty ;
                 rdfs:domain ec:EducationalResource ;
-                rdfs:range xsd:string .
+                rdfs:range xsd:string ;
+                rdfs:label "fileSize"@en .
 
 
 ###  https://schema.org/givenName
@@ -828,12 +829,6 @@ schema:version rdf:type owl:DatatypeProperty ;
 fabio:Repository rdf:type owl:Class ;
                  rdfs:isDefinedBy "Repository of OER"@en ;
                  <http://www.w3.org/2004/02/skos/core#example> "OERSI or Dataone"@en .
-
-
-###  http:/schema.org/OrganisationProviderType
-<http:/schema.org/OrganisationProviderType> rdf:type owl:Class ;
-                                            rdfs:subClassOf :ProviderType ;
-                                            rdfs:label "OrganisationProviderType"@en .
 
 
 ###  https://github.com/tibonto/educor#Answer
@@ -1154,6 +1149,12 @@ ec:UserLogs rdf:type owl:Class ;
 ###  https://purl.org/ontology/modalia#MicroCredential
 :MicroCredential rdf:type owl:Class ;
                  rdfs:label "MicroCredential"@en .
+
+
+###  https://purl.org/ontology/modalia#OrganisationProviderType
+:OrganisationProviderType rdf:type owl:Class ;
+                          rdfs:subClassOf :ProviderType ;
+                          rdfs:label "OrganisationProviderType"@en .
 
 
 ###  https://purl.org/ontology/modalia#Organization
