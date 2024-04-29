@@ -49,8 +49,8 @@ dc:creator rdf:type owl:AnnotationProperty .
 
 ###  http://purl.org/dc/elements/1.1/description
 dc:description rdf:type owl:AnnotationProperty ;
-               rdfs:domain _:genid-nodeid-genid-2b4cc5a0810d40fbba3806878cc114e2-95A973CC7DC5FC3B8879383C5700C2D2 ,
-                           _:genid-nodeid-genid-2b4cc5a0810d40fbba3806878cc114e2-C46B4209AE6449F44ADCB78C2D70D743 .
+               rdfs:domain _:genid-nodeid-genid-215cbd4e5ac44d0fbbc8f2a340e5b0e8-591ABAB46DE7A22D70B566697C76B2F3 ,
+                           _:genid-nodeid-genid-215cbd4e5ac44d0fbbc8f2a340e5b0e8-8F2756D4152FDD9247411A14D8C917CB .
 
 
 ###  http://purl.org/dc/terms/abstract
@@ -791,6 +791,17 @@ schema:version rdf:type owl:DatatypeProperty ;
                rdfs:range xsd:string .
 
 
+###  https://vocab.methodandstructure.com/content-inventory#slug
+<https://vocab.methodandstructure.com/content-inventory#slug> rdf:type owl:DatatypeProperty ;
+                                                              rdfs:domain [ rdf:type owl:Class ;
+                                                                            owl:unionOf ( ec:EducationalResource
+                                                                                          :Community
+                                                                                        )
+                                                                          ] ;
+                                                              rdfs:range xsd:string ;
+                                                              rdfs:isDefinedBy "The slug is a text token which represents either the full path or terminal path segment of an HTTP(S) URL by which a resource can be located. This property is mainly for the purpose of archiving old or alternative URL paths in a content inventory, for such tasks as generating URL rewriting maps."@en .
+
+
 #################################################################
 #    Classes
 #################################################################
@@ -914,7 +925,7 @@ ec:UserLogs rdf:type owl:Class ;
 ###  https://purl.org/ontology/modalia#BachelorStudent
 :BachelorStudent rdf:type owl:Class ;
                  rdfs:subClassOf :TargetGroup ;
-                 rdfs:label "BachelorStudent"@en ;
+                 rdfs:label "Bachelor Student"@en ;
                  rdfs:seeAlso "http://vivoweb.org/ontology/core#UndergraduateStudent" ;
                  <http://www.w3.org/2004/02/skos/core#definition> "Student in Bachelor's degree"@en .
 
@@ -1014,7 +1025,7 @@ ec:UserLogs rdf:type owl:Class ;
 ###  https://purl.org/ontology/modalia#DataSteward
 :DataSteward rdf:type owl:Class ;
              rdfs:subClassOf :TargetGroup ;
-             rdfs:label "DataSteward"@en .
+             rdfs:label "Data Steward"@en .
 
 
 ###  https://purl.org/ontology/modalia#DescribePhase
@@ -1039,7 +1050,7 @@ ec:UserLogs rdf:type owl:Class ;
 
 ###  https://purl.org/ontology/modalia#EducationalLevel
 :EducationalLevel rdf:type owl:Class ;
-                  <http://www.w3.org/2004/02/skos/core#definition> "The educational level of a user: Bachlor, Master or PhD"@en .
+                  <http://www.w3.org/2004/02/skos/core#definition> "The educational level of a user: Bachlors, Masters or PhD"@en .
 
 
 ###  https://purl.org/ontology/modalia#Exercise
@@ -1136,7 +1147,7 @@ ec:UserLogs rdf:type owl:Class ;
 ###  https://purl.org/ontology/modalia#MastersStudent
 :MastersStudent rdf:type owl:Class ;
                 rdfs:subClassOf :TargetGroup ;
-                rdfs:label "MastersStudent"@en ;
+                rdfs:label "Masters Student"@en ;
                 rdfs:seeAlso "http://w3id.org/roh#MastersStudent" ;
                 <http://www.w3.org/2004/02/skos/core#definition> "A student in Master's degree"@en .
 
@@ -1172,7 +1183,7 @@ ec:UserLogs rdf:type owl:Class ;
 ###  https://purl.org/ontology/modalia#PhDStudent
 :PhDStudent rdf:type owl:Class ;
             rdfs:subClassOf :TargetGroup ;
-            rdfs:label "PhDStudent"@en ;
+            rdfs:label "PhD Student"@en ;
             rdfs:seeAlso "http://vivoweb.org/ontology/core#GraduateStudent" ;
             <http://www.w3.org/2004/02/skos/core#definition> "A student in PhD degree"@en .
 
