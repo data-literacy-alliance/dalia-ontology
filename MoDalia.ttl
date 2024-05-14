@@ -49,8 +49,8 @@ dc:creator rdf:type owl:AnnotationProperty .
 
 ###  http://purl.org/dc/elements/1.1/description
 dc:description rdf:type owl:AnnotationProperty ;
-               rdfs:domain _:genid-nodeid-genid-215cbd4e5ac44d0fbbc8f2a340e5b0e8-591ABAB46DE7A22D70B566697C76B2F3 ,
-                           _:genid-nodeid-genid-215cbd4e5ac44d0fbbc8f2a340e5b0e8-8F2756D4152FDD9247411A14D8C917CB .
+               rdfs:domain _:genid-nodeid-genid-ed1dd3f6f2594679b484914ce6640e3e-2239F81B5FC11DDAA83A64E1C625F7DB ,
+                           _:genid-nodeid-genid-ed1dd3f6f2594679b484914ce6640e3e-D4CDD6CC3E0730A14A9C8F44B077B38C .
 
 
 ###  http://purl.org/dc/terms/abstract
@@ -217,13 +217,6 @@ ec:consistsOfKnowledge rdf:type owl:ObjectProperty ;
                        rdfs:label "givesProficiencyLevel" .
 
 
-###  https://purl.org/ontology/modalia#hasAttachment
-:hasAttachment rdf:type owl:ObjectProperty ;
-               rdfs:domain ec:EducationalResource ;
-               rdfs:range :MediaType ;
-               rdfs:label "hasAttachment" .
-
-
 ###  https://purl.org/ontology/modalia#hasCertificate
 :hasCertificate rdf:type owl:ObjectProperty ;
                 rdfs:domain :UserEnrollment ;
@@ -271,6 +264,13 @@ ec:consistsOfKnowledge rdf:type owl:ObjectProperty ;
                  rdfs:range :LearningResourceType ;
                  rdfs:label "hasLearningType" ;
                  <http://www.w3.org/2004/02/skos/core#definition> "The value is the learning type of content of a learning resource (e.g Lecture)"@en .
+
+
+###  https://purl.org/ontology/modalia#hasMediaType
+:hasMediaType rdf:type owl:ObjectProperty ;
+              rdfs:domain ec:EducationalResource ;
+              rdfs:range :MediaType ;
+              rdfs:label "hasMediaType"@en .
 
 
 ###  https://purl.org/ontology/modalia#hasMicroCredential
@@ -481,7 +481,8 @@ dcterms:created rdf:type owl:DatatypeProperty ;
                                           )
                             ] ;
                 rdfs:range xsd:dateTime ;
-                rdfs:label "Date Created"@en .
+                rdfs:label "Date Created"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "Date of creation of the resource."@en .
 
 
 ###  http://purl.org/dc/terms/description
@@ -501,6 +502,14 @@ dcterms:format rdf:type owl:DatatypeProperty ;
                rdfs:isDefinedBy "File format of the file representing the resource" ;
                rdfs:label "file format"@en ;
                <http://www.w3.org/2004/02/skos/core#example> "PDF, AVI" .
+
+
+###  http://purl.org/dc/terms/issued
+dcterms:issued rdf:type owl:DatatypeProperty ;
+               rdfs:domain ec:EducationalResource ;
+               rdfs:range xsd:dateTime ;
+               rdfs:label "issued"@en ;
+               <http://www.w3.org/2004/02/skos/core#definition> "Date of formal issuance (e.g., publication) of the resource."@en .
 
 
 ###  http://purl.org/dc/terms/language
