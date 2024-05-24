@@ -48,7 +48,7 @@
    schema:identifier "DOI:10.18450/dataman/90" ;
    :hasDOI "10.18450/dataman/90" ;
    schema:isAccessibleForFree "true"^^xsd:boolean ;
-   :hasAttachment <https://w3id.org/kim/hcrt/video> ;
+   :hasMediaType <https://schema.org/VideoObject> ;
    bf:contribution [ 
            a bf:Contribution ;
 		   bf:role :DataCurator ;
@@ -91,7 +91,7 @@
    schema:identifier "DOI: 10.18154/RWTH-2018-231100" ;
    :hasDOI "10.18154/RWTH-2018-231100" ;
    schema:isAccessibleForFree "true"^^xsd:boolean ;
-   :hasAttachment <https://w3id.org/kim/hcrt/video> ;
+   :hasMediaType <https://schema.org/VideoObject> ;
    :hasTargetGroup :MasterStudent, :PhDStudent .
    
 #Provider/repository
@@ -127,7 +127,7 @@
    schema:identifier "DOI: 10.18450/dataman/96" ;
    :hasDOI "10.18450/dataman/96" ;
    schema:isAccessibleForFree "true"^^xsd:boolean ;
-   :hasAttachment <https://w3id.org/kim/hcrt/video> ;
+   :hasMediaType <https://schema.org/VideoObject> ;
    :hasTargetGroup :MasterStudent, :PhDStudent .
    
 #Provider/repository
@@ -156,7 +156,7 @@
    :hasLearningType :Lecture ;
    dcterms:created "2021-10-05"^^xsd:date ;
    schema:isAccessibleForFree "true"^^xsd:boolean ;
-   :hasAttachment <https://w3id.org/kim/hcrt/slide> .
+   :hasMediaType <https://w3id.org/kim/hcrt/slide> .
  #Provider/repository
 :E2 :hasProvider [
                   a :Provider ;
