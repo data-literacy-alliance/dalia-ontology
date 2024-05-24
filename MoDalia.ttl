@@ -1305,13 +1305,6 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
        rdfs:comment "Job Skill, ability to perform some tasks."@en .
 
 
-###  https://purl.org/ontology/modalia#Slides
-:Slides rdf:type owl:Class ;
-        rdfs:subClassOf :MediaType ;
-        rdfs:label "Slides"@en ;
-        rdfs:seeAlso "https://w3id.org/kim/hcrt/slide" .
-
-
 ###  https://purl.org/ontology/modalia#StudentRole
 :StudentRole rdf:type owl:Class ;
              rdfs:subClassOf :UserRole ;
@@ -1461,6 +1454,12 @@ schema:VideoObject rdf:type owl:Class ;
 <https://w3id.org/kim/hcrt/simulation> rdf:type owl:Class ;
                                        rdfs:subClassOf :LearningResourceType ;
                                        rdfs:label "Simulation"@en .
+
+
+###  https://w3id.org/kim/hcrt/slide
+<https://w3id.org/kim/hcrt/slide> rdf:type owl:Class ;
+                                  rdfs:subClassOf :MediaType ;
+                                  rdfs:label "Slides"@en .
 
 
 #################################################################
