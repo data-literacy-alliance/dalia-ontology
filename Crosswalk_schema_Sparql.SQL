@@ -18,11 +18,15 @@ CONSTRUCT {
             schema:dateCreated ?dateCreated ;
             schema:timeRequired ?timeRequired ;
             schema:identifier ?identifier ;
-            schema:learningResourceType ?attachment ;
+            schema:learningResourceType ?mediaType ;
             schema:audience ?targetGroup ;
 			schema:isAccessibleForFree ?free ;
 			schema:educationalLevel ?proficiencyLevel ;
-			schema:provider ?providerName .
+			schema:provider ?providerName ;
+			schema:abstract ?abstract ;
+			schema:teaches ?objectives ;
+			schema:image ?img ;
+			schema:citation ?citation .
             #--bf:contribution ?contribution .
 
   #?contribution a bf:Contribution ;
@@ -51,10 +55,14 @@ WHERE {
 	optional{?resource dcterms:created ?dateCreated .}
 	optional{?resource schema:timeRequired ?timeRequired }
 	optional{?resource schema:identifier ?identifier }
-	optional{?resource  mo:hasAttachment ?attachment }
+	optional{?resource  mo:hasMediaType ?mediaType }
 	optional{?resource mo:hasTargetGroup ?targetGroup }
 	optional{?resource mo:accessibleForFree ?free .}
 	optional{?resource schema:keywords ?keywords }
+	optional{?resource schema:citation ?citation }
+	optional{?resource schema:abstract ?abstract }
+	optional{?resource schema:teaches ?objectives }
+	optional{?resource schema:image ?img }
 	optional{?resource mo:requiresProficiencyLevel ?proficiencyLevel }
     optional{   ?resource mo:hasProvider ?provider .
                 ?provider foaf:name ?providerName ;
