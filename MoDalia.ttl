@@ -49,8 +49,8 @@ dc:creator rdf:type owl:AnnotationProperty .
 
 ###  http://purl.org/dc/elements/1.1/description
 dc:description rdf:type owl:AnnotationProperty ;
-               rdfs:domain _:genid-nodeid-genid-ed1dd3f6f2594679b484914ce6640e3e-2239F81B5FC11DDAA83A64E1C625F7DB ,
-                           _:genid-nodeid-genid-ed1dd3f6f2594679b484914ce6640e3e-D4CDD6CC3E0730A14A9C8F44B077B38C .
+               rdfs:domain _:genid-nodeid-genid-f90c23fe8df540cea7edfdc4539c9812-0C02E601ED15598E89124851225B2358 ,
+                           _:genid-nodeid-genid-f90c23fe8df540cea7edfdc4539c9812-76C8A030F97098548017F06B6709D942 .
 
 
 ###  http://purl.org/dc/terms/abstract
@@ -939,10 +939,10 @@ ec:UserLogs rdf:type owl:Class ;
                  <http://www.w3.org/2004/02/skos/core#definition> "Student in Bachelor's degree"@en .
 
 
-###  https://purl.org/ontology/modalia#Best-Practices
-:Best-Practices rdf:type owl:Class ;
-                rdfs:subClassOf :LearningResourceType ;
-                rdfs:label "Best-Practices"@en .
+###  https://purl.org/ontology/modalia#BestPractices
+:BestPractices rdf:type owl:Class ;
+               rdfs:subClassOf :LearningResourceType ;
+               rdfs:label "BestPractices"@en .
 
 
 ###  https://purl.org/ontology/modalia#CTMethodological
@@ -1016,6 +1016,13 @@ ec:UserLogs rdf:type owl:Class ;
                  rdfs:label "Contributor Role" ;
                  <http://www.w3.org/2004/02/skos/core#definition> "types of contribution to an OER."@en ;
                  <http://www.w3.org/2004/02/skos/core#example> "Editor"@en .
+
+
+###  https://purl.org/ontology/modalia#Cookbook
+:Cookbook rdf:type owl:Class ;
+          rdfs:subClassOf :LearningResourceType ;
+          rdfs:label "Cookbook"@en ;
+          rdfs:seeAlso "https://www.wikidata.org/wiki/Q3689925"@en .
 
 
 ###  https://purl.org/ontology/modalia#CuratorRole
@@ -1288,6 +1295,12 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
                  <http://www.w3.org/2004/02/skos/core#definition> "Is a URI that relates a User and an OER and have predicate schema:rating" .
 
 
+###  https://purl.org/ontology/modalia#Researcher
+:Researcher rdf:type owl:Class ;
+            rdfs:subClassOf :TargetGroup ;
+            rdfs:seeAlso "https://www.wikidata.org/wiki/Q1650915"@en .
+
+
 ###  https://purl.org/ontology/modalia#ResearcherRole
 :ResearcherRole rdf:type owl:Class ;
                 rdfs:subClassOf :UserRole ;
@@ -1322,10 +1335,23 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
              <http://www.w3.org/2004/02/skos/core#definition> "The target group of the learning resource, e.g. students, data stewards, researchers, etc"@en .
 
 
+###  https://purl.org/ontology/modalia#TeacherHighEducation
+:TeacherHighEducation rdf:type owl:Class ;
+                      rdfs:subClassOf :TargetGroup ;
+                      rdfs:label "Teacher(High Education)"@en .
+
+
 ###  https://purl.org/ontology/modalia#TeacherRole
 :TeacherRole rdf:type owl:Class ;
              rdfs:subClassOf :UserRole ;
              rdfs:label "TeacherRole"@en .
+
+
+###  https://purl.org/ontology/modalia#TeacherSchool
+:TeacherSchool rdf:type owl:Class ;
+               rdfs:subClassOf :TargetGroup ;
+               rdfs:label "Teacher (School)"@en ;
+               rdfs:seeAlso "https://www.wikidata.org/wiki/Q37226"@en .
 
 
 ###  https://purl.org/ontology/modalia#Tutorial
