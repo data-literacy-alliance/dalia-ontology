@@ -17,7 +17,8 @@
                                       owl:versionIRI <https://git.rwth-aachen.de/dalia/dalia-ontology#/0.0.1> ;
                                       dc:contributor "Dr. Abdelmoneim Amer Desouki (https://orcid.org/0000-0003-2083-1277), Technische Universität Darmstadt (https://ror.org/05n911h24, https://isni.org/isni/0000000109401669)" ,
                                                      "Dr. Marc Fuhrmans (https://orcid.org/0000-0002-9826-018X), Technische Universität Darmstadt (https://ror.org/05n911h24, https://isni.org/isni/0000000109401669)" ,
-                                                     "Dr. Petra C. Steiner (https://orcid.org/0000-0001-8997-2620), Technische Universität Darmstadt (https://ror.org/05n911h24, https://isni.org/isni/0000000109401669)" ;
+                                                     "Dr. Petra C. Steiner (https://orcid.org/0000-0001-8997-2620), Technische Universität Darmstadt (https://ror.org/05n911h24, https://isni.org/isni/0000000109401669)" ,
+													 "Frank Lange (https://orcid.org/0000-0002-9346-6031), RWTH Aachen University (https://ror.org/04xfq0f34, https://isni.org/isni/000000010728696X)" ;
                                       dc:creator "BMBF DALIA project" ;
                                       dc:description """MoDalia: An Ontology for Educational Material in RDM and Data Science
 
@@ -49,8 +50,8 @@ dc:creator rdf:type owl:AnnotationProperty .
 
 ###  http://purl.org/dc/elements/1.1/description
 dc:description rdf:type owl:AnnotationProperty ;
-               rdfs:domain _:genid-nodeid-genid-f90c23fe8df540cea7edfdc4539c9812-0C02E601ED15598E89124851225B2358 ,
-                           _:genid-nodeid-genid-f90c23fe8df540cea7edfdc4539c9812-76C8A030F97098548017F06B6709D942 .
+               rdfs:domain _:genid-nodeid-genid-e7c7257300544b5aa45f141595275d53-BCA6EBD75CC455EAEB91B27BC42D3316 ,
+                           _:genid-nodeid-genid-e7c7257300544b5aa45f141595275d53-DB1908DBBA4521F49C9D50DB8B3BEAFE .
 
 
 ###  http://purl.org/dc/terms/abstract
@@ -1332,6 +1333,7 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 ###  https://purl.org/ontology/modalia#TargetGroup
 :TargetGroup rdf:type owl:Class ;
              rdfs:label "TargetGroup"@en ;
+             rdfs:seeAlso "http://purl.org/dcx/lrmi-terms/EducationalAudience" ;
              <http://www.w3.org/2004/02/skos/core#definition> "The target group of the learning resource, e.g. students, data stewards, researchers, etc"@en .
 
 
