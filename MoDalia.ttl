@@ -7,6 +7,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix fabio: <http://purl.org/spar/fabio/> .
 @prefix schema: <https://schema.org/> .
@@ -14,15 +15,15 @@
 @base <https://purl.org/ontology/modalia#> .
 
 <https://purl.org/ontology/modalia#> rdf:type owl:Ontology ;
-                                      owl:versionIRI <https://git.rwth-aachen.de/dalia/dalia-ontology#/1.0.0> ;
+                                      owl:versionIRI <https://purl.org/ontology/modalia#1.0.0> ;
                                       dc:contributor "Dr. Abdelmoneim Amer Desouki (https://orcid.org/0000-0003-2083-1277), Technische Universität Darmstadt (https://ror.org/05n911h24, https://isni.org/isni/0000000109401669)" ,
                                                      "Dr. Marc Fuhrmans (https://orcid.org/0000-0002-9826-018X), Technische Universität Darmstadt (https://ror.org/05n911h24, https://isni.org/isni/0000000109401669)" ,
                                                      "Dr. Petra C. Steiner (https://orcid.org/0000-0001-8997-2620), Technische Universität Darmstadt (https://ror.org/05n911h24, https://isni.org/isni/0000000109401669)" ,
                                                      "Frank Lange (https://orcid.org/0000-0002-9346-6031), RWTH Aachen University (https://ror.org/04xfq0f34, https://isni.org/isni/000000010728696X)" ;
                                       dc:creator "BMBF DALIA project" ;
-                                      dc:description """MoDALIA: An Ontology for Educational Material in RDM and Data Science
-
-. The ontology is developed in OWL in Protege 5.5.0."""@en ;
+                                      dc:description """MoDALIA: An Ontology for Educational Material in Research Data Management (RDM) and Data Science.
+The ontology is used for making a knowledge graph as a backend to platform for teaching, personal learning, and recommendation.
+The ontology is developed in OWL in Protege 5.5.0."""@en ;
                                       dcterms:abstract "The aim of DALIA project is to build a platform for learning material for Research Data Management (RDM) and Data Science. The platform is based on a knowledge graph. We introduce MoDalia, the base ontology of DALIA knowledge graph. Modalia inherits some modules from EduCOR. It includes also modelling of micro -credentials and certificates."@en ;
                                       dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
                                       dcterms:publisher "ULB TUDa – University and State Library, Technical University, Darmstadt, Germany" ;
@@ -35,7 +36,6 @@
 - SKOS = Simple Knowledge Organization System  
 - EC = EduCOR"""@en ;
                                       rdfs:label "MoDALIA" ;
-									  dcterms:created "2024-09-04" ;
                                       owl:versionInfo "v1.0.0"@en .
 
 #################################################################
@@ -52,8 +52,8 @@ dc:creator rdf:type owl:AnnotationProperty .
 
 ###  http://purl.org/dc/elements/1.1/description
 dc:description rdf:type owl:AnnotationProperty ;
-               rdfs:domain _:genid-nodeid-genid-f10c1ea271d04c5092238c97fdc23936-93EF32D6F7126F45789511950AB8F103 ,
-                           _:genid-nodeid-genid-f10c1ea271d04c5092238c97fdc23936-CECEE55886A3E133CDC763863020246D .
+               rdfs:domain _:genid-nodeid-genid-2f7b86db32b24fa18d0011e7fd293d93-15D3F35FD3502E4C1C9C55D76E8022AF ,
+                           _:genid-nodeid-genid-2f7b86db32b24fa18d0011e7fd293d93-D4E4643F7E7A2A5E38BD68DE75B5585D .
 
 
 ###  http://purl.org/dc/terms/abstract
@@ -557,6 +557,12 @@ dcterms:type rdf:type owl:DatatypeProperty ;
              rdfs:label "type"@en .
 
 
+###  http://purl.org/spar/fabio/hasSubtitle
+fabio:hasSubtitle rdf:type owl:DatatypeProperty ;
+                  rdfs:domain ec:EducationalResource ;
+                  rdfs:range xsd:string .
+
+
 ###  http://w3id.org/nfdi4ing/metadata4ing#orcidId
 m4i:orcidId rdf:type owl:DatatypeProperty ;
             rdfs:domain :User .
@@ -814,33 +820,33 @@ schema:version rdf:type owl:DatatypeProperty ;
 #################################################################
 
 ###  http://purl.org/ontology/bibo/Article
-<http://purl.org/ontology/bibo/Article> rdf:type owl:Class ;
-                                        rdfs:subClassOf :LearningResourceType ;
-                                        rdfs:label "Article"@en .
+bibo:Article rdf:type owl:Class ;
+             rdfs:subClassOf :LearningResourceType ;
+             rdfs:label "Article"@en .
 
 
 ###  http://purl.org/ontology/bibo/Book
-<http://purl.org/ontology/bibo/Book> rdf:type owl:Class ;
-                                     rdfs:subClassOf :LearningResourceType ;
-                                     rdfs:label "Book"@en .
+bibo:Book rdf:type owl:Class ;
+          rdfs:subClassOf :LearningResourceType ;
+          rdfs:label "Book"@en .
 
 
 ###  http://purl.org/ontology/bibo/Report
-<http://purl.org/ontology/bibo/Report> rdf:type owl:Class ;
-                                       rdfs:subClassOf :LearningResourceType ;
-                                       rdfs:label "Report"@en .
+bibo:Report rdf:type owl:Class ;
+            rdfs:subClassOf :LearningResourceType ;
+            rdfs:label "Report"@en .
 
 
 ###  http://purl.org/ontology/bibo/Thesis
-<http://purl.org/ontology/bibo/Thesis> rdf:type owl:Class ;
-                                       rdfs:subClassOf :LearningResourceType ;
-                                       rdfs:label "Thesis"@en .
+bibo:Thesis rdf:type owl:Class ;
+            rdfs:subClassOf :LearningResourceType ;
+            rdfs:label "Thesis"@en .
 
 
 ###  http://purl.org/ontology/bibo/Webpage
-<http://purl.org/ontology/bibo/Webpage> rdf:type owl:Class ;
-                                        rdfs:subClassOf :LearningResourceType ;
-                                        rdfs:label "Webpage"@en .
+bibo:Webpage rdf:type owl:Class ;
+             rdfs:subClassOf :LearningResourceType ;
+             rdfs:label "Webpage"@en .
 
 
 ###  http://purl.org/spar/fabio/Repository
@@ -994,6 +1000,14 @@ ec:UserLogs rdf:type owl:Class ;
 ###  https://purl.org/ontology/modalia#CompetenceType
 :CompetenceType rdf:type owl:Class ;
                 <http://www.w3.org/2004/02/skos/core#definition> "The different type of competences"@en .
+
+
+###  https://purl.org/ontology/modalia#ContentProvider
+:ContentProvider rdf:type owl:Class ;
+                 rdfs:subClassOf :TargetGroup ;
+                 rdfs:label "Content provider"@en ;
+                 rdfs:seeAlso "https://bibfra.me/view/rare/lite/provider" ;
+                 <http://www.w3.org/2004/02/skos/core#definition> "a person or group who is providing OER"@en .
 
 
 ###  https://purl.org/ontology/modalia#ContentQuality
@@ -1517,7 +1531,9 @@ m4i:Sponsor rdf:type owl:NamedIndividual ,
 
 ###  https://purl.org/ontology/modalia#
 <https://purl.org/ontology/modalia#> rdf:type owl:NamedIndividual ;
-                                     dcterms:title "MoDALIA Ontology" .
+                                     dcterms:created "2024-09-04" ;
+                                     dcterms:title "MoDALIA Ontology" ,
+                                                   "MoDALIA: An Ontology for Educational Material in Research Data Management and Data Science." .
 
 
 ###  https://purl.org/ontology/modalia#Beginner
