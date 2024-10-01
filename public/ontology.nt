@@ -1,13 +1,15 @@
 <https://purl.org/ontology/modalia#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<https://purl.org/ontology/modalia#> <http://www.w3.org/2002/07/owl#versionIRI> <https://git.rwth-aachen.de/dalia/dalia-ontology#/1.0.0> .
-<https://purl.org/ontology/modalia#> <http://purl.org/dc/elements/1.1/contributor> "Dr. Abdelmoneim Amer Desouki (https://orcid.org/0000-0003-2083-1277), Technische Universität Darmstadt (https://ror.org/05n911h24, https://isni.org/isni/0000000109401669)" .
-<https://purl.org/ontology/modalia#> <http://purl.org/dc/elements/1.1/contributor> "Dr. Marc Fuhrmans (https://orcid.org/0000-0002-9826-018X), Technische Universität Darmstadt (https://ror.org/05n911h24, https://isni.org/isni/0000000109401669)" .
-<https://purl.org/ontology/modalia#> <http://purl.org/dc/elements/1.1/contributor> "Dr. Petra C. Steiner (https://orcid.org/0000-0001-8997-2620), Technische Universität Darmstadt (https://ror.org/05n911h24, https://isni.org/isni/0000000109401669)" .
+<https://purl.org/ontology/modalia#> <http://www.w3.org/2002/07/owl#versionIRI> <https://purl.org/ontology/modalia#1.0.0> .
+<https://purl.org/ontology/modalia#> <http://purl.org/dc/elements/1.1/contributor> "Dr. Abdelmoneim Amer Desouki (https://orcid.org/0000-0003-2083-1277), Technical University of Darmstadt (https://ror.org/05n911h24, https://isni.org/isni/0000000109401669)" .
+<https://purl.org/ontology/modalia#> <http://purl.org/dc/elements/1.1/contributor> "Dr. Marc Fuhrmans (https://orcid.org/0000-0002-9826-018X), Technical University of Darmstadt (https://ror.org/05n911h24, https://isni.org/isni/0000000109401669)" .
+<https://purl.org/ontology/modalia#> <http://purl.org/dc/elements/1.1/contributor> "Dr. Petra C. Steiner (https://orcid.org/0000-0001-8997-2620), Technical University of Darmstadt (https://ror.org/05n911h24, https://isni.org/isni/0000000109401669)" .
 <https://purl.org/ontology/modalia#> <http://purl.org/dc/elements/1.1/contributor> "Frank Lange (https://orcid.org/0000-0002-9346-6031), RWTH Aachen University (https://ror.org/04xfq0f34, https://isni.org/isni/000000010728696X)" .
 <https://purl.org/ontology/modalia#> <http://purl.org/dc/elements/1.1/creator> "BMBF DALIA project" .
-<https://purl.org/ontology/modalia#> <http://purl.org/dc/elements/1.1/description> "MoDALIA: An Ontology for Educational Material in RDM and Data Science\n\n. The ontology is developed in OWL in Protege 5.5.0."@en .
+<https://purl.org/ontology/modalia#> <http://purl.org/dc/elements/1.1/description> "MoDALIA: An Ontology for Educational Material in Research Data Management (RDM) and Data Science.\nThe ontology is used for making a knowledge graph as a backend to platform for teaching, personal learning, and recommendation.\nThe ontology is developed in OWL in Protege 5.5.0."@en .
+<https://purl.org/ontology/modalia#> <http://purl.org/dc/elements/1.1/title> "MoDALIA Ontology"@en .
 <https://purl.org/ontology/modalia#> <http://purl.org/dc/terms/abstract> "The aim of DALIA project is to build a platform for learning material for Research Data Management (RDM) and Data Science. The platform is based on a knowledge graph. We introduce MoDalia, the base ontology of DALIA knowledge graph. Modalia inherits some modules from EduCOR. It includes also modelling of micro -credentials and certificates."@en .
 <https://purl.org/ontology/modalia#> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
+<https://purl.org/ontology/modalia#> <http://purl.org/dc/terms/modified> "2024-09-04" .
 <https://purl.org/ontology/modalia#> <http://purl.org/dc/terms/publisher> "ULB TUDa – University and State Library, Technical University, Darmstadt, Germany" .
 <https://purl.org/ontology/modalia#> <http://www.w3.org/2000/01/rdf-schema#comment> "MoDALIA reuses elements from the following ontologies:\n- DCTERMS = Dublin Core Terms  \n- OWL = Web Ontology Language  \n- RDF = Resource Description Framework  \n- RDFS = RDF Schema  \n- SCHEMA = schema.org  \n- SKOS = Simple Knowledge Organization System  \n- EC = EduCOR"@en .
 <https://purl.org/ontology/modalia#> <http://www.w3.org/2000/01/rdf-schema#label> "MoDALIA" .
@@ -29,11 +31,17 @@
 # 
 # http://purl.org/dc/elements/1.1/description
 <http://purl.org/dc/elements/1.1/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/ontology/modalia#_:genid-nodeid-genid-e14a164718a24445b4c0a28cf8571fb5-05A3D04E41DFD0C40A043BDAA411A36A> .
-<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/ontology/modalia#_:genid-nodeid-genid-e14a164718a24445b4c0a28cf8571fb5-1D6E1E94841873EAAE187AB90BB1C8E9> .
+<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/ontology/modalia#_:genid-nodeid-genid-b9d22edcf6fd4006838d8ad55c91d488-2AE04EB8010BC55339C35355F31BCF3D> .
+<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/ontology/modalia#_:genid-nodeid-genid-b9d22edcf6fd4006838d8ad55c91d488-9A2D16C3D4FF33C57E2379F63130D3D2> .
+# 
+# http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://purl.org/dc/terms/abstract
 <http://purl.org/dc/terms/abstract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://purl.org/dc/terms/publisher
 <http://purl.org/dc/terms/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
@@ -519,6 +527,11 @@ _:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://purl.org/dc/terms/type> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "The nature or genre of the resource."@en .
 <http://purl.org/dc/terms/type> <http://www.w3.org/2000/01/rdf-schema#label> "type"@en .
 # 
+# http://purl.org/spar/fabio/hasSubtitle
+<http://purl.org/spar/fabio/hasSubtitle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/spar/fabio/hasSubtitle> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
+<http://purl.org/spar/fabio/hasSubtitle> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
 # http://w3id.org/nfdi4ing/metadata4ing#orcidId
 <http://w3id.org/nfdi4ing/metadata4ing#orcidId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://w3id.org/nfdi4ing/metadata4ing#orcidId> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/ontology/modalia#User> .
@@ -920,6 +933,13 @@ _:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # https://purl.org/ontology/modalia#CompetenceType
 <https://purl.org/ontology/modalia#CompetenceType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://purl.org/ontology/modalia#CompetenceType> <http://www.w3.org/2004/02/skos/core#definition> "The different type of competences"@en .
+# 
+# https://purl.org/ontology/modalia#ContentProvider
+<https://purl.org/ontology/modalia#ContentProvider> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purl.org/ontology/modalia#ContentProvider> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purl.org/ontology/modalia#TargetGroup> .
+<https://purl.org/ontology/modalia#ContentProvider> <http://www.w3.org/2000/01/rdf-schema#label> "Content provider"@en .
+<https://purl.org/ontology/modalia#ContentProvider> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://bibfra.me/view/rare/lite/provider" .
+<https://purl.org/ontology/modalia#ContentProvider> <http://www.w3.org/2004/02/skos/core#definition> "a person or group who is providing OER"@en .
 # 
 # https://purl.org/ontology/modalia#ContentQuality
 <https://purl.org/ontology/modalia#ContentQuality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -1375,7 +1395,9 @@ _:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # https://purl.org/ontology/modalia#
 <https://purl.org/ontology/modalia#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://purl.org/ontology/modalia#> <http://purl.org/dc/terms/created> "2024-09-04" .
+<https://purl.org/ontology/modalia#> <http://purl.org/dc/terms/issued> "2024-09-04" .
 <https://purl.org/ontology/modalia#> <http://purl.org/dc/terms/title> "MoDALIA Ontology" .
+<https://purl.org/ontology/modalia#> <http://purl.org/dc/terms/title> "MoDALIA: An Ontology for Educational Material in Research Data Management and Data Science." .
 # 
 # https://purl.org/ontology/modalia#Beginner
 <https://purl.org/ontology/modalia#Beginner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
