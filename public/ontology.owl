@@ -11,17 +11,19 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:modalia="https://purl.org/ontology/modalia#">
     <owl:Ontology rdf:about="https://purl.org/ontology/modalia#">
-        <owl:versionIRI rdf:resource="https://git.rwth-aachen.de/dalia/dalia-ontology#/1.0.0"/>
-        <dc:contributor>Dr. Abdelmoneim Amer Desouki (https://orcid.org/0000-0003-2083-1277), Technische Universität Darmstadt (https://ror.org/05n911h24, https://isni.org/isni/0000000109401669)</dc:contributor>
-        <dc:contributor>Dr. Marc Fuhrmans (https://orcid.org/0000-0002-9826-018X), Technische Universität Darmstadt (https://ror.org/05n911h24, https://isni.org/isni/0000000109401669)</dc:contributor>
-        <dc:contributor>Dr. Petra C. Steiner (https://orcid.org/0000-0001-8997-2620), Technische Universität Darmstadt (https://ror.org/05n911h24, https://isni.org/isni/0000000109401669)</dc:contributor>
+        <owl:versionIRI rdf:resource="https://purl.org/ontology/modalia#1.0.0"/>
+        <dc:contributor>Dr. Abdelmoneim Amer Desouki (https://orcid.org/0000-0003-2083-1277), Technical University of Darmstadt (https://ror.org/05n911h24, https://isni.org/isni/0000000109401669)</dc:contributor>
+        <dc:contributor>Dr. Marc Fuhrmans (https://orcid.org/0000-0002-9826-018X), Technical University of Darmstadt (https://ror.org/05n911h24, https://isni.org/isni/0000000109401669)</dc:contributor>
+        <dc:contributor>Dr. Petra C. Steiner (https://orcid.org/0000-0001-8997-2620), Technical University of Darmstadt (https://ror.org/05n911h24, https://isni.org/isni/0000000109401669)</dc:contributor>
         <dc:contributor>Frank Lange (https://orcid.org/0000-0002-9346-6031), RWTH Aachen University (https://ror.org/04xfq0f34, https://isni.org/isni/000000010728696X)</dc:contributor>
         <dc:creator>BMBF DALIA project</dc:creator>
-        <dc:description xml:lang="en">MoDALIA: An Ontology for Educational Material in RDM and Data Science
-
-. The ontology is developed in OWL in Protege 5.5.0.</dc:description>
+        <dc:description xml:lang="en">MoDALIA: An Ontology for Educational Material in Research Data Management (RDM) and Data Science.
+The ontology is used for making a knowledge graph as a backend to platform for teaching, personal learning, and recommendation.
+The ontology is developed in OWL in Protege 5.5.0.</dc:description>
+        <dc:title xml:lang="en">MoDALIA Ontology</dc:title>
         <terms:abstract xml:lang="en">The aim of DALIA project is to build a platform for learning material for Research Data Management (RDM) and Data Science. The platform is based on a knowledge graph. We introduce MoDalia, the base ontology of DALIA knowledge graph. Modalia inherits some modules from EduCOR. It includes also modelling of micro -credentials and certificates.</terms:abstract>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <terms:modified>2024-09-04</terms:modified>
         <terms:publisher>ULB TUDa – University and State Library, Technical University, Darmstadt, Germany</terms:publisher>
         <rdfs:comment xml:lang="en">MoDALIA reuses elements from the following ontologies:
 - DCTERMS = Dublin Core Terms  
@@ -67,9 +69,16 @@
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description">
-        <rdfs:domain rdf:resource="_:genid-nodeid-genid-e14a164718a24445b4c0a28cf8571fb5-05A3D04E41DFD0C40A043BDAA411A36A"/>
-        <rdfs:domain rdf:resource="_:genid-nodeid-genid-e14a164718a24445b4c0a28cf8571fb5-1D6E1E94841873EAAE187AB90BB1C8E9"/>
+        <rdfs:domain rdf:resource="_:genid-nodeid-genid-b9d22edcf6fd4006838d8ad55c91d488-2AE04EB8010BC55339C35355F31BCF3D"/>
+        <rdfs:domain rdf:resource="_:genid-nodeid-genid-b9d22edcf6fd4006838d8ad55c91d488-9A2D16C3D4FF33C57E2379F63130D3D2"/>
     </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
     
 
 
@@ -77,6 +86,13 @@
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/abstract"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
     
 
 
@@ -885,6 +901,16 @@
     
 
 
+    <!-- http://purl.org/spar/fabio/hasSubtitle -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/spar/fabio/hasSubtitle">
+        <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://w3id.org/nfdi4ing/metadata4ing#orcidId -->
 
 
@@ -1591,6 +1617,18 @@
 
     <owl:Class rdf:about="https://purl.org/ontology/modalia#CompetenceType">
         <skos:definition xml:lang="en">The different type of competences</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/ontology/modalia#ContentProvider -->
+
+
+    <owl:Class rdf:about="https://purl.org/ontology/modalia#ContentProvider">
+        <rdfs:subClassOf rdf:resource="https://purl.org/ontology/modalia#TargetGroup"/>
+        <rdfs:label xml:lang="en">Content provider</rdfs:label>
+        <rdfs:seeAlso>https://bibfra.me/view/rare/lite/provider</rdfs:seeAlso>
+        <skos:definition xml:lang="en">a person or group who is providing OER</skos:definition>
     </owl:Class>
     
 
@@ -2460,7 +2498,9 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 
     <owl:NamedIndividual rdf:about="https://purl.org/ontology/modalia#">
         <terms:created>2024-09-04</terms:created>
+        <terms:issued>2024-09-04</terms:issued>
         <terms:title>MoDALIA Ontology</terms:title>
+        <terms:title>MoDALIA: An Ontology for Educational Material in Research Data Management and Data Science.</terms:title>
     </owl:NamedIndividual>
     
 

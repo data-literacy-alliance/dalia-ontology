@@ -179,10 +179,13 @@
   "@id" : "http://purl.org/dc/elements/1.1/description",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://purl.org/ontology/modalia#_:genid-nodeid-genid-e14a164718a24445b4c0a28cf8571fb5-05A3D04E41DFD0C40A043BDAA411A36A"
+    "@id" : "https://purl.org/ontology/modalia#_:genid-nodeid-genid-b9d22edcf6fd4006838d8ad55c91d488-2AE04EB8010BC55339C35355F31BCF3D"
   }, {
-    "@id" : "https://purl.org/ontology/modalia#_:genid-nodeid-genid-e14a164718a24445b4c0a28cf8571fb5-1D6E1E94841873EAAE187AB90BB1C8E9"
+    "@id" : "https://purl.org/ontology/modalia#_:genid-nodeid-genid-b9d22edcf6fd4006838d8ad55c91d488-9A2D16C3D4FF33C57E2379F63130D3D2"
   } ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://purl.org/dc/terms/abstract",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
@@ -268,6 +271,9 @@
     "@language" : "en",
     "@value" : "license"
   } ]
+}, {
+  "@id" : "http://purl.org/dc/terms/modified",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://purl.org/dc/terms/publisher",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
@@ -382,6 +388,15 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://purl.org/ontology/modalia#Discipline"
+  } ]
+}, {
+  "@id" : "http://purl.org/spar/fabio/hasSubtitle",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://github.com/tibonto/educor#EducationalResource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "http://usefulinc.com/ns/doap#repository",
@@ -597,11 +612,11 @@
   "@id" : "https://purl.org/ontology/modalia#",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/elements/1.1/contributor" : [ {
-    "@value" : "Dr. Abdelmoneim Amer Desouki (https://orcid.org/0000-0003-2083-1277), Technische Universität Darmstadt (https://ror.org/05n911h24, https://isni.org/isni/0000000109401669)"
+    "@value" : "Dr. Abdelmoneim Amer Desouki (https://orcid.org/0000-0003-2083-1277), Technical University of Darmstadt (https://ror.org/05n911h24, https://isni.org/isni/0000000109401669)"
   }, {
-    "@value" : "Dr. Marc Fuhrmans (https://orcid.org/0000-0002-9826-018X), Technische Universität Darmstadt (https://ror.org/05n911h24, https://isni.org/isni/0000000109401669)"
+    "@value" : "Dr. Marc Fuhrmans (https://orcid.org/0000-0002-9826-018X), Technical University of Darmstadt (https://ror.org/05n911h24, https://isni.org/isni/0000000109401669)"
   }, {
-    "@value" : "Dr. Petra C. Steiner (https://orcid.org/0000-0001-8997-2620), Technische Universität Darmstadt (https://ror.org/05n911h24, https://isni.org/isni/0000000109401669)"
+    "@value" : "Dr. Petra C. Steiner (https://orcid.org/0000-0001-8997-2620), Technical University of Darmstadt (https://ror.org/05n911h24, https://isni.org/isni/0000000109401669)"
   }, {
     "@value" : "Frank Lange (https://orcid.org/0000-0002-9346-6031), RWTH Aachen University (https://ror.org/04xfq0f34, https://isni.org/isni/000000010728696X)"
   } ],
@@ -610,7 +625,11 @@
   } ],
   "http://purl.org/dc/elements/1.1/description" : [ {
     "@language" : "en",
-    "@value" : "MoDALIA: An Ontology for Educational Material in RDM and Data Science\n\n. The ontology is developed in OWL in Protege 5.5.0."
+    "@value" : "MoDALIA: An Ontology for Educational Material in Research Data Management (RDM) and Data Science.\nThe ontology is used for making a knowledge graph as a backend to platform for teaching, personal learning, and recommendation.\nThe ontology is developed in OWL in Protege 5.5.0."
+  } ],
+  "http://purl.org/dc/elements/1.1/title" : [ {
+    "@language" : "en",
+    "@value" : "MoDALIA Ontology"
   } ],
   "http://purl.org/dc/terms/abstract" : [ {
     "@language" : "en",
@@ -619,14 +638,22 @@
   "http://purl.org/dc/terms/created" : [ {
     "@value" : "2024-09-04"
   } ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@value" : "2024-09-04"
+  } ],
   "http://purl.org/dc/terms/license" : [ {
     "@id" : "https://creativecommons.org/licenses/by/4.0/"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@value" : "2024-09-04"
   } ],
   "http://purl.org/dc/terms/publisher" : [ {
     "@value" : "ULB TUDa – University and State Library, Technical University, Darmstadt, Germany"
   } ],
   "http://purl.org/dc/terms/title" : [ {
     "@value" : "MoDALIA Ontology"
+  }, {
+    "@value" : "MoDALIA: An Ontology for Educational Material in Research Data Management and Data Science."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -636,7 +663,7 @@
     "@value" : "MoDALIA"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "https://git.rwth-aachen.de/dalia/dalia-ontology#/1.0.0"
+    "@id" : "https://purl.org/ontology/modalia#1.0.0"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@language" : "en",
@@ -835,6 +862,23 @@
     "@id" : "https://purl.org/ontology/modalia#Beginner"
   }, {
     "@id" : "https://purl.org/ontology/modalia#Novice"
+  } ]
+}, {
+  "@id" : "https://purl.org/ontology/modalia#ContentProvider",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Content provider"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "https://bibfra.me/view/rare/lite/provider"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://purl.org/ontology/modalia#TargetGroup"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "a person or group who is providing OER"
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#ContentQuality",
