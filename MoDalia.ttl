@@ -21,16 +21,13 @@
                                                      "Dr. Petra C. Steiner (https://orcid.org/0000-0001-8997-2620), Technical University of Darmstadt (https://ror.org/05n911h24, https://isni.org/isni/0000000109401669)" ,
                                                      "Frank Lange (https://orcid.org/0000-0002-9346-6031), RWTH Aachen University (https://ror.org/04xfq0f34, https://isni.org/isni/000000010728696X)" ;
                                       dc:creator "BMBF DALIA project" ;
-                                      bibo:status      "active"@en ;
-                                      dc:title "MoDALIA Ontology"@en ;
-                                      dcterms:created  "2024-09-04" ;
-                                      dcterms:issued   "2024-09-04" ;
-                                      dcterms:modified "2024-09-04" ;
                                       dc:description """MoDALIA: An Ontology for Educational Material in Research Data Management (RDM) and Data Science.
 The ontology is used for making a knowledge graph as a backend to platform for teaching, personal learning, and recommendation.
 The ontology is developed in OWL in Protege 5.5.0."""@en ;
+                                      dc:title "MoDALIA Ontology"@en ;
                                       dcterms:abstract "The aim of DALIA project is to build a platform for learning material for Research Data Management (RDM) and Data Science. The platform is based on a knowledge graph. We introduce MoDalia, the base ontology of DALIA knowledge graph. Modalia inherits some modules from EduCOR. It includes also modelling of micro -credentials and certificates."@en ;
                                       dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+                                      dcterms:modified "2024-09-04" ;
                                       dcterms:publisher "ULB TUDa – University and State Library, Technical University, Darmstadt, Germany" ;
                                       rdfs:comment """MoDALIA reuses elements from the following ontologies:
 - DCTERMS = Dublin Core Terms  
@@ -57,12 +54,20 @@ dc:creator rdf:type owl:AnnotationProperty .
 
 ###  http://purl.org/dc/elements/1.1/description
 dc:description rdf:type owl:AnnotationProperty ;
-               rdfs:domain _:genid-nodeid-genid-2f7b86db32b24fa18d0011e7fd293d93-15D3F35FD3502E4C1C9C55D76E8022AF ,
-                           _:genid-nodeid-genid-2f7b86db32b24fa18d0011e7fd293d93-D4E4643F7E7A2A5E38BD68DE75B5585D .
+               rdfs:domain _:genid-nodeid-genid-41970fcfc326407ba63d43a597487075-2AE04EB8010BC55339C35355F31BCF3D ,
+                           _:genid-nodeid-genid-41970fcfc326407ba63d43a597487075-9A2D16C3D4FF33C57E2379F63130D3D2 .
+
+
+###  http://purl.org/dc/elements/1.1/title
+dc:title rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/abstract
 dcterms:abstract rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+dcterms:modified rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/publisher
@@ -89,10 +94,26 @@ rdf:langString rdf:type rdfs:Datatype .
 #    Object Properties
 #################################################################
 
+###  http://bibfra.me/vocab/relation/supportinghost
+<http://bibfra.me/vocab/relation/supportinghost> rdf:type owl:ObjectProperty ;
+                                                 rdfs:domain ec:EducationalResource ;
+                                                 rdfs:range :Community ;
+                                                 rdfs:label "supportinghost"@en ;
+                                                 <http://www.w3.org/2004/02/skos/core#definition> "Associated community(ies) of the resource who are either the supporting organization/institution, or the recommender, or both. Here indicates supporting."@en .
+
+
 ###  http://id.loc.gov/ontologies/bibframe/contribution
 bf:contribution rdf:type owl:ObjectProperty ;
                 rdfs:domain ec:EducationalResource ;
                 rdfs:label "contribution"@en .
+
+
+###  http://purl.org/ontology/rec/core#recommender
+<http://purl.org/ontology/rec/core#recommender> rdf:type owl:ObjectProperty ;
+                                                rdfs:domain ec:EducationalResource ;
+                                                rdfs:range :Community ;
+                                                rdfs:label "recommender"@en ;
+                                                <http://www.w3.org/2004/02/skos/core#definition> "Associated community(ies) of the resource who are either the supporting organization/institution, or the recommender, or both.  Here indicates recommender"@en .
 
 
 ###  http://purl.org/spar/fabio/hasDiscipline
@@ -129,17 +150,6 @@ ec:consistsOfKnowledge rdf:type owl:ObjectProperty ;
 :belongsToCluster rdf:type owl:ObjectProperty ;
                   rdfs:domain :RDMSubjectArea ;
                   rdfs:range :SubjectCluster .
-
-
-###  https://purl.org/ontology/modalia#belongsToCommunity
-:belongsToCommunity rdf:type owl:ObjectProperty ;
-                    rdfs:domain [ rdf:type owl:Class ;
-                                  owl:unionOf ( ec:EducationalResource
-                                                ec:LearningPath
-                                              )
-                                ] ;
-                    rdfs:range :Community ;
-                    rdfs:comment "The community of a learning resource or learning path" .
 
 
 ###  https://purl.org/ontology/modalia#belongsToPhase
@@ -573,6 +583,16 @@ m4i:orcidId rdf:type owl:DatatypeProperty ;
             rdfs:domain :User .
 
 
+###  http://www.wikidata.org/entity/P496
+<http://www.wikidata.org/entity/P496> rdf:type owl:DatatypeProperty ;
+                                      rdfs:label "ORCID iD"@en .
+
+
+###  http://www.wikidata.org/entity/P6782
+<http://www.wikidata.org/entity/P6782> rdf:type owl:DatatypeProperty ;
+                                       rdfs:label "ROR ID"@en .
+
+
 ###  https://purl.org/ontology/modalia#certificateEndDate
 :certificateEndDate rdf:type owl:DatatypeProperty ;
                     rdfs:domain :Certificate ;
@@ -701,6 +721,13 @@ schema:author rdf:type owl:DatatypeProperty ;
 schema:citation rdf:type owl:DatatypeProperty ;
                 rdfs:domain ec:EducationalResource ;
                 rdfs:range xsd:string .
+
+
+###  https://schema.org/datePublished
+schema:datePublished rdf:type owl:DatatypeProperty ;
+                     rdfs:domain ec:EducationalResource ;
+                     rdfs:range xsd:dateTime ;
+                     rdfs:label "Publication Date"@en .
 
 
 ###  https://schema.org/downloadUrl
@@ -990,6 +1017,13 @@ ec:UserLogs rdf:type owl:Class ;
       rdfs:subClassOf :MediaType .
 
 
+###  https://purl.org/ontology/modalia#CodeNotebook
+:CodeNotebook rdf:type owl:Class ;
+              rdfs:subClassOf :LearningResourceType ;
+              rdfs:label "CodeNotebook"@en ;
+              <http://www.w3.org/2004/02/skos/core#example> "Jupyter Notebook"@en .
+
+
 ###  https://purl.org/ontology/modalia#CollectPhase
 :CollectPhase rdf:type owl:Class ;
               rdfs:subClassOf :DataLifeCyclePhase ;
@@ -1111,12 +1145,6 @@ ec:UserLogs rdf:type owl:Class ;
      <http://www.w3.org/2004/02/skos/core#example> "Software Developer"@en .
 
 
-###  https://purl.org/ontology/modalia#JupyterNotebook
-:JupyterNotebook rdf:type owl:Class ;
-                 rdfs:subClassOf :LearningResourceType ;
-                 rdfs:label "JupyterNotebook"@en .
-
-
 ###  https://purl.org/ontology/modalia#LL1Remember
 :LL1Remember rdf:type owl:Class ;
              rdfs:subClassOf :LearningLevel .
@@ -1193,6 +1221,13 @@ ec:UserLogs rdf:type owl:Class ;
 ###  https://purl.org/ontology/modalia#MicroCredential
 :MicroCredential rdf:type owl:Class ;
                  rdfs:label "MicroCredential"@en .
+
+
+###  https://purl.org/ontology/modalia#Multipart
+:Multipart rdf:type owl:Class ;
+           rdfs:subClassOf :MediaType ;
+           rdfs:label "Multipart"@en ;
+           <http://www.w3.org/2004/02/skos/core#definition> "If the resource consists of more than one item with different DOIs, the MediaType is \"multipart\" and the relations are provided in the field \"RelatedWork\"."@en .
 
 
 ###  https://purl.org/ontology/modalia#OrganisationProviderType
@@ -1341,6 +1376,12 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
              rdfs:label "StudentRole"@en .
 
 
+###  https://purl.org/ontology/modalia#StudentSchool
+:StudentSchool rdf:type owl:Class ;
+               rdfs:subClassOf :TargetGroup ;
+               rdfs:label "Student (School)"@en .
+
+
 ###  https://purl.org/ontology/modalia#SubjectCluster
 :SubjectCluster rdf:type owl:Class ;
                 rdfs:isDefinedBy "Clusters of subject areas"@en .
@@ -1452,6 +1493,13 @@ schema:ImageObject rdf:type owl:Class ;
                    rdfs:label "ImageObject"@en .
 
 
+###  https://schema.org/PodcastSeries
+schema:PodcastSeries rdf:type owl:Class ;
+                     rdfs:subClassOf :LearningResourceType ;
+                     rdfs:label "PodcastSeries"@en ;
+                     <http://www.w3.org/2004/02/skos/core#definition> "A podcast is an episodic series of digital audio or video files which a user can download and listen to."@en .
+
+
 ###  https://schema.org/Text
 schema:Text rdf:type owl:Class ;
             rdfs:subClassOf :MediaType ;
@@ -1537,6 +1585,7 @@ m4i:Sponsor rdf:type owl:NamedIndividual ,
 ###  https://purl.org/ontology/modalia#
 <https://purl.org/ontology/modalia#> rdf:type owl:NamedIndividual ;
                                      dcterms:created "2024-09-04" ;
+                                     dcterms:issued "2024-09-04" ;
                                      dcterms:title "MoDALIA Ontology" ,
                                                    "MoDALIA: An Ontology for Educational Material in Research Data Management and Data Science." .
 
