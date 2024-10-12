@@ -68,10 +68,7 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
     <!-- http://purl.org/dc/elements/1.1/description -->
 
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description">
-        <rdfs:domain rdf:resource="_:genid-nodeid-genid-b9d22edcf6fd4006838d8ad55c91d488-2AE04EB8010BC55339C35355F31BCF3D"/>
-        <rdfs:domain rdf:resource="_:genid-nodeid-genid-b9d22edcf6fd4006838d8ad55c91d488-9A2D16C3D4FF33C57E2379F63130D3D2"/>
-    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
     
 
 
@@ -136,6 +133,13 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
     
 
 
+    <!-- http://www.w3.org/2001/XMLSchema#duration -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#duration"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -148,12 +152,38 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
     
 
 
+    <!-- http://bibfra.me/vocab/relation/supportinghost -->
+
+
+    <owl:ObjectProperty rdf:about="http://bibfra.me/vocab/relation/supportinghost">
+        <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
+        <rdfs:range rdf:resource="https://purl.org/ontology/modalia#Community"/>
+        <rdfs:label xml:lang="en">supportinghost</rdfs:label>
+        <skos:definition xml:lang="en">Associated community(ies) of the resource who are either the supporting organization/institution, or the recommender, or both. Here indicates supporting.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://id.loc.gov/ontologies/bibframe/contribution -->
 
 
     <owl:ObjectProperty rdf:about="http://id.loc.gov/ontologies/bibframe/contribution">
         <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
+        <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Contribution"/>
+        <rdfs:comment xml:lang="en">Property linking an OER to its contribution (e.g., editing).</rdfs:comment>
         <rdfs:label xml:lang="en">contribution</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ontology/rec/core#recommender -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/ontology/rec/core#recommender">
+        <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
+        <rdfs:range rdf:resource="https://purl.org/ontology/modalia#Community"/>
+        <rdfs:label xml:lang="en">recommender</rdfs:label>
+        <skos:definition xml:lang="en">Associated community(ies) of the resource who are either the supporting organization/institution, or the recommender, or both.  Here indicates recommender</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -182,6 +212,7 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
     <owl:ObjectProperty rdf:about="http://usefulinc.com/ns/doap#repository">
         <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:range rdf:resource="http://purl.org/spar/fabio/Repository"/>
+        <rdfs:label xml:lang="en">repository</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -197,12 +228,25 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
     
 
 
+    <!-- https://purl.org/ontology/modalia#author -->
+
+
+    <owl:ObjectProperty rdf:about="https://purl.org/ontology/modalia#author">
+        <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+        <rdfs:comment xml:lang="en">Property linking an OER  to a list of authors.</rdfs:comment>
+        <rdfs:label xml:lang="en">author</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://purl.org/ontology/modalia#belongsToArea -->
 
 
     <owl:ObjectProperty rdf:about="https://purl.org/ontology/modalia#belongsToArea">
         <rdfs:domain rdf:resource="https://purl.org/ontology/modalia#RDMTopic"/>
         <rdfs:range rdf:resource="https://purl.org/ontology/modalia#RDMSubjectArea"/>
+        <rdfs:label xml:lang="en">belongsToArea</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -213,24 +257,7 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
     <owl:ObjectProperty rdf:about="https://purl.org/ontology/modalia#belongsToCluster">
         <rdfs:domain rdf:resource="https://purl.org/ontology/modalia#RDMSubjectArea"/>
         <rdfs:range rdf:resource="https://purl.org/ontology/modalia#SubjectCluster"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://purl.org/ontology/modalia#belongsToCommunity -->
-
-
-    <owl:ObjectProperty rdf:about="https://purl.org/ontology/modalia#belongsToCommunity">
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://github.com/tibonto/educor#EducationalResource"/>
-                    <rdf:Description rdf:about="https://github.com/tibonto/educor#LearningPath"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range rdf:resource="https://purl.org/ontology/modalia#Community"/>
-        <rdfs:comment>The community of a learning resource or learning path</rdfs:comment>
+        <rdfs:label xml:lang="en">belongsToCluster</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -239,14 +266,7 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
 
 
     <owl:ObjectProperty rdf:about="https://purl.org/ontology/modalia#belongsToPhase">
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://purl.org/ontology/modalia#RDMResource"/>
-                    <rdf:Description rdf:about="https://purl.org/ontology/modalia#RDMTask"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
+        <rdfs:domain rdf:resource="https://purl.org/ontology/modalia#RDMResource"/>
         <rdfs:range rdf:resource="https://purl.org/ontology/modalia#DataLifeCyclePhase"/>
         <rdfs:isDefinedBy xml:lang="en">defines the data life cycle phase that the resource covers</rdfs:isDefinedBy>
         <rdfs:label>belongsToPhase</rdfs:label>
@@ -258,9 +278,9 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
 
 
     <owl:ObjectProperty rdf:about="https://purl.org/ontology/modalia#canCarryOut">
-        <rdfs:domain rdf:resource="https://purl.org/ontology/modalia#Skill"/>
-        <rdfs:range rdf:resource="https://purl.org/ontology/modalia#RDMTask"/>
-        <rdfs:label>canCarryOut</rdfs:label>
+        <rdfs:comment>RDMTask deprecated</rdfs:comment>
+        <rdfs:label>DEPRECATED canCarryOut</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -285,6 +305,7 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
         <rdfs:range rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:isDefinedBy xml:lang="en">commentedOER</rdfs:isDefinedBy>
         <rdfs:isDefinedBy xml:lang="en">defines the OER that is commented in a user comment</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">commentedOER</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -307,6 +328,7 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
     <owl:ObjectProperty rdf:about="https://purl.org/ontology/modalia#createdBy">
         <rdfs:domain rdf:resource="https://purl.org/ontology/modalia#Community"/>
         <rdfs:range rdf:resource="https://purl.org/ontology/modalia#User"/>
+        <rdfs:label xml:lang="en">createdBy</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -328,6 +350,7 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
     <owl:ObjectProperty rdf:about="https://purl.org/ontology/modalia#educationalLevel">
         <rdfs:domain rdf:resource="https://purl.org/ontology/modalia#User"/>
         <rdfs:range rdf:resource="https://purl.org/ontology/modalia#EducationalLevel"/>
+        <rdfs:label xml:lang="en">educationalLevel</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -371,6 +394,7 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
     <owl:ObjectProperty rdf:about="https://purl.org/ontology/modalia#hasCertificate">
         <rdfs:domain rdf:resource="https://purl.org/ontology/modalia#UserEnrollment"/>
         <rdfs:range rdf:resource="https://purl.org/ontology/modalia#Certificate"/>
+        <rdfs:label xml:lang="en">hasCertificate</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -381,6 +405,7 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
     <owl:ObjectProperty rdf:about="https://purl.org/ontology/modalia#hasCompetenceType">
         <rdfs:domain rdf:resource="https://purl.org/ontology/modalia#LearningGoalMatrixEntry"/>
         <rdfs:range rdf:resource="https://purl.org/ontology/modalia#CompetenceType"/>
+        <rdfs:label xml:lang="en">hasCompetenceType</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -403,6 +428,7 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
     <owl:ObjectProperty rdf:about="https://purl.org/ontology/modalia#hasLearningLevel">
         <rdfs:domain rdf:resource="https://purl.org/ontology/modalia#LearningGoalMatrixEntry"/>
         <rdfs:range rdf:resource="https://purl.org/ontology/modalia#LearningLevel"/>
+        <rdfs:label xml:lang="en">hasLearningLevel</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -411,9 +437,17 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
 
 
     <owl:ObjectProperty rdf:about="https://purl.org/ontology/modalia#hasLearningObjective">
-        <rdfs:domain rdf:resource="https://github.com/tibonto/educor#LearningPath"/>
-        <rdfs:domain rdf:resource="https://purl.org/ontology/modalia#LearningGoalMatrixEntry"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://github.com/tibonto/educor#EducationalResource"/>
+                    <rdf:Description rdf:about="https://github.com/tibonto/educor#LearningPath"/>
+                    <rdf:Description rdf:about="https://purl.org/ontology/modalia#LearningGoalMatrixEntry"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="https://purl.org/ontology/modalia#LearningObjective"/>
+        <rdfs:label xml:lang="en">hasLearningObjective</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -472,6 +506,7 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
         <rdfs:domain rdf:resource="https://purl.org/ontology/modalia#Community"/>
         <rdfs:range rdf:resource="https://purl.org/ontology/modalia#User"/>
         <rdfs:isDefinedBy xml:lang="en">defines the user who owns a specific community. There is only one owner to a specific community</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">hasOwner</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -537,6 +572,7 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
     <owl:ObjectProperty rdf:about="https://purl.org/ontology/modalia#hasRole">
         <rdfs:domain rdf:resource="https://purl.org/ontology/modalia#User"/>
         <rdfs:range rdf:resource="https://purl.org/ontology/modalia#UserRole"/>
+        <rdfs:label xml:lang="en">hasRole</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -601,6 +637,7 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="https://purl.org/ontology/modalia#User"/>
         <rdfs:range rdf:resource="https://purl.org/ontology/modalia#Community"/>
+        <rdfs:label xml:lang="en">isMemberOf</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -667,7 +704,8 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
 
 
     <owl:ObjectProperty rdf:about="https://purl.org/ontology/modalia#relatedTo">
-        <rdfs:range rdf:resource="https://purl.org/ontology/modalia#RDMResource"/>
+        <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
+        <rdfs:range rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:label xml:lang="en">relatedTo</rdfs:label>
     </owl:ObjectProperty>
     
@@ -695,22 +733,19 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
     
 
 
-    <!-- https://purl.org/ontology/modalia#satisfies -->
-
-
-    <owl:ObjectProperty rdf:about="https://purl.org/ontology/modalia#satisfies">
-        <rdfs:label xml:lang="en">satisfies</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://purl.org/ontology/modalia#solves -->
 
 
     <owl:ObjectProperty rdf:about="https://purl.org/ontology/modalia#solves">
         <rdfs:domain rdf:resource="https://purl.org/ontology/modalia#User"/>
-        <rdfs:range rdf:resource="https://purl.org/ontology/modalia#Questionnaire"/>
-        <rdfs:range rdf:resource="https://w3id.org/kim/hcrt/assessment"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://purl.org/ontology/modalia#Questionnaire"/>
+                    <rdf:Description rdf:about="https://w3id.org/kim/hcrt/assessment"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:label xml:lang="en">solves</rdfs:label>
     </owl:ObjectProperty>
     
@@ -720,6 +755,15 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
 
 
     <owl:ObjectProperty rdf:about="https://purl.org/ontology/modalia#storedIn">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://github.com/tibonto/educor#LearningPreference"/>
+                    <rdf:Description rdf:about="https://purl.org/ontology/modalia#Certificate"/>
+                    <rdf:Description rdf:about="https://purl.org/ontology/modalia#LearningObjective"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="https://purl.org/ontology/modalia#UserProfile"/>
         <rdfs:label xml:lang="en">storedIn</rdfs:label>
     </owl:ObjectProperty>
@@ -732,6 +776,7 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
     <owl:ObjectProperty rdf:about="https://purl.org/ontology/modalia#userBookmarks">
         <rdfs:domain rdf:resource="https://purl.org/ontology/modalia#User"/>
         <rdfs:range rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
+        <rdfs:label xml:lang="en">userBookmarks</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -743,6 +788,7 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
         <rdfs:domain rdf:resource="https://purl.org/ontology/modalia#User"/>
         <rdfs:range rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:label xml:lang="en">userLikes</rdfs:label>
+        <skos:definition xml:lang="en">stores that user liked a given OER</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -755,6 +801,19 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
         <rdfs:domain rdf:resource="https://purl.org/ontology/modalia#User"/>
         <rdfs:range rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:label xml:lang="en">userViews</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://schema.org/isPartOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://schema.org/isPartOf">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/ontology/modalia#relatedTo"/>
+        <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
+        <rdfs:range rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
+        <rdfs:comment xml:lang="en">This property gives the relation between two resources as the subject  is part of the resource in the object.</rdfs:comment>
+        <rdfs:label xml:lang="en">isPartOf</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -805,6 +864,7 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">description</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -814,6 +874,7 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
 
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/format">
         <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:isDefinedBy>File format of the file representing the resource</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">file format</rdfs:label>
         <skos:example>PDF, AVI</skos:example>
@@ -837,6 +898,7 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
 
 
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/language">
+        <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#language"/>
         <rdfs:label xml:lang="en">language</rdfs:label>
     </owl:DatatypeProperty>
@@ -848,6 +910,7 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
 
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/license">
         <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
     </owl:DatatypeProperty>
     
 
@@ -857,6 +920,8 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
 
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/rights">
         <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">rights</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -907,6 +972,7 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
     <owl:DatatypeProperty rdf:about="http://purl.org/spar/fabio/hasSubtitle">
         <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">has Subtitle</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -915,7 +981,45 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
 
 
     <owl:DatatypeProperty rdf:about="http://w3id.org/nfdi4ing/metadata4ing#orcidId">
-        <rdfs:domain rdf:resource="https://purl.org/ontology/modalia#User"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://purl.org/ontology/modalia#Contributor"/>
+                    <rdf:Description rdf:about="https://purl.org/ontology/modalia#User"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">orcidId</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.wikidata.org/entity/P496 -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.wikidata.org/entity/P496">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://purl.org/ontology/modalia#Contributor"/>
+                    <rdf:Description rdf:about="https://purl.org/ontology/modalia#User"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">ORCID iD</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.wikidata.org/entity/P6782 -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.wikidata.org/entity/P6782">
+        <rdfs:domain rdf:resource="https://purl.org/ontology/modalia#Community"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">ROR ID</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -970,6 +1074,7 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
     <owl:DatatypeProperty rdf:about="https://purl.org/ontology/modalia#commentDate">
         <rdfs:domain rdf:resource="https://purl.org/ontology/modalia#UserComment"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+        <rdfs:label xml:lang="en">Comment Date</rdfs:label>
         <skos:definition xml:lang="en">The date of a user comment</skos:definition>
     </owl:DatatypeProperty>
     
@@ -979,6 +1084,9 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
 
 
     <owl:DatatypeProperty rdf:about="https://purl.org/ontology/modalia#commentID">
+        <rdfs:domain rdf:resource="https://purl.org/ontology/modalia#UserComment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">comment ID</rdfs:label>
         <skos:definition xml:lang="en">ID of a user comment</skos:definition>
     </owl:DatatypeProperty>
     
@@ -990,6 +1098,7 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
     <owl:DatatypeProperty rdf:about="https://purl.org/ontology/modalia#commentText">
         <rdfs:domain rdf:resource="https://purl.org/ontology/modalia#UserComment"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">comment text</rdfs:label>
         <skos:definition xml:lang="en">The OER of a user comment</skos:definition>
     </owl:DatatypeProperty>
     
@@ -1047,6 +1156,7 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
     <owl:DatatypeProperty rdf:about="https://purl.org/ontology/modalia#hasRowID">
         <rdfs:domain rdf:resource="https://purl.org/ontology/modalia#LearningGoalMatrixEntry"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label xml:lang="en">has Row ID</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1057,6 +1167,7 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
     <owl:DatatypeProperty rdf:about="https://purl.org/ontology/modalia#likesCount">
         <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:label xml:lang="en">likesCount</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1067,6 +1178,7 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
     <owl:DatatypeProperty rdf:about="https://purl.org/ontology/modalia#microCredentialUrl">
         <rdfs:domain rdf:resource="https://purl.org/ontology/modalia#MicroCredential"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:label xml:lang="en">microCredentialUrl</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1106,15 +1218,7 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
     <owl:DatatypeProperty rdf:about="https://schema.org/abstract">
         <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://schema.org/author -->
-
-
-    <owl:DatatypeProperty rdf:about="https://schema.org/author">
-        <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
+        <rdfs:label xml:lang="en">abstract</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1125,6 +1229,18 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
     <owl:DatatypeProperty rdf:about="https://schema.org/citation">
         <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">Citation</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/datePublished -->
+
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/datePublished">
+        <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="en">Publication Date</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1133,6 +1249,7 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
 
 
     <owl:DatatypeProperty rdf:about="https://schema.org/downloadUrl">
+        <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
         <rdfs:label xml:lang="en">downloadUrl</rdfs:label>
     </owl:DatatypeProperty>
@@ -1163,6 +1280,7 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label xml:lang="en">familyName</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -1203,6 +1321,7 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
     <owl:DatatypeProperty rdf:about="https://schema.org/identifier">
         <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">identifier</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1213,6 +1332,7 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
     <owl:DatatypeProperty rdf:about="https://schema.org/image">
         <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:label xml:lang="en">image</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1223,6 +1343,7 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
     <owl:DatatypeProperty rdf:about="https://schema.org/isAccessibleForFree">
         <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:label xml:lang="en">isAccessibleForFree</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1231,27 +1352,9 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
 
 
     <owl:DatatypeProperty rdf:about="https://schema.org/keywords">
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://purl.org/ontology/modalia#RDMTask"/>
-                    <rdf:Description rdf:about="https://purl.org/ontology/modalia#Skill"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
+        <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label xml:lang="en">keywords</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://schema.org/maintainer -->
-
-
-    <owl:DatatypeProperty rdf:about="https://schema.org/maintainer">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label xml:lang="en">maintainer</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1263,6 +1366,7 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
         <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:isDefinedBy xml:lang="en">The item being described is intended to help a person learn the competency or learning outcome defined by the referenced term.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">teaches</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1272,6 +1376,7 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
 
     <owl:DatatypeProperty rdf:about="https://schema.org/timeRequired">
         <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#duration"/>
         <rdfs:comment xml:lang="en">in format xsd:duration</rdfs:comment>
         <rdfs:label xml:lang="en">timeRequired</rdfs:label>
         <skos:example>&quot;PT7M11S&quot;^^xsd:duration</skos:example>
@@ -1296,6 +1401,7 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
     <owl:DatatypeProperty rdf:about="https://schema.org/version">
         <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">version</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1314,6 +1420,7 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:isDefinedBy xml:lang="en">The slug is a text token which represents either the full path or terminal path segment of an HTTP(S) URL by which a resource can be located. This property is mainly for the purpose of archiving old or alternative URL paths in a content inventory, for such tasks as generating URL rewriting maps.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">slug</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1327,6 +1434,15 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
      -->
 
 
+    
+
+
+    <!-- http://id.loc.gov/ontologies/bibframe/Contribution -->
+
+
+    <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Contribution">
+        <rdfs:comment xml:lang="en">A contribution to an OER, including agent and role information.</rdfs:comment>
+    </owl:Class>
     
 
 
@@ -1385,8 +1501,16 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
 
     <owl:Class rdf:about="http://purl.org/spar/fabio/Repository">
         <rdfs:isDefinedBy xml:lang="en">Repository of OER</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Repository</rdfs:label>
         <skos:example xml:lang="en">OERSI or Dataone</skos:example>
     </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#List -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
     
 
 
@@ -1537,7 +1661,7 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
 
     <owl:Class rdf:about="https://purl.org/ontology/modalia#CTMethodological">
         <rdfs:subClassOf rdf:resource="https://purl.org/ontology/modalia#CompetenceType"/>
-        <rdfs:label xml:lang="en">Methodological</rdfs:label>
+        <rdfs:label xml:lang="en">Methodological Competence</rdfs:label>
     </owl:Class>
     
 
@@ -1547,7 +1671,7 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
 
     <owl:Class rdf:about="https://purl.org/ontology/modalia#CTProfessional">
         <rdfs:subClassOf rdf:resource="https://purl.org/ontology/modalia#CompetenceType"/>
-        <rdfs:label xml:lang="en">Professional</rdfs:label>
+        <rdfs:label xml:lang="en">Professional Competence</rdfs:label>
     </owl:Class>
     
 
@@ -1557,7 +1681,7 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
 
     <owl:Class rdf:about="https://purl.org/ontology/modalia#CTSelf">
         <rdfs:subClassOf rdf:resource="https://purl.org/ontology/modalia#CompetenceType"/>
-        <rdfs:label xml:lang="en">Self</rdfs:label>
+        <rdfs:label xml:lang="en">Self Competence</rdfs:label>
     </owl:Class>
     
 
@@ -1567,7 +1691,7 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
 
     <owl:Class rdf:about="https://purl.org/ontology/modalia#CTSocial">
         <rdfs:subClassOf rdf:resource="https://purl.org/ontology/modalia#CompetenceType"/>
-        <rdfs:label xml:lang="en">Social</rdfs:label>
+        <rdfs:label xml:lang="en">Social Competence</rdfs:label>
     </owl:Class>
     
 
@@ -1588,6 +1712,18 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
 
     <owl:Class rdf:about="https://purl.org/ontology/modalia#Code">
         <rdfs:subClassOf rdf:resource="https://purl.org/ontology/modalia#MediaType"/>
+        <rdfs:label xml:lang="en">Code</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/ontology/modalia#CodeNotebook -->
+
+
+    <owl:Class rdf:about="https://purl.org/ontology/modalia#CodeNotebook">
+        <rdfs:subClassOf rdf:resource="https://purl.org/ontology/modalia#LearningResourceType"/>
+        <rdfs:label xml:lang="en">CodeNotebook</rdfs:label>
+        <skos:example xml:lang="en">Jupyter Notebook</skos:example>
     </owl:Class>
     
 
@@ -1787,21 +1923,12 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
     
 
 
-    <!-- https://purl.org/ontology/modalia#JupyterNotebook -->
-
-
-    <owl:Class rdf:about="https://purl.org/ontology/modalia#JupyterNotebook">
-        <rdfs:subClassOf rdf:resource="https://purl.org/ontology/modalia#LearningResourceType"/>
-        <rdfs:label xml:lang="en">JupyterNotebook</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://purl.org/ontology/modalia#LL1Remember -->
 
 
     <owl:Class rdf:about="https://purl.org/ontology/modalia#LL1Remember">
         <rdfs:subClassOf rdf:resource="https://purl.org/ontology/modalia#LearningLevel"/>
+        <rdfs:label xml:lang="en">Learning Level 1 Remember</rdfs:label>
     </owl:Class>
     
 
@@ -1811,6 +1938,7 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
 
     <owl:Class rdf:about="https://purl.org/ontology/modalia#LL2Understand">
         <rdfs:subClassOf rdf:resource="https://purl.org/ontology/modalia#LearningLevel"/>
+        <rdfs:label xml:lang="en">Learning Level 2 Understand</rdfs:label>
     </owl:Class>
     
 
@@ -1820,6 +1948,7 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
 
     <owl:Class rdf:about="https://purl.org/ontology/modalia#LL3Apply">
         <rdfs:subClassOf rdf:resource="https://purl.org/ontology/modalia#LearningLevel"/>
+        <rdfs:label xml:lang="en">Learning Level 3 Apply</rdfs:label>
     </owl:Class>
     
 
@@ -1829,6 +1958,7 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
 
     <owl:Class rdf:about="https://purl.org/ontology/modalia#LL4Analyze">
         <rdfs:subClassOf rdf:resource="https://purl.org/ontology/modalia#LearningLevel"/>
+        <rdfs:label xml:lang="en">Learning Level 4 Analyze</rdfs:label>
     </owl:Class>
     
 
@@ -1838,6 +1968,7 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
 
     <owl:Class rdf:about="https://purl.org/ontology/modalia#LL5Evaluate">
         <rdfs:subClassOf rdf:resource="https://purl.org/ontology/modalia#LearningLevel"/>
+        <rdfs:label xml:lang="en">Learning Level 5 Evaluate</rdfs:label>
     </owl:Class>
     
 
@@ -1847,6 +1978,7 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
 
     <owl:Class rdf:about="https://purl.org/ontology/modalia#LL6Create">
         <rdfs:subClassOf rdf:resource="https://purl.org/ontology/modalia#LearningLevel"/>
+        <rdfs:label xml:lang="en">Learning Level 6 Create</rdfs:label>
     </owl:Class>
     
 
@@ -1927,6 +2059,17 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
 
     <owl:Class rdf:about="https://purl.org/ontology/modalia#MicroCredential">
         <rdfs:label xml:lang="en">MicroCredential</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/ontology/modalia#Multipart -->
+
+
+    <owl:Class rdf:about="https://purl.org/ontology/modalia#Multipart">
+        <rdfs:subClassOf rdf:resource="https://purl.org/ontology/modalia#MediaType"/>
+        <rdfs:label xml:lang="en">Multipart</rdfs:label>
+        <skos:definition xml:lang="en">If the resource consists of more than one item with different DOIs, the MediaType is &quot;multipart&quot; and the relations are provided in the field &quot;RelatedWork&quot;.</skos:definition>
     </owl:Class>
     
 
@@ -2154,6 +2297,7 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 
     <owl:Class rdf:about="https://purl.org/ontology/modalia#Skill">
         <rdfs:comment xml:lang="en">Job Skill, ability to perform some tasks.</rdfs:comment>
+        <rdfs:label xml:lang="en">Skill</rdfs:label>
     </owl:Class>
     
 
@@ -2168,11 +2312,22 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
     
 
 
+    <!-- https://purl.org/ontology/modalia#StudentSchool -->
+
+
+    <owl:Class rdf:about="https://purl.org/ontology/modalia#StudentSchool">
+        <rdfs:subClassOf rdf:resource="https://purl.org/ontology/modalia#TargetGroup"/>
+        <rdfs:label xml:lang="en">Student (School)</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://purl.org/ontology/modalia#SubjectCluster -->
 
 
     <owl:Class rdf:about="https://purl.org/ontology/modalia#SubjectCluster">
         <rdfs:isDefinedBy xml:lang="en">Clusters of subject areas</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">SubjectCluster</rdfs:label>
     </owl:Class>
     
 
@@ -2347,6 +2502,17 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
     <owl:Class rdf:about="https://schema.org/ImageObject">
         <rdfs:subClassOf rdf:resource="https://purl.org/ontology/modalia#MediaType"/>
         <rdfs:label xml:lang="en">ImageObject</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/PodcastSeries -->
+
+
+    <owl:Class rdf:about="https://schema.org/PodcastSeries">
+        <rdfs:subClassOf rdf:resource="https://purl.org/ontology/modalia#LearningResourceType"/>
+        <rdfs:label xml:lang="en">PodcastSeries</rdfs:label>
+        <skos:definition xml:lang="en">A podcast is an episodic series of digital audio or video files which a user can download and listen to.</skos:definition>
     </owl:Class>
     
 

@@ -45,9 +45,7 @@ The ontology is developed in OWL in Protege 5.5.0."""@en ;
 
 
 ###  http://purl.org/dc/elements/1.1/description
-<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty ;
-                                              rdfs:domain _:genid-nodeid-genid-b9d22edcf6fd4006838d8ad55c91d488-2AE04EB8010BC55339C35355F31BCF3D ,
-                                                          _:genid-nodeid-genid-b9d22edcf6fd4006838d8ad55c91d488-9A2D16C3D4FF33C57E2379F63130D3D2 .
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/elements/1.1/title
@@ -82,14 +80,36 @@ The ontology is developed in OWL in Protege 5.5.0."""@en ;
 rdf:langString rdf:type rdfs:Datatype .
 
 
+###  http://www.w3.org/2001/XMLSchema#duration
+xsd:duration rdf:type rdfs:Datatype .
+
+
 #################################################################
 #    Object Properties
 #################################################################
 
+###  http://bibfra.me/vocab/relation/supportinghost
+<http://bibfra.me/vocab/relation/supportinghost> rdf:type owl:ObjectProperty ;
+                                                 rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
+                                                 rdfs:range :Community ;
+                                                 rdfs:label "supportinghost"@en ;
+                                                 <http://www.w3.org/2004/02/skos/core#definition> "Associated community(ies) of the resource who are either the supporting organization/institution, or the recommender, or both. Here indicates supporting."@en .
+
+
 ###  http://id.loc.gov/ontologies/bibframe/contribution
 <http://id.loc.gov/ontologies/bibframe/contribution> rdf:type owl:ObjectProperty ;
                                                      rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
+                                                     rdfs:range <http://id.loc.gov/ontologies/bibframe/Contribution> ;
+                                                     rdfs:comment "Property linking an OER to its contribution (e.g., editing)."@en ;
                                                      rdfs:label "contribution"@en .
+
+
+###  http://purl.org/ontology/rec/core#recommender
+<http://purl.org/ontology/rec/core#recommender> rdf:type owl:ObjectProperty ;
+                                                rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
+                                                rdfs:range :Community ;
+                                                rdfs:label "recommender"@en ;
+                                                <http://www.w3.org/2004/02/skos/core#definition> "Associated community(ies) of the resource who are either the supporting organization/institution, or the recommender, or both.  Here indicates recommender"@en .
 
 
 ###  http://purl.org/spar/fabio/hasDiscipline
@@ -106,7 +126,8 @@ rdf:langString rdf:type rdfs:Datatype .
 ###  http://usefulinc.com/ns/doap#repository
 <http://usefulinc.com/ns/doap#repository> rdf:type owl:ObjectProperty ;
                                           rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
-                                          rdfs:range <http://purl.org/spar/fabio/Repository> .
+                                          rdfs:range <http://purl.org/spar/fabio/Repository> ;
+                                          rdfs:label "repository"@en .
 
 
 ###  https://github.com/tibonto/educor#consistsOfKnowledge
@@ -116,36 +137,31 @@ rdf:langString rdf:type rdfs:Datatype .
                                                         rdfs:label "consistsOfKnowledge" .
 
 
+###  https://purl.org/ontology/modalia#author
+:author rdf:type owl:ObjectProperty ;
+        rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
+        rdfs:range rdf:List ;
+        rdfs:comment "Property linking an OER  to a list of authors."@en ;
+        rdfs:label "author"@en .
+
+
 ###  https://purl.org/ontology/modalia#belongsToArea
 :belongsToArea rdf:type owl:ObjectProperty ;
                rdfs:domain :RDMTopic ;
-               rdfs:range :RDMSubjectArea .
+               rdfs:range :RDMSubjectArea ;
+               rdfs:label "belongsToArea"@en .
 
 
 ###  https://purl.org/ontology/modalia#belongsToCluster
 :belongsToCluster rdf:type owl:ObjectProperty ;
                   rdfs:domain :RDMSubjectArea ;
-                  rdfs:range :SubjectCluster .
-
-
-###  https://purl.org/ontology/modalia#belongsToCommunity
-:belongsToCommunity rdf:type owl:ObjectProperty ;
-                    rdfs:domain [ rdf:type owl:Class ;
-                                  owl:unionOf ( <https://github.com/tibonto/educor#EducationalResource>
-                                                <https://github.com/tibonto/educor#LearningPath>
-                                              )
-                                ] ;
-                    rdfs:range :Community ;
-                    rdfs:comment "The community of a learning resource or learning path" .
+                  rdfs:range :SubjectCluster ;
+                  rdfs:label "belongsToCluster"@en .
 
 
 ###  https://purl.org/ontology/modalia#belongsToPhase
 :belongsToPhase rdf:type owl:ObjectProperty ;
-                rdfs:domain [ rdf:type owl:Class ;
-                              owl:unionOf ( :RDMResource
-                                            :RDMTask
-                                          )
-                            ] ;
+                rdfs:domain :RDMResource ;
                 rdfs:range :DataLifeCyclePhase ;
                 rdfs:isDefinedBy "defines the data life cycle phase that the resource covers"@en ;
                 rdfs:label "belongsToPhase" .
@@ -153,9 +169,9 @@ rdf:langString rdf:type rdfs:Datatype .
 
 ###  https://purl.org/ontology/modalia#canCarryOut
 :canCarryOut rdf:type owl:ObjectProperty ;
-             rdfs:domain :Skill ;
-             rdfs:range :RDMTask ;
-             rdfs:label "canCarryOut" .
+             rdfs:comment "RDMTask deprecated" ;
+             rdfs:label "DEPRECATED canCarryOut" ;
+             owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.org/ontology/modalia#commentUserID
@@ -171,7 +187,8 @@ rdf:langString rdf:type rdfs:Datatype .
               rdfs:domain :UserComment ;
               rdfs:range <https://github.com/tibonto/educor#EducationalResource> ;
               rdfs:isDefinedBy "commentedOER"@en ,
-                               "defines the OER that is commented in a user comment"@en .
+                               "defines the OER that is commented in a user comment"@en ;
+              rdfs:label "commentedOER"@en .
 
 
 ###  https://purl.org/ontology/modalia#covers
@@ -185,7 +202,8 @@ rdf:langString rdf:type rdfs:Datatype .
 ###  https://purl.org/ontology/modalia#createdBy
 :createdBy rdf:type owl:ObjectProperty ;
            rdfs:domain :Community ;
-           rdfs:range :User .
+           rdfs:range :User ;
+           rdfs:label "createdBy"@en .
 
 
 ###  https://purl.org/ontology/modalia#definesLearningPath
@@ -198,7 +216,8 @@ rdf:langString rdf:type rdfs:Datatype .
 ###  https://purl.org/ontology/modalia#educationalLevel
 :educationalLevel rdf:type owl:ObjectProperty ;
                   rdfs:domain :User ;
-                  rdfs:range :EducationalLevel .
+                  rdfs:range :EducationalLevel ;
+                  rdfs:label "educationalLevel"@en .
 
 
 ###  https://purl.org/ontology/modalia#essentialFor
@@ -225,13 +244,15 @@ rdf:langString rdf:type rdfs:Datatype .
 ###  https://purl.org/ontology/modalia#hasCertificate
 :hasCertificate rdf:type owl:ObjectProperty ;
                 rdfs:domain :UserEnrollment ;
-                rdfs:range :Certificate .
+                rdfs:range :Certificate ;
+                rdfs:label "hasCertificate"@en .
 
 
 ###  https://purl.org/ontology/modalia#hasCompetenceType
 :hasCompetenceType rdf:type owl:ObjectProperty ;
                    rdfs:domain :LearningGoalMatrixEntry ;
-                   rdfs:range :CompetenceType .
+                   rdfs:range :CompetenceType ;
+                   rdfs:label "hasCompetenceType"@en .
 
 
 ###  https://purl.org/ontology/modalia#hasEnrollment
@@ -245,14 +266,20 @@ rdf:langString rdf:type rdfs:Datatype .
 ###  https://purl.org/ontology/modalia#hasLearningLevel
 :hasLearningLevel rdf:type owl:ObjectProperty ;
                   rdfs:domain :LearningGoalMatrixEntry ;
-                  rdfs:range :LearningLevel .
+                  rdfs:range :LearningLevel ;
+                  rdfs:label "hasLearningLevel"@en .
 
 
 ###  https://purl.org/ontology/modalia#hasLearningObjective
 :hasLearningObjective rdf:type owl:ObjectProperty ;
-                      rdfs:domain <https://github.com/tibonto/educor#LearningPath> ,
-                                  :LearningGoalMatrixEntry ;
-                      rdfs:range :LearningObjective .
+                      rdfs:domain [ rdf:type owl:Class ;
+                                    owl:unionOf ( <https://github.com/tibonto/educor#EducationalResource>
+                                                  <https://github.com/tibonto/educor#LearningPath>
+                                                  :LearningGoalMatrixEntry
+                                                )
+                                  ] ;
+                      rdfs:range :LearningObjective ;
+                      rdfs:label "hasLearningObjective"@en .
 
 
 ###  https://purl.org/ontology/modalia#hasLearningResource
@@ -290,7 +317,8 @@ rdf:langString rdf:type rdfs:Datatype .
                    owl:FunctionalProperty ;
           rdfs:domain :Community ;
           rdfs:range :User ;
-          rdfs:isDefinedBy "defines the user who owns a specific community. There is only one owner to a specific community"@en .
+          rdfs:isDefinedBy "defines the user who owns a specific community. There is only one owner to a specific community"@en ;
+          rdfs:label "hasOwner"@en .
 
 
 ###  https://purl.org/ontology/modalia#hasProfile
@@ -331,7 +359,8 @@ rdf:langString rdf:type rdfs:Datatype .
 ###  https://purl.org/ontology/modalia#hasRole
 :hasRole rdf:type owl:ObjectProperty ;
          rdfs:domain :User ;
-         rdfs:range :UserRole .
+         rdfs:range :UserRole ;
+         rdfs:label "hasRole"@en .
 
 
 ###  https://purl.org/ontology/modalia#hasTargetGroup
@@ -372,7 +401,8 @@ rdf:langString rdf:type rdfs:Datatype .
 :isMemberOf rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf owl:topObjectProperty ;
             rdfs:domain :User ;
-            rdfs:range :Community .
+            rdfs:range :Community ;
+            rdfs:label "isMemberOf"@en .
 
 
 ###  https://purl.org/ontology/modalia#isMoreProficientThan
@@ -415,7 +445,8 @@ rdf:langString rdf:type rdfs:Datatype .
 
 ###  https://purl.org/ontology/modalia#relatedTo
 :relatedTo rdf:type owl:ObjectProperty ;
-           rdfs:range :RDMResource ;
+           rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
+           rdfs:range <https://github.com/tibonto/educor#EducationalResource> ;
            rdfs:label "relatedTo"@en .
 
 
@@ -433,21 +464,25 @@ rdf:langString rdf:type rdfs:Datatype .
                           rdfs:label "requiresProficiencyLevel"@en .
 
 
-###  https://purl.org/ontology/modalia#satisfies
-:satisfies rdf:type owl:ObjectProperty ;
-           rdfs:label "satisfies"@en .
-
-
 ###  https://purl.org/ontology/modalia#solves
 :solves rdf:type owl:ObjectProperty ;
         rdfs:domain :User ;
-        rdfs:range :Questionnaire ,
-                   <https://w3id.org/kim/hcrt/assessment> ;
+        rdfs:range [ rdf:type owl:Class ;
+                     owl:unionOf ( :Questionnaire
+                                   <https://w3id.org/kim/hcrt/assessment>
+                                 )
+                   ] ;
         rdfs:label "solves"@en .
 
 
 ###  https://purl.org/ontology/modalia#storedIn
 :storedIn rdf:type owl:ObjectProperty ;
+          rdfs:domain [ rdf:type owl:Class ;
+                        owl:unionOf ( <https://github.com/tibonto/educor#LearningPreference>
+                                      :Certificate
+                                      :LearningObjective
+                                    )
+                      ] ;
           rdfs:range :UserProfile ;
           rdfs:label "storedIn"@en .
 
@@ -455,14 +490,16 @@ rdf:langString rdf:type rdfs:Datatype .
 ###  https://purl.org/ontology/modalia#userBookmarks
 :userBookmarks rdf:type owl:ObjectProperty ;
                rdfs:domain :User ;
-               rdfs:range <https://github.com/tibonto/educor#EducationalResource> .
+               rdfs:range <https://github.com/tibonto/educor#EducationalResource> ;
+               rdfs:label "userBookmarks"@en .
 
 
 ###  https://purl.org/ontology/modalia#userLikes
 :userLikes rdf:type owl:ObjectProperty ;
            rdfs:domain :User ;
            rdfs:range <https://github.com/tibonto/educor#EducationalResource> ;
-           rdfs:label "userLikes"@en .
+           rdfs:label "userLikes"@en ;
+           <http://www.w3.org/2004/02/skos/core#definition> "stores that user liked a given OER"@en .
 
 
 ###  https://purl.org/ontology/modalia#userViews
@@ -471,6 +508,15 @@ rdf:langString rdf:type rdfs:Datatype .
            rdfs:domain :User ;
            rdfs:range <https://github.com/tibonto/educor#EducationalResource> ;
            rdfs:label "userViews"@en .
+
+
+###  https://schema.org/isPartOf
+<https://schema.org/isPartOf> rdf:type owl:ObjectProperty ;
+                              rdfs:subPropertyOf :relatedTo ;
+                              rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
+                              rdfs:range <https://github.com/tibonto/educor#EducationalResource> ;
+                              rdfs:comment "This property gives the relation between two resources as the subject  is part of the resource in the object."@en ;
+                              rdfs:label "isPartOf"@en .
 
 
 #################################################################
@@ -498,12 +544,14 @@ rdf:langString rdf:type rdfs:Datatype .
                                                                    :Community
                                                                  )
                                                    ] ;
-                                       rdfs:range xsd:string .
+                                       rdfs:range xsd:string ;
+                                       rdfs:label "description"@en .
 
 
 ###  http://purl.org/dc/terms/format
 <http://purl.org/dc/terms/format> rdf:type owl:DatatypeProperty ;
                                   rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
+                                  rdfs:range xsd:string ;
                                   rdfs:isDefinedBy "File format of the file representing the resource" ;
                                   rdfs:label "file format"@en ;
                                   <http://www.w3.org/2004/02/skos/core#example> "PDF, AVI" .
@@ -519,18 +567,22 @@ rdf:langString rdf:type rdfs:Datatype .
 
 ###  http://purl.org/dc/terms/language
 <http://purl.org/dc/terms/language> rdf:type owl:DatatypeProperty ;
+                                    rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
                                     rdfs:range xsd:language ;
                                     rdfs:label "language"@en .
 
 
 ###  http://purl.org/dc/terms/license
 <http://purl.org/dc/terms/license> rdf:type owl:DatatypeProperty ;
-                                   rdfs:domain <https://github.com/tibonto/educor#EducationalResource> .
+                                   rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
+                                   rdfs:range xsd:anyURI .
 
 
 ###  http://purl.org/dc/terms/rights
 <http://purl.org/dc/terms/rights> rdf:type owl:DatatypeProperty ;
-                                  rdfs:domain <https://github.com/tibonto/educor#EducationalResource> .
+                                  rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
+                                  rdfs:range xsd:string ;
+                                  rdfs:label "rights"@en .
 
 
 ###  http://purl.org/dc/terms/title
@@ -562,12 +614,37 @@ rdf:langString rdf:type rdfs:Datatype .
 ###  http://purl.org/spar/fabio/hasSubtitle
 <http://purl.org/spar/fabio/hasSubtitle> rdf:type owl:DatatypeProperty ;
                                          rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
-                                         rdfs:range xsd:string .
+                                         rdfs:range xsd:string ;
+                                         rdfs:label "has Subtitle"@en .
 
 
 ###  http://w3id.org/nfdi4ing/metadata4ing#orcidId
 <http://w3id.org/nfdi4ing/metadata4ing#orcidId> rdf:type owl:DatatypeProperty ;
-                                                rdfs:domain :User .
+                                                rdfs:domain [ rdf:type owl:Class ;
+                                                              owl:unionOf ( :Contributor
+                                                                            :User
+                                                                          )
+                                                            ] ;
+                                                rdfs:range xsd:string ;
+                                                rdfs:label "orcidId"@en .
+
+
+###  http://www.wikidata.org/entity/P496
+<http://www.wikidata.org/entity/P496> rdf:type owl:DatatypeProperty ;
+                                      rdfs:domain [ rdf:type owl:Class ;
+                                                    owl:unionOf ( :Contributor
+                                                                  :User
+                                                                )
+                                                  ] ;
+                                      rdfs:range xsd:string ;
+                                      rdfs:label "ORCID iD"@en .
+
+
+###  http://www.wikidata.org/entity/P6782
+<http://www.wikidata.org/entity/P6782> rdf:type owl:DatatypeProperty ;
+                                       rdfs:domain :Community ;
+                                       rdfs:range xsd:string ;
+                                       rdfs:label "ROR ID"@en .
 
 
 ###  https://purl.org/ontology/modalia#certificateEndDate
@@ -602,11 +679,15 @@ rdf:langString rdf:type rdfs:Datatype .
 :commentDate rdf:type owl:DatatypeProperty ;
              rdfs:domain :UserComment ;
              rdfs:range xsd:dateTimeStamp ;
+             rdfs:label "Comment Date"@en ;
              <http://www.w3.org/2004/02/skos/core#definition> "The date of a user comment"@en .
 
 
 ###  https://purl.org/ontology/modalia#commentID
 :commentID rdf:type owl:DatatypeProperty ;
+           rdfs:domain :UserComment ;
+           rdfs:range xsd:string ;
+           rdfs:label "comment ID"@en ;
            <http://www.w3.org/2004/02/skos/core#definition> "ID of a user comment"@en .
 
 
@@ -614,6 +695,7 @@ rdf:langString rdf:type rdfs:Datatype .
 :commentText rdf:type owl:DatatypeProperty ;
              rdfs:domain :UserComment ;
              rdfs:range xsd:string ;
+             rdfs:label "comment text"@en ;
              <http://www.w3.org/2004/02/skos/core#definition> "The OER of a user comment"@en .
 
 
@@ -650,19 +732,22 @@ rdf:langString rdf:type rdfs:Datatype .
 ###  https://purl.org/ontology/modalia#hasRowID
 :hasRowID rdf:type owl:DatatypeProperty ;
           rdfs:domain :LearningGoalMatrixEntry ;
-          rdfs:range xsd:integer .
+          rdfs:range xsd:integer ;
+          rdfs:label "has Row ID"@en .
 
 
 ###  https://purl.org/ontology/modalia#likesCount
 :likesCount rdf:type owl:DatatypeProperty ;
             rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
-            rdfs:range xsd:int .
+            rdfs:range xsd:int ;
+            rdfs:label "likesCount"@en .
 
 
 ###  https://purl.org/ontology/modalia#microCredentialUrl
 :microCredentialUrl rdf:type owl:DatatypeProperty ;
                     rdfs:domain :MicroCredential ;
-                    rdfs:range xsd:anyURI .
+                    rdfs:range xsd:anyURI ;
+                    rdfs:label "microCredentialUrl"@en .
 
 
 ###  https://purl.org/ontology/modalia#studyPlan
@@ -686,22 +771,27 @@ rdf:langString rdf:type rdfs:Datatype .
 ###  https://schema.org/abstract
 <https://schema.org/abstract> rdf:type owl:DatatypeProperty ;
                               rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
-                              rdfs:range xsd:string .
-
-
-###  https://schema.org/author
-<https://schema.org/author> rdf:type owl:DatatypeProperty ;
-                            rdfs:domain <https://github.com/tibonto/educor#EducationalResource> .
+                              rdfs:range xsd:string ;
+                              rdfs:label "abstract"@en .
 
 
 ###  https://schema.org/citation
 <https://schema.org/citation> rdf:type owl:DatatypeProperty ;
                               rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
-                              rdfs:range xsd:string .
+                              rdfs:range xsd:string ;
+                              rdfs:label "Citation"@en .
+
+
+###  https://schema.org/datePublished
+<https://schema.org/datePublished> rdf:type owl:DatatypeProperty ;
+                                   rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
+                                   rdfs:range xsd:dateTime ;
+                                   rdfs:label "Publication Date"@en .
 
 
 ###  https://schema.org/downloadUrl
 <https://schema.org/downloadUrl> rdf:type owl:DatatypeProperty ;
+                                 rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
                                  rdfs:range xsd:anyURI ;
                                  rdfs:label "downloadUrl"@en .
 
@@ -721,6 +811,7 @@ rdf:langString rdf:type rdfs:Datatype .
                                                             :User
                                                           )
                                             ] ;
+                                rdfs:range xsd:string ;
                                 rdfs:label "familyName"@en .
 
 
@@ -745,49 +836,43 @@ rdf:langString rdf:type rdfs:Datatype .
 ###  https://schema.org/identifier
 <https://schema.org/identifier> rdf:type owl:DatatypeProperty ;
                                 rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
-                                rdfs:range xsd:string .
+                                rdfs:range xsd:string ;
+                                rdfs:label "identifier"@en .
 
 
 ###  https://schema.org/image
 <https://schema.org/image> rdf:type owl:DatatypeProperty ;
                            rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
-                           rdfs:range xsd:anyURI .
+                           rdfs:range xsd:anyURI ;
+                           rdfs:label "image"@en .
 
 
 ###  https://schema.org/isAccessibleForFree
 <https://schema.org/isAccessibleForFree> rdf:type owl:DatatypeProperty ;
                                          rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
-                                         rdfs:range xsd:boolean .
+                                         rdfs:range xsd:boolean ;
+                                         rdfs:label "isAccessibleForFree"@en .
 
 
 ###  https://schema.org/keywords
 <https://schema.org/keywords> rdf:type owl:DatatypeProperty ;
-                              rdfs:domain [ rdf:type owl:Class ;
-                                            owl:unionOf ( :RDMTask
-                                                          :Skill
-                                                        )
-                                          ] ;
-                              rdfs:range rdf:langString ,
-                                         xsd:string ;
+                              rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
+                              rdfs:range xsd:string ;
                               rdfs:label "keywords"@en .
-
-
-###  https://schema.org/maintainer
-<https://schema.org/maintainer> rdf:type owl:DatatypeProperty ;
-                                rdfs:range xsd:string ;
-                                rdfs:label "maintainer"@en .
 
 
 ###  https://schema.org/teaches
 <https://schema.org/teaches> rdf:type owl:DatatypeProperty ;
                              rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
                              rdfs:range xsd:string ;
-                             rdfs:isDefinedBy "The item being described is intended to help a person learn the competency or learning outcome defined by the referenced term."@en .
+                             rdfs:isDefinedBy "The item being described is intended to help a person learn the competency or learning outcome defined by the referenced term."@en ;
+                             rdfs:label "teaches"@en .
 
 
 ###  https://schema.org/timeRequired
 <https://schema.org/timeRequired> rdf:type owl:DatatypeProperty ;
                                   rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
+                                  rdfs:range xsd:duration ;
                                   rdfs:comment "in format xsd:duration"@en ;
                                   rdfs:label "timeRequired"@en ;
                                   <http://www.w3.org/2004/02/skos/core#example> "\"PT7M11S\"^^xsd:duration" .
@@ -803,7 +888,8 @@ rdf:langString rdf:type rdfs:Datatype .
 ###  https://schema.org/version
 <https://schema.org/version> rdf:type owl:DatatypeProperty ;
                              rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
-                             rdfs:range xsd:string .
+                             rdfs:range xsd:string ;
+                             rdfs:label "version"@en .
 
 
 ###  https://vocab.methodandstructure.com/content-inventory#slug
@@ -814,12 +900,18 @@ rdf:langString rdf:type rdfs:Datatype .
                                                                                         )
                                                                           ] ;
                                                               rdfs:range xsd:string ;
-                                                              rdfs:isDefinedBy "The slug is a text token which represents either the full path or terminal path segment of an HTTP(S) URL by which a resource can be located. This property is mainly for the purpose of archiving old or alternative URL paths in a content inventory, for such tasks as generating URL rewriting maps."@en .
+                                                              rdfs:isDefinedBy "The slug is a text token which represents either the full path or terminal path segment of an HTTP(S) URL by which a resource can be located. This property is mainly for the purpose of archiving old or alternative URL paths in a content inventory, for such tasks as generating URL rewriting maps."@en ;
+                                                              rdfs:label "slug"@en .
 
 
 #################################################################
 #    Classes
 #################################################################
+
+###  http://id.loc.gov/ontologies/bibframe/Contribution
+<http://id.loc.gov/ontologies/bibframe/Contribution> rdf:type owl:Class ;
+                                                     rdfs:comment "A contribution to an OER, including agent and role information."@en .
+
 
 ###  http://purl.org/ontology/bibo/Article
 <http://purl.org/ontology/bibo/Article> rdf:type owl:Class ;
@@ -854,7 +946,12 @@ rdf:langString rdf:type rdfs:Datatype .
 ###  http://purl.org/spar/fabio/Repository
 <http://purl.org/spar/fabio/Repository> rdf:type owl:Class ;
                                         rdfs:isDefinedBy "Repository of OER"@en ;
+                                        rdfs:label "Repository"@en ;
                                         <http://www.w3.org/2004/02/skos/core#example> "OERSI or Dataone"@en .
+
+
+###  http://www.w3.org/1999/02/22-rdf-syntax-ns#List
+rdf:List rdf:type owl:Class .
 
 
 ###  https://github.com/tibonto/educor#Answer
@@ -954,25 +1051,25 @@ rdf:langString rdf:type rdfs:Datatype .
 ###  https://purl.org/ontology/modalia#CTMethodological
 :CTMethodological rdf:type owl:Class ;
                   rdfs:subClassOf :CompetenceType ;
-                  rdfs:label "Methodological"@en .
+                  rdfs:label "Methodological Competence"@en .
 
 
 ###  https://purl.org/ontology/modalia#CTProfessional
 :CTProfessional rdf:type owl:Class ;
                 rdfs:subClassOf :CompetenceType ;
-                rdfs:label "Professional"@en .
+                rdfs:label "Professional Competence"@en .
 
 
 ###  https://purl.org/ontology/modalia#CTSelf
 :CTSelf rdf:type owl:Class ;
         rdfs:subClassOf :CompetenceType ;
-        rdfs:label "Self"@en .
+        rdfs:label "Self Competence"@en .
 
 
 ###  https://purl.org/ontology/modalia#CTSocial
 :CTSocial rdf:type owl:Class ;
           rdfs:subClassOf :CompetenceType ;
-          rdfs:label "Social"@en .
+          rdfs:label "Social Competence"@en .
 
 
 ###  https://purl.org/ontology/modalia#Certificate
@@ -984,7 +1081,15 @@ rdf:langString rdf:type rdfs:Datatype .
 
 ###  https://purl.org/ontology/modalia#Code
 :Code rdf:type owl:Class ;
-      rdfs:subClassOf :MediaType .
+      rdfs:subClassOf :MediaType ;
+      rdfs:label "Code"@en .
+
+
+###  https://purl.org/ontology/modalia#CodeNotebook
+:CodeNotebook rdf:type owl:Class ;
+              rdfs:subClassOf :LearningResourceType ;
+              rdfs:label "CodeNotebook"@en ;
+              <http://www.w3.org/2004/02/skos/core#example> "Jupyter Notebook"@en .
 
 
 ###  https://purl.org/ontology/modalia#CollectPhase
@@ -1108,40 +1213,40 @@ rdf:langString rdf:type rdfs:Datatype .
      <http://www.w3.org/2004/02/skos/core#example> "Software Developer"@en .
 
 
-###  https://purl.org/ontology/modalia#JupyterNotebook
-:JupyterNotebook rdf:type owl:Class ;
-                 rdfs:subClassOf :LearningResourceType ;
-                 rdfs:label "JupyterNotebook"@en .
-
-
 ###  https://purl.org/ontology/modalia#LL1Remember
 :LL1Remember rdf:type owl:Class ;
-             rdfs:subClassOf :LearningLevel .
+             rdfs:subClassOf :LearningLevel ;
+             rdfs:label "Learning Level 1 Remember"@en .
 
 
 ###  https://purl.org/ontology/modalia#LL2Understand
 :LL2Understand rdf:type owl:Class ;
-               rdfs:subClassOf :LearningLevel .
+               rdfs:subClassOf :LearningLevel ;
+               rdfs:label "Learning Level 2 Understand"@en .
 
 
 ###  https://purl.org/ontology/modalia#LL3Apply
 :LL3Apply rdf:type owl:Class ;
-          rdfs:subClassOf :LearningLevel .
+          rdfs:subClassOf :LearningLevel ;
+          rdfs:label "Learning Level 3 Apply"@en .
 
 
 ###  https://purl.org/ontology/modalia#LL4Analyze
 :LL4Analyze rdf:type owl:Class ;
-            rdfs:subClassOf :LearningLevel .
+            rdfs:subClassOf :LearningLevel ;
+            rdfs:label "Learning Level 4 Analyze"@en .
 
 
 ###  https://purl.org/ontology/modalia#LL5Evaluate
 :LL5Evaluate rdf:type owl:Class ;
-             rdfs:subClassOf :LearningLevel .
+             rdfs:subClassOf :LearningLevel ;
+             rdfs:label "Learning Level 5 Evaluate"@en .
 
 
 ###  https://purl.org/ontology/modalia#LL6Create
 :LL6Create rdf:type owl:Class ;
-           rdfs:subClassOf :LearningLevel .
+           rdfs:subClassOf :LearningLevel ;
+           rdfs:label "Learning Level 6 Create"@en .
 
 
 ###  https://purl.org/ontology/modalia#LearningGoalMatrixEntry
@@ -1190,6 +1295,13 @@ rdf:langString rdf:type rdfs:Datatype .
 ###  https://purl.org/ontology/modalia#MicroCredential
 :MicroCredential rdf:type owl:Class ;
                  rdfs:label "MicroCredential"@en .
+
+
+###  https://purl.org/ontology/modalia#Multipart
+:Multipart rdf:type owl:Class ;
+           rdfs:subClassOf :MediaType ;
+           rdfs:label "Multipart"@en ;
+           <http://www.w3.org/2004/02/skos/core#definition> "If the resource consists of more than one item with different DOIs, the MediaType is \"multipart\" and the relations are provided in the field \"RelatedWork\"."@en .
 
 
 ###  https://purl.org/ontology/modalia#OrganisationProviderType
@@ -1329,7 +1441,8 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 
 ###  https://purl.org/ontology/modalia#Skill
 :Skill rdf:type owl:Class ;
-       rdfs:comment "Job Skill, ability to perform some tasks."@en .
+       rdfs:comment "Job Skill, ability to perform some tasks."@en ;
+       rdfs:label "Skill"@en .
 
 
 ###  https://purl.org/ontology/modalia#StudentRole
@@ -1338,9 +1451,16 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
              rdfs:label "StudentRole"@en .
 
 
+###  https://purl.org/ontology/modalia#StudentSchool
+:StudentSchool rdf:type owl:Class ;
+               rdfs:subClassOf :TargetGroup ;
+               rdfs:label "Student (School)"@en .
+
+
 ###  https://purl.org/ontology/modalia#SubjectCluster
 :SubjectCluster rdf:type owl:Class ;
-                rdfs:isDefinedBy "Clusters of subject areas"@en .
+                rdfs:isDefinedBy "Clusters of subject areas"@en ;
+                rdfs:label "SubjectCluster"@en .
 
 
 ###  https://purl.org/ontology/modalia#TargetGroup
@@ -1447,6 +1567,13 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 <https://schema.org/ImageObject> rdf:type owl:Class ;
                                  rdfs:subClassOf :MediaType ;
                                  rdfs:label "ImageObject"@en .
+
+
+###  https://schema.org/PodcastSeries
+<https://schema.org/PodcastSeries> rdf:type owl:Class ;
+                                   rdfs:subClassOf :LearningResourceType ;
+                                   rdfs:label "PodcastSeries"@en ;
+                                   <http://www.w3.org/2004/02/skos/core#definition> "A podcast is an episodic series of digital audio or video files which a user can download and listen to."@en .
 
 
 ###  https://schema.org/Text
