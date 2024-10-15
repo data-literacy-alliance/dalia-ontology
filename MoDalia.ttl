@@ -833,6 +833,7 @@ schema:datePublished rdf:type owl:DatatypeProperty ;
 schema:downloadUrl rdf:type owl:DatatypeProperty ;
                    rdfs:domain ec:EducationalResource ;
                    rdfs:range xsd:anyURI ;
+                   rdfs:comment "If the OER can be downloaded, URL to download it."@en ;
                    rdfs:label "downloadUrl"@en .
 
 
@@ -1708,9 +1709,7 @@ m4i:Sponsor rdf:type owl:NamedIndividual ,
 ###  https://purl.org/ontology/modalia#
 <https://purl.org/ontology/modalia#> rdf:type owl:NamedIndividual ;
                                      dcterms:created "2024-09-04" ;
-                                     dcterms:issued "2024-09-04" ;
-                                     dcterms:title "MoDALIA Ontology" ,
-                                                   "MoDALIA: An Ontology for Educational Material in Research Data Management and Data Science." .
+                                     dcterms:issued "2024-09-04" .
 
 
 ###  https://purl.org/ontology/modalia#Beginner
@@ -1761,6 +1760,12 @@ m4i:Sponsor rdf:type owl:NamedIndividual ,
                                   :Competent ,
                                   :Novice ;
             rdfs:label "Proficient"@en .
+
+
+###  https://purl.org/ontology/modalia#ProprietaryLicense
+:ProprietaryLicense rdf:type owl:NamedIndividual ;
+                    rdfs:label "Proprietary License"@en ;
+                    <http://www.w3.org/2004/02/skos/core#example> "Youtube License"@en .
 
 
 #################################################################
