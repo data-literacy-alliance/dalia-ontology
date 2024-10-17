@@ -159,6 +159,7 @@ fabio:hasDiscipline rdf:type owl:ObjectProperty ;
 <http://usefulinc.com/ns/doap#repository> rdf:type owl:ObjectProperty ;
                                           rdfs:domain ec:EducationalResource ;
                                           rdfs:range fabio:Repository ;
+                                          rdfs:comment "Property linking an OER to a repository hosting it."@en ;
                                           rdfs:label "repository"@en .
 
 
@@ -652,7 +653,11 @@ fabio:hasSubtitle rdf:type owl:DatatypeProperty ;
 
 ###  http://w3id.org/nfdi4ing/metadata4ing#hasRorId
 m4i:hasRorId rdf:type owl:DatatypeProperty ;
-             rdfs:domain :Community ;
+             rdfs:domain [ rdf:type owl:Class ;
+                           owl:unionOf ( :Community
+                                         schema:Organization
+                                       )
+                         ] ;
              rdfs:range [ rdf:type rdfs:Datatype ;
                           owl:onDatatype xsd:string ;
                           owl:withRestrictions ( [ xsd:pattern "https://ror.org/[0-9][0-9][a-z0-9][a-z0-9][a-z0-9][a-z0-9][a-z0-9][0-9][0-9]"
@@ -853,6 +858,7 @@ schema:familyName rdf:type owl:DatatypeProperty ;
                                             )
                               ] ;
                   rdfs:range xsd:string ;
+                  rdfs:comment "Family name. In the U.S., the last name of a Person."@en ;
                   rdfs:label "familyName"@en .
 
 
@@ -885,6 +891,7 @@ schema:identifier rdf:type owl:DatatypeProperty ;
 schema:image rdf:type owl:DatatypeProperty ;
              rdfs:domain ec:EducationalResource ;
              rdfs:range xsd:anyURI ;
+             rdfs:comment "Property linking an OER to an image representing it."@en ;
              rdfs:label "image"@en .
 
 
@@ -1355,12 +1362,6 @@ ec:UserLogs rdf:type owl:Class ;
                           rdfs:label "OrganisationProviderType"@en .
 
 
-###  https://purl.org/ontology/modalia#Organization
-:Organization rdf:type owl:Class ;
-              rdfs:label "Organization" ;
-              rdfs:seeAlso <http://xmlns.com/foaf/0.1/Organization> .
-
-
 ###  https://purl.org/ontology/modalia#PersonProviderType
 :PersonProviderType rdf:type owl:Class ;
                     rdfs:subClassOf :ProviderType ;
@@ -1606,13 +1607,22 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 ###  https://schema.org/AudioObject
 schema:AudioObject rdf:type owl:Class ;
                    rdfs:subClassOf :MediaType ;
+                   rdfs:comment "A class representing OERs which are audio files."@en ;
                    rdfs:label "AudioObject"@en .
 
 
 ###  https://schema.org/ImageObject
 schema:ImageObject rdf:type owl:Class ;
                    rdfs:subClassOf :MediaType ;
+                   rdfs:comment "An image file."@en ;
                    rdfs:label "ImageObject"@en .
+
+
+###  https://schema.org/Organization
+schema:Organization rdf:type owl:Class ;
+                    rdfs:comment "An organization such as a school (including Universities), NGO, corporation, club, etc."@en ;
+                    rdfs:label "Organization" ;
+                    rdfs:seeAlso <http://xmlns.com/foaf/0.1/Organization> .
 
 
 ###  https://schema.org/PodcastSeries
@@ -1675,6 +1685,7 @@ schema:VideoObject rdf:type owl:Class ;
 ###  https://w3id.org/kim/hcrt/slide
 <https://w3id.org/kim/hcrt/slide> rdf:type owl:Class ;
                                   rdfs:subClassOf :MediaType ;
+                                  rdfs:comment "A presentation / slides file."@en ;
                                   rdfs:label "Presentation"@en .
 
 
@@ -1704,12 +1715,6 @@ m4i:DataManager rdf:type owl:NamedIndividual ,
 m4i:Sponsor rdf:type owl:NamedIndividual ,
                      :ContributorRole ;
             rdfs:label "Sponsor"@en .
-
-
-###  https://purl.org/ontology/modalia#
-<https://purl.org/ontology/modalia#> rdf:type owl:NamedIndividual ;
-                                     dcterms:created "2024-09-04" ;
-                                     dcterms:issued "2024-09-04" .
 
 
 ###  https://purl.org/ontology/modalia#Beginner

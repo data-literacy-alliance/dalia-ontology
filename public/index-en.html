@@ -94,7 +94,8 @@ $(function(){
 <dd><a href="https://github.com/tibonto/educor#">ec</a></dd>
 
 <dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.xml" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"><img src="https://img.shields.io/badge/License-CC_BY%204.0%20International-blue.svg" alt="https://creativecommons.org/licenses/by/4.0/" /></a>
-</dd><dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd><dt>Cite as:</dt>
+</dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd><dt>Cite as:</dt>
 <dd>BMBF DALIA project. 2024. "MoDALIA Ontology." In collaboration with Abdelmoneim Amer Desouki, Marc Fuhrmans, Petra C. Steiner and Frank Lange. Revision v1.0.0. https://purl.org/ontology/modalia#.</dd>
 </dl>
 
@@ -127,7 +128,6 @@ This is a place holder text for the introduction. The introduction should briefl
 <tr><td><b>dcterms</b></td><td>&lt;http://purl.org/dc/terms/&gt;</td></tr>
 <tr><td><b>doap</b></td><td>&lt;http://usefulinc.com/ns/doap#&gt;</td></tr>
 <tr><td><b>ec</b></td><td>&lt;https://github.com/tibonto/educor#&gt;</td></tr>
-<tr><td><b>entity</b></td><td>&lt;http://www.wikidata.org/entity/&gt;</td></tr>
 <tr><td><b>fabio</b></td><td>&lt;http://purl.org/spar/fabio/&gt;</td></tr>
 <tr><td><b>hcrt</b></td><td>&lt;https://w3id.org/kim/hcrt/&gt;</td></tr>
 <tr><td><b>m4i</b></td><td>&lt;http://w3id.org/nfdi4ing/metadata4ing#&gt;</td></tr>
@@ -354,7 +354,7 @@ This ontology has the following classes and properties.</span>
          title="https://purl.org/ontology/modalia#OrganisationProviderType">OrganisationProviderType</a>
    </li>
    <li>
-      <a href="#Organization" title="https://purl.org/ontology/modalia#Organization">Organization</a>
+      <a href="#https://schema.org/Organization" title="https://schema.org/Organization">Organization</a>
    </li>
    <li>
       <a href="#PersonProviderType"
@@ -533,6 +533,11 @@ This ontology has the following classes and properties.</span>
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     class="hlist">
    <li>
+      <a href="#http://id.loc.gov/ontologies/bibframe/agent" title="http://id.loc.gov/ontologies/bibframe/agent">
+         <span>agent</span>
+      </a>
+   </li>
+   <li>
       <a href="#author" title="https://purl.org/ontology/modalia#author">author</a>
    </li>
    <li>
@@ -698,6 +703,9 @@ This ontology has the following classes and properties.</span>
          title="https://purl.org/ontology/modalia#requiresProficiencyLevel">requiresProficiencyLevel</a>
    </li>
    <li>
+      <a href="#http://id.loc.gov/ontologies/bibframe/role" title="http://id.loc.gov/ontologies/bibframe/role">role</a>
+   </li>
+   <li>
       <a href="#solves" title="https://purl.org/ontology/modalia#solves">solves</a>
    </li>
    <li>
@@ -774,6 +782,12 @@ This ontology has the following classes and properties.</span>
       <a href="#https://schema.org/givenName" title="https://schema.org/givenName">givenName</a>
    </li>
    <li>
+      <a href="#http://w3id.org/nfdi4ing/metadata4ing#orcidId" title="http://w3id.org/nfdi4ing/metadata4ing#orcidId">has ORCID ID</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/nfdi4ing/metadata4ing#hasRorId" title="http://w3id.org/nfdi4ing/metadata4ing#hasRorId">has ROR ID</a>
+   </li>
+   <li>
       <a href="#hasRowID" title="https://purl.org/ontology/modalia#hasRowID">has Row ID</a>
    </li>
    <li>
@@ -822,19 +836,10 @@ This ontology has the following classes and properties.</span>
          title="https://purl.org/ontology/modalia#microCredentialUrl">microCredentialUrl</a>
    </li>
    <li>
-      <a href="#http://www.wikidata.org/entity/P496" title="http://www.wikidata.org/entity/P496">ORCID iD</a>
-   </li>
-   <li>
-      <a href="#http://w3id.org/nfdi4ing/metadata4ing#orcidId" title="http://w3id.org/nfdi4ing/metadata4ing#orcidId">orcidId</a>
-   </li>
-   <li>
       <a href="#https://schema.org/datePublished" title="https://schema.org/datePublished">Publication Date</a>
    </li>
    <li>
       <a href="#http://purl.org/dc/terms/rights" title="http://purl.org/dc/terms/rights">rights</a>
-   </li>
-   <li>
-      <a href="#http://www.wikidata.org/entity/P6782" title="http://www.wikidata.org/entity/P6782">ROR ID</a>
    </li>
    <li>
       <a href="#https://vocab.methodandstructure.com/content-inventory#slug"
@@ -889,20 +894,19 @@ This ontology has the following classes and properties.</span>
       <a href="#Expert" title="https://purl.org/ontology/modalia#Expert">Expert</a>
    </li>
    <li>
-      <a href="#" title="https://purl.org/ontology/modalia#">
-         <span>MoDALIA</span>
-      </a>
-   </li>
-   <li>
       <a href="#Novice" title="https://purl.org/ontology/modalia#Novice">Novice</a>
    </li>
    <li>
       <a href="#Proficient" title="https://purl.org/ontology/modalia#Proficient">Proficient</a>
    </li>
    <li>
+      <a href="#ProprietaryLicense"
+         title="https://purl.org/ontology/modalia#ProprietaryLicense">Proprietary License</a>
+   </li>
+   <li>
       <a href="#http://w3id.org/nfdi4ing/metadata4ing#Sponsor" title="http://w3id.org/nfdi4ing/metadata4ing#Sponsor">Sponsor</a>
    </li>
-</ul>
+</ul><iframe src="webvowl/index.html"></iframe> 
 </div>
   
 
@@ -977,7 +981,7 @@ This section provides details for each class and property defined by MoDALIA.
   <li><a href="#MicroCredential" title="https://purl.org/ontology/modalia#MicroCredential">MicroCredential</a></li>
   <li><a href="#Multipart" title="https://purl.org/ontology/modalia#Multipart">Multipart</a></li>
   <li><a href="#OrganisationProviderType" title="https://purl.org/ontology/modalia#OrganisationProviderType">OrganisationProviderType</a></li>
-  <li><a href="#Organization" title="https://purl.org/ontology/modalia#Organization">Organization</a></li>
+  <li><a href="#https://schema.org/Organization" title="https://schema.org/Organization">Organization</a></li>
   <li><a href="#PersonProviderType" title="https://purl.org/ontology/modalia#PersonProviderType">PersonProviderType</a></li>
   <li><a href="#PhDStudent" title="https://purl.org/ontology/modalia#PhDStudent">PhD Student</a></li>
   <li><a href="#PlanPhase" title="https://purl.org/ontology/modalia#PlanPhase">PlanPhase</a></li>
@@ -1118,6 +1122,9 @@ This section provides details for each class and property defined by MoDALIA.
  <div class="entity" id="https://schema.org/AudioObject">
   <h3>AudioObject<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://schema.org/AudioObject</p>
+  <div class="comment">
+   <span class="markdown">A class representing OERs which are audio files.</span>
+  </div>
   <dl class="description">
    <dt>
     has super-classes
@@ -1157,6 +1164,9 @@ This section provides details for each class and property defined by MoDALIA.
  <div class="entity" id="http://purl.org/ontology/bibo/Book">
   <h3>Book<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://purl.org/ontology/bibo/Book</p>
+  <div class="comment">
+   <span class="markdown">Class representing OER which is a book.</span>
+  </div>
   <dl class="description">
    <dt>
     has super-classes
@@ -1210,6 +1220,9 @@ This section provides details for each class and property defined by MoDALIA.
  <div class="entity" id="Code">
   <h3>Code<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://purl.org/ontology/modalia#Code</p>
+  <div class="comment">
+   <span class="markdown">Class representing OER which are code like Jupyternotebook.</span>
+  </div>
   <dl class="description">
    <dt>
     has super-classes
@@ -1268,7 +1281,7 @@ This section provides details for each class and property defined by MoDALIA.
     is in domain of
    </dt>
    <dd>
-    <a href="#http://purl.org/dc/terms/created" title="http://purl.org/dc/terms/created">Date Created</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://www.wikidata.org/entity/P6782" title="http://www.wikidata.org/entity/P6782">ROR ID</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#createdBy" title="https://purl.org/ontology/modalia#createdBy">createdBy</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">description</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasOwner" title="https://purl.org/ontology/modalia#hasOwner">hasOwner</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://vocab.methodandstructure.com/content-inventory#slug" title="https://vocab.methodandstructure.com/content-inventory#slug">slug</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title">title</a> <sup class="type-dp" title="data property">dp</sup>
+    <a href="#http://purl.org/dc/terms/created" title="http://purl.org/dc/terms/created">Date Created</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#createdBy" title="https://purl.org/ontology/modalia#createdBy">createdBy</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">description</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://w3id.org/nfdi4ing/metadata4ing#hasRorId" title="http://w3id.org/nfdi4ing/metadata4ing#hasRorId">has ROR ID</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasOwner" title="https://purl.org/ontology/modalia#hasOwner">hasOwner</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://vocab.methodandstructure.com/content-inventory#slug" title="https://vocab.methodandstructure.com/content-inventory#slug">slug</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title">title</a> <sup class="type-dp" title="data property">dp</sup>
    </dd>
    <dt>
     is in range of
@@ -1345,6 +1358,12 @@ This section provides details for each class and property defined by MoDALIA.
   </div>
   <dl class="description">
    <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://id.loc.gov/ontologies/bibframe/agent" title="http://id.loc.gov/ontologies/bibframe/agent">agent</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://id.loc.gov/ontologies/bibframe/role" title="http://id.loc.gov/ontologies/bibframe/role">role</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
     is in range of
    </dt>
    <dd>
@@ -1363,7 +1382,13 @@ This section provides details for each class and property defined by MoDALIA.
     is in domain of
    </dt>
    <dd>
-    <a href="#http://www.wikidata.org/entity/P496" title="http://www.wikidata.org/entity/P496">ORCID iD</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://schema.org/familyName" title="https://schema.org/familyName">familyName</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://schema.org/givenName" title="https://schema.org/givenName">givenName</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://w3id.org/nfdi4ing/metadata4ing#orcidId" title="http://w3id.org/nfdi4ing/metadata4ing#orcidId">orcidId</a> <sup class="type-dp" title="data property">dp</sup>
+    <a href="#https://schema.org/familyName" title="https://schema.org/familyName">familyName</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://schema.org/givenName" title="https://schema.org/givenName">givenName</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://w3id.org/nfdi4ing/metadata4ing#orcidId" title="http://w3id.org/nfdi4ing/metadata4ing#orcidId">has ORCID ID</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://id.loc.gov/ontologies/bibframe/agent" title="http://id.loc.gov/ontologies/bibframe/agent">agent</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -1382,6 +1407,12 @@ This section provides details for each class and property defined by MoDALIA.
    </dd>
   </dl>
   <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://id.loc.gov/ontologies/bibframe/role" title="http://id.loc.gov/ontologies/bibframe/role">role</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
    <dt>
     has members
    </dt>
@@ -1633,6 +1664,9 @@ This section provides details for each class and property defined by MoDALIA.
  <div class="entity" id="https://schema.org/ImageObject">
   <h3>ImageObject<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://schema.org/ImageObject</p>
+  <div class="comment">
+   <span class="markdown">An image file.</span>
+  </div>
   <dl class="description">
    <dt>
     has super-classes
@@ -2046,9 +2080,20 @@ This section provides details for each class and property defined by MoDALIA.
    </dd>
   </dl>
  </div>
- <div class="entity" id="Organization">
+ <div class="entity" id="https://schema.org/Organization">
   <h3>Organization<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://purl.org/ontology/modalia#Organization</p>
+  <p><strong>IRI:</strong> https://schema.org/Organization</p>
+  <div class="comment">
+   <span class="markdown">An organization such as a school (including Universities), NGO, corporation, club, etc.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/nfdi4ing/metadata4ing#hasRorId" title="http://w3id.org/nfdi4ing/metadata4ing#hasRorId">has ROR ID</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+  </dl>
  </div>
  <div class="entity" id="PersonProviderType">
   <h3>PersonProviderType<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
@@ -2116,6 +2161,9 @@ This section provides details for each class and property defined by MoDALIA.
  <div class="entity" id="Poster">
   <h3>Poster<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://purl.org/ontology/modalia#Poster</p>
+  <div class="comment">
+   <span class="markdown">Class representing OERs that are Posters</span>
+  </div>
   <dl class="description">
    <dt>
     has super-classes
@@ -2128,6 +2176,9 @@ This section provides details for each class and property defined by MoDALIA.
  <div class="entity" id="https://w3id.org/kim/hcrt/slide">
   <h3>Presentation<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/kim/hcrt/slide</p>
+  <div class="comment">
+   <span class="markdown">A presentation / slides file.</span>
+  </div>
   <dl class="description">
    <dt>
     has super-classes
@@ -2666,6 +2717,9 @@ This section provides details for each class and property defined by MoDALIA.
  <div class="entity" id="https://schema.org/Text">
   <h3>Text<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://schema.org/Text</p>
+  <div class="comment">
+   <span class="markdown">Class representing OER which are text.</span>
+  </div>
   <dl class="description">
    <dt>
     has super-classes
@@ -2710,7 +2764,7 @@ This section provides details for each class and property defined by MoDALIA.
     is in domain of
    </dt>
    <dd>
-    <a href="#http://www.wikidata.org/entity/P496" title="http://www.wikidata.org/entity/P496">ORCID iD</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#educationalLevel" title="https://purl.org/ontology/modalia#educationalLevel">educationalLevel</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://schema.org/email" title="https://schema.org/email">email</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://schema.org/familyName" title="https://schema.org/familyName">familyName</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#generateUserLogs" title="https://purl.org/ontology/modalia#generateUserLogs">generateUserLogs</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://schema.org/givenName" title="https://schema.org/givenName">givenName</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasEnrollment" title="https://purl.org/ontology/modalia#hasEnrollment">hasEnrollment</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasProfile" title="https://purl.org/ontology/modalia#hasProfile">hasProfile</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasRole" title="https://purl.org/ontology/modalia#hasRole">hasRole</a> <sup class="type-op" title="object property">op</sup>, <a href="#isMemberOf" title="https://purl.org/ontology/modalia#isMemberOf">isMemberOf</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://w3id.org/nfdi4ing/metadata4ing#orcidId" title="http://w3id.org/nfdi4ing/metadata4ing#orcidId">orcidId</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#solves" title="https://purl.org/ontology/modalia#solves">solves</a> <sup class="type-op" title="object property">op</sup>, <a href="#userBookmarks" title="https://purl.org/ontology/modalia#userBookmarks">userBookmarks</a> <sup class="type-op" title="object property">op</sup>, <a href="#userLikes" title="https://purl.org/ontology/modalia#userLikes">userLikes</a> <sup class="type-op" title="object property">op</sup>, <a href="#userViews" title="https://purl.org/ontology/modalia#userViews">userViews</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#educationalLevel" title="https://purl.org/ontology/modalia#educationalLevel">educationalLevel</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://schema.org/email" title="https://schema.org/email">email</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://schema.org/familyName" title="https://schema.org/familyName">familyName</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#generateUserLogs" title="https://purl.org/ontology/modalia#generateUserLogs">generateUserLogs</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://schema.org/givenName" title="https://schema.org/givenName">givenName</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://w3id.org/nfdi4ing/metadata4ing#orcidId" title="http://w3id.org/nfdi4ing/metadata4ing#orcidId">has ORCID ID</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasEnrollment" title="https://purl.org/ontology/modalia#hasEnrollment">hasEnrollment</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasProfile" title="https://purl.org/ontology/modalia#hasProfile">hasProfile</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasRole" title="https://purl.org/ontology/modalia#hasRole">hasRole</a> <sup class="type-op" title="object property">op</sup>, <a href="#isMemberOf" title="https://purl.org/ontology/modalia#isMemberOf">isMemberOf</a> <sup class="type-op" title="object property">op</sup>, <a href="#solves" title="https://purl.org/ontology/modalia#solves">solves</a> <sup class="type-op" title="object property">op</sup>, <a href="#userBookmarks" title="https://purl.org/ontology/modalia#userBookmarks">userBookmarks</a> <sup class="type-op" title="object property">op</sup>, <a href="#userLikes" title="https://purl.org/ontology/modalia#userLikes">userLikes</a> <sup class="type-op" title="object property">op</sup>, <a href="#userViews" title="https://purl.org/ontology/modalia#userViews">userViews</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     is in range of
@@ -2870,6 +2924,9 @@ This section provides details for each class and property defined by MoDALIA.
  <div class="entity" id="https://schema.org/VideoObject">
   <h3>VideoObject<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://schema.org/VideoObject</p>
+  <div class="comment">
+   <span class="markdown">A video file.</span>
+  </div>
   <dl class="description">
    <dt>
     has super-classes
@@ -2906,6 +2963,7 @@ This section provides details for each class and property defined by MoDALIA.
 </div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
  <h3 id="properties" class="list">Object Properties</h3>
  <ul class="hlist">
+  <li><a href="#http://id.loc.gov/ontologies/bibframe/agent" title="http://id.loc.gov/ontologies/bibframe/agent"> <span>agent</span> </a></li>
   <li><a href="#author" title="https://purl.org/ontology/modalia#author">author</a></li>
   <li><a href="#belongsToArea" title="https://purl.org/ontology/modalia#belongsToArea">belongsToArea</a></li>
   <li><a href="#belongsToCluster" title="https://purl.org/ontology/modalia#belongsToCluster">belongsToCluster</a></li>
@@ -2955,6 +3013,7 @@ This section provides details for each class and property defined by MoDALIA.
   <li><a href="#http://usefulinc.com/ns/doap#repository" title="http://usefulinc.com/ns/doap#repository">repository</a></li>
   <li><a href="#requiresKnowledge" title="https://purl.org/ontology/modalia#requiresKnowledge">requiresKnowledge</a></li>
   <li><a href="#requiresProficiencyLevel" title="https://purl.org/ontology/modalia#requiresProficiencyLevel">requiresProficiencyLevel</a></li>
+  <li><a href="#http://id.loc.gov/ontologies/bibframe/role" title="http://id.loc.gov/ontologies/bibframe/role">role</a></li>
   <li><a href="#solves" title="https://purl.org/ontology/modalia#solves">solves</a></li>
   <li><a href="#storedIn" title="https://purl.org/ontology/modalia#storedIn">storedIn</a></li>
   <li><a href="#http://bibfra.me/vocab/relation/supportinghost" title="http://bibfra.me/vocab/relation/supportinghost">supportinghost</a></li>
@@ -2962,6 +3021,29 @@ This section provides details for each class and property defined by MoDALIA.
   <li><a href="#userLikes" title="https://purl.org/ontology/modalia#userLikes">userLikes</a></li>
   <li><a href="#userViews" title="https://purl.org/ontology/modalia#userViews">userViews</a></li>
  </ul>
+ <div class="entity" id="http://id.loc.gov/ontologies/bibframe/agent">
+  <h3>agent<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://id.loc.gov/ontologies/bibframe/agent</p>
+  <div class="comment">
+   <span class="markdown">Property that links a contribution to the agent (e.g., the person or organization making the contribution).</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://id.loc.gov/ontologies/bibframe/Contribution" title="http://id.loc.gov/ontologies/bibframe/Contribution">Contribution</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Contributor" title="https://purl.org/ontology/modalia#Contributor">Contributor</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
  <div class="entity" id="author">
   <h3>author<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://purl.org/ontology/modalia#author</p>
@@ -3986,6 +4068,9 @@ This section provides details for each class and property defined by MoDALIA.
  <div class="entity" id="http://usefulinc.com/ns/doap#repository">
   <h3>repository<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://usefulinc.com/ns/doap#repository</p>
+  <div class="comment">
+   <span class="markdown">Property linking an OER to a repository hosting it.</span>
+  </div>
   <div class="description">
    <dl>
     <dt>
@@ -4039,6 +4124,29 @@ This section provides details for each class and property defined by MoDALIA.
     </dt>
     <dd>
      <a href="#Proficiency" title="https://purl.org/ontology/modalia#Proficiency">Proficiency</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://id.loc.gov/ontologies/bibframe/role">
+  <h3>role<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://id.loc.gov/ontologies/bibframe/role</p>
+  <div class="comment">
+   <span class="markdown">Property that links a contribution to a role (e.g., contactPerson, editor).</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://id.loc.gov/ontologies/bibframe/Contribution" title="http://id.loc.gov/ontologies/bibframe/Contribution">Contribution</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#ContributorRole" title="https://purl.org/ontology/modalia#ContributorRole">Contributor Role</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -4195,6 +4303,8 @@ This section provides details for each class and property defined by MoDALIA.
   <li><a href="#http://purl.org/dc/terms/format" title="http://purl.org/dc/terms/format">file format</a></li>
   <li><a href="#https://schema.org/fileSize" title="https://schema.org/fileSize">fileSize</a></li>
   <li><a href="#https://schema.org/givenName" title="https://schema.org/givenName">givenName</a></li>
+  <li><a href="#http://w3id.org/nfdi4ing/metadata4ing#orcidId" title="http://w3id.org/nfdi4ing/metadata4ing#orcidId">has ORCID ID</a></li>
+  <li><a href="#http://w3id.org/nfdi4ing/metadata4ing#hasRorId" title="http://w3id.org/nfdi4ing/metadata4ing#hasRorId">has ROR ID</a></li>
   <li><a href="#hasRowID" title="https://purl.org/ontology/modalia#hasRowID">has Row ID</a></li>
   <li><a href="#http://purl.org/spar/fabio/hasSubtitle" title="http://purl.org/spar/fabio/hasSubtitle">has Subtitle</a></li>
   <li><a href="#hasDOI" title="https://purl.org/ontology/modalia#hasDOI">hasDOI</a></li>
@@ -4210,11 +4320,8 @@ This section provides details for each class and property defined by MoDALIA.
   <li><a href="#http://purl.org/dc/terms/license" title="http://purl.org/dc/terms/license"> <span>license</span> </a></li>
   <li><a href="#likesCount" title="https://purl.org/ontology/modalia#likesCount">likesCount</a></li>
   <li><a href="#microCredentialUrl" title="https://purl.org/ontology/modalia#microCredentialUrl">microCredentialUrl</a></li>
-  <li><a href="#http://www.wikidata.org/entity/P496" title="http://www.wikidata.org/entity/P496">ORCID iD</a></li>
-  <li><a href="#http://w3id.org/nfdi4ing/metadata4ing#orcidId" title="http://w3id.org/nfdi4ing/metadata4ing#orcidId">orcidId</a></li>
   <li><a href="#https://schema.org/datePublished" title="https://schema.org/datePublished">Publication Date</a></li>
   <li><a href="#http://purl.org/dc/terms/rights" title="http://purl.org/dc/terms/rights">rights</a></li>
-  <li><a href="#http://www.wikidata.org/entity/P6782" title="http://www.wikidata.org/entity/P6782">ROR ID</a></li>
   <li><a href="#https://vocab.methodandstructure.com/content-inventory#slug" title="https://vocab.methodandstructure.com/content-inventory#slug">slug</a></li>
   <li><a href="#studyPlan" title="https://purl.org/ontology/modalia#studyPlan">studyPlan</a></li>
   <li><a href="#https://schema.org/teaches" title="https://schema.org/teaches">teaches</a></li>
@@ -4228,6 +4335,9 @@ This section provides details for each class and property defined by MoDALIA.
  <div class="entity" id="https://schema.org/abstract">
   <h3>abstract<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://schema.org/abstract</p>
+  <div class="comment">
+   <span class="markdown">An abstract is a short description that summarizes an OER.</span>
+  </div>
   <div class="description">
    <dl>
     <dt>
@@ -4466,6 +4576,9 @@ This section provides details for each class and property defined by MoDALIA.
  <div class="entity" id="https://schema.org/downloadUrl">
   <h3>downloadUrl<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://schema.org/downloadUrl</p>
+  <div class="comment">
+   <span class="markdown">If the OER can be downloaded, URL to download it.</span>
+  </div>
   <div class="description">
    <dl>
     <dt>
@@ -4507,6 +4620,9 @@ This section provides details for each class and property defined by MoDALIA.
  <div class="entity" id="https://schema.org/familyName">
   <h3>familyName<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://schema.org/familyName</p>
+  <div class="comment">
+   <span class="markdown">Family name. In the U.S., the last name of a Person.</span>
+  </div>
   <div class="description">
    <dl>
     <dt>
@@ -4597,6 +4713,48 @@ This section provides details for each class and property defined by MoDALIA.
     <dd>
      <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
     </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://w3id.org/nfdi4ing/metadata4ing#orcidId">
+  <h3>has ORCID ID<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/nfdi4ing/metadata4ing#orcidId</p>
+  <div class="comment">
+   <span class="markdown">Open Researcher and Contributor ID: an identifier, that allows unique identification of a person, usually active in research.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Contributor" title="https://purl.org/ontology/modalia#Contributor">Contributor</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#User" title="https://purl.org/ontology/modalia#User">User</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd></dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://w3id.org/nfdi4ing/metadata4ing#hasRorId">
+  <h3>has ROR ID<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/nfdi4ing/metadata4ing#hasRorId</p>
+  <div class="comment">
+   <span class="markdown">A Research Organization Registry identifier that persistently and uniquely identifies a research organization</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Community" title="https://purl.org/ontology/modalia#Community">Community</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#https://schema.org/Organization" title="https://schema.org/Organization">Organization</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd></dd>
    </dl>
   </div>
  </div>
@@ -4754,6 +4912,9 @@ This section provides details for each class and property defined by MoDALIA.
  <div class="entity" id="https://schema.org/image">
   <h3>image<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://schema.org/image</p>
+  <div class="comment">
+   <span class="markdown">Property linking an OER to an image representing it.</span>
+  </div>
   <div class="description">
    <dl>
     <dt>
@@ -4817,6 +4978,9 @@ This section provides details for each class and property defined by MoDALIA.
  <div class="entity" id="https://schema.org/keywords">
   <h3>keywords<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://schema.org/keywords</p>
+  <div class="comment">
+   <span class="markdown">Keywords or tags used to describe some item.</span>
+  </div>
   <div class="description">
    <dl>
     <dt>
@@ -4914,46 +5078,6 @@ This section provides details for each class and property defined by MoDALIA.
    </dl>
   </div>
  </div>
- <div class="entity" id="http://www.wikidata.org/entity/P496">
-  <h3>ORCID iD<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.wikidata.org/entity/P496</p>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="#Contributor" title="https://purl.org/ontology/modalia#Contributor">Contributor</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#User" title="https://purl.org/ontology/modalia#User">User</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
-    </dd>
-   </dl>
-  </div>
- </div>
- <div class="entity" id="http://w3id.org/nfdi4ing/metadata4ing#orcidId">
-  <h3>orcidId<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://w3id.org/nfdi4ing/metadata4ing#orcidId</p>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="#Contributor" title="https://purl.org/ontology/modalia#Contributor">Contributor</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#User" title="https://purl.org/ontology/modalia#User">User</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
-    </dd>
-   </dl>
-  </div>
- </div>
  <div class="entity" id="https://schema.org/datePublished">
   <h3>Publication Date<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://schema.org/datePublished</p>
@@ -4984,26 +5108,6 @@ This section provides details for each class and property defined by MoDALIA.
     </dt>
     <dd>
      <a href="#https://github.com/tibonto/educor#EducationalResource" title="https://github.com/tibonto/educor#EducationalResource">EducationalResource</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
-    </dd>
-   </dl>
-  </div>
- </div>
- <div class="entity" id="http://www.wikidata.org/entity/P6782">
-  <h3>ROR ID<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.wikidata.org/entity/P6782</p>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="#Community" title="https://purl.org/ontology/modalia#Community">Community</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -5065,14 +5169,9 @@ This section provides details for each class and property defined by MoDALIA.
  <div class="entity" id="https://schema.org/teaches">
   <h3>teaches<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://schema.org/teaches</p>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    The item being described is intended to help a person learn the competency or learning outcome defined by the referenced term.
-   </dd>
-  </dl>
+  <div class="comment">
+   <span class="markdown">The item being described is intended to help a person learn the competency or learning outcome defined by the referenced term.</span>
+  </div>
   <div class="description">
    <dl>
     <dt>
@@ -5198,6 +5297,9 @@ This section provides details for each class and property defined by MoDALIA.
  <div class="entity" id="https://schema.org/version">
   <h3>version<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://schema.org/version</p>
+  <div class="comment">
+   <span class="markdown">The version of the OER.</span>
+  </div>
   <div class="description">
    <dl>
     <dt>
@@ -5244,9 +5346,9 @@ This section provides details for each class and property defined by MoDALIA.
   <li><a href="#http://w3id.org/nfdi4ing/metadata4ing#DataCurator" title="http://w3id.org/nfdi4ing/metadata4ing#DataCurator">DataCurator</a></li>
   <li><a href="#http://w3id.org/nfdi4ing/metadata4ing#DataManager" title="http://w3id.org/nfdi4ing/metadata4ing#DataManager">DataManager</a></li>
   <li><a href="#Expert" title="https://purl.org/ontology/modalia#Expert">Expert</a></li>
-  <li><a href="#" title="https://purl.org/ontology/modalia#"> <span>MoDALIA</span> </a></li>
   <li><a href="#Novice" title="https://purl.org/ontology/modalia#Novice">Novice</a></li>
   <li><a href="#Proficient" title="https://purl.org/ontology/modalia#Proficient">Proficient</a></li>
+  <li><a href="#ProprietaryLicense" title="https://purl.org/ontology/modalia#ProprietaryLicense">Proprietary License</a></li>
   <li><a href="#http://w3id.org/nfdi4ing/metadata4ing#Sponsor" title="http://w3id.org/nfdi4ing/metadata4ing#Sponsor">Sponsor</a></li>
  </ul>
  <div class="entity" id="Beginner">
@@ -5366,27 +5468,6 @@ This section provides details for each class and property defined by MoDALIA.
    </dd>
   </dl>
  </div>
- <div class="entity" id="">
-  <h3>MoDALIA<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://purl.org/ontology/modalia#</p>
-  <dl class="description">
-   <dt>
-    has facts
-   </dt>
-   <dd>
-    <a href="#http://purl.org/dc/terms/created" title="http://purl.org/dc/terms/created">Date Created</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"2024-09-04"</span>
-   </dd>
-   <dd>
-    <a href="#http://purl.org/dc/terms/issued" title="http://purl.org/dc/terms/issued">issued</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"2024-09-04"</span>
-   </dd>
-   <dd>
-    <a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title">title</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"MoDALIA Ontology"</span>
-   </dd>
-   <dd>
-    <a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title">title</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"MoDALIA: An Ontology for Educational Material in Research Data Management and Data Science."</span>
-   </dd>
-  </dl>
- </div>
  <div class="entity" id="Novice">
   <h3>Novice<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://purl.org/ontology/modalia#Novice</p>
@@ -5440,6 +5521,10 @@ This section provides details for each class and property defined by MoDALIA.
     <a href="#isMoreProficientThan" title="https://purl.org/ontology/modalia#isMoreProficientThan">isMoreProficientThan</a> <sup class="type-op" title="object property">op</sup> <a href="#Novice" title="https://purl.org/ontology/modalia#Novice">Novice</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
   </dl>
+ </div>
+ <div class="entity" id="ProprietaryLicense">
+  <h3>Proprietary License<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.org/ontology/modalia#ProprietaryLicense</p>
  </div>
  <div class="entity" id="http://w3id.org/nfdi4ing/metadata4ing#Sponsor">
   <h3>Sponsor<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
