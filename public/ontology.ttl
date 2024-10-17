@@ -64,12 +64,20 @@ The ontology is developed in OWL in Protege 5.5.0."""@en ;
 <http://purl.org/dc/terms/publisher> rdf:type owl:AnnotationProperty .
 
 
+###  http://www.w3.org/2004/02/skos/core#altLabel
+<http://www.w3.org/2004/02/skos/core#altLabel> rdf:type owl:AnnotationProperty .
+
+
 ###  http://www.w3.org/2004/02/skos/core#definition
 <http://www.w3.org/2004/02/skos/core#definition> rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.w3.org/2004/02/skos/core#example
 <http://www.w3.org/2004/02/skos/core#example> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+<http://www.w3.org/2004/02/skos/core#prefLabel> rdf:type owl:AnnotationProperty .
 
 
 #################################################################
@@ -96,12 +104,28 @@ xsd:duration rdf:type rdfs:Datatype .
                                                  <http://www.w3.org/2004/02/skos/core#definition> "Associated community(ies) of the resource who are either the supporting organization/institution, or the recommender, or both. Here indicates supporting."@en .
 
 
+###  http://id.loc.gov/ontologies/bibframe/agent
+<http://id.loc.gov/ontologies/bibframe/agent> rdf:type owl:ObjectProperty ;
+                                              rdfs:domain <http://id.loc.gov/ontologies/bibframe/Contribution> ;
+                                              rdfs:range :Contributor ;
+                                              rdfs:comment "Property that links a contribution to the agent (e.g., the person or organization making the contribution)."@en ,
+                                                           "agent"@en .
+
+
 ###  http://id.loc.gov/ontologies/bibframe/contribution
 <http://id.loc.gov/ontologies/bibframe/contribution> rdf:type owl:ObjectProperty ;
                                                      rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
                                                      rdfs:range <http://id.loc.gov/ontologies/bibframe/Contribution> ;
                                                      rdfs:comment "Property linking an OER to its contribution (e.g., editing)."@en ;
                                                      rdfs:label "contribution"@en .
+
+
+###  http://id.loc.gov/ontologies/bibframe/role
+<http://id.loc.gov/ontologies/bibframe/role> rdf:type owl:ObjectProperty ;
+                                             rdfs:domain <http://id.loc.gov/ontologies/bibframe/Contribution> ;
+                                             rdfs:range :ContributorRole ;
+                                             rdfs:comment "Property that links a contribution to a role (e.g., contactPerson, editor)."@en ;
+                                             rdfs:label "role"@en .
 
 
 ###  http://purl.org/ontology/rec/core#recommender
@@ -127,6 +151,7 @@ xsd:duration rdf:type rdfs:Datatype .
 <http://usefulinc.com/ns/doap#repository> rdf:type owl:ObjectProperty ;
                                           rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
                                           rdfs:range <http://purl.org/spar/fabio/Repository> ;
+                                          rdfs:comment "Property linking an OER to a repository hosting it."@en ;
                                           rdfs:label "repository"@en .
 
 
@@ -618,6 +643,27 @@ xsd:duration rdf:type rdfs:Datatype .
                                          rdfs:label "has Subtitle"@en .
 
 
+###  http://w3id.org/nfdi4ing/metadata4ing#hasRorId
+<http://w3id.org/nfdi4ing/metadata4ing#hasRorId> rdf:type owl:DatatypeProperty ;
+                                                 rdfs:domain [ rdf:type owl:Class ;
+                                                               owl:unionOf ( :Community
+                                                                             <https://schema.org/Organization>
+                                                                           )
+                                                             ] ;
+                                                 rdfs:range [ rdf:type rdfs:Datatype ;
+                                                              owl:onDatatype xsd:string ;
+                                                              owl:withRestrictions ( [ xsd:pattern "https://ror.org/[0-9][0-9][a-z0-9][a-z0-9][a-z0-9][a-z0-9][a-z0-9][0-9][0-9]"
+                                                                                     ]
+                                                                                   )
+                                                            ] ;
+                                                 <http://www.w3.org/2004/02/skos/core#altLabel> "has research organization registry id"@en ,
+                                                                                                "hat Forschungsorganisationsid"@de ;
+                                                 <http://www.w3.org/2004/02/skos/core#definition> "A Research Organization Registry identifier that persistently and uniquely identifies a research organization"@en ,
+                                                                                                  "Ein persistenter Identifikator für Organisationen, vergeben durch die Research Organization Registry, der eine Forschungseinrichtung eindeutig identifiziert."@de ;
+                                                 <http://www.w3.org/2004/02/skos/core#prefLabel> "has ROR ID"@en ,
+                                                                                                 "hat ROR ID"@de .
+
+
 ###  http://w3id.org/nfdi4ing/metadata4ing#orcidId
 <http://w3id.org/nfdi4ing/metadata4ing#orcidId> rdf:type owl:DatatypeProperty ;
                                                 rdfs:domain [ rdf:type owl:Class ;
@@ -625,26 +671,16 @@ xsd:duration rdf:type rdfs:Datatype .
                                                                             :User
                                                                           )
                                                             ] ;
-                                                rdfs:range xsd:string ;
-                                                rdfs:label "orcidId"@en .
-
-
-###  http://www.wikidata.org/entity/P496
-<http://www.wikidata.org/entity/P496> rdf:type owl:DatatypeProperty ;
-                                      rdfs:domain [ rdf:type owl:Class ;
-                                                    owl:unionOf ( :Contributor
-                                                                  :User
-                                                                )
-                                                  ] ;
-                                      rdfs:range xsd:string ;
-                                      rdfs:label "ORCID iD"@en .
-
-
-###  http://www.wikidata.org/entity/P6782
-<http://www.wikidata.org/entity/P6782> rdf:type owl:DatatypeProperty ;
-                                       rdfs:domain :Community ;
-                                       rdfs:range xsd:string ;
-                                       rdfs:label "ROR ID"@en .
+                                                rdfs:range [ rdf:type rdfs:Datatype ;
+                                                             owl:onDatatype xsd:string ;
+                                                             owl:withRestrictions ( [ xsd:pattern "https://orcid.org/[0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9X]"
+                                                                                    ]
+                                                                                  )
+                                                           ] ;
+                                                <http://www.w3.org/2004/02/skos/core#definition> "Open Researcher and Contributor ID: an identifier, that allows unique identification of a person, usually active in research."@en ,
+                                                                                                 "Open Researcher and Contributor ID: ein persistenter Identifikator, der eine in der Forschung tätige Person eindeutig identifiziert."@de ;
+                                                <http://www.w3.org/2004/02/skos/core#prefLabel> "has ORCID ID"@en ,
+                                                                                                "hat ORCID ID"@de .
 
 
 ###  https://purl.org/ontology/modalia#certificateEndDate
@@ -772,6 +808,7 @@ xsd:duration rdf:type rdfs:Datatype .
 <https://schema.org/abstract> rdf:type owl:DatatypeProperty ;
                               rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
                               rdfs:range xsd:string ;
+                              rdfs:comment "An abstract is a short description that summarizes an OER."@en ;
                               rdfs:label "abstract"@en .
 
 
@@ -793,6 +830,7 @@ xsd:duration rdf:type rdfs:Datatype .
 <https://schema.org/downloadUrl> rdf:type owl:DatatypeProperty ;
                                  rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
                                  rdfs:range xsd:anyURI ;
+                                 rdfs:comment "If the OER can be downloaded, URL to download it."@en ;
                                  rdfs:label "downloadUrl"@en .
 
 
@@ -812,6 +850,7 @@ xsd:duration rdf:type rdfs:Datatype .
                                                           )
                                             ] ;
                                 rdfs:range xsd:string ;
+                                rdfs:comment "Family name. In the U.S., the last name of a Person."@en ;
                                 rdfs:label "familyName"@en .
 
 
@@ -844,6 +883,7 @@ xsd:duration rdf:type rdfs:Datatype .
 <https://schema.org/image> rdf:type owl:DatatypeProperty ;
                            rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
                            rdfs:range xsd:anyURI ;
+                           rdfs:comment "Property linking an OER to an image representing it."@en ;
                            rdfs:label "image"@en .
 
 
@@ -858,6 +898,7 @@ xsd:duration rdf:type rdfs:Datatype .
 <https://schema.org/keywords> rdf:type owl:DatatypeProperty ;
                               rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
                               rdfs:range xsd:string ;
+                              rdfs:comment "Keywords or tags used to describe some item."@en ;
                               rdfs:label "keywords"@en .
 
 
@@ -865,7 +906,7 @@ xsd:duration rdf:type rdfs:Datatype .
 <https://schema.org/teaches> rdf:type owl:DatatypeProperty ;
                              rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
                              rdfs:range xsd:string ;
-                             rdfs:isDefinedBy "The item being described is intended to help a person learn the competency or learning outcome defined by the referenced term."@en ;
+                             rdfs:comment "The item being described is intended to help a person learn the competency or learning outcome defined by the referenced term."@en ;
                              rdfs:label "teaches"@en .
 
 
@@ -889,6 +930,7 @@ xsd:duration rdf:type rdfs:Datatype .
 <https://schema.org/version> rdf:type owl:DatatypeProperty ;
                              rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
                              rdfs:range xsd:string ;
+                             rdfs:comment "The version of the OER."@en ;
                              rdfs:label "version"@en .
 
 
@@ -922,7 +964,8 @@ xsd:duration rdf:type rdfs:Datatype .
 ###  http://purl.org/ontology/bibo/Book
 <http://purl.org/ontology/bibo/Book> rdf:type owl:Class ;
                                      rdfs:subClassOf :LearningResourceType ;
-                                     rdfs:label "Book"@en .
+                                     rdfs:label "Book"@en ;
+                                     <http://www.w3.org/2004/02/skos/core#definition> "Class representing OER which is a book."@en .
 
 
 ###  http://purl.org/ontology/bibo/Report
@@ -1082,6 +1125,7 @@ rdf:List rdf:type owl:Class .
 ###  https://purl.org/ontology/modalia#Code
 :Code rdf:type owl:Class ;
       rdfs:subClassOf :MediaType ;
+      rdfs:comment "Class representing OER which are code like Jupyternotebook."@en ;
       rdfs:label "Code"@en .
 
 
@@ -1310,12 +1354,6 @@ rdf:List rdf:type owl:Class .
                           rdfs:label "OrganisationProviderType"@en .
 
 
-###  https://purl.org/ontology/modalia#Organization
-:Organization rdf:type owl:Class ;
-              rdfs:label "Organization" ;
-              rdfs:seeAlso <http://xmlns.com/foaf/0.1/Organization> .
-
-
 ###  https://purl.org/ontology/modalia#PersonProviderType
 :PersonProviderType rdf:type owl:Class ;
                     rdfs:subClassOf :ProviderType ;
@@ -1340,6 +1378,7 @@ rdf:List rdf:type owl:Class .
 ###  https://purl.org/ontology/modalia#Poster
 :Poster rdf:type owl:Class ;
         rdfs:subClassOf :LearningResourceType ;
+        rdfs:comment "Class representing OERs that are Posters"@en ;
         rdfs:label "Poster"@en .
 
 
@@ -1560,13 +1599,22 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 ###  https://schema.org/AudioObject
 <https://schema.org/AudioObject> rdf:type owl:Class ;
                                  rdfs:subClassOf :MediaType ;
+                                 rdfs:comment "A class representing OERs which are audio files."@en ;
                                  rdfs:label "AudioObject"@en .
 
 
 ###  https://schema.org/ImageObject
 <https://schema.org/ImageObject> rdf:type owl:Class ;
                                  rdfs:subClassOf :MediaType ;
+                                 rdfs:comment "An image file."@en ;
                                  rdfs:label "ImageObject"@en .
+
+
+###  https://schema.org/Organization
+<https://schema.org/Organization> rdf:type owl:Class ;
+                                  rdfs:comment "An organization such as a school (including Universities), NGO, corporation, club, etc."@en ;
+                                  rdfs:label "Organization" ;
+                                  rdfs:seeAlso <http://xmlns.com/foaf/0.1/Organization> .
 
 
 ###  https://schema.org/PodcastSeries
@@ -1579,12 +1627,14 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 ###  https://schema.org/Text
 <https://schema.org/Text> rdf:type owl:Class ;
                           rdfs:subClassOf :MediaType ;
+                          rdfs:comment "Class representing OER which are text."@en ;
                           rdfs:label "Text"@en .
 
 
 ###  https://schema.org/VideoObject
 <https://schema.org/VideoObject> rdf:type owl:Class ;
                                  rdfs:subClassOf :MediaType ;
+                                 rdfs:comment "A video file."@en ;
                                  rdfs:label "VideoObject"@en .
 
 
@@ -1627,6 +1677,7 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 ###  https://w3id.org/kim/hcrt/slide
 <https://w3id.org/kim/hcrt/slide> rdf:type owl:Class ;
                                   rdfs:subClassOf :MediaType ;
+                                  rdfs:comment "A presentation / slides file."@en ;
                                   rdfs:label "Presentation"@en .
 
 
@@ -1656,14 +1707,6 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 <http://w3id.org/nfdi4ing/metadata4ing#Sponsor> rdf:type owl:NamedIndividual ,
                                                          :ContributorRole ;
                                                 rdfs:label "Sponsor"@en .
-
-
-###  https://purl.org/ontology/modalia#
-<https://purl.org/ontology/modalia#> rdf:type owl:NamedIndividual ;
-                                     <http://purl.org/dc/terms/created> "2024-09-04" ;
-                                     <http://purl.org/dc/terms/issued> "2024-09-04" ;
-                                     <http://purl.org/dc/terms/title> "MoDALIA Ontology" ,
-                                                                      "MoDALIA: An Ontology for Educational Material in Research Data Management and Data Science." .
 
 
 ###  https://purl.org/ontology/modalia#Beginner
@@ -1714,6 +1757,12 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
                                   :Competent ,
                                   :Novice ;
             rdfs:label "Proficient"@en .
+
+
+###  https://purl.org/ontology/modalia#ProprietaryLicense
+:ProprietaryLicense rdf:type owl:NamedIndividual ;
+                    rdfs:label "Proprietary License"@en ;
+                    <http://www.w3.org/2004/02/skos/core#example> "Youtube License"@en .
 
 
 #################################################################
