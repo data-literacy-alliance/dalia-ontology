@@ -267,6 +267,18 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
     
 
 
+    <!-- https://github.com/tibonto/educor#hasAnswer -->
+
+
+    <owl:ObjectProperty rdf:about="https://github.com/tibonto/educor#hasAnswer">
+        <rdfs:domain rdf:resource="https://github.com/tibonto/educor#Question"/>
+        <rdfs:range rdf:resource="https://github.com/tibonto/educor#Answer"/>
+        <rdfs:comment xml:lang="en">A property which is defines the answer of a question</rdfs:comment>
+        <rdfs:label xml:lang="en">hasAnswer</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://purl.org/ontology/modalia#author -->
 
 
@@ -1511,6 +1523,7 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
 
     <owl:Class rdf:about="http://purl.org/ontology/bibo/Article">
         <rdfs:subClassOf rdf:resource="https://purl.org/ontology/modalia#LearningResourceType"/>
+        <rdfs:comment xml:lang="en">Class representing OERs that are articles (e.g academic article)</rdfs:comment>
         <rdfs:label xml:lang="en">Article</rdfs:label>
     </owl:Class>
     
@@ -1712,6 +1725,7 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
 
     <owl:Class rdf:about="https://purl.org/ontology/modalia#BestPractices">
         <rdfs:subClassOf rdf:resource="https://purl.org/ontology/modalia#LearningResourceType"/>
+        <rdfs:comment xml:lang="en">Class representing OERs that are best practices in scientific area.</rdfs:comment>
         <rdfs:label xml:lang="en">BestPractices</rdfs:label>
     </owl:Class>
     
@@ -2090,6 +2104,7 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
 
     <owl:Class rdf:about="https://purl.org/ontology/modalia#Lecture">
         <rdfs:subClassOf rdf:resource="https://purl.org/ontology/modalia#LearningResourceType"/>
+        <rdfs:comment xml:lang="en">Class representing OERs that are lectures.</rdfs:comment>
         <rdfs:label xml:lang="en">Lecture</rdfs:label>
     </owl:Class>
     
@@ -2432,6 +2447,7 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 
     <owl:Class rdf:about="https://purl.org/ontology/modalia#Tutorial">
         <rdfs:subClassOf rdf:resource="https://purl.org/ontology/modalia#LearningResourceType"/>
+        <rdfs:comment xml:lang="en">Class representing OERs that are in form of tutorial.</rdfs:comment>
         <rdfs:label xml:lang="en">Tutorial</rdfs:label>
     </owl:Class>
     
@@ -2583,6 +2599,17 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
     
 
 
+    <!-- https://schema.org/SoftwareSourceCode -->
+
+
+    <owl:Class rdf:about="https://schema.org/SoftwareSourceCode">
+        <rdfs:subClassOf rdf:resource="https://purl.org/ontology/modalia#LearningResourceType"/>
+        <rdfs:comment xml:lang="en">Computer programming source code. Example: Full (compile ready) solutions, code snippet samples, scripts, templates.</rdfs:comment>
+        <rdfs:label xml:lang="en">Software Source Code</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://schema.org/Text -->
 
 
@@ -2610,6 +2637,7 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 
     <owl:Class rdf:about="https://w3id.org/kim/hcrt/assessment">
         <rdfs:subClassOf rdf:resource="https://purl.org/ontology/modalia#LearningResourceType"/>
+        <rdfs:comment xml:lang="en">Class representing OERs that are in form of assessment of knowledge.</rdfs:comment>
         <rdfs:label xml:lang="en">Assessment</rdfs:label>
     </owl:Class>
     
@@ -2620,6 +2648,7 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 
     <owl:Class rdf:about="https://w3id.org/kim/hcrt/case_study">
         <rdfs:subClassOf rdf:resource="https://purl.org/ontology/modalia#LearningResourceType"/>
+        <rdfs:comment xml:lang="en">Class representing OERs that are in form of case study.</rdfs:comment>
         <rdfs:label xml:lang="en">CaseStudy</rdfs:label>
     </owl:Class>
     
@@ -2630,6 +2659,7 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 
     <owl:Class rdf:about="https://w3id.org/kim/hcrt/diagram">
         <rdfs:subClassOf rdf:resource="https://purl.org/ontology/modalia#LearningResourceType"/>
+        <rdfs:comment xml:lang="en">Class representing an OER that is a diagram</rdfs:comment>
         <rdfs:label xml:lang="en">Diagram</rdfs:label>
     </owl:Class>
     
@@ -2640,6 +2670,7 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 
     <owl:Class rdf:about="https://w3id.org/kim/hcrt/educational_game">
         <rdfs:subClassOf rdf:resource="https://purl.org/ontology/modalia#LearningResourceType"/>
+        <rdfs:comment xml:lang="en">Class representing OERs that are in form of educational games.</rdfs:comment>
         <rdfs:label xml:lang="en">Educational Game</rdfs:label>
     </owl:Class>
     
@@ -2650,6 +2681,7 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 
     <owl:Class rdf:about="https://w3id.org/kim/hcrt/experiment">
         <rdfs:subClassOf rdf:resource="https://purl.org/ontology/modalia#LearningResourceType"/>
+        <rdfs:comment xml:lang="en">Class representing OERs that are describing an experiment</rdfs:comment>
         <rdfs:label xml:lang="en">Experiment</rdfs:label>
     </owl:Class>
     

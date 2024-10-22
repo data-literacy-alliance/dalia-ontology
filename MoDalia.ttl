@@ -170,6 +170,14 @@ ec:consistsOfKnowledge rdf:type owl:ObjectProperty ;
                        rdfs:label "consistsOfKnowledge" .
 
 
+###  https://github.com/tibonto/educor#hasAnswer
+ec:hasAnswer rdf:type owl:ObjectProperty ;
+             rdfs:domain ec:Question ;
+             rdfs:range ec:Answer ;
+             rdfs:comment "A property which is defines the answer of a question"@en ;
+             rdfs:label "hasAnswer"@en .
+
+
 ###  https://purl.org/ontology/modalia#author
 :author rdf:type owl:ObjectProperty ;
         rdfs:domain ec:EducationalResource ;
@@ -966,6 +974,7 @@ bf:Contribution rdf:type owl:Class ;
 ###  http://purl.org/ontology/bibo/Article
 bibo:Article rdf:type owl:Class ;
              rdfs:subClassOf :LearningResourceType ;
+             rdfs:comment "Class representing OERs that are articles (e.g academic article)"@en ;
              rdfs:label "Article"@en .
 
 
@@ -1096,6 +1105,7 @@ ec:UserLogs rdf:type owl:Class ;
 ###  https://purl.org/ontology/modalia#BestPractices
 :BestPractices rdf:type owl:Class ;
                rdfs:subClassOf :LearningResourceType ;
+               rdfs:comment "Class representing OERs that are best practices in scientific area."@en ;
                rdfs:label "BestPractices"@en .
 
 
@@ -1328,6 +1338,7 @@ ec:UserLogs rdf:type owl:Class ;
 ###  https://purl.org/ontology/modalia#Lecture
 :Lecture rdf:type owl:Class ;
          rdfs:subClassOf :LearningResourceType ;
+         rdfs:comment "Class representing OERs that are lectures."@en ;
          rdfs:label "Lecture"@en .
 
 
@@ -1539,6 +1550,7 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 ###  https://purl.org/ontology/modalia#Tutorial
 :Tutorial rdf:type owl:Class ;
           rdfs:subClassOf :LearningResourceType ;
+          rdfs:comment "Class representing OERs that are in form of tutorial."@en ;
           rdfs:label "Tutorial"@en .
 
 
@@ -1632,6 +1644,13 @@ schema:PodcastSeries rdf:type owl:Class ;
                      <http://www.w3.org/2004/02/skos/core#definition> "A podcast is an episodic series of digital audio or video files which a user can download and listen to."@en .
 
 
+###  https://schema.org/SoftwareSourceCode
+schema:SoftwareSourceCode rdf:type owl:Class ;
+                          rdfs:subClassOf :LearningResourceType ;
+                          rdfs:comment "Computer programming source code. Example: Full (compile ready) solutions, code snippet samples, scripts, templates."@en ;
+                          rdfs:label "Software Source Code"@en .
+
+
 ###  https://schema.org/Text
 schema:Text rdf:type owl:Class ;
             rdfs:subClassOf :MediaType ;
@@ -1649,30 +1668,35 @@ schema:VideoObject rdf:type owl:Class ;
 ###  https://w3id.org/kim/hcrt/assessment
 <https://w3id.org/kim/hcrt/assessment> rdf:type owl:Class ;
                                        rdfs:subClassOf :LearningResourceType ;
+                                       rdfs:comment "Class representing OERs that are in form of assessment of knowledge."@en ;
                                        rdfs:label "Assessment"@en .
 
 
 ###  https://w3id.org/kim/hcrt/case_study
 <https://w3id.org/kim/hcrt/case_study> rdf:type owl:Class ;
                                        rdfs:subClassOf :LearningResourceType ;
+                                       rdfs:comment "Class representing OERs that are in form of case study."@en ;
                                        rdfs:label "CaseStudy"@en .
 
 
 ###  https://w3id.org/kim/hcrt/diagram
 <https://w3id.org/kim/hcrt/diagram> rdf:type owl:Class ;
                                     rdfs:subClassOf :LearningResourceType ;
+                                    rdfs:comment "Class representing an OER that is a diagram"@en ;
                                     rdfs:label "Diagram"@en .
 
 
 ###  https://w3id.org/kim/hcrt/educational_game
 <https://w3id.org/kim/hcrt/educational_game> rdf:type owl:Class ;
                                              rdfs:subClassOf :LearningResourceType ;
+                                             rdfs:comment "Class representing OERs that are in form of educational games."@en ;
                                              rdfs:label "Educational Game"@en .
 
 
 ###  https://w3id.org/kim/hcrt/experiment
 <https://w3id.org/kim/hcrt/experiment> rdf:type owl:Class ;
                                        rdfs:subClassOf :LearningResourceType ;
+                                       rdfs:comment "Class representing OERs that are describing an experiment"@en ;
                                        rdfs:label "Experiment"@en .
 
 

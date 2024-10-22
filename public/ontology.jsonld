@@ -832,6 +832,10 @@
 }, {
   "@id" : "http://purl.org/ontology/bibo/Article",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Class representing OERs that are articles (e.g academic article)"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Article"
@@ -1218,6 +1222,23 @@
     "@id" : "https://github.com/tibonto/educor#KnowledgeTopic"
   } ]
 }, {
+  "@id" : "https://github.com/tibonto/educor#hasAnswer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A property which is defines the answer of a question"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://github.com/tibonto/educor#Question"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "hasAnswer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://github.com/tibonto/educor#Answer"
+  } ]
+}, {
   "@id" : "https://purl.org/ontology/modalia#",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://purl.org/dc/elements/1.1/contributor" : [ {
@@ -1346,6 +1367,10 @@
 }, {
   "@id" : "https://purl.org/ontology/modalia#BestPractices",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Class representing OERs that are best practices in scientific area."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "BestPractices"
@@ -1806,6 +1831,10 @@
 }, {
   "@id" : "https://purl.org/ontology/modalia#Lecture",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Class representing OERs that are lectures."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Lecture"
@@ -2225,6 +2254,10 @@
 }, {
   "@id" : "https://purl.org/ontology/modalia#Tutorial",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Class representing OERs that are in form of tutorial."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Tutorial"
@@ -3291,6 +3324,20 @@
     "@value" : "A podcast is an episodic series of digital audio or video files which a user can download and listen to."
   } ]
 }, {
+  "@id" : "https://schema.org/SoftwareSourceCode",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Computer programming source code. Example: Full (compile ready) solutions, code snippet samples, scripts, templates."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Software Source Code"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://purl.org/ontology/modalia#LearningResourceType"
+  } ]
+}, {
   "@id" : "https://schema.org/Text",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -3601,6 +3648,10 @@
 }, {
   "@id" : "https://w3id.org/kim/hcrt/assessment",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Class representing OERs that are in form of assessment of knowledge."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Assessment"
@@ -3611,6 +3662,10 @@
 }, {
   "@id" : "https://w3id.org/kim/hcrt/case_study",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Class representing OERs that are in form of case study."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "CaseStudy"
@@ -3621,6 +3676,10 @@
 }, {
   "@id" : "https://w3id.org/kim/hcrt/diagram",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Class representing an OER that is a diagram"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Diagram"
@@ -3631,6 +3690,10 @@
 }, {
   "@id" : "https://w3id.org/kim/hcrt/educational_game",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Class representing OERs that are in form of educational games."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Educational Game"
@@ -3641,6 +3704,10 @@
 }, {
   "@id" : "https://w3id.org/kim/hcrt/experiment",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Class representing OERs that are describing an experiment"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Experiment"

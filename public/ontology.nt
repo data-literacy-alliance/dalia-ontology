@@ -142,6 +142,13 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://github.com/tibonto/educor#consistsOfKnowledge> <http://www.w3.org/2000/01/rdf-schema#range> <https://github.com/tibonto/educor#KnowledgeTopic> .
 <https://github.com/tibonto/educor#consistsOfKnowledge> <http://www.w3.org/2000/01/rdf-schema#label> "consistsOfKnowledge" .
 # 
+# https://github.com/tibonto/educor#hasAnswer
+<https://github.com/tibonto/educor#hasAnswer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://github.com/tibonto/educor#hasAnswer> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#Question> .
+<https://github.com/tibonto/educor#hasAnswer> <http://www.w3.org/2000/01/rdf-schema#range> <https://github.com/tibonto/educor#Answer> .
+<https://github.com/tibonto/educor#hasAnswer> <http://www.w3.org/2000/01/rdf-schema#comment> "A property which is defines the answer of a question"@en .
+<https://github.com/tibonto/educor#hasAnswer> <http://www.w3.org/2000/01/rdf-schema#label> "hasAnswer"@en .
+# 
 # https://purl.org/ontology/modalia#author
 <https://purl.org/ontology/modalia#author> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://purl.org/ontology/modalia#author> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
@@ -923,6 +930,7 @@ _:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # http://purl.org/ontology/bibo/Article
 <http://purl.org/ontology/bibo/Article> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/ontology/bibo/Article> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purl.org/ontology/modalia#LearningResourceType> .
+<http://purl.org/ontology/bibo/Article> <http://www.w3.org/2000/01/rdf-schema#comment> "Class representing OERs that are articles (e.g academic article)"@en .
 <http://purl.org/ontology/bibo/Article> <http://www.w3.org/2000/01/rdf-schema#label> "Article"@en .
 # 
 # http://purl.org/ontology/bibo/Book
@@ -1035,6 +1043,7 @@ _:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # https://purl.org/ontology/modalia#BestPractices
 <https://purl.org/ontology/modalia#BestPractices> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://purl.org/ontology/modalia#BestPractices> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purl.org/ontology/modalia#LearningResourceType> .
+<https://purl.org/ontology/modalia#BestPractices> <http://www.w3.org/2000/01/rdf-schema#comment> "Class representing OERs that are best practices in scientific area."@en .
 <https://purl.org/ontology/modalia#BestPractices> <http://www.w3.org/2000/01/rdf-schema#label> "BestPractices"@en .
 # 
 # https://purl.org/ontology/modalia#CTMethodological
@@ -1231,6 +1240,7 @@ _:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # https://purl.org/ontology/modalia#Lecture
 <https://purl.org/ontology/modalia#Lecture> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://purl.org/ontology/modalia#Lecture> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purl.org/ontology/modalia#LearningResourceType> .
+<https://purl.org/ontology/modalia#Lecture> <http://www.w3.org/2000/01/rdf-schema#comment> "Class representing OERs that are lectures."@en .
 <https://purl.org/ontology/modalia#Lecture> <http://www.w3.org/2000/01/rdf-schema#label> "Lecture"@en .
 # 
 # https://purl.org/ontology/modalia#MastersStudent
@@ -1419,6 +1429,7 @@ _:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # https://purl.org/ontology/modalia#Tutorial
 <https://purl.org/ontology/modalia#Tutorial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://purl.org/ontology/modalia#Tutorial> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purl.org/ontology/modalia#LearningResourceType> .
+<https://purl.org/ontology/modalia#Tutorial> <http://www.w3.org/2000/01/rdf-schema#comment> "Class representing OERs that are in form of tutorial."@en .
 <https://purl.org/ontology/modalia#Tutorial> <http://www.w3.org/2000/01/rdf-schema#label> "Tutorial"@en .
 # 
 # https://purl.org/ontology/modalia#User
@@ -1497,6 +1508,12 @@ _:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://schema.org/PodcastSeries> <http://www.w3.org/2000/01/rdf-schema#label> "PodcastSeries"@en .
 <https://schema.org/PodcastSeries> <http://www.w3.org/2004/02/skos/core#definition> "A podcast is an episodic series of digital audio or video files which a user can download and listen to."@en .
 # 
+# https://schema.org/SoftwareSourceCode
+<https://schema.org/SoftwareSourceCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.org/SoftwareSourceCode> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purl.org/ontology/modalia#LearningResourceType> .
+<https://schema.org/SoftwareSourceCode> <http://www.w3.org/2000/01/rdf-schema#comment> "Computer programming source code. Example: Full (compile ready) solutions, code snippet samples, scripts, templates."@en .
+<https://schema.org/SoftwareSourceCode> <http://www.w3.org/2000/01/rdf-schema#label> "Software Source Code"@en .
+# 
 # https://schema.org/Text
 <https://schema.org/Text> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://schema.org/Text> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purl.org/ontology/modalia#MediaType> .
@@ -1512,26 +1529,31 @@ _:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # https://w3id.org/kim/hcrt/assessment
 <https://w3id.org/kim/hcrt/assessment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/kim/hcrt/assessment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purl.org/ontology/modalia#LearningResourceType> .
+<https://w3id.org/kim/hcrt/assessment> <http://www.w3.org/2000/01/rdf-schema#comment> "Class representing OERs that are in form of assessment of knowledge."@en .
 <https://w3id.org/kim/hcrt/assessment> <http://www.w3.org/2000/01/rdf-schema#label> "Assessment"@en .
 # 
 # https://w3id.org/kim/hcrt/case_study
 <https://w3id.org/kim/hcrt/case_study> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/kim/hcrt/case_study> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purl.org/ontology/modalia#LearningResourceType> .
+<https://w3id.org/kim/hcrt/case_study> <http://www.w3.org/2000/01/rdf-schema#comment> "Class representing OERs that are in form of case study."@en .
 <https://w3id.org/kim/hcrt/case_study> <http://www.w3.org/2000/01/rdf-schema#label> "CaseStudy"@en .
 # 
 # https://w3id.org/kim/hcrt/diagram
 <https://w3id.org/kim/hcrt/diagram> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/kim/hcrt/diagram> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purl.org/ontology/modalia#LearningResourceType> .
+<https://w3id.org/kim/hcrt/diagram> <http://www.w3.org/2000/01/rdf-schema#comment> "Class representing an OER that is a diagram"@en .
 <https://w3id.org/kim/hcrt/diagram> <http://www.w3.org/2000/01/rdf-schema#label> "Diagram"@en .
 # 
 # https://w3id.org/kim/hcrt/educational_game
 <https://w3id.org/kim/hcrt/educational_game> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/kim/hcrt/educational_game> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purl.org/ontology/modalia#LearningResourceType> .
+<https://w3id.org/kim/hcrt/educational_game> <http://www.w3.org/2000/01/rdf-schema#comment> "Class representing OERs that are in form of educational games."@en .
 <https://w3id.org/kim/hcrt/educational_game> <http://www.w3.org/2000/01/rdf-schema#label> "Educational Game"@en .
 # 
 # https://w3id.org/kim/hcrt/experiment
 <https://w3id.org/kim/hcrt/experiment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/kim/hcrt/experiment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purl.org/ontology/modalia#LearningResourceType> .
+<https://w3id.org/kim/hcrt/experiment> <http://www.w3.org/2000/01/rdf-schema#comment> "Class representing OERs that are describing an experiment"@en .
 <https://w3id.org/kim/hcrt/experiment> <http://www.w3.org/2000/01/rdf-schema#label> "Experiment"@en .
 # 
 # https://w3id.org/kim/hcrt/simulation
