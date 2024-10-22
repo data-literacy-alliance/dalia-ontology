@@ -455,6 +455,9 @@ This ontology has the following classes and properties.</span>
       <a href="#CTSocial" title="https://purl.org/ontology/modalia#CTSocial">Social Competence</a>
    </li>
    <li>
+      <a href="#https://schema.org/SoftwareSourceCode" title="https://schema.org/SoftwareSourceCode">Software Source Code</a>
+   </li>
+   <li>
       <a href="#StudentSchool" title="https://purl.org/ontology/modalia#StudentSchool">Student (School)</a>
    </li>
    <li>
@@ -591,6 +594,9 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#givesProficiencyLevel"
          title="https://purl.org/ontology/modalia#givesProficiencyLevel">givesProficiencyLevel</a>
+   </li>
+   <li>
+      <a href="#https://github.com/tibonto/educor#hasAnswer" title="https://github.com/tibonto/educor#hasAnswer">hasAnswer</a>
    </li>
    <li>
       <a href="#hasCertificate" title="https://purl.org/ontology/modalia#hasCertificate">hasCertificate</a>
@@ -1011,6 +1017,7 @@ This section provides details for each class and property defined by MoDALIA.
   <li><a href="#https://w3id.org/kim/hcrt/simulation" title="https://w3id.org/kim/hcrt/simulation">Simulation</a></li>
   <li><a href="#Skill" title="https://purl.org/ontology/modalia#Skill">Skill</a></li>
   <li><a href="#CTSocial" title="https://purl.org/ontology/modalia#CTSocial">Social Competence</a></li>
+  <li><a href="#https://schema.org/SoftwareSourceCode" title="https://schema.org/SoftwareSourceCode">Software Source Code</a></li>
   <li><a href="#StudentSchool" title="https://purl.org/ontology/modalia#StudentSchool">Student (School)</a></li>
   <li><a href="#StudentRole" title="https://purl.org/ontology/modalia#StudentRole">StudentRole</a></li>
   <li><a href="#SubjectCluster" title="https://purl.org/ontology/modalia#SubjectCluster">SubjectCluster</a></li>
@@ -1070,10 +1077,21 @@ This section provides details for each class and property defined by MoDALIA.
     <pre>\"4\", 4, \"The answer is 4\"</pre>
    </dd>
   </dl>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#https://github.com/tibonto/educor#hasAnswer" title="https://github.com/tibonto/educor#hasAnswer">hasAnswer</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
  </div>
  <div class="entity" id="http://purl.org/ontology/bibo/Article">
   <h3>Article<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://purl.org/ontology/bibo/Article</p>
+  <div class="comment">
+   <span class="markdown">Class representing OERs that are articles (e.g academic article)</span>
+  </div>
   <dl class="description">
    <dt>
     has super-classes
@@ -1086,6 +1104,9 @@ This section provides details for each class and property defined by MoDALIA.
  <div class="entity" id="https://w3id.org/kim/hcrt/assessment">
   <h3>Assessment<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/kim/hcrt/assessment</p>
+  <div class="comment">
+   <span class="markdown">Class representing OERs that are in form of assessment of knowledge.</span>
+  </div>
   <dl class="description">
    <dt>
     has super-classes
@@ -1152,6 +1173,9 @@ This section provides details for each class and property defined by MoDALIA.
  <div class="entity" id="BestPractices">
   <h3>BestPractices<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://purl.org/ontology/modalia#BestPractices</p>
+  <div class="comment">
+   <span class="markdown">Class representing OERs that are best practices in scientific area.</span>
+  </div>
   <dl class="description">
    <dt>
     has super-classes
@@ -1179,6 +1203,9 @@ This section provides details for each class and property defined by MoDALIA.
  <div class="entity" id="https://w3id.org/kim/hcrt/case_study">
   <h3>CaseStudy<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/kim/hcrt/case_study</p>
+  <div class="comment">
+   <span class="markdown">Class representing OERs that are in form of case study.</span>
+  </div>
   <dl class="description">
    <dt>
     has super-classes
@@ -1505,6 +1532,9 @@ This section provides details for each class and property defined by MoDALIA.
  <div class="entity" id="https://w3id.org/kim/hcrt/diagram">
   <h3>Diagram<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/kim/hcrt/diagram</p>
+  <div class="comment">
+   <span class="markdown">Class representing an OER that is a diagram</span>
+  </div>
   <dl class="description">
    <dt>
     has super-classes
@@ -1563,6 +1593,9 @@ This section provides details for each class and property defined by MoDALIA.
  <div class="entity" id="https://w3id.org/kim/hcrt/educational_game">
   <h3>Educational Game<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/kim/hcrt/educational_game</p>
+  <div class="comment">
+   <span class="markdown">Class representing OERs that are in form of educational games.</span>
+  </div>
   <dl class="description">
    <dt>
     has super-classes
@@ -1652,6 +1685,9 @@ This section provides details for each class and property defined by MoDALIA.
  <div class="entity" id="https://w3id.org/kim/hcrt/experiment">
   <h3>Experiment<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/kim/hcrt/experiment</p>
+  <div class="comment">
+   <span class="markdown">Class representing OERs that are describing an experiment</span>
+  </div>
   <dl class="description">
    <dt>
     has super-classes
@@ -1968,7 +2004,7 @@ This section provides details for each class and property defined by MoDALIA.
     has sub-classes
    </dt>
    <dd>
-    <a href="#http://purl.org/ontology/bibo/Article" title="http://purl.org/ontology/bibo/Article">Article</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/kim/hcrt/assessment" title="https://w3id.org/kim/hcrt/assessment">Assessment</a> <sup class="type-c" title="class">c</sup>, <a href="#BestPractices" title="https://purl.org/ontology/modalia#BestPractices">BestPractices</a> <sup class="type-c" title="class">c</sup>, <a href="#http://purl.org/ontology/bibo/Book" title="http://purl.org/ontology/bibo/Book">Book</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/kim/hcrt/case_study" title="https://w3id.org/kim/hcrt/case_study">CaseStudy</a> <sup class="type-c" title="class">c</sup>, <a href="#CodeNotebook" title="https://purl.org/ontology/modalia#CodeNotebook">CodeNotebook</a> <sup class="type-c" title="class">c</sup>, <a href="#Cookbook" title="https://purl.org/ontology/modalia#Cookbook">Cookbook</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/kim/hcrt/diagram" title="https://w3id.org/kim/hcrt/diagram">Diagram</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/kim/hcrt/educational_game" title="https://w3id.org/kim/hcrt/educational_game">Educational Game</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/kim/hcrt/experiment" title="https://w3id.org/kim/hcrt/experiment">Experiment</a> <sup class="type-c" title="class">c</sup>, <a href="#Lecture" title="https://purl.org/ontology/modalia#Lecture">Lecture</a> <sup class="type-c" title="class">c</sup>, <a href="#https://schema.org/PodcastSeries" title="https://schema.org/PodcastSeries">PodcastSeries</a> <sup class="type-c" title="class">c</sup>, <a href="#Poster" title="https://purl.org/ontology/modalia#Poster">Poster</a> <sup class="type-c" title="class">c</sup>, <a href="#Questionnaire" title="https://purl.org/ontology/modalia#Questionnaire">Questionnaire</a> <sup class="type-c" title="class">c</sup>, <a href="#http://purl.org/ontology/bibo/Report" title="http://purl.org/ontology/bibo/Report">Report</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/kim/hcrt/simulation" title="https://w3id.org/kim/hcrt/simulation">Simulation</a> <sup class="type-c" title="class">c</sup>, <a href="#http://purl.org/ontology/bibo/Thesis" title="http://purl.org/ontology/bibo/Thesis">Thesis</a> <sup class="type-c" title="class">c</sup>, <a href="#Tutorial" title="https://purl.org/ontology/modalia#Tutorial">Tutorial</a> <sup class="type-c" title="class">c</sup>, <a href="#http://purl.org/ontology/bibo/Webpage" title="http://purl.org/ontology/bibo/Webpage">Webpage</a> <sup class="type-c" title="class">c</sup>, <a href="#Workshop" title="https://purl.org/ontology/modalia#Workshop">Workshop</a> <sup class="type-c" title="class">c</sup>
+    <a href="#http://purl.org/ontology/bibo/Article" title="http://purl.org/ontology/bibo/Article">Article</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/kim/hcrt/assessment" title="https://w3id.org/kim/hcrt/assessment">Assessment</a> <sup class="type-c" title="class">c</sup>, <a href="#BestPractices" title="https://purl.org/ontology/modalia#BestPractices">BestPractices</a> <sup class="type-c" title="class">c</sup>, <a href="#http://purl.org/ontology/bibo/Book" title="http://purl.org/ontology/bibo/Book">Book</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/kim/hcrt/case_study" title="https://w3id.org/kim/hcrt/case_study">CaseStudy</a> <sup class="type-c" title="class">c</sup>, <a href="#CodeNotebook" title="https://purl.org/ontology/modalia#CodeNotebook">CodeNotebook</a> <sup class="type-c" title="class">c</sup>, <a href="#Cookbook" title="https://purl.org/ontology/modalia#Cookbook">Cookbook</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/kim/hcrt/diagram" title="https://w3id.org/kim/hcrt/diagram">Diagram</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/kim/hcrt/educational_game" title="https://w3id.org/kim/hcrt/educational_game">Educational Game</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/kim/hcrt/experiment" title="https://w3id.org/kim/hcrt/experiment">Experiment</a> <sup class="type-c" title="class">c</sup>, <a href="#Lecture" title="https://purl.org/ontology/modalia#Lecture">Lecture</a> <sup class="type-c" title="class">c</sup>, <a href="#https://schema.org/PodcastSeries" title="https://schema.org/PodcastSeries">PodcastSeries</a> <sup class="type-c" title="class">c</sup>, <a href="#Poster" title="https://purl.org/ontology/modalia#Poster">Poster</a> <sup class="type-c" title="class">c</sup>, <a href="#Questionnaire" title="https://purl.org/ontology/modalia#Questionnaire">Questionnaire</a> <sup class="type-c" title="class">c</sup>, <a href="#http://purl.org/ontology/bibo/Report" title="http://purl.org/ontology/bibo/Report">Report</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/kim/hcrt/simulation" title="https://w3id.org/kim/hcrt/simulation">Simulation</a> <sup class="type-c" title="class">c</sup>, <a href="#https://schema.org/SoftwareSourceCode" title="https://schema.org/SoftwareSourceCode">Software Source Code</a> <sup class="type-c" title="class">c</sup>, <a href="#http://purl.org/ontology/bibo/Thesis" title="http://purl.org/ontology/bibo/Thesis">Thesis</a> <sup class="type-c" title="class">c</sup>, <a href="#Tutorial" title="https://purl.org/ontology/modalia#Tutorial">Tutorial</a> <sup class="type-c" title="class">c</sup>, <a href="#http://purl.org/ontology/bibo/Webpage" title="http://purl.org/ontology/bibo/Webpage">Webpage</a> <sup class="type-c" title="class">c</sup>, <a href="#Workshop" title="https://purl.org/ontology/modalia#Workshop">Workshop</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
     is in range of
@@ -1981,6 +2017,9 @@ This section provides details for each class and property defined by MoDALIA.
  <div class="entity" id="Lecture">
   <h3>Lecture<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://purl.org/ontology/modalia#Lecture</p>
+  <div class="comment">
+   <span class="markdown">Class representing OERs that are lectures.</span>
+  </div>
   <dl class="description">
    <dt>
     has super-classes
@@ -2304,6 +2343,14 @@ This section provides details for each class and property defined by MoDALIA.
     <pre>"What is the solution to the equation ln(x-3)=0 ?"</pre>
    </dd>
   </dl>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#https://github.com/tibonto/educor#hasAnswer" title="https://github.com/tibonto/educor#hasAnswer">hasAnswer</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
  </div>
  <div class="entity" id="Questionnaire">
   <h3>Questionnaire<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
@@ -2613,6 +2660,21 @@ This section provides details for each class and property defined by MoDALIA.
    </dd>
   </dl>
  </div>
+ <div class="entity" id="https://schema.org/SoftwareSourceCode">
+  <h3>Software Source Code<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.org/SoftwareSourceCode</p>
+  <div class="comment">
+   <span class="markdown">Computer programming source code. Example: Full (compile ready) solutions, code snippet samples, scripts, templates.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#LearningResourceType" title="https://purl.org/ontology/modalia#LearningResourceType">LearningResourceType</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
  <div class="entity" id="StudentSchool">
   <h3>Student (School)<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://purl.org/ontology/modalia#StudentSchool</p>
@@ -2744,6 +2806,9 @@ This section provides details for each class and property defined by MoDALIA.
  <div class="entity" id="Tutorial">
   <h3>Tutorial<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://purl.org/ontology/modalia#Tutorial</p>
+  <div class="comment">
+   <span class="markdown">Class representing OERs that are in form of tutorial.</span>
+  </div>
   <dl class="description">
    <dt>
     has super-classes
@@ -2980,6 +3045,7 @@ This section provides details for each class and property defined by MoDALIA.
   <li><a href="#essentialFor" title="https://purl.org/ontology/modalia#essentialFor">essentialFor</a></li>
   <li><a href="#generateUserLogs" title="https://purl.org/ontology/modalia#generateUserLogs">generateUserLogs</a></li>
   <li><a href="#givesProficiencyLevel" title="https://purl.org/ontology/modalia#givesProficiencyLevel">givesProficiencyLevel</a></li>
+  <li><a href="#https://github.com/tibonto/educor#hasAnswer" title="https://github.com/tibonto/educor#hasAnswer">hasAnswer</a></li>
   <li><a href="#hasCertificate" title="https://purl.org/ontology/modalia#hasCertificate">hasCertificate</a></li>
   <li><a href="#hasCompetenceType" title="https://purl.org/ontology/modalia#hasCompetenceType">hasCompetenceType</a></li>
   <li><a href="#http://purl.org/spar/fabio/hasDiscipline" title="http://purl.org/spar/fabio/hasDiscipline">hasDiscipline</a></li>
@@ -3396,6 +3462,29 @@ This section provides details for each class and property defined by MoDALIA.
     </dt>
     <dd>
      <a href="#Proficiency" title="https://purl.org/ontology/modalia#Proficiency">Proficiency</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://github.com/tibonto/educor#hasAnswer">
+  <h3>hasAnswer<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://github.com/tibonto/educor#hasAnswer</p>
+  <div class="comment">
+   <span class="markdown">A property which is defines the answer of a question</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://github.com/tibonto/educor#Question" title="https://github.com/tibonto/educor#Question">Question</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://github.com/tibonto/educor#Answer" title="https://github.com/tibonto/educor#Answer">Answer</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
