@@ -27,7 +27,7 @@ The ontology is developed in OWL in Protege 5.5.0."""@en ;
                                       dc:title "MoDALIA Ontology"@en ;
                                       dcterms:abstract "The aim of DALIA project is to build a platform for learning material for Research Data Management (RDM) and Data Science. The platform is based on a knowledge graph. We introduce MoDalia, the base ontology of DALIA knowledge graph. Modalia inherits some modules from EduCOR. It includes also modelling of micro -credentials and certificates."@en ;
                                       dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
-                                      dcterms:modified "2024-09-04" ;
+                                      dcterms:modified "2024-11-21" ;
                                       dcterms:publisher "ULB TUDa – University and State Library, Technical University, Darmstadt, Germany" ;
                                       rdfs:comment """MoDALIA reuses elements from the following ontologies:
 - DCTERMS = Dublin Core Terms  
@@ -178,14 +178,6 @@ ec:hasAnswer rdf:type owl:ObjectProperty ;
              rdfs:label "hasAnswer"@en .
 
 
-###  https://purl.org/ontology/modalia#author
-:author rdf:type owl:ObjectProperty ;
-        rdfs:domain ec:EducationalResource ;
-        rdfs:range rdf:List ;
-        rdfs:comment "Property linking an OER  to a list of authors."@en ;
-        rdfs:label "author"@en .
-
-
 ###  https://purl.org/ontology/modalia#belongsToArea
 :belongsToArea rdf:type owl:ObjectProperty ;
                rdfs:domain :RDMTopic ;
@@ -238,6 +230,35 @@ ec:hasAnswer rdf:type owl:ObjectProperty ;
         rdfs:range ec:KnowledgeTopic ;
         rdfs:isDefinedBy "Defines the topics covered in a learning resource"@en ;
         rdfs:label "covers"@en .
+
+
+###  https://purl.org/ontology/modalia#coversManagementOfDataDescribing
+:coversManagementOfDataDescribing rdf:type owl:ObjectProperty ;
+                                  rdfs:domain :RDMResource ;
+                                  rdfs:range <http://semanticscience.org/resource/SIO_000776> ;
+                                  rdfs:label "coversManagementOfDataDescribing"@en .
+
+
+###  https://purl.org/ontology/modalia#coversManagementOfDataKind
+:coversManagementOfDataKind rdf:type owl:ObjectProperty ;
+                            rdfs:domain :RDMResource ;
+                            rdfs:range <http://edamontology.org/data_0006> ;
+                            rdfs:comment "A property that relates a RDMResource to data kind being managed"@en ;
+                            rdfs:label "coversManagementOfDataKind"@en .
+
+
+###  https://purl.org/ontology/modalia#coversManagementOfDataObtainedWithMethod
+:coversManagementOfDataObtainedWithMethod rdf:type owl:ObjectProperty ;
+                                          rdfs:domain :RDMResource ;
+                                          rdfs:range m4i:Method ;
+                                          rdfs:label "coversManagementOfDataObtainedWithMethod"@en .
+
+
+###  https://purl.org/ontology/modalia#coversManagementOfDataObtainedWithTool
+:coversManagementOfDataObtainedWithTool rdf:type owl:ObjectProperty ;
+                                        rdfs:domain :RDMResource ;
+                                        rdfs:range m4i:Tool ;
+                                        rdfs:label "coversManagementOfDataObtainedWithTool"@en .
 
 
 ###  https://purl.org/ontology/modalia#createdBy
@@ -549,6 +570,14 @@ ec:hasAnswer rdf:type owl:ObjectProperty ;
            rdfs:domain :User ;
            rdfs:range ec:EducationalResource ;
            rdfs:label "userViews"@en .
+
+
+###  https://schema.org/author
+schema:author rdf:type owl:ObjectProperty ;
+              rdfs:domain ec:EducationalResource ;
+              rdfs:range rdf:List ;
+              rdfs:comment "Property linking an OER  to a list of authors."@en ;
+              rdfs:label "author"@en .
 
 
 ###  https://schema.org/isPartOf
@@ -966,6 +995,12 @@ schema:version rdf:type owl:DatatypeProperty ;
 #    Classes
 #################################################################
 
+###  http://edamontology.org/data_0006
+<http://edamontology.org/data_0006> rdf:type owl:Class ;
+                                    rdfs:label "Data"@en ;
+                                    <http://www.w3.org/2004/02/skos/core#definition> "Kind of data being managed"@en .
+
+
 ###  http://id.loc.gov/ontologies/bibframe/Contribution
 bf:Contribution rdf:type owl:Class ;
                 rdfs:comment "A contribution to an OER, including agent and role information."@en .
@@ -1008,6 +1043,26 @@ fabio:Repository rdf:type owl:Class ;
                  rdfs:isDefinedBy "Repository of OER"@en ;
                  rdfs:label "Repository"@en ;
                  <http://www.w3.org/2004/02/skos/core#example> "OERSI or Dataone"@en .
+
+
+###  http://semanticscience.org/resource/SIO_000776
+<http://semanticscience.org/resource/SIO_000776> rdf:type owl:Class ;
+                                                 rdfs:label "Object"@en ;
+                                                 <http://www.w3.org/2004/02/skos/core#definition> "an object that is described (chemical substance, living organism, building, ...)"@en ;
+                                                 <http://www.w3.org/2004/02/skos/core#example> "mouse cells"@en .
+
+
+###  http://w3id.org/nfdi4ing/metadata4ing#Method
+m4i:Method rdf:type owl:Class ;
+           rdfs:label "Research Method"@en ;
+           <http://www.w3.org/2004/02/skos/core#definition> "a method with which data was obtained"@en ;
+           <http://www.w3.org/2004/02/skos/core#example> "bioassay, microscopy, measurement"@en .
+
+
+###  http://w3id.org/nfdi4ing/metadata4ing#Tool
+m4i:Tool rdf:type owl:Class ;
+         rdfs:label "Tool"@en ;
+         <http://www.w3.org/2004/02/skos/core#definition> "a tool with which data was obtained (microscope, sensor, ...)"@en .
 
 
 ###  http://www.w3.org/1999/02/22-rdf-syntax-ns#List

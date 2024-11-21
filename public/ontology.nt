@@ -9,7 +9,7 @@
 <https://purl.org/ontology/modalia#> <http://purl.org/dc/elements/1.1/title> "MoDALIA Ontology"@en .
 <https://purl.org/ontology/modalia#> <http://purl.org/dc/terms/abstract> "The aim of DALIA project is to build a platform for learning material for Research Data Management (RDM) and Data Science. The platform is based on a knowledge graph. We introduce MoDalia, the base ontology of DALIA knowledge graph. Modalia inherits some modules from EduCOR. It includes also modelling of micro -credentials and certificates."@en .
 <https://purl.org/ontology/modalia#> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
-<https://purl.org/ontology/modalia#> <http://purl.org/dc/terms/modified> "2024-09-04" .
+<https://purl.org/ontology/modalia#> <http://purl.org/dc/terms/modified> "2024-11-21" .
 <https://purl.org/ontology/modalia#> <http://purl.org/dc/terms/publisher> "ULB TUDa – University and State Library, Technical University, Darmstadt, Germany" .
 <https://purl.org/ontology/modalia#> <http://www.w3.org/2000/01/rdf-schema#comment> "MoDALIA reuses elements from the following ontologies:\n- DCTERMS = Dublin Core Terms  \n- OWL = Web Ontology Language  \n- RDF = Resource Description Framework  \n- RDFS = RDF Schema  \n- SCHEMA = schema.org  \n- SKOS = Simple Knowledge Organization System  \n- EC = EduCOR"@en .
 <https://purl.org/ontology/modalia#> <http://www.w3.org/2000/01/rdf-schema#label> "MoDALIA" .
@@ -149,13 +149,6 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://github.com/tibonto/educor#hasAnswer> <http://www.w3.org/2000/01/rdf-schema#comment> "A property which is defines the answer of a question"@en .
 <https://github.com/tibonto/educor#hasAnswer> <http://www.w3.org/2000/01/rdf-schema#label> "hasAnswer"@en .
 # 
-# https://purl.org/ontology/modalia#author
-<https://purl.org/ontology/modalia#author> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://purl.org/ontology/modalia#author> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
-<https://purl.org/ontology/modalia#author> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-<https://purl.org/ontology/modalia#author> <http://www.w3.org/2000/01/rdf-schema#comment> "Property linking an OER  to a list of authors."@en .
-<https://purl.org/ontology/modalia#author> <http://www.w3.org/2000/01/rdf-schema#label> "author"@en .
-# 
 # https://purl.org/ontology/modalia#belongsToArea
 <https://purl.org/ontology/modalia#belongsToArea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://purl.org/ontology/modalia#belongsToArea> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/ontology/modalia#RDMTopic> .
@@ -202,6 +195,31 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://purl.org/ontology/modalia#covers> <http://www.w3.org/2000/01/rdf-schema#range> <https://github.com/tibonto/educor#KnowledgeTopic> .
 <https://purl.org/ontology/modalia#covers> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "Defines the topics covered in a learning resource"@en .
 <https://purl.org/ontology/modalia#covers> <http://www.w3.org/2000/01/rdf-schema#label> "covers"@en .
+# 
+# https://purl.org/ontology/modalia#coversManagementOfDataDescribing
+<https://purl.org/ontology/modalia#coversManagementOfDataDescribing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://purl.org/ontology/modalia#coversManagementOfDataDescribing> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/ontology/modalia#RDMResource> .
+<https://purl.org/ontology/modalia#coversManagementOfDataDescribing> <http://www.w3.org/2000/01/rdf-schema#range> <http://semanticscience.org/resource/SIO_000776> .
+<https://purl.org/ontology/modalia#coversManagementOfDataDescribing> <http://www.w3.org/2000/01/rdf-schema#label> "coversManagementOfDataDescribing"@en .
+# 
+# https://purl.org/ontology/modalia#coversManagementOfDataKind
+<https://purl.org/ontology/modalia#coversManagementOfDataKind> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://purl.org/ontology/modalia#coversManagementOfDataKind> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/ontology/modalia#RDMResource> .
+<https://purl.org/ontology/modalia#coversManagementOfDataKind> <http://www.w3.org/2000/01/rdf-schema#range> <http://edamontology.org/data_0006> .
+<https://purl.org/ontology/modalia#coversManagementOfDataKind> <http://www.w3.org/2000/01/rdf-schema#comment> "A property that relates a RDMResource to data kind being managed"@en .
+<https://purl.org/ontology/modalia#coversManagementOfDataKind> <http://www.w3.org/2000/01/rdf-schema#label> "coversManagementOfDataKind"@en .
+# 
+# https://purl.org/ontology/modalia#coversManagementOfDataObtainedWithMethod
+<https://purl.org/ontology/modalia#coversManagementOfDataObtainedWithMethod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://purl.org/ontology/modalia#coversManagementOfDataObtainedWithMethod> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/ontology/modalia#RDMResource> .
+<https://purl.org/ontology/modalia#coversManagementOfDataObtainedWithMethod> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/nfdi4ing/metadata4ing#Method> .
+<https://purl.org/ontology/modalia#coversManagementOfDataObtainedWithMethod> <http://www.w3.org/2000/01/rdf-schema#label> "coversManagementOfDataObtainedWithMethod"@en .
+# 
+# https://purl.org/ontology/modalia#coversManagementOfDataObtainedWithTool
+<https://purl.org/ontology/modalia#coversManagementOfDataObtainedWithTool> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://purl.org/ontology/modalia#coversManagementOfDataObtainedWithTool> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/ontology/modalia#RDMResource> .
+<https://purl.org/ontology/modalia#coversManagementOfDataObtainedWithTool> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/nfdi4ing/metadata4ing#Tool> .
+<https://purl.org/ontology/modalia#coversManagementOfDataObtainedWithTool> <http://www.w3.org/2000/01/rdf-schema#label> "coversManagementOfDataObtainedWithTool"@en .
 # 
 # https://purl.org/ontology/modalia#createdBy
 <https://purl.org/ontology/modalia#createdBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -493,6 +511,13 @@ _:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://purl.org/ontology/modalia#userViews> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/ontology/modalia#User> .
 <https://purl.org/ontology/modalia#userViews> <http://www.w3.org/2000/01/rdf-schema#range> <https://github.com/tibonto/educor#EducationalResource> .
 <https://purl.org/ontology/modalia#userViews> <http://www.w3.org/2000/01/rdf-schema#label> "userViews"@en .
+# 
+# https://schema.org/author
+<https://schema.org/author> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://schema.org/author> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
+<https://schema.org/author> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://schema.org/author> <http://www.w3.org/2000/01/rdf-schema#comment> "Property linking an OER  to a list of authors."@en .
+<https://schema.org/author> <http://www.w3.org/2000/01/rdf-schema#label> "author"@en .
 # 
 # https://schema.org/isPartOf
 <https://schema.org/isPartOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -923,6 +948,11 @@ _:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # #################################################################
 # 
 # 
+# http://edamontology.org/data_0006
+<http://edamontology.org/data_0006> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://edamontology.org/data_0006> <http://www.w3.org/2000/01/rdf-schema#label> "Data"@en .
+<http://edamontology.org/data_0006> <http://www.w3.org/2004/02/skos/core#definition> "Kind of data being managed"@en .
+# 
 # http://id.loc.gov/ontologies/bibframe/Contribution
 <http://id.loc.gov/ontologies/bibframe/Contribution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://id.loc.gov/ontologies/bibframe/Contribution> <http://www.w3.org/2000/01/rdf-schema#comment> "A contribution to an OER, including agent and role information."@en .
@@ -959,6 +989,23 @@ _:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://purl.org/spar/fabio/Repository> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "Repository of OER"@en .
 <http://purl.org/spar/fabio/Repository> <http://www.w3.org/2000/01/rdf-schema#label> "Repository"@en .
 <http://purl.org/spar/fabio/Repository> <http://www.w3.org/2004/02/skos/core#example> "OERSI or Dataone"@en .
+# 
+# http://semanticscience.org/resource/SIO_000776
+<http://semanticscience.org/resource/SIO_000776> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://semanticscience.org/resource/SIO_000776> <http://www.w3.org/2000/01/rdf-schema#label> "Object"@en .
+<http://semanticscience.org/resource/SIO_000776> <http://www.w3.org/2004/02/skos/core#definition> "an object that is described (chemical substance, living organism, building, ...)"@en .
+<http://semanticscience.org/resource/SIO_000776> <http://www.w3.org/2004/02/skos/core#example> "mouse cells"@en .
+# 
+# http://w3id.org/nfdi4ing/metadata4ing#Method
+<http://w3id.org/nfdi4ing/metadata4ing#Method> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/nfdi4ing/metadata4ing#Method> <http://www.w3.org/2000/01/rdf-schema#label> "Research Method"@en .
+<http://w3id.org/nfdi4ing/metadata4ing#Method> <http://www.w3.org/2004/02/skos/core#definition> "a method with which data was obtained"@en .
+<http://w3id.org/nfdi4ing/metadata4ing#Method> <http://www.w3.org/2004/02/skos/core#example> "bioassay, microscopy, measurement"@en .
+# 
+# http://w3id.org/nfdi4ing/metadata4ing#Tool
+<http://w3id.org/nfdi4ing/metadata4ing#Tool> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/nfdi4ing/metadata4ing#Tool> <http://www.w3.org/2000/01/rdf-schema#label> "Tool"@en .
+<http://w3id.org/nfdi4ing/metadata4ing#Tool> <http://www.w3.org/2004/02/skos/core#definition> "a tool with which data was obtained (microscope, sensor, ...)"@en .
 # 
 # http://www.w3.org/1999/02/22-rdf-syntax-ns#List
 <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
