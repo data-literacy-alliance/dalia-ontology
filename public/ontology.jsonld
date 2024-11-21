@@ -611,6 +611,17 @@
     "@value" : "Associated community(ies) of the resource who are either the supporting organization/institution, or the recommender, or both. Here indicates supporting."
   } ]
 }, {
+  "@id" : "http://edamontology.org/data_0006",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Data"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Kind of data being managed"
+  } ]
+}, {
   "@id" : "http://id.loc.gov/ontologies/bibframe/Contribution",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -945,6 +956,21 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
+  "@id" : "http://semanticscience.org/resource/SIO_000776",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Object"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "an object that is described (chemical substance, living organism, building, ...)"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "mouse cells"
+  } ]
+}, {
   "@id" : "http://usefulinc.com/ns/doap#repository",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -992,6 +1018,21 @@
     "@value" : "DataManager"
   } ]
 }, {
+  "@id" : "http://w3id.org/nfdi4ing/metadata4ing#Method",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Research Method"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "a method with which data was obtained"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "bioassay, microscopy, measurement"
+  } ]
+}, {
   "@id" : "http://w3id.org/nfdi4ing/metadata4ing#Sponsor",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
@@ -1000,6 +1041,17 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Sponsor"
+  } ]
+}, {
+  "@id" : "http://w3id.org/nfdi4ing/metadata4ing#Tool",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Tool"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "a tool with which data was obtained (microscope, sensor, ...)"
   } ]
 }, {
   "@id" : "http://w3id.org/nfdi4ing/metadata4ing#hasRorId",
@@ -1269,7 +1321,7 @@
     "@id" : "https://creativecommons.org/licenses/by/4.0/"
   } ],
   "http://purl.org/dc/terms/modified" : [ {
-    "@value" : "2024-09-04"
+    "@value" : "2024-11-21"
   } ],
   "http://purl.org/dc/terms/publisher" : [ {
     "@value" : "ULB TUDa – University and State Library, Technical University, Darmstadt, Germany"
@@ -2378,23 +2430,6 @@
     "@id" : "https://purl.org/ontology/modalia#LearningResourceType"
   } ]
 }, {
-  "@id" : "https://purl.org/ontology/modalia#author",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Property linking an OER  to a list of authors."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://github.com/tibonto/educor#EducationalResource"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "author"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#List"
-  } ]
-}, {
   "@id" : "https://purl.org/ontology/modalia#belongsToArea",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -2605,6 +2640,62 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://github.com/tibonto/educor#KnowledgeTopic"
+  } ]
+}, {
+  "@id" : "https://purl.org/ontology/modalia#coversManagementOfDataDescribing",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://purl.org/ontology/modalia#RDMResource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "coversManagementOfDataDescribing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://semanticscience.org/resource/SIO_000776"
+  } ]
+}, {
+  "@id" : "https://purl.org/ontology/modalia#coversManagementOfDataKind",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A property that relates a RDMResource to data kind being managed"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://purl.org/ontology/modalia#RDMResource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "coversManagementOfDataKind"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://edamontology.org/data_0006"
+  } ]
+}, {
+  "@id" : "https://purl.org/ontology/modalia#coversManagementOfDataObtainedWithMethod",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://purl.org/ontology/modalia#RDMResource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "coversManagementOfDataObtainedWithMethod"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://w3id.org/nfdi4ing/metadata4ing#Method"
+  } ]
+}, {
+  "@id" : "https://purl.org/ontology/modalia#coversManagementOfDataObtainedWithTool",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://purl.org/ontology/modalia#RDMResource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "coversManagementOfDataObtainedWithTool"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://w3id.org/nfdi4ing/metadata4ing#Tool"
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#createdBy",
@@ -3381,6 +3472,23 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://schema.org/author",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Property linking an OER  to a list of authors."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://github.com/tibonto/educor#EducationalResource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "author"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#List"
   } ]
 }, {
   "@id" : "https://schema.org/citation",
