@@ -454,6 +454,7 @@ ec:hasAnswer rdf:type owl:ObjectProperty ;
 ###  https://purl.org/ontology/modalia#isLessProficientThan
 :isLessProficientThan rdf:type owl:ObjectProperty ;
                       owl:inverseOf :isMoreProficientThan ;
+                      rdf:type owl:TransitiveProperty ;
                       rdfs:domain :Proficiency ;
                       rdfs:range :Proficiency ;
                       rdfs:label "isLessProficientThan"@en .
@@ -810,6 +811,14 @@ m4i:orcidId rdf:type owl:DatatypeProperty ;
              rdfs:label "hasInterval"@en .
 
 
+###  https://purl.org/ontology/modalia#hasOrder
+:hasOrder rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Proficiency ;
+          rdfs:range xsd:integer ;
+          rdfs:isDefinedBy "Order of proficiency level, starting from 1 for Novice and increasing by proficiency"@en ;
+          rdfs:label "hasOrder"@en .
+
+
 ###  https://purl.org/ontology/modalia#hasRowID
 :hasRowID rdf:type owl:DatatypeProperty ;
           rdfs:domain :LearningGoalMatrixEntry ;
@@ -977,18 +986,6 @@ schema:version rdf:type owl:DatatypeProperty ;
                rdfs:range xsd:string ;
                rdfs:comment "The version of the OER."@en ;
                rdfs:label "version"@en .
-
-
-###  https://vocab.methodandstructure.com/content-inventory#slug
-<https://vocab.methodandstructure.com/content-inventory#slug> rdf:type owl:DatatypeProperty ;
-                                                              rdfs:domain [ rdf:type owl:Class ;
-                                                                            owl:unionOf ( ec:EducationalResource
-                                                                                          :Community
-                                                                                        )
-                                                                          ] ;
-                                                              rdfs:range xsd:string ;
-                                                              rdfs:isDefinedBy "The slug is a text token which represents either the full path or terminal path segment of an HTTP(S) URL by which a resource can be located. This property is mainly for the purpose of archiving old or alternative URL paths in a content inventory, for such tasks as generating URL rewriting maps."@en ;
-                                                              rdfs:label "slug"@en .
 
 
 #################################################################
@@ -1803,6 +1800,7 @@ m4i:Sponsor rdf:type owl:NamedIndividual ,
                                 :Expert ,
                                 :Proficient ;
           :isMoreProficientThan :Novice ;
+          :hasOrder 2 ;
           rdfs:label "Advanced Beginner"@en .
 
 
@@ -1813,6 +1811,7 @@ m4i:Sponsor rdf:type owl:NamedIndividual ,
                                  :Proficient ;
            :isMoreProficientThan :Beginner ,
                                  :Novice ;
+           :hasOrder 3 ;
            rdfs:label "Competent"@en .
 
 
@@ -1823,6 +1822,7 @@ m4i:Sponsor rdf:type owl:NamedIndividual ,
                               :Competent ,
                               :Novice ,
                               :Proficient ;
+        :hasOrder 5 ;
         rdfs:label "Expert"@en .
 
 
@@ -1833,6 +1833,7 @@ m4i:Sponsor rdf:type owl:NamedIndividual ,
                               :Competent ,
                               :Expert ,
                               :Proficient ;
+        :hasOrder 1 ;
         rdfs:label "Novice"@en .
 
 
@@ -1843,6 +1844,7 @@ m4i:Sponsor rdf:type owl:NamedIndividual ,
             :isMoreProficientThan :Beginner ,
                                   :Competent ,
                                   :Novice ;
+            :hasOrder 4 ;
             rdfs:label "Proficient"@en .
 
 
