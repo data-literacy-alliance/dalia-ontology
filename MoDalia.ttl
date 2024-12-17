@@ -136,6 +136,12 @@ bf:role rdf:type owl:ObjectProperty ;
         rdfs:label "role"@en .
 
 
+###  http://purl.org/dc/terms/license
+dcterms:license rdf:type owl:ObjectProperty ;
+                rdfs:domain ec:EducationalResource ;
+                rdfs:range :License .
+
+
 ###  http://purl.org/ontology/rec/core#recommender
 <http://purl.org/ontology/rec/core#recommender> rdf:type owl:ObjectProperty ;
                                                 rdfs:domain ec:EducationalResource ;
@@ -444,11 +450,28 @@ ec:hasAnswer rdf:type owl:ObjectProperty ;
          rdfs:label "hasUser"@en .
 
 
+###  https://purl.org/ontology/modalia#isBasedOn
+:isBasedOn rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :isRelatedTo ;
+           rdfs:domain ec:EducationalResource ;
+           rdfs:range ec:EducationalResource ;
+           rdfs:comment "the object resource is a prerequisite"@en ;
+           rdfs:label "isBasedOn"@en .
+
+
 ###  https://purl.org/ontology/modalia#isCoveredIn
 :isCoveredIn rdf:type owl:ObjectProperty ;
              rdfs:domain :RDMTopic ;
              rdfs:range :LearningGoalMatrixEntry ;
              rdfs:label "isCoveredIn"@en .
+
+
+###  https://purl.org/ontology/modalia#isDuplicateOf
+:isDuplicateOf rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :isRelatedTo ;
+               rdfs:domain ec:EducationalResource ;
+               rdfs:range ec:EducationalResource ;
+               rdfs:label "isDuplicateOf"@en .
 
 
 ###  https://purl.org/ontology/modalia#isLessProficientThan
@@ -483,6 +506,29 @@ ec:hasAnswer rdf:type owl:ObjectProperty ;
                 rdfs:domain ec:EducationalResource ;
                 rdfs:range ec:EducationalResource ;
                 rdfs:label "isNewVersionOf"@en .
+
+
+###  https://purl.org/ontology/modalia#isPartOf
+:isPartOf rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :isRelatedTo ;
+          rdfs:domain ec:EducationalResource ;
+          rdfs:range ec:EducationalResource ;
+          rdfs:label "isPartOf"@en .
+
+
+###  https://purl.org/ontology/modalia#isRelatedTo
+:isRelatedTo rdf:type owl:ObjectProperty ;
+             rdfs:domain ec:EducationalResource ;
+             rdfs:range ec:EducationalResource ;
+             rdfs:label "isRelatedTo"@en .
+
+
+###  https://purl.org/ontology/modalia#isTranslationOf
+:isTranslationOf rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :isRelatedTo ;
+                 rdfs:domain ec:EducationalResource ;
+                 rdfs:range ec:EducationalResource ;
+                 rdfs:label "isTranslationOf"@en .
 
 
 ###  https://purl.org/ontology/modalia#nextPhase
@@ -641,12 +687,6 @@ dcterms:language rdf:type owl:DatatypeProperty ;
                  rdfs:domain ec:EducationalResource ;
                  rdfs:range xsd:language ;
                  rdfs:label "language"@en .
-
-
-###  http://purl.org/dc/terms/license
-dcterms:license rdf:type owl:DatatypeProperty ;
-                rdfs:domain ec:EducationalResource ;
-                rdfs:range xsd:anyURI .
 
 
 ###  http://purl.org/dc/terms/rights
@@ -1313,6 +1353,12 @@ ec:UserLogs rdf:type owl:Class ;
           <http://www.w3.org/2004/02/skos/core#definition> "Some questions related to one or more knowledge topics."@en .
 
 
+###  https://purl.org/ontology/modalia#FreeLicense
+:FreeLicense rdf:type owl:Class ;
+             rdfs:subClassOf :License ;
+             rdfs:label "Free License"@en .
+
+
 ###  https://purl.org/ontology/modalia#IntegratePhase
 :IntegratePhase rdf:type owl:Class ;
                 rdfs:subClassOf :DataLifeCyclePhase ;
@@ -1394,6 +1440,11 @@ ec:UserLogs rdf:type owl:Class ;
          rdfs:label "Lecture"@en .
 
 
+###  https://purl.org/ontology/modalia#License
+:License rdf:type owl:Class ;
+         rdfs:label "License"@en .
+
+
 ###  https://purl.org/ontology/modalia#MastersStudent
 :MastersStudent rdf:type owl:Class ;
                 rdfs:subClassOf :TargetGroup ;
@@ -1472,6 +1523,12 @@ ec:UserLogs rdf:type owl:Class ;
              rdfs:label "Proficiency"@en ;
              <http://www.w3.org/2004/02/skos/core#definition> """Benner’s Novice to Expert
 The five stages of proficiency in the novice to expert model are: novice, advanced beginner, competent, proficient, and expert (Benner, 1982)."""@en .
+
+
+###  https://purl.org/ontology/modalia#ProprietaryLicense
+:ProprietaryLicense rdf:type owl:Class ;
+                    rdfs:subClassOf :License ;
+                    rdfs:label "Proprietary License"@en .
 
 
 ###  https://purl.org/ontology/modalia#Provider
@@ -1848,17 +1905,18 @@ m4i:Sponsor rdf:type owl:NamedIndividual ,
             rdfs:label "Proficient"@en .
 
 
-###  https://purl.org/ontology/modalia#ProprietaryLicense
-:ProprietaryLicense rdf:type owl:NamedIndividual ;
-                    rdfs:label "Proprietary License"@en ;
-                    <http://www.w3.org/2004/02/skos/core#example> "Youtube License"@en .
+###  https://purl.org/ontology/modalia#Proprietary
+:Proprietary rdf:type owl:NamedIndividual ,
+                      :ProprietaryLicense ;
+             rdfs:label "Proprietary"@en .
 
 
 #################################################################
 #    Annotations
 #################################################################
 
-dcterms:license rdfs:label "license"@en .
+dcterms:license <http://www.w3.org/2004/02/skos/core#definition> "Property identifying the license of an Educational Resource"@en ;
+                rdfs:label "license"@en .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
