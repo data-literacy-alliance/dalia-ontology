@@ -26,8 +26,7 @@ The ontology is used for making a knowledge graph as a backend to platform for t
 The ontology is developed in OWL in Protege 5.5.0."""@en ;
                                       dc:title "MoDALIA Ontology"@en ;
                                       dcterms:abstract "The aim of DALIA project is to build a platform for learning material for Research Data Management (RDM) and Data Science. The platform is based on a knowledge graph. We introduce MoDalia, the base ontology of DALIA knowledge graph. Modalia inherits some modules from EduCOR. It includes also modelling of micro -credentials and certificates."@en ;
-                                      dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
-                                      dcterms:modified "2024-11-21" ;
+                                      dcterms:modified "2025-01-21" ;
                                       dcterms:publisher "ULB TUDa – University and State Library, Technical University, Darmstadt, Germany" ;
                                       rdfs:comment """MoDALIA reuses elements from the following ontologies:
 - DCTERMS = Dublin Core Terms  
@@ -88,6 +87,10 @@ dcterms:publisher rdf:type owl:AnnotationProperty .
 <http://www.w3.org/2004/02/skos/core#prefLabel> rdf:type owl:AnnotationProperty .
 
 
+###  http://www.w3.org/2004/02/skos/core#scopeNote
+<http://www.w3.org/2004/02/skos/core#scopeNote> rdf:type owl:AnnotationProperty .
+
+
 #################################################################
 #    Datatypes
 #################################################################
@@ -139,7 +142,9 @@ bf:role rdf:type owl:ObjectProperty ;
 ###  http://purl.org/dc/terms/license
 dcterms:license rdf:type owl:ObjectProperty ;
                 rdfs:domain ec:EducationalResource ;
-                rdfs:range :License .
+                rdfs:range :License ;
+                rdfs:label "license"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "Property identifying the license of an Educational Resource"@en .
 
 
 ###  http://purl.org/ontology/rec/core#recommender
@@ -500,8 +505,9 @@ ec:hasAnswer rdf:type owl:ObjectProperty ;
 
 
 ###  https://purl.org/ontology/modalia#isNewVersionOf
-:isNewVersionOf rdf:type owl:ObjectProperty ,
-                         owl:TransitiveProperty ,
+:isNewVersionOf rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :relatedTo ;
+                rdf:type owl:TransitiveProperty ,
                          owl:IrreflexiveProperty ;
                 rdfs:domain ec:EducationalResource ;
                 rdfs:range ec:EducationalResource ;
@@ -634,6 +640,14 @@ schema:isPartOf rdf:type owl:ObjectProperty ;
                 rdfs:range ec:EducationalResource ;
                 rdfs:comment "This property gives the relation between two resources as the subject  is part of the resource in the object."@en ;
                 rdfs:label "isPartOf"@en .
+
+
+###  https://w3id.org/citedcat-ap/isSupplementedBy
+<https://w3id.org/citedcat-ap/isSupplementedBy> rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf :relatedTo ;
+                                                rdfs:domain ec:EducationalResource ;
+                                                rdfs:range ec:EducationalResource ;
+                                                rdfs:label "isSupplementedBy"@en .
 
 
 #################################################################
@@ -1809,6 +1823,21 @@ schema:VideoObject rdf:type owl:Class ;
                                        rdfs:label "Experiment"@en .
 
 
+###  https://w3id.org/kim/hcrt/index
+<https://w3id.org/kim/hcrt/index> rdf:type owl:Class ;
+                                  rdfs:subClassOf :LearningResourceType ;
+                                  rdfs:label "Index"@en ,
+                                             "Nachschlagewerk"@de ;
+                                  <http://www.w3.org/2004/02/skos/core#example> "glossary, encyclopedia, dictionary"@en ;
+                                  <http://www.w3.org/2004/02/skos/core#scopeNote> "zum Beispiel Glossar, Enzyklopädie, Lexikonzum Beispiel Glossar, Enzyklopädie, Lexikon"@de .
+
+
+###  https://w3id.org/kim/hcrt/other
+<https://w3id.org/kim/hcrt/other> rdf:type owl:Class ;
+                                  rdfs:subClassOf :LearningResourceType ;
+                                  rdfs:label "Other resource type"@en .
+
+
 ###  https://w3id.org/kim/hcrt/simulation
 <https://w3id.org/kim/hcrt/simulation> rdf:type owl:Class ;
                                        rdfs:subClassOf :LearningResourceType ;
@@ -1848,6 +1877,15 @@ m4i:DataManager rdf:type owl:NamedIndividual ,
 m4i:Sponsor rdf:type owl:NamedIndividual ,
                      :ContributorRole ;
             rdfs:label "Sponsor"@en .
+
+
+###  https://creativecommons.org/licenses/by/4.0/
+<https://creativecommons.org/licenses/by/4.0/> rdf:type owl:NamedIndividual .
+
+
+###  https://purl.org/ontology/modalia#
+<https://purl.org/ontology/modalia#> rdf:type owl:NamedIndividual ;
+                                     dcterms:license <https://creativecommons.org/licenses/by/4.0/> .
 
 
 ###  https://purl.org/ontology/modalia#Beginner
@@ -1909,14 +1947,6 @@ m4i:Sponsor rdf:type owl:NamedIndividual ,
 :Proprietary rdf:type owl:NamedIndividual ,
                       :ProprietaryLicense ;
              rdfs:label "Proprietary"@en .
-
-
-#################################################################
-#    Annotations
-#################################################################
-
-dcterms:license <http://www.w3.org/2004/02/skos/core#definition> "Property identifying the license of an Educational Resource"@en ;
-                rdfs:label "license"@en .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

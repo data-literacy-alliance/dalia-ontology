@@ -22,7 +22,7 @@ The ontology is used for making a knowledge graph as a backend to platform for t
 The ontology is developed in OWL in Protege 5.5.0.</dc:description>
         <dc:title xml:lang="en">MoDALIA Ontology</dc:title>
         <terms:abstract xml:lang="en">The aim of DALIA project is to build a platform for learning material for Research Data Management (RDM) and Data Science. The platform is based on a knowledge graph. We introduce MoDalia, the base ontology of DALIA knowledge graph. Modalia inherits some modules from EduCOR. It includes also modelling of micro -credentials and certificates.</terms:abstract>
-        <terms:modified>2024-11-21</terms:modified>
+        <terms:modified>2025-01-21</terms:modified>
         <terms:publisher>ULB TUDa – University and State Library, Technical University, Darmstadt, Germany</terms:publisher>
         <rdfs:comment xml:lang="en">MoDALIA reuses elements from the following ontologies:
 - DCTERMS = Dublin Core Terms  
@@ -124,6 +124,13 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
 
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#scopeNote -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#scopeNote"/>
     
 
 
@@ -779,6 +786,7 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
 
 
     <owl:ObjectProperty rdf:about="https://purl.org/ontology/modalia#isNewVersionOf">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/ontology/modalia#relatedTo"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
@@ -982,6 +990,18 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
         <rdfs:range rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:comment xml:lang="en">This property gives the relation between two resources as the subject  is part of the resource in the object.</rdfs:comment>
         <rdfs:label xml:lang="en">isPartOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/citedcat-ap/isSupplementedBy -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/citedcat-ap/isSupplementedBy">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/ontology/modalia#relatedTo"/>
+        <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
+        <rdfs:range rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
+        <rdfs:label xml:lang="en">isSupplementedBy</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -2854,6 +2874,29 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
         <rdfs:subClassOf rdf:resource="https://purl.org/ontology/modalia#LearningResourceType"/>
         <rdfs:comment xml:lang="en">Class representing OERs that are describing an experiment</rdfs:comment>
         <rdfs:label xml:lang="en">Experiment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/kim/hcrt/index -->
+
+
+    <owl:Class rdf:about="https://w3id.org/kim/hcrt/index">
+        <rdfs:subClassOf rdf:resource="https://purl.org/ontology/modalia#LearningResourceType"/>
+        <rdfs:label xml:lang="en">Index</rdfs:label>
+        <rdfs:label xml:lang="de">Nachschlagewerk</rdfs:label>
+        <skos:example xml:lang="en">glossary, encyclopedia, dictionary</skos:example>
+        <skos:scopeNote xml:lang="de">zum Beispiel Glossar, Enzyklopädie, Lexikonzum Beispiel Glossar, Enzyklopädie, Lexikon</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/kim/hcrt/other -->
+
+
+    <owl:Class rdf:about="https://w3id.org/kim/hcrt/other">
+        <rdfs:subClassOf rdf:resource="https://purl.org/ontology/modalia#LearningResourceType"/>
+        <rdfs:label xml:lang="en">Other resource type</rdfs:label>
     </owl:Class>
     
 
