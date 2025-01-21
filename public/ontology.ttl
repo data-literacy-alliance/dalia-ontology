@@ -18,7 +18,7 @@ The ontology is used for making a knowledge graph as a backend to platform for t
 The ontology is developed in OWL in Protege 5.5.0."""@en ;
                                       <http://purl.org/dc/elements/1.1/title> "MoDALIA Ontology"@en ;
                                       <http://purl.org/dc/terms/abstract> "The aim of DALIA project is to build a platform for learning material for Research Data Management (RDM) and Data Science. The platform is based on a knowledge graph. We introduce MoDalia, the base ontology of DALIA knowledge graph. Modalia inherits some modules from EduCOR. It includes also modelling of micro -credentials and certificates."@en ;
-                                      <http://purl.org/dc/terms/modified> "2024-11-21" ;
+                                      <http://purl.org/dc/terms/modified> "2025-01-21" ;
                                       <http://purl.org/dc/terms/publisher> "ULB TUDa – University and State Library, Technical University, Darmstadt, Germany" ;
                                       rdfs:comment """MoDALIA reuses elements from the following ontologies:
 - DCTERMS = Dublin Core Terms  
@@ -77,6 +77,10 @@ The ontology is developed in OWL in Protege 5.5.0."""@en ;
 
 ###  http://www.w3.org/2004/02/skos/core#prefLabel
 <http://www.w3.org/2004/02/skos/core#prefLabel> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#scopeNote
+<http://www.w3.org/2004/02/skos/core#scopeNote> rdf:type owl:AnnotationProperty .
 
 
 #################################################################
@@ -493,8 +497,9 @@ xsd:duration rdf:type rdfs:Datatype .
 
 
 ###  https://purl.org/ontology/modalia#isNewVersionOf
-:isNewVersionOf rdf:type owl:ObjectProperty ,
-                         owl:TransitiveProperty ,
+:isNewVersionOf rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :relatedTo ;
+                rdf:type owl:TransitiveProperty ,
                          owl:IrreflexiveProperty ;
                 rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
                 rdfs:range <https://github.com/tibonto/educor#EducationalResource> ;
@@ -627,6 +632,14 @@ xsd:duration rdf:type rdfs:Datatype .
                               rdfs:range <https://github.com/tibonto/educor#EducationalResource> ;
                               rdfs:comment "This property gives the relation between two resources as the subject  is part of the resource in the object."@en ;
                               rdfs:label "isPartOf"@en .
+
+
+###  https://w3id.org/citedcat-ap/isSupplementedBy
+<https://w3id.org/citedcat-ap/isSupplementedBy> rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf :relatedTo ;
+                                                rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
+                                                rdfs:range <https://github.com/tibonto/educor#EducationalResource> ;
+                                                rdfs:label "isSupplementedBy"@en .
 
 
 #################################################################
@@ -1800,6 +1813,21 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
                                        rdfs:subClassOf :LearningResourceType ;
                                        rdfs:comment "Class representing OERs that are describing an experiment"@en ;
                                        rdfs:label "Experiment"@en .
+
+
+###  https://w3id.org/kim/hcrt/index
+<https://w3id.org/kim/hcrt/index> rdf:type owl:Class ;
+                                  rdfs:subClassOf :LearningResourceType ;
+                                  rdfs:label "Index"@en ,
+                                             "Nachschlagewerk"@de ;
+                                  <http://www.w3.org/2004/02/skos/core#example> "glossary, encyclopedia, dictionary"@en ;
+                                  <http://www.w3.org/2004/02/skos/core#scopeNote> "zum Beispiel Glossar, Enzyklopädie, Lexikonzum Beispiel Glossar, Enzyklopädie, Lexikon"@de .
+
+
+###  https://w3id.org/kim/hcrt/other
+<https://w3id.org/kim/hcrt/other> rdf:type owl:Class ;
+                                  rdfs:subClassOf :LearningResourceType ;
+                                  rdfs:label "Other resource type"@en .
 
 
 ###  https://w3id.org/kim/hcrt/simulation

@@ -8,7 +8,7 @@
 <https://purl.org/ontology/modalia#> <http://purl.org/dc/elements/1.1/description> "MoDALIA: An Ontology for Educational Material in Research Data Management (RDM) and Data Science.\nThe ontology is used for making a knowledge graph as a backend to platform for teaching, personal learning, and recommendation.\nThe ontology is developed in OWL in Protege 5.5.0."@en .
 <https://purl.org/ontology/modalia#> <http://purl.org/dc/elements/1.1/title> "MoDALIA Ontology"@en .
 <https://purl.org/ontology/modalia#> <http://purl.org/dc/terms/abstract> "The aim of DALIA project is to build a platform for learning material for Research Data Management (RDM) and Data Science. The platform is based on a knowledge graph. We introduce MoDalia, the base ontology of DALIA knowledge graph. Modalia inherits some modules from EduCOR. It includes also modelling of micro -credentials and certificates."@en .
-<https://purl.org/ontology/modalia#> <http://purl.org/dc/terms/modified> "2024-11-21" .
+<https://purl.org/ontology/modalia#> <http://purl.org/dc/terms/modified> "2025-01-21" .
 <https://purl.org/ontology/modalia#> <http://purl.org/dc/terms/publisher> "ULB TUDa – University and State Library, Technical University, Darmstadt, Germany" .
 <https://purl.org/ontology/modalia#> <http://www.w3.org/2000/01/rdf-schema#comment> "MoDALIA reuses elements from the following ontologies:\n- DCTERMS = Dublin Core Terms  \n- OWL = Web Ontology Language  \n- RDF = Resource Description Framework  \n- RDFS = RDF Schema  \n- SCHEMA = schema.org  \n- SKOS = Simple Knowledge Organization System  \n- EC = EduCOR"@en .
 <https://purl.org/ontology/modalia#> <http://www.w3.org/2000/01/rdf-schema#label> "MoDALIA" .
@@ -54,6 +54,9 @@
 # 
 # http://www.w3.org/2004/02/skos/core#prefLabel
 <http://www.w3.org/2004/02/skos/core#prefLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#scopeNote
+<http://www.w3.org/2004/02/skos/core#scopeNote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # 
 # 
@@ -441,6 +444,7 @@ _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://purl.org/ontology/modalia#isNewVersionOf
 <https://purl.org/ontology/modalia#isNewVersionOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://purl.org/ontology/modalia#isNewVersionOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://purl.org/ontology/modalia#relatedTo> .
 <https://purl.org/ontology/modalia#isNewVersionOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
 <https://purl.org/ontology/modalia#isNewVersionOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
 <https://purl.org/ontology/modalia#isNewVersionOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
@@ -568,6 +572,13 @@ _:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://schema.org/isPartOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://github.com/tibonto/educor#EducationalResource> .
 <https://schema.org/isPartOf> <http://www.w3.org/2000/01/rdf-schema#comment> "This property gives the relation between two resources as the subject  is part of the resource in the object."@en .
 <https://schema.org/isPartOf> <http://www.w3.org/2000/01/rdf-schema#label> "isPartOf"@en .
+# 
+# https://w3id.org/citedcat-ap/isSupplementedBy
+<https://w3id.org/citedcat-ap/isSupplementedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/citedcat-ap/isSupplementedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://purl.org/ontology/modalia#relatedTo> .
+<https://w3id.org/citedcat-ap/isSupplementedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
+<https://w3id.org/citedcat-ap/isSupplementedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://github.com/tibonto/educor#EducationalResource> .
+<https://w3id.org/citedcat-ap/isSupplementedBy> <http://www.w3.org/2000/01/rdf-schema#label> "isSupplementedBy"@en .
 # 
 # 
 # 
@@ -1645,6 +1656,19 @@ _:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/kim/hcrt/experiment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purl.org/ontology/modalia#LearningResourceType> .
 <https://w3id.org/kim/hcrt/experiment> <http://www.w3.org/2000/01/rdf-schema#comment> "Class representing OERs that are describing an experiment"@en .
 <https://w3id.org/kim/hcrt/experiment> <http://www.w3.org/2000/01/rdf-schema#label> "Experiment"@en .
+# 
+# https://w3id.org/kim/hcrt/index
+<https://w3id.org/kim/hcrt/index> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/kim/hcrt/index> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purl.org/ontology/modalia#LearningResourceType> .
+<https://w3id.org/kim/hcrt/index> <http://www.w3.org/2000/01/rdf-schema#label> "Index"@en .
+<https://w3id.org/kim/hcrt/index> <http://www.w3.org/2000/01/rdf-schema#label> "Nachschlagewerk"@de .
+<https://w3id.org/kim/hcrt/index> <http://www.w3.org/2004/02/skos/core#example> "glossary, encyclopedia, dictionary"@en .
+<https://w3id.org/kim/hcrt/index> <http://www.w3.org/2004/02/skos/core#scopeNote> "zum Beispiel Glossar, Enzyklopädie, Lexikonzum Beispiel Glossar, Enzyklopädie, Lexikon"@de .
+# 
+# https://w3id.org/kim/hcrt/other
+<https://w3id.org/kim/hcrt/other> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/kim/hcrt/other> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purl.org/ontology/modalia#LearningResourceType> .
+<https://w3id.org/kim/hcrt/other> <http://www.w3.org/2000/01/rdf-schema#label> "Other resource type"@en .
 # 
 # https://w3id.org/kim/hcrt/simulation
 <https://w3id.org/kim/hcrt/simulation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
