@@ -1303,7 +1303,7 @@
     "@id" : "https://creativecommons.org/licenses/by/4.0/"
   } ],
   "http://purl.org/dc/terms/modified" : [ {
-    "@value" : "2025-01-21"
+    "@value" : "2025-02-04"
   } ],
   "http://purl.org/dc/terms/publisher" : [ {
     "@value" : "ULB TUDa – University and State Library, Technical University, Darmstadt, Germany"
@@ -3544,6 +3544,20 @@
     "@value" : "A podcast is an episodic series of digital audio or video files which a user can download and listen to."
   } ]
 }, {
+  "@id" : "https://schema.org/PresentationDigitalDocument",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A presentation / slides file."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Presentation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://purl.org/ontology/modalia#MediaType"
+  } ]
+}, {
   "@id" : "https://schema.org/SoftwareSourceCode",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -3816,6 +3830,19 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
+  "@id" : "https://schema.org/teachesSkill",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://purl.org/ontology/modalia#LearningResourceType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "teaches skill"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://purl.org/ontology/modalia#Skill"
+  } ]
+}, {
   "@id" : "https://schema.org/timeRequired",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -3991,19 +4018,5 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://purl.org/ontology/modalia#LearningResourceType"
-  } ]
-}, {
-  "@id" : "https://w3id.org/kim/hcrt/slide",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A presentation / slides file."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Presentation"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://purl.org/ontology/modalia#MediaType"
   } ]
 } ]

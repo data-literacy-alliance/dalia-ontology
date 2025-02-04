@@ -26,7 +26,7 @@ The ontology is used for making a knowledge graph as a backend to platform for t
 The ontology is developed in OWL in Protege 5.5.0."""@en ;
                                       dc:title "MoDALIA Ontology"@en ;
                                       dcterms:abstract "The aim of DALIA project is to build a platform for learning material for Research Data Management (RDM) and Data Science. The platform is based on a knowledge graph. We introduce MoDalia, the base ontology of DALIA knowledge graph. Modalia inherits some modules from EduCOR. It includes also modelling of micro -credentials and certificates."@en ;
-                                      dcterms:modified "2025-01-21" ;
+                                      dcterms:modified "2025-02-04" ;
                                       dcterms:publisher "ULB TUDa – University and State Library, Technical University, Darmstadt, Germany" ;
                                       rdfs:comment """MoDALIA reuses elements from the following ontologies:
 - DCTERMS = Dublin Core Terms  
@@ -640,6 +640,13 @@ schema:isPartOf rdf:type owl:ObjectProperty ;
                 rdfs:range ec:EducationalResource ;
                 rdfs:comment "This property gives the relation between two resources as the subject  is part of the resource in the object."@en ;
                 rdfs:label "isPartOf"@en .
+
+
+###  https://schema.org/teachesSkill
+schema:teachesSkill rdf:type owl:ObjectProperty ;
+                    rdfs:domain :LearningResourceType ;
+                    rdfs:range :Skill ;
+                    rdfs:label "teaches skill"@en .
 
 
 ###  https://w3id.org/citedcat-ap/isSupplementedBy
@@ -1767,6 +1774,13 @@ schema:PodcastSeries rdf:type owl:Class ;
                      <http://www.w3.org/2004/02/skos/core#definition> "A podcast is an episodic series of digital audio or video files which a user can download and listen to."@en .
 
 
+###  https://schema.org/PresentationDigitalDocument
+schema:PresentationDigitalDocument rdf:type owl:Class ;
+                                   rdfs:subClassOf :MediaType ;
+                                   rdfs:comment "A presentation / slides file."@en ;
+                                   rdfs:label "Presentation"@en .
+
+
 ###  https://schema.org/SoftwareSourceCode
 schema:SoftwareSourceCode rdf:type owl:Class ;
                           rdfs:subClassOf :LearningResourceType ;
@@ -1842,13 +1856,6 @@ schema:VideoObject rdf:type owl:Class ;
 <https://w3id.org/kim/hcrt/simulation> rdf:type owl:Class ;
                                        rdfs:subClassOf :LearningResourceType ;
                                        rdfs:label "Simulation"@en .
-
-
-###  https://w3id.org/kim/hcrt/slide
-<https://w3id.org/kim/hcrt/slide> rdf:type owl:Class ;
-                                  rdfs:subClassOf :MediaType ;
-                                  rdfs:comment "A presentation / slides file."@en ;
-                                  rdfs:label "Presentation"@en .
 
 
 #################################################################

@@ -22,7 +22,7 @@ The ontology is used for making a knowledge graph as a backend to platform for t
 The ontology is developed in OWL in Protege 5.5.0.</dc:description>
         <dc:title xml:lang="en">MoDALIA Ontology</dc:title>
         <terms:abstract xml:lang="en">The aim of DALIA project is to build a platform for learning material for Research Data Management (RDM) and Data Science. The platform is based on a knowledge graph. We introduce MoDalia, the base ontology of DALIA knowledge graph. Modalia inherits some modules from EduCOR. It includes also modelling of micro -credentials and certificates.</terms:abstract>
-        <terms:modified>2025-01-21</terms:modified>
+        <terms:modified>2025-02-04</terms:modified>
         <terms:publisher>ULB TUDa – University and State Library, Technical University, Darmstadt, Germany</terms:publisher>
         <rdfs:comment xml:lang="en">MoDALIA reuses elements from the following ontologies:
 - DCTERMS = Dublin Core Terms  
@@ -990,6 +990,17 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
         <rdfs:range rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:comment xml:lang="en">This property gives the relation between two resources as the subject  is part of the resource in the object.</rdfs:comment>
         <rdfs:label xml:lang="en">isPartOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://schema.org/teachesSkill -->
+
+
+    <owl:ObjectProperty rdf:about="https://schema.org/teachesSkill">
+        <rdfs:domain rdf:resource="https://purl.org/ontology/modalia#LearningResourceType"/>
+        <rdfs:range rdf:resource="https://purl.org/ontology/modalia#Skill"/>
+        <rdfs:label xml:lang="en">teaches skill</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -2790,6 +2801,17 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
     
 
 
+    <!-- https://schema.org/PresentationDigitalDocument -->
+
+
+    <owl:Class rdf:about="https://schema.org/PresentationDigitalDocument">
+        <rdfs:subClassOf rdf:resource="https://purl.org/ontology/modalia#MediaType"/>
+        <rdfs:comment xml:lang="en">A presentation / slides file.</rdfs:comment>
+        <rdfs:label xml:lang="en">Presentation</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://schema.org/SoftwareSourceCode -->
 
 
@@ -2907,17 +2929,6 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
     <owl:Class rdf:about="https://w3id.org/kim/hcrt/simulation">
         <rdfs:subClassOf rdf:resource="https://purl.org/ontology/modalia#LearningResourceType"/>
         <rdfs:label xml:lang="en">Simulation</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/kim/hcrt/slide -->
-
-
-    <owl:Class rdf:about="https://w3id.org/kim/hcrt/slide">
-        <rdfs:subClassOf rdf:resource="https://purl.org/ontology/modalia#MediaType"/>
-        <rdfs:comment xml:lang="en">A presentation / slides file.</rdfs:comment>
-        <rdfs:label xml:lang="en">Presentation</rdfs:label>
     </owl:Class>
     
 
