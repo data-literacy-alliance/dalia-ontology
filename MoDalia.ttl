@@ -26,7 +26,7 @@ The ontology is used for making a knowledge graph as a backend to platform for t
 The ontology is developed in OWL in Protege 5.5.0."""@en ;
                                       dc:title "MoDALIA Ontology"@en ;
                                       dcterms:abstract "The aim of DALIA project is to build a platform for learning material for Research Data Management (RDM) and Data Science. The platform is based on a knowledge graph. We introduce MoDalia, the base ontology of DALIA knowledge graph. Modalia inherits some modules from EduCOR. It includes also modelling of micro -credentials and certificates."@en ;
-                                      dcterms:modified "2025-02-06" ;
+                                      dcterms:modified "2025-02-11" ;
                                       dcterms:publisher "ULB TUDa – University and State Library, Technical University, Darmstadt, Germany" ;
                                       rdfs:comment """MoDALIA reuses elements from the following ontologies:
 - DCTERMS = Dublin Core Terms  
@@ -529,6 +529,13 @@ ec:consistsOfKnowledge rdf:type owl:ObjectProperty ;
                  rdfs:label "isTranslationOf"@en .
 
 
+###  https://purl.org/ontology/modalia#language
+:language rdf:type owl:ObjectProperty ;
+          rdfs:domain ec:EducationalResource ;
+          rdfs:range <http://lexvo.org/ontology#Language> ;
+          rdfs:comment "language of resource"@en .
+
+
 ###  https://purl.org/ontology/modalia#nextPhase
 :nextPhase rdf:type owl:ObjectProperty ;
            rdfs:domain :DataLifeCyclePhase ;
@@ -677,13 +684,6 @@ dcterms:issued rdf:type owl:DatatypeProperty ;
                rdfs:range xsd:dateTime ;
                rdfs:label "issued"@en ;
                <http://www.w3.org/2004/02/skos/core#definition> "Date of formal issuance (e.g., publication) of the resource."@en .
-
-
-###  http://purl.org/dc/terms/language
-dcterms:language rdf:type owl:DatatypeProperty ;
-                 rdfs:domain ec:EducationalResource ;
-                 rdfs:range xsd:language ;
-                 rdfs:label "language"@en .
 
 
 ###  http://purl.org/dc/terms/rights
@@ -1020,6 +1020,13 @@ schema:version rdf:type owl:DatatypeProperty ;
 ###  http://id.loc.gov/ontologies/bibframe/Contribution
 bf:Contribution rdf:type owl:Class ;
                 rdfs:comment "A contribution to an OER, including agent and role information."@en .
+
+
+###  http://lexvo.org/ontology#Language
+<http://lexvo.org/ontology#Language> rdf:type owl:Class ;
+                                     rdfs:label "Language"@en ;
+                                     rdfs:seeAlso "https://www.wikidata.org/wiki/Q315"@en ;
+                                     <http://www.w3.org/2004/02/skos/core#definition> "Natural language"@en .
 
 
 ###  http://purl.org/ontology/bibo/Article
@@ -1729,9 +1736,9 @@ schema:Organization rdf:type owl:Class ;
 ###  https://schema.org/PodcastSeries
 schema:PodcastSeries rdf:type owl:Class ;
                      rdfs:subClassOf :LearningResourceType ;
-                     rdfs:label "PodcastSeries"@en ;
+                     rdfs:label "Podcast Series"@en ;
                      <http://www.w3.org/2004/02/skos/core#definition> "A podcast is an episodic series of digital audio or video files which a user can download and listen to."@en ;
-                     <http://www.w3.org/2004/02/skos/core#prefLabel> "PodcastSeries"@en .
+                     <http://www.w3.org/2004/02/skos/core#prefLabel> "Podcast Series"@en .
 
 
 ###  https://schema.org/PresentationDigitalDocument
@@ -1746,7 +1753,8 @@ schema:PresentationDigitalDocument rdf:type owl:Class ;
 schema:SoftwareSourceCode rdf:type owl:Class ;
                           rdfs:subClassOf :LearningResourceType ;
                           rdfs:comment "Computer programming source code. Example: Full (compile ready) solutions, code snippet samples, scripts, templates."@en ;
-                          rdfs:label "Software Source Code"@en .
+                          rdfs:label "Software Source Code"@en ;
+                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Software Source Code"@en .
 
 
 ###  https://schema.org/Text
