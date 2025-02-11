@@ -8,7 +8,7 @@
 <https://purl.org/ontology/modalia#> <http://purl.org/dc/elements/1.1/description> "MoDALIA: An Ontology for Educational Material in Research Data Management (RDM) and Data Science.\nThe ontology is used for making a knowledge graph as a backend to platform for teaching, personal learning, and recommendation.\nThe ontology is developed in OWL in Protege 5.5.0."@en .
 <https://purl.org/ontology/modalia#> <http://purl.org/dc/elements/1.1/title> "MoDALIA Ontology"@en .
 <https://purl.org/ontology/modalia#> <http://purl.org/dc/terms/abstract> "The aim of DALIA project is to build a platform for learning material for Research Data Management (RDM) and Data Science. The platform is based on a knowledge graph. We introduce MoDalia, the base ontology of DALIA knowledge graph. Modalia inherits some modules from EduCOR. It includes also modelling of micro -credentials and certificates."@en .
-<https://purl.org/ontology/modalia#> <http://purl.org/dc/terms/modified> "2025-02-06" .
+<https://purl.org/ontology/modalia#> <http://purl.org/dc/terms/modified> "2025-02-11" .
 <https://purl.org/ontology/modalia#> <http://purl.org/dc/terms/publisher> "ULB TUDa – University and State Library, Technical University, Darmstadt, Germany" .
 <https://purl.org/ontology/modalia#> <http://www.w3.org/2000/01/rdf-schema#comment> "MoDALIA reuses elements from the following ontologies:\n- DCTERMS = Dublin Core Terms  \n- OWL = Web Ontology Language  \n- RDF = Resource Description Framework  \n- RDFS = RDF Schema  \n- SCHEMA = schema.org  \n- SKOS = Simple Knowledge Organization System  \n- EC = EduCOR"@en .
 <https://purl.org/ontology/modalia#> <http://www.w3.org/2000/01/rdf-schema#label> "MoDALIA" .
@@ -464,6 +464,12 @@ _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://purl.org/ontology/modalia#isTranslationOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://github.com/tibonto/educor#EducationalResource> .
 <https://purl.org/ontology/modalia#isTranslationOf> <http://www.w3.org/2000/01/rdf-schema#label> "isTranslationOf"@en .
 # 
+# https://purl.org/ontology/modalia#language
+<https://purl.org/ontology/modalia#language> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://purl.org/ontology/modalia#language> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
+<https://purl.org/ontology/modalia#language> <http://www.w3.org/2000/01/rdf-schema#range> <http://lexvo.org/ontology#Language> .
+<https://purl.org/ontology/modalia#language> <http://www.w3.org/2000/01/rdf-schema#comment> "language of resource"@en .
+# 
 # https://purl.org/ontology/modalia#nextPhase
 <https://purl.org/ontology/modalia#nextPhase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://purl.org/ontology/modalia#nextPhase> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/ontology/modalia#DataLifeCyclePhase> .
@@ -621,12 +627,6 @@ _:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://purl.org/dc/terms/issued> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
 <http://purl.org/dc/terms/issued> <http://www.w3.org/2000/01/rdf-schema#label> "issued"@en .
 <http://purl.org/dc/terms/issued> <http://www.w3.org/2004/02/skos/core#definition> "Date of formal issuance (e.g., publication) of the resource."@en .
-# 
-# http://purl.org/dc/terms/language
-<http://purl.org/dc/terms/language> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://purl.org/dc/terms/language> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
-<http://purl.org/dc/terms/language> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#language> .
-<http://purl.org/dc/terms/language> <http://www.w3.org/2000/01/rdf-schema#label> "language"@en .
 # 
 # http://purl.org/dc/terms/rights
 <http://purl.org/dc/terms/rights> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -954,6 +954,12 @@ _:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # http://id.loc.gov/ontologies/bibframe/Contribution
 <http://id.loc.gov/ontologies/bibframe/Contribution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://id.loc.gov/ontologies/bibframe/Contribution> <http://www.w3.org/2000/01/rdf-schema#comment> "A contribution to an OER, including agent and role information."@en .
+# 
+# http://lexvo.org/ontology#Language
+<http://lexvo.org/ontology#Language> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lexvo.org/ontology#Language> <http://www.w3.org/2000/01/rdf-schema#label> "Language"@en .
+<http://lexvo.org/ontology#Language> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.wikidata.org/wiki/Q315"@en .
+<http://lexvo.org/ontology#Language> <http://www.w3.org/2004/02/skos/core#definition> "Natural language"@en .
 # 
 # http://purl.org/ontology/bibo/Article
 <http://purl.org/ontology/bibo/Article> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -1568,9 +1574,9 @@ _:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # https://schema.org/PodcastSeries
 <https://schema.org/PodcastSeries> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://schema.org/PodcastSeries> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purl.org/ontology/modalia#LearningResourceType> .
-<https://schema.org/PodcastSeries> <http://www.w3.org/2000/01/rdf-schema#label> "PodcastSeries"@en .
+<https://schema.org/PodcastSeries> <http://www.w3.org/2000/01/rdf-schema#label> "Podcast Series"@en .
 <https://schema.org/PodcastSeries> <http://www.w3.org/2004/02/skos/core#definition> "A podcast is an episodic series of digital audio or video files which a user can download and listen to."@en .
-<https://schema.org/PodcastSeries> <http://www.w3.org/2004/02/skos/core#prefLabel> "PodcastSeries"@en .
+<https://schema.org/PodcastSeries> <http://www.w3.org/2004/02/skos/core#prefLabel> "Podcast Series"@en .
 # 
 # https://schema.org/PresentationDigitalDocument
 <https://schema.org/PresentationDigitalDocument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -1584,6 +1590,7 @@ _:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://schema.org/SoftwareSourceCode> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purl.org/ontology/modalia#LearningResourceType> .
 <https://schema.org/SoftwareSourceCode> <http://www.w3.org/2000/01/rdf-schema#comment> "Computer programming source code. Example: Full (compile ready) solutions, code snippet samples, scripts, templates."@en .
 <https://schema.org/SoftwareSourceCode> <http://www.w3.org/2000/01/rdf-schema#label> "Software Source Code"@en .
+<https://schema.org/SoftwareSourceCode> <http://www.w3.org/2004/02/skos/core#prefLabel> "Software Source Code"@en .
 # 
 # https://schema.org/Text
 <https://schema.org/Text> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
