@@ -220,6 +220,17 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
     
 
 
+    <!-- http://purl.org/dc/terms/language -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/language">
+        <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
+        <rdfs:range rdf:resource="http://lexvo.org/ontology#Language"/>
+        <rdfs:comment xml:lang="en">language of resource</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.org/dc/terms/license -->
 
 
@@ -815,17 +826,6 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
         <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:range rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:label xml:lang="en">isTranslationOf</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://purl.org/ontology/modalia#language -->
-
-
-    <owl:ObjectProperty rdf:about="https://purl.org/ontology/modalia#language">
-        <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
-        <rdfs:range rdf:resource="http://lexvo.org/ontology#Language"/>
-        <rdfs:comment xml:lang="en">language of resource</rdfs:comment>
     </owl:ObjectProperty>
     
 

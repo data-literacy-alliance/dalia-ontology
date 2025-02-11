@@ -139,6 +139,13 @@ bf:role rdf:type owl:ObjectProperty ;
         rdfs:label "role"@en .
 
 
+###  http://purl.org/dc/terms/language
+dcterms:language rdf:type owl:ObjectProperty ;
+                 rdfs:domain ec:EducationalResource ;
+                 rdfs:range <http://lexvo.org/ontology#Language> ;
+                 rdfs:comment "language of resource"@en .
+
+
 ###  http://purl.org/dc/terms/license
 dcterms:license rdf:type owl:ObjectProperty ;
                 rdfs:domain ec:EducationalResource ;
@@ -527,13 +534,6 @@ ec:consistsOfKnowledge rdf:type owl:ObjectProperty ;
                  rdfs:domain ec:EducationalResource ;
                  rdfs:range ec:EducationalResource ;
                  rdfs:label "isTranslationOf"@en .
-
-
-###  https://purl.org/ontology/modalia#language
-:language rdf:type owl:ObjectProperty ;
-          rdfs:domain ec:EducationalResource ;
-          rdfs:range <http://lexvo.org/ontology#Language> ;
-          rdfs:comment "language of resource"@en .
 
 
 ###  https://purl.org/ontology/modalia#nextPhase

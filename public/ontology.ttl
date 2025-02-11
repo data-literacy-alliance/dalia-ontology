@@ -131,6 +131,13 @@ xsd:duration rdf:type rdfs:Datatype .
                                              rdfs:label "role"@en .
 
 
+###  http://purl.org/dc/terms/language
+<http://purl.org/dc/terms/language> rdf:type owl:ObjectProperty ;
+                                    rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
+                                    rdfs:range <http://lexvo.org/ontology#Language> ;
+                                    rdfs:comment "language of resource"@en .
+
+
 ###  http://purl.org/dc/terms/license
 <http://purl.org/dc/terms/license> rdf:type owl:ObjectProperty ;
                                    rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
@@ -519,13 +526,6 @@ xsd:duration rdf:type rdfs:Datatype .
                  rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
                  rdfs:range <https://github.com/tibonto/educor#EducationalResource> ;
                  rdfs:label "isTranslationOf"@en .
-
-
-###  https://purl.org/ontology/modalia#language
-:language rdf:type owl:ObjectProperty ;
-          rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
-          rdfs:range <http://lexvo.org/ontology#Language> ;
-          rdfs:comment "language of resource"@en .
 
 
 ###  https://purl.org/ontology/modalia#nextPhase
