@@ -173,14 +173,6 @@ fabio:hasDiscipline rdf:type owl:ObjectProperty ;
                     rdfs:label "hasDiscipline" .
 
 
-###  http://usefulinc.com/ns/doap#repository
-<http://usefulinc.com/ns/doap#repository> rdf:type owl:ObjectProperty ;
-                                          rdfs:domain ec:EducationalResource ;
-                                          rdfs:range fabio:Repository ;
-                                          rdfs:comment "Property linking an OER to a repository hosting it."@en ;
-                                          rdfs:label "repository"@en .
-
-
 ###  https://github.com/tibonto/educor#consistsOfKnowledge
 ec:consistsOfKnowledge rdf:type owl:ObjectProperty ;
                        rdfs:domain ec:LearningPath ;
@@ -208,13 +200,6 @@ ec:consistsOfKnowledge rdf:type owl:ObjectProperty ;
                 rdfs:range :DataLifeCyclePhase ;
                 rdfs:isDefinedBy "defines the data life cycle phase that the resource covers"@en ;
                 rdfs:label "belongsToPhase" .
-
-
-###  https://purl.org/ontology/modalia#canCarryOut
-:canCarryOut rdf:type owl:ObjectProperty ;
-             rdfs:comment "RDMTask deprecated"^^xsd:string ;
-             rdfs:label "DEPRECATED canCarryOut" ;
-             owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.org/ontology/modalia#commentUserID
@@ -594,6 +579,13 @@ ec:consistsOfKnowledge rdf:type owl:ObjectProperty ;
           rdfs:label "storedIn"@en .
 
 
+###  https://purl.org/ontology/modalia#teachesSkill
+:teachesSkill rdf:type owl:ObjectProperty ;
+              rdfs:domain ec:EducationalResource ;
+              rdfs:range :Skill ;
+              rdfs:label "teaches skill"@en .
+
+
 ###  https://purl.org/ontology/modalia#userBookmarks
 :userBookmarks rdf:type owl:ObjectProperty ;
                rdfs:domain :User ;
@@ -623,13 +615,6 @@ schema:author rdf:type owl:ObjectProperty ;
               rdfs:range rdf:List ;
               rdfs:comment "Property linking an OER  to a list of authors."@en ;
               rdfs:label "author"@en .
-
-
-###  https://schema.org/teachesSkill
-schema:teachesSkill rdf:type owl:ObjectProperty ;
-                    rdfs:domain :LearningResourceType ;
-                    rdfs:range :Skill ;
-                    rdfs:label "teaches skill"@en .
 
 
 ###  https://w3id.org/citedcat-ap/isSupplementedBy
@@ -750,6 +735,12 @@ m4i:orcidId rdf:type owl:DatatypeProperty ;
                                                              "Open Researcher and Contributor ID: ein persistenter Identifikator, der eine in der Forschung tätige Person eindeutig identifiziert."@de ;
             <http://www.w3.org/2004/02/skos/core#prefLabel> "has ORCID ID"@en ,
                                                             "hat ORCID ID"@de .
+
+
+###  https://purl.org/ontology/modalia#authorUnordered
+:authorUnordered rdf:type owl:DatatypeProperty ;
+                 rdfs:domain ec:EducationalResource ;
+                 rdfs:range xsd:string .
 
 
 ###  https://purl.org/ontology/modalia#certificateEndDate
@@ -1064,13 +1055,6 @@ bibo:Webpage rdf:type owl:Class ;
              rdfs:subClassOf :LearningResourceType ;
              rdfs:label "Webpage"@en ;
              <http://www.w3.org/2004/02/skos/core#prefLabel> "Web page"@en .
-
-
-###  http://purl.org/spar/fabio/Repository
-fabio:Repository rdf:type owl:Class ;
-                 rdfs:isDefinedBy "Repository of OER"@en ;
-                 rdfs:label "Repository"@en ;
-                 <http://www.w3.org/2004/02/skos/core#example> "OERSI or Dataone"@en .
 
 
 ###  http://semanticscience.org/resource/SIO_000776
@@ -1545,13 +1529,6 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 ###  https://purl.org/ontology/modalia#RDMSubjectArea
 :RDMSubjectArea rdf:type owl:Class ;
                 rdfs:isDefinedBy "The subject area of an RDM topic"@en .
-
-
-###  https://purl.org/ontology/modalia#RDMTask
-:RDMTask rdf:type owl:Class ;
-         rdfs:label "RDMTask"@en ;
-         owl:deprecated "" ;
-         <http://www.w3.org/2004/02/skos/core#example> "Data Collection and Description"@en .
 
 
 ###  https://purl.org/ontology/modalia#RDMTopic
