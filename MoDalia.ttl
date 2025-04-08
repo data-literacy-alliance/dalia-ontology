@@ -26,7 +26,7 @@ The ontology is used for making a knowledge graph as a backend to platform for t
 The ontology is developed in OWL in Protege 5.5.0."""@en ;
                                       dc:title "MoDALIA Ontology"@en ;
                                       dcterms:abstract "The aim of DALIA project is to build a platform for learning material for Research Data Management (RDM) and Data Science. The platform is based on a knowledge graph. We introduce MoDalia, the base ontology of DALIA knowledge graph. Modalia inherits some modules from EduCOR. It includes also modelling of micro -credentials and certificates."@en ;
-                                      dcterms:modified "2025-02-11" ;
+                                      dcterms:modified "2025-04-08" ;
                                       dcterms:publisher "ULB TUDa – University and State Library, Technical University, Darmstadt, Germany" ;
                                       rdfs:comment """MoDALIA reuses elements from the following ontologies:
 - DCTERMS = Dublin Core Terms  
@@ -180,6 +180,13 @@ ec:consistsOfKnowledge rdf:type owl:ObjectProperty ;
                        rdfs:label "consistsOfKnowledge" .
 
 
+###  https://github.com/tibonto/educor#generatedFrom
+ec:generatedFrom rdf:type owl:ObjectProperty ;
+                 rdfs:domain ec:Recommendation ;
+                 rdfs:range :UserProfile ;
+                 rdfs:label "generatedFrom"@en .
+
+
 ###  https://purl.org/ontology/modalia#belongsToArea
 :belongsToArea rdf:type owl:ObjectProperty ;
                rdfs:domain :RDMTopic ;
@@ -260,12 +267,17 @@ ec:consistsOfKnowledge rdf:type owl:ObjectProperty ;
 :createdBy rdf:type owl:ObjectProperty ;
            rdfs:domain :Community ;
            rdfs:range :User ;
+           rdfs:comment "a property defining the user who created a community"@en ;
            rdfs:label "createdBy"@en .
 
 
 ###  https://purl.org/ontology/modalia#definesLearningPath
 :definesLearningPath rdf:type owl:ObjectProperty ;
-                     rdfs:domain :UserProfile ;
+                     rdfs:domain [ rdf:type owl:Class ;
+                                   owl:unionOf ( ec:Recommendation
+                                                 :UserProfile
+                                               )
+                                 ] ;
                      rdfs:range ec:LearningPath ;
                      rdfs:label "definesLearningPath" .
 
@@ -281,6 +293,7 @@ ec:consistsOfKnowledge rdf:type owl:ObjectProperty ;
 :essentialFor rdf:type owl:ObjectProperty ;
               rdfs:domain :Skill ;
               rdfs:range :Job ;
+              rdfs:comment "a property defining the essential skills for a certain job"@en ;
               rdfs:label "essentialFor"@en .
 
 
@@ -532,6 +545,7 @@ ec:consistsOfKnowledge rdf:type owl:ObjectProperty ;
 :optionalFor rdf:type owl:ObjectProperty ;
              rdfs:domain :Skill ;
              rdfs:range :Job ;
+             rdfs:comment "Defines the skills that are optional for a certain Job"@en ;
              rdfs:label "optionalFor"@en .
 
 
