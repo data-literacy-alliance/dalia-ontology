@@ -5,12 +5,12 @@
 <https://purl.org/ontology/modalia#> <http://purl.org/dc/elements/1.1/contributor> "Dr. Petra C. Steiner (https://orcid.org/0000-0001-8997-2620), Technical University of Darmstadt (https://ror.org/05n911h24, https://isni.org/isni/0000000109401669)" .
 <https://purl.org/ontology/modalia#> <http://purl.org/dc/elements/1.1/contributor> "Frank Lange (https://orcid.org/0000-0002-9346-6031), RWTH Aachen University (https://ror.org/04xfq0f34, https://isni.org/isni/000000010728696X)" .
 <https://purl.org/ontology/modalia#> <http://purl.org/dc/elements/1.1/creator> "BMBF DALIA project" .
-<https://purl.org/ontology/modalia#> <http://purl.org/dc/elements/1.1/description> "MoDALIA: An Ontology for Educational Material in Research Data Management (RDM) and Data Science.\nThe ontology is used for making a knowledge graph as a backend to platform for teaching, personal learning, and recommendation.\nThe ontology is developed in OWL in Protege 5.5.0."@en .
+<https://purl.org/ontology/modalia#> <http://purl.org/dc/elements/1.1/description> "MoDALIA: An Ontology for Educational Material in Research Data Management (RDM) and Data Science.\r\nThe ontology is used for making a knowledge graph as a backend to platform for teaching, personal learning, and recommendation.\r\nThe ontology is developed in OWL in Protege 5.5.0."@en .
 <https://purl.org/ontology/modalia#> <http://purl.org/dc/elements/1.1/title> "MoDALIA Ontology"@en .
 <https://purl.org/ontology/modalia#> <http://purl.org/dc/terms/abstract> "The aim of DALIA project is to build a platform for learning material for Research Data Management (RDM) and Data Science. The platform is based on a knowledge graph. We introduce MoDalia, the base ontology of DALIA knowledge graph. Modalia inherits some modules from EduCOR. It includes also modelling of micro -credentials and certificates."@en .
-<https://purl.org/ontology/modalia#> <http://purl.org/dc/terms/modified> "2025-04-08" .
+<https://purl.org/ontology/modalia#> <http://purl.org/dc/terms/modified> "2025-05-20" .
 <https://purl.org/ontology/modalia#> <http://purl.org/dc/terms/publisher> "ULB TUDa – University and State Library, Technical University, Darmstadt, Germany" .
-<https://purl.org/ontology/modalia#> <http://www.w3.org/2000/01/rdf-schema#comment> "MoDALIA reuses elements from the following ontologies:\n- DCTERMS = Dublin Core Terms  \n- OWL = Web Ontology Language  \n- RDF = Resource Description Framework  \n- RDFS = RDF Schema  \n- SCHEMA = schema.org  \n- SKOS = Simple Knowledge Organization System  \n- EC = EduCOR"@en .
+<https://purl.org/ontology/modalia#> <http://www.w3.org/2000/01/rdf-schema#comment> "MoDALIA reuses elements from the following ontologies:\r\n- DCTERMS = Dublin Core Terms  \r\n- OWL = Web Ontology Language  \r\n- RDF = Resource Description Framework  \r\n- RDFS = RDF Schema  \r\n- SCHEMA = schema.org  \r\n- SKOS = Simple Knowledge Organization System  \r\n- EC = EduCOR"@en .
 <https://purl.org/ontology/modalia#> <http://www.w3.org/2000/01/rdf-schema#label> "MoDALIA" .
 <https://purl.org/ontology/modalia#> <http://www.w3.org/2002/07/owl#versionInfo> "v1.0.0"@en .
 # 
@@ -110,6 +110,50 @@
 <http://id.loc.gov/ontologies/bibframe/role> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that links a contribution to a role (e.g., contactPerson, editor)."@en .
 <http://id.loc.gov/ontologies/bibframe/role> <http://www.w3.org/2000/01/rdf-schema#label> "role"@en .
 # 
+# http://purl.org/dc/terms/hasPart
+<http://purl.org/dc/terms/hasPart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/dc/terms/hasPart> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://purl.org/ontology/modalia#isRelatedTo> .
+<http://purl.org/dc/terms/hasPart> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/dc/terms/isPartOf> .
+<http://purl.org/dc/terms/hasPart> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
+<http://purl.org/dc/terms/hasPart> <http://www.w3.org/2000/01/rdf-schema#range> <https://github.com/tibonto/educor#EducationalResource> .
+<http://purl.org/dc/terms/hasPart> <http://www.w3.org/2000/01/rdf-schema#label> "hasPart"@en .
+<http://purl.org/dc/terms/hasPart> <http://www.w3.org/2004/02/skos/core#definition> "A related resource that is included either physically or logically in the described resource."@en .
+# 
+# http://purl.org/dc/terms/isPartOf
+<http://purl.org/dc/terms/isPartOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/dc/terms/isPartOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://purl.org/ontology/modalia#isRelatedTo> .
+<http://purl.org/dc/terms/isPartOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
+<http://purl.org/dc/terms/isPartOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://github.com/tibonto/educor#EducationalResource> .
+<http://purl.org/dc/terms/isPartOf> <http://www.w3.org/2000/01/rdf-schema#label> "isPartOf"@en .
+<http://purl.org/dc/terms/isPartOf> <http://www.w3.org/2004/02/skos/core#definition> "A related resource in which the described resource is physically or logically included."@en .
+# 
+# http://purl.org/dc/terms/isReferencedBy
+<http://purl.org/dc/terms/isReferencedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/dc/terms/isReferencedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://purl.org/ontology/modalia#isRelatedTo> .
+<http://purl.org/dc/terms/isReferencedBy> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/dc/terms/references> .
+<http://purl.org/dc/terms/isReferencedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
+<http://purl.org/dc/terms/isReferencedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://github.com/tibonto/educor#EducationalResource> .
+<http://purl.org/dc/terms/isReferencedBy> <http://www.w3.org/2000/01/rdf-schema#label> "isReferencedBy"@en .
+<http://purl.org/dc/terms/isReferencedBy> <http://www.w3.org/2004/02/skos/core#definition> "A related resource that references, cites, or otherwise points to the described resource."@en .
+# 
+# http://purl.org/dc/terms/isReplacedBy
+<http://purl.org/dc/terms/isReplacedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/dc/terms/isReplacedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://purl.org/ontology/modalia#isRelatedTo> .
+<http://purl.org/dc/terms/isReplacedBy> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/dc/terms/replaces> .
+<http://purl.org/dc/terms/isReplacedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
+<http://purl.org/dc/terms/isReplacedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://github.com/tibonto/educor#EducationalResource> .
+<http://purl.org/dc/terms/isReplacedBy> <http://www.w3.org/2000/01/rdf-schema#label> "isReplacedBy"@en .
+<http://purl.org/dc/terms/isReplacedBy> <http://www.w3.org/2004/02/skos/core#definition> "A related resource that supplants, displaces, or supersedes the described resource."@en .
+# 
+# http://purl.org/dc/terms/isVersionOf
+<http://purl.org/dc/terms/isVersionOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/dc/terms/isVersionOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://purl.org/ontology/modalia#isRelatedTo> .
+<http://purl.org/dc/terms/isVersionOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<http://purl.org/dc/terms/isVersionOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
+<http://purl.org/dc/terms/isVersionOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://github.com/tibonto/educor#EducationalResource> .
+<http://purl.org/dc/terms/isVersionOf> <http://www.w3.org/2000/01/rdf-schema#label> "isVersionOf"@en .
+<http://purl.org/dc/terms/isVersionOf> <http://www.w3.org/2004/02/skos/core#definition> "A related resource of which the described resource is a version, or edition. Can be used instead of isPreviousVersionOf and isNewVersionOf if the sequence of versioning is unclear."@en .
+# 
 # http://purl.org/dc/terms/language
 <http://purl.org/dc/terms/language> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/dc/terms/language> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
@@ -122,6 +166,22 @@
 <http://purl.org/dc/terms/license> <http://www.w3.org/2000/01/rdf-schema#range> <https://purl.org/ontology/modalia#License> .
 <http://purl.org/dc/terms/license> <http://www.w3.org/2000/01/rdf-schema#label> "license"@en .
 <http://purl.org/dc/terms/license> <http://www.w3.org/2004/02/skos/core#definition> "Property identifying the license of an Educational Resource"@en .
+# 
+# http://purl.org/dc/terms/references
+<http://purl.org/dc/terms/references> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/dc/terms/references> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://purl.org/ontology/modalia#isRelatedTo> .
+<http://purl.org/dc/terms/references> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
+<http://purl.org/dc/terms/references> <http://www.w3.org/2000/01/rdf-schema#range> <https://github.com/tibonto/educor#EducationalResource> .
+<http://purl.org/dc/terms/references> <http://www.w3.org/2000/01/rdf-schema#label> "references"@en .
+<http://purl.org/dc/terms/references> <http://www.w3.org/2004/02/skos/core#definition> "A related resource that is referenced, cited, or otherwise pointed to by the described resource."@en .
+# 
+# http://purl.org/dc/terms/replaces
+<http://purl.org/dc/terms/replaces> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/dc/terms/replaces> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://purl.org/ontology/modalia#isRelatedTo> .
+<http://purl.org/dc/terms/replaces> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
+<http://purl.org/dc/terms/replaces> <http://www.w3.org/2000/01/rdf-schema#range> <https://github.com/tibonto/educor#EducationalResource> .
+<http://purl.org/dc/terms/replaces> <http://www.w3.org/2000/01/rdf-schema#label> "replaces"@en .
+<http://purl.org/dc/terms/replaces> <http://www.w3.org/2004/02/skos/core#definition> "A related resource that is supplanted, displaced, or superseded by the described resource."@en .
 # 
 # http://purl.org/ontology/rec/core#recommender
 <http://purl.org/ontology/rec/core#recommender> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -156,16 +216,11 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://github.com/tibonto/educor#generatedFrom> <http://www.w3.org/2000/01/rdf-schema#range> <https://purl.org/ontology/modalia#UserProfile> .
 <https://github.com/tibonto/educor#generatedFrom> <http://www.w3.org/2000/01/rdf-schema#label> "generatedFrom"@en .
 # 
-# https://purl.org/ontology/modalia#belongsToArea
-<https://purl.org/ontology/modalia#belongsToArea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://purl.org/ontology/modalia#belongsToArea> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/ontology/modalia#RDMTopic> .
-<https://purl.org/ontology/modalia#belongsToArea> <http://www.w3.org/2000/01/rdf-schema#range> <https://purl.org/ontology/modalia#RDMSubjectArea> .
-<https://purl.org/ontology/modalia#belongsToArea> <http://www.w3.org/2000/01/rdf-schema#label> "belongsToArea"@en .
-# 
 # https://purl.org/ontology/modalia#belongsToCluster
 <https://purl.org/ontology/modalia#belongsToCluster> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://purl.org/ontology/modalia#belongsToCluster> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/ontology/modalia#RDMSubjectArea> .
-<https://purl.org/ontology/modalia#belongsToCluster> <http://www.w3.org/2000/01/rdf-schema#range> <https://purl.org/ontology/modalia#SubjectCluster> .
+<https://purl.org/ontology/modalia#belongsToCluster> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/ontology/modalia#RDMTopic> .
+<https://purl.org/ontology/modalia#belongsToCluster> <http://www.w3.org/2000/01/rdf-schema#range> <https://purl.org/ontology/modalia#RDMSubjectCluster> .
+<https://purl.org/ontology/modalia#belongsToCluster> <http://www.w3.org/2000/01/rdf-schema#comment> "relates RDM Topic to RDM Topic Cluster, similar to LZM"@en .
 <https://purl.org/ontology/modalia#belongsToCluster> <http://www.w3.org/2000/01/rdf-schema#label> "belongsToCluster"@en .
 # 
 # https://purl.org/ontology/modalia#belongsToPhase
@@ -242,6 +297,15 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://purl.org/ontology/modalia#definesLearningPath> <http://www.w3.org/2000/01/rdf-schema#range> <https://github.com/tibonto/educor#LearningPath> .
 <https://purl.org/ontology/modalia#definesLearningPath> <http://www.w3.org/2000/01/rdf-schema#label> "definesLearningPath" .
+# 
+# https://purl.org/ontology/modalia#describes
+<https://purl.org/ontology/modalia#describes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://purl.org/ontology/modalia#describes> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://purl.org/ontology/modalia#isRelatedTo> .
+<https://purl.org/ontology/modalia#describes> <http://www.w3.org/2002/07/owl#inverseOf> <https://purl.org/ontology/modalia#isDescribedBy> .
+<https://purl.org/ontology/modalia#describes> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
+<https://purl.org/ontology/modalia#describes> <http://www.w3.org/2000/01/rdf-schema#range> <https://github.com/tibonto/educor#EducationalResource> .
+<https://purl.org/ontology/modalia#describes> <http://www.w3.org/2000/01/rdf-schema#label> "describes"@en .
+<https://purl.org/ontology/modalia#describes> <http://www.w3.org/2004/02/skos/core#definition> "A related resource that is described by the resource."@en .
 # 
 # https://purl.org/ontology/modalia#educationalLevel
 <https://purl.org/ontology/modalia#educationalLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -394,6 +458,14 @@ _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://purl.org/ontology/modalia#hasTargetGroup> <http://www.w3.org/2000/01/rdf-schema#range> <https://purl.org/ontology/modalia#TargetGroup> .
 <https://purl.org/ontology/modalia#hasTargetGroup> <http://www.w3.org/2000/01/rdf-schema#label> "hasTargetGroup"@en .
 # 
+# https://purl.org/ontology/modalia#hasTranslation
+<https://purl.org/ontology/modalia#hasTranslation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://purl.org/ontology/modalia#hasTranslation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://purl.org/ontology/modalia#isRelatedTo> .
+<https://purl.org/ontology/modalia#hasTranslation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
+<https://purl.org/ontology/modalia#hasTranslation> <http://www.w3.org/2000/01/rdf-schema#range> <https://github.com/tibonto/educor#EducationalResource> .
+<https://purl.org/ontology/modalia#hasTranslation> <http://www.w3.org/2000/01/rdf-schema#label> "hasTranslation"@en .
+<https://purl.org/ontology/modalia#hasTranslation> <http://www.w3.org/2004/02/skos/core#definition> "A related resource that is a translation of the content of the described resource. When a resource is shared in one language, then later translated to another language, use “HasTranslation” to link the original resource to its translation. When a resource is released at the same time in multiple languages, use “HasTranslation” to connect the works to each other in both directions."@en .
+# 
 # https://purl.org/ontology/modalia#hasUser
 <https://purl.org/ontology/modalia#hasUser> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://purl.org/ontology/modalia#hasUser> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
@@ -401,26 +473,35 @@ _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://purl.org/ontology/modalia#hasUser> <http://www.w3.org/2000/01/rdf-schema#range> <https://purl.org/ontology/modalia#User> .
 <https://purl.org/ontology/modalia#hasUser> <http://www.w3.org/2000/01/rdf-schema#label> "hasUser"@en .
 # 
-# https://purl.org/ontology/modalia#isBasedOn
-<https://purl.org/ontology/modalia#isBasedOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://purl.org/ontology/modalia#isBasedOn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://purl.org/ontology/modalia#isRelatedTo> .
-<https://purl.org/ontology/modalia#isBasedOn> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
-<https://purl.org/ontology/modalia#isBasedOn> <http://www.w3.org/2000/01/rdf-schema#range> <https://github.com/tibonto/educor#EducationalResource> .
-<https://purl.org/ontology/modalia#isBasedOn> <http://www.w3.org/2000/01/rdf-schema#comment> "the object resource is a prerequisite"@en .
-<https://purl.org/ontology/modalia#isBasedOn> <http://www.w3.org/2000/01/rdf-schema#label> "isBasedOn"@en .
-# 
 # https://purl.org/ontology/modalia#isCoveredIn
 <https://purl.org/ontology/modalia#isCoveredIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://purl.org/ontology/modalia#isCoveredIn> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/ontology/modalia#RDMTopic> .
 <https://purl.org/ontology/modalia#isCoveredIn> <http://www.w3.org/2000/01/rdf-schema#range> <https://purl.org/ontology/modalia#LearningGoalMatrixEntry> .
 <https://purl.org/ontology/modalia#isCoveredIn> <http://www.w3.org/2000/01/rdf-schema#label> "isCoveredIn"@en .
 # 
+# https://purl.org/ontology/modalia#isDescribedBy
+<https://purl.org/ontology/modalia#isDescribedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://purl.org/ontology/modalia#isDescribedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://purl.org/ontology/modalia#isRelatedTo> .
+<https://purl.org/ontology/modalia#isDescribedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
+<https://purl.org/ontology/modalia#isDescribedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://github.com/tibonto/educor#EducationalResource> .
+<https://purl.org/ontology/modalia#isDescribedBy> <http://www.w3.org/2000/01/rdf-schema#label> "isDescribedBy"@en .
+<https://purl.org/ontology/modalia#isDescribedBy> <http://www.w3.org/2004/02/skos/core#definition> "A related resource that provides a description (detailed account) of the described resource. This can be a manual, an instruction, a documentation, a cookbook, a README file, or something similar."@en .
+# 
 # https://purl.org/ontology/modalia#isDuplicateOf
 <https://purl.org/ontology/modalia#isDuplicateOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://purl.org/ontology/modalia#isDuplicateOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://purl.org/ontology/modalia#isRelatedTo> .
+<https://purl.org/ontology/modalia#isDuplicateOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
 <https://purl.org/ontology/modalia#isDuplicateOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
 <https://purl.org/ontology/modalia#isDuplicateOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://github.com/tibonto/educor#EducationalResource> .
 <https://purl.org/ontology/modalia#isDuplicateOf> <http://www.w3.org/2000/01/rdf-schema#label> "isDuplicateOf"@en .
+<https://purl.org/ontology/modalia#isDuplicateOf> <http://www.w3.org/2004/02/skos/core#definition> "Dublicated metadata in DALIA platform"@en .
+# 
+# https://purl.org/ontology/modalia#isIdenticalTo
+<https://purl.org/ontology/modalia#isIdenticalTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://purl.org/ontology/modalia#isIdenticalTo> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://purl.org/ontology/modalia#isRelatedTo> .
+<https://purl.org/ontology/modalia#isIdenticalTo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
+<https://purl.org/ontology/modalia#isIdenticalTo> <http://www.w3.org/2000/01/rdf-schema#range> <https://github.com/tibonto/educor#EducationalResource> .
+<https://purl.org/ontology/modalia#isIdenticalTo> <http://www.w3.org/2000/01/rdf-schema#label> "isIdenticalTo"@en .
+<https://purl.org/ontology/modalia#isIdenticalTo> <http://www.w3.org/2004/02/skos/core#definition> "The related work is the same as the described resource but is saved on another location, maybe another institution."@en .
 # 
 # https://purl.org/ontology/modalia#isLessProficientThan
 <https://purl.org/ontology/modalia#isLessProficientThan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -447,24 +528,29 @@ _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # https://purl.org/ontology/modalia#isNewVersionOf
 <https://purl.org/ontology/modalia#isNewVersionOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://purl.org/ontology/modalia#isNewVersionOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://purl.org/ontology/modalia#isRelatedTo> .
+<https://purl.org/ontology/modalia#isNewVersionOf> <http://www.w3.org/2002/07/owl#inverseOf> <https://purl.org/ontology/modalia#isPreviousVersionOf> .
 <https://purl.org/ontology/modalia#isNewVersionOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
 <https://purl.org/ontology/modalia#isNewVersionOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
 <https://purl.org/ontology/modalia#isNewVersionOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
 <https://purl.org/ontology/modalia#isNewVersionOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://github.com/tibonto/educor#EducationalResource> .
 <https://purl.org/ontology/modalia#isNewVersionOf> <http://www.w3.org/2000/01/rdf-schema#label> "isNewVersionOf"@en .
+<https://purl.org/ontology/modalia#isNewVersionOf> <http://www.w3.org/2004/02/skos/core#definition> "The related work is a previous version, or edition of the described resource, of which the described resource has been modified or updated."@en .
 # 
-# https://purl.org/ontology/modalia#isPartOf
-<https://purl.org/ontology/modalia#isPartOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://purl.org/ontology/modalia#isPartOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://purl.org/ontology/modalia#isRelatedTo> .
-<https://purl.org/ontology/modalia#isPartOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
-<https://purl.org/ontology/modalia#isPartOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://github.com/tibonto/educor#EducationalResource> .
-<https://purl.org/ontology/modalia#isPartOf> <http://www.w3.org/2000/01/rdf-schema#label> "isPartOf"@en .
+# https://purl.org/ontology/modalia#isPreviousVersionOf
+<https://purl.org/ontology/modalia#isPreviousVersionOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://purl.org/ontology/modalia#isPreviousVersionOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://purl.org/ontology/modalia#isRelatedTo> .
+<https://purl.org/ontology/modalia#isPreviousVersionOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
+<https://purl.org/ontology/modalia#isPreviousVersionOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://github.com/tibonto/educor#EducationalResource> .
+<https://purl.org/ontology/modalia#isPreviousVersionOf> <http://www.w3.org/2000/01/rdf-schema#label> "isPreviousVersionOf"@en .
+<https://purl.org/ontology/modalia#isPreviousVersionOf> <http://www.w3.org/2004/02/skos/core#definition> "The related work is a new version, or edition of the described resource, where the new version has been modified or updated."@en .
 # 
 # https://purl.org/ontology/modalia#isRelatedTo
 <https://purl.org/ontology/modalia#isRelatedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://purl.org/ontology/modalia#isRelatedTo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
 <https://purl.org/ontology/modalia#isRelatedTo> <http://www.w3.org/2000/01/rdf-schema#range> <https://github.com/tibonto/educor#EducationalResource> .
 <https://purl.org/ontology/modalia#isRelatedTo> <http://www.w3.org/2000/01/rdf-schema#label> "isRelatedTo"@en .
+<https://purl.org/ontology/modalia#isRelatedTo> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://purl.org/dc/terms/relation" .
+<https://purl.org/ontology/modalia#isRelatedTo> <http://www.w3.org/2004/02/skos/core#definition> "The relation(s) to other educational resources. It is required to identify the related resource by means of a URI."@en .
 # 
 # https://purl.org/ontology/modalia#isTranslationOf
 <https://purl.org/ontology/modalia#isTranslationOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -472,6 +558,7 @@ _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://purl.org/ontology/modalia#isTranslationOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
 <https://purl.org/ontology/modalia#isTranslationOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://github.com/tibonto/educor#EducationalResource> .
 <https://purl.org/ontology/modalia#isTranslationOf> <http://www.w3.org/2000/01/rdf-schema#label> "isTranslationOf"@en .
+<https://purl.org/ontology/modalia#isTranslationOf> <http://www.w3.org/2004/02/skos/core#definition> "The related resource that this OER has been translated from. When a resource is shared in one language, then later translated to another language, use “IsTranslationOf” to link the translation to the original."@en .
 # 
 # https://purl.org/ontology/modalia#nextPhase
 <https://purl.org/ontology/modalia#nextPhase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -568,12 +655,47 @@ _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://schema.org/author> <http://www.w3.org/2000/01/rdf-schema#comment> "Property linking an OER  to a list of authors."@en .
 <https://schema.org/author> <http://www.w3.org/2000/01/rdf-schema#label> "author"@en .
 # 
+# https://schema.org/isBasedOn
+<https://schema.org/isBasedOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://schema.org/isBasedOn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://purl.org/ontology/modalia#isRelatedTo> .
+<https://schema.org/isBasedOn> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
+<https://schema.org/isBasedOn> <http://www.w3.org/2000/01/rdf-schema#range> <https://github.com/tibonto/educor#EducationalResource> .
+<https://schema.org/isBasedOn> <http://www.w3.org/2000/01/rdf-schema#label> "isBasedOn"@en .
+<https://schema.org/isBasedOn> <http://www.w3.org/2004/02/skos/core#definition> "A resource from which this work is derived or from which it is a modification or adaptation."@en .
+# 
+# https://w3id.org/citedcat-ap/continues
+<https://w3id.org/citedcat-ap/continues> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/citedcat-ap/continues> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://purl.org/ontology/modalia#isRelatedTo> .
+<https://w3id.org/citedcat-ap/continues> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/citedcat-ap/isContinuedBy> .
+<https://w3id.org/citedcat-ap/continues> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
+<https://w3id.org/citedcat-ap/continues> <http://www.w3.org/2000/01/rdf-schema#range> <https://github.com/tibonto/educor#EducationalResource> .
+<https://w3id.org/citedcat-ap/continues> <http://www.w3.org/2000/01/rdf-schema#label> "continues"@en .
+<https://w3id.org/citedcat-ap/continues> <http://www.w3.org/2004/02/skos/core#definition> "A related resource which is the direct predecessor of the described resource. This applies to a story, a series of lessons, a serial, a journal etc. Predecessors typically form part of a common whole - such as a  series of lectures."@en .
+# 
+# https://w3id.org/citedcat-ap/isContinuedBy
+<https://w3id.org/citedcat-ap/isContinuedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/citedcat-ap/isContinuedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://purl.org/ontology/modalia#isRelatedTo> .
+<https://w3id.org/citedcat-ap/isContinuedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
+<https://w3id.org/citedcat-ap/isContinuedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://github.com/tibonto/educor#EducationalResource> .
+<https://w3id.org/citedcat-ap/isContinuedBy> <http://www.w3.org/2000/01/rdf-schema#label> "isContinuedBy"@en .
+<https://w3id.org/citedcat-ap/isContinuedBy> <http://www.w3.org/2004/02/skos/core#definition> "A related resource which is the direct continuation of the described resource. This applies to a story, a series of lessons, a serial, a journal etc. Successors typically form part of a common whole - such as a  series of lectures."@en .
+# 
+# https://w3id.org/citedcat-ap/isSupplementTo
+<https://w3id.org/citedcat-ap/isSupplementTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/citedcat-ap/isSupplementTo> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://purl.org/ontology/modalia#isRelatedTo> .
+<https://w3id.org/citedcat-ap/isSupplementTo> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/citedcat-ap/isSupplementedBy> .
+<https://w3id.org/citedcat-ap/isSupplementTo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
+<https://w3id.org/citedcat-ap/isSupplementTo> <http://www.w3.org/2000/01/rdf-schema#range> <https://github.com/tibonto/educor#EducationalResource> .
+<https://w3id.org/citedcat-ap/isSupplementTo> <http://www.w3.org/2000/01/rdf-schema#label> "isSupplementTo"@en .
+<https://w3id.org/citedcat-ap/isSupplementTo> <http://www.w3.org/2004/02/skos/core#definition> "Resource that is complemented by the described augmenting resource."@en .
+# 
 # https://w3id.org/citedcat-ap/isSupplementedBy
 <https://w3id.org/citedcat-ap/isSupplementedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/citedcat-ap/isSupplementedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://purl.org/ontology/modalia#isRelatedTo> .
 <https://w3id.org/citedcat-ap/isSupplementedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
 <https://w3id.org/citedcat-ap/isSupplementedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://github.com/tibonto/educor#EducationalResource> .
 <https://w3id.org/citedcat-ap/isSupplementedBy> <http://www.w3.org/2000/01/rdf-schema#label> "isSupplementedBy"@en .
+<https://w3id.org/citedcat-ap/isSupplementedBy> <http://www.w3.org/2004/02/skos/core#definition> "Resource that complements the predominant described resource."@en .
 # 
 # 
 # 
@@ -1412,9 +1534,10 @@ _:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://purl.org/ontology/modalia#RDMSkill> <http://www.w3.org/2000/01/rdf-schema#label> "RDMSkill"@en .
 <https://purl.org/ontology/modalia#RDMSkill> <http://www.w3.org/2004/02/skos/core#definition> "The ability to carry out tasks."@en .
 # 
-# https://purl.org/ontology/modalia#RDMSubjectArea
-<https://purl.org/ontology/modalia#RDMSubjectArea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://purl.org/ontology/modalia#RDMSubjectArea> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "The subject area of an RDM topic"@en .
+# https://purl.org/ontology/modalia#RDMSubjectCluster
+<https://purl.org/ontology/modalia#RDMSubjectCluster> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purl.org/ontology/modalia#RDMSubjectCluster> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "Cluster of RDM topics areas"@en .
+<https://purl.org/ontology/modalia#RDMSubjectCluster> <http://www.w3.org/2000/01/rdf-schema#label> "RDMSubjectCluster"@en .
 # 
 # https://purl.org/ontology/modalia#RDMTopic
 <https://purl.org/ontology/modalia#RDMTopic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -1458,11 +1581,6 @@ _:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://purl.org/ontology/modalia#StudentSchool> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purl.org/ontology/modalia#TargetGroup> .
 <https://purl.org/ontology/modalia#StudentSchool> <http://www.w3.org/2000/01/rdf-schema#label> "Student (School)"@en .
 <https://purl.org/ontology/modalia#StudentSchool> <http://www.w3.org/2004/02/skos/core#prefLabel> "Student (School)"@en .
-# 
-# https://purl.org/ontology/modalia#SubjectCluster
-<https://purl.org/ontology/modalia#SubjectCluster> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://purl.org/ontology/modalia#SubjectCluster> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "Clusters of subject areas"@en .
-<https://purl.org/ontology/modalia#SubjectCluster> <http://www.w3.org/2000/01/rdf-schema#label> "SubjectCluster"@en .
 # 
 # https://purl.org/ontology/modalia#TargetGroup
 <https://purl.org/ontology/modalia#TargetGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
