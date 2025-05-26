@@ -28,12 +28,12 @@
       "contributor" : [ {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "Dr. Petra C. Steiner (https://orcid.org/0000-0001-8997-2620), Technical University of Darmstadt (https://ror.org/05n911h24, https://isni.org/isni/0000000109401669)",
+        "value" : "Dr. Abdelmoneim Amer Desouki (https://orcid.org/0000-0003-2083-1277), Technical University of Darmstadt (https://ror.org/05n911h24, https://isni.org/isni/0000000109401669)",
         "type" : "label"
       }, {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "Frank Lange (https://orcid.org/0000-0002-9346-6031), RWTH Aachen University (https://ror.org/04xfq0f34, https://isni.org/isni/000000010728696X)",
+        "value" : "Dr. Petra C. Steiner (https://orcid.org/0000-0001-8997-2620), Technical University of Darmstadt (https://ror.org/05n911h24, https://isni.org/isni/0000000109401669)",
         "type" : "label"
       }, {
         "identifier" : "contributor",
@@ -43,7 +43,7 @@
       }, {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "Dr. Abdelmoneim Amer Desouki (https://orcid.org/0000-0003-2083-1277), Technical University of Darmstadt (https://ror.org/05n911h24, https://isni.org/isni/0000000109401669)",
+        "value" : "Frank Lange (https://orcid.org/0000-0002-9346-6031), RWTH Aachen University (https://ror.org/04xfq0f34, https://isni.org/isni/000000010728696X)",
         "type" : "label"
       } ],
       "publisher" : [ {
@@ -58,16 +58,16 @@
         "value" : "2025-05-20",
         "type" : "label"
       } ],
-      "abstract" : [ {
-        "identifier" : "abstract",
-        "language" : "en",
-        "value" : "The aim of DALIA project is to build a platform for learning material for Research Data Management (RDM) and Data Science. The platform is based on a knowledge graph. We introduce MoDalia, the base ontology of DALIA knowledge graph. Modalia inherits some modules from EduCOR. It includes also modelling of micro -credentials and certificates.",
-        "type" : "label"
-      } ],
       "versionInfo" : [ {
         "identifier" : "versionInfo",
         "language" : "en",
         "value" : "v1.0.0",
+        "type" : "label"
+      } ],
+      "abstract" : [ {
+        "identifier" : "abstract",
+        "language" : "en",
+        "value" : "The aim of DALIA project is to build a platform for learning material for Research Data Management (RDM) and Data Science. The platform is based on a knowledge graph. We introduce MoDalia, the base ontology of DALIA knowledge graph. Modalia inherits some modules from EduCOR. It includes also modelling of micro -credentials and certificates.",
         "type" : "label"
       } ],
       "title" : [ {
@@ -80,7 +80,7 @@
   },
   "namespace" : [ ],
   "class" : [ {
-    "id" : "3",
+    "id" : "6",
     "type" : "owl:Class"
   }, {
     "id" : "23",
@@ -155,7 +155,7 @@
     "id" : "84",
     "type" : "owl:Class"
   }, {
-    "id" : "112",
+    "id" : "109",
     "type" : "owl:Class"
   }, {
     "id" : "2",
@@ -170,7 +170,7 @@
     "id" : "40",
     "type" : "owl:Class"
   }, {
-    "id" : "7",
+    "id" : "5",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "27",
@@ -287,26 +287,23 @@
     "id" : "215",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "216",
+    "id" : "173",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "119",
     "type" : "owl:Class"
   }, {
+    "id" : "218",
+    "type" : "owl:Class"
+  }, {
     "id" : "219",
     "type" : "owl:Class"
   }, {
-    "id" : "220",
-    "type" : "owl:Class"
-  }, {
-    "id" : "173",
+    "id" : "222",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "100",
     "type" : "owl:Class"
-  }, {
-    "id" : "137",
-    "type" : "rdfs:Datatype"
   }, {
     "id" : "179",
     "type" : "rdfs:Datatype"
@@ -317,16 +314,19 @@
     "id" : "224",
     "type" : "rdfs:Literal"
   }, {
+    "id" : "137",
+    "type" : "rdfs:Datatype"
+  }, {
     "id" : "225",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "226",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "227",
+    "id" : "98",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "98",
+    "id" : "227",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "154",
@@ -353,7 +353,7 @@
     "id" : "249",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "92",
+    "id" : "90",
     "type" : "rdfs:Literal"
   }, {
     "id" : "250",
@@ -419,7 +419,7 @@
     "id" : "136",
     "type" : "owl:Class"
   }, {
-    "id" : "218",
+    "id" : "217",
     "type" : "owl:Class"
   }, {
     "id" : "36",
@@ -437,13 +437,13 @@
     "id" : "204",
     "type" : "owl:Class"
   }, {
-    "id" : "6",
+    "id" : "4",
     "type" : "owl:Class"
   }, {
     "id" : "145",
     "type" : "owl:Class"
   }, {
-    "id" : "309",
+    "id" : "311",
     "type" : "owl:Class"
   }, {
     "id" : "288",
@@ -455,16 +455,16 @@
     "id" : "263",
     "type" : "owl:Class"
   }, {
-    "id" : "301",
+    "id" : "302",
     "type" : "owl:Class"
   }, {
     "id" : "97",
     "type" : "owl:Class"
   }, {
-    "id" : "282",
+    "id" : "80",
     "type" : "owl:Class"
   }, {
-    "id" : "80",
+    "id" : "282",
     "type" : "owl:Class"
   }, {
     "id" : "143",
@@ -518,13 +518,13 @@
     "id" : "169",
     "type" : "owl:Class"
   }, {
-    "id" : "292",
+    "id" : "293",
     "type" : "owl:Class"
   }, {
-    "id" : "111",
+    "id" : "112",
     "type" : "owl:Class"
   }, {
-    "id" : "290",
+    "id" : "291",
     "type" : "owl:Class"
   }, {
     "id" : "167",
@@ -533,13 +533,13 @@
     "id" : "63",
     "type" : "owl:Class"
   }, {
-    "id" : "110",
-    "type" : "owl:Class"
-  }, {
-    "id" : "304",
+    "id" : "111",
     "type" : "owl:Class"
   }, {
     "id" : "266",
+    "type" : "owl:Class"
+  }, {
+    "id" : "305",
     "type" : "owl:Class"
   }, {
     "id" : "9",
@@ -563,13 +563,13 @@
     "id" : "165",
     "type" : "owl:Class"
   }, {
-    "id" : "222",
+    "id" : "221",
     "type" : "owl:unionOf"
   }, {
-    "id" : "299",
+    "id" : "300",
     "type" : "owl:unionOf"
   }, {
-    "id" : "89",
+    "id" : "92",
     "type" : "owl:Class"
   }, {
     "id" : "331",
@@ -578,13 +578,13 @@
     "id" : "16",
     "type" : "owl:Class"
   }, {
-    "id" : "172",
-    "type" : "owl:Class"
-  }, {
     "id" : "120",
     "type" : "owl:Class"
   }, {
-    "id" : "4",
+    "id" : "172",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
     "type" : "owl:Class"
   }, {
     "id" : "147",
@@ -596,7 +596,7 @@
     "id" : "232",
     "type" : "owl:Class"
   }, {
-    "id" : "306",
+    "id" : "307",
     "type" : "owl:Class"
   }, {
     "id" : "175",
@@ -621,8 +621,8 @@
     "comment" : {
       "en" : "Research Data Managment Skill"
     },
-    "id" : "3",
-    "superClasses" : [ "4" ]
+    "id" : "6",
+    "superClasses" : [ "7" ]
   }, {
     "iri" : "https://purl.org/ontology/modalia#Discipline",
     "baseIri" : "https://purl.org/ontology/modalia",
@@ -837,8 +837,8 @@
     "baseIri" : "http://lexvo.org/ontology",
     "instances" : 0,
     "annotations" : {
-      "definition" : [ {
-        "identifier" : "definition",
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
         "language" : "en",
         "value" : "Natural language",
         "type" : "label"
@@ -1131,7 +1131,7 @@
       "IRI-based" : "Workshop",
       "en" : "Workshop"
     },
-    "id" : "112",
+    "id" : "109",
     "superClasses" : [ "36" ]
   }, {
     "iri" : "https://purl.org/ontology/modalia#LearningLevel",
@@ -1194,7 +1194,7 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "7",
+    "id" : "5",
     "label" : {
       "IRI-based" : "anyURI"
     }
@@ -1244,7 +1244,7 @@
     "id" : "105"
   }, {
     "instances" : 0,
-    "union" : [ "89", "180" ],
+    "union" : [ "92", "180" ],
     "attributes" : [ "anonymous", "union" ],
     "id" : "114"
   }, {
@@ -1263,7 +1263,7 @@
     }
   }, {
     "instances" : 0,
-    "union" : [ "89", "72", "19" ],
+    "union" : [ "92", "72", "19" ],
     "attributes" : [ "anonymous", "union" ],
     "id" : "94"
   }, {
@@ -1291,6 +1291,14 @@
     "iri" : "https://purl.org/ontology/modalia#MediaType",
     "baseIri" : "https://purl.org/ontology/modalia",
     "instances" : 0,
+    "annotations" : {
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "General type of data content encoded in a computer file. Digital media type of the resource. To be used with user preferences according to VARK learning style.",
+        "type" : "label"
+      } ]
+    },
     "label" : {
       "IRI-based" : "MediaType",
       "en" : "MediaType"
@@ -1320,12 +1328,12 @@
     }
   }, {
     "instances" : 0,
-    "union" : [ "89", "72" ],
+    "union" : [ "92", "72" ],
     "attributes" : [ "anonymous", "union" ],
     "id" : "188"
   }, {
     "instances" : 0,
-    "union" : [ "65", "100", "6" ],
+    "union" : [ "65", "100", "4" ],
     "attributes" : [ "anonymous", "union" ],
     "id" : "189"
   }, {
@@ -1339,7 +1347,7 @@
     "id" : "190"
   }, {
     "instances" : 0,
-    "union" : [ "89", "72", "19" ],
+    "union" : [ "92", "72", "19" ],
     "attributes" : [ "anonymous", "union" ],
     "id" : "191"
   }, {
@@ -1446,11 +1454,11 @@
       "IRI-based" : "string"
     }
   }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#int",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "iri" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+    "baseIri" : "http://www.w3.org/1999/02/22-rdf-syntax-ns",
     "id" : "209",
     "label" : {
-      "IRI-based" : "int"
+      "IRI-based" : "langString"
     }
   }, {
     "iri" : "https://schema.org/SoftwareSourceCode",
@@ -1475,11 +1483,11 @@
     "id" : "210",
     "superClasses" : [ "36" ]
   }, {
-    "iri" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
-    "baseIri" : "http://www.w3.org/1999/02/22-rdf-syntax-ns",
+    "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
     "id" : "211",
     "label" : {
-      "IRI-based" : "langString"
+      "IRI-based" : "anyURI"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
@@ -1489,25 +1497,25 @@
       "IRI-based" : "string"
     }
   }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "iri" : "http://www.w3.org/2001/XMLSchema#int",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
     "id" : "214",
     "label" : {
-      "IRI-based" : "string"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "215",
-    "label" : {
-      "IRI-based" : "anyURI"
+      "IRI-based" : "int"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#int",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "216",
+    "id" : "215",
     "label" : {
       "IRI-based" : "int"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "173",
+    "label" : {
+      "IRI-based" : "integer"
     }
   }, {
     "iri" : "https://purl.org/ontology/modalia#CuratorRole",
@@ -1542,7 +1550,7 @@
       "en" : "Podcast Series"
     },
     "attributes" : [ "external" ],
-    "id" : "219",
+    "id" : "218",
     "superClasses" : [ "36" ]
   }, {
     "iri" : "https://purl.org/ontology/modalia#Poster",
@@ -1563,12 +1571,12 @@
     "comment" : {
       "en" : "Class representing OERs that are Posters"
     },
-    "id" : "220",
+    "id" : "219",
     "superClasses" : [ "36" ]
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#integer",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "173",
+    "id" : "222",
     "label" : {
       "IRI-based" : "integer"
     }
@@ -1577,8 +1585,8 @@
     "baseIri" : "https://github.com/tibonto/educor",
     "instances" : 0,
     "annotations" : {
-      "definition" : [ {
-        "identifier" : "definition",
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
         "language" : "en",
         "value" : "The learning preference of the user based on the learning styles theory",
         "type" : "label"
@@ -1601,13 +1609,6 @@
     "attributes" : [ "external" ],
     "id" : "100"
   }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "137",
-    "label" : {
-      "IRI-based" : "dateTime"
-    }
-  }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
     "id" : "179",
@@ -1615,11 +1616,11 @@
       "IRI-based" : "string"
     }
   }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
     "id" : "223",
     "label" : {
-      "IRI-based" : "integer"
+      "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
@@ -1630,23 +1631,23 @@
       "undefined" : "Literal"
     }
   }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "225",
+    "id" : "137",
     "label" : {
-      "IRI-based" : "string"
+      "IRI-based" : "dateTime"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#dateTimeStamp",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "226",
+    "id" : "225",
     "label" : {
       "IRI-based" : "dateTimeStamp"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "227",
+    "id" : "226",
     "label" : {
       "IRI-based" : "string"
     }
@@ -1654,6 +1655,13 @@
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
     "id" : "98",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "227",
     "label" : {
       "IRI-based" : "string"
     }
@@ -1672,8 +1680,8 @@
     "baseIri" : "http://edamontology.org",
     "instances" : 0,
     "annotations" : {
-      "definition" : [ {
-        "identifier" : "definition",
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
         "language" : "en",
         "value" : "Kind of data being managed",
         "type" : "label"
@@ -1755,7 +1763,7 @@
     }
   }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
-    "id" : "92",
+    "id" : "90",
     "label" : {
       "IRI-based" : "Literal",
       "undefined" : "Literal"
@@ -1966,8 +1974,8 @@
     "baseIri" : "https://github.com/tibonto/educor",
     "instances" : 0,
     "annotations" : {
-      "definition" : [ {
-        "identifier" : "definition",
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
         "language" : "en",
         "value" : "Any educational resources online or offline",
         "type" : "label"
@@ -1983,7 +1991,7 @@
       "IRI-based" : "EducationalResource",
       "en" : "EducationalResource"
     },
-    "subClasses" : [ "110" ],
+    "subClasses" : [ "111" ],
     "attributes" : [ "external" ],
     "id" : "72"
   }, {
@@ -2056,7 +2064,7 @@
     "comment" : {
       "en" : "Person, service or organisation that provides the OER"
     },
-    "id" : "218"
+    "id" : "217"
   }, {
     "iri" : "https://purl.org/ontology/modalia#LearningResourceType",
     "baseIri" : "https://purl.org/ontology/modalia",
@@ -2073,7 +2081,7 @@
       "IRI-based" : "LearningResourceType",
       "en" : "LearningResourceType"
     },
-    "subClasses" : [ "247", "195", "123", "88", "76", "232", "219", "112", "234", "304", "301", "220", "306", "196", "64", "292", "176", "82", "290", "288", "35", "258", "210" ],
+    "subClasses" : [ "247", "195", "123", "88", "76", "232", "218", "109", "234", "305", "302", "219", "307", "196", "64", "293", "176", "82", "291", "288", "35", "258", "210" ],
     "id" : "36"
   }, {
     "iri" : "https://purl.org/ontology/modalia#TargetGroup",
@@ -2122,8 +2130,8 @@
     "baseIri" : "https://github.com/tibonto/educor",
     "instances" : 0,
     "annotations" : {
-      "definition" : [ {
-        "identifier" : "definition",
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
         "language" : "en",
         "value" : "The user's history activity in the system",
         "type" : "label"
@@ -2210,7 +2218,7 @@
       "IRI-based" : "Certificate",
       "undefined" : "Certificate"
     },
-    "id" : "6"
+    "id" : "4"
   }, {
     "iri" : "https://schema.org/PresentationDigitalDocument",
     "baseIri" : "https://schema.org",
@@ -2238,8 +2246,8 @@
     "baseIri" : "http://semanticscience.org/resource",
     "instances" : 0,
     "annotations" : {
-      "definition" : [ {
-        "identifier" : "definition",
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
         "language" : "en",
         "value" : "an object that is described (chemical substance, living organism, building, ...)",
         "type" : "label"
@@ -2256,7 +2264,7 @@
       "en" : "Object"
     },
     "attributes" : [ "external" ],
-    "id" : "309"
+    "id" : "311"
   }, {
     "iri" : "https://w3id.org/kim/hcrt/experiment",
     "baseIri" : "https://w3id.org/kim/hcrt",
@@ -2328,7 +2336,7 @@
       "en" : "Webpage"
     },
     "attributes" : [ "external" ],
-    "id" : "301",
+    "id" : "302",
     "superClasses" : [ "36" ]
   }, {
     "iri" : "https://purl.org/ontology/modalia#UserComment",
@@ -2347,6 +2355,16 @@
     },
     "id" : "97"
   }, {
+    "iri" : "https://purl.org/ontology/modalia#PreservePhase",
+    "baseIri" : "https://purl.org/ontology/modalia",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PreservePhase",
+      "en" : "PreservePhase"
+    },
+    "id" : "80",
+    "superClasses" : [ "45" ]
+  }, {
     "iri" : "https://purl.org/ontology/modalia#TeacherHighEducation",
     "baseIri" : "https://purl.org/ontology/modalia",
     "instances" : 0,
@@ -2364,16 +2382,6 @@
     },
     "id" : "282",
     "superClasses" : [ "69" ]
-  }, {
-    "iri" : "https://purl.org/ontology/modalia#PreservePhase",
-    "baseIri" : "https://purl.org/ontology/modalia",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "PreservePhase",
-      "en" : "PreservePhase"
-    },
-    "id" : "80",
-    "superClasses" : [ "45" ]
   }, {
     "iri" : "https://purl.org/ontology/modalia#Multipart",
     "baseIri" : "https://purl.org/ontology/modalia",
@@ -2455,8 +2463,8 @@
     "baseIri" : "https://github.com/tibonto/educor",
     "instances" : 0,
     "annotations" : {
-      "definition" : [ {
-        "identifier" : "definition",
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
         "language" : "en",
         "value" : "A single node representing a learning module based on the domain ontology. It contains all the learning material for the specific learning module.",
         "type" : "label"
@@ -2634,11 +2642,16 @@
     "iri" : "http://id.loc.gov/ontologies/bibframe/Contribution",
     "baseIri" : "http://id.loc.gov/ontologies/bibframe",
     "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "en",
+        "value" : "A contribution to an OER, including agent and role information.",
+        "type" : "label"
+      } ]
+    },
     "label" : {
       "IRI-based" : "Contribution"
-    },
-    "comment" : {
-      "en" : "A contribution to an OER, including agent and role information."
     },
     "attributes" : [ "external" ],
     "id" : "169"
@@ -2662,15 +2675,15 @@
       "en" : "Class representing OERs that are articles (e.g academic article)"
     },
     "attributes" : [ "external" ],
-    "id" : "292",
+    "id" : "293",
     "superClasses" : [ "36" ]
   }, {
     "iri" : "http://w3id.org/nfdi4ing/metadata4ing#Method",
     "baseIri" : "http://w3id.org/nfdi4ing/metadata4ing",
     "instances" : 0,
     "annotations" : {
-      "definition" : [ {
-        "identifier" : "definition",
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
         "language" : "en",
         "value" : "a method with which data was obtained",
         "type" : "label"
@@ -2687,7 +2700,7 @@
       "en" : "Research Method"
     },
     "attributes" : [ "external" ],
-    "id" : "111"
+    "id" : "112"
   }, {
     "iri" : "https://purl.org/ontology/modalia#CodeNotebook",
     "baseIri" : "https://purl.org/ontology/modalia",
@@ -2710,7 +2723,7 @@
       "IRI-based" : "CodeNotebook",
       "en" : "CodeNotebook"
     },
-    "id" : "290",
+    "id" : "291",
     "superClasses" : [ "36" ]
   }, {
     "iri" : "https://purl.org/ontology/modalia#Code",
@@ -2754,30 +2767,8 @@
     "comment" : {
       "en" : "OER related to Research Data Management"
     },
-    "id" : "110",
+    "id" : "111",
     "superClasses" : [ "72" ]
-  }, {
-    "iri" : "https://w3id.org/kim/hcrt/case_study",
-    "baseIri" : "https://w3id.org/kim/hcrt",
-    "instances" : 0,
-    "annotations" : {
-      "prefLabel" : [ {
-        "identifier" : "prefLabel",
-        "language" : "en",
-        "value" : "Case Study",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "case_study",
-      "en" : "CaseStudy"
-    },
-    "comment" : {
-      "en" : "Class representing OERs that are in form of case study."
-    },
-    "attributes" : [ "external" ],
-    "id" : "304",
-    "superClasses" : [ "36" ]
   }, {
     "iri" : "https://purl.org/ontology/modalia#MastersStudent",
     "baseIri" : "https://purl.org/ontology/modalia",
@@ -2808,6 +2799,28 @@
     },
     "id" : "266",
     "superClasses" : [ "69" ]
+  }, {
+    "iri" : "https://w3id.org/kim/hcrt/case_study",
+    "baseIri" : "https://w3id.org/kim/hcrt",
+    "instances" : 0,
+    "annotations" : {
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Case Study",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "case_study",
+      "en" : "CaseStudy"
+    },
+    "comment" : {
+      "en" : "Class representing OERs that are in form of case study."
+    },
+    "attributes" : [ "external" ],
+    "id" : "305",
+    "superClasses" : [ "36" ]
   }, {
     "iri" : "https://purl.org/ontology/modalia#LL2Understand",
     "baseIri" : "https://purl.org/ontology/modalia",
@@ -2840,6 +2853,12 @@
     "baseIri" : "https://schema.org",
     "instances" : 0,
     "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "en",
+        "value" : "An organization such as a school (including Universities), NGO, corporation, club, etc.",
+        "type" : "label"
+      } ],
       "seeAlso" : [ {
         "identifier" : "seeAlso",
         "language" : "undefined",
@@ -2850,9 +2869,6 @@
     "label" : {
       "IRI-based" : "Organization",
       "undefined" : "Organization"
-    },
-    "comment" : {
-      "en" : "An organization such as a school (including Universities), NGO, corporation, club, etc."
     },
     "attributes" : [ "external" ],
     "id" : "180"
@@ -2932,12 +2948,12 @@
     "instances" : 0,
     "union" : [ "72", "19" ],
     "attributes" : [ "anonymous", "union" ],
-    "id" : "222"
+    "id" : "221"
   }, {
     "instances" : 0,
     "union" : [ "79", "117" ],
     "attributes" : [ "anonymous", "union" ],
-    "id" : "299"
+    "id" : "300"
   }, {
     "iri" : "https://purl.org/ontology/modalia#Community",
     "baseIri" : "https://purl.org/ontology/modalia",
@@ -2954,16 +2970,16 @@
       "IRI-based" : "Community",
       "en" : "Community"
     },
-    "id" : "89"
+    "id" : "92"
   }, {
     "iri" : "https://purl.org/ontology/modalia#RDMSubjectCluster",
     "baseIri" : "https://purl.org/ontology/modalia",
     "instances" : 0,
     "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
+      "definition" : [ {
+        "identifier" : "definition",
         "language" : "en",
-        "value" : "Cluster of RDM topics areas",
+        "value" : "Cluster of RDM topics areas.",
         "type" : "label"
       } ]
     },
@@ -2983,15 +2999,6 @@
     "id" : "16",
     "superClasses" : [ "12" ]
   }, {
-    "iri" : "https://purl.org/ontology/modalia#LearningGoalMatrixEntry",
-    "baseIri" : "https://purl.org/ontology/modalia",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "LearningGoalMatrixEntry",
-      "en" : "LearningGoalMatrixEntry"
-    },
-    "id" : "172"
-  }, {
     "iri" : "https://purl.org/ontology/modalia#UserRole",
     "baseIri" : "https://purl.org/ontology/modalia",
     "instances" : 0,
@@ -3002,6 +3009,15 @@
     "subClasses" : [ "141", "119", "122", "125" ],
     "id" : "120"
   }, {
+    "iri" : "https://purl.org/ontology/modalia#LearningGoalMatrixEntry",
+    "baseIri" : "https://purl.org/ontology/modalia",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LearningGoalMatrixEntry",
+      "en" : "LearningGoalMatrixEntry"
+    },
+    "id" : "172"
+  }, {
     "iri" : "https://purl.org/ontology/modalia#Skill",
     "baseIri" : "https://purl.org/ontology/modalia",
     "instances" : 0,
@@ -3009,11 +3025,11 @@
       "IRI-based" : "Skill",
       "en" : "Skill"
     },
-    "subClasses" : [ "3" ],
+    "subClasses" : [ "6" ],
     "comment" : {
       "en" : "Job Skill, ability to perform some tasks."
     },
-    "id" : "4"
+    "id" : "7"
   }, {
     "iri" : "https://purl.org/ontology/modalia#VARKVisual",
     "baseIri" : "https://purl.org/ontology/modalia",
@@ -3037,8 +3053,8 @@
     "baseIri" : "https://github.com/tibonto/educor",
     "instances" : 0,
     "annotations" : {
-      "definition" : [ {
-        "identifier" : "definition",
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
         "language" : "en",
         "value" : "The output of the recommendation system algorithm. The system that reads user profile, content information, ratings and any available rules, in order to generate a meaningful recommendation.",
         "type" : "label"
@@ -3100,15 +3116,15 @@
       "en" : "Class representing an OER that is a diagram"
     },
     "attributes" : [ "external" ],
-    "id" : "306",
+    "id" : "307",
     "superClasses" : [ "36" ]
   }, {
     "iri" : "http://w3id.org/nfdi4ing/metadata4ing#Tool",
     "baseIri" : "http://w3id.org/nfdi4ing/metadata4ing",
     "instances" : 0,
     "annotations" : {
-      "definition" : [ {
-        "identifier" : "definition",
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
         "language" : "en",
         "value" : "a tool with which data was obtained (microscope, sensor, ...)",
         "type" : "label"
@@ -3125,7 +3141,7 @@
     "id" : "0",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "5",
+    "id" : "3",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "8",
@@ -3206,14 +3222,14 @@
     "id" : "85",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "33",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "90",
-    "type" : "owl:objectProperty"
+    "id" : "89",
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "91",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "33",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "93",
     "type" : "owl:datatypeProperty"
@@ -3233,7 +3249,7 @@
     "id" : "107",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "109",
+    "id" : "110",
     "type" : "owl:objectProperty"
   }, {
     "id" : "113",
@@ -3365,10 +3381,10 @@
     "id" : "213",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "217",
+    "id" : "216",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "221",
+    "id" : "220",
     "type" : "owl:objectProperty"
   }, {
     "id" : "228",
@@ -3486,58 +3502,58 @@
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "289",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "291",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "293",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "294",
+    "id" : "290",
     "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "292",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "294",
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "295",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "297",
     "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "296",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "298",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "300",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "302",
+    "id" : "299",
     "type" : "owl:objectProperty"
+  }, {
+    "id" : "301",
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "303",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "304",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "305",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "307",
+    "id" : "306",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "308",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "309",
     "type" : "owl:objectProperty"
   }, {
     "id" : "310",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "311",
-    "type" : "owl:objectProperty"
-  }, {
     "id" : "312",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "313",
-    "type" : "owl:objectProperty"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "314",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "315",
     "type" : "owl:datatypeProperty"
@@ -3581,7 +3597,7 @@
     "id" : "329",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "296",
+    "id" : "297",
     "type" : "owl:objectProperty"
   }, {
     "id" : "330",
@@ -3748,14 +3764,14 @@
   }, {
     "iri" : "https://purl.org/ontology/modalia#certificateUrl",
     "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "7",
+    "range" : "5",
     "label" : {
       "IRI-based" : "certificateUrl",
       "en" : "certificateUrl"
     },
-    "domain" : "6",
+    "domain" : "4",
     "attributes" : [ "datatype" ],
-    "id" : "5"
+    "id" : "3"
   }, {
     "range" : "2",
     "domain" : "9",
@@ -3799,7 +3815,7 @@
       "IRI-based" : "certificateStartDate",
       "en" : "certificateStartDate"
     },
-    "domain" : "6",
+    "domain" : "4",
     "attributes" : [ "datatype" ],
     "id" : "26"
   }, {
@@ -3876,7 +3892,7 @@
       "IRI-based" : "certificateName",
       "en" : "certificateName"
     },
-    "domain" : "6",
+    "domain" : "4",
     "attributes" : [ "datatype" ],
     "id" : "66"
   }, {
@@ -3884,7 +3900,8 @@
     "baseIri" : "http://purl.org/dc/terms",
     "range" : "73",
     "label" : {
-      "IRI-based" : "language"
+      "IRI-based" : "language",
+      "en" : "language"
     },
     "domain" : "72",
     "comment" : {
@@ -3916,7 +3933,7 @@
       "IRI-based" : "essentialFor",
       "en" : "essentialFor"
     },
-    "domain" : "4",
+    "domain" : "7",
     "comment" : {
       "en" : "a property defining the essential skills for a certain job"
     },
@@ -3927,14 +3944,6 @@
     "inverse" : "86",
     "baseIri" : "https://w3id.org/citedcat-ap",
     "range" : "72",
-    "annotations" : {
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Resource that is complemented by the described augmenting resource.",
-        "type" : "label"
-      } ]
-    },
     "label" : {
       "IRI-based" : "isSupplementTo",
       "en" : "isSupplementTo"
@@ -3944,9 +3953,31 @@
     "attributes" : [ "object", "external" ],
     "id" : "85"
   }, {
+    "iri" : "http://www.w3.org/2002/07/owl#topDataProperty",
+    "baseIri" : "http://www.w3.org/2002/07/owl",
+    "range" : "90",
+    "label" : {
+      "IRI-based" : "topDataProperty"
+    },
+    "domain" : "30",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "89"
+  }, {
+    "iri" : "https://schema.org/isBasedOn",
+    "baseIri" : "https://schema.org",
+    "range" : "72",
+    "label" : {
+      "IRI-based" : "isBasedOn",
+      "en" : "isBasedOn"
+    },
+    "superproperty" : [ "87" ],
+    "domain" : "72",
+    "attributes" : [ "object", "external" ],
+    "id" : "91"
+  }, {
     "iri" : "https://purl.org/ontology/modalia#isMemberOf",
     "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "89",
+    "range" : "92",
     "label" : {
       "IRI-based" : "isMemberOf",
       "en" : "isMemberOf"
@@ -3955,36 +3986,6 @@
     "domain" : "78",
     "attributes" : [ "object" ],
     "id" : "33"
-  }, {
-    "iri" : "https://schema.org/isBasedOn",
-    "baseIri" : "https://schema.org",
-    "range" : "72",
-    "annotations" : {
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "A resource from which this work is derived or from which it is a modification or adaptation.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "isBasedOn",
-      "en" : "isBasedOn"
-    },
-    "superproperty" : [ "87" ],
-    "domain" : "72",
-    "attributes" : [ "object", "external" ],
-    "id" : "90"
-  }, {
-    "iri" : "http://www.w3.org/2002/07/owl#topDataProperty",
-    "baseIri" : "http://www.w3.org/2002/07/owl",
-    "range" : "92",
-    "label" : {
-      "IRI-based" : "topDataProperty"
-    },
-    "domain" : "30",
-    "attributes" : [ "datatype", "external" ],
-    "id" : "91"
   }, {
     "iri" : "http://purl.org/dc/terms/title",
     "baseIri" : "http://purl.org/dc/terms",
@@ -4042,6 +4043,17 @@
     "baseIri" : "http://w3id.org/nfdi4ing/metadata4ing",
     "range" : "106",
     "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "en",
+        "value" : "Open Researcher and Contributor ID: an identifier, that allows unique identification of a person, usually active in research.",
+        "type" : "label"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "de",
+        "value" : "Open Researcher and Contributor ID: ein persistenter Identifikator, der eine in der Forschung t?tige Person eindeutig identifiziert.",
+        "type" : "label"
+      } ],
       "prefLabel" : [ {
         "identifier" : "prefLabel",
         "language" : "de",
@@ -4051,17 +4063,6 @@
         "identifier" : "prefLabel",
         "language" : "en",
         "value" : "has ORCID ID",
-        "type" : "label"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "de",
-        "value" : "Open Researcher and Contributor ID: ein persistenter Identifikator, der eine in der Forschung t?tige Person eindeutig identifiziert.",
-        "type" : "label"
-      }, {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Open Researcher and Contributor ID: an identifier, that allows unique identification of a person, usually active in research.",
         "type" : "label"
       } ]
     },
@@ -4085,19 +4086,30 @@
   }, {
     "iri" : "https://purl.org/ontology/modalia#coversManagementOfDataObtainedWithMethod",
     "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "111",
+    "range" : "112",
     "label" : {
       "IRI-based" : "coversManagementOfDataObtainedWithMethod",
       "en" : "coversManagementOfDataObtainedWithMethod"
     },
-    "domain" : "110",
+    "domain" : "111",
     "attributes" : [ "object" ],
-    "id" : "109"
+    "id" : "110"
   }, {
     "iri" : "http://w3id.org/nfdi4ing/metadata4ing#hasRorId",
     "baseIri" : "http://w3id.org/nfdi4ing/metadata4ing",
     "range" : "115",
     "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "en",
+        "value" : "A Research Organization Registry identifier that persistently and uniquely identifies a research organization",
+        "type" : "label"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "de",
+        "value" : "Ein persistenter Identifikator für Organisationen, vergeben durch die Research Organization Registry, der eine Forschungseinrichtung eindeutig identifiziert.",
+        "type" : "label"
+      } ],
       "prefLabel" : [ {
         "identifier" : "prefLabel",
         "language" : "en",
@@ -4109,26 +4121,15 @@
         "value" : "hat ROR ID",
         "type" : "label"
       } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "A Research Organization Registry identifier that persistently and uniquely identifies a research organization",
-        "type" : "label"
-      }, {
-        "identifier" : "definition",
-        "language" : "de",
-        "value" : "Ein persistenter Identifikator für Organisationen, vergeben durch die Research Organization Registry, der eine Forschungseinrichtung eindeutig identifiziert.",
-        "type" : "label"
-      } ],
       "altLabel" : [ {
-        "identifier" : "altLabel",
-        "language" : "en",
-        "value" : "has research organization registry id",
-        "type" : "label"
-      }, {
         "identifier" : "altLabel",
         "language" : "de",
         "value" : "hat Forschungsorganisationsid",
+        "type" : "label"
+      }, {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "has research organization registry id",
         "type" : "label"
       } ]
     },
@@ -4165,13 +4166,13 @@
     "attributes" : [ "anonymous", "object" ],
     "id" : "124"
   }, {
-    "range" : "4",
-    "domain" : "3",
+    "range" : "7",
+    "domain" : "6",
     "attributes" : [ "anonymous", "object" ],
     "id" : "126"
   }, {
     "range" : "72",
-    "domain" : "110",
+    "domain" : "111",
     "attributes" : [ "anonymous", "object" ],
     "id" : "127"
   }, {
@@ -4201,7 +4202,7 @@
       "IRI-based" : "optionalFor",
       "en" : "optionalFor"
     },
-    "domain" : "4",
+    "domain" : "7",
     "comment" : {
       "en" : "Defines the skills that are optional for a certain Job"
     },
@@ -4227,14 +4228,6 @@
     "iri" : "https://purl.org/ontology/modalia#hasTranslation",
     "baseIri" : "https://purl.org/ontology/modalia",
     "range" : "72",
-    "annotations" : {
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "A related resource that is a translation of the content of the described resource. When a resource is shared in one language, then later translated to another language, use “HasTranslation” to link the original resource to its translation. When a resource is released at the same time in multiple languages, use “HasTranslation” to connect the works to each other in both directions.",
-        "type" : "label"
-      } ]
-    },
     "label" : {
       "IRI-based" : "hasTranslation",
       "en" : "hasTranslation"
@@ -4359,6 +4352,9 @@
       "IRI-based" : "authorUnordered"
     },
     "domain" : "72",
+    "comment" : {
+      "en" : "authorUnordered"
+    },
     "attributes" : [ "datatype" ],
     "id" : "160"
   }, {
@@ -4394,21 +4390,13 @@
     "iri" : "http://purl.org/dc/terms/isVersionOf",
     "baseIri" : "http://purl.org/dc/terms",
     "range" : "72",
-    "annotations" : {
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "A related resource of which the described resource is a version, or edition. Can be used instead of isPreviousVersionOf and isNewVersionOf if the sequence of versioning is unclear.",
-        "type" : "label"
-      } ]
-    },
     "label" : {
       "IRI-based" : "isVersionOf",
       "en" : "isVersionOf"
     },
     "superproperty" : [ "87" ],
     "domain" : "72",
-    "attributes" : [ "object", "symmetric", "external" ],
+    "attributes" : [ "object", "external", "symmetric" ],
     "id" : "170"
   }, {
     "iri" : "https://purl.org/ontology/modalia#hasRowID",
@@ -4429,7 +4417,7 @@
       "IRI-based" : "coversManagementOfDataObtainedWithTool",
       "en" : "coversManagementOfDataObtainedWithTool"
     },
-    "domain" : "110",
+    "domain" : "111",
     "attributes" : [ "object" ],
     "id" : "174"
   }, {
@@ -4446,7 +4434,7 @@
   }, {
     "iri" : "https://purl.org/ontology/modalia#hasCertificate",
     "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "6",
+    "range" : "4",
     "label" : {
       "IRI-based" : "hasCertificate",
       "en" : "hasCertificate"
@@ -4477,14 +4465,6 @@
     "iri" : "https://w3id.org/citedcat-ap/isSupplementedBy",
     "baseIri" : "https://w3id.org/citedcat-ap",
     "range" : "72",
-    "annotations" : {
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Resource that complements the predominant described resource.",
-        "type" : "label"
-      } ]
-    },
     "label" : {
       "IRI-based" : "isSupplementedBy",
       "en" : "isSupplementedBy"
@@ -4544,20 +4524,12 @@
       "en" : "isMoreProficientThan"
     },
     "domain" : "204",
-    "attributes" : [ "transitive", "object" ],
+    "attributes" : [ "object", "transitive" ],
     "id" : "203"
   }, {
     "iri" : "https://purl.org/ontology/modalia#isTranslationOf",
     "baseIri" : "https://purl.org/ontology/modalia",
     "range" : "72",
-    "annotations" : {
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "The related resource that this OER has been translated from. When a resource is shared in one language, then later translated to another language, use “IsTranslationOf” to link the translation to the original.",
-        "type" : "label"
-      } ]
-    },
     "label" : {
       "IRI-based" : "isTranslationOf",
       "en" : "isTranslationOf"
@@ -4574,9 +4546,9 @@
       "IRI-based" : "hasProviderType",
       "undefined" : "hasProviderType"
     },
-    "domain" : "218",
+    "domain" : "217",
     "attributes" : [ "object" ],
-    "id" : "217"
+    "id" : "216"
   }, {
     "iri" : "http://purl.org/spar/fabio/hasDiscipline",
     "baseIri" : "http://purl.org/spar/fabio",
@@ -4585,12 +4557,12 @@
       "IRI-based" : "hasDiscipline",
       "undefined" : "hasDiscipline"
     },
-    "domain" : "222",
+    "domain" : "221",
     "attributes" : [ "object", "external" ],
-    "id" : "221"
+    "id" : "220"
   }, {
     "range" : "36",
-    "domain" : "219",
+    "domain" : "218",
     "attributes" : [ "anonymous", "object" ],
     "id" : "228"
   }, {
@@ -4616,7 +4588,7 @@
     "id" : "233"
   }, {
     "range" : "36",
-    "domain" : "112",
+    "domain" : "109",
     "attributes" : [ "anonymous", "object" ],
     "id" : "235"
   }, {
@@ -4642,14 +4614,6 @@
     "iri" : "http://purl.org/dc/terms/references",
     "baseIri" : "http://purl.org/dc/terms",
     "range" : "72",
-    "annotations" : {
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "A related resource that is referenced, cited, or otherwise pointed to by the described resource.",
-        "type" : "label"
-      } ]
-    },
     "label" : {
       "IRI-based" : "references",
       "en" : "references"
@@ -4707,7 +4671,7 @@
   }, {
     "iri" : "https://purl.org/ontology/modalia#teachesSkill",
     "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "4",
+    "range" : "7",
     "label" : {
       "IRI-based" : "teachesSkill",
       "en" : "teaches skill"
@@ -4723,7 +4687,7 @@
       "IRI-based" : "createdBy",
       "en" : "createdBy"
     },
-    "domain" : "89",
+    "domain" : "92",
     "comment" : {
       "en" : "a property defining the user who created a community"
     },
@@ -4858,14 +4822,6 @@
     "inverse" : "280",
     "baseIri" : "https://w3id.org/citedcat-ap",
     "range" : "72",
-    "annotations" : {
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "A related resource which is the direct predecessor of the described resource. This applies to a story, a series of lessons, a serial, a journal etc. Predecessors typically form part of a common whole - such as a  series of lectures.",
-        "type" : "label"
-      } ]
-    },
     "label" : {
       "IRI-based" : "continues",
       "en" : "continues"
@@ -4887,7 +4843,7 @@
   }, {
     "iri" : "http://purl.org/ontology/rec/core#recommender",
     "baseIri" : "http://purl.org/ontology/rec/core",
-    "range" : "89",
+    "range" : "92",
     "annotations" : {
       "definition" : [ {
         "identifier" : "definition",
@@ -4919,15 +4875,29 @@
     "attributes" : [ "anonymous", "object" ],
     "id" : "287"
   }, {
-    "range" : "36",
-    "domain" : "290",
-    "attributes" : [ "anonymous", "object" ],
+    "iri" : "https://purl.org/ontology/modalia#citation",
+    "baseIri" : "https://purl.org/ontology/modalia",
+    "range" : "226",
+    "label" : {
+      "IRI-based" : "citation",
+      "en" : "Citation"
+    },
+    "domain" : "72",
+    "comment" : {
+      "en" : "Citation text of the OER"
+    },
+    "attributes" : [ "datatype" ],
     "id" : "289"
   }, {
     "range" : "36",
-    "domain" : "292",
+    "domain" : "291",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "291"
+    "id" : "290"
+  }, {
+    "range" : "36",
+    "domain" : "293",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "292"
   }, {
     "iri" : "https://schema.org/downloadUrl",
     "baseIri" : "https://schema.org",
@@ -4941,25 +4911,17 @@
       "en" : "If the OER can be downloaded, URL to download it."
     },
     "attributes" : [ "datatype", "external" ],
-    "id" : "293"
+    "id" : "294"
   }, {
     "range" : "36",
     "domain" : "64",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "294"
+    "id" : "295"
   }, {
     "iri" : "http://purl.org/dc/terms/isReplacedBy",
-    "inverse" : "296",
+    "inverse" : "297",
     "baseIri" : "http://purl.org/dc/terms",
     "range" : "72",
-    "annotations" : {
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "A related resource that supplants, displaces, or supersedes the described resource.",
-        "type" : "label"
-      } ]
-    },
     "label" : {
       "IRI-based" : "isReplacedBy",
       "en" : "isReplacedBy"
@@ -4967,12 +4929,12 @@
     "superproperty" : [ "87" ],
     "domain" : "72",
     "attributes" : [ "object", "external" ],
-    "id" : "295"
+    "id" : "296"
   }, {
     "range" : "36",
     "domain" : "196",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "297"
+    "id" : "298"
   }, {
     "iri" : "https://purl.org/ontology/modalia#definesLearningPath",
     "baseIri" : "https://purl.org/ontology/modalia",
@@ -4981,14 +4943,14 @@
       "IRI-based" : "definesLearningPath",
       "undefined" : "definesLearningPath"
     },
-    "domain" : "299",
+    "domain" : "300",
     "attributes" : [ "object" ],
-    "id" : "298"
+    "id" : "299"
   }, {
     "range" : "36",
-    "domain" : "301",
+    "domain" : "302",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "300"
+    "id" : "301"
   }, {
     "iri" : "https://purl.org/ontology/modalia#hasTargetGroup",
     "baseIri" : "https://purl.org/ontology/modalia",
@@ -4999,32 +4961,21 @@
     },
     "domain" : "197",
     "attributes" : [ "object" ],
-    "id" : "302"
-  }, {
-    "range" : "36",
-    "domain" : "304",
-    "attributes" : [ "anonymous", "object" ],
     "id" : "303"
   }, {
     "range" : "36",
-    "domain" : "306",
+    "domain" : "305",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "305"
+    "id" : "304"
   }, {
     "range" : "36",
-    "domain" : "220",
+    "domain" : "307",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "307"
+    "id" : "306"
   }, {
-    "iri" : "https://purl.org/ontology/modalia#coversManagementOfDataDescribing",
-    "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "309",
-    "label" : {
-      "IRI-based" : "coversManagementOfDataDescribing",
-      "en" : "coversManagementOfDataDescribing"
-    },
-    "domain" : "110",
-    "attributes" : [ "object" ],
+    "range" : "36",
+    "domain" : "219",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "308"
   }, {
     "iri" : "https://purl.org/ontology/modalia#hasEnrollment",
@@ -5044,19 +4995,22 @@
     },
     "domain" : "78",
     "attributes" : [ "object" ],
+    "id" : "309"
+  }, {
+    "iri" : "https://purl.org/ontology/modalia#coversManagementOfDataDescribing",
+    "baseIri" : "https://purl.org/ontology/modalia",
+    "range" : "311",
+    "label" : {
+      "IRI-based" : "coversManagementOfDataDescribing",
+      "en" : "coversManagementOfDataDescribing"
+    },
+    "domain" : "111",
+    "attributes" : [ "object" ],
     "id" : "310"
   }, {
     "iri" : "https://purl.org/ontology/modalia#isDescribedBy",
     "baseIri" : "https://purl.org/ontology/modalia",
     "range" : "72",
-    "annotations" : {
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "A related resource that provides a description (detailed account) of the described resource. This can be a manual, an instruction, a documentation, a cookbook, a README file, or something similar.",
-        "type" : "label"
-      } ]
-    },
     "label" : {
       "IRI-based" : "isDescribedBy",
       "en" : "isDescribedBy"
@@ -5064,11 +5018,11 @@
     "superproperty" : [ "87" ],
     "domain" : "72",
     "attributes" : [ "object" ],
-    "id" : "311"
+    "id" : "312"
   }, {
     "iri" : "https://purl.org/ontology/modalia#hasDOI",
     "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "227",
+    "range" : "223",
     "annotations" : {
       "example" : [ {
         "identifier" : "example",
@@ -5086,7 +5040,7 @@
       "en" : "the DOI of the resource if exists."
     },
     "attributes" : [ "datatype" ],
-    "id" : "312"
+    "id" : "313"
   }, {
     "iri" : "https://purl.org/ontology/modalia#hasLearningLevel",
     "baseIri" : "https://purl.org/ontology/modalia",
@@ -5097,7 +5051,7 @@
     },
     "domain" : "172",
     "attributes" : [ "object" ],
-    "id" : "313"
+    "id" : "314"
   }, {
     "iri" : "https://purl.org/ontology/modalia#certificateEndDate",
     "baseIri" : "https://purl.org/ontology/modalia",
@@ -5106,13 +5060,13 @@
       "IRI-based" : "certificateEndDate",
       "en" : "certificateEndDate"
     },
-    "domain" : "6",
+    "domain" : "4",
     "attributes" : [ "datatype" ],
-    "id" : "314"
+    "id" : "315"
   }, {
     "iri" : "https://schema.org/abstract",
     "baseIri" : "https://schema.org",
-    "range" : "214",
+    "range" : "212",
     "label" : {
       "IRI-based" : "abstract",
       "en" : "abstract"
@@ -5122,22 +5076,11 @@
       "en" : "An abstract is a short description that summarizes an OER."
     },
     "attributes" : [ "datatype", "external" ],
-    "id" : "315"
-  }, {
-    "iri" : "https://schema.org/citation",
-    "baseIri" : "https://schema.org",
-    "range" : "212",
-    "label" : {
-      "IRI-based" : "citation",
-      "en" : "Citation"
-    },
-    "domain" : "72",
-    "attributes" : [ "datatype", "external" ],
     "id" : "316"
   }, {
     "iri" : "https://purl.org/ontology/modalia#studyPlan",
     "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "211",
+    "range" : "209",
     "label" : {
       "IRI-based" : "studyPlan",
       "en" : "studyPlan"
@@ -5148,7 +5091,7 @@
   }, {
     "iri" : "https://purl.org/ontology/modalia#commentDate",
     "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "226",
+    "range" : "225",
     "annotations" : {
       "definition" : [ {
         "identifier" : "definition",
@@ -5211,17 +5154,9 @@
     "id" : "324"
   }, {
     "iri" : "https://purl.org/ontology/modalia#describes",
-    "inverse" : "311",
+    "inverse" : "312",
     "baseIri" : "https://purl.org/ontology/modalia",
     "range" : "72",
-    "annotations" : {
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "A related resource that is described by the resource.",
-        "type" : "label"
-      } ]
-    },
     "label" : {
       "IRI-based" : "describes",
       "en" : "describes"
@@ -5233,7 +5168,7 @@
   }, {
     "iri" : "https://purl.org/ontology/modalia#hasOrder",
     "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "223",
+    "range" : "222",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -5284,13 +5219,13 @@
       "IRI-based" : "hasOwner",
       "en" : "hasOwner"
     },
-    "domain" : "89",
-    "attributes" : [ "functional", "object" ],
+    "domain" : "92",
+    "attributes" : [ "object", "functional" ],
     "id" : "328"
   }, {
     "iri" : "http://bibfra.me/vocab/relation/supportinghost",
     "baseIri" : "http://bibfra.me/vocab/relation",
-    "range" : "89",
+    "range" : "92",
     "annotations" : {
       "definition" : [ {
         "identifier" : "definition",
@@ -5310,14 +5245,6 @@
     "iri" : "http://purl.org/dc/terms/replaces",
     "baseIri" : "http://purl.org/dc/terms",
     "range" : "72",
-    "annotations" : {
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "A related resource that is supplanted, displaced, or superseded by the described resource.",
-        "type" : "label"
-      } ]
-    },
     "label" : {
       "IRI-based" : "replaces",
       "en" : "replaces"
@@ -5325,7 +5252,7 @@
     "superproperty" : [ "87" ],
     "domain" : "72",
     "attributes" : [ "object", "external" ],
-    "id" : "296"
+    "id" : "297"
   }, {
     "iri" : "https://purl.org/ontology/modalia#belongsToCluster",
     "baseIri" : "https://purl.org/ontology/modalia",
@@ -5357,7 +5284,7 @@
   }, {
     "iri" : "https://purl.org/ontology/modalia#viewCount",
     "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "209",
+    "range" : "214",
     "label" : {
       "IRI-based" : "viewCount",
       "en" : "viewCount"
@@ -5408,7 +5335,7 @@
       "en" : "isLessProficientThan"
     },
     "domain" : "204",
-    "attributes" : [ "transitive", "object" ],
+    "attributes" : [ "object", "transitive" ],
     "id" : "337"
   }, {
     "iri" : "https://schema.org/timeRequired",
@@ -5436,14 +5363,6 @@
     "iri" : "https://purl.org/ontology/modalia#isIdenticalTo",
     "baseIri" : "https://purl.org/ontology/modalia",
     "range" : "72",
-    "annotations" : {
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "The related work is the same as the described resource but is saved on another location, maybe another institution.",
-        "type" : "label"
-      } ]
-    },
     "label" : {
       "IRI-based" : "isIdenticalTo",
       "en" : "isIdenticalTo"
@@ -5466,7 +5385,7 @@
   }, {
     "iri" : "https://purl.org/ontology/modalia#likesCount",
     "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "216",
+    "range" : "215",
     "label" : {
       "IRI-based" : "likesCount",
       "en" : "likesCount"
@@ -5494,7 +5413,7 @@
       "en" : "email"
     },
     "domain" : "78",
-    "attributes" : [ "functional", "datatype", "external" ],
+    "attributes" : [ "datatype", "external", "functional" ],
     "id" : "343"
   }, {
     "iri" : "https://purl.org/ontology/modalia#isRelatedTo",
@@ -5519,7 +5438,7 @@
       "en" : "isRelatedTo"
     },
     "domain" : "72",
-    "subproperty" : [ "344", "85", "325", "170", "295", "311", "345", "346", "339", "347", "240", "296", "86", "90", "280", "348", "133", "279", "213" ],
+    "subproperty" : [ "344", "85", "325", "170", "296", "312", "345", "346", "339", "347", "240", "297", "86", "91", "280", "348", "133", "279", "213" ],
     "attributes" : [ "object" ],
     "id" : "87"
   }, {
@@ -5539,21 +5458,13 @@
       "undefined" : "hasLearningType"
     },
     "domain" : "72",
-    "attributes" : [ "functional", "object" ],
+    "attributes" : [ "object", "functional" ],
     "id" : "349"
   }, {
     "iri" : "http://purl.org/dc/terms/isReferencedBy",
     "inverse" : "240",
     "baseIri" : "http://purl.org/dc/terms",
     "range" : "72",
-    "annotations" : {
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "A related resource that references, cites, or otherwise points to the described resource.",
-        "type" : "label"
-      } ]
-    },
     "label" : {
       "IRI-based" : "isReferencedBy",
       "en" : "isReferencedBy"
@@ -5565,7 +5476,7 @@
   }, {
     "iri" : "https://purl.org/ontology/modalia#hasProvider",
     "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "218",
+    "range" : "217",
     "label" : {
       "IRI-based" : "hasProvider",
       "undefined" : "hasProvider"
@@ -5590,7 +5501,7 @@
   }, {
     "iri" : "https://purl.org/ontology/modalia#microCredentialUrl",
     "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "215",
+    "range" : "211",
     "label" : {
       "IRI-based" : "microCredentialUrl",
       "en" : "microCredentialUrl"
@@ -5614,7 +5525,7 @@
       "IRI-based" : "belongsToPhase",
       "undefined" : "belongsToPhase"
     },
-    "domain" : "110",
+    "domain" : "111",
     "attributes" : [ "object" ],
     "id" : "353"
   }, {
@@ -5622,34 +5533,18 @@
     "inverse" : "346",
     "baseIri" : "https://purl.org/ontology/modalia",
     "range" : "72",
-    "annotations" : {
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "The related work is a previous version, or edition of the described resource, of which the described resource has been modified or updated.",
-        "type" : "label"
-      } ]
-    },
     "label" : {
       "IRI-based" : "isNewVersionOf",
       "en" : "isNewVersionOf"
     },
     "superproperty" : [ "87" ],
     "domain" : "72",
-    "attributes" : [ "irreflexive", "transitive", "object" ],
+    "attributes" : [ "object", "irreflexive", "transitive" ],
     "id" : "345"
   }, {
     "iri" : "http://purl.org/dc/terms/isPartOf",
     "baseIri" : "http://purl.org/dc/terms",
     "range" : "72",
-    "annotations" : {
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "A related resource in which the described resource is physically or logically included.",
-        "type" : "label"
-      } ]
-    },
     "label" : {
       "IRI-based" : "isPartOf",
       "en" : "isPartOf"
@@ -5696,7 +5591,7 @@
       "IRI-based" : "coversManagementOfDataKind",
       "en" : "coversManagementOfDataKind"
     },
-    "domain" : "110",
+    "domain" : "111",
     "comment" : {
       "en" : "A property that relates a RDMResource to data kind being managed"
     },
@@ -5768,14 +5663,6 @@
     "inverse" : "348",
     "baseIri" : "http://purl.org/dc/terms",
     "range" : "72",
-    "annotations" : {
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "A related resource that is included either physically or logically in the described resource.",
-        "type" : "label"
-      } ]
-    },
     "label" : {
       "IRI-based" : "hasPart",
       "en" : "hasPart"
@@ -5787,7 +5674,7 @@
   }, {
     "iri" : "https://purl.org/ontology/modalia#commentID",
     "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "225",
+    "range" : "227",
     "annotations" : {
       "definition" : [ {
         "identifier" : "definition",
@@ -5830,14 +5717,6 @@
     "iri" : "https://w3id.org/citedcat-ap/isContinuedBy",
     "baseIri" : "https://w3id.org/citedcat-ap",
     "range" : "72",
-    "annotations" : {
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "A related resource which is the direct continuation of the described resource. This applies to a story, a series of lessons, a serial, a journal etc. Successors typically form part of a common whole - such as a  series of lectures.",
-        "type" : "label"
-      } ]
-    },
     "label" : {
       "IRI-based" : "isContinuedBy",
       "en" : "isContinuedBy"
@@ -5858,17 +5737,17 @@
     "attributes" : [ "object" ],
     "id" : "364"
   }, {
-    "range" : "48",
+    "range" : "50",
     "domain" : "75",
     "attributes" : [ "anonymous", "object" ],
     "id" : "365"
   }, {
-    "range" : "54",
+    "range" : "48",
     "domain" : "75",
     "attributes" : [ "anonymous", "object" ],
     "id" : "366"
   }, {
-    "range" : "50",
+    "range" : "80",
     "domain" : "75",
     "attributes" : [ "anonymous", "object" ],
     "id" : "367"
@@ -5916,14 +5795,6 @@
     "iri" : "https://purl.org/ontology/modalia#isPreviousVersionOf",
     "baseIri" : "https://purl.org/ontology/modalia",
     "range" : "72",
-    "annotations" : {
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "The related work is a new version, or edition of the described resource, where the new version has been modified or updated.",
-        "type" : "label"
-      } ]
-    },
     "label" : {
       "IRI-based" : "isPreviousVersionOf",
       "en" : "isPreviousVersionOf"
@@ -5944,12 +5815,12 @@
     "attributes" : [ "object" ],
     "id" : "373"
   }, {
-    "range" : "4",
+    "range" : "7",
     "domain" : "19",
     "attributes" : [ "anonymous", "object" ],
     "id" : "374"
   }, {
-    "range" : "80",
+    "range" : "54",
     "domain" : "75",
     "attributes" : [ "anonymous", "object" ],
     "id" : "375"
@@ -5961,19 +5832,27 @@
       "IRI-based" : "requiresKnowledge",
       "en" : "requiresKnowledge"
     },
-    "domain" : "4",
+    "domain" : "7",
     "attributes" : [ "object" ],
     "id" : "376"
   }, {
     "iri" : "http://id.loc.gov/ontologies/bibframe/agent",
     "baseIri" : "http://id.loc.gov/ontologies/bibframe",
     "range" : "177",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "Property that links a contribution to the agent (e.g., the person or organization making the contribution).",
+        "type" : "label"
+      } ]
+    },
     "label" : {
       "IRI-based" : "agent"
     },
     "domain" : "169",
     "comment" : {
-      "en" : "Property that links a contribution to the agent (e.g., the person or organization making the contribution)."
+      "en" : "agent"
     },
     "attributes" : [ "object", "external" ],
     "id" : "377"
@@ -5982,8 +5861,8 @@
     "baseIri" : "https://purl.org/ontology/modalia",
     "range" : "19",
     "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
+      "definition" : [ {
+        "identifier" : "definition",
         "language" : "en",
         "value" : "Defines the topics covered in a learning resource",
         "type" : "label"

@@ -190,8 +190,8 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
     <owl:ObjectProperty rdf:about="http://id.loc.gov/ontologies/bibframe/agent">
         <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Contribution"/>
         <rdfs:range rdf:resource="https://purl.org/ontology/modalia#Contributor"/>
-        <rdfs:comment xml:lang="en">Property that links a contribution to the agent (e.g., the person or organization making the contribution).</rdfs:comment>
         <rdfs:comment xml:lang="en">agent</rdfs:comment>
+        <rdfs:isDefinedBy>Property that links a contribution to the agent (e.g., the person or organization making the contribution).</rdfs:isDefinedBy>
     </owl:ObjectProperty>
     
 
@@ -229,7 +229,6 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
         <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:range rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:label xml:lang="en">hasPart</rdfs:label>
-        <skos:definition xml:lang="en">A related resource that is included either physically or logically in the described resource.</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -242,7 +241,6 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
         <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:range rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:label xml:lang="en">isPartOf</rdfs:label>
-        <skos:definition xml:lang="en">A related resource in which the described resource is physically or logically included.</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -256,7 +254,6 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
         <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:range rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:label xml:lang="en">isReferencedBy</rdfs:label>
-        <skos:definition xml:lang="en">A related resource that references, cites, or otherwise points to the described resource.</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -270,7 +267,6 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
         <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:range rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:label xml:lang="en">isReplacedBy</rdfs:label>
-        <skos:definition xml:lang="en">A related resource that supplants, displaces, or supersedes the described resource.</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -284,7 +280,6 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
         <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:range rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:label xml:lang="en">isVersionOf</rdfs:label>
-        <skos:definition xml:lang="en">A related resource of which the described resource is a version, or edition. Can be used instead of isPreviousVersionOf and isNewVersionOf if the sequence of versioning is unclear.</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -296,6 +291,7 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
         <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:range rdf:resource="http://lexvo.org/ontology#Language"/>
         <rdfs:comment xml:lang="en">language of resource</rdfs:comment>
+        <rdfs:label xml:lang="en">language</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -320,7 +316,6 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
         <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:range rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:label xml:lang="en">references</rdfs:label>
-        <skos:definition xml:lang="en">A related resource that is referenced, cited, or otherwise pointed to by the described resource.</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -333,7 +328,6 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
         <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:range rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:label xml:lang="en">replaces</rdfs:label>
-        <skos:definition xml:lang="en">A related resource that is supplanted, displaced, or superseded by the described resource.</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -445,8 +439,8 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
     <owl:ObjectProperty rdf:about="https://purl.org/ontology/modalia#covers">
         <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:range rdf:resource="https://github.com/tibonto/educor#KnowledgeTopic"/>
-        <rdfs:isDefinedBy xml:lang="en">Defines the topics covered in a learning resource</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">covers</rdfs:label>
+        <skos:definition xml:lang="en">Defines the topics covered in a learning resource</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -535,7 +529,6 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
         <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:range rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:label xml:lang="en">describes</rdfs:label>
-        <skos:definition xml:lang="en">A related resource that is described by the resource.</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -800,7 +793,6 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
         <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:range rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:label xml:lang="en">hasTranslation</rdfs:label>
-        <skos:definition xml:lang="en">A related resource that is a translation of the content of the described resource. When a resource is shared in one language, then later translated to another language, use “HasTranslation” to link the original resource to its translation. When a resource is released at the same time in multiple languages, use “HasTranslation” to connect the works to each other in both directions.</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -836,7 +828,6 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
         <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:range rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:label xml:lang="en">isDescribedBy</rdfs:label>
-        <skos:definition xml:lang="en">A related resource that provides a description (detailed account) of the described resource. This can be a manual, an instruction, a documentation, a cookbook, a README file, or something similar.</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -862,7 +853,6 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
         <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:range rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:label xml:lang="en">isIdenticalTo</rdfs:label>
-        <skos:definition xml:lang="en">The related work is the same as the described resource but is saved on another location, maybe another institution.</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -915,7 +905,6 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
         <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:range rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:label xml:lang="en">isNewVersionOf</rdfs:label>
-        <skos:definition xml:lang="en">The related work is a previous version, or edition of the described resource, of which the described resource has been modified or updated.</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -928,7 +917,6 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
         <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:range rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:label xml:lang="en">isPreviousVersionOf</rdfs:label>
-        <skos:definition xml:lang="en">The related work is a new version, or edition of the described resource, where the new version has been modified or updated.</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -954,7 +942,6 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
         <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:range rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:label xml:lang="en">isTranslationOf</rdfs:label>
-        <skos:definition xml:lang="en">The related resource that this OER has been translated from. When a resource is shared in one language, then later translated to another language, use “IsTranslationOf” to link the translation to the original.</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -1118,7 +1105,6 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
         <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:range rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:label xml:lang="en">isBasedOn</rdfs:label>
-        <skos:definition xml:lang="en">A resource from which this work is derived or from which it is a modification or adaptation.</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -1132,7 +1118,6 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
         <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:range rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:label xml:lang="en">continues</rdfs:label>
-        <skos:definition xml:lang="en">A related resource which is the direct predecessor of the described resource. This applies to a story, a series of lessons, a serial, a journal etc. Predecessors typically form part of a common whole - such as a  series of lectures.</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -1145,7 +1130,6 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
         <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:range rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:label xml:lang="en">isContinuedBy</rdfs:label>
-        <skos:definition xml:lang="en">A related resource which is the direct continuation of the described resource. This applies to a story, a series of lessons, a serial, a journal etc. Successors typically form part of a common whole - such as a  series of lectures.</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -1159,7 +1143,6 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
         <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:range rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:label xml:lang="en">isSupplementTo</rdfs:label>
-        <skos:definition xml:lang="en">Resource that is complemented by the described augmenting resource.</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -1172,7 +1155,6 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
         <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:range rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:label xml:lang="en">isSupplementedBy</rdfs:label>
-        <skos:definition xml:lang="en">Resource that complements the predominant described resource.</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -1316,10 +1298,10 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
                 </owl:withRestrictions>
             </rdfs:Datatype>
         </rdfs:range>
+        <rdfs:isDefinedBy xml:lang="en">A Research Organization Registry identifier that persistently and uniquely identifies a research organization</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy xml:lang="de">Ein persistenter Identifikator für Organisationen, vergeben durch die Research Organization Registry, der eine Forschungseinrichtung eindeutig identifiziert.</rdfs:isDefinedBy>
         <skos:altLabel xml:lang="en">has research organization registry id</skos:altLabel>
         <skos:altLabel xml:lang="de">hat Forschungsorganisationsid</skos:altLabel>
-        <skos:definition xml:lang="en">A Research Organization Registry identifier that persistently and uniquely identifies a research organization</skos:definition>
-        <skos:definition xml:lang="de">Ein persistenter Identifikator für Organisationen, vergeben durch die Research Organization Registry, der eine Forschungseinrichtung eindeutig identifiziert.</skos:definition>
         <skos:prefLabel xml:lang="en">has ROR ID</skos:prefLabel>
         <skos:prefLabel xml:lang="de">hat ROR ID</skos:prefLabel>
     </owl:DatatypeProperty>
@@ -1348,8 +1330,8 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
                 </owl:withRestrictions>
             </rdfs:Datatype>
         </rdfs:range>
-        <skos:definition xml:lang="en">Open Researcher and Contributor ID: an identifier, that allows unique identification of a person, usually active in research.</skos:definition>
-        <skos:definition xml:lang="de">Open Researcher and Contributor ID: ein persistenter Identifikator, der eine in der Forschung tätige Person eindeutig identifiziert.</skos:definition>
+        <rdfs:isDefinedBy xml:lang="en">Open Researcher and Contributor ID: an identifier, that allows unique identification of a person, usually active in research.</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy xml:lang="de">Open Researcher and Contributor ID: ein persistenter Identifikator, der eine in der Forschung tätige Person eindeutig identifiziert.</rdfs:isDefinedBy>
         <skos:prefLabel xml:lang="en">has ORCID ID</skos:prefLabel>
         <skos:prefLabel xml:lang="de">hat ORCID ID</skos:prefLabel>
     </owl:DatatypeProperty>
@@ -1362,6 +1344,8 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
     <owl:DatatypeProperty rdf:about="https://purl.org/ontology/modalia#authorUnordered">
         <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A property that links OER to its authors in unordered way to improve perrformance.</rdfs:comment>
+        <rdfs:comment xml:lang="en">authorUnordered</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1406,6 +1390,18 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
         <rdfs:domain rdf:resource="https://purl.org/ontology/modalia#Certificate"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
         <rdfs:label xml:lang="en">certificateUrl</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/ontology/modalia#citation -->
+
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/ontology/modalia#citation">
+        <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Citation text of the OER</rdfs:comment>
+        <rdfs:label xml:lang="en">Citation</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1567,17 +1563,6 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">An abstract is a short description that summarizes an OER.</rdfs:comment>
         <rdfs:label xml:lang="en">abstract</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://schema.org/citation -->
-
-
-    <owl:DatatypeProperty rdf:about="https://schema.org/citation">
-        <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label xml:lang="en">Citation</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1775,8 +1760,8 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
 
 
     <owl:Class rdf:about="http://edamontology.org/data_0006">
+        <rdfs:isDefinedBy xml:lang="en">Kind of data being managed</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Data</rdfs:label>
-        <skos:definition xml:lang="en">Kind of data being managed</skos:definition>
     </owl:Class>
     
 
@@ -1785,7 +1770,7 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
 
 
     <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Contribution">
-        <rdfs:comment xml:lang="en">A contribution to an OER, including agent and role information.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">A contribution to an OER, including agent and role information.</rdfs:isDefinedBy>
     </owl:Class>
     
 
@@ -1794,9 +1779,9 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
 
 
     <owl:Class rdf:about="http://lexvo.org/ontology#Language">
+        <rdfs:isDefinedBy xml:lang="en">Natural language</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Language</rdfs:label>
         <rdfs:seeAlso xml:lang="en">https://www.wikidata.org/wiki/Q315</rdfs:seeAlso>
-        <skos:definition xml:lang="en">Natural language</skos:definition>
     </owl:Class>
     
 
@@ -1862,8 +1847,8 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
 
 
     <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000776">
+        <rdfs:isDefinedBy xml:lang="en">an object that is described (chemical substance, living organism, building, ...)</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Object</rdfs:label>
-        <skos:definition xml:lang="en">an object that is described (chemical substance, living organism, building, ...)</skos:definition>
         <skos:example xml:lang="en">mouse cells</skos:example>
     </owl:Class>
     
@@ -1873,8 +1858,8 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
 
 
     <owl:Class rdf:about="http://w3id.org/nfdi4ing/metadata4ing#Method">
+        <rdfs:isDefinedBy xml:lang="en">a method with which data was obtained</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Research Method</rdfs:label>
-        <skos:definition xml:lang="en">a method with which data was obtained</skos:definition>
         <skos:example xml:lang="en">bioassay, microscopy, measurement</skos:example>
     </owl:Class>
     
@@ -1884,8 +1869,8 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
 
 
     <owl:Class rdf:about="http://w3id.org/nfdi4ing/metadata4ing#Tool">
+        <rdfs:isDefinedBy xml:lang="en">a tool with which data was obtained (microscope, sensor, ...)</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Tool</rdfs:label>
-        <skos:definition xml:lang="en">a tool with which data was obtained (microscope, sensor, ...)</skos:definition>
     </owl:Class>
     
 
@@ -1901,8 +1886,8 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
 
 
     <owl:Class rdf:about="https://github.com/tibonto/educor#EducationalResource">
+        <rdfs:isDefinedBy xml:lang="en">Any educational resources online or offline</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">EducationalResource</rdfs:label>
-        <skos:definition xml:lang="en">Any educational resources online or offline</skos:definition>
         <skos:example xml:lang="en">A video describing how lists work in Python programming language</skos:example>
     </owl:Class>
     
@@ -1913,9 +1898,9 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
 
     <owl:Class rdf:about="https://github.com/tibonto/educor#KnowledgeTopic">
         <owl:disjointWith rdf:resource="https://purl.org/ontology/modalia#Skill"/>
+        <rdfs:isDefinedBy xml:lang="en">A single node representing a learning module based on the domain ontology. It contains all the learning material for the specific learning module.</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">KnowledgeTopic</rdfs:label>
         <rdfs:seeAlso xml:lang="en">https://w3id.org/ccso/ccso#Topic</rdfs:seeAlso>
-        <skos:definition xml:lang="en">A single node representing a learning module based on the domain ontology. It contains all the learning material for the specific learning module.</skos:definition>
         <skos:example xml:lang="en">A knowledge topic can be the “Quadratic equations” in the domain of Mathematics Algebra</skos:example>
     </owl:Class>
     
@@ -1938,8 +1923,8 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
 
     <owl:Class rdf:about="https://github.com/tibonto/educor#LearningPreference">
         <rdfs:comment xml:lang="en">It is based on the theory which identifies four learning styles (visual, auditory, reading, and kinesthetic).</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">The learning preference of the user based on the learning styles theory</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">LearningPreference</rdfs:label>
-        <skos:definition xml:lang="en">The learning preference of the user based on the learning styles theory</skos:definition>
         <skos:example xml:lang="en">Visual</skos:example>
     </owl:Class>
     
@@ -1950,8 +1935,8 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
 
     <owl:Class rdf:about="https://github.com/tibonto/educor#Recommendation">
         <rdfs:comment xml:lang="en">The recommendation in advanced systems can also be an action (take a small break), an exercise, a knowledge topic, a skill, or a learning path</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">The output of the recommendation system algorithm. The system that reads user profile, content information, ratings and any available rules, in order to generate a meaningful recommendation.</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Recommendation</rdfs:label>
-        <skos:definition xml:lang="en">The output of the recommendation system algorithm. The system that reads user profile, content information, ratings and any available rules, in order to generate a meaningful recommendation.</skos:definition>
         <skos:example xml:lang="en">The recommendation is &quot;Quadratic Equation&quot;</skos:example>
     </owl:Class>
     
@@ -1961,8 +1946,8 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
 
 
     <owl:Class rdf:about="https://github.com/tibonto/educor#UserLogs">
+        <rdfs:isDefinedBy xml:lang="en">The user&apos;s history activity in the system</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">UserLogs</rdfs:label>
-        <skos:definition xml:lang="en">The user&apos;s history activity in the system</skos:definition>
     </owl:Class>
     
 
@@ -2425,6 +2410,7 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
 
     <owl:Class rdf:about="https://purl.org/ontology/modalia#MediaType">
         <rdfs:label xml:lang="en">MediaType</rdfs:label>
+        <skos:definition xml:lang="en">General type of data content encoded in a computer file. Digital media type of the resource. To be used with user preferences according to VARK learning style.</skos:definition>
     </owl:Class>
     
 
@@ -2605,8 +2591,8 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 
 
     <owl:Class rdf:about="https://purl.org/ontology/modalia#RDMSubjectCluster">
-        <rdfs:isDefinedBy xml:lang="en">Cluster of RDM topics areas</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">RDMSubjectCluster</rdfs:label>
+        <skos:definition xml:lang="en">Cluster of RDM topics areas.</skos:definition>
     </owl:Class>
     
 
@@ -2881,7 +2867,7 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 
 
     <owl:Class rdf:about="https://schema.org/Organization">
-        <rdfs:comment xml:lang="en">An organization such as a school (including Universities), NGO, corporation, club, etc.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">An organization such as a school (including Universities), NGO, corporation, club, etc.</rdfs:isDefinedBy>
         <rdfs:label>Organization</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
     </owl:Class>

@@ -119,8 +119,8 @@ xsd:duration rdf:type rdfs:Datatype .
 bf:agent rdf:type owl:ObjectProperty ;
          rdfs:domain bf:Contribution ;
          rdfs:range :Contributor ;
-         rdfs:comment "Property that links a contribution to the agent (e.g., the person or organization making the contribution)."@en ,
-                      "agent"@en .
+         rdfs:comment "agent"@en ;
+         rdfs:isDefinedBy "Property that links a contribution to the agent (e.g., the person or organization making the contribution)." .
 
 
 ###  http://id.loc.gov/ontologies/bibframe/contribution
@@ -145,8 +145,7 @@ dcterms:hasPart rdf:type owl:ObjectProperty ;
                 owl:inverseOf dcterms:isPartOf ;
                 rdfs:domain ec:EducationalResource ;
                 rdfs:range ec:EducationalResource ;
-                rdfs:label "hasPart"@en ;
-                <http://www.w3.org/2004/02/skos/core#definition> "A related resource that is included either physically or logically in the described resource."@en .
+                rdfs:label "hasPart"@en .
 
 
 ###  http://purl.org/dc/terms/isPartOf
@@ -154,8 +153,7 @@ dcterms:isPartOf rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf :isRelatedTo ;
                  rdfs:domain ec:EducationalResource ;
                  rdfs:range ec:EducationalResource ;
-                 rdfs:label "isPartOf"@en ;
-                 <http://www.w3.org/2004/02/skos/core#definition> "A related resource in which the described resource is physically or logically included."@en .
+                 rdfs:label "isPartOf"@en .
 
 
 ###  http://purl.org/dc/terms/isReferencedBy
@@ -164,8 +162,7 @@ dcterms:isReferencedBy rdf:type owl:ObjectProperty ;
                        owl:inverseOf dcterms:references ;
                        rdfs:domain ec:EducationalResource ;
                        rdfs:range ec:EducationalResource ;
-                       rdfs:label "isReferencedBy"@en ;
-                       <http://www.w3.org/2004/02/skos/core#definition> "A related resource that references, cites, or otherwise points to the described resource."@en .
+                       rdfs:label "isReferencedBy"@en .
 
 
 ###  http://purl.org/dc/terms/isReplacedBy
@@ -174,8 +171,7 @@ dcterms:isReplacedBy rdf:type owl:ObjectProperty ;
                      owl:inverseOf dcterms:replaces ;
                      rdfs:domain ec:EducationalResource ;
                      rdfs:range ec:EducationalResource ;
-                     rdfs:label "isReplacedBy"@en ;
-                     <http://www.w3.org/2004/02/skos/core#definition> "A related resource that supplants, displaces, or supersedes the described resource."@en .
+                     rdfs:label "isReplacedBy"@en .
 
 
 ###  http://purl.org/dc/terms/isVersionOf
@@ -184,15 +180,15 @@ dcterms:isVersionOf rdf:type owl:ObjectProperty ;
                     rdf:type owl:SymmetricProperty ;
                     rdfs:domain ec:EducationalResource ;
                     rdfs:range ec:EducationalResource ;
-                    rdfs:label "isVersionOf"@en ;
-                    <http://www.w3.org/2004/02/skos/core#definition> "A related resource of which the described resource is a version, or edition. Can be used instead of isPreviousVersionOf and isNewVersionOf if the sequence of versioning is unclear."@en .
+                    rdfs:label "isVersionOf"@en .
 
 
 ###  http://purl.org/dc/terms/language
 dcterms:language rdf:type owl:ObjectProperty ;
                  rdfs:domain ec:EducationalResource ;
                  rdfs:range <http://lexvo.org/ontology#Language> ;
-                 rdfs:comment "language of resource"@en .
+                 rdfs:comment "language of resource"@en ;
+                 rdfs:label "language"@en .
 
 
 ###  http://purl.org/dc/terms/license
@@ -208,8 +204,7 @@ dcterms:references rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf :isRelatedTo ;
                    rdfs:domain ec:EducationalResource ;
                    rdfs:range ec:EducationalResource ;
-                   rdfs:label "references"@en ;
-                   <http://www.w3.org/2004/02/skos/core#definition> "A related resource that is referenced, cited, or otherwise pointed to by the described resource."@en .
+                   rdfs:label "references"@en .
 
 
 ###  http://purl.org/dc/terms/replaces
@@ -217,8 +212,7 @@ dcterms:replaces rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf :isRelatedTo ;
                  rdfs:domain ec:EducationalResource ;
                  rdfs:range ec:EducationalResource ;
-                 rdfs:label "replaces"@en ;
-                 <http://www.w3.org/2004/02/skos/core#definition> "A related resource that is supplanted, displaced, or superseded by the described resource."@en .
+                 rdfs:label "replaces"@en .
 
 
 ###  http://purl.org/ontology/rec/core#recommender
@@ -291,8 +285,8 @@ ec:generatedFrom rdf:type owl:ObjectProperty ;
 :covers rdf:type owl:ObjectProperty ;
         rdfs:domain ec:EducationalResource ;
         rdfs:range ec:KnowledgeTopic ;
-        rdfs:isDefinedBy "Defines the topics covered in a learning resource"@en ;
-        rdfs:label "covers"@en .
+        rdfs:label "covers"@en ;
+        <http://www.w3.org/2004/02/skos/core#definition> "Defines the topics covered in a learning resource"@en .
 
 
 ###  https://purl.org/ontology/modalia#coversManagementOfDataDescribing
@@ -349,8 +343,7 @@ ec:generatedFrom rdf:type owl:ObjectProperty ;
            owl:inverseOf :isDescribedBy ;
            rdfs:domain ec:EducationalResource ;
            rdfs:range ec:EducationalResource ;
-           rdfs:label "describes"@en ;
-           <http://www.w3.org/2004/02/skos/core#definition> "A related resource that is described by the resource."@en .
+           rdfs:label "describes"@en .
 
 
 ###  https://purl.org/ontology/modalia#educationalLevel
@@ -520,8 +513,7 @@ ec:generatedFrom rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf :isRelatedTo ;
                 rdfs:domain ec:EducationalResource ;
                 rdfs:range ec:EducationalResource ;
-                rdfs:label "hasTranslation"@en ;
-                <http://www.w3.org/2004/02/skos/core#definition> "A related resource that is a translation of the content of the described resource. When a resource is shared in one language, then later translated to another language, use “HasTranslation” to link the original resource to its translation. When a resource is released at the same time in multiple languages, use “HasTranslation” to connect the works to each other in both directions."@en .
+                rdfs:label "hasTranslation"@en .
 
 
 ###  https://purl.org/ontology/modalia#hasUser
@@ -544,8 +536,7 @@ ec:generatedFrom rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf :isRelatedTo ;
                rdfs:domain ec:EducationalResource ;
                rdfs:range ec:EducationalResource ;
-               rdfs:label "isDescribedBy"@en ;
-               <http://www.w3.org/2004/02/skos/core#definition> "A related resource that provides a description (detailed account) of the described resource. This can be a manual, an instruction, a documentation, a cookbook, a README file, or something similar."@en .
+               rdfs:label "isDescribedBy"@en .
 
 
 ###  https://purl.org/ontology/modalia#isDuplicateOf
@@ -562,8 +553,7 @@ ec:generatedFrom rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf :isRelatedTo ;
                rdfs:domain ec:EducationalResource ;
                rdfs:range ec:EducationalResource ;
-               rdfs:label "isIdenticalTo"@en ;
-               <http://www.w3.org/2004/02/skos/core#definition> "The related work is the same as the described resource but is saved on another location, maybe another institution."@en .
+               rdfs:label "isIdenticalTo"@en .
 
 
 ###  https://purl.org/ontology/modalia#isLessProficientThan
@@ -599,8 +589,7 @@ ec:generatedFrom rdf:type owl:ObjectProperty ;
                          owl:IrreflexiveProperty ;
                 rdfs:domain ec:EducationalResource ;
                 rdfs:range ec:EducationalResource ;
-                rdfs:label "isNewVersionOf"@en ;
-                <http://www.w3.org/2004/02/skos/core#definition> "The related work is a previous version, or edition of the described resource, of which the described resource has been modified or updated."@en .
+                rdfs:label "isNewVersionOf"@en .
 
 
 ###  https://purl.org/ontology/modalia#isPreviousVersionOf
@@ -608,8 +597,7 @@ ec:generatedFrom rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf :isRelatedTo ;
                      rdfs:domain ec:EducationalResource ;
                      rdfs:range ec:EducationalResource ;
-                     rdfs:label "isPreviousVersionOf"@en ;
-                     <http://www.w3.org/2004/02/skos/core#definition> "The related work is a new version, or edition of the described resource, where the new version has been modified or updated."@en .
+                     rdfs:label "isPreviousVersionOf"@en .
 
 
 ###  https://purl.org/ontology/modalia#isRelatedTo
@@ -626,8 +614,7 @@ ec:generatedFrom rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf :isRelatedTo ;
                  rdfs:domain ec:EducationalResource ;
                  rdfs:range ec:EducationalResource ;
-                 rdfs:label "isTranslationOf"@en ;
-                 <http://www.w3.org/2004/02/skos/core#definition> "The related resource that this OER has been translated from. When a resource is shared in one language, then later translated to another language, use “IsTranslationOf” to link the translation to the original."@en .
+                 rdfs:label "isTranslationOf"@en .
 
 
 ###  https://purl.org/ontology/modalia#nextPhase
@@ -732,8 +719,7 @@ schema:isBasedOn rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf :isRelatedTo ;
                  rdfs:domain ec:EducationalResource ;
                  rdfs:range ec:EducationalResource ;
-                 rdfs:label "isBasedOn"@en ;
-                 <http://www.w3.org/2004/02/skos/core#definition> "A resource from which this work is derived or from which it is a modification or adaptation."@en .
+                 rdfs:label "isBasedOn"@en .
 
 
 ###  https://w3id.org/citedcat-ap/continues
@@ -742,8 +728,7 @@ schema:isBasedOn rdf:type owl:ObjectProperty ;
                                          owl:inverseOf <https://w3id.org/citedcat-ap/isContinuedBy> ;
                                          rdfs:domain ec:EducationalResource ;
                                          rdfs:range ec:EducationalResource ;
-                                         rdfs:label "continues"@en ;
-                                         <http://www.w3.org/2004/02/skos/core#definition> "A related resource which is the direct predecessor of the described resource. This applies to a story, a series of lessons, a serial, a journal etc. Predecessors typically form part of a common whole - such as a  series of lectures."@en .
+                                         rdfs:label "continues"@en .
 
 
 ###  https://w3id.org/citedcat-ap/isContinuedBy
@@ -751,8 +736,7 @@ schema:isBasedOn rdf:type owl:ObjectProperty ;
                                              rdfs:subPropertyOf :isRelatedTo ;
                                              rdfs:domain ec:EducationalResource ;
                                              rdfs:range ec:EducationalResource ;
-                                             rdfs:label "isContinuedBy"@en ;
-                                             <http://www.w3.org/2004/02/skos/core#definition> "A related resource which is the direct continuation of the described resource. This applies to a story, a series of lessons, a serial, a journal etc. Successors typically form part of a common whole - such as a  series of lectures."@en .
+                                             rdfs:label "isContinuedBy"@en .
 
 
 ###  https://w3id.org/citedcat-ap/isSupplementTo
@@ -761,8 +745,7 @@ schema:isBasedOn rdf:type owl:ObjectProperty ;
                                               owl:inverseOf <https://w3id.org/citedcat-ap/isSupplementedBy> ;
                                               rdfs:domain ec:EducationalResource ;
                                               rdfs:range ec:EducationalResource ;
-                                              rdfs:label "isSupplementTo"@en ;
-                                              <http://www.w3.org/2004/02/skos/core#definition> "Resource that is complemented by the described augmenting resource."@en .
+                                              rdfs:label "isSupplementTo"@en .
 
 
 ###  https://w3id.org/citedcat-ap/isSupplementedBy
@@ -770,8 +753,7 @@ schema:isBasedOn rdf:type owl:ObjectProperty ;
                                                 rdfs:subPropertyOf :isRelatedTo ;
                                                 rdfs:domain ec:EducationalResource ;
                                                 rdfs:range ec:EducationalResource ;
-                                                rdfs:label "isSupplementedBy"@en ;
-                                                <http://www.w3.org/2004/02/skos/core#definition> "Resource that complements the predominant described resource."@en .
+                                                rdfs:label "isSupplementedBy"@en .
 
 
 #################################################################
@@ -859,10 +841,10 @@ m4i:hasRorId rdf:type owl:DatatypeProperty ;
                                                  ]
                                                )
                         ] ;
+             rdfs:isDefinedBy "A Research Organization Registry identifier that persistently and uniquely identifies a research organization"@en ,
+                              "Ein persistenter Identifikator für Organisationen, vergeben durch die Research Organization Registry, der eine Forschungseinrichtung eindeutig identifiziert."@de ;
              <http://www.w3.org/2004/02/skos/core#altLabel> "has research organization registry id"@en ,
                                                             "hat Forschungsorganisationsid"@de ;
-             <http://www.w3.org/2004/02/skos/core#definition> "A Research Organization Registry identifier that persistently and uniquely identifies a research organization"@en ,
-                                                              "Ein persistenter Identifikator für Organisationen, vergeben durch die Research Organization Registry, der eine Forschungseinrichtung eindeutig identifiziert."@de ;
              <http://www.w3.org/2004/02/skos/core#prefLabel> "has ROR ID"@en ,
                                                              "hat ROR ID"@de .
 
@@ -880,8 +862,8 @@ m4i:orcidId rdf:type owl:DatatypeProperty ;
                                                 ]
                                               )
                        ] ;
-            <http://www.w3.org/2004/02/skos/core#definition> "Open Researcher and Contributor ID: an identifier, that allows unique identification of a person, usually active in research."@en ,
-                                                             "Open Researcher and Contributor ID: ein persistenter Identifikator, der eine in der Forschung tätige Person eindeutig identifiziert."@de ;
+            rdfs:isDefinedBy "Open Researcher and Contributor ID: an identifier, that allows unique identification of a person, usually active in research."@en ,
+                             "Open Researcher and Contributor ID: ein persistenter Identifikator, der eine in der Forschung tätige Person eindeutig identifiziert."@de ;
             <http://www.w3.org/2004/02/skos/core#prefLabel> "has ORCID ID"@en ,
                                                             "hat ORCID ID"@de .
 
@@ -889,7 +871,9 @@ m4i:orcidId rdf:type owl:DatatypeProperty ;
 ###  https://purl.org/ontology/modalia#authorUnordered
 :authorUnordered rdf:type owl:DatatypeProperty ;
                  rdfs:domain ec:EducationalResource ;
-                 rdfs:range xsd:string .
+                 rdfs:range xsd:string ;
+                 rdfs:comment "A property that links OER to its authors in unordered way to improve perrformance."@en ,
+                              "authorUnordered"@en .
 
 
 ###  https://purl.org/ontology/modalia#certificateEndDate
@@ -918,6 +902,14 @@ m4i:orcidId rdf:type owl:DatatypeProperty ;
                 rdfs:domain :Certificate ;
                 rdfs:range xsd:anyURI ;
                 rdfs:label "certificateUrl"@en .
+
+
+###  https://purl.org/ontology/modalia#citation
+:citation rdf:type owl:DatatypeProperty ;
+          rdfs:domain ec:EducationalResource ;
+          rdfs:range xsd:string ;
+          rdfs:comment "Citation text of the OER"@en ;
+          rdfs:label "Citation"@en .
 
 
 ###  https://purl.org/ontology/modalia#commentDate
@@ -1023,13 +1015,6 @@ schema:abstract rdf:type owl:DatatypeProperty ;
                 rdfs:range xsd:string ;
                 rdfs:comment "An abstract is a short description that summarizes an OER."@en ;
                 rdfs:label "abstract"@en .
-
-
-###  https://schema.org/citation
-schema:citation rdf:type owl:DatatypeProperty ;
-                rdfs:domain ec:EducationalResource ;
-                rdfs:range xsd:string ;
-                rdfs:label "Citation"@en .
 
 
 ###  https://schema.org/datePublished
@@ -1153,20 +1138,20 @@ schema:version rdf:type owl:DatatypeProperty ;
 
 ###  http://edamontology.org/data_0006
 <http://edamontology.org/data_0006> rdf:type owl:Class ;
-                                    rdfs:label "Data"@en ;
-                                    <http://www.w3.org/2004/02/skos/core#definition> "Kind of data being managed"@en .
+                                    rdfs:isDefinedBy "Kind of data being managed"@en ;
+                                    rdfs:label "Data"@en .
 
 
 ###  http://id.loc.gov/ontologies/bibframe/Contribution
 bf:Contribution rdf:type owl:Class ;
-                rdfs:comment "A contribution to an OER, including agent and role information."@en .
+                rdfs:isDefinedBy "A contribution to an OER, including agent and role information."@en .
 
 
 ###  http://lexvo.org/ontology#Language
 <http://lexvo.org/ontology#Language> rdf:type owl:Class ;
+                                     rdfs:isDefinedBy "Natural language"@en ;
                                      rdfs:label "Language"@en ;
-                                     rdfs:seeAlso "https://www.wikidata.org/wiki/Q315"@en ;
-                                     <http://www.w3.org/2004/02/skos/core#definition> "Natural language"@en .
+                                     rdfs:seeAlso "https://www.wikidata.org/wiki/Q315"@en .
 
 
 ###  http://purl.org/ontology/bibo/Article
@@ -1208,22 +1193,22 @@ bibo:Webpage rdf:type owl:Class ;
 
 ###  http://semanticscience.org/resource/SIO_000776
 <http://semanticscience.org/resource/SIO_000776> rdf:type owl:Class ;
+                                                 rdfs:isDefinedBy "an object that is described (chemical substance, living organism, building, ...)"@en ;
                                                  rdfs:label "Object"@en ;
-                                                 <http://www.w3.org/2004/02/skos/core#definition> "an object that is described (chemical substance, living organism, building, ...)"@en ;
                                                  <http://www.w3.org/2004/02/skos/core#example> "mouse cells"@en .
 
 
 ###  http://w3id.org/nfdi4ing/metadata4ing#Method
 m4i:Method rdf:type owl:Class ;
+           rdfs:isDefinedBy "a method with which data was obtained"@en ;
            rdfs:label "Research Method"@en ;
-           <http://www.w3.org/2004/02/skos/core#definition> "a method with which data was obtained"@en ;
            <http://www.w3.org/2004/02/skos/core#example> "bioassay, microscopy, measurement"@en .
 
 
 ###  http://w3id.org/nfdi4ing/metadata4ing#Tool
 m4i:Tool rdf:type owl:Class ;
-         rdfs:label "Tool"@en ;
-         <http://www.w3.org/2004/02/skos/core#definition> "a tool with which data was obtained (microscope, sensor, ...)"@en .
+         rdfs:isDefinedBy "a tool with which data was obtained (microscope, sensor, ...)"@en ;
+         rdfs:label "Tool"@en .
 
 
 ###  http://www.w3.org/1999/02/22-rdf-syntax-ns#List
@@ -1232,17 +1217,17 @@ rdf:List rdf:type owl:Class .
 
 ###  https://github.com/tibonto/educor#EducationalResource
 ec:EducationalResource rdf:type owl:Class ;
+                       rdfs:isDefinedBy "Any educational resources online or offline"@en ;
                        rdfs:label "EducationalResource"@en ;
-                       <http://www.w3.org/2004/02/skos/core#definition> "Any educational resources online or offline"@en ;
                        <http://www.w3.org/2004/02/skos/core#example> "A video describing how lists work in Python programming language"@en .
 
 
 ###  https://github.com/tibonto/educor#KnowledgeTopic
 ec:KnowledgeTopic rdf:type owl:Class ;
                   owl:disjointWith :Skill ;
+                  rdfs:isDefinedBy "A single node representing a learning module based on the domain ontology. It contains all the learning material for the specific learning module."@en ;
                   rdfs:label "KnowledgeTopic"@en ;
                   rdfs:seeAlso "https://w3id.org/ccso/ccso#Topic"@en ;
-                  <http://www.w3.org/2004/02/skos/core#definition> "A single node representing a learning module based on the domain ontology. It contains all the learning material for the specific learning module."@en ;
                   <http://www.w3.org/2004/02/skos/core#example> "A knowledge topic can be the “Quadratic equations” in the domain of Mathematics Algebra"@en .
 
 
@@ -1257,23 +1242,23 @@ ec:LearningPath rdf:type owl:Class ;
 ###  https://github.com/tibonto/educor#LearningPreference
 ec:LearningPreference rdf:type owl:Class ;
                       rdfs:comment "It is based on the theory which identifies four learning styles (visual, auditory, reading, and kinesthetic)."@en ;
+                      rdfs:isDefinedBy "The learning preference of the user based on the learning styles theory"@en ;
                       rdfs:label "LearningPreference"@en ;
-                      <http://www.w3.org/2004/02/skos/core#definition> "The learning preference of the user based on the learning styles theory"@en ;
                       <http://www.w3.org/2004/02/skos/core#example> "Visual"@en .
 
 
 ###  https://github.com/tibonto/educor#Recommendation
 ec:Recommendation rdf:type owl:Class ;
                   rdfs:comment "The recommendation in advanced systems can also be an action (take a small break), an exercise, a knowledge topic, a skill, or a learning path"@en ;
+                  rdfs:isDefinedBy "The output of the recommendation system algorithm. The system that reads user profile, content information, ratings and any available rules, in order to generate a meaningful recommendation."@en ;
                   rdfs:label "Recommendation"@en ;
-                  <http://www.w3.org/2004/02/skos/core#definition> "The output of the recommendation system algorithm. The system that reads user profile, content information, ratings and any available rules, in order to generate a meaningful recommendation."@en ;
                   <http://www.w3.org/2004/02/skos/core#example> "The recommendation is \"Quadratic Equation\""@en .
 
 
 ###  https://github.com/tibonto/educor#UserLogs
 ec:UserLogs rdf:type owl:Class ;
-            rdfs:label "UserLogs"@en ;
-            <http://www.w3.org/2004/02/skos/core#definition> "The user's history activity in the system"@en .
+            rdfs:isDefinedBy "The user's history activity in the system"@en ;
+            rdfs:label "UserLogs"@en .
 
 
 ###  https://purl.org/ontology/modalia#AnalyzePhase
@@ -1563,7 +1548,8 @@ ec:UserLogs rdf:type owl:Class ;
 
 ###  https://purl.org/ontology/modalia#MediaType
 :MediaType rdf:type owl:Class ;
-           rdfs:label "MediaType"@en .
+           rdfs:label "MediaType"@en ;
+           <http://www.w3.org/2004/02/skos/core#definition> "General type of data content encoded in a computer file. Digital media type of the resource. To be used with user preferences according to VARK learning style."@en .
 
 
 ###  https://purl.org/ontology/modalia#MicroCredential
@@ -1677,8 +1663,8 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 
 ###  https://purl.org/ontology/modalia#RDMSubjectCluster
 :RDMSubjectCluster rdf:type owl:Class ;
-                   rdfs:isDefinedBy "Cluster of RDM topics areas"@en ;
-                   rdfs:label "RDMSubjectCluster"@en .
+                   rdfs:label "RDMSubjectCluster"@en ;
+                   <http://www.w3.org/2004/02/skos/core#definition> "Cluster of RDM topics areas."@en .
 
 
 ###  https://purl.org/ontology/modalia#RDMTopic
@@ -1849,7 +1835,7 @@ schema:ImageObject rdf:type owl:Class ;
 
 ###  https://schema.org/Organization
 schema:Organization rdf:type owl:Class ;
-                    rdfs:comment "An organization such as a school (including Universities), NGO, corporation, club, etc."@en ;
+                    rdfs:isDefinedBy "An organization such as a school (including Universities), NGO, corporation, club, etc."@en ;
                     rdfs:label "Organization" ;
                     rdfs:seeAlso <http://xmlns.com/foaf/0.1/Organization> .
 
