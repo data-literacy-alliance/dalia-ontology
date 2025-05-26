@@ -537,18 +537,18 @@
 }, {
   "@id" : "http://edamontology.org/data_0006",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@language" : "en",
+    "@value" : "Kind of data being managed"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Data"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "Kind of data being managed"
   } ]
 }, {
   "@id" : "http://id.loc.gov/ontologies/bibframe/Contribution",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@language" : "en",
     "@value" : "A contribution to an OER, including agent and role information."
   } ]
@@ -557,13 +557,13 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Property that links a contribution to the agent (e.g., the person or organization making the contribution)."
-  }, {
-    "@language" : "en",
     "@value" : "agent"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://id.loc.gov/ontologies/bibframe/Contribution"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "Property that links a contribution to the agent (e.g., the person or organization making the contribution)."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://purl.org/ontology/modalia#Contributor"
@@ -605,6 +605,10 @@
 }, {
   "@id" : "http://lexvo.org/ontology#Language",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@language" : "en",
+    "@value" : "Natural language"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Language"
@@ -612,10 +616,6 @@
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@language" : "en",
     "@value" : "https://www.wikidata.org/wiki/Q315"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "Natural language"
   } ]
 }, {
   "@id" : "http://purl.org/dc/elements/1.1/contributor",
@@ -702,10 +702,6 @@
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
     "@id" : "http://purl.org/dc/terms/isPartOf"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "A related resource that is included either physically or logically in the described resource."
   } ]
 }, {
   "@id" : "http://purl.org/dc/terms/isPartOf",
@@ -722,10 +718,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://purl.org/ontology/modalia#isRelatedTo"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "A related resource in which the described resource is physically or logically included."
   } ]
 }, {
   "@id" : "http://purl.org/dc/terms/isReferencedBy",
@@ -745,10 +737,6 @@
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
     "@id" : "http://purl.org/dc/terms/references"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "A related resource that references, cites, or otherwise points to the described resource."
   } ]
 }, {
   "@id" : "http://purl.org/dc/terms/isReplacedBy",
@@ -768,10 +756,6 @@
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
     "@id" : "http://purl.org/dc/terms/replaces"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "A related resource that supplants, displaces, or supersedes the described resource."
   } ]
 }, {
   "@id" : "http://purl.org/dc/terms/isVersionOf",
@@ -788,10 +772,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://purl.org/ontology/modalia#isRelatedTo"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "A related resource of which the described resource is a version, or edition. Can be used instead of isPreviousVersionOf and isNewVersionOf if the sequence of versioning is unclear."
   } ]
 }, {
   "@id" : "http://purl.org/dc/terms/issued",
@@ -819,6 +799,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://github.com/tibonto/educor#EducationalResource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "language"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://lexvo.org/ontology#Language"
@@ -861,10 +845,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://purl.org/ontology/modalia#isRelatedTo"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "A related resource that is referenced, cited, or otherwise pointed to by the described resource."
   } ]
 }, {
   "@id" : "http://purl.org/dc/terms/replaces",
@@ -881,10 +861,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://purl.org/ontology/modalia#isRelatedTo"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "A related resource that is supplanted, displaced, or superseded by the described resource."
   } ]
 }, {
   "@id" : "http://purl.org/dc/terms/rights",
@@ -1035,13 +1011,13 @@
 }, {
   "@id" : "http://semanticscience.org/resource/SIO_000776",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@language" : "en",
+    "@value" : "an object that is described (chemical substance, living organism, building, ...)"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Object"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "an object that is described (chemical substance, living organism, building, ...)"
   } ],
   "http://www.w3.org/2004/02/skos/core#example" : [ {
     "@language" : "en",
@@ -1080,13 +1056,13 @@
 }, {
   "@id" : "http://w3id.org/nfdi4ing/metadata4ing#Method",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@language" : "en",
+    "@value" : "a method with which data was obtained"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Research Method"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "a method with which data was obtained"
   } ],
   "http://www.w3.org/2004/02/skos/core#example" : [ {
     "@language" : "en",
@@ -1105,19 +1081,26 @@
 }, {
   "@id" : "http://w3id.org/nfdi4ing/metadata4ing#Tool",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@language" : "en",
+    "@value" : "a tool with which data was obtained (microscope, sensor, ...)"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Tool"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "a tool with which data was obtained (microscope, sensor, ...)"
   } ]
 }, {
   "@id" : "http://w3id.org/nfdi4ing/metadata4ing#hasRorId",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "_:genid32"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@language" : "en",
+    "@value" : "A Research Organization Registry identifier that persistently and uniquely identifies a research organization"
+  }, {
+    "@language" : "de",
+    "@value" : "Ein persistenter Identifikator für Organisationen, vergeben durch die Research Organization Registry, der eine Forschungseinrichtung eindeutig identifiziert."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "_:genid35"
@@ -1128,13 +1111,6 @@
   }, {
     "@language" : "de",
     "@value" : "hat Forschungsorganisationsid"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "A Research Organization Registry identifier that persistently and uniquely identifies a research organization"
-  }, {
-    "@language" : "de",
-    "@value" : "Ein persistenter Identifikator für Organisationen, vergeben durch die Research Organization Registry, der eine Forschungseinrichtung eindeutig identifiziert."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
@@ -1149,15 +1125,15 @@
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "_:genid38"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid41"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@language" : "en",
     "@value" : "Open Researcher and Contributor ID: an identifier, that allows unique identification of a person, usually active in research."
   }, {
     "@language" : "de",
     "@value" : "Open Researcher and Contributor ID: ein persistenter Identifikator, der eine in der Forschung tätige Person eindeutig identifiziert."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid41"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
@@ -1196,13 +1172,13 @@
 }, {
   "@id" : "https://github.com/tibonto/educor#EducationalResource",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@language" : "en",
+    "@value" : "Any educational resources online or offline"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "EducationalResource"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "Any educational resources online or offline"
   } ],
   "http://www.w3.org/2004/02/skos/core#example" : [ {
     "@language" : "en",
@@ -1211,6 +1187,10 @@
 }, {
   "@id" : "https://github.com/tibonto/educor#KnowledgeTopic",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@language" : "en",
+    "@value" : "A single node representing a learning module based on the domain ontology. It contains all the learning material for the specific learning module."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "KnowledgeTopic"
@@ -1221,10 +1201,6 @@
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
     "@id" : "https://purl.org/ontology/modalia#Skill"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "A single node representing a learning module based on the domain ontology. It contains all the learning material for the specific learning module."
   } ],
   "http://www.w3.org/2004/02/skos/core#example" : [ {
     "@language" : "en",
@@ -1256,13 +1232,13 @@
     "@language" : "en",
     "@value" : "It is based on the theory which identifies four learning styles (visual, auditory, reading, and kinesthetic)."
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@language" : "en",
+    "@value" : "The learning preference of the user based on the learning styles theory"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "LearningPreference"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "The learning preference of the user based on the learning styles theory"
   } ],
   "http://www.w3.org/2004/02/skos/core#example" : [ {
     "@language" : "en",
@@ -1275,13 +1251,13 @@
     "@language" : "en",
     "@value" : "The recommendation in advanced systems can also be an action (take a small break), an exercise, a knowledge topic, a skill, or a learning path"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@language" : "en",
+    "@value" : "The output of the recommendation system algorithm. The system that reads user profile, content information, ratings and any available rules, in order to generate a meaningful recommendation."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Recommendation"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "The output of the recommendation system algorithm. The system that reads user profile, content information, ratings and any available rules, in order to generate a meaningful recommendation."
   } ],
   "http://www.w3.org/2004/02/skos/core#example" : [ {
     "@language" : "en",
@@ -1290,13 +1266,13 @@
 }, {
   "@id" : "https://github.com/tibonto/educor#UserLogs",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@language" : "en",
+    "@value" : "The user's history activity in the system"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "UserLogs"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "The user's history activity in the system"
   } ]
 }, {
   "@id" : "https://github.com/tibonto/educor#consistsOfKnowledge",
@@ -1998,6 +1974,10 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "MediaType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "General type of data content encoded in a computer file. Digital media type of the resource. To be used with user preferences according to VARK learning style."
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#MicroCredential",
@@ -2255,13 +2235,13 @@
 }, {
   "@id" : "https://purl.org/ontology/modalia#RDMSubjectCluster",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@language" : "en",
-    "@value" : "Cluster of RDM topics areas"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "RDMSubjectCluster"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Cluster of RDM topics areas."
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#RDMTopic",
@@ -2549,6 +2529,13 @@
 }, {
   "@id" : "https://purl.org/ontology/modalia#authorUnordered",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A property that links OER to its authors in unordered way to improve perrformance."
+  }, {
+    "@language" : "en",
+    "@value" : "authorUnordered"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://github.com/tibonto/educor#EducationalResource"
   } ],
@@ -2639,6 +2626,23 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
+  } ]
+}, {
+  "@id" : "https://purl.org/ontology/modalia#citation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Citation text of the OER"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://github.com/tibonto/educor#EducationalResource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Citation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#commentDate",
@@ -2734,16 +2738,16 @@
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://github.com/tibonto/educor#EducationalResource"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@language" : "en",
-    "@value" : "Defines the topics covered in a learning resource"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "covers"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://github.com/tibonto/educor#KnowledgeTopic"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Defines the topics covered in a learning resource"
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#coversManagementOfDataDescribing",
@@ -2848,10 +2852,6 @@
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
     "@id" : "https://purl.org/ontology/modalia#isDescribedBy"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "A related resource that is described by the resource."
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#educationalLevel",
@@ -3237,10 +3237,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://purl.org/ontology/modalia#isRelatedTo"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "A related resource that is a translation of the content of the described resource. When a resource is shared in one language, then later translated to another language, use “HasTranslation” to link the original resource to its translation. When a resource is released at the same time in multiple languages, use “HasTranslation” to connect the works to each other in both directions."
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#hasUser",
@@ -3286,10 +3282,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://purl.org/ontology/modalia#isRelatedTo"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "A related resource that provides a description (detailed account) of the described resource. This can be a manual, an instruction, a documentation, a cookbook, a README file, or something similar."
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#isDuplicateOf",
@@ -3326,10 +3318,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://purl.org/ontology/modalia#isRelatedTo"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "The related work is the same as the described resource but is saved on another location, maybe another institution."
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#isLessProficientThan",
@@ -3394,10 +3382,6 @@
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
     "@id" : "https://purl.org/ontology/modalia#isPreviousVersionOf"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "The related work is a previous version, or edition of the described resource, of which the described resource has been modified or updated."
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#isPreviousVersionOf",
@@ -3414,10 +3398,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://purl.org/ontology/modalia#isRelatedTo"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "The related work is a new version, or edition of the described resource, where the new version has been modified or updated."
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#isRelatedTo",
@@ -3454,10 +3434,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://purl.org/ontology/modalia#isRelatedTo"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "The related resource that this OER has been translated from. When a resource is shared in one language, then later translated to another language, use “IsTranslationOf” to link the translation to the original."
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#likesCount",
@@ -3704,7 +3680,7 @@
 }, {
   "@id" : "https://schema.org/Organization",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@language" : "en",
     "@value" : "An organization such as a school (including Universities), NGO, corporation, club, etc."
   } ],
@@ -3837,19 +3813,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#List"
-  } ]
-}, {
-  "@id" : "https://schema.org/citation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://github.com/tibonto/educor#EducationalResource"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Citation"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "https://schema.org/datePublished",
@@ -3995,10 +3958,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://purl.org/ontology/modalia#isRelatedTo"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "A resource from which this work is derived or from which it is a modification or adaptation."
   } ]
 }, {
   "@id" : "https://schema.org/keywords",
@@ -4102,10 +4061,6 @@
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
     "@id" : "https://w3id.org/citedcat-ap/isContinuedBy"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "A related resource which is the direct predecessor of the described resource. This applies to a story, a series of lessons, a serial, a journal etc. Predecessors typically form part of a common whole - such as a  series of lectures."
   } ]
 }, {
   "@id" : "https://w3id.org/citedcat-ap/isContinuedBy",
@@ -4122,10 +4077,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://purl.org/ontology/modalia#isRelatedTo"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "A related resource which is the direct continuation of the described resource. This applies to a story, a series of lessons, a serial, a journal etc. Successors typically form part of a common whole - such as a  series of lectures."
   } ]
 }, {
   "@id" : "https://w3id.org/citedcat-ap/isSupplementTo",
@@ -4145,10 +4096,6 @@
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
     "@id" : "https://w3id.org/citedcat-ap/isSupplementedBy"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "Resource that is complemented by the described augmenting resource."
   } ]
 }, {
   "@id" : "https://w3id.org/citedcat-ap/isSupplementedBy",
@@ -4165,10 +4112,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://purl.org/ontology/modalia#isRelatedTo"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "Resource that complements the predominant described resource."
   } ]
 }, {
   "@id" : "https://w3id.org/kim/hcrt/assessment",

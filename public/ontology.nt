@@ -93,8 +93,8 @@
 <http://id.loc.gov/ontologies/bibframe/agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://id.loc.gov/ontologies/bibframe/agent> <http://www.w3.org/2000/01/rdf-schema#domain> <http://id.loc.gov/ontologies/bibframe/Contribution> .
 <http://id.loc.gov/ontologies/bibframe/agent> <http://www.w3.org/2000/01/rdf-schema#range> <https://purl.org/ontology/modalia#Contributor> .
-<http://id.loc.gov/ontologies/bibframe/agent> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that links a contribution to the agent (e.g., the person or organization making the contribution)."@en .
 <http://id.loc.gov/ontologies/bibframe/agent> <http://www.w3.org/2000/01/rdf-schema#comment> "agent"@en .
+<http://id.loc.gov/ontologies/bibframe/agent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "Property that links a contribution to the agent (e.g., the person or organization making the contribution)." .
 # 
 # http://id.loc.gov/ontologies/bibframe/contribution
 <http://id.loc.gov/ontologies/bibframe/contribution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -117,7 +117,6 @@
 <http://purl.org/dc/terms/hasPart> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
 <http://purl.org/dc/terms/hasPart> <http://www.w3.org/2000/01/rdf-schema#range> <https://github.com/tibonto/educor#EducationalResource> .
 <http://purl.org/dc/terms/hasPart> <http://www.w3.org/2000/01/rdf-schema#label> "hasPart"@en .
-<http://purl.org/dc/terms/hasPart> <http://www.w3.org/2004/02/skos/core#definition> "A related resource that is included either physically or logically in the described resource."@en .
 # 
 # http://purl.org/dc/terms/isPartOf
 <http://purl.org/dc/terms/isPartOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -125,7 +124,6 @@
 <http://purl.org/dc/terms/isPartOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
 <http://purl.org/dc/terms/isPartOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://github.com/tibonto/educor#EducationalResource> .
 <http://purl.org/dc/terms/isPartOf> <http://www.w3.org/2000/01/rdf-schema#label> "isPartOf"@en .
-<http://purl.org/dc/terms/isPartOf> <http://www.w3.org/2004/02/skos/core#definition> "A related resource in which the described resource is physically or logically included."@en .
 # 
 # http://purl.org/dc/terms/isReferencedBy
 <http://purl.org/dc/terms/isReferencedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -134,7 +132,6 @@
 <http://purl.org/dc/terms/isReferencedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
 <http://purl.org/dc/terms/isReferencedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://github.com/tibonto/educor#EducationalResource> .
 <http://purl.org/dc/terms/isReferencedBy> <http://www.w3.org/2000/01/rdf-schema#label> "isReferencedBy"@en .
-<http://purl.org/dc/terms/isReferencedBy> <http://www.w3.org/2004/02/skos/core#definition> "A related resource that references, cites, or otherwise points to the described resource."@en .
 # 
 # http://purl.org/dc/terms/isReplacedBy
 <http://purl.org/dc/terms/isReplacedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -143,7 +140,6 @@
 <http://purl.org/dc/terms/isReplacedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
 <http://purl.org/dc/terms/isReplacedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://github.com/tibonto/educor#EducationalResource> .
 <http://purl.org/dc/terms/isReplacedBy> <http://www.w3.org/2000/01/rdf-schema#label> "isReplacedBy"@en .
-<http://purl.org/dc/terms/isReplacedBy> <http://www.w3.org/2004/02/skos/core#definition> "A related resource that supplants, displaces, or supersedes the described resource."@en .
 # 
 # http://purl.org/dc/terms/isVersionOf
 <http://purl.org/dc/terms/isVersionOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -152,13 +148,13 @@
 <http://purl.org/dc/terms/isVersionOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
 <http://purl.org/dc/terms/isVersionOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://github.com/tibonto/educor#EducationalResource> .
 <http://purl.org/dc/terms/isVersionOf> <http://www.w3.org/2000/01/rdf-schema#label> "isVersionOf"@en .
-<http://purl.org/dc/terms/isVersionOf> <http://www.w3.org/2004/02/skos/core#definition> "A related resource of which the described resource is a version, or edition. Can be used instead of isPreviousVersionOf and isNewVersionOf if the sequence of versioning is unclear."@en .
 # 
 # http://purl.org/dc/terms/language
 <http://purl.org/dc/terms/language> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/dc/terms/language> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
 <http://purl.org/dc/terms/language> <http://www.w3.org/2000/01/rdf-schema#range> <http://lexvo.org/ontology#Language> .
 <http://purl.org/dc/terms/language> <http://www.w3.org/2000/01/rdf-schema#comment> "language of resource"@en .
+<http://purl.org/dc/terms/language> <http://www.w3.org/2000/01/rdf-schema#label> "language"@en .
 # 
 # http://purl.org/dc/terms/license
 <http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -173,7 +169,6 @@
 <http://purl.org/dc/terms/references> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
 <http://purl.org/dc/terms/references> <http://www.w3.org/2000/01/rdf-schema#range> <https://github.com/tibonto/educor#EducationalResource> .
 <http://purl.org/dc/terms/references> <http://www.w3.org/2000/01/rdf-schema#label> "references"@en .
-<http://purl.org/dc/terms/references> <http://www.w3.org/2004/02/skos/core#definition> "A related resource that is referenced, cited, or otherwise pointed to by the described resource."@en .
 # 
 # http://purl.org/dc/terms/replaces
 <http://purl.org/dc/terms/replaces> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -181,7 +176,6 @@
 <http://purl.org/dc/terms/replaces> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
 <http://purl.org/dc/terms/replaces> <http://www.w3.org/2000/01/rdf-schema#range> <https://github.com/tibonto/educor#EducationalResource> .
 <http://purl.org/dc/terms/replaces> <http://www.w3.org/2000/01/rdf-schema#label> "replaces"@en .
-<http://purl.org/dc/terms/replaces> <http://www.w3.org/2004/02/skos/core#definition> "A related resource that is supplanted, displaced, or superseded by the described resource."@en .
 # 
 # http://purl.org/ontology/rec/core#recommender
 <http://purl.org/ontology/rec/core#recommender> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -249,8 +243,8 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://purl.org/ontology/modalia#covers> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://purl.org/ontology/modalia#covers> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
 <https://purl.org/ontology/modalia#covers> <http://www.w3.org/2000/01/rdf-schema#range> <https://github.com/tibonto/educor#KnowledgeTopic> .
-<https://purl.org/ontology/modalia#covers> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "Defines the topics covered in a learning resource"@en .
 <https://purl.org/ontology/modalia#covers> <http://www.w3.org/2000/01/rdf-schema#label> "covers"@en .
+<https://purl.org/ontology/modalia#covers> <http://www.w3.org/2004/02/skos/core#definition> "Defines the topics covered in a learning resource"@en .
 # 
 # https://purl.org/ontology/modalia#coversManagementOfDataDescribing
 <https://purl.org/ontology/modalia#coversManagementOfDataDescribing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -305,7 +299,6 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://purl.org/ontology/modalia#describes> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
 <https://purl.org/ontology/modalia#describes> <http://www.w3.org/2000/01/rdf-schema#range> <https://github.com/tibonto/educor#EducationalResource> .
 <https://purl.org/ontology/modalia#describes> <http://www.w3.org/2000/01/rdf-schema#label> "describes"@en .
-<https://purl.org/ontology/modalia#describes> <http://www.w3.org/2004/02/skos/core#definition> "A related resource that is described by the resource."@en .
 # 
 # https://purl.org/ontology/modalia#educationalLevel
 <https://purl.org/ontology/modalia#educationalLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -464,7 +457,6 @@ _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://purl.org/ontology/modalia#hasTranslation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
 <https://purl.org/ontology/modalia#hasTranslation> <http://www.w3.org/2000/01/rdf-schema#range> <https://github.com/tibonto/educor#EducationalResource> .
 <https://purl.org/ontology/modalia#hasTranslation> <http://www.w3.org/2000/01/rdf-schema#label> "hasTranslation"@en .
-<https://purl.org/ontology/modalia#hasTranslation> <http://www.w3.org/2004/02/skos/core#definition> "A related resource that is a translation of the content of the described resource. When a resource is shared in one language, then later translated to another language, use “HasTranslation” to link the original resource to its translation. When a resource is released at the same time in multiple languages, use “HasTranslation” to connect the works to each other in both directions."@en .
 # 
 # https://purl.org/ontology/modalia#hasUser
 <https://purl.org/ontology/modalia#hasUser> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -485,7 +477,6 @@ _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://purl.org/ontology/modalia#isDescribedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
 <https://purl.org/ontology/modalia#isDescribedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://github.com/tibonto/educor#EducationalResource> .
 <https://purl.org/ontology/modalia#isDescribedBy> <http://www.w3.org/2000/01/rdf-schema#label> "isDescribedBy"@en .
-<https://purl.org/ontology/modalia#isDescribedBy> <http://www.w3.org/2004/02/skos/core#definition> "A related resource that provides a description (detailed account) of the described resource. This can be a manual, an instruction, a documentation, a cookbook, a README file, or something similar."@en .
 # 
 # https://purl.org/ontology/modalia#isDuplicateOf
 <https://purl.org/ontology/modalia#isDuplicateOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -501,7 +492,6 @@ _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://purl.org/ontology/modalia#isIdenticalTo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
 <https://purl.org/ontology/modalia#isIdenticalTo> <http://www.w3.org/2000/01/rdf-schema#range> <https://github.com/tibonto/educor#EducationalResource> .
 <https://purl.org/ontology/modalia#isIdenticalTo> <http://www.w3.org/2000/01/rdf-schema#label> "isIdenticalTo"@en .
-<https://purl.org/ontology/modalia#isIdenticalTo> <http://www.w3.org/2004/02/skos/core#definition> "The related work is the same as the described resource but is saved on another location, maybe another institution."@en .
 # 
 # https://purl.org/ontology/modalia#isLessProficientThan
 <https://purl.org/ontology/modalia#isLessProficientThan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -534,7 +524,6 @@ _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://purl.org/ontology/modalia#isNewVersionOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
 <https://purl.org/ontology/modalia#isNewVersionOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://github.com/tibonto/educor#EducationalResource> .
 <https://purl.org/ontology/modalia#isNewVersionOf> <http://www.w3.org/2000/01/rdf-schema#label> "isNewVersionOf"@en .
-<https://purl.org/ontology/modalia#isNewVersionOf> <http://www.w3.org/2004/02/skos/core#definition> "The related work is a previous version, or edition of the described resource, of which the described resource has been modified or updated."@en .
 # 
 # https://purl.org/ontology/modalia#isPreviousVersionOf
 <https://purl.org/ontology/modalia#isPreviousVersionOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -542,7 +531,6 @@ _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://purl.org/ontology/modalia#isPreviousVersionOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
 <https://purl.org/ontology/modalia#isPreviousVersionOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://github.com/tibonto/educor#EducationalResource> .
 <https://purl.org/ontology/modalia#isPreviousVersionOf> <http://www.w3.org/2000/01/rdf-schema#label> "isPreviousVersionOf"@en .
-<https://purl.org/ontology/modalia#isPreviousVersionOf> <http://www.w3.org/2004/02/skos/core#definition> "The related work is a new version, or edition of the described resource, where the new version has been modified or updated."@en .
 # 
 # https://purl.org/ontology/modalia#isRelatedTo
 <https://purl.org/ontology/modalia#isRelatedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -558,7 +546,6 @@ _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://purl.org/ontology/modalia#isTranslationOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
 <https://purl.org/ontology/modalia#isTranslationOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://github.com/tibonto/educor#EducationalResource> .
 <https://purl.org/ontology/modalia#isTranslationOf> <http://www.w3.org/2000/01/rdf-schema#label> "isTranslationOf"@en .
-<https://purl.org/ontology/modalia#isTranslationOf> <http://www.w3.org/2004/02/skos/core#definition> "The related resource that this OER has been translated from. When a resource is shared in one language, then later translated to another language, use “IsTranslationOf” to link the translation to the original."@en .
 # 
 # https://purl.org/ontology/modalia#nextPhase
 <https://purl.org/ontology/modalia#nextPhase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -661,7 +648,6 @@ _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://schema.org/isBasedOn> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
 <https://schema.org/isBasedOn> <http://www.w3.org/2000/01/rdf-schema#range> <https://github.com/tibonto/educor#EducationalResource> .
 <https://schema.org/isBasedOn> <http://www.w3.org/2000/01/rdf-schema#label> "isBasedOn"@en .
-<https://schema.org/isBasedOn> <http://www.w3.org/2004/02/skos/core#definition> "A resource from which this work is derived or from which it is a modification or adaptation."@en .
 # 
 # https://w3id.org/citedcat-ap/continues
 <https://w3id.org/citedcat-ap/continues> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -670,7 +656,6 @@ _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/citedcat-ap/continues> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
 <https://w3id.org/citedcat-ap/continues> <http://www.w3.org/2000/01/rdf-schema#range> <https://github.com/tibonto/educor#EducationalResource> .
 <https://w3id.org/citedcat-ap/continues> <http://www.w3.org/2000/01/rdf-schema#label> "continues"@en .
-<https://w3id.org/citedcat-ap/continues> <http://www.w3.org/2004/02/skos/core#definition> "A related resource which is the direct predecessor of the described resource. This applies to a story, a series of lessons, a serial, a journal etc. Predecessors typically form part of a common whole - such as a  series of lectures."@en .
 # 
 # https://w3id.org/citedcat-ap/isContinuedBy
 <https://w3id.org/citedcat-ap/isContinuedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -678,7 +663,6 @@ _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/citedcat-ap/isContinuedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
 <https://w3id.org/citedcat-ap/isContinuedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://github.com/tibonto/educor#EducationalResource> .
 <https://w3id.org/citedcat-ap/isContinuedBy> <http://www.w3.org/2000/01/rdf-schema#label> "isContinuedBy"@en .
-<https://w3id.org/citedcat-ap/isContinuedBy> <http://www.w3.org/2004/02/skos/core#definition> "A related resource which is the direct continuation of the described resource. This applies to a story, a series of lessons, a serial, a journal etc. Successors typically form part of a common whole - such as a  series of lectures."@en .
 # 
 # https://w3id.org/citedcat-ap/isSupplementTo
 <https://w3id.org/citedcat-ap/isSupplementTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -687,7 +671,6 @@ _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/citedcat-ap/isSupplementTo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
 <https://w3id.org/citedcat-ap/isSupplementTo> <http://www.w3.org/2000/01/rdf-schema#range> <https://github.com/tibonto/educor#EducationalResource> .
 <https://w3id.org/citedcat-ap/isSupplementTo> <http://www.w3.org/2000/01/rdf-schema#label> "isSupplementTo"@en .
-<https://w3id.org/citedcat-ap/isSupplementTo> <http://www.w3.org/2004/02/skos/core#definition> "Resource that is complemented by the described augmenting resource."@en .
 # 
 # https://w3id.org/citedcat-ap/isSupplementedBy
 <https://w3id.org/citedcat-ap/isSupplementedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -695,7 +678,6 @@ _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/citedcat-ap/isSupplementedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
 <https://w3id.org/citedcat-ap/isSupplementedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://github.com/tibonto/educor#EducationalResource> .
 <https://w3id.org/citedcat-ap/isSupplementedBy> <http://www.w3.org/2000/01/rdf-schema#label> "isSupplementedBy"@en .
-<https://w3id.org/citedcat-ap/isSupplementedBy> <http://www.w3.org/2004/02/skos/core#definition> "Resource that complements the predominant described resource."@en .
 # 
 # 
 # 
@@ -802,10 +784,10 @@ _:genid37 <http://www.w3.org/2001/XMLSchema#pattern> "https://ror.org/[0-9][0-9]
 _:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid35 <http://www.w3.org/2002/07/owl#onDatatype> <http://www.w3.org/2001/XMLSchema#string> .
 _:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+<http://w3id.org/nfdi4ing/metadata4ing#hasRorId> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "A Research Organization Registry identifier that persistently and uniquely identifies a research organization"@en .
+<http://w3id.org/nfdi4ing/metadata4ing#hasRorId> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "Ein persistenter Identifikator für Organisationen, vergeben durch die Research Organization Registry, der eine Forschungseinrichtung eindeutig identifiziert."@de .
 <http://w3id.org/nfdi4ing/metadata4ing#hasRorId> <http://www.w3.org/2004/02/skos/core#altLabel> "has research organization registry id"@en .
 <http://w3id.org/nfdi4ing/metadata4ing#hasRorId> <http://www.w3.org/2004/02/skos/core#altLabel> "hat Forschungsorganisationsid"@de .
-<http://w3id.org/nfdi4ing/metadata4ing#hasRorId> <http://www.w3.org/2004/02/skos/core#definition> "A Research Organization Registry identifier that persistently and uniquely identifies a research organization"@en .
-<http://w3id.org/nfdi4ing/metadata4ing#hasRorId> <http://www.w3.org/2004/02/skos/core#definition> "Ein persistenter Identifikator für Organisationen, vergeben durch die Research Organization Registry, der eine Forschungseinrichtung eindeutig identifiziert."@de .
 <http://w3id.org/nfdi4ing/metadata4ing#hasRorId> <http://www.w3.org/2004/02/skos/core#prefLabel> "has ROR ID"@en .
 <http://w3id.org/nfdi4ing/metadata4ing#hasRorId> <http://www.w3.org/2004/02/skos/core#prefLabel> "hat ROR ID"@de .
 # 
@@ -828,8 +810,8 @@ _:genid43 <http://www.w3.org/2001/XMLSchema#pattern> "https://orcid.org/[0-9][0-
 _:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid41 <http://www.w3.org/2002/07/owl#onDatatype> <http://www.w3.org/2001/XMLSchema#string> .
 _:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
-<http://w3id.org/nfdi4ing/metadata4ing#orcidId> <http://www.w3.org/2004/02/skos/core#definition> "Open Researcher and Contributor ID: an identifier, that allows unique identification of a person, usually active in research."@en .
-<http://w3id.org/nfdi4ing/metadata4ing#orcidId> <http://www.w3.org/2004/02/skos/core#definition> "Open Researcher and Contributor ID: ein persistenter Identifikator, der eine in der Forschung tätige Person eindeutig identifiziert."@de .
+<http://w3id.org/nfdi4ing/metadata4ing#orcidId> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "Open Researcher and Contributor ID: an identifier, that allows unique identification of a person, usually active in research."@en .
+<http://w3id.org/nfdi4ing/metadata4ing#orcidId> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "Open Researcher and Contributor ID: ein persistenter Identifikator, der eine in der Forschung tätige Person eindeutig identifiziert."@de .
 <http://w3id.org/nfdi4ing/metadata4ing#orcidId> <http://www.w3.org/2004/02/skos/core#prefLabel> "has ORCID ID"@en .
 <http://w3id.org/nfdi4ing/metadata4ing#orcidId> <http://www.w3.org/2004/02/skos/core#prefLabel> "hat ORCID ID"@de .
 # 
@@ -837,6 +819,8 @@ _:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://purl.org/ontology/modalia#authorUnordered> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://purl.org/ontology/modalia#authorUnordered> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
 <https://purl.org/ontology/modalia#authorUnordered> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://purl.org/ontology/modalia#authorUnordered> <http://www.w3.org/2000/01/rdf-schema#comment> "A property that links OER to its authors in unordered way to improve perrformance."@en .
+<https://purl.org/ontology/modalia#authorUnordered> <http://www.w3.org/2000/01/rdf-schema#comment> "authorUnordered"@en .
 # 
 # https://purl.org/ontology/modalia#certificateEndDate
 <https://purl.org/ontology/modalia#certificateEndDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -861,6 +845,13 @@ _:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://purl.org/ontology/modalia#certificateUrl> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/ontology/modalia#Certificate> .
 <https://purl.org/ontology/modalia#certificateUrl> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
 <https://purl.org/ontology/modalia#certificateUrl> <http://www.w3.org/2000/01/rdf-schema#label> "certificateUrl"@en .
+# 
+# https://purl.org/ontology/modalia#citation
+<https://purl.org/ontology/modalia#citation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://purl.org/ontology/modalia#citation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
+<https://purl.org/ontology/modalia#citation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://purl.org/ontology/modalia#citation> <http://www.w3.org/2000/01/rdf-schema#comment> "Citation text of the OER"@en .
+<https://purl.org/ontology/modalia#citation> <http://www.w3.org/2000/01/rdf-schema#label> "Citation"@en .
 # 
 # https://purl.org/ontology/modalia#commentDate
 <https://purl.org/ontology/modalia#commentDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -952,12 +943,6 @@ _:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://schema.org/abstract> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://schema.org/abstract> <http://www.w3.org/2000/01/rdf-schema#comment> "An abstract is a short description that summarizes an OER."@en .
 <https://schema.org/abstract> <http://www.w3.org/2000/01/rdf-schema#label> "abstract"@en .
-# 
-# https://schema.org/citation
-<https://schema.org/citation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://schema.org/citation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
-<https://schema.org/citation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://schema.org/citation> <http://www.w3.org/2000/01/rdf-schema#label> "Citation"@en .
 # 
 # https://schema.org/datePublished
 <https://schema.org/datePublished> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -1079,18 +1064,18 @@ _:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # http://edamontology.org/data_0006
 <http://edamontology.org/data_0006> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://edamontology.org/data_0006> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "Kind of data being managed"@en .
 <http://edamontology.org/data_0006> <http://www.w3.org/2000/01/rdf-schema#label> "Data"@en .
-<http://edamontology.org/data_0006> <http://www.w3.org/2004/02/skos/core#definition> "Kind of data being managed"@en .
 # 
 # http://id.loc.gov/ontologies/bibframe/Contribution
 <http://id.loc.gov/ontologies/bibframe/Contribution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://id.loc.gov/ontologies/bibframe/Contribution> <http://www.w3.org/2000/01/rdf-schema#comment> "A contribution to an OER, including agent and role information."@en .
+<http://id.loc.gov/ontologies/bibframe/Contribution> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "A contribution to an OER, including agent and role information."@en .
 # 
 # http://lexvo.org/ontology#Language
 <http://lexvo.org/ontology#Language> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lexvo.org/ontology#Language> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "Natural language"@en .
 <http://lexvo.org/ontology#Language> <http://www.w3.org/2000/01/rdf-schema#label> "Language"@en .
 <http://lexvo.org/ontology#Language> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.wikidata.org/wiki/Q315"@en .
-<http://lexvo.org/ontology#Language> <http://www.w3.org/2004/02/skos/core#definition> "Natural language"@en .
 # 
 # http://purl.org/ontology/bibo/Article
 <http://purl.org/ontology/bibo/Article> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -1126,36 +1111,36 @@ _:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # http://semanticscience.org/resource/SIO_000776
 <http://semanticscience.org/resource/SIO_000776> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://semanticscience.org/resource/SIO_000776> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "an object that is described (chemical substance, living organism, building, ...)"@en .
 <http://semanticscience.org/resource/SIO_000776> <http://www.w3.org/2000/01/rdf-schema#label> "Object"@en .
-<http://semanticscience.org/resource/SIO_000776> <http://www.w3.org/2004/02/skos/core#definition> "an object that is described (chemical substance, living organism, building, ...)"@en .
 <http://semanticscience.org/resource/SIO_000776> <http://www.w3.org/2004/02/skos/core#example> "mouse cells"@en .
 # 
 # http://w3id.org/nfdi4ing/metadata4ing#Method
 <http://w3id.org/nfdi4ing/metadata4ing#Method> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/nfdi4ing/metadata4ing#Method> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "a method with which data was obtained"@en .
 <http://w3id.org/nfdi4ing/metadata4ing#Method> <http://www.w3.org/2000/01/rdf-schema#label> "Research Method"@en .
-<http://w3id.org/nfdi4ing/metadata4ing#Method> <http://www.w3.org/2004/02/skos/core#definition> "a method with which data was obtained"@en .
 <http://w3id.org/nfdi4ing/metadata4ing#Method> <http://www.w3.org/2004/02/skos/core#example> "bioassay, microscopy, measurement"@en .
 # 
 # http://w3id.org/nfdi4ing/metadata4ing#Tool
 <http://w3id.org/nfdi4ing/metadata4ing#Tool> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/nfdi4ing/metadata4ing#Tool> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "a tool with which data was obtained (microscope, sensor, ...)"@en .
 <http://w3id.org/nfdi4ing/metadata4ing#Tool> <http://www.w3.org/2000/01/rdf-schema#label> "Tool"@en .
-<http://w3id.org/nfdi4ing/metadata4ing#Tool> <http://www.w3.org/2004/02/skos/core#definition> "a tool with which data was obtained (microscope, sensor, ...)"@en .
 # 
 # http://www.w3.org/1999/02/22-rdf-syntax-ns#List
 <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
 # https://github.com/tibonto/educor#EducationalResource
 <https://github.com/tibonto/educor#EducationalResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://github.com/tibonto/educor#EducationalResource> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "Any educational resources online or offline"@en .
 <https://github.com/tibonto/educor#EducationalResource> <http://www.w3.org/2000/01/rdf-schema#label> "EducationalResource"@en .
-<https://github.com/tibonto/educor#EducationalResource> <http://www.w3.org/2004/02/skos/core#definition> "Any educational resources online or offline"@en .
 <https://github.com/tibonto/educor#EducationalResource> <http://www.w3.org/2004/02/skos/core#example> "A video describing how lists work in Python programming language"@en .
 # 
 # https://github.com/tibonto/educor#KnowledgeTopic
 <https://github.com/tibonto/educor#KnowledgeTopic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://github.com/tibonto/educor#KnowledgeTopic> <http://www.w3.org/2002/07/owl#disjointWith> <https://purl.org/ontology/modalia#Skill> .
+<https://github.com/tibonto/educor#KnowledgeTopic> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "A single node representing a learning module based on the domain ontology. It contains all the learning material for the specific learning module."@en .
 <https://github.com/tibonto/educor#KnowledgeTopic> <http://www.w3.org/2000/01/rdf-schema#label> "KnowledgeTopic"@en .
 <https://github.com/tibonto/educor#KnowledgeTopic> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://w3id.org/ccso/ccso#Topic"@en .
-<https://github.com/tibonto/educor#KnowledgeTopic> <http://www.w3.org/2004/02/skos/core#definition> "A single node representing a learning module based on the domain ontology. It contains all the learning material for the specific learning module."@en .
 <https://github.com/tibonto/educor#KnowledgeTopic> <http://www.w3.org/2004/02/skos/core#example> "A knowledge topic can be the “Quadratic equations” in the domain of Mathematics Algebra"@en .
 # 
 # https://github.com/tibonto/educor#LearningPath
@@ -1168,21 +1153,21 @@ _:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # https://github.com/tibonto/educor#LearningPreference
 <https://github.com/tibonto/educor#LearningPreference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://github.com/tibonto/educor#LearningPreference> <http://www.w3.org/2000/01/rdf-schema#comment> "It is based on the theory which identifies four learning styles (visual, auditory, reading, and kinesthetic)."@en .
+<https://github.com/tibonto/educor#LearningPreference> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "The learning preference of the user based on the learning styles theory"@en .
 <https://github.com/tibonto/educor#LearningPreference> <http://www.w3.org/2000/01/rdf-schema#label> "LearningPreference"@en .
-<https://github.com/tibonto/educor#LearningPreference> <http://www.w3.org/2004/02/skos/core#definition> "The learning preference of the user based on the learning styles theory"@en .
 <https://github.com/tibonto/educor#LearningPreference> <http://www.w3.org/2004/02/skos/core#example> "Visual"@en .
 # 
 # https://github.com/tibonto/educor#Recommendation
 <https://github.com/tibonto/educor#Recommendation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://github.com/tibonto/educor#Recommendation> <http://www.w3.org/2000/01/rdf-schema#comment> "The recommendation in advanced systems can also be an action (take a small break), an exercise, a knowledge topic, a skill, or a learning path"@en .
+<https://github.com/tibonto/educor#Recommendation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "The output of the recommendation system algorithm. The system that reads user profile, content information, ratings and any available rules, in order to generate a meaningful recommendation."@en .
 <https://github.com/tibonto/educor#Recommendation> <http://www.w3.org/2000/01/rdf-schema#label> "Recommendation"@en .
-<https://github.com/tibonto/educor#Recommendation> <http://www.w3.org/2004/02/skos/core#definition> "The output of the recommendation system algorithm. The system that reads user profile, content information, ratings and any available rules, in order to generate a meaningful recommendation."@en .
 <https://github.com/tibonto/educor#Recommendation> <http://www.w3.org/2004/02/skos/core#example> "The recommendation is \"Quadratic Equation\""@en .
 # 
 # https://github.com/tibonto/educor#UserLogs
 <https://github.com/tibonto/educor#UserLogs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://github.com/tibonto/educor#UserLogs> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "The user's history activity in the system"@en .
 <https://github.com/tibonto/educor#UserLogs> <http://www.w3.org/2000/01/rdf-schema#label> "UserLogs"@en .
-<https://github.com/tibonto/educor#UserLogs> <http://www.w3.org/2004/02/skos/core#definition> "The user's history activity in the system"@en .
 # 
 # https://purl.org/ontology/modalia#AnalyzePhase
 <https://purl.org/ontology/modalia#AnalyzePhase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -1430,6 +1415,7 @@ _:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # https://purl.org/ontology/modalia#MediaType
 <https://purl.org/ontology/modalia#MediaType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://purl.org/ontology/modalia#MediaType> <http://www.w3.org/2000/01/rdf-schema#label> "MediaType"@en .
+<https://purl.org/ontology/modalia#MediaType> <http://www.w3.org/2004/02/skos/core#definition> "General type of data content encoded in a computer file. Digital media type of the resource. To be used with user preferences according to VARK learning style."@en .
 # 
 # https://purl.org/ontology/modalia#MicroCredential
 <https://purl.org/ontology/modalia#MicroCredential> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -1536,8 +1522,8 @@ _:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # https://purl.org/ontology/modalia#RDMSubjectCluster
 <https://purl.org/ontology/modalia#RDMSubjectCluster> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://purl.org/ontology/modalia#RDMSubjectCluster> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "Cluster of RDM topics areas"@en .
 <https://purl.org/ontology/modalia#RDMSubjectCluster> <http://www.w3.org/2000/01/rdf-schema#label> "RDMSubjectCluster"@en .
+<https://purl.org/ontology/modalia#RDMSubjectCluster> <http://www.w3.org/2004/02/skos/core#definition> "Cluster of RDM topics areas."@en .
 # 
 # https://purl.org/ontology/modalia#RDMTopic
 <https://purl.org/ontology/modalia#RDMTopic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -1682,7 +1668,7 @@ _:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # https://schema.org/Organization
 <https://schema.org/Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://schema.org/Organization> <http://www.w3.org/2000/01/rdf-schema#comment> "An organization such as a school (including Universities), NGO, corporation, club, etc."@en .
+<https://schema.org/Organization> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "An organization such as a school (including Universities), NGO, corporation, club, etc."@en .
 <https://schema.org/Organization> <http://www.w3.org/2000/01/rdf-schema#label> "Organization" .
 <https://schema.org/Organization> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://xmlns.com/foaf/0.1/Organization> .
 # 
