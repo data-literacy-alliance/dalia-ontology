@@ -695,13 +695,14 @@
     "@value" : "hasPart"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://github.com/tibonto/educor#EducationalResource"
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://purl.org/ontology/modalia#isRelatedTo"
+    "@id" : "http://purl.org/dc/terms/relation"
   } ],
-  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://purl.org/dc/terms/isPartOf"
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Has part"
   } ]
 }, {
   "@id" : "http://purl.org/dc/terms/isPartOf",
@@ -714,10 +715,14 @@
     "@value" : "isPartOf"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://github.com/tibonto/educor#EducationalResource"
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://purl.org/ontology/modalia#isRelatedTo"
+    "@id" : "http://purl.org/dc/terms/relation"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Is part of"
   } ]
 }, {
   "@id" : "http://purl.org/dc/terms/isReferencedBy",
@@ -730,13 +735,14 @@
     "@value" : "isReferencedBy"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://github.com/tibonto/educor#EducationalResource"
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://purl.org/ontology/modalia#isRelatedTo"
+    "@id" : "http://purl.org/dc/terms/relation"
   } ],
-  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://purl.org/dc/terms/references"
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Is referenced by"
   } ]
 }, {
   "@id" : "http://purl.org/dc/terms/isReplacedBy",
@@ -752,26 +758,11 @@
     "@id" : "https://github.com/tibonto/educor#EducationalResource"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://purl.org/ontology/modalia#isRelatedTo"
+    "@id" : "http://purl.org/dc/terms/relation"
   } ],
-  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://purl.org/dc/terms/replaces"
-  } ]
-}, {
-  "@id" : "http://purl.org/dc/terms/isVersionOf",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#SymmetricProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://github.com/tibonto/educor#EducationalResource"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
-    "@value" : "isVersionOf"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://github.com/tibonto/educor#EducationalResource"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://purl.org/ontology/modalia#isRelatedTo"
+    "@value" : "Is replaced by"
   } ]
 }, {
   "@id" : "http://purl.org/dc/terms/issued",
@@ -841,10 +832,34 @@
     "@value" : "references"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://github.com/tibonto/educor#EducationalResource"
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://purl.org/ontology/modalia#isRelatedTo"
+    "@id" : "http://purl.org/dc/terms/relation"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "References"
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/terms/relation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://github.com/tibonto/educor#EducationalResource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "relation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "http://purl.org/dc/terms/relation"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The relation(s) to other resources.  It is required to identify the related resource by means of a URI."
   } ]
 }, {
   "@id" : "http://purl.org/dc/terms/replaces",
@@ -860,7 +875,11 @@
     "@id" : "https://github.com/tibonto/educor#EducationalResource"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://purl.org/ontology/modalia#isRelatedTo"
+    "@id" : "http://purl.org/dc/terms/relation"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Replaces"
   } ]
 }, {
   "@id" : "http://purl.org/dc/terms/rights",
@@ -1330,7 +1349,7 @@
     "@id" : "https://creativecommons.org/licenses/by/4.0/"
   } ],
   "http://purl.org/dc/terms/modified" : [ {
-    "@value" : "2025-05-20"
+    "@value" : "2025-06-17"
   } ],
   "http://purl.org/dc/terms/publisher" : [ {
     "@value" : "ULB TUDa – University and State Library, Technical University, Darmstadt, Germany"
@@ -2845,13 +2864,14 @@
     "@value" : "describes"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://github.com/tibonto/educor#EducationalResource"
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://purl.org/ontology/modalia#isRelatedTo"
+    "@id" : "http://purl.org/dc/terms/relation"
   } ],
-  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "https://purl.org/ontology/modalia#isDescribedBy"
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Describes"
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#educationalLevel",
@@ -3233,10 +3253,14 @@
     "@value" : "hasTranslation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://github.com/tibonto/educor#EducationalResource"
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://purl.org/ontology/modalia#isRelatedTo"
+    "@id" : "http://purl.org/dc/terms/relation"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Has translation"
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#hasUser",
@@ -3278,10 +3302,14 @@
     "@value" : "isDescribedBy"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://github.com/tibonto/educor#EducationalResource"
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://purl.org/ontology/modalia#isRelatedTo"
+    "@id" : "http://purl.org/dc/terms/relation"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Is described by"
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#isDuplicateOf",
@@ -3314,10 +3342,14 @@
     "@value" : "isIdenticalTo"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://github.com/tibonto/educor#EducationalResource"
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://purl.org/ontology/modalia#isRelatedTo"
+    "@id" : "http://purl.org/dc/terms/relation"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Is identical to"
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#isLessProficientThan",
@@ -3378,10 +3410,14 @@
     "@id" : "https://github.com/tibonto/educor#EducationalResource"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://purl.org/ontology/modalia#isRelatedTo"
+    "@id" : "http://purl.org/dc/terms/relation"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
     "@id" : "https://purl.org/ontology/modalia#isPreviousVersionOf"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Is new version of"
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#isPreviousVersionOf",
@@ -3397,27 +3433,11 @@
     "@id" : "https://github.com/tibonto/educor#EducationalResource"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://purl.org/ontology/modalia#isRelatedTo"
-  } ]
-}, {
-  "@id" : "https://purl.org/ontology/modalia#isRelatedTo",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://github.com/tibonto/educor#EducationalResource"
+    "@id" : "http://purl.org/dc/terms/relation"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
-    "@value" : "isRelatedTo"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://github.com/tibonto/educor#EducationalResource"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@value" : "http://purl.org/dc/terms/relation"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "The relation(s) to other educational resources. It is required to identify the related resource by means of a URI."
+    "@value" : "Is previous version of"
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#isTranslationOf",
@@ -3430,10 +3450,34 @@
     "@value" : "isTranslationOf"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://purl.org/dc/terms/relation"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Is translation of"
+  } ]
+}, {
+  "@id" : "https://purl.org/ontology/modalia#isVersionOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#SymmetricProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://github.com/tibonto/educor#EducationalResource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "isVersionOf"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://github.com/tibonto/educor#EducationalResource"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://purl.org/ontology/modalia#isRelatedTo"
+    "@id" : "http://purl.org/dc/terms/relation"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Is version of"
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#likesCount",
@@ -3954,10 +3998,14 @@
     "@value" : "isBasedOn"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://github.com/tibonto/educor#EducationalResource"
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://purl.org/ontology/modalia#isRelatedTo"
+    "@id" : "http://purl.org/dc/terms/relation"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Is based on"
   } ]
 }, {
   "@id" : "https://schema.org/keywords",
@@ -4054,13 +4102,14 @@
     "@value" : "continues"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://github.com/tibonto/educor#EducationalResource"
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://purl.org/ontology/modalia#isRelatedTo"
+    "@id" : "http://purl.org/dc/terms/relation"
   } ],
-  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "https://w3id.org/citedcat-ap/isContinuedBy"
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Continues"
   } ]
 }, {
   "@id" : "https://w3id.org/citedcat-ap/isContinuedBy",
@@ -4073,10 +4122,14 @@
     "@value" : "isContinuedBy"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://github.com/tibonto/educor#EducationalResource"
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://purl.org/ontology/modalia#isRelatedTo"
+    "@id" : "http://purl.org/dc/terms/relation"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Is continued by"
   } ]
 }, {
   "@id" : "https://w3id.org/citedcat-ap/isSupplementTo",
@@ -4089,13 +4142,14 @@
     "@value" : "isSupplementTo"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://github.com/tibonto/educor#EducationalResource"
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://purl.org/ontology/modalia#isRelatedTo"
+    "@id" : "http://purl.org/dc/terms/relation"
   } ],
-  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "https://w3id.org/citedcat-ap/isSupplementedBy"
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Is supplement to"
   } ]
 }, {
   "@id" : "https://w3id.org/citedcat-ap/isSupplementedBy",
@@ -4108,10 +4162,14 @@
     "@value" : "isSupplementedBy"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://github.com/tibonto/educor#EducationalResource"
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://purl.org/ontology/modalia#isRelatedTo"
+    "@id" : "http://purl.org/dc/terms/relation"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Is supplemented by"
   } ]
 }, {
   "@id" : "https://w3id.org/kim/hcrt/assessment",

@@ -18,7 +18,7 @@ The ontology is used for making a knowledge graph as a backend to platform for t
 The ontology is developed in OWL in Protege 5.5.0."""@en ;
                                       <http://purl.org/dc/elements/1.1/title> "MoDALIA Ontology"@en ;
                                       <http://purl.org/dc/terms/abstract> "The aim of DALIA project is to build a platform for learning material for Research Data Management (RDM) and Data Science. The platform is based on a knowledge graph. We introduce MoDalia, the base ontology of DALIA knowledge graph. Modalia inherits some modules from EduCOR. It includes also modelling of micro -credentials and certificates."@en ;
-                                      <http://purl.org/dc/terms/modified> "2025-05-20" ;
+                                      <http://purl.org/dc/terms/modified> "2025-06-17" ;
                                       <http://purl.org/dc/terms/publisher> "ULB TUDa – University and State Library, Technical University, Darmstadt, Germany" ;
                                       rdfs:comment """MoDALIA reuses elements from the following ontologies:
 - DCTERMS = Dublin Core Terms  
@@ -133,46 +133,38 @@ xsd:duration rdf:type rdfs:Datatype .
 
 ###  http://purl.org/dc/terms/hasPart
 <http://purl.org/dc/terms/hasPart> rdf:type owl:ObjectProperty ;
-                                   rdfs:subPropertyOf :isRelatedTo ;
-                                   owl:inverseOf <http://purl.org/dc/terms/isPartOf> ;
+                                   rdfs:subPropertyOf <http://purl.org/dc/terms/relation> ;
                                    rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
-                                   rdfs:range <https://github.com/tibonto/educor#EducationalResource> ;
-                                   rdfs:label "hasPart"@en .
+                                   rdfs:range owl:Thing ;
+                                   rdfs:label "hasPart"@en ;
+                                   <http://www.w3.org/2004/02/skos/core#prefLabel> "Has part"@en .
 
 
 ###  http://purl.org/dc/terms/isPartOf
 <http://purl.org/dc/terms/isPartOf> rdf:type owl:ObjectProperty ;
-                                    rdfs:subPropertyOf :isRelatedTo ;
+                                    rdfs:subPropertyOf <http://purl.org/dc/terms/relation> ;
                                     rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
-                                    rdfs:range <https://github.com/tibonto/educor#EducationalResource> ;
-                                    rdfs:label "isPartOf"@en .
+                                    rdfs:range owl:Thing ;
+                                    rdfs:label "isPartOf"@en ;
+                                    <http://www.w3.org/2004/02/skos/core#prefLabel> "Is part of"@en .
 
 
 ###  http://purl.org/dc/terms/isReferencedBy
 <http://purl.org/dc/terms/isReferencedBy> rdf:type owl:ObjectProperty ;
-                                          rdfs:subPropertyOf :isRelatedTo ;
-                                          owl:inverseOf <http://purl.org/dc/terms/references> ;
+                                          rdfs:subPropertyOf <http://purl.org/dc/terms/relation> ;
                                           rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
-                                          rdfs:range <https://github.com/tibonto/educor#EducationalResource> ;
-                                          rdfs:label "isReferencedBy"@en .
+                                          rdfs:range owl:Thing ;
+                                          rdfs:label "isReferencedBy"@en ;
+                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Is referenced by"@en .
 
 
 ###  http://purl.org/dc/terms/isReplacedBy
 <http://purl.org/dc/terms/isReplacedBy> rdf:type owl:ObjectProperty ;
-                                        rdfs:subPropertyOf :isRelatedTo ;
-                                        owl:inverseOf <http://purl.org/dc/terms/replaces> ;
+                                        rdfs:subPropertyOf <http://purl.org/dc/terms/relation> ;
                                         rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
                                         rdfs:range <https://github.com/tibonto/educor#EducationalResource> ;
-                                        rdfs:label "isReplacedBy"@en .
-
-
-###  http://purl.org/dc/terms/isVersionOf
-<http://purl.org/dc/terms/isVersionOf> rdf:type owl:ObjectProperty ;
-                                       rdfs:subPropertyOf :isRelatedTo ;
-                                       rdf:type owl:SymmetricProperty ;
-                                       rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
-                                       rdfs:range <https://github.com/tibonto/educor#EducationalResource> ;
-                                       rdfs:label "isVersionOf"@en .
+                                        rdfs:label "isReplacedBy"@en ;
+                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Is replaced by"@en .
 
 
 ###  http://purl.org/dc/terms/language
@@ -193,18 +185,29 @@ xsd:duration rdf:type rdfs:Datatype .
 
 ###  http://purl.org/dc/terms/references
 <http://purl.org/dc/terms/references> rdf:type owl:ObjectProperty ;
-                                      rdfs:subPropertyOf :isRelatedTo ;
+                                      rdfs:subPropertyOf <http://purl.org/dc/terms/relation> ;
                                       rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
-                                      rdfs:range <https://github.com/tibonto/educor#EducationalResource> ;
-                                      rdfs:label "references"@en .
+                                      rdfs:range owl:Thing ;
+                                      rdfs:label "references"@en ;
+                                      <http://www.w3.org/2004/02/skos/core#prefLabel> "References"@en .
+
+
+###  http://purl.org/dc/terms/relation
+<http://purl.org/dc/terms/relation> rdf:type owl:ObjectProperty ;
+                                    rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
+                                    rdfs:range owl:Thing ;
+                                    rdfs:label "relation"@en ;
+                                    rdfs:seeAlso "http://purl.org/dc/terms/relation" ;
+                                    <http://www.w3.org/2004/02/skos/core#definition> "The relation(s) to other resources.  It is required to identify the related resource by means of a URI."@en .
 
 
 ###  http://purl.org/dc/terms/replaces
 <http://purl.org/dc/terms/replaces> rdf:type owl:ObjectProperty ;
-                                    rdfs:subPropertyOf :isRelatedTo ;
+                                    rdfs:subPropertyOf <http://purl.org/dc/terms/relation> ;
                                     rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
                                     rdfs:range <https://github.com/tibonto/educor#EducationalResource> ;
-                                    rdfs:label "replaces"@en .
+                                    rdfs:label "replaces"@en ;
+                                    <http://www.w3.org/2004/02/skos/core#prefLabel> "Replaces"@en .
 
 
 ###  http://purl.org/ontology/rec/core#recommender
@@ -331,11 +334,11 @@ xsd:duration rdf:type rdfs:Datatype .
 
 ###  https://purl.org/ontology/modalia#describes
 :describes rdf:type owl:ObjectProperty ;
-           rdfs:subPropertyOf :isRelatedTo ;
-           owl:inverseOf :isDescribedBy ;
+           rdfs:subPropertyOf <http://purl.org/dc/terms/relation> ;
            rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
-           rdfs:range <https://github.com/tibonto/educor#EducationalResource> ;
-           rdfs:label "describes"@en .
+           rdfs:range owl:Thing ;
+           rdfs:label "describes"@en ;
+           <http://www.w3.org/2004/02/skos/core#prefLabel> "Describes"@en .
 
 
 ###  https://purl.org/ontology/modalia#educationalLevel
@@ -502,10 +505,11 @@ xsd:duration rdf:type rdfs:Datatype .
 
 ###  https://purl.org/ontology/modalia#hasTranslation
 :hasTranslation rdf:type owl:ObjectProperty ;
-                rdfs:subPropertyOf :isRelatedTo ;
+                rdfs:subPropertyOf <http://purl.org/dc/terms/relation> ;
                 rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
-                rdfs:range <https://github.com/tibonto/educor#EducationalResource> ;
-                rdfs:label "hasTranslation"@en .
+                rdfs:range owl:Thing ;
+                rdfs:label "hasTranslation"@en ;
+                <http://www.w3.org/2004/02/skos/core#prefLabel> "Has translation"@en .
 
 
 ###  https://purl.org/ontology/modalia#hasUser
@@ -525,10 +529,11 @@ xsd:duration rdf:type rdfs:Datatype .
 
 ###  https://purl.org/ontology/modalia#isDescribedBy
 :isDescribedBy rdf:type owl:ObjectProperty ;
-               rdfs:subPropertyOf :isRelatedTo ;
+               rdfs:subPropertyOf <http://purl.org/dc/terms/relation> ;
                rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
-               rdfs:range <https://github.com/tibonto/educor#EducationalResource> ;
-               rdfs:label "isDescribedBy"@en .
+               rdfs:range owl:Thing ;
+               rdfs:label "isDescribedBy"@en ;
+               <http://www.w3.org/2004/02/skos/core#prefLabel> "Is described by"@en .
 
 
 ###  https://purl.org/ontology/modalia#isDuplicateOf
@@ -542,10 +547,11 @@ xsd:duration rdf:type rdfs:Datatype .
 
 ###  https://purl.org/ontology/modalia#isIdenticalTo
 :isIdenticalTo rdf:type owl:ObjectProperty ;
-               rdfs:subPropertyOf :isRelatedTo ;
+               rdfs:subPropertyOf <http://purl.org/dc/terms/relation> ;
                rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
-               rdfs:range <https://github.com/tibonto/educor#EducationalResource> ;
-               rdfs:label "isIdenticalTo"@en .
+               rdfs:range owl:Thing ;
+               rdfs:label "isIdenticalTo"@en ;
+               <http://www.w3.org/2004/02/skos/core#prefLabel> "Is identical to"@en .
 
 
 ###  https://purl.org/ontology/modalia#isLessProficientThan
@@ -575,38 +581,42 @@ xsd:duration rdf:type rdfs:Datatype .
 
 ###  https://purl.org/ontology/modalia#isNewVersionOf
 :isNewVersionOf rdf:type owl:ObjectProperty ;
-                rdfs:subPropertyOf :isRelatedTo ;
+                rdfs:subPropertyOf <http://purl.org/dc/terms/relation> ;
                 owl:inverseOf :isPreviousVersionOf ;
                 rdf:type owl:TransitiveProperty ,
                          owl:IrreflexiveProperty ;
                 rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
                 rdfs:range <https://github.com/tibonto/educor#EducationalResource> ;
-                rdfs:label "isNewVersionOf"@en .
+                rdfs:label "isNewVersionOf"@en ;
+                <http://www.w3.org/2004/02/skos/core#prefLabel> "Is new version of"@en .
 
 
 ###  https://purl.org/ontology/modalia#isPreviousVersionOf
 :isPreviousVersionOf rdf:type owl:ObjectProperty ;
-                     rdfs:subPropertyOf :isRelatedTo ;
+                     rdfs:subPropertyOf <http://purl.org/dc/terms/relation> ;
                      rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
                      rdfs:range <https://github.com/tibonto/educor#EducationalResource> ;
-                     rdfs:label "isPreviousVersionOf"@en .
-
-
-###  https://purl.org/ontology/modalia#isRelatedTo
-:isRelatedTo rdf:type owl:ObjectProperty ;
-             rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
-             rdfs:range <https://github.com/tibonto/educor#EducationalResource> ;
-             rdfs:label "isRelatedTo"@en ;
-             rdfs:seeAlso "http://purl.org/dc/terms/relation" ;
-             <http://www.w3.org/2004/02/skos/core#definition> "The relation(s) to other educational resources. It is required to identify the related resource by means of a URI."@en .
+                     rdfs:label "isPreviousVersionOf"@en ;
+                     <http://www.w3.org/2004/02/skos/core#prefLabel> "Is previous version of"@en .
 
 
 ###  https://purl.org/ontology/modalia#isTranslationOf
 :isTranslationOf rdf:type owl:ObjectProperty ;
-                 rdfs:subPropertyOf :isRelatedTo ;
+                 rdfs:subPropertyOf <http://purl.org/dc/terms/relation> ;
                  rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
-                 rdfs:range <https://github.com/tibonto/educor#EducationalResource> ;
-                 rdfs:label "isTranslationOf"@en .
+                 rdfs:range owl:Thing ;
+                 rdfs:label "isTranslationOf"@en ;
+                 <http://www.w3.org/2004/02/skos/core#prefLabel> "Is translation of"@en .
+
+
+###  https://purl.org/ontology/modalia#isVersionOf
+:isVersionOf rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf <http://purl.org/dc/terms/relation> ;
+             rdf:type owl:SymmetricProperty ;
+             rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
+             rdfs:range <https://github.com/tibonto/educor#EducationalResource> ;
+             rdfs:label "isVersionOf"@en ;
+             <http://www.w3.org/2004/02/skos/core#prefLabel> "Is version of"@en .
 
 
 ###  https://purl.org/ontology/modalia#nextPhase
@@ -708,44 +718,47 @@ xsd:duration rdf:type rdfs:Datatype .
 
 ###  https://schema.org/isBasedOn
 <https://schema.org/isBasedOn> rdf:type owl:ObjectProperty ;
-                               rdfs:subPropertyOf :isRelatedTo ;
+                               rdfs:subPropertyOf <http://purl.org/dc/terms/relation> ;
                                rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
-                               rdfs:range <https://github.com/tibonto/educor#EducationalResource> ;
-                               rdfs:label "isBasedOn"@en .
+                               rdfs:range owl:Thing ;
+                               rdfs:label "isBasedOn"@en ;
+                               <http://www.w3.org/2004/02/skos/core#prefLabel> "Is based on"@en .
 
 
 ###  https://w3id.org/citedcat-ap/continues
 <https://w3id.org/citedcat-ap/continues> rdf:type owl:ObjectProperty ;
-                                         rdfs:subPropertyOf :isRelatedTo ;
-                                         owl:inverseOf <https://w3id.org/citedcat-ap/isContinuedBy> ;
+                                         rdfs:subPropertyOf <http://purl.org/dc/terms/relation> ;
                                          rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
-                                         rdfs:range <https://github.com/tibonto/educor#EducationalResource> ;
-                                         rdfs:label "continues"@en .
+                                         rdfs:range owl:Thing ;
+                                         rdfs:label "continues"@en ;
+                                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Continues"@en .
 
 
 ###  https://w3id.org/citedcat-ap/isContinuedBy
 <https://w3id.org/citedcat-ap/isContinuedBy> rdf:type owl:ObjectProperty ;
-                                             rdfs:subPropertyOf :isRelatedTo ;
+                                             rdfs:subPropertyOf <http://purl.org/dc/terms/relation> ;
                                              rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
-                                             rdfs:range <https://github.com/tibonto/educor#EducationalResource> ;
-                                             rdfs:label "isContinuedBy"@en .
+                                             rdfs:range owl:Thing ;
+                                             rdfs:label "isContinuedBy"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#prefLabel> "Is continued by"@en .
 
 
 ###  https://w3id.org/citedcat-ap/isSupplementTo
 <https://w3id.org/citedcat-ap/isSupplementTo> rdf:type owl:ObjectProperty ;
-                                              rdfs:subPropertyOf :isRelatedTo ;
-                                              owl:inverseOf <https://w3id.org/citedcat-ap/isSupplementedBy> ;
+                                              rdfs:subPropertyOf <http://purl.org/dc/terms/relation> ;
                                               rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
-                                              rdfs:range <https://github.com/tibonto/educor#EducationalResource> ;
-                                              rdfs:label "isSupplementTo"@en .
+                                              rdfs:range owl:Thing ;
+                                              rdfs:label "isSupplementTo"@en ;
+                                              <http://www.w3.org/2004/02/skos/core#prefLabel> "Is supplement to"@en .
 
 
 ###  https://w3id.org/citedcat-ap/isSupplementedBy
 <https://w3id.org/citedcat-ap/isSupplementedBy> rdf:type owl:ObjectProperty ;
-                                                rdfs:subPropertyOf :isRelatedTo ;
+                                                rdfs:subPropertyOf <http://purl.org/dc/terms/relation> ;
                                                 rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
-                                                rdfs:range <https://github.com/tibonto/educor#EducationalResource> ;
-                                                rdfs:label "isSupplementedBy"@en .
+                                                rdfs:range owl:Thing ;
+                                                rdfs:label "isSupplementedBy"@en ;
+                                                <http://www.w3.org/2004/02/skos/core#prefLabel> "Is supplemented by"@en .
 
 
 #################################################################
