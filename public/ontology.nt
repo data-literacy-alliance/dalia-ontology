@@ -8,7 +8,7 @@
 <https://purl.org/ontology/modalia#> <http://purl.org/dc/elements/1.1/description> "MoDALIA: An Ontology for Educational Material in Research Data Management (RDM) and Data Science.\r\nThe ontology is used for making a knowledge graph as a backend to platform for teaching, personal learning, and recommendation.\r\nThe ontology is developed in OWL in Protege 5.5.0."@en .
 <https://purl.org/ontology/modalia#> <http://purl.org/dc/elements/1.1/title> "MoDALIA Ontology"@en .
 <https://purl.org/ontology/modalia#> <http://purl.org/dc/terms/abstract> "The aim of DALIA project is to build a platform for learning material for Research Data Management (RDM) and Data Science. The platform is based on a knowledge graph. We introduce MoDalia, the base ontology of DALIA knowledge graph. Modalia inherits some modules from EduCOR. It includes also modelling of micro -credentials and certificates."@en .
-<https://purl.org/ontology/modalia#> <http://purl.org/dc/terms/modified> "2025-06-17" .
+<https://purl.org/ontology/modalia#> <http://purl.org/dc/terms/modified> "2025-06-23" .
 <https://purl.org/ontology/modalia#> <http://purl.org/dc/terms/publisher> "ULB TUDa – University and State Library, Technical University, Darmstadt, Germany" .
 <https://purl.org/ontology/modalia#> <http://www.w3.org/2000/01/rdf-schema#comment> "MoDALIA reuses elements from the following ontologies:\r\n- DCTERMS = Dublin Core Terms  \r\n- OWL = Web Ontology Language  \r\n- RDF = Resource Description Framework  \r\n- RDFS = RDF Schema  \r\n- SCHEMA = schema.org  \r\n- SKOS = Simple Knowledge Organization System  \r\n- EC = EduCOR"@en .
 <https://purl.org/ontology/modalia#> <http://www.w3.org/2000/01/rdf-schema#label> "MoDALIA" .
@@ -137,6 +137,7 @@
 # http://purl.org/dc/terms/isReplacedBy
 <http://purl.org/dc/terms/isReplacedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/dc/terms/isReplacedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/relation> .
+<http://purl.org/dc/terms/isReplacedBy> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/dc/terms/replaces> .
 <http://purl.org/dc/terms/isReplacedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
 <http://purl.org/dc/terms/isReplacedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://github.com/tibonto/educor#EducationalResource> .
 <http://purl.org/dc/terms/isReplacedBy> <http://www.w3.org/2000/01/rdf-schema#label> "isReplacedBy"@en .
@@ -328,44 +329,16 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://purl.org/ontology/modalia#givesProficiencyLevel> <http://www.w3.org/2000/01/rdf-schema#range> <https://purl.org/ontology/modalia#Proficiency> .
 <https://purl.org/ontology/modalia#givesProficiencyLevel> <http://www.w3.org/2000/01/rdf-schema#label> "givesProficiencyLevel" .
 # 
-# https://purl.org/ontology/modalia#hasCertificate
-<https://purl.org/ontology/modalia#hasCertificate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://purl.org/ontology/modalia#hasCertificate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/ontology/modalia#UserEnrollment> .
-<https://purl.org/ontology/modalia#hasCertificate> <http://www.w3.org/2000/01/rdf-schema#range> <https://purl.org/ontology/modalia#Certificate> .
-<https://purl.org/ontology/modalia#hasCertificate> <http://www.w3.org/2000/01/rdf-schema#label> "hasCertificate"@en .
-# 
-# https://purl.org/ontology/modalia#hasCompetenceType
-<https://purl.org/ontology/modalia#hasCompetenceType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://purl.org/ontology/modalia#hasCompetenceType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/ontology/modalia#LearningGoalMatrixEntry> .
-<https://purl.org/ontology/modalia#hasCompetenceType> <http://www.w3.org/2000/01/rdf-schema#range> <https://purl.org/ontology/modalia#CompetenceType> .
-<https://purl.org/ontology/modalia#hasCompetenceType> <http://www.w3.org/2000/01/rdf-schema#label> "hasCompetenceType"@en .
-# 
-# https://purl.org/ontology/modalia#hasEnrollment
-<https://purl.org/ontology/modalia#hasEnrollment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://purl.org/ontology/modalia#hasEnrollment> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/ontology/modalia#User> .
-<https://purl.org/ontology/modalia#hasEnrollment> <http://www.w3.org/2000/01/rdf-schema#range> <https://purl.org/ontology/modalia#UserEnrollment> .
-<https://purl.org/ontology/modalia#hasEnrollment> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "storing data about enrollments in micro-credentials of a user"@en .
-<https://purl.org/ontology/modalia#hasEnrollment> <http://www.w3.org/2000/01/rdf-schema#label> "hasEnrollment"@en .
-# 
-# https://purl.org/ontology/modalia#hasLearningLevel
-<https://purl.org/ontology/modalia#hasLearningLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://purl.org/ontology/modalia#hasLearningLevel> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/ontology/modalia#LearningGoalMatrixEntry> .
-<https://purl.org/ontology/modalia#hasLearningLevel> <http://www.w3.org/2000/01/rdf-schema#range> <https://purl.org/ontology/modalia#LearningLevel> .
-<https://purl.org/ontology/modalia#hasLearningLevel> <http://www.w3.org/2000/01/rdf-schema#label> "hasLearningLevel"@en .
-# 
 # https://purl.org/ontology/modalia#hasLearningObjective
 <https://purl.org/ontology/modalia#hasLearningObjective> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://purl.org/ontology/modalia#hasLearningObjective> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid7 .
-_:genid7 <http://www.w3.org/2002/07/owl#unionOf> _:genid10 .
-_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid9 .
+_:genid7 <http://www.w3.org/2002/07/owl#unionOf> _:genid9 .
 _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid8 .
 _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purl.org/ontology/modalia#LearningGoalMatrixEntry> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://github.com/tibonto/educor#LearningPath> .
 _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://github.com/tibonto/educor#LearningPath> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://github.com/tibonto/educor#EducationalResource> .
 _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://github.com/tibonto/educor#EducationalResource> .
-_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://purl.org/ontology/modalia#hasLearningObjective> <http://www.w3.org/2000/01/rdf-schema#range> <https://purl.org/ontology/modalia#LearningObjective> .
 <https://purl.org/ontology/modalia#hasLearningObjective> <http://www.w3.org/2000/01/rdf-schema#label> "hasLearningObjective"@en .
@@ -390,12 +363,6 @@ _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://purl.org/ontology/modalia#hasMediaType> <http://www.w3.org/2000/01/rdf-schema#range> <https://purl.org/ontology/modalia#MediaType> .
 <https://purl.org/ontology/modalia#hasMediaType> <http://www.w3.org/2000/01/rdf-schema#label> "hasMediaType"@en .
 # 
-# https://purl.org/ontology/modalia#hasMicroCredential
-<https://purl.org/ontology/modalia#hasMicroCredential> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://purl.org/ontology/modalia#hasMicroCredential> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/ontology/modalia#UserEnrollment> .
-<https://purl.org/ontology/modalia#hasMicroCredential> <http://www.w3.org/2000/01/rdf-schema#range> <https://purl.org/ontology/modalia#MicroCredential> .
-<https://purl.org/ontology/modalia#hasMicroCredential> <http://www.w3.org/2000/01/rdf-schema#label> "hasMicroCredential" .
-# 
 # https://purl.org/ontology/modalia#hasOwner
 <https://purl.org/ontology/modalia#hasOwner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://purl.org/ontology/modalia#hasOwner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
@@ -409,18 +376,6 @@ _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://purl.org/ontology/modalia#hasProfile> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/ontology/modalia#User> .
 <https://purl.org/ontology/modalia#hasProfile> <http://www.w3.org/2000/01/rdf-schema#range> <https://purl.org/ontology/modalia#UserProfile> .
 <https://purl.org/ontology/modalia#hasProfile> <http://www.w3.org/2000/01/rdf-schema#label> "hasProfile" .
-# 
-# https://purl.org/ontology/modalia#hasProvider
-<https://purl.org/ontology/modalia#hasProvider> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://purl.org/ontology/modalia#hasProvider> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
-<https://purl.org/ontology/modalia#hasProvider> <http://www.w3.org/2000/01/rdf-schema#range> <https://purl.org/ontology/modalia#Provider> .
-<https://purl.org/ontology/modalia#hasProvider> <http://www.w3.org/2000/01/rdf-schema#label> "hasProvider" .
-# 
-# https://purl.org/ontology/modalia#hasProviderType
-<https://purl.org/ontology/modalia#hasProviderType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://purl.org/ontology/modalia#hasProviderType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/ontology/modalia#Provider> .
-<https://purl.org/ontology/modalia#hasProviderType> <http://www.w3.org/2000/01/rdf-schema#range> <https://purl.org/ontology/modalia#ProviderType> .
-<https://purl.org/ontology/modalia#hasProviderType> <http://www.w3.org/2000/01/rdf-schema#label> "hasProviderType" .
 # 
 # https://purl.org/ontology/modalia#hasQuality
 <https://purl.org/ontology/modalia#hasQuality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -442,15 +397,7 @@ _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://purl.org/ontology/modalia#hasTargetGroup
 <https://purl.org/ontology/modalia#hasTargetGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://purl.org/ontology/modalia#hasTargetGroup> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid11 .
-_:genid11 <http://www.w3.org/2002/07/owl#unionOf> _:genid13 .
-_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid12 .
-_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purl.org/ontology/modalia#LearningGoalMatrixEntry> .
-_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://github.com/tibonto/educor#EducationalResource> .
-_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purl.org/ontology/modalia#hasTargetGroup> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
 <https://purl.org/ontology/modalia#hasTargetGroup> <http://www.w3.org/2000/01/rdf-schema#range> <https://purl.org/ontology/modalia#TargetGroup> .
 <https://purl.org/ontology/modalia#hasTargetGroup> <http://www.w3.org/2000/01/rdf-schema#label> "hasTargetGroup"@en .
 # 
@@ -468,12 +415,6 @@ _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://purl.org/ontology/modalia#hasUser> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/ontology/modalia#RatingIndicator> .
 <https://purl.org/ontology/modalia#hasUser> <http://www.w3.org/2000/01/rdf-schema#range> <https://purl.org/ontology/modalia#User> .
 <https://purl.org/ontology/modalia#hasUser> <http://www.w3.org/2000/01/rdf-schema#label> "hasUser"@en .
-# 
-# https://purl.org/ontology/modalia#isCoveredIn
-<https://purl.org/ontology/modalia#isCoveredIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://purl.org/ontology/modalia#isCoveredIn> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/ontology/modalia#RDMTopic> .
-<https://purl.org/ontology/modalia#isCoveredIn> <http://www.w3.org/2000/01/rdf-schema#range> <https://purl.org/ontology/modalia#LearningGoalMatrixEntry> .
-<https://purl.org/ontology/modalia#isCoveredIn> <http://www.w3.org/2000/01/rdf-schema#label> "isCoveredIn"@en .
 # 
 # https://purl.org/ontology/modalia#isDescribedBy
 <https://purl.org/ontology/modalia#isDescribedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -495,7 +436,7 @@ _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://purl.org/ontology/modalia#isIdenticalTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://purl.org/ontology/modalia#isIdenticalTo> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/relation> .
 <https://purl.org/ontology/modalia#isIdenticalTo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
-<https://purl.org/ontology/modalia#isIdenticalTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> .
+<https://purl.org/ontology/modalia#isIdenticalTo> <http://www.w3.org/2000/01/rdf-schema#range> <https://github.com/tibonto/educor#EducationalResource> .
 <https://purl.org/ontology/modalia#isIdenticalTo> <http://www.w3.org/2000/01/rdf-schema#label> "isIdenticalTo"@en .
 <https://purl.org/ontology/modalia#isIdenticalTo> <http://www.w3.org/2004/02/skos/core#prefLabel> "Is identical to"@en .
 # 
@@ -591,31 +532,28 @@ _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # https://purl.org/ontology/modalia#solves
 <https://purl.org/ontology/modalia#solves> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://purl.org/ontology/modalia#solves> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/ontology/modalia#User> .
-<https://purl.org/ontology/modalia#solves> <http://www.w3.org/2000/01/rdf-schema#range> _:genid14 .
-_:genid14 <http://www.w3.org/2002/07/owl#unionOf> _:genid16 .
-_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid15 .
-_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/kim/hcrt/assessment> .
-_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purl.org/ontology/modalia#Questionnaire> .
-_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purl.org/ontology/modalia#solves> <http://www.w3.org/2000/01/rdf-schema#range> _:genid10 .
+_:genid10 <http://www.w3.org/2002/07/owl#unionOf> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/kim/hcrt/assessment> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purl.org/ontology/modalia#Questionnaire> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://purl.org/ontology/modalia#solves> <http://www.w3.org/2000/01/rdf-schema#label> "solves"@en .
 # 
 # https://purl.org/ontology/modalia#storedIn
 <https://purl.org/ontology/modalia#storedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://purl.org/ontology/modalia#storedIn> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid17 .
-_:genid17 <http://www.w3.org/2002/07/owl#unionOf> _:genid20 .
-_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid19 .
-_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid18 .
-_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purl.org/ontology/modalia#LearningObjective> .
-_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purl.org/ontology/modalia#Certificate> .
-_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://github.com/tibonto/educor#LearningPreference> .
-_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purl.org/ontology/modalia#storedIn> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid13 .
+_:genid13 <http://www.w3.org/2002/07/owl#unionOf> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purl.org/ontology/modalia#LearningObjective> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://github.com/tibonto/educor#LearningPreference> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://purl.org/ontology/modalia#storedIn> <http://www.w3.org/2000/01/rdf-schema#range> <https://purl.org/ontology/modalia#UserProfile> .
 <https://purl.org/ontology/modalia#storedIn> <http://www.w3.org/2000/01/rdf-schema#label> "storedIn"@en .
 # 
@@ -663,8 +601,9 @@ _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # https://w3id.org/citedcat-ap/continues
 <https://w3id.org/citedcat-ap/continues> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/citedcat-ap/continues> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/relation> .
+<https://w3id.org/citedcat-ap/continues> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/citedcat-ap/isContinuedBy> .
 <https://w3id.org/citedcat-ap/continues> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
-<https://w3id.org/citedcat-ap/continues> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> .
+<https://w3id.org/citedcat-ap/continues> <http://www.w3.org/2000/01/rdf-schema#range> <https://github.com/tibonto/educor#EducationalResource> .
 <https://w3id.org/citedcat-ap/continues> <http://www.w3.org/2000/01/rdf-schema#label> "continues"@en .
 <https://w3id.org/citedcat-ap/continues> <http://www.w3.org/2004/02/skos/core#prefLabel> "Continues"@en .
 # 
@@ -672,7 +611,7 @@ _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/citedcat-ap/isContinuedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/citedcat-ap/isContinuedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/relation> .
 <https://w3id.org/citedcat-ap/isContinuedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
-<https://w3id.org/citedcat-ap/isContinuedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> .
+<https://w3id.org/citedcat-ap/isContinuedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://github.com/tibonto/educor#EducationalResource> .
 <https://w3id.org/citedcat-ap/isContinuedBy> <http://www.w3.org/2000/01/rdf-schema#label> "isContinuedBy"@en .
 <https://w3id.org/citedcat-ap/isContinuedBy> <http://www.w3.org/2004/02/skos/core#prefLabel> "Is continued by"@en .
 # 
@@ -704,33 +643,33 @@ _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # http://purl.org/dc/terms/created
 <http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://purl.org/dc/terms/created> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
-<http://purl.org/dc/terms/created> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid21 .
-_:genid21 <http://www.w3.org/2002/07/owl#unionOf> _:genid23 .
-_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid22 .
-_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purl.org/ontology/modalia#Community> .
-_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://github.com/tibonto/educor#EducationalResource> .
-_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dc/terms/created> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid16 .
+_:genid16 <http://www.w3.org/2002/07/owl#unionOf> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purl.org/ontology/modalia#Community> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://github.com/tibonto/educor#EducationalResource> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/dc/terms/created> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
 <http://purl.org/dc/terms/created> <http://www.w3.org/2000/01/rdf-schema#label> "Date Created"@en .
 <http://purl.org/dc/terms/created> <http://www.w3.org/2004/02/skos/core#definition> "Date of creation of the resource."@en .
 # 
 # http://purl.org/dc/terms/description
 <http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://purl.org/dc/terms/description> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid24 .
-_:genid24 <http://www.w3.org/2002/07/owl#unionOf> _:genid27 .
-_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid26 .
-_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid25 .
-_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purl.org/ontology/modalia#Community> .
-_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://github.com/tibonto/educor#KnowledgeTopic> .
-_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://github.com/tibonto/educor#EducationalResource> .
-_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dc/terms/description> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid19 .
+_:genid19 <http://www.w3.org/2002/07/owl#unionOf> _:genid22 .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purl.org/ontology/modalia#Community> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://github.com/tibonto/educor#KnowledgeTopic> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://github.com/tibonto/educor#EducationalResource> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/dc/terms/description> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <http://purl.org/dc/terms/description> <http://www.w3.org/2000/01/rdf-schema#label> "description"@en .
 # 
@@ -757,18 +696,18 @@ _:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # http://purl.org/dc/terms/title
 <http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://purl.org/dc/terms/title> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid28 .
-_:genid28 <http://www.w3.org/2002/07/owl#unionOf> _:genid31 .
-_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid30 .
-_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid29 .
-_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purl.org/ontology/modalia#Community> .
-_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://github.com/tibonto/educor#KnowledgeTopic> .
-_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://github.com/tibonto/educor#EducationalResource> .
-_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dc/terms/title> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid23 .
+_:genid23 <http://www.w3.org/2002/07/owl#unionOf> _:genid26 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purl.org/ontology/modalia#Community> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://github.com/tibonto/educor#KnowledgeTopic> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://github.com/tibonto/educor#EducationalResource> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/dc/terms/title> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <http://purl.org/dc/terms/title> <http://www.w3.org/2000/01/rdf-schema#label> "title"@en .
 # 
@@ -780,23 +719,23 @@ _:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # http://w3id.org/nfdi4ing/metadata4ing#hasRorId
 <http://w3id.org/nfdi4ing/metadata4ing#hasRorId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://w3id.org/nfdi4ing/metadata4ing#hasRorId> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid32 .
-_:genid32 <http://www.w3.org/2002/07/owl#unionOf> _:genid34 .
-_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid33 .
-_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://schema.org/Organization> .
-_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purl.org/ontology/modalia#Community> .
-_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/nfdi4ing/metadata4ing#hasRorId> <http://www.w3.org/2000/01/rdf-schema#range> _:genid35 .
-_:genid35 <http://www.w3.org/2002/07/owl#withRestrictions> _:genid36 .
-_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid37 .
-_:genid37 <http://www.w3.org/2001/XMLSchema#pattern> "https://ror.org/[0-9][0-9][a-z0-9][a-z0-9][a-z0-9][a-z0-9][a-z0-9][0-9][0-9]" .
-_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid35 <http://www.w3.org/2002/07/owl#onDatatype> <http://www.w3.org/2001/XMLSchema#string> .
-_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+<http://w3id.org/nfdi4ing/metadata4ing#hasRorId> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid27 .
+_:genid27 <http://www.w3.org/2002/07/owl#unionOf> _:genid29 .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid28 .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://schema.org/Organization> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purl.org/ontology/modalia#Community> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/nfdi4ing/metadata4ing#hasRorId> <http://www.w3.org/2000/01/rdf-schema#range> _:genid30 .
+_:genid30 <http://www.w3.org/2002/07/owl#withRestrictions> _:genid31 .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid32 .
+_:genid32 <http://www.w3.org/2001/XMLSchema#pattern> "https://ror.org/[0-9][0-9][a-z0-9][a-z0-9][a-z0-9][a-z0-9][a-z0-9][0-9][0-9]" .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid30 <http://www.w3.org/2002/07/owl#onDatatype> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
 <http://w3id.org/nfdi4ing/metadata4ing#hasRorId> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "A Research Organization Registry identifier that persistently and uniquely identifies a research organization"@en .
 <http://w3id.org/nfdi4ing/metadata4ing#hasRorId> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "Ein persistenter Identifikator für Organisationen, vergeben durch die Research Organization Registry, der eine Forschungseinrichtung eindeutig identifiziert."@de .
 <http://w3id.org/nfdi4ing/metadata4ing#hasRorId> <http://www.w3.org/2004/02/skos/core#altLabel> "has research organization registry id"@en .
@@ -806,23 +745,23 @@ _:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # http://w3id.org/nfdi4ing/metadata4ing#orcidId
 <http://w3id.org/nfdi4ing/metadata4ing#orcidId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://w3id.org/nfdi4ing/metadata4ing#orcidId> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid38 .
-_:genid38 <http://www.w3.org/2002/07/owl#unionOf> _:genid40 .
-_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid39 .
-_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purl.org/ontology/modalia#User> .
-_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purl.org/ontology/modalia#Contributor> .
-_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/nfdi4ing/metadata4ing#orcidId> <http://www.w3.org/2000/01/rdf-schema#range> _:genid41 .
-_:genid41 <http://www.w3.org/2002/07/owl#withRestrictions> _:genid42 .
-_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid43 .
-_:genid43 <http://www.w3.org/2001/XMLSchema#pattern> "https://orcid.org/[0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9X]" .
-_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid41 <http://www.w3.org/2002/07/owl#onDatatype> <http://www.w3.org/2001/XMLSchema#string> .
-_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+<http://w3id.org/nfdi4ing/metadata4ing#orcidId> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid33 .
+_:genid33 <http://www.w3.org/2002/07/owl#unionOf> _:genid35 .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid34 .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purl.org/ontology/modalia#User> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purl.org/ontology/modalia#Contributor> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/nfdi4ing/metadata4ing#orcidId> <http://www.w3.org/2000/01/rdf-schema#range> _:genid36 .
+_:genid36 <http://www.w3.org/2002/07/owl#withRestrictions> _:genid37 .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid38 .
+_:genid38 <http://www.w3.org/2001/XMLSchema#pattern> "https://orcid.org/[0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9X]" .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid36 <http://www.w3.org/2002/07/owl#onDatatype> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
 <http://w3id.org/nfdi4ing/metadata4ing#orcidId> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "Open Researcher and Contributor ID: an identifier, that allows unique identification of a person, usually active in research."@en .
 <http://w3id.org/nfdi4ing/metadata4ing#orcidId> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "Open Researcher and Contributor ID: ein persistenter Identifikator, der eine in der Forschung tätige Person eindeutig identifiziert."@de .
 <http://w3id.org/nfdi4ing/metadata4ing#orcidId> <http://www.w3.org/2004/02/skos/core#prefLabel> "has ORCID ID"@en .
@@ -835,35 +774,11 @@ _:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://purl.org/ontology/modalia#authorUnordered> <http://www.w3.org/2000/01/rdf-schema#comment> "A property that links OER to its authors in unordered way to improve perrformance."@en .
 <https://purl.org/ontology/modalia#authorUnordered> <http://www.w3.org/2000/01/rdf-schema#comment> "authorUnordered"@en .
 # 
-# https://purl.org/ontology/modalia#certificateEndDate
-<https://purl.org/ontology/modalia#certificateEndDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://purl.org/ontology/modalia#certificateEndDate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/ontology/modalia#Certificate> .
-<https://purl.org/ontology/modalia#certificateEndDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
-<https://purl.org/ontology/modalia#certificateEndDate> <http://www.w3.org/2000/01/rdf-schema#label> "certificateEndDate"@en .
-# 
-# https://purl.org/ontology/modalia#certificateName
-<https://purl.org/ontology/modalia#certificateName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://purl.org/ontology/modalia#certificateName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/ontology/modalia#Certificate> .
-<https://purl.org/ontology/modalia#certificateName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://purl.org/ontology/modalia#certificateName> <http://www.w3.org/2000/01/rdf-schema#label> "certificateName"@en .
-# 
-# https://purl.org/ontology/modalia#certificateStartDate
-<https://purl.org/ontology/modalia#certificateStartDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://purl.org/ontology/modalia#certificateStartDate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/ontology/modalia#Certificate> .
-<https://purl.org/ontology/modalia#certificateStartDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
-<https://purl.org/ontology/modalia#certificateStartDate> <http://www.w3.org/2000/01/rdf-schema#label> "certificateStartDate"@en .
-# 
-# https://purl.org/ontology/modalia#certificateUrl
-<https://purl.org/ontology/modalia#certificateUrl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://purl.org/ontology/modalia#certificateUrl> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/ontology/modalia#Certificate> .
-<https://purl.org/ontology/modalia#certificateUrl> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
-<https://purl.org/ontology/modalia#certificateUrl> <http://www.w3.org/2000/01/rdf-schema#label> "certificateUrl"@en .
-# 
 # https://purl.org/ontology/modalia#citation
 <https://purl.org/ontology/modalia#citation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://purl.org/ontology/modalia#citation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
 <https://purl.org/ontology/modalia#citation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://purl.org/ontology/modalia#citation> <http://www.w3.org/2000/01/rdf-schema#comment> "Citation text of the OER"@en .
+<https://purl.org/ontology/modalia#citation> <http://www.w3.org/2000/01/rdf-schema#comment> "Citation text of the OER (APA)"@en .
 <https://purl.org/ontology/modalia#citation> <http://www.w3.org/2000/01/rdf-schema#label> "Citation"@en .
 # 
 # https://purl.org/ontology/modalia#commentDate
@@ -895,24 +810,6 @@ _:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://purl.org/ontology/modalia#hasDOI> <http://www.w3.org/2000/01/rdf-schema#label> "hasDOI"@en .
 <https://purl.org/ontology/modalia#hasDOI> <http://www.w3.org/2004/02/skos/core#example> "example: 10.18450/dataman/90" .
 # 
-# https://purl.org/ontology/modalia#hasGrade
-<https://purl.org/ontology/modalia#hasGrade> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://purl.org/ontology/modalia#hasGrade> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/ontology/modalia#UserEnrollment> .
-<https://purl.org/ontology/modalia#hasGrade> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://purl.org/ontology/modalia#hasGrade> <http://www.w3.org/2000/01/rdf-schema#label> "hasGrade"@en .
-# 
-# https://purl.org/ontology/modalia#hasGrantDate
-<https://purl.org/ontology/modalia#hasGrantDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://purl.org/ontology/modalia#hasGrantDate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/ontology/modalia#UserEnrollment> .
-<https://purl.org/ontology/modalia#hasGrantDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
-<https://purl.org/ontology/modalia#hasGrantDate> <http://www.w3.org/2000/01/rdf-schema#label> "hasGrantDate"@en .
-# 
-# https://purl.org/ontology/modalia#hasInterval
-<https://purl.org/ontology/modalia#hasInterval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://purl.org/ontology/modalia#hasInterval> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/ontology/modalia#MicroCredential> .
-<https://purl.org/ontology/modalia#hasInterval> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
-<https://purl.org/ontology/modalia#hasInterval> <http://www.w3.org/2000/01/rdf-schema#label> "hasInterval"@en .
-# 
 # https://purl.org/ontology/modalia#hasOrder
 <https://purl.org/ontology/modalia#hasOrder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://purl.org/ontology/modalia#hasOrder> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/ontology/modalia#Proficiency> .
@@ -920,23 +817,11 @@ _:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://purl.org/ontology/modalia#hasOrder> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "Order of proficiency level, starting from 1 for Novice and increasing by proficiency"@en .
 <https://purl.org/ontology/modalia#hasOrder> <http://www.w3.org/2000/01/rdf-schema#label> "hasOrder"@en .
 # 
-# https://purl.org/ontology/modalia#hasRowID
-<https://purl.org/ontology/modalia#hasRowID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://purl.org/ontology/modalia#hasRowID> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/ontology/modalia#LearningGoalMatrixEntry> .
-<https://purl.org/ontology/modalia#hasRowID> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
-<https://purl.org/ontology/modalia#hasRowID> <http://www.w3.org/2000/01/rdf-schema#label> "has Row ID"@en .
-# 
 # https://purl.org/ontology/modalia#likesCount
 <https://purl.org/ontology/modalia#likesCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://purl.org/ontology/modalia#likesCount> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
 <https://purl.org/ontology/modalia#likesCount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
 <https://purl.org/ontology/modalia#likesCount> <http://www.w3.org/2000/01/rdf-schema#label> "likesCount"@en .
-# 
-# https://purl.org/ontology/modalia#microCredentialUrl
-<https://purl.org/ontology/modalia#microCredentialUrl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://purl.org/ontology/modalia#microCredentialUrl> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/ontology/modalia#MicroCredential> .
-<https://purl.org/ontology/modalia#microCredentialUrl> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
-<https://purl.org/ontology/modalia#microCredentialUrl> <http://www.w3.org/2000/01/rdf-schema#label> "microCredentialUrl"@en .
 # 
 # https://purl.org/ontology/modalia#studyPlan
 <https://purl.org/ontology/modalia#studyPlan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -979,15 +864,15 @@ _:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # https://schema.org/familyName
 <https://schema.org/familyName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://schema.org/familyName> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid44 .
-_:genid44 <http://www.w3.org/2002/07/owl#unionOf> _:genid46 .
-_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid45 .
-_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purl.org/ontology/modalia#User> .
-_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purl.org/ontology/modalia#Contributor> .
-_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.org/familyName> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid39 .
+_:genid39 <http://www.w3.org/2002/07/owl#unionOf> _:genid41 .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid40 .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purl.org/ontology/modalia#User> .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purl.org/ontology/modalia#Contributor> .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://schema.org/familyName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://schema.org/familyName> <http://www.w3.org/2000/01/rdf-schema#comment> "Family name. In the U.S., the last name of a Person."@en .
 <https://schema.org/familyName> <http://www.w3.org/2000/01/rdf-schema#label> "familyName"@en .
@@ -1000,15 +885,15 @@ _:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # https://schema.org/givenName
 <https://schema.org/givenName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://schema.org/givenName> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid47 .
-_:genid47 <http://www.w3.org/2002/07/owl#unionOf> _:genid49 .
-_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid48 .
-_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purl.org/ontology/modalia#User> .
-_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purl.org/ontology/modalia#Contributor> .
-_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.org/givenName> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid42 .
+_:genid42 <http://www.w3.org/2002/07/owl#unionOf> _:genid44 .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid43 .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purl.org/ontology/modalia#User> .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purl.org/ontology/modalia#Contributor> .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://schema.org/givenName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://schema.org/givenName> <http://www.w3.org/2000/01/rdf-schema#label> "givenName"@en .
 # 
@@ -1215,32 +1100,6 @@ _:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://purl.org/ontology/modalia#BestPractices> <http://www.w3.org/2000/01/rdf-schema#label> "BestPractices"@en .
 <https://purl.org/ontology/modalia#BestPractices> <http://www.w3.org/2004/02/skos/core#prefLabel> "Best Practices"@en .
 # 
-# https://purl.org/ontology/modalia#CTMethodological
-<https://purl.org/ontology/modalia#CTMethodological> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://purl.org/ontology/modalia#CTMethodological> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purl.org/ontology/modalia#CompetenceType> .
-<https://purl.org/ontology/modalia#CTMethodological> <http://www.w3.org/2000/01/rdf-schema#label> "Methodological Competence"@en .
-# 
-# https://purl.org/ontology/modalia#CTProfessional
-<https://purl.org/ontology/modalia#CTProfessional> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://purl.org/ontology/modalia#CTProfessional> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purl.org/ontology/modalia#CompetenceType> .
-<https://purl.org/ontology/modalia#CTProfessional> <http://www.w3.org/2000/01/rdf-schema#label> "Professional Competence"@en .
-# 
-# https://purl.org/ontology/modalia#CTSelf
-<https://purl.org/ontology/modalia#CTSelf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://purl.org/ontology/modalia#CTSelf> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purl.org/ontology/modalia#CompetenceType> .
-<https://purl.org/ontology/modalia#CTSelf> <http://www.w3.org/2000/01/rdf-schema#label> "Self Competence"@en .
-# 
-# https://purl.org/ontology/modalia#CTSocial
-<https://purl.org/ontology/modalia#CTSocial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://purl.org/ontology/modalia#CTSocial> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purl.org/ontology/modalia#CompetenceType> .
-<https://purl.org/ontology/modalia#CTSocial> <http://www.w3.org/2000/01/rdf-schema#label> "Social Competence"@en .
-# 
-# https://purl.org/ontology/modalia#Certificate
-<https://purl.org/ontology/modalia#Certificate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://purl.org/ontology/modalia#Certificate> <http://www.w3.org/2000/01/rdf-schema#label> "Certificate" .
-<https://purl.org/ontology/modalia#Certificate> <http://www.w3.org/2004/02/skos/core#definition> "A certificate obtained by user."@en .
-<https://purl.org/ontology/modalia#Certificate> <http://www.w3.org/2004/02/skos/core#example> "SCRUM Professional I"@en .
-# 
 # https://purl.org/ontology/modalia#Code
 <https://purl.org/ontology/modalia#Code> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://purl.org/ontology/modalia#Code> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purl.org/ontology/modalia#MediaType> .
@@ -1264,10 +1123,6 @@ _:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://purl.org/ontology/modalia#Community> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://purl.org/ontology/modalia#Community> <http://www.w3.org/2000/01/rdf-schema#label> "Community"@en .
 <https://purl.org/ontology/modalia#Community> <http://www.w3.org/2004/02/skos/core#definition> "A Community gathers users (members) and educational resources/learning paths similar  to Zenodo communities"@en .
-# 
-# https://purl.org/ontology/modalia#CompetenceType
-<https://purl.org/ontology/modalia#CompetenceType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://purl.org/ontology/modalia#CompetenceType> <http://www.w3.org/2004/02/skos/core#definition> "The different type of competences"@en .
 # 
 # https://purl.org/ontology/modalia#ContentProvider
 <https://purl.org/ontology/modalia#ContentProvider> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -1356,43 +1211,10 @@ _:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://purl.org/ontology/modalia#Job> <http://www.w3.org/2004/02/skos/core#definition> "name of a profession"@en .
 <https://purl.org/ontology/modalia#Job> <http://www.w3.org/2004/02/skos/core#example> "Software Developer"@en .
 # 
-# https://purl.org/ontology/modalia#LL1Remember
-<https://purl.org/ontology/modalia#LL1Remember> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://purl.org/ontology/modalia#LL1Remember> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purl.org/ontology/modalia#LearningLevel> .
-<https://purl.org/ontology/modalia#LL1Remember> <http://www.w3.org/2000/01/rdf-schema#label> "Learning Level 1 Remember"@en .
-# 
-# https://purl.org/ontology/modalia#LL2Understand
-<https://purl.org/ontology/modalia#LL2Understand> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://purl.org/ontology/modalia#LL2Understand> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purl.org/ontology/modalia#LearningLevel> .
-<https://purl.org/ontology/modalia#LL2Understand> <http://www.w3.org/2000/01/rdf-schema#label> "Learning Level 2 Understand"@en .
-# 
-# https://purl.org/ontology/modalia#LL3Apply
-<https://purl.org/ontology/modalia#LL3Apply> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://purl.org/ontology/modalia#LL3Apply> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purl.org/ontology/modalia#LearningLevel> .
-<https://purl.org/ontology/modalia#LL3Apply> <http://www.w3.org/2000/01/rdf-schema#label> "Learning Level 3 Apply"@en .
-# 
-# https://purl.org/ontology/modalia#LL4Analyze
-<https://purl.org/ontology/modalia#LL4Analyze> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://purl.org/ontology/modalia#LL4Analyze> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purl.org/ontology/modalia#LearningLevel> .
-<https://purl.org/ontology/modalia#LL4Analyze> <http://www.w3.org/2000/01/rdf-schema#label> "Learning Level 4 Analyze"@en .
-# 
-# https://purl.org/ontology/modalia#LL5Evaluate
-<https://purl.org/ontology/modalia#LL5Evaluate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://purl.org/ontology/modalia#LL5Evaluate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purl.org/ontology/modalia#LearningLevel> .
-<https://purl.org/ontology/modalia#LL5Evaluate> <http://www.w3.org/2000/01/rdf-schema#label> "Learning Level 5 Evaluate"@en .
-# 
-# https://purl.org/ontology/modalia#LL6Create
-<https://purl.org/ontology/modalia#LL6Create> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://purl.org/ontology/modalia#LL6Create> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purl.org/ontology/modalia#LearningLevel> .
-<https://purl.org/ontology/modalia#LL6Create> <http://www.w3.org/2000/01/rdf-schema#label> "Learning Level 6 Create"@en .
-# 
-# https://purl.org/ontology/modalia#LearningGoalMatrixEntry
-<https://purl.org/ontology/modalia#LearningGoalMatrixEntry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://purl.org/ontology/modalia#LearningGoalMatrixEntry> <http://www.w3.org/2000/01/rdf-schema#label> "LearningGoalMatrixEntry"@en .
-# 
-# https://purl.org/ontology/modalia#LearningLevel
-<https://purl.org/ontology/modalia#LearningLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://purl.org/ontology/modalia#LearningLevel> <http://www.w3.org/2004/02/skos/core#definition> "The level of learning, is defined as six levels; strting from Knowledge and ending by Synthesis"@en .
+# https://purl.org/ontology/modalia#LearnerRole
+<https://purl.org/ontology/modalia#LearnerRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purl.org/ontology/modalia#LearnerRole> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purl.org/ontology/modalia#UserRole> .
+<https://purl.org/ontology/modalia#LearnerRole> <http://www.w3.org/2000/01/rdf-schema#label> "LearnerRole"@en .
 # 
 # https://purl.org/ontology/modalia#LearningObjective
 <https://purl.org/ontology/modalia#LearningObjective> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -1430,26 +1252,12 @@ _:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://purl.org/ontology/modalia#MediaType> <http://www.w3.org/2000/01/rdf-schema#label> "MediaType"@en .
 <https://purl.org/ontology/modalia#MediaType> <http://www.w3.org/2004/02/skos/core#definition> "General type of data content encoded in a computer file. Digital media type of the resource. To be used with user preferences according to VARK learning style."@en .
 # 
-# https://purl.org/ontology/modalia#MicroCredential
-<https://purl.org/ontology/modalia#MicroCredential> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://purl.org/ontology/modalia#MicroCredential> <http://www.w3.org/2000/01/rdf-schema#label> "MicroCredential"@en .
-# 
 # https://purl.org/ontology/modalia#Multipart
 <https://purl.org/ontology/modalia#Multipart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://purl.org/ontology/modalia#Multipart> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purl.org/ontology/modalia#MediaType> .
 <https://purl.org/ontology/modalia#Multipart> <http://www.w3.org/2000/01/rdf-schema#label> "Multipart"@en .
 <https://purl.org/ontology/modalia#Multipart> <http://www.w3.org/2004/02/skos/core#definition> "If the resource consists of more than one item with different DOIs, the MediaType is \"multipart\" and the relations are provided in the field \"RelatedWork\"."@en .
 <https://purl.org/ontology/modalia#Multipart> <http://www.w3.org/2004/02/skos/core#prefLabel> "Multipart"@en .
-# 
-# https://purl.org/ontology/modalia#OrganisationProviderType
-<https://purl.org/ontology/modalia#OrganisationProviderType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://purl.org/ontology/modalia#OrganisationProviderType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purl.org/ontology/modalia#ProviderType> .
-<https://purl.org/ontology/modalia#OrganisationProviderType> <http://www.w3.org/2000/01/rdf-schema#label> "OrganisationProviderType"@en .
-# 
-# https://purl.org/ontology/modalia#PersonProviderType
-<https://purl.org/ontology/modalia#PersonProviderType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://purl.org/ontology/modalia#PersonProviderType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purl.org/ontology/modalia#ProviderType> .
-<https://purl.org/ontology/modalia#PersonProviderType> <http://www.w3.org/2000/01/rdf-schema#label> "PersonProviderType"@en .
 # 
 # https://purl.org/ontology/modalia#PhDStudent
 <https://purl.org/ontology/modalia#PhDStudent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -1479,24 +1287,24 @@ _:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # https://purl.org/ontology/modalia#Proficiency
 <https://purl.org/ontology/modalia#Proficiency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://purl.org/ontology/modalia#Proficiency> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid50 .
-_:genid50 <http://www.w3.org/2002/07/owl#oneOf> _:genid55 .
-_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid54 .
-_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid53 .
-_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid52 .
-_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid51 .
-_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purl.org/ontology/modalia#Proficient> .
-_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purl.org/ontology/modalia#Novice> .
-_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purl.org/ontology/modalia#Expert> .
-_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purl.org/ontology/modalia#Competent> .
-_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purl.org/ontology/modalia#Beginner> .
-_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purl.org/ontology/modalia#Proficiency> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid45 .
+_:genid45 <http://www.w3.org/2002/07/owl#oneOf> _:genid50 .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid49 .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid48 .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid47 .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid46 .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purl.org/ontology/modalia#Proficient> .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purl.org/ontology/modalia#Novice> .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purl.org/ontology/modalia#Expert> .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purl.org/ontology/modalia#Competent> .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purl.org/ontology/modalia#Beginner> .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://purl.org/ontology/modalia#Proficiency> <http://www.w3.org/2000/01/rdf-schema#label> "Proficiency"@en .
 <https://purl.org/ontology/modalia#Proficiency> <http://www.w3.org/2004/02/skos/core#definition> "Benner’s Novice to Expert\r\nThe five stages of proficiency in the novice to expert model are: novice, advanced beginner, competent, proficient, and expert (Benner, 1982)."@en .
 # 
@@ -1504,15 +1312,6 @@ _:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://purl.org/ontology/modalia#ProprietaryLicense> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://purl.org/ontology/modalia#ProprietaryLicense> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purl.org/ontology/modalia#License> .
 <https://purl.org/ontology/modalia#ProprietaryLicense> <http://www.w3.org/2000/01/rdf-schema#label> "Proprietary License"@en .
-# 
-# https://purl.org/ontology/modalia#Provider
-<https://purl.org/ontology/modalia#Provider> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://purl.org/ontology/modalia#Provider> <http://www.w3.org/2000/01/rdf-schema#comment> "Person, service or organisation that provides the OER"@en .
-<https://purl.org/ontology/modalia#Provider> <http://www.w3.org/2000/01/rdf-schema#label> "Provider"@en .
-# 
-# https://purl.org/ontology/modalia#ProviderType
-<https://purl.org/ontology/modalia#ProviderType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://purl.org/ontology/modalia#ProviderType> <http://www.w3.org/2000/01/rdf-schema#label> "Provider Type"@en .
 # 
 # https://purl.org/ontology/modalia#Questionnaire
 <https://purl.org/ontology/modalia#Questionnaire> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -1560,20 +1359,10 @@ _:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://purl.org/ontology/modalia#ResearcherRole> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purl.org/ontology/modalia#UserRole> .
 <https://purl.org/ontology/modalia#ResearcherRole> <http://www.w3.org/2000/01/rdf-schema#label> "ResearcherRole"@en .
 # 
-# https://purl.org/ontology/modalia#ServiceProviderType
-<https://purl.org/ontology/modalia#ServiceProviderType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://purl.org/ontology/modalia#ServiceProviderType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purl.org/ontology/modalia#ProviderType> .
-<https://purl.org/ontology/modalia#ServiceProviderType> <http://www.w3.org/2000/01/rdf-schema#label> "ServiceProviderType"@en .
-# 
 # https://purl.org/ontology/modalia#Skill
 <https://purl.org/ontology/modalia#Skill> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://purl.org/ontology/modalia#Skill> <http://www.w3.org/2000/01/rdf-schema#comment> "Job Skill, ability to perform some tasks."@en .
 <https://purl.org/ontology/modalia#Skill> <http://www.w3.org/2000/01/rdf-schema#label> "Skill"@en .
-# 
-# https://purl.org/ontology/modalia#StudentRole
-<https://purl.org/ontology/modalia#StudentRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://purl.org/ontology/modalia#StudentRole> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purl.org/ontology/modalia#UserRole> .
-<https://purl.org/ontology/modalia#StudentRole> <http://www.w3.org/2000/01/rdf-schema#label> "StudentRole"@en .
 # 
 # https://purl.org/ontology/modalia#StudentSchool
 <https://purl.org/ontology/modalia#StudentSchool> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -1621,11 +1410,6 @@ _:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # https://purl.org/ontology/modalia#UserComment
 <https://purl.org/ontology/modalia#UserComment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://purl.org/ontology/modalia#UserComment> <http://www.w3.org/2004/02/skos/core#definition> "Comment added by a user on an educational resource"@en .
-# 
-# https://purl.org/ontology/modalia#UserEnrollment
-<https://purl.org/ontology/modalia#UserEnrollment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://purl.org/ontology/modalia#UserEnrollment> <http://www.w3.org/2000/01/rdf-schema#label> "UserEnrollment"@en .
-<https://purl.org/ontology/modalia#UserEnrollment> <http://www.w3.org/2004/02/skos/core#definition> "User enrollments are micro-credentials that a specific user tries to obtain"@en .
 # 
 # https://purl.org/ontology/modalia#UserProfile
 <https://purl.org/ontology/modalia#UserProfile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
