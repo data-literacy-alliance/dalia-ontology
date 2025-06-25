@@ -1,0 +1,363 @@
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix m4i: <http://w3id.org/nfdi4ing/metadata4ing#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix aps: <https://w3id.org/nfdi4ing/profiles/> .
+@prefix hcrt: <https://w3id.org/kim/hcrt/> .
+
+<https://w3id.org/nfdi4ing/profiles/a884f00f-89b8-4439-9591-b4e9a256c035/> dcterms:created "2025-06-13"^^xsd:date ;
+	dcterms:creator "Dr A Desouki" ;
+	dcterms:description "Educational Resource curation form"@en ;
+	dcterms:license <http://spdx.org/licenses/CC0-1.0> ;
+	dcterms:title "DALIA OER DIF 1.3"@en ;
+	a sh:NodeShape ;
+	owl:imports <https://w3id.org/nfdi4ing/profiles/79810e66-fc50-46dd-8b1b-75173bbdd403/>, <https://w3id.org/nfdi4ing/profiles/dfeb0a62-4bd2-45c9-9a1f-f4a16874b42e/> ;
+	prov:wasDerivedFrom <https://w3id.org/nfdi4ing/profiles/a0e1091e-017b-4ca6-aaff-b5b4a6ba483b/> ;
+	sh:closed true ;
+	sh:property [
+		sh:message "The recommending community" ;
+		sh:name "Community (R)"@en ;
+		sh:order 11 ;
+		sh:path <http://purl.org/ontology/rec/core#recommender> ;
+		sh:class <https://purl.org/ontology/modalia#Community> ;
+	], [
+    sh:path rdf:type ;
+    sh:hasValue <https://github.com/tibonto/educor#EducationalResource> ;
+  ], [
+		sh:in (
+			<https://purl.org/ontology/modalia#Competent>
+			<https://purl.org/ontology/modalia#Beginner>
+			<https://purl.org/ontology/modalia#Proficient>
+			<https://purl.org/ontology/modalia#Expert>
+			<https://purl.org/ontology/modalia#Novice>
+		) ;
+		sh:message "The proficiency level." ;
+		sh:name "Proficiency"@en ;
+		sh:order 13 ;
+		sh:path <https://purl.org/ontology/modalia#requiresProficiencyLevel> ;
+	], [
+		sh:name "Link"@de, "Link"@en ;
+		sh:order 2 ;
+		sh:path schema:url ;
+		#sh:datatype xsd:anyURI ;
+                sh:nodeKind sh:IRI ;
+		#sh:maxCount 1 ;
+		sh:minCount 1 ;
+	], [
+		sh:name "Is Version Of"@en ;
+		sh:order 34 ;
+		sh:path <https://purl.org/ontology/modalia#isVersionOf> ;
+		#sh:datatype xsd:anyURI ;
+ sh:nodeKind sh:IRI ;
+	], [
+		sh:in (
+			<http://lexvo.org/id/iso639-3/eng>
+			<http://lexvo.org/id/iso639-3/deu>
+			<http://lexvo.org/id/iso639-3/fra>
+			<http://lexvo.org/id/iso639-3/spa>
+			<http://lexvo.org/id/iso639-3/ita>
+		) ;
+		sh:message "Language must be one of the specified Lexvo URIs (ISO 639-1 or 2)." ;
+		sh:name "Language"@de, "Language"@en ;
+		sh:order 7 ;
+		sh:path dcterms:language ;
+		sh:severity sh:Warning ;
+	], [
+		sh:name "Is Based On"@en ;
+		sh:order 29 ;
+		sh:path <https://purl.org/ontology/modalia#isBasedOn> ;
+		#sh:datatype xsd:anyURI ;
+ sh:nodeKind sh:IRI ;
+	], [
+		sh:name "version"@de, "version"@en ;
+		sh:order 16 ;
+		sh:path schema:version ;
+		sh:datatype xsd:string ;
+	], [
+		sh:name "Is Part Of"@en ;
+		sh:order 20 ;
+		sh:path <https://purl.org/ontology/modalia#isPartOf> ;
+		#sh:datatype xsd:anyURI ;
+ sh:nodeKind sh:IRI ;
+	], [
+		sh:name "Is Replaced By"@de, "Is Replaced By"@en ;
+		sh:order 28 ;
+		sh:path dcterms:isReplacedBy ;
+		#sh:datatype xsd:anyURI ;
+ sh:nodeKind sh:IRI ;
+	], [
+		sh:message "The discipline must be one of the top 10 Fachsystematik subjects." ;
+		sh:name "Discipline"@en ;
+		sh:order 12 ;
+		sh:path <http://purl.org/spar/fabio/hasDiscipline> ;
+	], [
+		sh:name "Is Previous Version Of"@en ;
+		sh:order 23 ;
+		sh:path <https://purl.org/ontology/modalia#isPreviousVersionOf> ;
+		#sh:datatype xsd:anyURI ;
+ sh:nodeKind sh:IRI ;
+	], [
+		sh:name "Author Person"@en ;
+		sh:order 5 ;
+		sh:path schema:author ;
+		sh:severity sh:Violation ;
+		sh:or (
+      [ sh:node <https://w3id.org/nfdi4ing/profiles/dfeb0a62-4bd2-45c9-9a1f-f4a16874b42e/> ]
+      [ sh:node <https://w3id.org/nfdi4ing/profiles/79810e66-fc50-46dd-8b1b-75173bbdd403/> ]
+    ) ;
+    sh:minCount 1 ;
+	], [
+		sh:name "Author Organization"@en ;
+		sh:order 6 ;
+		sh:path <https://dalia.education/authorUnordered> ;
+		#sh:node <https://w3id.org/nfdi4ing/profiles/79810e66-fc50-46dd-8b1b-75173bbdd403/> ;
+	], [
+		sh:name "Is Supplement To"@en ;
+		sh:order 35 ;
+		sh:path <https://w3id.org/citedcat-ap/isSupplementTo> ;
+		##sh:datatype xsd:anyURI ;
+		sh:nodeKind sh:IRI ;
+	], [
+		sh:name "Is Described By"@en ;
+		sh:order 31 ;
+		sh:path <https://purl.org/ontology/modalia#isDescribedBy> ;
+		#sh:datatype xsd:anyURI ;
+ sh:nodeKind sh:IRI ;
+	], [
+		sh:in (
+			<https://schema.org/Text>
+			<https://purl.org/ontology/modalia#Code>
+			<https://schema.org/ImageObject>
+			<https://schema.org/PresentationDigitalDocument>
+			<https://schema.org/VideoObject>
+			<https://purl.org/ontology/modalia#Multipart>
+			<https://schema.org/AudioObject>
+		) ;
+		sh:message "MediaType" ;
+		sh:name "MediaType"@en ;
+		sh:order 8 ;
+		sh:path <https://purl.org/ontology/modalia#hasMediaType> ;
+	], [
+		rdfs:label "Description" ;
+		sh:name "Description"@de, "Description"@en ;
+		sh:order 6 ;
+		sh:path dcterms:description ;
+		sh:datatype xsd:string ;
+		sh:maxCount 1 ;
+		sh:severity sh:Violation ;
+		dash:singleLine false ;
+	], [
+		sh:in (
+			<https://purl.org/ontology/modalia#BachelorStudent>
+			<https://purl.org/ontology/modalia#StudentSchool>
+			<https://purl.org/ontology/modalia#MastersStudent>
+			<https://purl.org/ontology/modalia#PhDStudent>
+			<https://purl.org/ontology/modalia#TeacherHighEducation>
+			<https://purl.org/ontology/modalia#DataSteward>
+			<https://purl.org/ontology/modalia#TeacherSchool>
+			<https://purl.org/ontology/modalia#ContentProvider>
+			<https://purl.org/ontology/modalia#Researcher>
+		) ;
+		sh:message "The Target Group." ;
+		sh:name "Target Group"@en ;
+		sh:order 13 ;
+		sh:path <https://purl.org/ontology/modalia#hasTargetGroup> ;
+	], [
+		sh:name "Has Part"@en ;
+		sh:order 21 ;
+		sh:path schema:hasPart ;
+		#sh:datatype xsd:anyURI ;
+ sh:nodeKind sh:IRI ;
+	], [
+		sh:name "Is Translation Of"@en ;
+		sh:order 24 ;
+		sh:path <https://purl.org/ontology/modalia#isTranslationOf> ;
+		#sh:datatype xsd:anyURI ;
+ sh:nodeKind sh:IRI ;
+	], [
+		sh:maxCount 1 ;
+		sh:name "Publication Date"@en ;
+		sh:order 7 ;
+		sh:path <https://schema.org/datePublished> ;
+		#sh:datatype xsd:date ;
+		sh:or (
+			[ sh:datatype xsd:date ]
+			[ sh:datatype xsd:gYearMonth ]
+			[ sh:datatype xsd:gYear ]
+		) ;
+		sh:severity sh:Violation ;
+	],  [
+		sh:name "HasTranslation"@en ;
+		sh:order 33 ;
+		sh:path <https://purl.org/ontology/modalia#hasTranslation> ;
+		#sh:datatype xsd:anyURI ;
+ sh:nodeKind sh:IRI ;
+	], [
+		sh:name "Is Supplemented By"@en ;
+		sh:order 36 ;
+		sh:path <https://w3id.org/citedcat-ap/isSupplementedBy> ;
+		##sh:datatype xsd:anyURI ;
+ sh:nodeKind sh:IRI ;
+		sh:nodeKind sh:IRI ;
+	], [
+		rdfs:label "Keyword" ;
+		sh:name "Keyword"@de, "Keyword"@en ;
+		sh:order 14 ;
+		sh:path schema:keywords ;
+		sh:datatype xsd:string ;
+		sh:severity sh:Violation ;
+	], [
+		sh:name "Size"@de, "Size"@en ;
+		sh:order 15 ;
+		sh:path schema:fileSize ;
+		sh:datatype xsd:string ;
+	], [
+		sh:message "The supporting community" ;
+		sh:name "Community (S)"@en ;
+		sh:order 11 ;
+		sh:path <http://bibfra.me/vocab/relation/supportinghost> ;
+		sh:class <https://purl.org/ontology/modalia#Community> ;
+	], [
+		sh:message "The has community" ;
+		sh:name "Community (S)"@en ;
+		sh:order 11 ;
+		sh:path <https://purl.org/ontology/modalia#hasCommunity> ;
+		sh:class <https://purl.org/ontology/modalia#Community> ;
+	], [
+		sh:name "Title"@en ;
+		sh:order 1 ;
+		sh:path dcterms:title ;
+		sh:datatype xsd:string ;
+		sh:maxCount 1 ;
+		sh:minCount 1 ;
+		sh:severity sh:Violation ;
+	], [
+		sh:name "Subtitle"@en ;
+		sh:order 2 ;
+		sh:path <http://purl.org/spar/fabio/hasSubtitle> ;
+		sh:datatype xsd:string ;
+		sh:severity sh:Violation ;
+	], [
+		sh:name "Is New Version Of"@en ;
+		sh:order 22 ;
+		sh:path <https://purl.org/ontology/modalia#isNewVersionOf> ;
+		#sh:datatype xsd:anyURI ;
+ sh:nodeKind sh:IRI ;
+	], [
+		sh:in (
+			<https://purl.org/ontology/modalia#Workshop>
+			<https://purl.org/ontology/modalia#Poster>
+			bibo:Thesis
+			bibo:Article
+			<https://purl.org/ontology/modalia#Tutorial>
+			<https://w3id.org/kim/hcrt/case_study>
+			<https://w3id.org/kim/hcrt/experiment>
+			<https://w3id.org/kim/hcrt/index>
+			<https://w3id.org/kim/hcrt/index>
+			<https://w3id.org/kim/hcrt/diagram>
+			<https://w3id.org/kim/hcrt/simulation>
+			bibo:Book
+			<https://w3id.org/kim/hcrt/other>
+			bibo:Report
+			<https://schema.org/SoftwareSourceCode>
+			<https://purl.org/ontology/modalia#Cookbook>
+			<https://purl.org/ontology/modalia#Questionnaire>
+			<https://w3id.org/kim/hcrt/assessment>
+			<https://w3id.org/kim/hcrt/educational_game>
+			<https://purl.org/ontology/modalia#CodeNotebook>
+			bibo:Webpage
+			<https://schema.org/PodcastSeries>
+			<https://purl.org/ontology/modalia#Lecture>
+			<https://purl.org/ontology/modalia#BestPractices>
+			hcrt:drill_and_practice
+			hcrt:lesson_plan
+			hcrt:course
+			hcrt:worksheet
+			hcrt:textbook
+			hcrt:portal
+		) ;
+		sh:message "Learning Resource Type" ;
+		sh:name "Learning Resource Type"@en ;
+		sh:order 10 ;
+		sh:path <https://purl.org/ontology/modalia#hasLearningType> ;
+	], [
+		rdfs:label "License" ;
+		
+		sh:name "License"@de, "License"@en ;
+		sh:order 4 ;
+		sh:path dcterms:license ;
+		sh:maxCount 1 ;
+		sh:minCount 1 ;
+	], [
+		sh:name "File Format"@en ;
+		sh:order 9 ;
+		sh:path dcterms:format ;
+		sh:datatype xsd:string ;
+	] ;
+	sh:targetClass <https://github.com/tibonto/educor#EducationalResource> .
+
+<https://w3id.org/nfdi4ing/profiles/79810e66-fc50-46dd-8b1b-75173bbdd403/> dcterms:created "2025-06-23"^^xsd:date ;
+	dcterms:creator "Abdelmoneim Desouki" ;
+	dcterms:description "Shape for Author Organization (DALIA)"@en ;
+	dcterms:license <http://spdx.org/licenses/CC0-1.0> ;
+	dcterms:title "AuthorOrganization"@en ;
+	a sh:NodeShape ;
+	sh:closed false ;
+	sh:property [
+		sh:message "schema:Organization must have a valid ROR ID (e.g., https://ror.org/012345678)." ;
+		sh:name "Has ROR ID"@en ;
+		sh:order 4 ;
+		sh:path m4i:hasRorId ;
+		sh:datatype xsd:string ;
+		sh:maxCount 1 ;
+		sh:pattern "https://ror.org/[0-9][0-9][a-z0-9][a-z0-9][a-z0-9][a-z0-9][a-z0-9][0-9][0-9]" ;
+	], [
+		sh:name "Name"@en ;
+		sh:order 3 ;
+		sh:path schema:name ;
+		sh:datatype xsd:string ;
+		sh:maxCount 1 ;
+		sh:minCount 1 ;
+	] ;
+	sh:targetClass schema:Organization .
+
+<https://w3id.org/nfdi4ing/profiles/dfeb0a62-4bd2-45c9-9a1f-f4a16874b42e/> dcterms:created "2025-06-23"^^xsd:date ;
+	dcterms:creator "Abdelmoneim Desouki" ;
+	dcterms:description "Shape for Author Person (DALIA)"@en ;
+	dcterms:license <http://spdx.org/licenses/CC0-1.0> ;
+	dcterms:title "AuthorPerson"@en ;
+	a sh:NodeShape ;
+	sh:closed false ;
+	sh:property [
+		sh:message "schema:Person must have a valid ORCID iD (e.g., https://orcid.org/0000-0002-1825-0097)." ;
+		sh:name "Has ORCID ID"@en ;
+		sh:order 4 ;
+		sh:path m4i:orcidId ;
+		sh:datatype xsd:string ;
+		sh:maxCount 1 ;
+		sh:pattern "https://orcid.org/[0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9X]" ;
+	], [
+		sh:name "Family Name"@en ;
+		sh:order 3 ;
+		sh:path schema:familyName ;
+		sh:datatype xsd:string ;
+		sh:maxCount 1 ;
+	], [
+		sh:name "Given Name"@en ;
+		sh:order 2 ;
+		sh:path schema:givenName ;
+		sh:datatype xsd:string ;
+		sh:maxCount 1 ;
+	] ;
+	sh:targetClass schema:Person .
+
