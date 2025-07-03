@@ -240,7 +240,7 @@ fabio:hasDiscipline rdf:type owl:ObjectProperty ;
 
 ###  https://github.com/tibonto/educor#consistsOfKnowledge
 ec:consistsOfKnowledge rdf:type owl:ObjectProperty ;
-                       rdfs:domain ec:LearningPath ;
+                       rdfs:domain :LearningPath ;
                        rdfs:range ec:KnowledgeTopic ;
                        rdfs:label "consistsOfKnowledge" .
 
@@ -258,6 +258,12 @@ ec:generatedFrom rdf:type owl:ObjectProperty ;
                   rdfs:range :RDMSubjectCluster ;
                   rdfs:comment "relates RDM Topic to RDM Topic Cluster, similar to LZM"@en ;
                   rdfs:label "belongsToCluster"@en .
+
+
+###  https://purl.org/ontology/modalia#belongsToLearningPath
+:belongsToLearningPath rdf:type owl:ObjectProperty ;
+                       rdfs:domain :LearningPathStep ;
+                       rdfs:range :LearningPath .
 
 
 ###  https://purl.org/ontology/modalia#belongsToPhase
@@ -337,7 +343,7 @@ ec:generatedFrom rdf:type owl:ObjectProperty ;
                                                  :UserProfile
                                                )
                                  ] ;
-                     rdfs:range ec:LearningPath ;
+                     rdfs:range :LearningPath ;
                      rdfs:label "definesLearningPath" .
 
 
@@ -383,7 +389,7 @@ ec:generatedFrom rdf:type owl:ObjectProperty ;
 :hasLearningObjective rdf:type owl:ObjectProperty ;
                       rdfs:domain [ rdf:type owl:Class ;
                                     owl:unionOf ( ec:EducationalResource
-                                                  ec:LearningPath
+                                                  :LearningPath
                                                 )
                                   ] ;
                       rdfs:range :LearningObjective ;
@@ -392,7 +398,7 @@ ec:generatedFrom rdf:type owl:ObjectProperty ;
 
 ###  https://purl.org/ontology/modalia#hasLearningResource
 :hasLearningResource rdf:type owl:ObjectProperty ;
-                     rdfs:domain ec:LearningPath ;
+                     rdfs:domain :LearningPath ;
                      rdfs:range ec:EducationalResource ;
                      rdfs:label "hasLearningResource" .
 
@@ -883,9 +889,19 @@ m4i:orcidId rdf:type owl:DatatypeProperty ;
             rdfs:label "likesCount"@en .
 
 
+###  https://purl.org/ontology/modalia#notesForLearner
+:notesForLearner rdf:type owl:DatatypeProperty ;
+                 rdfs:domain [ rdf:type owl:Class ;
+                               owl:unionOf ( ec:EducationalResource
+                                             :LearningPathStep
+                                           )
+                             ] ;
+                 rdfs:range xsd:string .
+
+
 ###  https://purl.org/ontology/modalia#studyPlan
 :studyPlan rdf:type owl:DatatypeProperty ;
-           rdfs:domain ec:LearningPath ;
+           rdfs:domain :LearningPath ;
            rdfs:range rdf:langString ;
            rdfs:label "studyPlan"@en .
 
@@ -1119,14 +1135,6 @@ ec:KnowledgeTopic rdf:type owl:Class ;
                   <http://www.w3.org/2004/02/skos/core#example> "A knowledge topic can be the “Quadratic equations” in the domain of Mathematics Algebra"@en .
 
 
-###  https://github.com/tibonto/educor#LearningPath
-ec:LearningPath rdf:type owl:Class ;
-                rdfs:comment "Often here it is mapped the background knowledge too."@en ;
-                rdfs:label "LearningPath"@en ;
-                <http://www.w3.org/2004/02/skos/core#definition> "The learning path consists of learner's previously followed topics and future ones in order to reach to the learning goal. It is an ordered list of recommendations, which is personalized to the needs of a certain user and target the accomplishment of a complex skill. It has as a final point a learning goal."@en ;
-                <http://www.w3.org/2004/02/skos/core#example> "\"Hello world in python\", \"Comments in python\", \"Strings in python\""@en .
-
-
 ###  https://github.com/tibonto/educor#LearningPreference
 ec:LearningPreference rdf:type owl:Class ;
                       rdfs:comment "It is based on the theory which identifies four learning styles (visual, auditory, reading, and kinesthetic)."@en ;
@@ -1328,6 +1336,18 @@ ec:UserLogs rdf:type owl:Class ;
                    rdfs:label "LearningObjective"@en ;
                    rdfs:seeAlso "https://github.com/tibonto/educor#LearningGoal" ;
                    <http://www.w3.org/2004/02/skos/core#definition> "Learning Objective as defined in learning objective matrix (LZM)"@en .
+
+
+###  https://purl.org/ontology/modalia#LearningPath
+:LearningPath rdf:type owl:Class ;
+              rdfs:label "LearningPath"@en ;
+              <http://www.w3.org/2004/02/skos/core#definition> "The learning path consists of set of learning units (Educational Resources) in a specified order  to reach a learning objective."@en ;
+              <http://www.w3.org/2004/02/skos/core#example> "\"Hello world in python\", \"Comments in python\", \"Strings in python\""@en .
+
+
+###  https://purl.org/ontology/modalia#LearningPathStep
+:LearningPathStep rdf:type owl:Class ;
+                  <http://www.w3.org/2004/02/skos/core#definition> "One step of a learning path, it has an order and one educational resource. Optionally a learning path step can have a note for learner."@en .
 
 
 ###  https://purl.org/ontology/modalia#LearningResourceType

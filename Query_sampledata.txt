@@ -1,0 +1,14 @@
+#  https://atomgraph.github.io/SPARQL-Playground/
+#Queries to sampledata
+prefix mo: <https://purl.org/ontology/modalia#>
+prefix dcterms: <https://purl.org/ontology/dc/terms/> 
+
+SELECT ?s ?ttl ?lr ?lrttl
+{
+    #?s ?p ?o
+   ?s a mo:LearningPath .
+   ?s dcterms:title ?ttl .
+     ?stp mo:belongsToLearningPath ?s .
+     ?stp mo:hasEducationalResource ?lr .
+     ?lr dcterms:title ?lrttl.
+}
