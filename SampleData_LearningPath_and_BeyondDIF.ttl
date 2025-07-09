@@ -1,0 +1,149 @@
+# https://sync.academiccloud.de/index.php/apps/onlyoffice/s/xDNUtSusHDIL0Ep?fileId=646818514
+
+@prefix ex: <http://example.com/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix mo: <https://purl.org/ontology/modalia#> .
+@prefix schema: <https://schema.org/> .
+@prefix dcterms: <https://purl.org/ontology/dc/terms/> .
+@prefix ec: <https://github.com/tibonto/educor#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix m4i: <http://w3id.org/nfdi4ing/metadata4ing#> .
+@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
+
+ex:LP1 a mo:LearningPath ;
+ dcterms:title "RDM for PhD Candidate in Chemistry" ;
+ dcterms:description "Learn important info for RDM in chemistry for PhD students, including DMP" ;
+ schema:author [ 
+           a schema:Person ;
+		   schema:familyName "Desouki"
+		   ] ;
+ mo:studyPlan "Two hours per week for five weeks" ;
+ mo:hasLearningObjective ex:LO1 .
+ 
+ ex:LP1Step1 a mo:LearningPathStep ;
+   mo:notesforlearner "Slides 19 to 28";
+   mo:hasOrder 1;
+   mo:belongsToLearningPath ex:LP1 ;
+   mo:hasEducationalResource <https://id.dalia.education/learning-resource/f111d6c4-d316-4161-8b06-0ec7f4181ce6> . 
+   # e.g. DMP
+   
+   
+ ex:LP1Step2 a mo:LearningPathStep ;
+   mo:notesforlearner "From min 30 to the end";
+   mo:hasOrder 2;
+   mo:belongsToLearningPath ex:LP1 ;
+   mo:hasEducationalResource <https://id.dalia.education/learning-resource/1bcd8f00-e2a6-4427-9e75-cb897d67d204> . 
+   # e.g General Concepts and Focus on ELN
+   
+ ex:LO1 a mo:LearningObjective ;
+    rdfs:label "01_006_0095" ;
+    dcterms:description "Lernende können die Relevanz eines Datenmanagementplans diskutieren."@de ;
+    dcterms:description "Learners are able to discuss the relevance of a data management plan."@en .
+	
+   <https://id.dalia.education/learning-resource/1bcd8f00-e2a6-4427-9e75-cb897d67d204> a ec:EducationalResource ;
+    dcterms:title "NFDI4Chem Web Seminars - 01. General Concepts and Focus on Electronic Laboratory Notebooks (ELN)" ;
+    schema:url <https://www.youtube.com/watch?v=FpWKDVbAmnA> ;
+	mo:covers ex:KTopic1 ;
+	mo:belongsToPhase mo:PlanPhase .
+	
+	<https://id.dalia.education/learning-resource/f111d6c4-d316-4161-8b06-0ec7f4181ce6> a ec:EducationalResource ;
+    dcterms:title "Overview of research data management in chemistry" ;
+    schema:url <https://doi.org/10.5281/zenodo.7767144> .
+	
+ex:KTopic1 a mo:RDMTopic ;
+   dcterms:title "data management plan"@en ;
+   rdfs:label "01_006" ;
+   mo:belongsToCluster ex:Cluster1 .
+   
+ex:KTopic3 a mo:RDMTopic ;
+   dcterms:title "data documentation"@en ;
+   rdfs:label "03_001" ;
+   mo:belongsToCluster ex:Cluster3 .
+
+ex:Cluster1 a mo:RDMSubjectCluster ;
+  dcterms:title "fundamental and comprehensive concepts" ;
+  rdfs:label "001" .
+  
+ex:Cluster3 a mo:RDMSubjectCluster ;
+  dcterms:title "documentation and metadata" ;
+  rdfs:label "003" .
+  
+ ex:KTopic2 a mo:RDMTopic ;
+   dcterms:title "research data management with ELN"@en ;
+   fabio:hasDiscipline <https://w3id.org/kim/hochschulfaechersystematik/n40> .
+ 
+### Beyond DIF datatype properties [train-the-trainer-concept-on-research-data-management]
+<https://id.dalia.education/learning-resource/a878c2d1-bf03-4045-81b4-baf2078be592>  a ec:EducationalResource ;
+          mo:hasDOI "10.5281/zenodo.13927614" ;
+		  schema:timeRequired "PT3H30M"^^xsd:duration ;
+        #  mo:citation "Biernacka, K., Castillo Upiachihua, C. B., Dockhorn, R., Engelhardt, C., Grunwald-Eckhardt, L., Helbig, K., Jacob, J., Kalová, T., Karsten, A., Meier, K., Mühlichen, A., Neumann, J., Petersen, B., Scherreiks, P., Slowig, B., Trautwein-Bruns, U., Wilbrandt, J., & Wiljes, C. (2024). Train-the-Trainer Concept on Research Data Management (5.1) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.13927614" ;
+		  schema:image <https://www.dataversity.net/wp-content/uploads/2023/03/pg_datamanagementskills_march-23-300x224.jpg> ;
+		  bf:contribution ex:Contrib1 .
+		  
+<https://id.dalia.education/learning-resource/d350bbb7-e949-4589-9a5f-a787859963e1> a ec:EducationalResource ;	
+			 dcterms:title "Workshop zu Forschungsdatenmanagement für die BMBF-Forschungsinitiative zum Erhalt der Artenvielfalt (FEdA)" ;
+			 schema:url <https://doi.org/10.5281/zenodo.6579410> ;
+			 mo:covers ex:KTopic3 ;
+			 mo:teachesSkill ex:Skill2 .
+	  
+		  
+#Contributor contactPerson 
+ex:Contrib1 a bf:Contribution ;
+    bf:role m4i:ContactPerson ;
+	bf:agent [	a mo:Contributor;
+				m4i:orcidId "https://orcid.org/0000-0002-6363-0064" ;
+				schema:familyName "Biernacka" ;
+				schema:givenName "Katarzyna" ] .
+
+#Job
+ex:DataStewardJob a mo:Job ;
+    rdfs:label "Data Steward Job"@en ;
+	mo:industry "Research & Academia" ;
+	schema:title "Data Steward" .
+	
+#Skill
+ex:Skill1 a mo:RDMSkill ;
+          dcterms:title "Data lifecycle management"@en ;
+		  mo:requiresKnowledge ex:KTopic1 ;
+		  mo:essentialFor ex:DataStewardJob .
+
+ex:Skill2 a mo:RDMSkill ;
+          dcterms:title "Data Documentation"@en ;
+		  mo:requiresKnowledge ex:KTopic3 ;
+		  mo:essentialFor ex:DataStewardJob .
+
+ex:user1 a mo:User ;
+         mo:educationalLevel ex:eduLvlBsc ;
+		 schema:email "abc@gmail.com" ;
+		 schema:familyName "Muster" ;
+		 schema:givenName "Max" ;
+		 m4i:orcidId "https://orcid.org/0000-1111-2222-3333" ;
+		 mo:hasRole mo:LearnerRole ;
+		 mo:hasLearningPreference mo:VARKVisual ;
+		 mo:definesLearningPath ex:LP1 .
+		 
+
+ex:eduLvlBsc a mo:EducationalLevel ;
+        rdfs:label "Bachelor’s degree (U)"@en .
+		
+# Social
+ex:user1 mo:userLikes <https://id.dalia.education/learning-resource/f111d6c4-d316-4161-8b06-0ec7f4181ce6> .
+ex:user1 mo:userViews <https://id.dalia.education/learning-resource/f111d6c4-d316-4161-8b06-0ec7f4181ce6> .
+ex:user1 mo:userBookmarks <https://id.dalia.education/learning-resource/f111d6c4-d316-4161-8b06-0ec7f4181ce6> .
+
+ex:comment1 a mo:UserComment ;
+    mo:commentID "CM123" ;
+	mo:commentOER <https://id.dalia.education/learning-resource/f111d6c4-d316-4161-8b06-0ec7f4181ce6> ;
+	mo:commentText "A great resource, thanks" ;
+	mo:commentUserID ex:user1 ;
+	mo:commentDate "2025-07-06"^^xsd:date .
+
+# Links of the EducationalResources
+#1. <a878c2d1-bf03-4045-81b4-baf2078be592>  	
+#    https://search.dalia.education/items/a878c2d1-bf03-4045-81b4-baf2078be592/train-the-trainer-concept-on-research-data-management
+#2. <f111d6c4-d316-4161-8b06-0ec7f4181ce6>
+# https://search.dalia.education/items/f111d6c4-d316-4161-8b06-0ec7f4181ce6/overview-of-research-data-management-in-chemistry
+#3. <1bcd8f00-e2a6-4427-9e75-cb897d67d204>
+# https://search.dalia.education/items/1bcd8f00-e2a6-4427-9e75-cb897d67d204/nfdi4chem-web-seminars---01.-general-concepts-and-focus-on-electronic-laboratory-notebooks-(eln)

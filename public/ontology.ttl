@@ -18,7 +18,7 @@ The ontology is used for making a knowledge graph as a backend to platform for t
 The ontology is developed in OWL in Protege 5.5.0."""@en ;
                                       <http://purl.org/dc/elements/1.1/title> "MoDALIA Ontology"@en ;
                                       <http://purl.org/dc/terms/abstract> "The aim of DALIA project is to build a platform for learning material for Research Data Management (RDM) and Data Science. The platform is based on a knowledge graph. We introduce MoDalia, the base ontology of DALIA knowledge graph. Modalia inherits some modules from EduCOR. It includes also modelling of micro -credentials and certificates."@en ;
-                                      <http://purl.org/dc/terms/modified> "2025-06-23" ;
+                                      <http://purl.org/dc/terms/modified> "2025-07-09" ;
                                       <http://purl.org/dc/terms/publisher> "ULB TUDa – University and State Library, Technical University, Darmstadt, Germany" ;
                                       rdfs:comment """MoDALIA reuses elements from the following ontologies:
 - DCTERMS = Dublin Core Terms  
@@ -198,7 +198,6 @@ xsd:duration rdf:type rdfs:Datatype .
                                     rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
                                     rdfs:range owl:Thing ;
                                     rdfs:label "relation"@en ;
-                                    rdfs:seeAlso "http://purl.org/dc/terms/relation" ;
                                     <http://www.w3.org/2004/02/skos/core#definition> "The relation(s) to other resources.  It is required to identify the related resource by means of a URI."@en .
 
 
@@ -232,7 +231,7 @@ xsd:duration rdf:type rdfs:Datatype .
 
 ###  https://github.com/tibonto/educor#consistsOfKnowledge
 <https://github.com/tibonto/educor#consistsOfKnowledge> rdf:type owl:ObjectProperty ;
-                                                        rdfs:domain <https://github.com/tibonto/educor#LearningPath> ;
+                                                        rdfs:domain :LearningPath ;
                                                         rdfs:range <https://github.com/tibonto/educor#KnowledgeTopic> ;
                                                         rdfs:label "consistsOfKnowledge" .
 
@@ -240,7 +239,7 @@ xsd:duration rdf:type rdfs:Datatype .
 ###  https://github.com/tibonto/educor#generatedFrom
 <https://github.com/tibonto/educor#generatedFrom> rdf:type owl:ObjectProperty ;
                                                   rdfs:domain <https://github.com/tibonto/educor#Recommendation> ;
-                                                  rdfs:range :UserProfile ;
+                                                  rdfs:range :User ;
                                                   rdfs:label "generatedFrom"@en .
 
 
@@ -250,6 +249,12 @@ xsd:duration rdf:type rdfs:Datatype .
                   rdfs:range :RDMSubjectCluster ;
                   rdfs:comment "relates RDM Topic to RDM Topic Cluster, similar to LZM"@en ;
                   rdfs:label "belongsToCluster"@en .
+
+
+###  https://purl.org/ontology/modalia#belongsToLearningPath
+:belongsToLearningPath rdf:type owl:ObjectProperty ;
+                       rdfs:domain :LearningPathStep ;
+                       rdfs:range :LearningPath .
 
 
 ###  https://purl.org/ontology/modalia#belongsToPhase
@@ -326,10 +331,10 @@ xsd:duration rdf:type rdfs:Datatype .
 :definesLearningPath rdf:type owl:ObjectProperty ;
                      rdfs:domain [ rdf:type owl:Class ;
                                    owl:unionOf ( <https://github.com/tibonto/educor#Recommendation>
-                                                 :UserProfile
+                                                 :User
                                                )
                                  ] ;
-                     rdfs:range <https://github.com/tibonto/educor#LearningPath> ;
+                     rdfs:range :LearningPath ;
                      rdfs:label "definesLearningPath" .
 
 
@@ -357,13 +362,6 @@ xsd:duration rdf:type rdfs:Datatype .
               rdfs:label "essentialFor"@en .
 
 
-###  https://purl.org/ontology/modalia#generateUserLogs
-:generateUserLogs rdf:type owl:ObjectProperty ;
-                  rdfs:domain :User ;
-                  rdfs:range <https://github.com/tibonto/educor#UserLogs> ;
-                  rdfs:label "generateUserLogs" .
-
-
 ###  https://purl.org/ontology/modalia#givesProficiencyLevel
 :givesProficiencyLevel rdf:type owl:ObjectProperty ;
                        rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
@@ -375,16 +373,24 @@ xsd:duration rdf:type rdfs:Datatype .
 :hasLearningObjective rdf:type owl:ObjectProperty ;
                       rdfs:domain [ rdf:type owl:Class ;
                                     owl:unionOf ( <https://github.com/tibonto/educor#EducationalResource>
-                                                  <https://github.com/tibonto/educor#LearningPath>
+                                                  :LearningPath
                                                 )
                                   ] ;
                       rdfs:range :LearningObjective ;
                       rdfs:label "hasLearningObjective"@en .
 
 
+###  https://purl.org/ontology/modalia#hasLearningPreference
+:hasLearningPreference rdf:type owl:ObjectProperty ;
+                       rdfs:domain :User ;
+                       rdfs:range <https://github.com/tibonto/educor#LearningPreference> ;
+                       rdfs:label "hasLearningPreference"@en ;
+                       <http://www.w3.org/2004/02/skos/core#definition> "The preferenced learning class from VARK"@en .
+
+
 ###  https://purl.org/ontology/modalia#hasLearningResource
 :hasLearningResource rdf:type owl:ObjectProperty ;
-                     rdfs:domain <https://github.com/tibonto/educor#LearningPath> ;
+                     rdfs:domain :LearningPath ;
                      rdfs:range <https://github.com/tibonto/educor#EducationalResource> ;
                      rdfs:label "hasLearningResource" .
 
@@ -412,13 +418,6 @@ xsd:duration rdf:type rdfs:Datatype .
           rdfs:range :User ;
           rdfs:isDefinedBy "defines the user who owns a specific community. There is only one owner to a specific community"@en ;
           rdfs:label "hasOwner"@en .
-
-
-###  https://purl.org/ontology/modalia#hasProfile
-:hasProfile rdf:type owl:ObjectProperty ;
-            rdfs:domain :User ;
-            rdfs:range :UserProfile ;
-            rdfs:label "hasProfile" .
 
 
 ###  https://purl.org/ontology/modalia#hasQuality
@@ -522,8 +521,7 @@ xsd:duration rdf:type rdfs:Datatype .
 :isNewVersionOf rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf <http://purl.org/dc/terms/relation> ;
                 owl:inverseOf :isPreviousVersionOf ;
-                rdf:type owl:TransitiveProperty ,
-                         owl:IrreflexiveProperty ;
+                rdf:type owl:IrreflexiveProperty ;
                 rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
                 rdfs:range <https://github.com/tibonto/educor#EducationalResource> ;
                 rdfs:label "isNewVersionOf"@en ;
@@ -603,17 +601,6 @@ xsd:duration rdf:type rdfs:Datatype .
                                  )
                    ] ;
         rdfs:label "solves"@en .
-
-
-###  https://purl.org/ontology/modalia#storedIn
-:storedIn rdf:type owl:ObjectProperty ;
-          rdfs:domain [ rdf:type owl:Class ;
-                        owl:unionOf ( <https://github.com/tibonto/educor#LearningPreference>
-                                      :LearningObjective
-                                    )
-                      ] ;
-          rdfs:range :UserProfile ;
-          rdfs:label "storedIn"@en .
 
 
 ###  https://purl.org/ontology/modalia#teachesSkill
@@ -863,10 +850,23 @@ xsd:duration rdf:type rdfs:Datatype .
 
 ###  https://purl.org/ontology/modalia#hasOrder
 :hasOrder rdf:type owl:DatatypeProperty ;
-          rdfs:domain :Proficiency ;
+          rdfs:domain [ rdf:type owl:Class ;
+                        owl:unionOf ( :LearningPathStep
+                                      :Proficiency
+                                    )
+                      ] ;
           rdfs:range xsd:integer ;
           rdfs:isDefinedBy "Order of proficiency level, starting from 1 for Novice and increasing by proficiency"@en ;
           rdfs:label "hasOrder"@en .
+
+
+###  https://purl.org/ontology/modalia#industry
+:industry rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty ;
+          rdfs:domain :Job ;
+          rdfs:range xsd:string ;
+          <http://www.w3.org/2004/02/skos/core#definition> "The industry of a job"@en ;
+          <http://www.w3.org/2004/02/skos/core#example> "Research & Academia" .
 
 
 ###  https://purl.org/ontology/modalia#likesCount
@@ -876,9 +876,19 @@ xsd:duration rdf:type rdfs:Datatype .
             rdfs:label "likesCount"@en .
 
 
+###  https://purl.org/ontology/modalia#notesForLearner
+:notesForLearner rdf:type owl:DatatypeProperty ;
+                 rdfs:domain [ rdf:type owl:Class ;
+                               owl:unionOf ( <https://github.com/tibonto/educor#EducationalResource>
+                                             :LearningPathStep
+                                           )
+                             ] ;
+                 rdfs:range xsd:string .
+
+
 ###  https://purl.org/ontology/modalia#studyPlan
 :studyPlan rdf:type owl:DatatypeProperty ;
-           rdfs:domain <https://github.com/tibonto/educor#LearningPath> ;
+           rdfs:domain :LearningPath ;
            rdfs:range rdf:langString ;
            rdfs:label "studyPlan"@en .
 
@@ -998,6 +1008,13 @@ xsd:duration rdf:type rdfs:Datatype .
                                   <http://www.w3.org/2004/02/skos/core#example> "\"PT7M11S\"^^xsd:duration" .
 
 
+###  https://schema.org/title
+<https://schema.org/title> rdf:type owl:DatatypeProperty ;
+                           rdfs:domain :Job ;
+                           rdfs:range xsd:string ;
+                           rdfs:label "Job title"@en .
+
+
 ###  https://schema.org/url
 <https://schema.org/url> rdf:type owl:DatatypeProperty ;
                          rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
@@ -1112,14 +1129,6 @@ rdf:List rdf:type owl:Class .
                                                    <http://www.w3.org/2004/02/skos/core#example> "A knowledge topic can be the “Quadratic equations” in the domain of Mathematics Algebra"@en .
 
 
-###  https://github.com/tibonto/educor#LearningPath
-<https://github.com/tibonto/educor#LearningPath> rdf:type owl:Class ;
-                                                 rdfs:comment "Often here it is mapped the background knowledge too."@en ;
-                                                 rdfs:label "LearningPath"@en ;
-                                                 <http://www.w3.org/2004/02/skos/core#definition> "The learning path consists of learner's previously followed topics and future ones in order to reach to the learning goal. It is an ordered list of recommendations, which is personalized to the needs of a certain user and target the accomplishment of a complex skill. It has as a final point a learning goal."@en ;
-                                                 <http://www.w3.org/2004/02/skos/core#example> "\"Hello world in python\", \"Comments in python\", \"Strings in python\""@en .
-
-
 ###  https://github.com/tibonto/educor#LearningPreference
 <https://github.com/tibonto/educor#LearningPreference> rdf:type owl:Class ;
                                                        rdfs:comment "It is based on the theory which identifies four learning styles (visual, auditory, reading, and kinesthetic)."@en ;
@@ -1134,12 +1143,6 @@ rdf:List rdf:type owl:Class .
                                                    rdfs:isDefinedBy "The output of the recommendation system algorithm. The system that reads user profile, content information, ratings and any available rules, in order to generate a meaningful recommendation."@en ;
                                                    rdfs:label "Recommendation"@en ;
                                                    <http://www.w3.org/2004/02/skos/core#example> "The recommendation is \"Quadratic Equation\""@en .
-
-
-###  https://github.com/tibonto/educor#UserLogs
-<https://github.com/tibonto/educor#UserLogs> rdf:type owl:Class ;
-                                             rdfs:isDefinedBy "The user's history activity in the system"@en ;
-                                             rdfs:label "UserLogs"@en .
 
 
 ###  https://purl.org/ontology/modalia#AnalyzePhase
@@ -1321,6 +1324,18 @@ rdf:List rdf:type owl:Class .
                    rdfs:label "LearningObjective"@en ;
                    rdfs:seeAlso "https://github.com/tibonto/educor#LearningGoal" ;
                    <http://www.w3.org/2004/02/skos/core#definition> "Learning Objective as defined in learning objective matrix (LZM)"@en .
+
+
+###  https://purl.org/ontology/modalia#LearningPath
+:LearningPath rdf:type owl:Class ;
+              rdfs:label "LearningPath"@en ;
+              <http://www.w3.org/2004/02/skos/core#definition> "The learning path consists of set of learning units (Educational Resources) in a specified order  to reach a learning objective."@en ;
+              <http://www.w3.org/2004/02/skos/core#example> "\"Hello world in python\", \"Comments in python\", \"Strings in python\""@en .
+
+
+###  https://purl.org/ontology/modalia#LearningPathStep
+:LearningPathStep rdf:type owl:Class ;
+                  <http://www.w3.org/2004/02/skos/core#definition> "One step of a learning path, it has an order and one educational resource. Optionally a learning path step can have a note for learner."@en .
 
 
 ###  https://purl.org/ontology/modalia#LearningResourceType
@@ -1529,11 +1544,6 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 ###  https://purl.org/ontology/modalia#UserComment
 :UserComment rdf:type owl:Class ;
              <http://www.w3.org/2004/02/skos/core#definition> "Comment added by a user on an educational resource"@en .
-
-
-###  https://purl.org/ontology/modalia#UserProfile
-:UserProfile rdf:type owl:Class ;
-             rdfs:label "UserProfile"@en .
 
 
 ###  https://purl.org/ontology/modalia#UserRole
