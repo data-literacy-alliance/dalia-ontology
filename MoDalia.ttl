@@ -26,7 +26,7 @@ The ontology is used for making a knowledge graph as a backend to platform for t
 The ontology is developed in OWL in Protege 5.5.0."""@en ;
                                       dc:title "MoDALIA Ontology"@en ;
                                       dcterms:abstract "The aim of DALIA project is to build a platform for learning material for Research Data Management (RDM) and Data Science. The platform is based on a knowledge graph. We introduce MoDalia, the base ontology of DALIA knowledge graph. Modalia inherits some modules from EduCOR. It includes also modelling of micro -credentials and certificates."@en ;
-                                      dcterms:modified "2025-06-23" ;
+                                      dcterms:modified "2025-07-09" ;
                                       dcterms:publisher "ULB TUDa – University and State Library, Technical University, Darmstadt, Germany" ;
                                       rdfs:comment """MoDALIA reuses elements from the following ontologies:
 - DCTERMS = Dublin Core Terms  
@@ -206,7 +206,6 @@ dcterms:relation rdf:type owl:ObjectProperty ;
                  rdfs:domain ec:EducationalResource ;
                  rdfs:range owl:Thing ;
                  rdfs:label "relation"@en ;
-                 rdfs:seeAlso "http://purl.org/dc/terms/relation" ;
                  <http://www.w3.org/2004/02/skos/core#definition> "The relation(s) to other resources.  It is required to identify the related resource by means of a URI."@en .
 
 
@@ -248,7 +247,7 @@ ec:consistsOfKnowledge rdf:type owl:ObjectProperty ;
 ###  https://github.com/tibonto/educor#generatedFrom
 ec:generatedFrom rdf:type owl:ObjectProperty ;
                  rdfs:domain ec:Recommendation ;
-                 rdfs:range :UserProfile ;
+                 rdfs:range :User ;
                  rdfs:label "generatedFrom"@en .
 
 
@@ -340,7 +339,7 @@ ec:generatedFrom rdf:type owl:ObjectProperty ;
 :definesLearningPath rdf:type owl:ObjectProperty ;
                      rdfs:domain [ rdf:type owl:Class ;
                                    owl:unionOf ( ec:Recommendation
-                                                 :UserProfile
+                                                 :User
                                                )
                                  ] ;
                      rdfs:range :LearningPath ;
@@ -371,13 +370,6 @@ ec:generatedFrom rdf:type owl:ObjectProperty ;
               rdfs:label "essentialFor"@en .
 
 
-###  https://purl.org/ontology/modalia#generateUserLogs
-:generateUserLogs rdf:type owl:ObjectProperty ;
-                  rdfs:domain :User ;
-                  rdfs:range ec:UserLogs ;
-                  rdfs:label "generateUserLogs" .
-
-
 ###  https://purl.org/ontology/modalia#givesProficiencyLevel
 :givesProficiencyLevel rdf:type owl:ObjectProperty ;
                        rdfs:domain ec:EducationalResource ;
@@ -394,6 +386,14 @@ ec:generatedFrom rdf:type owl:ObjectProperty ;
                                   ] ;
                       rdfs:range :LearningObjective ;
                       rdfs:label "hasLearningObjective"@en .
+
+
+###  https://purl.org/ontology/modalia#hasLearningPreference
+:hasLearningPreference rdf:type owl:ObjectProperty ;
+                       rdfs:domain :User ;
+                       rdfs:range ec:LearningPreference ;
+                       rdfs:label "hasLearningPreference"@en ;
+                       <http://www.w3.org/2004/02/skos/core#definition> "The preferenced learning class from VARK"@en .
 
 
 ###  https://purl.org/ontology/modalia#hasLearningResource
@@ -426,13 +426,6 @@ ec:generatedFrom rdf:type owl:ObjectProperty ;
           rdfs:range :User ;
           rdfs:isDefinedBy "defines the user who owns a specific community. There is only one owner to a specific community"@en ;
           rdfs:label "hasOwner"@en .
-
-
-###  https://purl.org/ontology/modalia#hasProfile
-:hasProfile rdf:type owl:ObjectProperty ;
-            rdfs:domain :User ;
-            rdfs:range :UserProfile ;
-            rdfs:label "hasProfile" .
 
 
 ###  https://purl.org/ontology/modalia#hasQuality
@@ -616,17 +609,6 @@ ec:generatedFrom rdf:type owl:ObjectProperty ;
                                  )
                    ] ;
         rdfs:label "solves"@en .
-
-
-###  https://purl.org/ontology/modalia#storedIn
-:storedIn rdf:type owl:ObjectProperty ;
-          rdfs:domain [ rdf:type owl:Class ;
-                        owl:unionOf ( ec:LearningPreference
-                                      :LearningObjective
-                                    )
-                      ] ;
-          rdfs:range :UserProfile ;
-          rdfs:label "storedIn"@en .
 
 
 ###  https://purl.org/ontology/modalia#teachesSkill
@@ -876,10 +858,23 @@ m4i:orcidId rdf:type owl:DatatypeProperty ;
 
 ###  https://purl.org/ontology/modalia#hasOrder
 :hasOrder rdf:type owl:DatatypeProperty ;
-          rdfs:domain :Proficiency ;
+          rdfs:domain [ rdf:type owl:Class ;
+                        owl:unionOf ( :LearningPathStep
+                                      :Proficiency
+                                    )
+                      ] ;
           rdfs:range xsd:integer ;
           rdfs:isDefinedBy "Order of proficiency level, starting from 1 for Novice and increasing by proficiency"@en ;
           rdfs:label "hasOrder"@en .
+
+
+###  https://purl.org/ontology/modalia#industry
+:industry rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty ;
+          rdfs:domain :Job ;
+          rdfs:range xsd:string ;
+          <http://www.w3.org/2004/02/skos/core#definition> "The industry of a job"@en ;
+          <http://www.w3.org/2004/02/skos/core#example> "Research & Academia" .
 
 
 ###  https://purl.org/ontology/modalia#likesCount
@@ -1021,6 +1016,13 @@ schema:timeRequired rdf:type owl:DatatypeProperty ;
                     <http://www.w3.org/2004/02/skos/core#example> "\"PT7M11S\"^^xsd:duration" .
 
 
+###  https://schema.org/title
+schema:title rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Job ;
+             rdfs:range xsd:string ;
+             rdfs:label "Job title"@en .
+
+
 ###  https://schema.org/url
 schema:url rdf:type owl:DatatypeProperty ;
            rdfs:domain ec:EducationalResource ;
@@ -1149,12 +1151,6 @@ ec:Recommendation rdf:type owl:Class ;
                   rdfs:isDefinedBy "The output of the recommendation system algorithm. The system that reads user profile, content information, ratings and any available rules, in order to generate a meaningful recommendation."@en ;
                   rdfs:label "Recommendation"@en ;
                   <http://www.w3.org/2004/02/skos/core#example> "The recommendation is \"Quadratic Equation\""@en .
-
-
-###  https://github.com/tibonto/educor#UserLogs
-ec:UserLogs rdf:type owl:Class ;
-            rdfs:isDefinedBy "The user's history activity in the system"@en ;
-            rdfs:label "UserLogs"@en .
 
 
 ###  https://purl.org/ontology/modalia#AnalyzePhase
@@ -1556,11 +1552,6 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 ###  https://purl.org/ontology/modalia#UserComment
 :UserComment rdf:type owl:Class ;
              <http://www.w3.org/2004/02/skos/core#definition> "Comment added by a user on an educational resource"@en .
-
-
-###  https://purl.org/ontology/modalia#UserProfile
-:UserProfile rdf:type owl:Class ;
-             rdfs:label "UserProfile"@en .
 
 
 ###  https://purl.org/ontology/modalia#UserRole

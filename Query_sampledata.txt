@@ -3,12 +3,51 @@
 prefix mo: <https://purl.org/ontology/modalia#>
 prefix dcterms: <https://purl.org/ontology/dc/terms/> 
 
-SELECT ?s ?ttl ?lr ?lrttl
+SELECT ?s ?ttl ?ordr ?lr ?lrttl
 {
     #?s ?p ?o
    ?s a mo:LearningPath .
    ?s dcterms:title ?ttl .
      ?stp mo:belongsToLearningPath ?s .
      ?stp mo:hasEducationalResource ?lr .
+	 ?stp mo:hasOrder ?ordr .
      ?lr dcterms:title ?lrttl.
 }
+order by ?ordr 
+
+
+#============= Contributors:
+prefix mo: <https://purl.org/ontology/modalia#>
+prefix dcterms: <https://purl.org/ontology/dc/terms/> 
+prefix ec: <https://github.com/tibonto/educor#> 
+prefix bf: <http://id.loc.gov/ontologies/bibframe/>
+prefix schema: <https://schema.org/>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?givenName ?familyName ?role
+{
+    ?s a ec:EducationalResource .
+    ?s bf:contribution ?ctb .
+  ?ctb bf:agent ?a .
+?a schema:familyName ?familyName .
+?a schema:givenName ?givenName .
+?ctb bf:role ?role .
+
+}
+
+#========== OER for a Skill
+prefix mo: <https://purl.org/ontology/modalia#>
+prefix dcterms: <https://purl.org/ontology/dc/terms/> 
+prefix ec: <https://github.com/tibonto/educor#> 
+prefix bf: <http://id.loc.gov/ontologies/bibframe/>
+prefix schema: <https://schema.org/>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?s ?oertitle ?skilltitle
+{
+    ?s mo:teachesSkill ?skill .
+	?s a ec:EducationalResource .
+    ?s dcterms:title ?oertitle .
+	?skill dcterms:title ?skilltitle
+}
+#===========================
