@@ -26,6 +26,7 @@ The ontology is used for making a knowledge graph as a backend to platform for t
 The ontology is developed in OWL in Protege 5.5.0."""@en ;
                                       dc:title "MoDALIA Ontology"@en ;
                                       dcterms:abstract "The aim of DALIA project is to build a platform for learning material for Research Data Management (RDM) and Data Science. The platform is based on a knowledge graph. We introduce MoDalia, the base ontology of DALIA knowledge graph. Modalia inherits some modules from EduCOR. It includes also modelling of micro -credentials and certificates."@en ;
+                                      dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
                                       dcterms:modified "2025-07-09" ;
                                       dcterms:publisher "ULB TUDa – University and State Library, Technical University, Darmstadt, Germany" ;
                                       rdfs:comment """MoDALIA reuses elements from the following ontologies:
@@ -61,6 +62,14 @@ dc:title rdf:type owl:AnnotationProperty .
 
 ###  http://purl.org/dc/terms/abstract
 dcterms:abstract rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+dcterms:license rdf:type owl:AnnotationProperty ;
+                rdfs:label "license"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "Property identifying the license of an Educational Resource"@en ;
+                rdfs:range :License ;
+                rdfs:domain ec:EducationalResource .
 
 
 ###  http://purl.org/dc/terms/modified
@@ -182,14 +191,6 @@ dcterms:language rdf:type owl:ObjectProperty ;
                  rdfs:range <http://lexvo.org/ontology#Language> ;
                  rdfs:comment "language of resource"@en ;
                  rdfs:label "language"@en .
-
-
-###  http://purl.org/dc/terms/license
-dcterms:license rdf:type owl:ObjectProperty ;
-                rdfs:domain ec:EducationalResource ;
-                rdfs:range :License ;
-                rdfs:label "license"@en ;
-                <http://www.w3.org/2004/02/skos/core#definition> "Property identifying the license of an Educational Resource"@en .
 
 
 ###  http://purl.org/dc/terms/references
@@ -1755,7 +1756,8 @@ m4i:Sponsor rdf:type owl:NamedIndividual ,
 
 
 ###  https://creativecommons.org/licenses/by/4.0/
-<https://creativecommons.org/licenses/by/4.0/> rdf:type owl:NamedIndividual .
+<https://creativecommons.org/licenses/by/4.0/> rdf:type owl:NamedIndividual ;
+                                               rdfs:label "CC-BY-4.0" .
 
 
 ###  https://purl.org/ontology/modalia#
