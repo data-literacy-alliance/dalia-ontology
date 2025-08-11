@@ -16,13 +16,13 @@
         <dc:contributor>Dr. Marc Fuhrmans (https://orcid.org/0000-0002-9826-018X), Technical University of Darmstadt (https://ror.org/05n911h24, https://isni.org/isni/0000000109401669)</dc:contributor>
         <dc:contributor>Dr. Petra C. Steiner (https://orcid.org/0000-0001-8997-2620), Technical University of Darmstadt (https://ror.org/05n911h24, https://isni.org/isni/0000000109401669)</dc:contributor>
         <dc:contributor>Frank Lange (https://orcid.org/0000-0002-9346-6031), RWTH Aachen University (https://ror.org/04xfq0f34, https://isni.org/isni/000000010728696X)</dc:contributor>
-        <dc:creator>BMBF DALIA project</dc:creator>
+        <dc:creator>BMFTR DALIA project</dc:creator>
         <dc:description xml:lang="en">MoDALIA: An Ontology for Educational Material in Research Data Management (RDM) and Data Science.
 The ontology is used for making a knowledge graph as a backend to platform for teaching, personal learning, and recommendation.
 The ontology is developed in OWL in Protege 5.5.0.</dc:description>
         <dc:title xml:lang="en">MoDALIA Ontology</dc:title>
-        <terms:abstract xml:lang="en">The aim of DALIA project is to build a platform for learning material for Research Data Management (RDM) and Data Science. The platform is based on a knowledge graph. We introduce MoDalia, the base ontology of DALIA knowledge graph. Modalia inherits some modules from EduCOR. It includes also modelling of micro -credentials and certificates.</terms:abstract>
-        <terms:modified>2025-07-09</terms:modified>
+        <terms:abstract xml:lang="en">The aim of DALIA project is to build a platform for learning material for Research Data Management (RDM) and Data Science. The platform is based on a knowledge graph. We introduce MoDalia, the base ontology of DALIA knowledge graph. Modalia inherits some modules from EduCOR.</terms:abstract>
+        <terms:modified xml:lang="en">2025-08-11</terms:modified>
         <terms:publisher>ULB TUDa – University and State Library, Technical University, Darmstadt, Germany</terms:publisher>
         <rdfs:comment xml:lang="en">MoDALIA reuses elements from the following ontologies:
 - DCTERMS = Dublin Core Terms  
@@ -1632,6 +1632,40 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/OCCO_25401100 -->
+
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OCCO_25401100">
+        <rdfs:subClassOf rdf:resource="https://purl.org/ontology/modalia#TargetGroup"/>
+        <rdfs:isDefinedBy xml:lang="en">A person who appraises, edits, and directs safekeeping of permanent records and historically valuable documents. Participate in research activities based on archival materials.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Archivist</rdfs:label>
+        <skos:prefLabel xml:lang="en">Archivist</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OCCO_25402200 -->
+
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OCCO_25402200">
+        <rdfs:subClassOf rdf:resource="https://purl.org/ontology/modalia#TargetGroup"/>
+        <rdfs:label xml:lang="en">Librarian</rdfs:label>
+        <skos:prefLabel xml:lang="en">Librarian</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/T4FS_0000178 -->
+
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/T4FS_0000178">
+        <rdfs:subClassOf rdf:resource="https://purl.org/ontology/modalia#TargetGroup"/>
+        <rdfs:label xml:lang="en">Data Steward</rdfs:label>
+        <skos:prefLabel xml:lang="en">Data Steward</skos:prefLabel>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/ontology/bibo/Article -->
 
 
@@ -1951,17 +1985,6 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
     
 
 
-    <!-- https://purl.org/ontology/modalia#DataSteward -->
-
-
-    <owl:Class rdf:about="https://purl.org/ontology/modalia#DataSteward">
-        <rdfs:subClassOf rdf:resource="https://purl.org/ontology/modalia#TargetGroup"/>
-        <rdfs:label xml:lang="en">Data Steward</rdfs:label>
-        <skos:prefLabel xml:lang="en">Data Steward</skos:prefLabel>
-    </owl:Class>
-    
-
-
     <!-- https://purl.org/ontology/modalia#DescribePhase -->
 
 
@@ -2062,7 +2085,7 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
 
     <owl:Class rdf:about="https://purl.org/ontology/modalia#LearningPath">
         <rdfs:label xml:lang="en">LearningPath</rdfs:label>
-        <skos:definition xml:lang="en">The learning path consists of set of learning units (Educational Resources) in a specified order  to reach a learning objective.</skos:definition>
+        <skos:definition xml:lang="en">The learning path consists of a set of learning units (Educational Resources) in a specified order  to reach a learning objective.</skos:definition>
         <skos:example xml:lang="en">&quot;Hello world in python&quot;, &quot;Comments in python&quot;, &quot;Strings in python&quot;</skos:example>
     </owl:Class>
     
@@ -2139,6 +2162,17 @@ The ontology is developed in OWL in Protege 5.5.0.</dc:description>
         <rdfs:label xml:lang="en">Multipart</rdfs:label>
         <skos:definition xml:lang="en">If the resource consists of more than one item with different DOIs, the MediaType is &quot;multipart&quot; and the relations are provided in the field &quot;RelatedWork&quot;.</skos:definition>
         <skos:prefLabel xml:lang="en">Multipart</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/ontology/modalia#MuseumProfessional -->
+
+
+    <owl:Class rdf:about="https://purl.org/ontology/modalia#MuseumProfessional">
+        <rdfs:subClassOf rdf:resource="https://purl.org/ontology/modalia#TargetGroup"/>
+        <rdfs:label xml:lang="en">MuseumProfessional</rdfs:label>
+        <skos:prefLabel xml:lang="en">Museum Professional</skos:prefLabel>
     </owl:Class>
     
 
@@ -2339,12 +2373,12 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
     
 
 
-    <!-- https://purl.org/ontology/modalia#TeacherHighEducation -->
+    <!-- https://purl.org/ontology/modalia#TeacherHigherEducation -->
 
 
-    <owl:Class rdf:about="https://purl.org/ontology/modalia#TeacherHighEducation">
+    <owl:Class rdf:about="https://purl.org/ontology/modalia#TeacherHigherEducation">
         <rdfs:subClassOf rdf:resource="https://purl.org/ontology/modalia#TargetGroup"/>
-        <rdfs:label xml:lang="en">Teacher(High Education)</rdfs:label>
+        <rdfs:label xml:lang="en">Teacher(Higher Education)</rdfs:label>
         <skos:prefLabel xml:lang="en">Teacher (Higher Education)</skos:prefLabel>
     </owl:Class>
     

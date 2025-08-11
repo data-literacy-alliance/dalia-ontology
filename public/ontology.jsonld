@@ -596,6 +596,52 @@
     "@value" : "https://www.wikidata.org/wiki/Q315"
   } ]
 }, {
+  "@id" : "http://purl.obolibrary.org/obo/OCCO_25401100",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@language" : "en",
+    "@value" : "A person who appraises, edits, and directs safekeeping of permanent records and historically valuable documents. Participate in research activities based on archival materials."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Archivist"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://purl.org/ontology/modalia#TargetGroup"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Archivist"
+  } ]
+}, {
+  "@id" : "http://purl.obolibrary.org/obo/OCCO_25402200",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Librarian"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://purl.org/ontology/modalia#TargetGroup"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Librarian"
+  } ]
+}, {
+  "@id" : "http://purl.obolibrary.org/obo/T4FS_0000178",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Data Steward"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://purl.org/ontology/modalia#TargetGroup"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Data Steward"
+  } ]
+}, {
   "@id" : "http://purl.org/dc/elements/1.1/contributor",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -1279,7 +1325,7 @@
     "@value" : "Frank Lange (https://orcid.org/0000-0002-9346-6031), RWTH Aachen University (https://ror.org/04xfq0f34, https://isni.org/isni/000000010728696X)"
   } ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
-    "@value" : "BMBF DALIA project"
+    "@value" : "BMFTR DALIA project"
   } ],
   "http://purl.org/dc/elements/1.1/description" : [ {
     "@language" : "en",
@@ -1291,13 +1337,14 @@
   } ],
   "http://purl.org/dc/terms/abstract" : [ {
     "@language" : "en",
-    "@value" : "The aim of DALIA project is to build a platform for learning material for Research Data Management (RDM) and Data Science. The platform is based on a knowledge graph. We introduce MoDalia, the base ontology of DALIA knowledge graph. Modalia inherits some modules from EduCOR. It includes also modelling of micro -credentials and certificates."
+    "@value" : "The aim of DALIA project is to build a platform for learning material for Research Data Management (RDM) and Data Science. The platform is based on a knowledge graph. We introduce MoDalia, the base ontology of DALIA knowledge graph. Modalia inherits some modules from EduCOR."
   } ],
   "http://purl.org/dc/terms/license" : [ {
     "@id" : "https://creativecommons.org/licenses/by/4.0/"
   } ],
   "http://purl.org/dc/terms/modified" : [ {
-    "@value" : "2025-07-09"
+    "@language" : "en",
+    "@value" : "2025-08-11"
   } ],
   "http://purl.org/dc/terms/publisher" : [ {
     "@value" : "ULB TUDa – University and State Library, Technical University, Darmstadt, Germany"
@@ -1604,20 +1651,6 @@
     "@value" : "One of the eight known phases of data life cycle."
   } ]
 }, {
-  "@id" : "https://purl.org/ontology/modalia#DataSteward",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Data Steward"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://purl.org/ontology/modalia#TargetGroup"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
-    "@language" : "en",
-    "@value" : "Data Steward"
-  } ]
-}, {
   "@id" : "https://purl.org/ontology/modalia#DescribePhase",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -1762,7 +1795,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "The learning path consists of set of learning units (Educational Resources) in a specified order  to reach a learning objective."
+    "@value" : "The learning path consists of a set of learning units (Educational Resources) in a specified order  to reach a learning objective."
   } ],
   "http://www.w3.org/2004/02/skos/core#example" : [ {
     "@language" : "en",
@@ -1860,6 +1893,20 @@
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Multipart"
+  } ]
+}, {
+  "@id" : "https://purl.org/ontology/modalia#MuseumProfessional",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "MuseumProfessional"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://purl.org/ontology/modalia#TargetGroup"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Museum Professional"
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#Novice",
@@ -2150,11 +2197,11 @@
     "@value" : "The target group of the learning resource, e.g. students, data stewards, researchers, etc"
   } ]
 }, {
-  "@id" : "https://purl.org/ontology/modalia#TeacherHighEducation",
+  "@id" : "https://purl.org/ontology/modalia#TeacherHigherEducation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Teacher(High Education)"
+    "@value" : "Teacher(Higher Education)"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://purl.org/ontology/modalia#TargetGroup"

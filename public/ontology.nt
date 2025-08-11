@@ -4,11 +4,11 @@
 <https://purl.org/ontology/modalia#> <http://purl.org/dc/elements/1.1/contributor> "Dr. Marc Fuhrmans (https://orcid.org/0000-0002-9826-018X), Technical University of Darmstadt (https://ror.org/05n911h24, https://isni.org/isni/0000000109401669)" .
 <https://purl.org/ontology/modalia#> <http://purl.org/dc/elements/1.1/contributor> "Dr. Petra C. Steiner (https://orcid.org/0000-0001-8997-2620), Technical University of Darmstadt (https://ror.org/05n911h24, https://isni.org/isni/0000000109401669)" .
 <https://purl.org/ontology/modalia#> <http://purl.org/dc/elements/1.1/contributor> "Frank Lange (https://orcid.org/0000-0002-9346-6031), RWTH Aachen University (https://ror.org/04xfq0f34, https://isni.org/isni/000000010728696X)" .
-<https://purl.org/ontology/modalia#> <http://purl.org/dc/elements/1.1/creator> "BMBF DALIA project" .
+<https://purl.org/ontology/modalia#> <http://purl.org/dc/elements/1.1/creator> "BMFTR DALIA project" .
 <https://purl.org/ontology/modalia#> <http://purl.org/dc/elements/1.1/description> "MoDALIA: An Ontology for Educational Material in Research Data Management (RDM) and Data Science.\r\nThe ontology is used for making a knowledge graph as a backend to platform for teaching, personal learning, and recommendation.\r\nThe ontology is developed in OWL in Protege 5.5.0."@en .
 <https://purl.org/ontology/modalia#> <http://purl.org/dc/elements/1.1/title> "MoDALIA Ontology"@en .
-<https://purl.org/ontology/modalia#> <http://purl.org/dc/terms/abstract> "The aim of DALIA project is to build a platform for learning material for Research Data Management (RDM) and Data Science. The platform is based on a knowledge graph. We introduce MoDalia, the base ontology of DALIA knowledge graph. Modalia inherits some modules from EduCOR. It includes also modelling of micro -credentials and certificates."@en .
-<https://purl.org/ontology/modalia#> <http://purl.org/dc/terms/modified> "2025-07-09" .
+<https://purl.org/ontology/modalia#> <http://purl.org/dc/terms/abstract> "The aim of DALIA project is to build a platform for learning material for Research Data Management (RDM) and Data Science. The platform is based on a knowledge graph. We introduce MoDalia, the base ontology of DALIA knowledge graph. Modalia inherits some modules from EduCOR."@en .
+<https://purl.org/ontology/modalia#> <http://purl.org/dc/terms/modified> "2025-08-11"@en .
 <https://purl.org/ontology/modalia#> <http://purl.org/dc/terms/publisher> "ULB TUDa – University and State Library, Technical University, Darmstadt, Germany" .
 <https://purl.org/ontology/modalia#> <http://www.w3.org/2000/01/rdf-schema#comment> "MoDALIA reuses elements from the following ontologies:\r\n- DCTERMS = Dublin Core Terms  \r\n- OWL = Web Ontology Language  \r\n- RDF = Resource Description Framework  \r\n- RDFS = RDF Schema  \r\n- SCHEMA = schema.org  \r\n- SKOS = Simple Knowledge Organization System  \r\n- EC = EduCOR"@en .
 <https://purl.org/ontology/modalia#> <http://www.w3.org/2000/01/rdf-schema#label> "MoDALIA" .
@@ -994,6 +994,25 @@ _:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://lexvo.org/ontology#Language> <http://www.w3.org/2000/01/rdf-schema#label> "Language"@en .
 <http://lexvo.org/ontology#Language> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.wikidata.org/wiki/Q315"@en .
 # 
+# http://purl.obolibrary.org/obo/OCCO_25401100
+<http://purl.obolibrary.org/obo/OCCO_25401100> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/OCCO_25401100> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purl.org/ontology/modalia#TargetGroup> .
+<http://purl.obolibrary.org/obo/OCCO_25401100> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "A person who appraises, edits, and directs safekeeping of permanent records and historically valuable documents. Participate in research activities based on archival materials."@en .
+<http://purl.obolibrary.org/obo/OCCO_25401100> <http://www.w3.org/2000/01/rdf-schema#label> "Archivist"@en .
+<http://purl.obolibrary.org/obo/OCCO_25401100> <http://www.w3.org/2004/02/skos/core#prefLabel> "Archivist"@en .
+# 
+# http://purl.obolibrary.org/obo/OCCO_25402200
+<http://purl.obolibrary.org/obo/OCCO_25402200> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/OCCO_25402200> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purl.org/ontology/modalia#TargetGroup> .
+<http://purl.obolibrary.org/obo/OCCO_25402200> <http://www.w3.org/2000/01/rdf-schema#label> "Librarian"@en .
+<http://purl.obolibrary.org/obo/OCCO_25402200> <http://www.w3.org/2004/02/skos/core#prefLabel> "Librarian"@en .
+# 
+# http://purl.obolibrary.org/obo/T4FS_0000178
+<http://purl.obolibrary.org/obo/T4FS_0000178> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/T4FS_0000178> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purl.org/ontology/modalia#TargetGroup> .
+<http://purl.obolibrary.org/obo/T4FS_0000178> <http://www.w3.org/2000/01/rdf-schema#label> "Data Steward"@en .
+<http://purl.obolibrary.org/obo/T4FS_0000178> <http://www.w3.org/2004/02/skos/core#prefLabel> "Data Steward"@en .
+# 
 # http://purl.org/ontology/bibo/Article
 <http://purl.org/ontology/bibo/Article> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/ontology/bibo/Article> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purl.org/ontology/modalia#LearningResourceType> .
@@ -1174,12 +1193,6 @@ _:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://purl.org/ontology/modalia#DataLifeCyclePhase> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://towson.libguides.com/dataresearch/datamangement/dldataone"@en .
 <https://purl.org/ontology/modalia#DataLifeCyclePhase> <http://www.w3.org/2004/02/skos/core#definition> "One of the eight known phases of data life cycle."@en .
 # 
-# https://purl.org/ontology/modalia#DataSteward
-<https://purl.org/ontology/modalia#DataSteward> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://purl.org/ontology/modalia#DataSteward> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purl.org/ontology/modalia#TargetGroup> .
-<https://purl.org/ontology/modalia#DataSteward> <http://www.w3.org/2000/01/rdf-schema#label> "Data Steward"@en .
-<https://purl.org/ontology/modalia#DataSteward> <http://www.w3.org/2004/02/skos/core#prefLabel> "Data Steward"@en .
-# 
 # https://purl.org/ontology/modalia#DescribePhase
 <https://purl.org/ontology/modalia#DescribePhase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://purl.org/ontology/modalia#DescribePhase> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purl.org/ontology/modalia#DataLifeCyclePhase> .
@@ -1233,7 +1246,7 @@ _:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # https://purl.org/ontology/modalia#LearningPath
 <https://purl.org/ontology/modalia#LearningPath> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://purl.org/ontology/modalia#LearningPath> <http://www.w3.org/2000/01/rdf-schema#label> "LearningPath"@en .
-<https://purl.org/ontology/modalia#LearningPath> <http://www.w3.org/2004/02/skos/core#definition> "The learning path consists of set of learning units (Educational Resources) in a specified order  to reach a learning objective."@en .
+<https://purl.org/ontology/modalia#LearningPath> <http://www.w3.org/2004/02/skos/core#definition> "The learning path consists of a set of learning units (Educational Resources) in a specified order  to reach a learning objective."@en .
 <https://purl.org/ontology/modalia#LearningPath> <http://www.w3.org/2004/02/skos/core#example> "\"Hello world in python\", \"Comments in python\", \"Strings in python\""@en .
 # 
 # https://purl.org/ontology/modalia#LearningPathStep
@@ -1275,6 +1288,12 @@ _:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://purl.org/ontology/modalia#Multipart> <http://www.w3.org/2000/01/rdf-schema#label> "Multipart"@en .
 <https://purl.org/ontology/modalia#Multipart> <http://www.w3.org/2004/02/skos/core#definition> "If the resource consists of more than one item with different DOIs, the MediaType is \"multipart\" and the relations are provided in the field \"RelatedWork\"."@en .
 <https://purl.org/ontology/modalia#Multipart> <http://www.w3.org/2004/02/skos/core#prefLabel> "Multipart"@en .
+# 
+# https://purl.org/ontology/modalia#MuseumProfessional
+<https://purl.org/ontology/modalia#MuseumProfessional> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purl.org/ontology/modalia#MuseumProfessional> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purl.org/ontology/modalia#TargetGroup> .
+<https://purl.org/ontology/modalia#MuseumProfessional> <http://www.w3.org/2000/01/rdf-schema#label> "MuseumProfessional"@en .
+<https://purl.org/ontology/modalia#MuseumProfessional> <http://www.w3.org/2004/02/skos/core#prefLabel> "Museum Professional"@en .
 # 
 # https://purl.org/ontology/modalia#PhDStudent
 <https://purl.org/ontology/modalia#PhDStudent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -1393,11 +1412,11 @@ _:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://purl.org/ontology/modalia#TargetGroup> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://purl.org/dcx/lrmi-terms/EducationalAudience" .
 <https://purl.org/ontology/modalia#TargetGroup> <http://www.w3.org/2004/02/skos/core#definition> "The target group of the learning resource, e.g. students, data stewards, researchers, etc"@en .
 # 
-# https://purl.org/ontology/modalia#TeacherHighEducation
-<https://purl.org/ontology/modalia#TeacherHighEducation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://purl.org/ontology/modalia#TeacherHighEducation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purl.org/ontology/modalia#TargetGroup> .
-<https://purl.org/ontology/modalia#TeacherHighEducation> <http://www.w3.org/2000/01/rdf-schema#label> "Teacher(High Education)"@en .
-<https://purl.org/ontology/modalia#TeacherHighEducation> <http://www.w3.org/2004/02/skos/core#prefLabel> "Teacher (Higher Education)"@en .
+# https://purl.org/ontology/modalia#TeacherHigherEducation
+<https://purl.org/ontology/modalia#TeacherHigherEducation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purl.org/ontology/modalia#TeacherHigherEducation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purl.org/ontology/modalia#TargetGroup> .
+<https://purl.org/ontology/modalia#TeacherHigherEducation> <http://www.w3.org/2000/01/rdf-schema#label> "Teacher(Higher Education)"@en .
+<https://purl.org/ontology/modalia#TeacherHigherEducation> <http://www.w3.org/2004/02/skos/core#prefLabel> "Teacher (Higher Education)"@en .
 # 
 # https://purl.org/ontology/modalia#TeacherRole
 <https://purl.org/ontology/modalia#TeacherRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
