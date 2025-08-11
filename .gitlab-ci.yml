@@ -1,7 +1,17 @@
-# The Docker image that will be used to build your app
-image: busybox
+stages:
+  - test
+  - deploy
+
+test-job:
+  image: python:3.11
+  stage: test
+  before_script:
+    - pip install tox
+  script:
+    - tox -e py
 
 pages:
+  image: busybox
   stage: deploy
   script:
     - echo "The site will be deployed to $CI_PAGES_URL"
