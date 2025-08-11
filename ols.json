@@ -1,0 +1,36 @@
+{
+  "id": "modalia",
+  "creator": [
+    "Abdelmoneim Amer Desouki",
+    "Marc Fuhrmans",
+    "Petra C. Steiner",
+    "Frank Lange"
+  ],
+  "is_foundary": false,
+  "preferredPrefix": "modalia",
+  "title": "MoDalia Ontology",
+  "uri": "https://git.rwth-aachen.de/dalia/dalia-ontology/-/raw/main/MoDalia.ttl",
+  "description": "An ontology encoding the data model of the DALIA knowledge graph, reusing/extending Schema.org, FaBIO, EduCOR, HRCT, and other ontologies/CVs",
+  "homepage": "https://dalia.pages.rwth-aachen.de/dalia-ontology/",
+  "mailing_list": null,
+  "label_property": "https://www.w3.org/2000/01/rdf-schema#label",
+  "definition_property": [
+    "http://purl.org/dc/terms/description"
+  ],
+  "synonym_property": [
+    "http://www.geneontology.org/formats/oboInOwl#hasExactSynonym",
+    "http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym",
+    "http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym",
+    "http://www.geneontology.org/formats/oboInOwl#hasCloseSynonym"
+  ],
+  "hierarchical_property": [
+    "https://www.w3.org/2000/01/rdf-schema#subclassOf"
+  ],
+  "hidden_property": [],
+  "base_uri": [
+    "https://purl.org/ontology/modalia#"
+  ],
+  "reasoner": "none",
+  "oboSlims": false,
+  "ontology_purl": "https://git.rwth-aachen.de/dalia/dalia-ontology/-/raw/main/MoDalia.ttl"
+}
