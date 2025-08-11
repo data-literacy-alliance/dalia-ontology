@@ -36,7 +36,7 @@
   "@id" : "_:genid13",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@id" : "_:genid15"
+    "@id" : "_:genid16"
   } ]
 }, {
   "@id" : "_:genid14",
@@ -52,7 +52,7 @@
 }, {
   "@id" : "_:genid15",
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#first" : [ {
-    "@id" : "https://github.com/tibonto/educor#EducationalResource"
+    "@id" : "https://github.com/tibonto/educor#KnowledgeTopic"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest" : [ {
     "@id" : "_:genid14"
@@ -62,12 +62,23 @@
   } ]
 }, {
   "@id" : "_:genid16",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@id" : "_:genid19"
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#first" : [ {
+    "@id" : "https://github.com/tibonto/educor#EducationalResource"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest" : [ {
+    "@id" : "_:genid15"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#List"
   } ]
 }, {
   "@id" : "_:genid17",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@id" : "_:genid20"
+  } ]
+}, {
+  "@id" : "_:genid18",
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#first" : [ {
     "@id" : "https://purl.org/ontology/modalia#Community"
   } ],
@@ -78,20 +89,9 @@
     "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#List"
   } ]
 }, {
-  "@id" : "_:genid18",
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#first" : [ {
-    "@id" : "https://github.com/tibonto/educor#KnowledgeTopic"
-  } ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest" : [ {
-    "@id" : "_:genid17"
-  } ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#List"
-  } ]
-}, {
   "@id" : "_:genid19",
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#first" : [ {
-    "@id" : "https://github.com/tibonto/educor#EducationalResource"
+    "@id" : "https://github.com/tibonto/educor#KnowledgeTopic"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest" : [ {
     "@id" : "_:genid18"
@@ -112,51 +112,23 @@
   } ]
 }, {
   "@id" : "_:genid20",
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#first" : [ {
+    "@id" : "https://github.com/tibonto/educor#EducationalResource"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest" : [ {
+    "@id" : "_:genid19"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#List"
+  } ]
+}, {
+  "@id" : "_:genid21",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@id" : "_:genid23"
   } ]
 }, {
-  "@id" : "_:genid21",
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#first" : [ {
-    "@id" : "https://purl.org/ontology/modalia#Community"
-  } ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest" : [ {
-    "@list" : [ ]
-  } ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#List"
-  } ]
-}, {
   "@id" : "_:genid22",
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#first" : [ {
-    "@id" : "https://github.com/tibonto/educor#KnowledgeTopic"
-  } ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest" : [ {
-    "@id" : "_:genid21"
-  } ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#List"
-  } ]
-}, {
-  "@id" : "_:genid23",
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#first" : [ {
-    "@id" : "https://github.com/tibonto/educor#EducationalResource"
-  } ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest" : [ {
-    "@id" : "_:genid22"
-  } ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#List"
-  } ]
-}, {
-  "@id" : "_:genid24",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@id" : "_:genid26"
-  } ]
-}, {
-  "@id" : "_:genid25",
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#first" : [ {
     "@id" : "https://schema.org/Organization"
   } ],
@@ -167,29 +139,51 @@
     "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#List"
   } ]
 }, {
-  "@id" : "_:genid26",
+  "@id" : "_:genid23",
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#first" : [ {
     "@id" : "https://purl.org/ontology/modalia#Community"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest" : [ {
-    "@id" : "_:genid25"
+    "@id" : "_:genid22"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#List"
   } ]
 }, {
-  "@id" : "_:genid27",
+  "@id" : "_:genid24",
   "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
   "http://www.w3.org/2002/07/owl#onDatatype" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2002/07/owl#withRestrictions" : [ {
-    "@id" : "_:genid28"
+    "@id" : "_:genid25"
+  } ]
+}, {
+  "@id" : "_:genid25",
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#first" : [ {
+    "@id" : "_:genid26"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest" : [ {
+    "@list" : [ ]
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#List"
+  } ]
+}, {
+  "@id" : "_:genid26",
+  "http://www.w3.org/2001/XMLSchema#pattern" : [ {
+    "@value" : "https://ror.org/[0-9][0-9][a-z0-9][a-z0-9][a-z0-9][a-z0-9][a-z0-9][0-9][0-9]"
+  } ]
+}, {
+  "@id" : "_:genid27",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@id" : "_:genid29"
   } ]
 }, {
   "@id" : "_:genid28",
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#first" : [ {
-    "@id" : "_:genid29"
+    "@id" : "https://purl.org/ontology/modalia#User"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest" : [ {
     "@list" : [ ]
@@ -199,8 +193,14 @@
   } ]
 }, {
   "@id" : "_:genid29",
-  "http://www.w3.org/2001/XMLSchema#pattern" : [ {
-    "@value" : "https://ror.org/[0-9][0-9][a-z0-9][a-z0-9][a-z0-9][a-z0-9][a-z0-9][0-9][0-9]"
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#first" : [ {
+    "@id" : "https://purl.org/ontology/modalia#Contributor"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest" : [ {
+    "@id" : "_:genid28"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#List"
   } ]
 }, {
   "@id" : "_:genid3",
@@ -215,14 +215,17 @@
   } ]
 }, {
   "@id" : "_:genid30",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@id" : "_:genid32"
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
+  "http://www.w3.org/2002/07/owl#onDatatype" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#withRestrictions" : [ {
+    "@id" : "_:genid31"
   } ]
 }, {
   "@id" : "_:genid31",
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#first" : [ {
-    "@id" : "https://purl.org/ontology/modalia#User"
+    "@id" : "_:genid32"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest" : [ {
     "@list" : [ ]
@@ -232,48 +235,17 @@
   } ]
 }, {
   "@id" : "_:genid32",
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#first" : [ {
-    "@id" : "https://purl.org/ontology/modalia#Contributor"
-  } ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest" : [ {
-    "@id" : "_:genid31"
-  } ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#List"
-  } ]
-}, {
-  "@id" : "_:genid33",
-  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
-  "http://www.w3.org/2002/07/owl#onDatatype" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ],
-  "http://www.w3.org/2002/07/owl#withRestrictions" : [ {
-    "@id" : "_:genid34"
-  } ]
-}, {
-  "@id" : "_:genid34",
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#first" : [ {
-    "@id" : "_:genid35"
-  } ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest" : [ {
-    "@list" : [ ]
-  } ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#List"
-  } ]
-}, {
-  "@id" : "_:genid35",
   "http://www.w3.org/2001/XMLSchema#pattern" : [ {
     "@value" : "https://orcid.org/[0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9X]"
   } ]
 }, {
-  "@id" : "_:genid36",
+  "@id" : "_:genid33",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@id" : "_:genid38"
+    "@id" : "_:genid35"
   } ]
 }, {
-  "@id" : "_:genid37",
+  "@id" : "_:genid34",
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#first" : [ {
     "@id" : "https://purl.org/ontology/modalia#Proficiency"
   } ],
@@ -284,9 +256,37 @@
     "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#List"
   } ]
 }, {
-  "@id" : "_:genid38",
+  "@id" : "_:genid35",
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#first" : [ {
     "@id" : "https://purl.org/ontology/modalia#LearningPathStep"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest" : [ {
+    "@id" : "_:genid34"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#List"
+  } ]
+}, {
+  "@id" : "_:genid36",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@id" : "_:genid38"
+  } ]
+}, {
+  "@id" : "_:genid37",
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#first" : [ {
+    "@id" : "https://purl.org/ontology/modalia#LearningPathStep"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest" : [ {
+    "@list" : [ ]
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#List"
+  } ]
+}, {
+  "@id" : "_:genid38",
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#first" : [ {
+    "@id" : "https://github.com/tibonto/educor#EducationalResource"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest" : [ {
     "@id" : "_:genid37"
@@ -309,7 +309,7 @@
 }, {
   "@id" : "_:genid40",
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#first" : [ {
-    "@id" : "https://purl.org/ontology/modalia#LearningPathStep"
+    "@id" : "https://purl.org/ontology/modalia#User"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest" : [ {
     "@list" : [ ]
@@ -320,7 +320,7 @@
 }, {
   "@id" : "_:genid41",
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#first" : [ {
-    "@id" : "https://github.com/tibonto/educor#EducationalResource"
+    "@id" : "https://purl.org/ontology/modalia#Contributor"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest" : [ {
     "@id" : "_:genid40"
@@ -359,13 +359,13 @@
 }, {
   "@id" : "_:genid45",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@id" : "_:genid47"
+  "http://www.w3.org/2002/07/owl#oneOf" : [ {
+    "@id" : "_:genid50"
   } ]
 }, {
   "@id" : "_:genid46",
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#first" : [ {
-    "@id" : "https://purl.org/ontology/modalia#User"
+    "@id" : "https://purl.org/ontology/modalia#Proficient"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest" : [ {
     "@list" : [ ]
@@ -376,7 +376,7 @@
 }, {
   "@id" : "_:genid47",
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#first" : [ {
-    "@id" : "https://purl.org/ontology/modalia#Contributor"
+    "@id" : "https://purl.org/ontology/modalia#Novice"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest" : [ {
     "@id" : "_:genid46"
@@ -386,17 +386,22 @@
   } ]
 }, {
   "@id" : "_:genid48",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#oneOf" : [ {
-    "@id" : "_:genid53"
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#first" : [ {
+    "@id" : "https://purl.org/ontology/modalia#Expert"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest" : [ {
+    "@id" : "_:genid47"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#List"
   } ]
 }, {
   "@id" : "_:genid49",
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#first" : [ {
-    "@id" : "https://purl.org/ontology/modalia#Proficient"
+    "@id" : "https://purl.org/ontology/modalia#Competent"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest" : [ {
-    "@list" : [ ]
+    "@id" : "_:genid48"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#List"
@@ -415,43 +420,10 @@
 }, {
   "@id" : "_:genid50",
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#first" : [ {
-    "@id" : "https://purl.org/ontology/modalia#Novice"
-  } ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest" : [ {
-    "@id" : "_:genid49"
-  } ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#List"
-  } ]
-}, {
-  "@id" : "_:genid51",
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#first" : [ {
-    "@id" : "https://purl.org/ontology/modalia#Expert"
-  } ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest" : [ {
-    "@id" : "_:genid50"
-  } ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#List"
-  } ]
-}, {
-  "@id" : "_:genid52",
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#first" : [ {
-    "@id" : "https://purl.org/ontology/modalia#Competent"
-  } ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest" : [ {
-    "@id" : "_:genid51"
-  } ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#List"
-  } ]
-}, {
-  "@id" : "_:genid53",
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#first" : [ {
     "@id" : "https://purl.org/ontology/modalia#Beginner"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest" : [ {
-    "@id" : "_:genid52"
+    "@id" : "_:genid49"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#List"
@@ -604,7 +576,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Archivist"
+    "@value" : "archivist"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://purl.org/ontology/modalia#TargetGroup"
@@ -618,7 +590,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Librarian"
+    "@value" : "librarian"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://purl.org/ontology/modalia#TargetGroup"
@@ -632,7 +604,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Data Steward"
+    "@value" : "data steward"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://purl.org/ontology/modalia#TargetGroup"
@@ -658,29 +630,15 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://purl.org/dc/terms/created",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid13"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Date Created"
-  } ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "Date of creation of the resource."
   } ]
 }, {
   "@id" : "http://purl.org/dc/terms/description",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid16"
+    "@id" : "_:genid13"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -827,7 +785,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/dc/terms/license",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://github.com/tibonto/educor#EducationalResource"
   } ],
@@ -922,7 +880,7 @@
   "@id" : "http://purl.org/dc/terms/title",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid20"
+    "@id" : "_:genid17"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1046,11 +1004,17 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "has Subtitle"
+    "@value" : "has subtitle"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://semanticscience.org/resource/SIO_000776",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -1067,6 +1031,9 @@
     "@value" : "mouse cells"
   } ]
 }, {
+  "@id" : "http://usefulinc.com/ns/doap#bug-database",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "http://w3id.org/nfdi4ing/metadata4ing#ContactPerson",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
@@ -1074,7 +1041,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "ContactPerson"
+    "@value" : "contact person"
   } ]
 }, {
   "@id" : "http://w3id.org/nfdi4ing/metadata4ing#DataCurator",
@@ -1084,7 +1051,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "DataCurator"
+    "@value" : "data curator role"
   } ]
 }, {
   "@id" : "http://w3id.org/nfdi4ing/metadata4ing#DataManager",
@@ -1094,7 +1061,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "DataManager"
+    "@value" : "data manager role"
   } ]
 }, {
   "@id" : "http://w3id.org/nfdi4ing/metadata4ing#Method",
@@ -1119,7 +1086,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Sponsor"
+    "@value" : "sponsor role"
   } ]
 }, {
   "@id" : "http://w3id.org/nfdi4ing/metadata4ing#Tool",
@@ -1136,7 +1103,7 @@
   "@id" : "http://w3id.org/nfdi4ing/metadata4ing#hasRorId",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid24"
+    "@id" : "_:genid21"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@language" : "en",
@@ -1146,7 +1113,7 @@
     "@value" : "Ein persistenter Identifikator für Organisationen, vergeben durch die Research Organization Registry, der eine Forschungseinrichtung eindeutig identifiziert."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid27"
+    "@id" : "_:genid24"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
@@ -1166,7 +1133,7 @@
   "@id" : "http://w3id.org/nfdi4ing/metadata4ing#orcidId",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid30"
+    "@id" : "_:genid27"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@language" : "en",
@@ -1176,7 +1143,7 @@
     "@value" : "Open Researcher and Contributor ID: ein persistenter Identifikator, der eine in der Forschung tätige Person eindeutig identifiziert."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid33"
+    "@id" : "_:genid30"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
@@ -1185,6 +1152,9 @@
     "@language" : "de",
     "@value" : "hat ORCID ID"
   } ]
+}, {
+  "@id" : "http://www.loc.gov/premis/rdf/v3/documentation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#List",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
@@ -1211,7 +1181,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "https://creativecommons.org/licenses/by/4.0/",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "CC-BY-4.0"
+  } ]
 }, {
   "@id" : "https://github.com/tibonto/educor#EducationalResource",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -1221,7 +1194,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "EducationalResource"
+    "@value" : "educational resource"
   } ],
   "http://www.w3.org/2004/02/skos/core#example" : [ {
     "@language" : "en",
@@ -1307,14 +1280,14 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "generatedFrom"
+    "@value" : "generated from"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://purl.org/ontology/modalia#User"
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://purl.org/dc/elements/1.1/contributor" : [ {
     "@value" : "Dr. Abdelmoneim Amer Desouki (https://orcid.org/0000-0003-2083-1277), Technical University of Darmstadt (https://ror.org/05n911h24, https://isni.org/isni/0000000109401669)"
   }, {
@@ -1337,17 +1310,34 @@
   } ],
   "http://purl.org/dc/terms/abstract" : [ {
     "@language" : "en",
-    "@value" : "The aim of DALIA project is to build a platform for learning material for Research Data Management (RDM) and Data Science. The platform is based on a knowledge graph. We introduce MoDalia, the base ontology of DALIA knowledge graph. Modalia inherits some modules from EduCOR."
+    "@value" : "The aim of the DALIA project is to build a platform for learning material for research data management (RDM) and data science. The platform is based on a knowledge graph. We introduce MoDALIA, the base ontology of DALIA knowledge graph. MoDALIA inherits some modules from EduCOR. It includes also modelling of micro-credentials and certificates."
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2023-02-02"
   } ],
   "http://purl.org/dc/terms/license" : [ {
     "@id" : "https://creativecommons.org/licenses/by/4.0/"
   } ],
   "http://purl.org/dc/terms/modified" : [ {
-    "@language" : "en",
     "@value" : "2025-08-11"
   } ],
   "http://purl.org/dc/terms/publisher" : [ {
     "@value" : "ULB TUDa – University and State Library, Technical University, Darmstadt, Germany"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
+    "@value" : "modalia"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "https://purl.org/ontology/modalia#"
+  } ],
+  "http://usefulinc.com/ns/doap#bug-database" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "https://git.rwth-aachen.de/dalia/dalia-ontology/-/issues"
+  } ],
+  "http://www.loc.gov/premis/rdf/v3/documentation" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "https://dalia.pages.rwth-aachen.de/dalia-ontology/"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -1368,7 +1358,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "AnalyzePhase"
+    "@value" : "analyze phase"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://purl.org/ontology/modalia#DataLifeCyclePhase"
@@ -1397,7 +1387,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "AssurePhase"
+    "@value" : "assure phase"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://purl.org/ontology/modalia#DataLifeCyclePhase"
@@ -1407,7 +1397,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Bachelor Student"
+    "@value" : "bachelor student"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@value" : "http://vivoweb.org/ontology/core#UndergraduateStudent"
@@ -1431,7 +1421,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Advanced Beginner"
+    "@value" : "advanced beginner"
   } ],
   "https://purl.org/ontology/modalia#hasOrder" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
@@ -1456,14 +1446,14 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "BestPractices"
+    "@value" : "best practices"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://purl.org/ontology/modalia#LearningResourceType"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
-    "@value" : "Best Practices"
+    "@value" : "best practices"
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#Code",
@@ -1474,21 +1464,21 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Code"
+    "@value" : "code"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://purl.org/ontology/modalia#MediaType"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
-    "@value" : "Code"
+    "@value" : "code"
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#CodeNotebook",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "CodeNotebook"
+    "@value" : "code notebook"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://purl.org/ontology/modalia#LearningResourceType"
@@ -1506,7 +1496,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "CollectPhase"
+    "@value" : "collect phase"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://purl.org/ontology/modalia#DataLifeCyclePhase"
@@ -1516,7 +1506,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Community"
+    "@value" : "community"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -1530,7 +1520,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Competent"
+    "@value" : "competent"
   } ],
   "https://purl.org/ontology/modalia#hasOrder" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
@@ -1551,7 +1541,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Content provider"
+    "@value" : "content provider"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@value" : "https://bibfra.me/view/rare/lite/provider"
@@ -1565,14 +1555,14 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
-    "@value" : "Content provider"
+    "@value" : "content provider"
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#ContentQuality",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Content Quality"
+    "@value" : "content quality"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -1591,13 +1581,14 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Contributor"
+    "@value" : "contributor"
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#ContributorRole",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Contributor Role"
+    "@language" : "en",
+    "@value" : "contributor role"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -1612,7 +1603,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Cookbook"
+    "@value" : "cookbook"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@language" : "en",
@@ -1623,14 +1614,14 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
-    "@value" : "Cookbook"
+    "@value" : "cookbook"
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#CuratorRole",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "CuratorRole"
+    "@value" : "curator role"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://purl.org/ontology/modalia#UserRole"
@@ -1640,7 +1631,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "DataLifeCyclePhase"
+    "@value" : "data life cycle phase"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@language" : "en",
@@ -1655,7 +1646,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "DescribePhase"
+    "@value" : "describe phase"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://purl.org/ontology/modalia#DataLifeCyclePhase"
@@ -1669,7 +1660,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Discipline"
+    "@value" : "discipline"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@language" : "en",
@@ -1684,7 +1675,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "DiscoverPhase"
+    "@value" : "discover phase"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://purl.org/ontology/modalia#DataLifeCyclePhase"
@@ -1692,6 +1683,10 @@
 }, {
   "@id" : "https://purl.org/ontology/modalia#EducationalLevel",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "education level"
+  } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
     "@value" : "The educational level of a user: Bachlors, Masters or PhD"
@@ -1704,7 +1699,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Expert"
+    "@value" : "expert"
   } ],
   "https://purl.org/ontology/modalia#hasOrder" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
@@ -1724,7 +1719,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Free License"
+    "@value" : "free license"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://purl.org/ontology/modalia#License"
@@ -1734,7 +1729,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "IntegratePhase"
+    "@value" : "integrate phase"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://purl.org/ontology/modalia#DataLifeCyclePhase"
@@ -1744,7 +1739,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Job"
+    "@value" : "job"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@language" : "en",
@@ -1763,7 +1758,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "LearnerRole"
+    "@value" : "learner role"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://purl.org/ontology/modalia#UserRole"
@@ -1777,7 +1772,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "LearningObjective"
+    "@value" : "learning objective"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@value" : "https://github.com/tibonto/educor#LearningGoal"
@@ -1791,7 +1786,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "LearningPath"
+    "@value" : "learning path"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -1804,6 +1799,10 @@
 }, {
   "@id" : "https://purl.org/ontology/modalia#LearningPathStep",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "learning path step"
+  } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
     "@value" : "One step of a learning path, it has an order and one educational resource. Optionally a learning path step can have a note for learner."
@@ -1813,7 +1812,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "LearningResourceType"
+    "@value" : "learning resource type"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -1828,28 +1827,28 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Lecture"
+    "@value" : "lecture"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://purl.org/ontology/modalia#LearningResourceType"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
-    "@value" : "Lecture"
+    "@value" : "lecture"
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#License",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "License"
+    "@value" : "license"
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#MastersStudent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Masters Student"
+    "@value" : "master's student"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@value" : "http://w3id.org/roh#MastersStudent"
@@ -1870,7 +1869,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "MediaType"
+    "@value" : "media type"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -1881,7 +1880,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Multipart"
+    "@value" : "multipart"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://purl.org/ontology/modalia#MediaType"
@@ -1892,14 +1891,14 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
-    "@value" : "Multipart"
+    "@value" : "multipart"
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#MuseumProfessional",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "MuseumProfessional"
+    "@value" : "museum professional"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://purl.org/ontology/modalia#TargetGroup"
@@ -1916,7 +1915,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Novice"
+    "@value" : "novice"
   } ],
   "https://purl.org/ontology/modalia#hasOrder" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
@@ -1936,7 +1935,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "PhD Student"
+    "@value" : "PhD student"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@value" : "http://vivoweb.org/ontology/core#GraduateStudent"
@@ -1950,14 +1949,14 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
-    "@value" : "PhD Student"
+    "@value" : "PhD student"
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#PlanPhase",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "PlanPhase"
+    "@value" : "plan phase"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://purl.org/ontology/modalia#DataLifeCyclePhase"
@@ -1975,21 +1974,21 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Poster"
+    "@value" : "poster"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://purl.org/ontology/modalia#LearningResourceType"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
-    "@value" : "Poster"
+    "@value" : "poster"
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#PreservePhase",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "PreservePhase"
+    "@value" : "preserve phase"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://purl.org/ontology/modalia#DataLifeCyclePhase"
@@ -1999,10 +1998,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Proficiency"
+    "@value" : "proficiency"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid48"
+    "@id" : "_:genid45"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -2016,7 +2015,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Proficient"
+    "@value" : "proficient"
   } ],
   "https://purl.org/ontology/modalia#hasOrder" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
@@ -2040,14 +2039,14 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Proprietary"
+    "@value" : "proprietary license"
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#ProprietaryLicense",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Proprietary License"
+    "@value" : "proprietary license"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://purl.org/ontology/modalia#License"
@@ -2057,14 +2056,14 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Questionnaire"
+    "@value" : "questionnaire"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://purl.org/ontology/modalia#LearningResourceType"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
-    "@value" : "Questionnaire"
+    "@value" : "questionnaire"
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#RDMResource",
@@ -2075,7 +2074,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "RDMResource"
+    "@value" : "RDM resource"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://github.com/tibonto/educor#EducationalResource"
@@ -2089,7 +2088,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "RDMSkill"
+    "@value" : "RDM skill"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://purl.org/ontology/modalia#Skill"
@@ -2103,7 +2102,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "RDMSubjectCluster"
+    "@value" : "RDM subject cluster"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -2114,7 +2113,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "RDMTopic"
+    "@value" : "RDM topic"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://github.com/tibonto/educor#KnowledgeTopic"
@@ -2128,7 +2127,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "RatingIndicator"
+    "@value" : "rating indicator"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "Is a URI that relates a User and an OER and have predicate schema:rating"
@@ -2136,6 +2135,10 @@
 }, {
   "@id" : "https://purl.org/ontology/modalia#Researcher",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "researcher"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@language" : "en",
     "@value" : "https://www.wikidata.org/wiki/Q1650915"
@@ -2152,7 +2155,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "ResearcherRole"
+    "@value" : "researcher role"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://purl.org/ontology/modalia#UserRole"
@@ -2166,14 +2169,14 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Skill"
+    "@value" : "skill"
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#StudentSchool",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Student (School)"
+    "@value" : "student (school)"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://purl.org/ontology/modalia#TargetGroup"
@@ -2187,7 +2190,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "TargetGroup"
+    "@value" : "target group"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@value" : "http://purl.org/dcx/lrmi-terms/EducationalAudience"
@@ -2201,7 +2204,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Teacher(Higher Education)"
+    "@value" : "teacher (higher education)"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://purl.org/ontology/modalia#TargetGroup"
@@ -2215,7 +2218,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "TeacherRole"
+    "@value" : "teacher role"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://purl.org/ontology/modalia#UserRole"
@@ -2225,7 +2228,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Teacher (School)"
+    "@value" : "teacher (school)"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@language" : "en",
@@ -2247,21 +2250,21 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Tutorial"
+    "@value" : "tutorial"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://purl.org/ontology/modalia#LearningResourceType"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
-    "@value" : "Tutorial"
+    "@value" : "tutorial"
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#User",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "User"
+    "@value" : "user"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "http://xmlns.com/foaf/0.1/Person"
@@ -2273,6 +2276,10 @@
 }, {
   "@id" : "https://purl.org/ontology/modalia#UserComment",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "user comment"
+  } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
     "@value" : "Comment added by a user on an educational resource"
@@ -2282,14 +2289,14 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "UserRole"
+    "@value" : "user role"
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#VARKAuditory",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "VARKAuditory"
+    "@value" : "VARK auditory"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://github.com/tibonto/educor#LearningPreference"
@@ -2303,7 +2310,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "VARKKinesthetic"
+    "@value" : "VARK kinesthetic"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://github.com/tibonto/educor#LearningPreference"
@@ -2317,7 +2324,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "VARKReading"
+    "@value" : "VARK reading"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://github.com/tibonto/educor#LearningPreference"
@@ -2331,7 +2338,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "VARKVisual"
+    "@value" : "VARK visual"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://github.com/tibonto/educor#LearningPreference"
@@ -2345,14 +2352,14 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Workshop"
+    "@value" : "workshop"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://purl.org/ontology/modalia#LearningResourceType"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
-    "@value" : "Workshop"
+    "@value" : "workshop"
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#authorUnordered",
@@ -2366,6 +2373,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://github.com/tibonto/educor#EducationalResource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has author (unordered)"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -2382,7 +2393,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "belongsToCluster"
+    "@value" : "belongs to cluster"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://purl.org/ontology/modalia#RDMSubjectCluster"
@@ -2392,6 +2403,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://purl.org/ontology/modalia#LearningPathStep"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "belongs to learning path"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://purl.org/ontology/modalia#LearningPath"
@@ -2407,7 +2422,8 @@
     "@value" : "defines the data life cycle phase that the resource covers"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "belongsToPhase"
+    "@language" : "en",
+    "@value" : "belongs to phase"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://purl.org/ontology/modalia#DataLifeCyclePhase"
@@ -2424,7 +2440,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Citation"
+    "@value" : "citation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -2437,7 +2453,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Comment Date"
+    "@value" : "comment date"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTimeStamp"
@@ -2454,7 +2470,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "comment ID"
+    "@value" : "comment has identifier"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -2492,7 +2508,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "commentUserID"
+    "@value" : "comment has user"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://purl.org/ontology/modalia#User"
@@ -2512,7 +2528,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "commentedOER"
+    "@value" : "comment has OER"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://github.com/tibonto/educor#EducationalResource"
@@ -2542,7 +2558,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "coversManagementOfDataDescribing"
+    "@value" : "covers management of data describing"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://semanticscience.org/resource/SIO_000776"
@@ -2559,7 +2575,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "coversManagementOfDataKind"
+    "@value" : "covers management of data kind"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://edamontology.org/data_0006"
@@ -2572,7 +2588,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "coversManagementOfDataObtainedWithMethod"
+    "@value" : "covers management of data obtained with method"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://w3id.org/nfdi4ing/metadata4ing#Method"
@@ -2585,7 +2601,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "coversManagementOfDataObtainedWithTool"
+    "@value" : "covers management of data obtained with tool"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://w3id.org/nfdi4ing/metadata4ing#Tool"
@@ -2602,7 +2618,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "createdBy"
+    "@value" : "created by"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://purl.org/ontology/modalia#User"
@@ -2614,7 +2630,8 @@
     "@id" : "_:genid4"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "definesLearningPath"
+    "@language" : "en",
+    "@value" : "defines learning path"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://purl.org/ontology/modalia#LearningPath"
@@ -2647,7 +2664,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "educationalLevel"
+    "@value" : "educational level"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://purl.org/ontology/modalia#EducationalLevel"
@@ -2664,7 +2681,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "essentialFor"
+    "@value" : "essential for"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://purl.org/ontology/modalia#Job"
@@ -2676,7 +2693,8 @@
     "@id" : "https://github.com/tibonto/educor#EducationalResource"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "givesProficiencyLevel"
+    "@language" : "en",
+    "@value" : "gives proficiency level"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://purl.org/ontology/modalia#Proficiency"
@@ -2693,7 +2711,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "hasDOI"
+    "@value" : "has DOI"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -2709,7 +2727,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "hasLearningObjective"
+    "@value" : "has learning objective"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://purl.org/ontology/modalia#LearningObjective"
@@ -2722,7 +2740,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "hasLearningPreference"
+    "@value" : "has learning preference"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://github.com/tibonto/educor#LearningPreference"
@@ -2738,7 +2756,8 @@
     "@id" : "https://purl.org/ontology/modalia#LearningPath"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "hasLearningResource"
+    "@language" : "en",
+    "@value" : "has learning resource"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://github.com/tibonto/educor#EducationalResource"
@@ -2750,7 +2769,8 @@
     "@id" : "https://github.com/tibonto/educor#EducationalResource"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "hasLearningType"
+    "@language" : "en",
+    "@value" : "has learning type"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://purl.org/ontology/modalia#LearningResourceType"
@@ -2767,7 +2787,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "hasMediaType"
+    "@value" : "has media type"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://purl.org/ontology/modalia#MediaType"
@@ -2776,7 +2796,7 @@
   "@id" : "https://purl.org/ontology/modalia#hasOrder",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid36"
+    "@id" : "_:genid33"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@language" : "en",
@@ -2784,7 +2804,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "hasOrder"
+    "@value" : "has order"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#integer"
@@ -2801,7 +2821,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "hasOwner"
+    "@value" : "has owner"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://purl.org/ontology/modalia#User"
@@ -2813,7 +2833,8 @@
     "@id" : "https://github.com/tibonto/educor#EducationalResource"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "hasQuality"
+    "@language" : "en",
+    "@value" : "has quality"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://purl.org/ontology/modalia#ContentQuality"
@@ -2826,7 +2847,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "hasRating"
+    "@value" : "has rating"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://purl.org/ontology/modalia#RatingIndicator"
@@ -2839,7 +2860,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "hasRole"
+    "@value" : "has role"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://purl.org/ontology/modalia#UserRole"
@@ -2852,7 +2873,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "hasTargetGroup"
+    "@value" : "has target group"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://purl.org/ontology/modalia#TargetGroup"
@@ -2865,7 +2886,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "hasTranslation"
+    "@value" : "has translation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#Thing"
@@ -2885,7 +2906,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "hasUser"
+    "@value" : "has user"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://purl.org/ontology/modalia#User"
@@ -2898,6 +2919,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://purl.org/ontology/modalia#Job"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "job has industry"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -2920,7 +2945,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "isDescribedBy"
+    "@value" : "is described by"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#Thing"
@@ -2940,7 +2965,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "isDuplicateOf"
+    "@value" : "is duplicate of"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://github.com/tibonto/educor#EducationalResource"
@@ -2960,7 +2985,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "isIdenticalTo"
+    "@value" : "is identical to"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://github.com/tibonto/educor#EducationalResource"
@@ -2980,7 +3005,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "isLessProficientThan"
+    "@value" : "is less proficient than"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://purl.org/ontology/modalia#Proficiency"
@@ -2996,7 +3021,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "isMemberOf"
+    "@value" : "is member of"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://purl.org/ontology/modalia#Community"
@@ -3012,7 +3037,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "isMoreProficientThan"
+    "@value" : "is more proficient than"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://purl.org/ontology/modalia#Proficiency"
@@ -3025,7 +3050,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "isNewVersionOf"
+    "@value" : "is new version of"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://github.com/tibonto/educor#EducationalResource"
@@ -3048,7 +3073,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "isPreviousVersionOf"
+    "@value" : "is previous version of"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://github.com/tibonto/educor#EducationalResource"
@@ -3068,7 +3093,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "isTranslationOf"
+    "@value" : "is translation of"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#Thing"
@@ -3088,7 +3113,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "isVersionOf"
+    "@value" : "is version of"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://github.com/tibonto/educor#EducationalResource"
@@ -3108,7 +3133,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "likesCount"
+    "@value" : "likes count"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#int"
@@ -3121,7 +3146,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "nextPhase"
+    "@value" : "next phase"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://purl.org/ontology/modalia#DataLifeCyclePhase"
@@ -3130,7 +3155,11 @@
   "@id" : "https://purl.org/ontology/modalia#notesForLearner",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid39"
+    "@id" : "_:genid36"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has notes for learner"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -3147,7 +3176,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "optionalFor"
+    "@value" : "optional for"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://purl.org/ontology/modalia#Job"
@@ -3173,7 +3202,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "requiresKnowledge"
+    "@value" : "requires knowledge"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://github.com/tibonto/educor#KnowledgeTopic"
@@ -3186,7 +3215,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "requiresProficiencyLevel"
+    "@value" : "requires proficiency level"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://purl.org/ontology/modalia#Proficiency"
@@ -3212,7 +3241,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "studyPlan"
+    "@value" : "study plan"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
@@ -3238,7 +3267,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "userBookmarks"
+    "@value" : "user bookmarks"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://github.com/tibonto/educor#EducationalResource"
@@ -3251,7 +3280,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "userLikes"
+    "@value" : "user likes"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://github.com/tibonto/educor#EducationalResource"
@@ -3268,7 +3297,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "userViews"
+    "@value" : "user views"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://github.com/tibonto/educor#EducationalResource"
@@ -3284,7 +3313,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "viewCount"
+    "@value" : "view count"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#int"
@@ -3487,7 +3516,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "downloadUrl"
+    "@value" : "has download URL"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
@@ -3513,7 +3542,7 @@
     "@value" : "Family name. In the U.S., the last name of a Person."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid42"
+    "@id" : "_:genid39"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -3539,7 +3568,7 @@
   "@id" : "https://schema.org/givenName",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid45"
+    "@id" : "_:genid42"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
