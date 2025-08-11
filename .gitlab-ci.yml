@@ -6,9 +6,9 @@ test-job:
   image: python:3.11
   stage: test
   before_script:
-    - pip install tox
+    - pip install uv rust-just
   script:
-    - tox -e py
+    - just test
 
 pages:
   image: busybox

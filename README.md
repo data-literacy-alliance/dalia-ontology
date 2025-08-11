@@ -31,7 +31,8 @@ Documentation of MoDALIA is found
 2. Clone this repository and make a branch
 3. Open `MoDalia.ttl` in Protégé
 4. Make a merge request
-5. Ensure the unit tests are passing locally by running `tox` or by checking the
+5. Install just with `pip install rust-just`
+6. Ensure the unit tests are passing locally by running `just test` or by checking the
    automated CI/CD run on the merge request
 
 ## Linting

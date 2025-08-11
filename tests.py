@@ -1,9 +1,21 @@
+# /// script
+# dependencies = [
+#     "rdflib",
+#     "tabulate",
+#     "pytest",
+# ]
+# ///
+
+"""Run tests."""
+
+import sys
+import unittest
 from pathlib import Path
 from typing import ClassVar
 
+import pytest
 import rdflib
 from tabulate import tabulate
-import unittest
 
 HERE = Path(__file__).parent.resolve()
 TTL_PATH = HERE.joinpath("MoDalia.ttl")
@@ -73,3 +85,7 @@ class TestOntology(unittest.TestCase):
             self.fail(
                 msg=f"\n\nthe following entities have incorrect capitalization:\n\n{tabulate(sorted(bad_capitalization), tablefmt='github', headers=['luid', 'name'])}"
             )
+
+
+if __name__ == "__main__":
+    sys.exit(pytest.main([__file__]))
