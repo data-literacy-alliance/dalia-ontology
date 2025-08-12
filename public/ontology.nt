@@ -3,12 +3,13 @@
 <https://purl.org/ontology/modalia#> <http://purl.org/dc/terms/abstract> "The aim of the DALIA project is to build a platform for learning material for research data management (RDM) and data science. The platform is based on a knowledge graph. We introduce MoDALIA, the base ontology of DALIA knowledge graph. MoDALIA inherits some modules from EduCOR. It includes also modelling of micro-credentials and certificates."@en .
 <https://purl.org/ontology/modalia#> <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0003-4423-4370> .
 <https://purl.org/ontology/modalia#> <http://purl.org/dc/terms/contributor> "Dr. Abdelmoneim Amer Desouki (https://orcid.org/0000-0003-2083-1277), Technical University of Darmstadt (https://ror.org/05n911h24, https://isni.org/isni/0000000109401669)" .
+<https://purl.org/ontology/modalia#> <http://purl.org/dc/terms/contributor> "Dr. Charles Tapley Hoyt (https://orcid.org/0000-0003-4423-4370), RWTH Aachen University (https://ror.org/04xfq0f34, https://isni.org/isni/000000010728696X)" .
 <https://purl.org/ontology/modalia#> <http://purl.org/dc/terms/contributor> "Dr. Marc Fuhrmans (https://orcid.org/0000-0002-9826-018X), Technical University of Darmstadt (https://ror.org/05n911h24, https://isni.org/isni/0000000109401669)" .
 <https://purl.org/ontology/modalia#> <http://purl.org/dc/terms/contributor> "Dr. Petra C. Steiner (https://orcid.org/0000-0001-8997-2620), Technical University of Darmstadt (https://ror.org/05n911h24, https://isni.org/isni/0000000109401669)" .
 <https://purl.org/ontology/modalia#> <http://purl.org/dc/terms/contributor> "Frank Lange (https://orcid.org/0000-0002-9346-6031), RWTH Aachen University (https://ror.org/04xfq0f34, https://isni.org/isni/000000010728696X)" .
 <https://purl.org/ontology/modalia#> <http://purl.org/dc/terms/created> "2023-02-02" .
 <https://purl.org/ontology/modalia#> <http://purl.org/dc/terms/creator> "BMFTR DALIA project" .
-<https://purl.org/ontology/modalia#> <http://purl.org/dc/terms/description> "MoDALIA: An Ontology for Educational Material in Research Data Management (RDM) and Data Science.\nThe ontology is used for making a knowledge graph as a backend to platform for teaching, personal learning, and recommendation.\nThe ontology is developed in OWL in Protege 5.5.0."@en .
+<https://purl.org/ontology/modalia#> <http://purl.org/dc/terms/description> "MoDALIA: An Ontology for Educational Material in Research Data Management (RDM) and Data Science.\r\nThe ontology is used for making a knowledge graph as a backend to platform for teaching, personal learning, and recommendation.\r\nThe ontology is developed in OWL in Protege 5.5.0."@en .
 <https://purl.org/ontology/modalia#> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
 <https://purl.org/ontology/modalia#> <http://purl.org/dc/terms/modified> "2025-08-11" .
 <https://purl.org/ontology/modalia#> <http://purl.org/dc/terms/publisher> "ULB TUDa – University and State Library, Technical University, Darmstadt, Germany" .
@@ -17,7 +18,7 @@
 <https://purl.org/ontology/modalia#> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://purl.org/ontology/modalia#"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
 <https://purl.org/ontology/modalia#> <http://usefulinc.com/ns/doap#bug-database> "https://git.rwth-aachen.de/dalia/dalia-ontology/-/issues"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
 <https://purl.org/ontology/modalia#> <http://www.loc.gov/premis/rdf/v3/documentation> "https://dalia.pages.rwth-aachen.de/dalia-ontology/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-<https://purl.org/ontology/modalia#> <http://www.w3.org/2000/01/rdf-schema#comment> "MoDALIA reuses elements from the following ontologies:\n- DCTERMS = Dublin Core Terms  \n- OWL = Web Ontology Language  \n- RDF = Resource Description Framework  \n- RDFS = RDF Schema  \n- SCHEMA = schema.org  \n- SKOS = Simple Knowledge Organization System  \n- EC = EduCOR"@en .
+<https://purl.org/ontology/modalia#> <http://www.w3.org/2000/01/rdf-schema#comment> "MoDALIA reuses elements from the following ontologies:\r\n- DCTERMS = Dublin Core Terms  \r\n- OWL = Web Ontology Language  \r\n- RDF = Resource Description Framework  \r\n- RDFS = RDF Schema  \r\n- SCHEMA = schema.org  \r\n- SKOS = Simple Knowledge Organization System  \r\n- EC = EduCOR"@en .
 <https://purl.org/ontology/modalia#> <http://www.w3.org/2000/01/rdf-schema#label> "MoDALIA" .
 <https://purl.org/ontology/modalia#> <http://www.w3.org/2002/07/owl#versionInfo> "v1.0.0"@en .
 # 
@@ -1319,7 +1320,7 @@ _:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purl.org/o
 _:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://purl.org/ontology/modalia#Proficiency> <http://www.w3.org/2000/01/rdf-schema#label> "proficiency"@en .
-<https://purl.org/ontology/modalia#Proficiency> <http://www.w3.org/2004/02/skos/core#definition> "Benner’s Novice to Expert\nThe five stages of proficiency in the novice to expert model are: novice, advanced beginner, competent, proficient, and expert (Benner, 1982)."@en .
+<https://purl.org/ontology/modalia#Proficiency> <http://www.w3.org/2004/02/skos/core#definition> "Benner’s Novice to Expert\r\nThe five stages of proficiency in the novice to expert model are: novice, advanced beginner, competent, proficient, and expert (Benner, 1982)."@en .
 # 
 # https://purl.org/ontology/modalia#ProprietaryLicense
 <https://purl.org/ontology/modalia#ProprietaryLicense> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
