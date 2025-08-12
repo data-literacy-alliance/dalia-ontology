@@ -8,20 +8,21 @@
 
 <https://purl.org/ontology/modalia#> rdf:type owl:Ontology ;
                                       owl:versionIRI <https://purl.org/ontology/modalia#1.0.0> ;
-                                      <http://purl.org/dc/elements/1.1/contributor> "Dr. Abdelmoneim Amer Desouki (https://orcid.org/0000-0003-2083-1277), Technical University of Darmstadt (https://ror.org/05n911h24, https://isni.org/isni/0000000109401669)" ,
-                                                                                    "Dr. Marc Fuhrmans (https://orcid.org/0000-0002-9826-018X), Technical University of Darmstadt (https://ror.org/05n911h24, https://isni.org/isni/0000000109401669)" ,
-                                                                                    "Dr. Petra C. Steiner (https://orcid.org/0000-0001-8997-2620), Technical University of Darmstadt (https://ror.org/05n911h24, https://isni.org/isni/0000000109401669)" ,
-                                                                                    "Frank Lange (https://orcid.org/0000-0002-9346-6031), RWTH Aachen University (https://ror.org/04xfq0f34, https://isni.org/isni/000000010728696X)" ;
-                                      <http://purl.org/dc/elements/1.1/creator> "BMFTR DALIA project" ;
-                                      <http://purl.org/dc/elements/1.1/description> """MoDALIA: An Ontology for Educational Material in Research Data Management (RDM) and Data Science.
+                                      <http://purl.org/dc/terms/abstract> "The aim of the DALIA project is to build a platform for learning material for research data management (RDM) and data science. The platform is based on a knowledge graph. We introduce MoDALIA, the base ontology of DALIA knowledge graph. MoDALIA inherits some modules from EduCOR. It includes also modelling of micro-credentials and certificates."@en ;
+                                      <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0003-4423-4370> ,
+                                                                             "Dr. Abdelmoneim Amer Desouki (https://orcid.org/0000-0003-2083-1277), Technical University of Darmstadt (https://ror.org/05n911h24, https://isni.org/isni/0000000109401669)" ,
+                                                                             "Dr. Marc Fuhrmans (https://orcid.org/0000-0002-9826-018X), Technical University of Darmstadt (https://ror.org/05n911h24, https://isni.org/isni/0000000109401669)" ,
+                                                                             "Dr. Petra C. Steiner (https://orcid.org/0000-0001-8997-2620), Technical University of Darmstadt (https://ror.org/05n911h24, https://isni.org/isni/0000000109401669)" ,
+                                                                             "Frank Lange (https://orcid.org/0000-0002-9346-6031), RWTH Aachen University (https://ror.org/04xfq0f34, https://isni.org/isni/000000010728696X)" ;
+                                      <http://purl.org/dc/terms/created> "2023-02-02" ;
+                                      <http://purl.org/dc/terms/creator> "BMFTR DALIA project" ;
+                                      <http://purl.org/dc/terms/description> """MoDALIA: An Ontology for Educational Material in Research Data Management (RDM) and Data Science.
 The ontology is used for making a knowledge graph as a backend to platform for teaching, personal learning, and recommendation.
 The ontology is developed in OWL in Protege 5.5.0."""@en ;
-                                      <http://purl.org/dc/elements/1.1/title> "MoDALIA Ontology"@en ;
-                                      <http://purl.org/dc/terms/abstract> "The aim of the DALIA project is to build a platform for learning material for research data management (RDM) and data science. The platform is based on a knowledge graph. We introduce MoDALIA, the base ontology of DALIA knowledge graph. MoDALIA inherits some modules from EduCOR. It includes also modelling of micro-credentials and certificates."@en ;
-                                      <http://purl.org/dc/terms/created> "2023-02-02" ;
                                       <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
                                       <http://purl.org/dc/terms/modified> "2025-08-11" ;
                                       <http://purl.org/dc/terms/publisher> "ULB TUDa – University and State Library, Technical University, Darmstadt, Germany" ;
+                                      <http://purl.org/dc/terms/title> "MoDALIA Ontology"@en ;
                                       <http://purl.org/vocab/vann/preferredNamespacePrefix> "modalia" ;
                                       <http://purl.org/vocab/vann/preferredNamespaceUri> "https://purl.org/ontology/modalia#"^^xsd:anyURI ;
                                       <http://usefulinc.com/ns/doap#bug-database> "https://git.rwth-aachen.de/dalia/dalia-ontology/-/issues"^^xsd:anyURI ;
@@ -41,29 +42,25 @@ The ontology is developed in OWL in Protege 5.5.0."""@en ;
 #    Annotation properties
 #################################################################
 
-###  http://purl.org/dc/elements/1.1/contributor
-<http://purl.org/dc/elements/1.1/contributor> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/elements/1.1/creator
-<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/elements/1.1/description
-<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/elements/1.1/title
-<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
-
-
 ###  http://purl.org/dc/terms/abstract
 <http://purl.org/dc/terms/abstract> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/created
 <http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty ;
                                    rdfs:range xsd:dateTime .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/license
@@ -78,6 +75,10 @@ The ontology is developed in OWL in Protege 5.5.0."""@en ;
 
 ###  http://purl.org/dc/terms/publisher
 <http://purl.org/dc/terms/publisher> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/vocab/vann/preferredNamespacePrefix
@@ -717,18 +718,6 @@ xsd:duration rdf:type rdfs:Datatype .
 #    Data properties
 #################################################################
 
-###  http://purl.org/dc/terms/description
-<http://purl.org/dc/terms/description> rdf:type owl:DatatypeProperty ;
-                                       rdfs:domain [ rdf:type owl:Class ;
-                                                     owl:unionOf ( <https://github.com/tibonto/educor#EducationalResource>
-                                                                   <https://github.com/tibonto/educor#KnowledgeTopic>
-                                                                   :Community
-                                                                 )
-                                                   ] ;
-                                       rdfs:range xsd:string ;
-                                       rdfs:label "description"@en .
-
-
 ###  http://purl.org/dc/terms/format
 <http://purl.org/dc/terms/format> rdf:type owl:DatatypeProperty ;
                                   rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
@@ -751,18 +740,6 @@ xsd:duration rdf:type rdfs:Datatype .
                                   rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
                                   rdfs:range xsd:string ;
                                   rdfs:label "rights"@en .
-
-
-###  http://purl.org/dc/terms/title
-<http://purl.org/dc/terms/title> rdf:type owl:DatatypeProperty ;
-                                 rdfs:domain [ rdf:type owl:Class ;
-                                               owl:unionOf ( <https://github.com/tibonto/educor#EducationalResource>
-                                                             <https://github.com/tibonto/educor#KnowledgeTopic>
-                                                             :Community
-                                                           )
-                                             ] ;
-                                 rdfs:range xsd:string ;
-                                 rdfs:label "title"@en .
 
 
 ###  http://purl.org/spar/fabio/hasSubtitle
@@ -1850,8 +1827,14 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 #    Annotations
 #################################################################
 
+<http://purl.org/dc/terms/description> rdfs:label "description"@en .
+
+
 <http://purl.org/dc/terms/license> rdfs:label "license"@en ;
                                    <http://www.w3.org/2004/02/skos/core#definition> "Property identifying the license of an Educational Resource"@en .
+
+
+<http://purl.org/dc/terms/title> rdfs:label "title"@en .
 
 
 ###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

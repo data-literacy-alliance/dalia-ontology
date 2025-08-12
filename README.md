@@ -34,6 +34,7 @@ Documentation of MoDALIA is found
 5. Install just with `pip install rust-just`
 6. Ensure the unit tests are passing locally by running `just test` or by checking the
    automated CI/CD run on the merge request
+7. Build docs with `just docs`
 
 ## Linting
 
