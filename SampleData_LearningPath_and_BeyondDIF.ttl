@@ -140,6 +140,20 @@ ex:comment1 a mo:UserComment ;
 	mo:commentUserID ex:user1 ;
 	mo:commentDate "2025-07-06"^^xsd:date .
 
+ex:review1 a schema:Review ;
+    schema:identifier "Rev123" ;
+	schema:itemReviewed <https://id.dalia.education/learning-resource/f111d6c4-d316-4161-8b06-0ec7f4181ce6> ;
+	schema:reviewBody "This learning resource does not require prior knowledge in RDM and ...." ;
+	schema:author ex:user1 ;
+	schema:datePublished "2025-07-06"^^xsd:date ;
+    schema:reviewRating [
+        a mo:FiveStarRating ;
+        schema:bestRating 5 ;
+        schema:ratingValue 4 ;
+        schema:worstRating 1 ;
+      ] .
+
+
 # Links of the EducationalResources
 #1. <a878c2d1-bf03-4045-81b4-baf2078be592>  	
 #    https://search.dalia.education/items/a878c2d1-bf03-4045-81b4-baf2078be592/train-the-trainer-concept-on-research-data-management

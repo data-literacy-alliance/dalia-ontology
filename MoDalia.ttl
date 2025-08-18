@@ -24,9 +24,9 @@
                                       dcterms:abstract "The aim of the DALIA project is to build a platform for learning material for research data management (RDM) and data science. The platform is based on a knowledge graph. We introduce MoDALIA, the base ontology of DALIA knowledge graph. MoDALIA inherits some modules from EduCOR. It includes also modelling of micro-credentials and certificates."@en ;
                                       dcterms:contributor <https://orcid.org/0000-0003-4423-4370> ,
                                                           "Dr. Abdelmoneim Amer Desouki (https://orcid.org/0000-0003-2083-1277), Technical University of Darmstadt (https://ror.org/05n911h24, https://isni.org/isni/0000000109401669)" ,
+                                                          "Dr. Charles Tapley Hoyt (https://orcid.org/0000-0003-4423-4370), RWTH Aachen University (https://ror.org/04xfq0f34, https://isni.org/isni/000000010728696X)" ,
                                                           "Dr. Marc Fuhrmans (https://orcid.org/0000-0002-9826-018X), Technical University of Darmstadt (https://ror.org/05n911h24, https://isni.org/isni/0000000109401669)" ,
                                                           "Dr. Petra C. Steiner (https://orcid.org/0000-0001-8997-2620), Technical University of Darmstadt (https://ror.org/05n911h24, https://isni.org/isni/0000000109401669)" ,
-                                                          "Dr. Charles Tapley Hoyt (https://orcid.org/0000-0003-4423-4370), RWTH Aachen University (https://ror.org/04xfq0f34, https://isni.org/isni/000000010728696X)" ,
                                                           "Frank Lange (https://orcid.org/0000-0002-9346-6031), RWTH Aachen University (https://ror.org/04xfq0f34, https://isni.org/isni/000000010728696X)" ;
                                       dcterms:created "2023-02-02" ;
                                       dcterms:creator "BMFTR DALIA project" ;
@@ -133,6 +133,14 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
 
 ###  http://www.w3.org/2004/02/skos/core#scopeNote
 skos:scopeNote rdf:type owl:AnnotationProperty .
+
+
+###  https://schema.org/bestRating
+schema:bestRating rdf:type owl:AnnotationProperty .
+
+
+###  https://schema.org/worstRating
+schema:worstRating rdf:type owl:AnnotationProperty .
 
 
 #################################################################
@@ -475,7 +483,7 @@ ec:generatedFrom rdf:type owl:ObjectProperty ;
 ###  https://purl.org/ontology/modalia#hasRating
 :hasRating rdf:type owl:ObjectProperty ;
            rdfs:domain ec:EducationalResource ;
-           rdfs:range :RatingIndicator ;
+           rdfs:range schema:Rating ;
            rdfs:label "has rating"@en .
 
 
@@ -505,7 +513,7 @@ ec:generatedFrom rdf:type owl:ObjectProperty ;
 ###  https://purl.org/ontology/modalia#hasUser
 :hasUser rdf:type owl:ObjectProperty ;
          rdfs:subPropertyOf owl:topObjectProperty ;
-         rdfs:domain :RatingIndicator ;
+         rdfs:domain schema:Rating ;
          rdfs:range :User ;
          rdfs:label "has user"@en .
 
@@ -693,6 +701,13 @@ schema:isBasedOn rdf:type owl:ObjectProperty ;
                  rdfs:range owl:Thing ;
                  rdfs:label "isBasedOn"@en ;
                  skos:prefLabel "Is based on"@en .
+
+
+###  https://schema.org/itemReviewed
+schema:itemReviewed rdf:type owl:ObjectProperty ;
+                    rdfs:domain schema:Review ;
+                    rdfs:range ec:EducationalResource ;
+                    rdfs:isDefinedBy "The item that is being reviewed/rated."@en .
 
 
 ###  https://w3id.org/citedcat-ap/continues
@@ -1000,6 +1015,26 @@ schema:keywords rdf:type owl:DatatypeProperty ;
                 rdfs:range xsd:string ;
                 rdfs:comment "Keywords or tags used to describe some item."@en ;
                 rdfs:label "keywords"@en .
+
+
+###  https://schema.org/ratingValue
+schema:ratingValue rdf:type owl:DatatypeProperty ;
+                   rdfs:label "rating value" .
+
+
+###  https://schema.org/reviewBody
+schema:reviewBody rdf:type owl:DatatypeProperty ;
+                  rdfs:domain schema:Review ;
+                  rdfs:range xsd:string ;
+                  rdfs:label "review body"@en .
+
+
+###  https://schema.org/reviewRating
+schema:reviewRating rdf:type owl:DatatypeProperty ;
+                    rdfs:domain schema:Review ;
+                    rdfs:isDefinedBy "The rating given in this review. Note that reviews can themselves be rated. The reviewRating applies to rating given by the review."@en ;
+                    rdfs:label "review rating"@en ;
+                    skos:definition "rating according to the reviewer of the OER"@en .
 
 
 ###  https://schema.org/teaches
@@ -1319,6 +1354,15 @@ ec:Recommendation rdf:type owl:Class ;
                   skos:definition "The educational level of a user: Bachlors, Masters or PhD"@en .
 
 
+###  https://purl.org/ontology/modalia#FiveStarRating
+:FiveStarRating rdf:type owl:Class ;
+                rdfs:subClassOf schema:Rating ;
+                rdfs:label "five star rating"@en ;
+                skos:definition "Standard five star rating, min value 1 maximum 5"@en ;
+                schema:bestRating 5 ;
+                schema:worstRating 1 .
+
+
 ###  https://purl.org/ontology/modalia#FreeLicense
 :FreeLicense rdf:type owl:Class ;
              rdfs:subClassOf :License ;
@@ -1501,12 +1545,6 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
           skos:definition "Topic related to research data management"@en .
 
 
-###  https://purl.org/ontology/modalia#RatingIndicator
-:RatingIndicator rdf:type owl:Class ;
-                 rdfs:label "rating indicator"@en ;
-                 skos:definition "Is a URI that relates a User and an OER and have predicate schema:rating" .
-
-
 ###  https://purl.org/ontology/modalia#Researcher
 :Researcher rdf:type owl:Class ;
             rdfs:subClassOf :TargetGroup ;
@@ -1660,6 +1698,18 @@ schema:PresentationDigitalDocument rdf:type owl:Class ;
                                    rdfs:comment "A presentation / slides file."@en ;
                                    rdfs:label "Presentation"@en ;
                                    skos:prefLabel "Presentation"@en .
+
+
+###  https://schema.org/Rating
+schema:Rating rdf:type owl:Class ;
+              rdfs:isDefinedBy "A rating is an evaluation on a numeric scale, such as 1 to 5 stars."@en ;
+              rdfs:label "rating indicator"@en .
+
+
+###  https://schema.org/Review
+schema:Review rdf:type owl:Class ;
+              rdfs:isDefinedBy "A review of an item - for example, of a restaurant, movie, or store."@en ;
+              rdfs:label "Review"@en .
 
 
 ###  https://schema.org/SoftwareSourceCode
@@ -1841,4 +1891,4 @@ m4i:Sponsor rdf:type owl:NamedIndividual ,
              rdfs:label "proprietary license"@en .
 
 
-###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
