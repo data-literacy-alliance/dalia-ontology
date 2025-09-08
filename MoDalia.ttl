@@ -15,6 +15,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix orcid: <https://orcid.org/> .
 @prefix schema: <https://schema.org/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @base <https://purl.org/ontology/modalia#> .
@@ -92,6 +93,10 @@ dcterms:modified rdf:type owl:AnnotationProperty .
 
 ###  http://purl.org/dc/terms/publisher
 dcterms:publisher rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/source
+dcterms:source rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/title
@@ -266,8 +271,19 @@ dcterms:replaces rdf:type owl:ObjectProperty ;
 rec:recommender rdf:type owl:ObjectProperty ;
                 rdfs:domain ec:EducationalResource ;
                 rdfs:range :Community ;
+                dcterms:description "A community which provides the recommendation of the OER. In the context of DIF, the recommending community is the organization or institution or project or body or online group which recommends the OER." ;
                 rdfs:label "recommender"@en ;
                 skos:definition "Associated community(ies) of the resource who are either the supporting organization/institution, or the recommender, or both.  Here indicates recommender"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource rec:recommender ;
+   owl:annotatedProperty dcterms:description ;
+   owl:annotatedTarget "A community which provides the recommendation of the OER. In the context of DIF, the recommending community is the organization or institution or project or body or online group which recommends the OER." ;
+   dcterms:contributor <https://orcid.org/0000-0001-8997-2620> ,
+                       <https://orcid.org/0000-0002-0452-7075> ;
+   dcterms:source "DIF1.3" ,
+                  "recommendationontology"
+ ] .
 
 
 ###  http://purl.org/spar/fabio/hasDiscipline
