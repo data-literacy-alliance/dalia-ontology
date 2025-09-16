@@ -35,7 +35,7 @@
 The ontology is used for making a knowledge graph as a backend to platform for teaching, personal learning, and recommendation.
 The ontology is developed in OWL in Protege 5.5.0."""@en ;
                                       dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
-                                      dcterms:modified "2025-08-11" ;
+                                      dcterms:modified "2025-09-16" ;
                                       dcterms:publisher "ULB TUDa – University and State Library, Technical University, Darmstadt, Germany" ;
                                       dcterms:title "MoDALIA Ontology"@en ;
                                       vann:preferredNamespacePrefix "modalia" ;
@@ -1035,6 +1035,8 @@ schema:keywords rdf:type owl:DatatypeProperty ;
 
 ###  https://schema.org/ratingValue
 schema:ratingValue rdf:type owl:DatatypeProperty ;
+                   rdfs:domain schema:Rating ;
+                   rdfs:range xsd:integer ;
                    rdfs:label "rating value" .
 
 
@@ -1048,6 +1050,7 @@ schema:reviewBody rdf:type owl:DatatypeProperty ;
 ###  https://schema.org/reviewRating
 schema:reviewRating rdf:type owl:DatatypeProperty ;
                     rdfs:domain schema:Review ;
+                    rdfs:range xsd:integer ;
                     rdfs:isDefinedBy "The rating given in this review. Note that reviews can themselves be rated. The reviewRating applies to rating given by the review."@en ;
                     rdfs:label "review rating"@en ;
                     skos:definition "rating according to the reviewer of the OER"@en .
@@ -1099,7 +1102,7 @@ schema:version rdf:type owl:DatatypeProperty ;
 ###  http://edamontology.org/data_0006
 <http://edamontology.org/data_0006> rdf:type owl:Class ;
                                     rdfs:isDefinedBy "Kind of data being managed"@en ;
-                                    rdfs:label "Data"@en .
+                                    rdfs:label "data"@en .
 
 
 ###  http://id.loc.gov/ontologies/bibframe/Contribution
@@ -1110,7 +1113,7 @@ bf:Contribution rdf:type owl:Class ;
 ###  http://lexvo.org/ontology#Language
 <http://lexvo.org/ontology#Language> rdf:type owl:Class ;
                                      rdfs:isDefinedBy "Natural language"@en ;
-                                     rdfs:label "Language"@en ;
+                                     rdfs:label "language"@en ;
                                      rdfs:seeAlso "https://www.wikidata.org/wiki/Q315"@en .
 
 
@@ -1140,14 +1143,14 @@ bf:Contribution rdf:type owl:Class ;
 bibo:Article rdf:type owl:Class ;
              rdfs:subClassOf :LearningResourceType ;
              rdfs:comment "Class representing OERs that are articles (e.g academic article)"@en ;
-             rdfs:label "Article"@en ;
+             rdfs:label "article"@en ;
              skos:prefLabel "Article"@en .
 
 
 ###  http://purl.org/ontology/bibo/Book
 bibo:Book rdf:type owl:Class ;
           rdfs:subClassOf :LearningResourceType ;
-          rdfs:label "Book"@en ;
+          rdfs:label "book"@en ;
           skos:definition "Class representing OER which is a book."@en ;
           skos:prefLabel "Book"@en .
 
@@ -1155,42 +1158,42 @@ bibo:Book rdf:type owl:Class ;
 ###  http://purl.org/ontology/bibo/Report
 bibo:Report rdf:type owl:Class ;
             rdfs:subClassOf :LearningResourceType ;
-            rdfs:label "Report"@en ;
+            rdfs:label "report"@en ;
             skos:prefLabel "Report"@en .
 
 
 ###  http://purl.org/ontology/bibo/Thesis
 bibo:Thesis rdf:type owl:Class ;
             rdfs:subClassOf :LearningResourceType ;
-            rdfs:label "Thesis"@en ;
+            rdfs:label "thesis"@en ;
             skos:prefLabel "Thesis"@en .
 
 
 ###  http://purl.org/ontology/bibo/Webpage
 bibo:Webpage rdf:type owl:Class ;
              rdfs:subClassOf :LearningResourceType ;
-             rdfs:label "Webpage"@en ;
+             rdfs:label "webpage"@en ;
              skos:prefLabel "Web page"@en .
 
 
 ###  http://semanticscience.org/resource/SIO_000776
 <http://semanticscience.org/resource/SIO_000776> rdf:type owl:Class ;
                                                  rdfs:isDefinedBy "an object that is described (chemical substance, living organism, building, ...)"@en ;
-                                                 rdfs:label "Object"@en ;
+                                                 rdfs:label "object"@en ;
                                                  skos:example "mouse cells"@en .
 
 
 ###  http://w3id.org/nfdi4ing/metadata4ing#Method
 m4i:Method rdf:type owl:Class ;
            rdfs:isDefinedBy "a method with which data was obtained"@en ;
-           rdfs:label "Research Method"@en ;
+           rdfs:label "research method"@en ;
            skos:example "bioassay, microscopy, measurement"@en .
 
 
 ###  http://w3id.org/nfdi4ing/metadata4ing#Tool
 m4i:Tool rdf:type owl:Class ;
          rdfs:isDefinedBy "a tool with which data was obtained (microscope, sensor, ...)"@en ;
-         rdfs:label "Tool"@en .
+         rdfs:label "tool"@en .
 
 
 ###  http://www.w3.org/1999/02/22-rdf-syntax-ns#List
@@ -1208,7 +1211,7 @@ ec:EducationalResource rdf:type owl:Class ;
 ec:KnowledgeTopic rdf:type owl:Class ;
                   owl:disjointWith :Skill ;
                   rdfs:isDefinedBy "A single node representing a learning module based on the domain ontology. It contains all the learning material for the specific learning module."@en ;
-                  rdfs:label "KnowledgeTopic"@en ;
+                  rdfs:label "knowledge topic"@en ;
                   rdfs:seeAlso "https://w3id.org/ccso/ccso#Topic"@en ;
                   skos:example "A knowledge topic can be the “Quadratic equations” in the domain of Mathematics Algebra"@en .
 
@@ -1217,7 +1220,7 @@ ec:KnowledgeTopic rdf:type owl:Class ;
 ec:LearningPreference rdf:type owl:Class ;
                       rdfs:comment "It is based on the theory which identifies four learning styles (visual, auditory, reading, and kinesthetic)."@en ;
                       rdfs:isDefinedBy "The learning preference of the user based on the learning styles theory"@en ;
-                      rdfs:label "LearningPreference"@en ;
+                      rdfs:label "learning preference"@en ;
                       skos:example "Visual"@en .
 
 
@@ -1225,7 +1228,7 @@ ec:LearningPreference rdf:type owl:Class ;
 ec:Recommendation rdf:type owl:Class ;
                   rdfs:comment "The recommendation in advanced systems can also be an action (take a small break), an exercise, a knowledge topic, a skill, or a learning path"@en ;
                   rdfs:isDefinedBy "The output of the recommendation system algorithm. The system that reads user profile, content information, ratings and any available rules, in order to generate a meaningful recommendation."@en ;
-                  rdfs:label "Recommendation"@en ;
+                  rdfs:label "recommendation"@en ;
                   skos:example "The recommendation is \"Quadratic Equation\""@en .
 
 
@@ -1300,7 +1303,7 @@ ec:Recommendation rdf:type owl:Class ;
                  rdfs:label "content provider"@en ;
                  rdfs:seeAlso "https://bibfra.me/view/rare/lite/provider" ;
                  skos:definition "a person or group who is providing OER"@en ;
-                 skos:prefLabel "content provider"@en .
+                 skos:prefLabel "Content Provider"@en .
 
 
 ###  https://purl.org/ontology/modalia#ContentQuality
@@ -1312,6 +1315,11 @@ ec:Recommendation rdf:type owl:Class ;
 
 ###  https://purl.org/ontology/modalia#Contributor
 :Contributor rdf:type owl:Class ;
+             owl:equivalentClass [ rdf:type owl:Class ;
+                                   owl:unionOf ( schema:Organization
+                                                 schema:Person
+                                               )
+                                 ] ;
              rdfs:comment "Contributed to OER with some contribution type"@en ;
              rdfs:label "contributor"@en .
 
@@ -1465,7 +1473,7 @@ ec:Recommendation rdf:type owl:Class ;
            rdfs:subClassOf :MediaType ;
            rdfs:label "multipart"@en ;
            skos:definition "If the resource consists of more than one item with different DOIs, the MediaType is \"multipart\" and the relations are provided in the field \"RelatedWork\"."@en ;
-           skos:prefLabel "multipart"@en .
+           skos:prefLabel "Multipart"@en .
 
 
 ###  https://purl.org/ontology/modalia#MuseumProfessional
@@ -1681,7 +1689,7 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 schema:AudioObject rdf:type owl:Class ;
                    rdfs:subClassOf :MediaType ;
                    rdfs:comment "A class representing OERs which are audio files."@en ;
-                   rdfs:label "Audio"@en ;
+                   rdfs:label "audio"@en ;
                    skos:prefLabel "Audio"@en .
 
 
@@ -1689,21 +1697,28 @@ schema:AudioObject rdf:type owl:Class ;
 schema:ImageObject rdf:type owl:Class ;
                    rdfs:subClassOf :MediaType ;
                    rdfs:comment "An image file."@en ;
-                   rdfs:label "Image"@en ;
+                   rdfs:label "image"@en ;
                    skos:prefLabel "Image"@en .
 
 
 ###  https://schema.org/Organization
 schema:Organization rdf:type owl:Class ;
                     rdfs:isDefinedBy "An organization such as a school (including Universities), NGO, corporation, club, etc."@en ;
-                    rdfs:label "Organization" ;
+                    rdfs:label "organization"@en ;
                     rdfs:seeAlso <http://xmlns.com/foaf/0.1/Organization> .
+
+
+###  https://schema.org/Person
+schema:Person rdf:type owl:Class ;
+              rdfs:comment "can be author or contributor"@en ;
+              rdfs:isDefinedBy "A person (alive, dead, undead, or fictional)."@en ;
+              rdfs:label "person"@en .
 
 
 ###  https://schema.org/PodcastSeries
 schema:PodcastSeries rdf:type owl:Class ;
                      rdfs:subClassOf :LearningResourceType ;
-                     rdfs:label "Podcast Series"@en ;
+                     rdfs:label "podcast series"@en ;
                      skos:definition "A podcast is an episodic series of digital audio or video files which a user can download and listen to."@en ;
                      skos:prefLabel "Podcast Series"@en .
 
@@ -1712,7 +1727,7 @@ schema:PodcastSeries rdf:type owl:Class ;
 schema:PresentationDigitalDocument rdf:type owl:Class ;
                                    rdfs:subClassOf :MediaType ;
                                    rdfs:comment "A presentation / slides file."@en ;
-                                   rdfs:label "Presentation"@en ;
+                                   rdfs:label "presentation"@en ;
                                    skos:prefLabel "Presentation"@en .
 
 
@@ -1725,14 +1740,14 @@ schema:Rating rdf:type owl:Class ;
 ###  https://schema.org/Review
 schema:Review rdf:type owl:Class ;
               rdfs:isDefinedBy "A review of an item - for example, of a restaurant, movie, or store."@en ;
-              rdfs:label "Review"@en .
+              rdfs:label "review"@en .
 
 
 ###  https://schema.org/SoftwareSourceCode
 schema:SoftwareSourceCode rdf:type owl:Class ;
                           rdfs:subClassOf :LearningResourceType ;
                           rdfs:comment "Computer programming source code. Example: Full (compile ready) solutions, code snippet samples, scripts, templates."@en ;
-                          rdfs:label "Software Source Code"@en ;
+                          rdfs:label "software source code"@en ;
                           skos:prefLabel "Software Source Code"@en .
 
 
@@ -1740,7 +1755,7 @@ schema:SoftwareSourceCode rdf:type owl:Class ;
 schema:Text rdf:type owl:Class ;
             rdfs:subClassOf :MediaType ;
             rdfs:comment "Class representing OER which are text."@en ;
-            rdfs:label "Text"@en ;
+            rdfs:label "text"@en ;
             skos:prefLabel "Text"@en .
 
 
@@ -1748,7 +1763,7 @@ schema:Text rdf:type owl:Class ;
 schema:VideoObject rdf:type owl:Class ;
                    rdfs:subClassOf :MediaType ;
                    rdfs:comment "A video file."@en ;
-                   rdfs:label "Video"@en ;
+                   rdfs:label "video"@en ;
                    skos:prefLabel "Video"@en .
 
 
@@ -1756,7 +1771,7 @@ schema:VideoObject rdf:type owl:Class ;
 hcrt:assessment rdf:type owl:Class ;
                 rdfs:subClassOf :LearningResourceType ;
                 rdfs:comment "Class representing OERs that are in form of assessment of knowledge."@en ;
-                rdfs:label "Assessment"@en ;
+                rdfs:label "assessment"@en ;
                 skos:prefLabel "Assessment"@en .
 
 
@@ -1764,7 +1779,7 @@ hcrt:assessment rdf:type owl:Class ;
 hcrt:case_study rdf:type owl:Class ;
                 rdfs:subClassOf :LearningResourceType ;
                 rdfs:comment "Class representing OERs that are in form of case study."@en ;
-                rdfs:label "CaseStudy"@en ;
+                rdfs:label "case study"@en ;
                 skos:prefLabel "Case Study"@en .
 
 
@@ -1772,7 +1787,7 @@ hcrt:case_study rdf:type owl:Class ;
 hcrt:diagram rdf:type owl:Class ;
              rdfs:subClassOf :LearningResourceType ;
              rdfs:comment "Class representing an OER that is a diagram"@en ;
-             rdfs:label "Diagram"@en ;
+             rdfs:label "diagram"@en ;
              skos:prefLabel "Diagram"@en .
 
 
@@ -1780,21 +1795,23 @@ hcrt:diagram rdf:type owl:Class ;
 hcrt:educational_game rdf:type owl:Class ;
                       rdfs:subClassOf :LearningResourceType ;
                       rdfs:comment "Class representing OERs that are in form of educational games."@en ;
-                      rdfs:label "Educational Game"@en .
+                      rdfs:label "educational game"@en ;
+                      skos:prefLabel "Educational Game"@en .
 
 
 ###  https://w3id.org/kim/hcrt/experiment
 hcrt:experiment rdf:type owl:Class ;
                 rdfs:subClassOf :LearningResourceType ;
                 rdfs:comment "Class representing OERs that are describing an experiment"@en ;
-                rdfs:label "Experiment"@en .
+                rdfs:label "experiment"@en ;
+                skos:prefLabel "Experiment"@en .
 
 
 ###  https://w3id.org/kim/hcrt/index
 hcrt:index rdf:type owl:Class ;
            rdfs:subClassOf :LearningResourceType ;
-           rdfs:label "Index"@en ,
-                      "Nachschlagewerk"@de ;
+           rdfs:label "Nachschlagewerk"@de ,
+                      "index"@en ;
            skos:example "glossary, encyclopedia, dictionary"@en ;
            skos:prefLabel "Reference Work"@en ;
            skos:scopeNote "zum Beispiel Glossar, Enzyklopädie, Lexikonzum Beispiel Glossar, Enzyklopädie, Lexikon"@de .
@@ -1809,7 +1826,7 @@ hcrt:other rdf:type owl:Class ;
 ###  https://w3id.org/kim/hcrt/simulation
 hcrt:simulation rdf:type owl:Class ;
                 rdfs:subClassOf :LearningResourceType ;
-                rdfs:label "Simulation"@en ;
+                rdfs:label "simulation"@en ;
                 skos:prefLabel "Simulation"@en .
 
 
