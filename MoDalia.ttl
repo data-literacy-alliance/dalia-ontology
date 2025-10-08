@@ -35,7 +35,7 @@
 The ontology is used for making a knowledge graph as a backend to platform for teaching, personal learning, and recommendation.
 The ontology is developed in OWL in Protege 5.5.0."""@en ;
                                       dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
-                                      dcterms:modified "2025-09-16" ;
+                                      dcterms:modified "2025-10-08" ;
                                       dcterms:publisher "ULB TUDa – University and State Library, Technical University, Darmstadt, Germany" ;
                                       dcterms:title "MoDALIA Ontology"@en ;
                                       vann:preferredNamespacePrefix "modalia" ;
@@ -164,14 +164,6 @@ xsd:duration rdf:type rdfs:Datatype .
 #    Object Properties
 #################################################################
 
-###  http://bibfra.me/vocab/relation/supportinghost
-<http://bibfra.me/vocab/relation/supportinghost> rdf:type owl:ObjectProperty ;
-                                                 rdfs:domain ec:EducationalResource ;
-                                                 rdfs:range :Community ;
-                                                 rdfs:label "supportinghost"@en ;
-                                                 skos:definition "Associated community(ies) of the resource who are either the supporting organization/institution, or the recommender, or both. Here indicates supporting."@en .
-
-
 ###  http://id.loc.gov/ontologies/bibframe/agent
 bf:agent rdf:type owl:ObjectProperty ;
          rdfs:domain bf:Contribution ;
@@ -265,25 +257,6 @@ dcterms:replaces rdf:type owl:ObjectProperty ;
                  rdfs:range ec:EducationalResource ;
                  rdfs:label "replaces"@en ;
                  skos:prefLabel "Replaces"@en .
-
-
-###  http://purl.org/ontology/rec/core#recommender
-rec:recommender rdf:type owl:ObjectProperty ;
-                rdfs:domain ec:EducationalResource ;
-                rdfs:range :Community ;
-                dcterms:description "A community which provides the recommendation of the OER. In the context of DIF, the recommending community is the organization or institution or project or body or online group which recommends the OER." ;
-                rdfs:label "recommender"@en ;
-                skos:definition "Associated community(ies) of the resource who are either the supporting organization/institution, or the recommender, or both.  Here indicates recommender"@en .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource rec:recommender ;
-   owl:annotatedProperty dcterms:description ;
-   owl:annotatedTarget "A community which provides the recommendation of the OER. In the context of DIF, the recommending community is the organization or institution or project or body or online group which recommends the OER." ;
-   dcterms:contributor <https://orcid.org/0000-0001-8997-2620> ,
-                       <https://orcid.org/0000-0002-0452-7075> ;
-   dcterms:source "DIF1.3" ,
-                  "recommendationontology"
- ] .
 
 
 ###  http://purl.org/spar/fabio/hasDiscipline
@@ -647,6 +620,25 @@ ec:generatedFrom rdf:type owl:ObjectProperty ;
                rdfs:label "prerequisites"@en .
 
 
+###  https://purl.org/ontology/modalia#recommender
+:recommender rdf:type owl:ObjectProperty ;
+             rdfs:domain ec:EducationalResource ;
+             rdfs:range :Community ;
+             dcterms:description "A community which provides the recommendation of the OER. In the context of DIF, the recommending community is the organization or institution or project or body or online group which recommends the OER." ;
+             rdfs:label "recommender"@en ;
+             skos:definition "Associated community(ies) of the resource who are either the supporting organization/institution, or the recommender, or both.  Here indicates recommender"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :recommender ;
+   owl:annotatedProperty dcterms:description ;
+   owl:annotatedTarget "A community which provides the recommendation of the OER. In the context of DIF, the recommending community is the organization or institution or project or body or online group which recommends the OER." ;
+   dcterms:contributor <https://orcid.org/0000-0001-8997-2620> ,
+                       <https://orcid.org/0000-0002-0452-7075> ;
+   dcterms:source "DIF1.3" ,
+                  "recommendationontology"
+ ] .
+
+
 ###  https://purl.org/ontology/modalia#requiresKnowledge
 :requiresKnowledge rdf:type owl:ObjectProperty ;
                    rdfs:domain :Skill ;
@@ -665,11 +657,19 @@ ec:generatedFrom rdf:type owl:ObjectProperty ;
 :solves rdf:type owl:ObjectProperty ;
         rdfs:domain :User ;
         rdfs:range [ rdf:type owl:Class ;
-                     owl:unionOf ( :Questionnaire
-                                   hcrt:assessment
+                     owl:unionOf ( hcrt:assessment
+                                   hcrt:questionnaire
                                  )
                    ] ;
         rdfs:label "solves"@en .
+
+
+###  https://purl.org/ontology/modalia#supportinghost
+:supportinghost rdf:type owl:ObjectProperty ;
+                rdfs:domain ec:EducationalResource ;
+                rdfs:range :Community ;
+                rdfs:label "supportinghost"@en ;
+                skos:definition "Associated community(ies) of the resource who are either the supporting organization/institution, or the recommender, or both. Here indicates supporting."@en .
 
 
 ###  https://purl.org/ontology/modalia#teachesSkill
@@ -1176,6 +1176,14 @@ bibo:Webpage rdf:type owl:Class ;
              skos:prefLabel "Web page"@en .
 
 
+###  http://purl.org/ontology/bibo/Workshop
+bibo:Workshop rdf:type owl:Class ;
+              rdfs:subClassOf :LearningResourceType ;
+              rdfs:isDefinedBy "A seminar, discussion group, or the like, that emphasizes zxchange of ideas and the demonstration and application of techniques, skills, etc."@en ;
+              rdfs:label "workshop"@en ;
+              skos:prefLabel "workshop"@en .
+
+
 ###  http://semanticscience.org/resource/SIO_000776
 <http://semanticscience.org/resource/SIO_000776> rdf:type owl:Class ;
                                                  rdfs:isDefinedBy "an object that is described (chemical substance, living organism, building, ...)"@en ;
@@ -1499,6 +1507,13 @@ ec:Recommendation rdf:type owl:Class ;
            skos:definition "First phase in data life cycle. Description of the data that will be compiled."@en .
 
 
+###  https://purl.org/ontology/modalia#Podcast
+:Podcast rdf:type owl:Class ;
+         rdfs:subClassOf :LearningResourceType ;
+         rdfs:label "podcast"@en ;
+         skos:definition "The learning resource type podcast is an episodic series of digital audio or video files or an episode of that, which a user can download and listen to."@en .
+
+
 ###  https://purl.org/ontology/modalia#Poster
 :Poster rdf:type owl:Class ;
         rdfs:subClassOf :LearningResourceType ;
@@ -1532,13 +1547,6 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 :ProprietaryLicense rdf:type owl:Class ;
                     rdfs:subClassOf :License ;
                     rdfs:label "proprietary license"@en .
-
-
-###  https://purl.org/ontology/modalia#Questionnaire
-:Questionnaire rdf:type owl:Class ;
-               rdfs:subClassOf :LearningResourceType ;
-               rdfs:label "questionnaire"@en ;
-               skos:prefLabel "questionnaire"@en .
 
 
 ###  https://purl.org/ontology/modalia#RDMResource
@@ -1678,13 +1686,6 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
             skos:definition "Visual learning (pictures, movies, diagrams)"@en .
 
 
-###  https://purl.org/ontology/modalia#Workshop
-:Workshop rdf:type owl:Class ;
-          rdfs:subClassOf :LearningResourceType ;
-          rdfs:label "workshop"@en ;
-          skos:prefLabel "workshop"@en .
-
-
 ###  https://schema.org/AudioObject
 schema:AudioObject rdf:type owl:Class ;
                    rdfs:subClassOf :MediaType ;
@@ -1713,6 +1714,12 @@ schema:Person rdf:type owl:Class ;
               rdfs:comment "can be author or contributor"@en ;
               rdfs:isDefinedBy "A person (alive, dead, undead, or fictional)."@en ;
               rdfs:label "person"@en .
+
+
+###  https://schema.org/PodcastEpisode
+schema:PodcastEpisode rdf:type owl:Class ;
+                      rdfs:subClassOf :LearningResourceType ;
+                      rdfs:label "podcast episode"@en .
 
 
 ###  https://schema.org/PodcastSeries
@@ -1767,6 +1774,13 @@ schema:VideoObject rdf:type owl:Class ;
                    skos:prefLabel "Video"@en .
 
 
+###  https://w3id.org/kim/hcrt/application
+hcrt:application rdf:type owl:Class ;
+                 rdfs:subClassOf :LearningResourceType ;
+                 rdfs:label "application"@en ;
+                 skos:prefLabel "Application"@en .
+
+
 ###  https://w3id.org/kim/hcrt/assessment
 hcrt:assessment rdf:type owl:Class ;
                 rdfs:subClassOf :LearningResourceType ;
@@ -1783,12 +1797,33 @@ hcrt:case_study rdf:type owl:Class ;
                 skos:prefLabel "Case Study"@en .
 
 
+###  https://w3id.org/kim/hcrt/course
+hcrt:course rdf:type owl:Class ;
+            rdfs:subClassOf :LearningResourceType ;
+            rdfs:label "course"@en ;
+            skos:prefLabel "Course"@en .
+
+
+###  https://w3id.org/kim/hcrt/data
+hcrt:data rdf:type owl:Class ;
+          rdfs:subClassOf :LearningResourceType ;
+          rdfs:label "data"@en ;
+          skos:prefLabel "Data"@en .
+
+
 ###  https://w3id.org/kim/hcrt/diagram
 hcrt:diagram rdf:type owl:Class ;
              rdfs:subClassOf :LearningResourceType ;
              rdfs:comment "Class representing an OER that is a diagram"@en ;
              rdfs:label "diagram"@en ;
              skos:prefLabel "Diagram"@en .
+
+
+###  https://w3id.org/kim/hcrt/drill_and_practice
+hcrt:drill_and_practice rdf:type owl:Class ;
+                        rdfs:subClassOf :LearningResourceType ;
+                        rdfs:label "drill_and_practice"@en ;
+                        skos:prefLabel "Drill and practice"@en .
 
 
 ###  https://w3id.org/kim/hcrt/educational_game
@@ -1817,10 +1852,52 @@ hcrt:index rdf:type owl:Class ;
            skos:scopeNote "zum Beispiel Glossar, Enzyklopädie, Lexikonzum Beispiel Glossar, Enzyklopädie, Lexikon"@de .
 
 
+###  https://w3id.org/kim/hcrt/lesson_plan
+hcrt:lesson_plan rdf:type owl:Class ;
+                 rdfs:subClassOf :LearningResourceType ;
+                 rdfs:label "lesson_plan"@en ;
+                 skos:prefLabel "Lesson_plan"@en .
+
+
+###  https://w3id.org/kim/hcrt/map
+hcrt:map rdf:type owl:Class ;
+         rdfs:subClassOf :LearningResourceType ;
+         rdfs:label "map"@en ;
+         skos:prefLabel "Map"@en .
+
+
 ###  https://w3id.org/kim/hcrt/other
 hcrt:other rdf:type owl:Class ;
            rdfs:subClassOf :LearningResourceType ;
-           rdfs:label "Other resource type"@en .
+           rdfs:label "other resource type"@en .
+
+
+###  https://w3id.org/kim/hcrt/portal
+hcrt:portal rdf:type owl:Class ;
+            rdfs:subClassOf :LearningResourceType ;
+            rdfs:label "portal"@en ;
+            skos:prefLabel "Portal"@en .
+
+
+###  https://w3id.org/kim/hcrt/questionnaire
+hcrt:questionnaire rdf:type owl:Class ;
+                   rdfs:subClassOf :LearningResourceType ;
+                   rdfs:label "questionnaire"@en ;
+                   skos:prefLabel "questionnaire"@en .
+
+
+###  https://w3id.org/kim/hcrt/script
+hcrt:script rdf:type owl:Class ;
+            rdfs:subClassOf :LearningResourceType ;
+            rdfs:label "script"@en ;
+            skos:prefLabel "Script"@en .
+
+
+###  https://w3id.org/kim/hcrt/sheet_music
+hcrt:sheet_music rdf:type owl:Class ;
+                 rdfs:subClassOf :LearningResourceType ;
+                 rdfs:label "sheet_music"@en ;
+                 skos:prefLabel "Sheet_music"@en .
 
 
 ###  https://w3id.org/kim/hcrt/simulation
@@ -1828,6 +1905,20 @@ hcrt:simulation rdf:type owl:Class ;
                 rdfs:subClassOf :LearningResourceType ;
                 rdfs:label "simulation"@en ;
                 skos:prefLabel "Simulation"@en .
+
+
+###  https://w3id.org/kim/hcrt/textbook
+hcrt:textbook rdf:type owl:Class ;
+              rdfs:subClassOf :LearningResourceType ;
+              rdfs:label "textbook"@en ;
+              skos:prefLabel "Textbook"@en .
+
+
+###  https://w3id.org/kim/hcrt/worksheet
+hcrt:worksheet rdf:type owl:Class ;
+               rdfs:subClassOf :LearningResourceType ;
+               rdfs:label "worksheet"@en ;
+               skos:prefLabel "Worksheet"@en .
 
 
 #################################################################
@@ -1838,6 +1929,12 @@ hcrt:simulation rdf:type owl:Class ;
 m4i:ContactPerson rdf:type owl:NamedIndividual ,
                            :ContributorRole ;
                   rdfs:label "contact person"@en .
+
+
+###  http://w3id.org/nfdi4ing/metadata4ing#DataCollector
+m4i:DataCollector rdf:type owl:NamedIndividual ,
+                           :ContributorRole ;
+                  rdfs:label "datacollector role"@en .
 
 
 ###  http://w3id.org/nfdi4ing/metadata4ing#DataCurator
@@ -1852,10 +1949,106 @@ m4i:DataManager rdf:type owl:NamedIndividual ,
                 rdfs:label "data manager role"@en .
 
 
+###  http://w3id.org/nfdi4ing/metadata4ing#Distributor
+m4i:Distributor rdf:type owl:NamedIndividual ,
+                         :ContributorRole ;
+                rdfs:label "distributor role"@en .
+
+
+###  http://w3id.org/nfdi4ing/metadata4ing#Editor
+m4i:Editor rdf:type owl:NamedIndividual ,
+                    :ContributorRole ;
+           rdfs:label "editor role"@en .
+
+
+###  http://w3id.org/nfdi4ing/metadata4ing#HostingInstitution
+m4i:HostingInstitution rdf:type owl:NamedIndividual ,
+                                :ContributorRole ;
+                       rdfs:label "hostinginstitution role"@en .
+
+
+###  http://w3id.org/nfdi4ing/metadata4ing#OtherPerson
+m4i:OtherPerson rdf:type owl:NamedIndividual ,
+                         :ContributorRole ;
+                rdfs:label "otherperson role"@en .
+
+
+###  http://w3id.org/nfdi4ing/metadata4ing#Producer
+m4i:Producer rdf:type owl:NamedIndividual ,
+                      :ContributorRole ;
+             rdfs:label "producer role"@en .
+
+
+###  http://w3id.org/nfdi4ing/metadata4ing#ProjectLeader
+m4i:ProjectLeader rdf:type owl:NamedIndividual ,
+                           :ContributorRole ;
+                  rdfs:label "projectleader role"@en .
+
+
+###  http://w3id.org/nfdi4ing/metadata4ing#ProjectManager
+m4i:ProjectManager rdf:type owl:NamedIndividual ,
+                            :ContributorRole ;
+                   rdfs:label "projectmanager role"@en .
+
+
+###  http://w3id.org/nfdi4ing/metadata4ing#ProjectMember
+m4i:ProjectMember rdf:type owl:NamedIndividual ,
+                           :ContributorRole ;
+                  rdfs:label "projectmember role"@en .
+
+
+###  http://w3id.org/nfdi4ing/metadata4ing#RegistrationAgency
+m4i:RegistrationAgency rdf:type owl:NamedIndividual ,
+                                :ContributorRole ;
+                       rdfs:label "registrationagency role"@en .
+
+
+###  http://w3id.org/nfdi4ing/metadata4ing#RegistrationAuthority
+m4i:RegistrationAuthority rdf:type owl:NamedIndividual ,
+                                   :ContributorRole ;
+                          rdfs:label "registrationauthority role"@en .
+
+
+###  http://w3id.org/nfdi4ing/metadata4ing#RelatedPerson
+m4i:RelatedPerson rdf:type owl:NamedIndividual ,
+                           :ContributorRole ;
+                  rdfs:label "relatedperson role"@en .
+
+
+###  http://w3id.org/nfdi4ing/metadata4ing#ResearchGroup
+m4i:ResearchGroup rdf:type owl:NamedIndividual ,
+                           :ContributorRole ;
+                  rdfs:label "researchgroup role"@en .
+
+
+###  http://w3id.org/nfdi4ing/metadata4ing#Researcher
+m4i:Researcher rdf:type owl:NamedIndividual ,
+                        :ContributorRole ;
+               rdfs:label "researcher role"@en .
+
+
+###  http://w3id.org/nfdi4ing/metadata4ing#RightsHolder
+m4i:RightsHolder rdf:type owl:NamedIndividual ,
+                          :ContributorRole ;
+                 rdfs:label "rightsholder role"@en .
+
+
 ###  http://w3id.org/nfdi4ing/metadata4ing#Sponsor
 m4i:Sponsor rdf:type owl:NamedIndividual ,
                      :ContributorRole ;
             rdfs:label "sponsor role"@en .
+
+
+###  http://w3id.org/nfdi4ing/metadata4ing#Supervisor
+m4i:Supervisor rdf:type owl:NamedIndividual ,
+                        :ContributorRole ;
+               rdfs:label "supervisor role"@en .
+
+
+###  http://w3id.org/nfdi4ing/metadata4ing#WorkPackageLeader
+m4i:WorkPackageLeader rdf:type owl:NamedIndividual ,
+                               :ContributorRole ;
+                      rdfs:label "workpackageleader role"@en .
 
 
 ###  https://creativecommons.org/licenses/by/4.0/

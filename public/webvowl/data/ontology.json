@@ -2,7 +2,7 @@
   "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
   "header" : {
     "languages" : [ "de", "en", "undefined" ],
-    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://purl.obolibrary.org/obo", "http://www.w3.org/2002/07/owl", "http://w3id.org/nfdi4ing/metadata4ing", "http://bibfra.me/vocab/relation", "http://www.w3.org/2001/XMLSchema", "http://purl.org/spar/fabio", "http://purl.org/ontology/rec/core", "http://lexvo.org/ontology", "http://purl.org/ontology/bibo", "https://github.com/tibonto/educor", "https://purl.org/ontology/modalia", "http://semanticscience.org/resource", "https://w3id.org/kim/hcrt", "http://edamontology.org", "http://www.w3.org/2000/01/rdf-schema", "https://schema.org", "https://w3id.org/citedcat-ap", "http://purl.org/dc/terms", "http://id.loc.gov/ontologies/bibframe" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://purl.obolibrary.org/obo", "http://www.w3.org/2002/07/owl", "http://w3id.org/nfdi4ing/metadata4ing", "http://www.w3.org/2001/XMLSchema", "http://purl.org/spar/fabio", "http://lexvo.org/ontology", "http://purl.org/ontology/bibo", "https://github.com/tibonto/educor", "https://purl.org/ontology/modalia", "http://semanticscience.org/resource", "https://w3id.org/kim/hcrt", "http://edamontology.org", "http://www.w3.org/2000/01/rdf-schema", "https://schema.org", "https://w3id.org/citedcat-ap", "http://purl.org/dc/terms", "http://id.loc.gov/ontologies/bibframe" ],
     "title" : {
       "en" : "MoDALIA Ontology"
     },
@@ -70,8 +70,8 @@
       "contributor" : [ {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "Dr. Abdelmoneim Amer Desouki (https://orcid.org/0000-0003-2083-1277), Technical University of Darmstadt (https://ror.org/05n911h24, https://isni.org/isni/0000000109401669)",
-        "type" : "label"
+        "value" : "https://orcid.org/0000-0003-4423-4370",
+        "type" : "iri"
       }, {
         "identifier" : "contributor",
         "language" : "undefined",
@@ -80,8 +80,8 @@
       }, {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "https://orcid.org/0000-0003-4423-4370",
-        "type" : "iri"
+        "value" : "Frank Lange (https://orcid.org/0000-0002-9346-6031), RWTH Aachen University (https://ror.org/04xfq0f34, https://isni.org/isni/000000010728696X)",
+        "type" : "label"
       }, {
         "identifier" : "contributor",
         "language" : "undefined",
@@ -95,7 +95,7 @@
       }, {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "Frank Lange (https://orcid.org/0000-0002-9346-6031), RWTH Aachen University (https://ror.org/04xfq0f34, https://isni.org/isni/000000010728696X)",
+        "value" : "Dr. Abdelmoneim Amer Desouki (https://orcid.org/0000-0003-2083-1277), Technical University of Darmstadt (https://ror.org/05n911h24, https://isni.org/isni/0000000109401669)",
         "type" : "label"
       } ],
       "preferredNamespacePrefix" : [ {
@@ -104,16 +104,16 @@
         "value" : "modalia",
         "type" : "label"
       } ],
-      "modified" : [ {
-        "identifier" : "modified",
-        "language" : "undefined",
-        "value" : "2025-09-16",
-        "type" : "label"
-      } ],
       "publisher" : [ {
         "identifier" : "publisher",
         "language" : "undefined",
         "value" : "ULB TUDa – University and State Library, Technical University, Darmstadt, Germany",
+        "type" : "label"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2025-10-08",
         "type" : "label"
       } ],
       "preferredNamespaceUri" : [ {
@@ -129,451 +129,490 @@
     "id" : "3",
     "type" : "owl:Class"
   }, {
-    "id" : "9",
-    "type" : "owl:Class"
-  }, {
-    "id" : "21",
-    "type" : "owl:Class"
-  }, {
-    "id" : "33",
-    "type" : "owl:Class"
-  }, {
-    "id" : "42",
-    "type" : "owl:Class"
-  }, {
-    "id" : "54",
-    "type" : "owl:Class"
-  }, {
-    "id" : "15",
-    "type" : "owl:Class"
-  }, {
-    "id" : "12",
-    "type" : "owl:Class"
-  }, {
-    "id" : "77",
-    "type" : "owl:Class"
-  }, {
-    "id" : "78",
-    "type" : "owl:Class"
-  }, {
-    "id" : "79",
-    "type" : "owl:Class"
-  }, {
-    "id" : "80",
-    "type" : "owl:Class"
-  }, {
-    "id" : "81",
-    "type" : "owl:Class"
-  }, {
-    "id" : "43",
-    "type" : "owl:Class"
-  }, {
-    "id" : "83",
-    "type" : "owl:Class"
-  }, {
-    "id" : "96",
-    "type" : "owl:Class"
-  }, {
-    "id" : "8",
-    "type" : "owl:Class"
-  }, {
     "id" : "10",
     "type" : "owl:Class"
   }, {
-    "id" : "55",
+    "id" : "22",
     "type" : "owl:Class"
   }, {
-    "id" : "127",
-    "type" : "owl:Class"
-  }, {
-    "id" : "108",
-    "type" : "owl:Class"
-  }, {
-    "id" : "50",
-    "type" : "owl:Class"
-  }, {
-    "id" : "119",
-    "type" : "owl:Class"
-  }, {
-    "id" : "126",
-    "type" : "owl:Class"
-  }, {
-    "id" : "95",
+    "id" : "34",
     "type" : "owl:Class"
   }, {
     "id" : "45",
     "type" : "owl:Class"
   }, {
-    "id" : "26",
-    "type" : "owl:Class"
-  }, {
-    "id" : "51",
-    "type" : "owl:Class"
-  }, {
-    "id" : "110",
-    "type" : "owl:Class"
-  }, {
     "id" : "53",
     "type" : "owl:Class"
   }, {
-    "id" : "136",
+    "id" : "56",
     "type" : "owl:Class"
   }, {
-    "id" : "91",
-    "type" : "owl:Class"
-  }, {
-    "id" : "6",
-    "type" : "owl:Class"
-  }, {
-    "id" : "118",
-    "type" : "owl:Class"
-  }, {
-    "id" : "87",
-    "type" : "owl:Class"
-  }, {
-    "id" : "132",
-    "type" : "owl:Class"
-  }, {
-    "id" : "99",
-    "type" : "owl:Class"
-  }, {
-    "id" : "102",
+    "id" : "61",
     "type" : "owl:Class"
   }, {
     "id" : "75",
     "type" : "owl:Class"
   }, {
-    "id" : "124",
+    "id" : "77",
     "type" : "owl:Class"
   }, {
-    "id" : "70",
+    "id" : "81",
     "type" : "owl:Class"
   }, {
-    "id" : "94",
+    "id" : "82",
     "type" : "owl:Class"
   }, {
-    "id" : "60",
+    "id" : "83",
     "type" : "owl:Class"
   }, {
-    "id" : "85",
+    "id" : "52",
     "type" : "owl:Class"
   }, {
-    "id" : "20",
-    "type" : "owl:Class"
-  }, {
-    "id" : "58",
-    "type" : "owl:Class"
-  }, {
-    "id" : "73",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "214",
-    "type" : "owl:unionOf"
-  }, {
-    "id" : "100",
-    "type" : "owl:Class"
-  }, {
-    "id" : "130",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "107",
-    "type" : "owl:Class"
-  }, {
-    "id" : "129",
-    "type" : "owl:unionOf"
-  }, {
-    "id" : "158",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "157",
-    "type" : "owl:unionOf"
-  }, {
-    "id" : "211",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "225",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "226",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "172",
-    "type" : "owl:Class"
-  }, {
-    "id" : "76",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "29",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "162",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "229",
-    "type" : "owl:Class"
-  }, {
-    "id" : "62",
-    "type" : "owl:Class"
-  }, {
-    "id" : "230",
+    "id" : "84",
     "type" : "owl:Class"
   }, {
     "id" : "46",
     "type" : "owl:Class"
   }, {
-    "id" : "123",
-    "type" : "owl:Class"
-  }, {
-    "id" : "206",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "169",
-    "type" : "owl:unionOf"
-  }, {
-    "id" : "232",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "194",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "160",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "181",
-    "type" : "owl:unionOf"
-  }, {
-    "id" : "164",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "179",
-    "type" : "owl:unionOf"
-  }, {
-    "id" : "197",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "57",
-    "type" : "owl:Class"
-  }, {
-    "id" : "235",
-    "type" : "owl:unionOf"
-  }, {
-    "id" : "228",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "93",
-    "type" : "owl:Class"
-  }, {
-    "id" : "234",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "236",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "72",
-    "type" : "owl:Class"
-  }, {
-    "id" : "213",
-    "type" : "owl:Class"
-  }, {
-    "id" : "106",
-    "type" : "owl:Class"
-  }, {
-    "id" : "184",
-    "type" : "owl:Class"
-  }, {
-    "id" : "109",
-    "type" : "owl:Class"
-  }, {
-    "id" : "68",
-    "type" : "owl:Class"
-  }, {
-    "id" : "173",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "241",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "201",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "242",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "204",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "112",
-    "type" : "owl:Class"
-  }, {
-    "id" : "243",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "244",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "177",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "114",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "240",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "18",
-    "type" : "owl:Class"
-  }, {
-    "id" : "98",
-    "type" : "owl:Class"
-  }, {
-    "id" : "25",
-    "type" : "owl:Class"
-  }, {
-    "id" : "101",
-    "type" : "owl:Class"
-  }, {
-    "id" : "121",
-    "type" : "owl:Class"
-  }, {
-    "id" : "103",
-    "type" : "owl:Class"
-  }, {
-    "id" : "239",
-    "type" : "owl:unionOf"
-  }, {
-    "id" : "2",
-    "type" : "owl:Class"
-  }, {
-    "id" : "252",
-    "type" : "owl:unionOf"
-  }, {
-    "id" : "218",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "253",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "254",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "41",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "188",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "255",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "257",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "115",
-    "type" : "owl:Class"
-  }, {
-    "id" : "247",
-    "type" : "owl:Class"
-  }, {
-    "id" : "23",
-    "type" : "owl:Class"
-  }, {
-    "id" : "122",
-    "type" : "owl:Class"
-  }, {
-    "id" : "116",
-    "type" : "owl:Class"
-  }, {
-    "id" : "215",
-    "type" : "owl:Class"
-  }, {
-    "id" : "13",
-    "type" : "owl:Class"
-  }, {
-    "id" : "89",
-    "type" : "owl:Class"
-  }, {
-    "id" : "105",
-    "type" : "owl:Class"
-  }, {
-    "id" : "117",
-    "type" : "owl:Class"
-  }, {
-    "id" : "182",
-    "type" : "rdfs:Literal"
-  }, {
-    "id" : "111",
-    "type" : "owl:Class"
-  }, {
-    "id" : "35",
-    "type" : "owl:Thing"
-  }, {
-    "id" : "31",
-    "type" : "owl:Thing"
-  }, {
-    "id" : "170",
-    "type" : "rdfs:Literal"
-  }, {
-    "id" : "138",
-    "type" : "rdfs:Literal"
-  }, {
-    "id" : "125",
-    "type" : "owl:Class"
-  }, {
-    "id" : "64",
-    "type" : "owl:Class"
-  }, {
-    "id" : "66",
-    "type" : "owl:Class"
-  }, {
-    "id" : "216",
-    "type" : "owl:Class"
-  }, {
-    "id" : "249",
-    "type" : "owl:unionOf"
-  }, {
-    "id" : "301",
-    "type" : "owl:unionOf"
-  }, {
-    "id" : "139",
-    "type" : "owl:Class"
-  }, {
-    "id" : "175",
-    "type" : "owl:Class"
-  }, {
-    "id" : "16",
-    "type" : "owl:Class"
-  }, {
-    "id" : "4",
-    "type" : "owl:Class"
-  }, {
-    "id" : "92",
-    "type" : "owl:Class"
-  }, {
-    "id" : "48",
-    "type" : "owl:Class"
-  }, {
-    "id" : "186",
-    "type" : "owl:Class"
-  }, {
-    "id" : "1",
+    "id" : "86",
     "type" : "owl:Class"
   }, {
     "id" : "97",
     "type" : "owl:Class"
   }, {
-    "id" : "120",
+    "id" : "98",
     "type" : "owl:Class"
+  }, {
+    "id" : "99",
+    "type" : "owl:Class"
+  }, {
+    "id" : "128",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "132",
+    "type" : "owl:Class"
+  }, {
+    "id" : "105",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "93",
+    "type" : "owl:Class"
+  }, {
+    "id" : "109",
+    "type" : "owl:Class"
+  }, {
+    "id" : "113",
+    "type" : "owl:Class"
+  }, {
+    "id" : "71",
+    "type" : "owl:Class"
+  }, {
+    "id" : "114",
+    "type" : "owl:Class"
+  }, {
+    "id" : "115",
+    "type" : "owl:Class"
+  }, {
+    "id" : "140",
+    "type" : "owl:Class"
+  }, {
+    "id" : "27",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "124",
+    "type" : "owl:Class"
+  }, {
+    "id" : "13",
+    "type" : "owl:Class"
+  }, {
+    "id" : "142",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "170",
+    "type" : "owl:Class"
+  }, {
+    "id" : "91",
+    "type" : "owl:Class"
+  }, {
+    "id" : "101",
+    "type" : "owl:Class"
+  }, {
+    "id" : "48",
+    "type" : "owl:Class"
+  }, {
+    "id" : "103",
+    "type" : "owl:Class"
+  }, {
+    "id" : "137",
+    "type" : "owl:Class"
+  }, {
+    "id" : "119",
+    "type" : "owl:Class"
+  }, {
+    "id" : "79",
+    "type" : "owl:Class"
+  }, {
+    "id" : "66",
+    "type" : "owl:Class"
+  }, {
+    "id" : "195",
+    "type" : "owl:Class"
+  }, {
+    "id" : "94",
+    "type" : "owl:Class"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  }, {
+    "id" : "50",
+    "type" : "owl:Class"
+  }, {
+    "id" : "197",
+    "type" : "owl:Class"
+  }, {
+    "id" : "107",
+    "type" : "owl:Class"
+  }, {
+    "id" : "16",
+    "type" : "owl:Class"
+  }, {
+    "id" : "74",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "241",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "100",
+    "type" : "owl:Class"
+  }, {
+    "id" : "135",
+    "type" : "rdfs:Datatype"
   }, {
     "id" : "104",
     "type" : "owl:Class"
   }, {
+    "id" : "134",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "163",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "162",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "237",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "252",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "253",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "177",
+    "type" : "owl:Class"
+  }, {
+    "id" : "80",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "30",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "167",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "256",
+    "type" : "owl:Class"
+  }, {
+    "id" : "21",
+    "type" : "owl:Class"
+  }, {
+    "id" : "257",
+    "type" : "owl:Class"
+  }, {
+    "id" : "19",
+    "type" : "owl:Class"
+  }, {
+    "id" : "64",
+    "type" : "owl:Class"
+  }, {
+    "id" : "230",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "174",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "259",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "217",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "165",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "186",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "169",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "184",
+    "type" : "owl:unionOf"
+  }, {
     "id" : "221",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "15",
     "type" : "owl:Class"
   }, {
-    "id" : "28",
+    "id" : "262",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "255",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "261",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "263",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "73",
     "type" : "owl:Class"
   }, {
-    "id" : "222",
+    "id" : "240",
+    "type" : "owl:Class"
+  }, {
+    "id" : "102",
+    "type" : "owl:Class"
+  }, {
+    "id" : "189",
+    "type" : "owl:Class"
+  }, {
+    "id" : "106",
+    "type" : "owl:Class"
+  }, {
+    "id" : "235",
+    "type" : "owl:Class"
+  }, {
+    "id" : "178",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "268",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "225",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "269",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "228",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "108",
+    "type" : "owl:Class"
+  }, {
+    "id" : "270",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "271",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "110",
+    "type" : "owl:Class"
+  }, {
+    "id" : "182",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "127",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "267",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "202",
+    "type" : "owl:Class"
+  }, {
+    "id" : "117",
+    "type" : "owl:Class"
+  }, {
+    "id" : "26",
+    "type" : "owl:Class"
+  }, {
+    "id" : "58",
+    "type" : "owl:Class"
+  }, {
+    "id" : "118",
+    "type" : "owl:Class"
+  }, {
+    "id" : "120",
+    "type" : "owl:Class"
+  }, {
+    "id" : "266",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "129",
+    "type" : "owl:Class"
+  }, {
+    "id" : "279",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "245",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "280",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "281",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "44",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "194",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "282",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "284",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "130",
+    "type" : "owl:Class"
+  }, {
+    "id" : "274",
+    "type" : "owl:Class"
+  }, {
+    "id" : "205",
+    "type" : "owl:Class"
+  }, {
+    "id" : "60",
+    "type" : "owl:Class"
+  }, {
+    "id" : "112",
+    "type" : "owl:Class"
+  }, {
+    "id" : "131",
+    "type" : "owl:Class"
+  }, {
+    "id" : "76",
+    "type" : "owl:Class"
+  }, {
+    "id" : "242",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "122",
+    "type" : "owl:Class"
+  }, {
+    "id" : "89",
+    "type" : "owl:Class"
+  }, {
+    "id" : "187",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "125",
+    "type" : "owl:Class"
+  }, {
+    "id" : "38",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "32",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "175",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "144",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "69",
+    "type" : "owl:Class"
+  }, {
+    "id" : "95",
+    "type" : "owl:Class"
+  }, {
+    "id" : "24",
+    "type" : "owl:Class"
+  }, {
+    "id" : "96",
+    "type" : "owl:Class"
+  }, {
+    "id" : "233",
+    "type" : "owl:Class"
+  }, {
+    "id" : "243",
+    "type" : "owl:Class"
+  }, {
+    "id" : "276",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "328",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "36",
+    "type" : "owl:Class"
+  }, {
+    "id" : "180",
+    "type" : "owl:Class"
+  }, {
+    "id" : "62",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "111",
+    "type" : "owl:Class"
+  }, {
+    "id" : "209",
+    "type" : "owl:Class"
+  }, {
+    "id" : "192",
+    "type" : "owl:Class"
+  }, {
+    "id" : "211",
+    "type" : "owl:Class"
+  }, {
+    "id" : "116",
+    "type" : "owl:Class"
+  }, {
+    "id" : "55",
+    "type" : "owl:Class"
+  }, {
+    "id" : "121",
+    "type" : "owl:Class"
+  }, {
+    "id" : "123",
+    "type" : "owl:Class"
+  }, {
+    "id" : "248",
+    "type" : "owl:Class"
+  }, {
+    "id" : "29",
+    "type" : "owl:Class"
+  }, {
+    "id" : "249",
     "type" : "owl:Class"
   } ],
   "classAttribute" : [ {
@@ -619,8 +658,8 @@
       "IRI-based" : "TeacherSchool",
       "en" : "teacher (school)"
     },
-    "id" : "9",
-    "superClasses" : [ "10" ]
+    "id" : "10",
+    "superClasses" : [ "11" ]
   }, {
     "iri" : "https://purl.org/ontology/modalia#Discipline",
     "baseIri" : "https://purl.org/ontology/modalia",
@@ -649,7 +688,7 @@
       "IRI-based" : "Discipline",
       "en" : "discipline"
     },
-    "id" : "21"
+    "id" : "22"
   }, {
     "iri" : "https://purl.org/ontology/modalia#ContributorRole",
     "baseIri" : "https://purl.org/ontology/modalia",
@@ -673,6 +712,13 @@
       "en" : "contributor role"
     },
     "individuals" : [ {
+      "iri" : "http://w3id.org/nfdi4ing/metadata4ing#ProjectMember",
+      "baseIri" : "http://w3id.org/nfdi4ing/metadata4ing",
+      "labels" : {
+        "IRI-based" : "ProjectMember",
+        "en" : "projectmember role"
+      }
+    }, {
       "iri" : "http://w3id.org/nfdi4ing/metadata4ing#DataCurator",
       "baseIri" : "http://w3id.org/nfdi4ing/metadata4ing",
       "labels" : {
@@ -687,11 +733,32 @@
         "en" : "sponsor role"
       }
     }, {
-      "iri" : "http://w3id.org/nfdi4ing/metadata4ing#ContactPerson",
+      "iri" : "http://w3id.org/nfdi4ing/metadata4ing#RegistrationAgency",
       "baseIri" : "http://w3id.org/nfdi4ing/metadata4ing",
       "labels" : {
-        "IRI-based" : "ContactPerson",
-        "en" : "contact person"
+        "IRI-based" : "RegistrationAgency",
+        "en" : "registrationagency role"
+      }
+    }, {
+      "iri" : "http://w3id.org/nfdi4ing/metadata4ing#Supervisor",
+      "baseIri" : "http://w3id.org/nfdi4ing/metadata4ing",
+      "labels" : {
+        "IRI-based" : "Supervisor",
+        "en" : "supervisor role"
+      }
+    }, {
+      "iri" : "http://w3id.org/nfdi4ing/metadata4ing#DataCollector",
+      "baseIri" : "http://w3id.org/nfdi4ing/metadata4ing",
+      "labels" : {
+        "IRI-based" : "DataCollector",
+        "en" : "datacollector role"
+      }
+    }, {
+      "iri" : "http://w3id.org/nfdi4ing/metadata4ing#Researcher",
+      "baseIri" : "http://w3id.org/nfdi4ing/metadata4ing",
+      "labels" : {
+        "IRI-based" : "Researcher",
+        "en" : "researcher role"
       }
     }, {
       "iri" : "http://w3id.org/nfdi4ing/metadata4ing#DataManager",
@@ -700,8 +767,99 @@
         "IRI-based" : "DataManager",
         "en" : "data manager role"
       }
+    }, {
+      "iri" : "http://w3id.org/nfdi4ing/metadata4ing#RegistrationAuthority",
+      "baseIri" : "http://w3id.org/nfdi4ing/metadata4ing",
+      "labels" : {
+        "IRI-based" : "RegistrationAuthority",
+        "en" : "registrationauthority role"
+      }
+    }, {
+      "iri" : "http://w3id.org/nfdi4ing/metadata4ing#Distributor",
+      "baseIri" : "http://w3id.org/nfdi4ing/metadata4ing",
+      "labels" : {
+        "IRI-based" : "Distributor",
+        "en" : "distributor role"
+      }
+    }, {
+      "iri" : "http://w3id.org/nfdi4ing/metadata4ing#RelatedPerson",
+      "baseIri" : "http://w3id.org/nfdi4ing/metadata4ing",
+      "labels" : {
+        "IRI-based" : "RelatedPerson",
+        "en" : "relatedperson role"
+      }
+    }, {
+      "iri" : "http://w3id.org/nfdi4ing/metadata4ing#RightsHolder",
+      "baseIri" : "http://w3id.org/nfdi4ing/metadata4ing",
+      "labels" : {
+        "IRI-based" : "RightsHolder",
+        "en" : "rightsholder role"
+      }
+    }, {
+      "iri" : "http://w3id.org/nfdi4ing/metadata4ing#OtherPerson",
+      "baseIri" : "http://w3id.org/nfdi4ing/metadata4ing",
+      "labels" : {
+        "IRI-based" : "OtherPerson",
+        "en" : "otherperson role"
+      }
+    }, {
+      "iri" : "http://w3id.org/nfdi4ing/metadata4ing#ProjectManager",
+      "baseIri" : "http://w3id.org/nfdi4ing/metadata4ing",
+      "labels" : {
+        "IRI-based" : "ProjectManager",
+        "en" : "projectmanager role"
+      }
+    }, {
+      "iri" : "http://w3id.org/nfdi4ing/metadata4ing#WorkPackageLeader",
+      "baseIri" : "http://w3id.org/nfdi4ing/metadata4ing",
+      "labels" : {
+        "IRI-based" : "WorkPackageLeader",
+        "en" : "workpackageleader role"
+      }
+    }, {
+      "iri" : "http://w3id.org/nfdi4ing/metadata4ing#ContactPerson",
+      "baseIri" : "http://w3id.org/nfdi4ing/metadata4ing",
+      "labels" : {
+        "IRI-based" : "ContactPerson",
+        "en" : "contact person"
+      }
+    }, {
+      "iri" : "http://w3id.org/nfdi4ing/metadata4ing#HostingInstitution",
+      "baseIri" : "http://w3id.org/nfdi4ing/metadata4ing",
+      "labels" : {
+        "IRI-based" : "HostingInstitution",
+        "en" : "hostinginstitution role"
+      }
+    }, {
+      "iri" : "http://w3id.org/nfdi4ing/metadata4ing#Editor",
+      "baseIri" : "http://w3id.org/nfdi4ing/metadata4ing",
+      "labels" : {
+        "IRI-based" : "Editor",
+        "en" : "editor role"
+      }
+    }, {
+      "iri" : "http://w3id.org/nfdi4ing/metadata4ing#ResearchGroup",
+      "baseIri" : "http://w3id.org/nfdi4ing/metadata4ing",
+      "labels" : {
+        "IRI-based" : "ResearchGroup",
+        "en" : "researchgroup role"
+      }
+    }, {
+      "iri" : "http://w3id.org/nfdi4ing/metadata4ing#ProjectLeader",
+      "baseIri" : "http://w3id.org/nfdi4ing/metadata4ing",
+      "labels" : {
+        "IRI-based" : "ProjectLeader",
+        "en" : "projectleader role"
+      }
+    }, {
+      "iri" : "http://w3id.org/nfdi4ing/metadata4ing#Producer",
+      "baseIri" : "http://w3id.org/nfdi4ing/metadata4ing",
+      "labels" : {
+        "IRI-based" : "Producer",
+        "en" : "producer role"
+      }
     } ],
-    "id" : "33"
+    "id" : "34"
   }, {
     "iri" : "https://w3id.org/kim/hcrt/simulation",
     "baseIri" : "https://w3id.org/kim/hcrt",
@@ -719,8 +877,19 @@
       "en" : "simulation"
     },
     "attributes" : [ "external" ],
-    "id" : "42",
-    "superClasses" : [ "43" ]
+    "id" : "45",
+    "superClasses" : [ "46" ]
+  }, {
+    "iri" : "https://schema.org/PodcastEpisode",
+    "baseIri" : "https://schema.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PodcastEpisode",
+      "en" : "podcast episode"
+    },
+    "attributes" : [ "external" ],
+    "id" : "53",
+    "superClasses" : [ "46" ]
   }, {
     "iri" : "https://purl.org/ontology/modalia#AssurePhase",
     "baseIri" : "https://purl.org/ontology/modalia",
@@ -729,8 +898,8 @@
       "IRI-based" : "AssurePhase",
       "en" : "assure phase"
     },
-    "id" : "54",
-    "superClasses" : [ "55" ]
+    "id" : "56",
+    "superClasses" : [ "2" ]
   }, {
     "iri" : "https://purl.org/ontology/modalia#LearnerRole",
     "baseIri" : "https://purl.org/ontology/modalia",
@@ -739,8 +908,8 @@
       "IRI-based" : "LearnerRole",
       "en" : "learner role"
     },
-    "id" : "15",
-    "superClasses" : [ "16" ]
+    "id" : "61",
+    "superClasses" : [ "62" ]
   }, {
     "iri" : "https://purl.org/ontology/modalia#FiveStarRating",
     "baseIri" : "https://purl.org/ontology/modalia",
@@ -769,8 +938,27 @@
       "IRI-based" : "FiveStarRating",
       "en" : "five star rating"
     },
-    "id" : "12",
-    "superClasses" : [ "13" ]
+    "id" : "75",
+    "superClasses" : [ "76" ]
+  }, {
+    "iri" : "https://w3id.org/kim/hcrt/drill_and_practice",
+    "baseIri" : "https://w3id.org/kim/hcrt",
+    "instances" : 0,
+    "annotations" : {
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Drill and practice",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "drill_and_practice",
+      "en" : "drill_and_practice"
+    },
+    "attributes" : [ "external" ],
+    "id" : "77",
+    "superClasses" : [ "46" ]
   }, {
     "iri" : "https://purl.org/ontology/modalia#Cookbook",
     "baseIri" : "https://purl.org/ontology/modalia",
@@ -793,8 +981,8 @@
       "IRI-based" : "Cookbook",
       "en" : "cookbook"
     },
-    "id" : "77",
-    "superClasses" : [ "43" ]
+    "id" : "81",
+    "superClasses" : [ "46" ]
   }, {
     "iri" : "https://purl.org/ontology/modalia#LearningObjective",
     "baseIri" : "https://purl.org/ontology/modalia",
@@ -820,7 +1008,7 @@
     "comment" : {
       "en" : "The Learning Goal can vary depending on the personalisation level. For example a user might care to learn some specific topics and not all the skill set."
     },
-    "id" : "78"
+    "id" : "82"
   }, {
     "iri" : "http://purl.obolibrary.org/obo/OCCO_25401100",
     "baseIri" : "http://purl.obolibrary.org/obo",
@@ -844,8 +1032,8 @@
       "en" : "archivist"
     },
     "attributes" : [ "external" ],
-    "id" : "79",
-    "superClasses" : [ "10" ]
+    "id" : "83",
+    "superClasses" : [ "11" ]
   }, {
     "iri" : "https://purl.org/ontology/modalia#ContentProvider",
     "baseIri" : "https://purl.org/ontology/modalia",
@@ -874,8 +1062,8 @@
       "IRI-based" : "ContentProvider",
       "en" : "content provider"
     },
-    "id" : "80",
-    "superClasses" : [ "10" ]
+    "id" : "52",
+    "superClasses" : [ "11" ]
   }, {
     "iri" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#List",
     "baseIri" : "http://www.w3.org/1999/02/22-rdf-syntax-ns",
@@ -884,7 +1072,7 @@
       "IRI-based" : "List"
     },
     "attributes" : [ "external" ],
-    "id" : "81"
+    "id" : "84"
   }, {
     "iri" : "https://purl.org/ontology/modalia#LearningResourceType",
     "baseIri" : "https://purl.org/ontology/modalia",
@@ -901,8 +1089,8 @@
       "IRI-based" : "LearningResourceType",
       "en" : "learning resource type"
     },
-    "subClasses" : [ "92", "93", "94", "95", "96", "97", "98", "99", "100", "101", "102", "103", "104", "105", "77", "106", "107", "108", "109", "110", "42", "111", "112" ],
-    "id" : "43"
+    "subClasses" : [ "94", "95", "96", "97", "98", "99", "100", "101", "102", "103", "104", "105", "106", "45", "107", "108", "109", "110", "111", "53", "112", "113", "114", "115", "116", "117", "118", "119", "120", "121", "122", "123", "77", "81", "124", "125" ],
+    "id" : "46"
   }, {
     "iri" : "http://lexvo.org/ontology#Language",
     "baseIri" : "http://lexvo.org/ontology",
@@ -926,7 +1114,26 @@
       "en" : "language"
     },
     "attributes" : [ "external" ],
-    "id" : "83"
+    "id" : "86"
+  }, {
+    "iri" : "https://w3id.org/kim/hcrt/textbook",
+    "baseIri" : "https://w3id.org/kim/hcrt",
+    "instances" : 0,
+    "annotations" : {
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Textbook",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "textbook",
+      "en" : "textbook"
+    },
+    "attributes" : [ "external" ],
+    "id" : "97",
+    "superClasses" : [ "46" ]
   }, {
     "iri" : "https://w3id.org/kim/hcrt/index",
     "baseIri" : "https://w3id.org/kim/hcrt",
@@ -938,16 +1145,16 @@
         "value" : "Reference Work",
         "type" : "label"
       } ],
-      "scopeNote" : [ {
-        "identifier" : "scopeNote",
-        "language" : "de",
-        "value" : "zum Beispiel Glossar, Enzyklop?die, Lexikonzum Beispiel Glossar, Enzyklop?die, Lexikon",
-        "type" : "label"
-      } ],
       "example" : [ {
         "identifier" : "example",
         "language" : "en",
         "value" : "glossary, encyclopedia, dictionary",
+        "type" : "label"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "de",
+        "value" : "zum Beispiel Glossar, Enzyklop?die, Lexikonzum Beispiel Glossar, Enzyklop?die, Lexikon",
         "type" : "label"
       } ]
     },
@@ -957,8 +1164,27 @@
       "en" : "index"
     },
     "attributes" : [ "external" ],
-    "id" : "96",
-    "superClasses" : [ "43" ]
+    "id" : "98",
+    "superClasses" : [ "46" ]
+  }, {
+    "iri" : "https://w3id.org/kim/hcrt/script",
+    "baseIri" : "https://w3id.org/kim/hcrt",
+    "instances" : 0,
+    "annotations" : {
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Script",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "script",
+      "en" : "script"
+    },
+    "attributes" : [ "external" ],
+    "id" : "99",
+    "superClasses" : [ "46" ]
   }, {
     "iri" : "https://purl.org/ontology/modalia#VARKKinesthetic",
     "baseIri" : "https://purl.org/ontology/modalia",
@@ -975,8 +1201,8 @@
       "IRI-based" : "VARKKinesthetic",
       "en" : "VARK kinesthetic"
     },
-    "id" : "8",
-    "superClasses" : [ "2" ]
+    "id" : "128",
+    "superClasses" : [ "129" ]
   }, {
     "iri" : "https://purl.org/ontology/modalia#TargetGroup",
     "baseIri" : "https://purl.org/ontology/modalia",
@@ -999,8 +1225,8 @@
       "IRI-based" : "TargetGroup",
       "en" : "target group"
     },
-    "subClasses" : [ "115", "116", "9", "117", "79", "118", "119", "80", "120", "121", "122", "123" ],
-    "id" : "10"
+    "subClasses" : [ "130", "131", "10", "89", "83", "91", "93", "52", "55", "58", "60", "64" ],
+    "id" : "11"
   }, {
     "iri" : "https://purl.org/ontology/modalia#DataLifeCyclePhase",
     "baseIri" : "https://purl.org/ontology/modalia",
@@ -1023,8 +1249,8 @@
       "IRI-based" : "DataLifeCyclePhase",
       "en" : "data life cycle phase"
     },
-    "subClasses" : [ "124", "54", "125", "126", "87", "85", "89", "91" ],
-    "id" : "55"
+    "subClasses" : [ "66", "56", "69", "71", "48", "50", "1", "6" ],
+    "id" : "2"
   }, {
     "iri" : "https://purl.org/ontology/modalia#Proficiency",
     "baseIri" : "https://purl.org/ontology/modalia",
@@ -1077,7 +1303,7 @@
         "en" : "competent"
       }
     } ],
-    "id" : "127"
+    "id" : "132"
   }, {
     "iri" : "http://purl.org/ontology/bibo/Thesis",
     "baseIri" : "http://purl.org/ontology/bibo",
@@ -1095,8 +1321,8 @@
       "en" : "thesis"
     },
     "attributes" : [ "external" ],
-    "id" : "108",
-    "superClasses" : [ "43" ]
+    "id" : "105",
+    "superClasses" : [ "46" ]
   }, {
     "iri" : "https://purl.org/ontology/modalia#ProprietaryLicense",
     "baseIri" : "https://purl.org/ontology/modalia",
@@ -1113,8 +1339,8 @@
         "en" : "proprietary license"
       }
     } ],
-    "id" : "50",
-    "superClasses" : [ "51" ]
+    "id" : "8",
+    "superClasses" : [ "9" ]
   }, {
     "iri" : "http://purl.obolibrary.org/obo/OCCO_25402200",
     "baseIri" : "http://purl.obolibrary.org/obo",
@@ -1132,8 +1358,46 @@
       "en" : "librarian"
     },
     "attributes" : [ "external" ],
-    "id" : "119",
-    "superClasses" : [ "10" ]
+    "id" : "93",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "https://w3id.org/kim/hcrt/worksheet",
+    "baseIri" : "https://w3id.org/kim/hcrt",
+    "instances" : 0,
+    "annotations" : {
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Worksheet",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "worksheet",
+      "en" : "worksheet"
+    },
+    "attributes" : [ "external" ],
+    "id" : "109",
+    "superClasses" : [ "46" ]
+  }, {
+    "iri" : "https://w3id.org/kim/hcrt/data",
+    "baseIri" : "https://w3id.org/kim/hcrt",
+    "instances" : 0,
+    "annotations" : {
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Data",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "data",
+      "en" : "data"
+    },
+    "attributes" : [ "external" ],
+    "id" : "113",
+    "superClasses" : [ "46" ]
   }, {
     "iri" : "https://purl.org/ontology/modalia#DescribePhase",
     "baseIri" : "https://purl.org/ontology/modalia",
@@ -1142,8 +1406,8 @@
       "IRI-based" : "DescribePhase",
       "en" : "describe phase"
     },
-    "id" : "126",
-    "superClasses" : [ "55" ]
+    "id" : "71",
+    "superClasses" : [ "2" ]
   }, {
     "iri" : "https://purl.org/ontology/modalia#BestPractices",
     "baseIri" : "https://purl.org/ontology/modalia",
@@ -1163,8 +1427,27 @@
     "comment" : {
       "en" : "Class representing OERs that are best practices in scientific area."
     },
-    "id" : "95",
-    "superClasses" : [ "43" ]
+    "id" : "114",
+    "superClasses" : [ "46" ]
+  }, {
+    "iri" : "https://w3id.org/kim/hcrt/portal",
+    "baseIri" : "https://w3id.org/kim/hcrt",
+    "instances" : 0,
+    "annotations" : {
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Portal",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "portal",
+      "en" : "portal"
+    },
+    "attributes" : [ "external" ],
+    "id" : "115",
+    "superClasses" : [ "46" ]
   }, {
     "iri" : "https://schema.org/PresentationDigitalDocument",
     "baseIri" : "https://schema.org",
@@ -1185,8 +1468,8 @@
       "en" : "A presentation / slides file."
     },
     "attributes" : [ "external" ],
-    "id" : "45",
-    "superClasses" : [ "46" ]
+    "id" : "140",
+    "superClasses" : [ "19" ]
   }, {
     "iri" : "http://semanticscience.org/resource/SIO_000776",
     "baseIri" : "http://semanticscience.org/resource",
@@ -1210,7 +1493,7 @@
       "en" : "object"
     },
     "attributes" : [ "external" ],
-    "id" : "26"
+    "id" : "27"
   }, {
     "iri" : "https://purl.org/ontology/modalia#License",
     "baseIri" : "https://purl.org/ontology/modalia",
@@ -1219,8 +1502,8 @@
       "IRI-based" : "License",
       "en" : "license"
     },
-    "subClasses" : [ "50", "53" ],
-    "id" : "51"
+    "subClasses" : [ "8", "13" ],
+    "id" : "9"
   }, {
     "iri" : "https://w3id.org/kim/hcrt/experiment",
     "baseIri" : "https://w3id.org/kim/hcrt",
@@ -1241,8 +1524,8 @@
       "en" : "Class representing OERs that are describing an experiment"
     },
     "attributes" : [ "external" ],
-    "id" : "110",
-    "superClasses" : [ "43" ]
+    "id" : "124",
+    "superClasses" : [ "46" ]
   }, {
     "iri" : "https://purl.org/ontology/modalia#FreeLicense",
     "baseIri" : "https://purl.org/ontology/modalia",
@@ -1251,8 +1534,8 @@
       "IRI-based" : "FreeLicense",
       "en" : "free license"
     },
-    "id" : "53",
-    "superClasses" : [ "51" ]
+    "id" : "13",
+    "superClasses" : [ "9" ]
   }, {
     "iri" : "https://purl.org/ontology/modalia#User",
     "baseIri" : "https://purl.org/ontology/modalia",
@@ -1275,7 +1558,7 @@
       "IRI-based" : "User",
       "en" : "user"
     },
-    "id" : "136"
+    "id" : "142"
   }, {
     "iri" : "https://purl.org/ontology/modalia#PlanPhase",
     "baseIri" : "https://purl.org/ontology/modalia",
@@ -1292,8 +1575,8 @@
       "IRI-based" : "PlanPhase",
       "en" : "plan phase"
     },
-    "id" : "91",
-    "superClasses" : [ "55" ]
+    "id" : "6",
+    "superClasses" : [ "2" ]
   }, {
     "iri" : "https://purl.org/ontology/modalia#VARKReading",
     "baseIri" : "https://purl.org/ontology/modalia",
@@ -1310,8 +1593,8 @@
       "IRI-based" : "VARKReading",
       "en" : "VARK reading"
     },
-    "id" : "6",
-    "superClasses" : [ "2" ]
+    "id" : "170",
+    "superClasses" : [ "129" ]
   }, {
     "iri" : "https://purl.org/ontology/modalia#BachelorStudent",
     "baseIri" : "https://purl.org/ontology/modalia",
@@ -1340,8 +1623,27 @@
       "IRI-based" : "BachelorStudent",
       "en" : "bachelor student"
     },
-    "id" : "118",
-    "superClasses" : [ "10" ]
+    "id" : "91",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "https://w3id.org/kim/hcrt/application",
+    "baseIri" : "https://w3id.org/kim/hcrt",
+    "instances" : 0,
+    "annotations" : {
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Application",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "application",
+      "en" : "application"
+    },
+    "attributes" : [ "external" ],
+    "id" : "101",
+    "superClasses" : [ "46" ]
   }, {
     "iri" : "https://purl.org/ontology/modalia#DiscoverPhase",
     "baseIri" : "https://purl.org/ontology/modalia",
@@ -1350,8 +1652,26 @@
       "IRI-based" : "DiscoverPhase",
       "en" : "discover phase"
     },
-    "id" : "87",
-    "superClasses" : [ "55" ]
+    "id" : "48",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://purl.org/ontology/modalia#Podcast",
+    "baseIri" : "https://purl.org/ontology/modalia",
+    "instances" : 0,
+    "annotations" : {
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "The learning resource type podcast is an episodic series of digital audio or video files or an episode of that, which a user can download and listen to.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Podcast",
+      "en" : "podcast"
+    },
+    "id" : "103",
+    "superClasses" : [ "46" ]
   }, {
     "iri" : "https://purl.org/ontology/modalia#Job",
     "baseIri" : "https://purl.org/ontology/modalia",
@@ -1380,25 +1700,7 @@
       "IRI-based" : "Job",
       "en" : "job"
     },
-    "id" : "132"
-  }, {
-    "iri" : "https://purl.org/ontology/modalia#Workshop",
-    "baseIri" : "https://purl.org/ontology/modalia",
-    "instances" : 0,
-    "annotations" : {
-      "prefLabel" : [ {
-        "identifier" : "prefLabel",
-        "language" : "en",
-        "value" : "workshop",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "Workshop",
-      "en" : "workshop"
-    },
-    "id" : "99",
-    "superClasses" : [ "43" ]
+    "id" : "137"
   }, {
     "iri" : "http://purl.org/ontology/bibo/Webpage",
     "baseIri" : "http://purl.org/ontology/bibo",
@@ -1416,8 +1718,8 @@
       "en" : "webpage"
     },
     "attributes" : [ "external" ],
-    "id" : "102",
-    "superClasses" : [ "43" ]
+    "id" : "119",
+    "superClasses" : [ "46" ]
   }, {
     "iri" : "https://purl.org/ontology/modalia#UserComment",
     "baseIri" : "https://purl.org/ontology/modalia",
@@ -1434,7 +1736,7 @@
       "IRI-based" : "UserComment",
       "en" : "user comment"
     },
-    "id" : "75"
+    "id" : "79"
   }, {
     "iri" : "https://purl.org/ontology/modalia#PreservePhase",
     "baseIri" : "https://purl.org/ontology/modalia",
@@ -1443,8 +1745,8 @@
       "IRI-based" : "PreservePhase",
       "en" : "preserve phase"
     },
-    "id" : "124",
-    "superClasses" : [ "55" ]
+    "id" : "66",
+    "superClasses" : [ "2" ]
   }, {
     "iri" : "https://purl.org/ontology/modalia#Multipart",
     "baseIri" : "https://purl.org/ontology/modalia",
@@ -1467,8 +1769,8 @@
       "IRI-based" : "Multipart",
       "en" : "multipart"
     },
-    "id" : "70",
-    "superClasses" : [ "46" ]
+    "id" : "195",
+    "superClasses" : [ "19" ]
   }, {
     "iri" : "https://purl.org/ontology/modalia#Lecture",
     "baseIri" : "https://purl.org/ontology/modalia",
@@ -1489,7 +1791,7 @@
       "en" : "Class representing OERs that are lectures."
     },
     "id" : "94",
-    "superClasses" : [ "43" ]
+    "superClasses" : [ "46" ]
   }, {
     "iri" : "https://schema.org/AudioObject",
     "baseIri" : "https://schema.org",
@@ -1510,8 +1812,8 @@
       "en" : "A class representing OERs which are audio files."
     },
     "attributes" : [ "external" ],
-    "id" : "60",
-    "superClasses" : [ "46" ]
+    "id" : "18",
+    "superClasses" : [ "19" ]
   }, {
     "iri" : "https://purl.org/ontology/modalia#IntegratePhase",
     "baseIri" : "https://purl.org/ontology/modalia",
@@ -1520,8 +1822,8 @@
       "IRI-based" : "IntegratePhase",
       "en" : "integrate phase"
     },
-    "id" : "85",
-    "superClasses" : [ "55" ]
+    "id" : "50",
+    "superClasses" : [ "2" ]
   }, {
     "iri" : "https://purl.org/ontology/modalia#TeacherRole",
     "baseIri" : "https://purl.org/ontology/modalia",
@@ -1530,8 +1832,33 @@
       "IRI-based" : "TeacherRole",
       "en" : "teacher role"
     },
-    "id" : "20",
-    "superClasses" : [ "16" ]
+    "id" : "197",
+    "superClasses" : [ "62" ]
+  }, {
+    "iri" : "http://purl.org/ontology/bibo/Workshop",
+    "baseIri" : "http://purl.org/ontology/bibo",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "en",
+        "value" : "A seminar, discussion group, or the like, that emphasizes zxchange of ideas and the demonstration and application of techniques, skills, etc.",
+        "type" : "label"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "workshop",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Workshop",
+      "en" : "workshop"
+    },
+    "attributes" : [ "external" ],
+    "id" : "107",
+    "superClasses" : [ "46" ]
   }, {
     "iri" : "https://github.com/tibonto/educor#KnowledgeTopic",
     "baseIri" : "https://github.com/tibonto/educor",
@@ -1560,13 +1887,13 @@
       "IRI-based" : "KnowledgeTopic",
       "en" : "knowledge topic"
     },
-    "subClasses" : [ "57" ],
+    "subClasses" : [ "15" ],
     "attributes" : [ "external" ],
-    "id" : "58"
+    "id" : "16"
   }, {
     "iri" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
     "baseIri" : "http://www.w3.org/1999/02/22-rdf-syntax-ns",
-    "id" : "73",
+    "id" : "74",
     "label" : {
       "IRI-based" : "langString"
     }
@@ -1578,12 +1905,12 @@
       "IRI-based" : "Contributor",
       "en" : "contributor"
     },
-    "union" : [ "215", "216" ],
+    "union" : [ "242", "243" ],
     "comment" : {
       "en" : "Contributed to OER with some contribution type"
     },
     "attributes" : [ "union" ],
-    "id" : "214"
+    "id" : "241"
   }, {
     "iri" : "https://w3id.org/kim/hcrt/educational_game",
     "baseIri" : "https://w3id.org/kim/hcrt",
@@ -1605,11 +1932,11 @@
     },
     "attributes" : [ "external" ],
     "id" : "100",
-    "superClasses" : [ "43" ]
+    "superClasses" : [ "46" ]
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "130",
+    "id" : "135",
     "label" : {
       "IRI-based" : "string"
     }
@@ -1636,43 +1963,43 @@
       "en" : "book"
     },
     "attributes" : [ "external" ],
-    "id" : "107",
-    "superClasses" : [ "43" ]
+    "id" : "104",
+    "superClasses" : [ "46" ]
   }, {
     "instances" : 0,
-    "union" : [ "28", "222" ],
+    "union" : [ "29", "249" ],
     "attributes" : [ "anonymous", "union" ],
-    "id" : "129"
+    "id" : "134"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#integer",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "158",
+    "id" : "163",
     "label" : {
       "IRI-based" : "integer"
     }
   }, {
     "instances" : 0,
-    "union" : [ "127", "222" ],
+    "union" : [ "132", "249" ],
     "attributes" : [ "anonymous", "union" ],
-    "id" : "157"
+    "id" : "162"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#int",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "211",
+    "id" : "237",
     "label" : {
       "IRI-based" : "int"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "225",
+    "id" : "252",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "226",
+    "id" : "253",
     "label" : {
       "IRI-based" : "string"
     }
@@ -1693,25 +2020,25 @@
       "en" : "review"
     },
     "attributes" : [ "external" ],
-    "id" : "172"
+    "id" : "177"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#dateTimeStamp",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "76",
+    "id" : "80",
     "label" : {
       "IRI-based" : "dateTimeStamp"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "29",
+    "id" : "30",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "162",
+    "id" : "167",
     "label" : {
       "IRI-based" : "string"
     }
@@ -1737,7 +2064,7 @@
       "IRI-based" : "ContentQuality",
       "en" : "content quality"
     },
-    "id" : "229"
+    "id" : "256"
   }, {
     "iri" : "https://schema.org/VideoObject",
     "baseIri" : "https://schema.org",
@@ -1758,8 +2085,8 @@
       "en" : "A video file."
     },
     "attributes" : [ "external" ],
-    "id" : "62",
-    "superClasses" : [ "46" ]
+    "id" : "21",
+    "superClasses" : [ "19" ]
   }, {
     "iri" : "https://purl.org/ontology/modalia#EducationalLevel",
     "baseIri" : "https://purl.org/ontology/modalia",
@@ -1776,7 +2103,7 @@
       "IRI-based" : "EducationalLevel",
       "en" : "education level"
     },
-    "id" : "230"
+    "id" : "257"
   }, {
     "iri" : "https://purl.org/ontology/modalia#MediaType",
     "baseIri" : "https://purl.org/ontology/modalia",
@@ -1793,8 +2120,8 @@
       "IRI-based" : "MediaType",
       "en" : "media type"
     },
-    "subClasses" : [ "60", "62", "64", "66", "68", "70", "45" ],
-    "id" : "46"
+    "subClasses" : [ "18", "21", "24", "233", "235", "195", "140" ],
+    "id" : "19"
   }, {
     "iri" : "https://purl.org/ontology/modalia#Researcher",
     "baseIri" : "https://purl.org/ontology/modalia",
@@ -1817,62 +2144,62 @@
       "IRI-based" : "Researcher",
       "en" : "researcher"
     },
-    "id" : "123",
-    "superClasses" : [ "10" ]
+    "id" : "64",
+    "superClasses" : [ "11" ]
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "206",
+    "id" : "230",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "instances" : 0,
-    "union" : [ "136", "214" ],
+    "union" : [ "142", "241" ],
     "attributes" : [ "anonymous", "union" ],
-    "id" : "169"
+    "id" : "174"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "232",
+    "id" : "259",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "194",
+    "id" : "217",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "160",
+    "id" : "165",
     "label" : {
       "IRI-based" : "dateTime"
     }
   }, {
     "instances" : 0,
-    "union" : [ "139", "215" ],
+    "union" : [ "36", "242" ],
     "attributes" : [ "anonymous", "union" ],
-    "id" : "181"
+    "id" : "186"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "164",
+    "id" : "169",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "instances" : 0,
-    "union" : [ "72", "28" ],
+    "union" : [ "73", "29" ],
     "attributes" : [ "anonymous", "union" ],
-    "id" : "179"
+    "id" : "184"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "197",
+    "id" : "221",
     "label" : {
       "IRI-based" : "string"
     }
@@ -1892,49 +2219,31 @@
       "IRI-based" : "RDMTopic",
       "en" : "RDM topic"
     },
-    "id" : "57",
-    "superClasses" : [ "58" ]
+    "id" : "15",
+    "superClasses" : [ "16" ]
   }, {
     "instances" : 0,
-    "union" : [ "93", "105" ],
+    "union" : [ "122", "110" ],
     "attributes" : [ "anonymous", "union" ],
-    "id" : "235"
+    "id" : "262"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "228",
+    "id" : "255",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
-    "iri" : "https://purl.org/ontology/modalia#Questionnaire",
-    "baseIri" : "https://purl.org/ontology/modalia",
-    "instances" : 0,
-    "annotations" : {
-      "prefLabel" : [ {
-        "identifier" : "prefLabel",
-        "language" : "en",
-        "value" : "questionnaire",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "Questionnaire",
-      "en" : "questionnaire"
-    },
-    "id" : "93",
-    "superClasses" : [ "43" ]
-  }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "234",
+    "id" : "261",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "236",
+    "id" : "263",
     "label" : {
       "IRI-based" : "anyURI"
     }
@@ -1960,7 +2269,7 @@
       "IRI-based" : "LearningPath",
       "en" : "learning path"
     },
-    "id" : "72"
+    "id" : "73"
   }, {
     "iri" : "http://id.loc.gov/ontologies/bibframe/Contribution",
     "baseIri" : "http://id.loc.gov/ontologies/bibframe",
@@ -1977,7 +2286,7 @@
       "IRI-based" : "Contribution"
     },
     "attributes" : [ "external" ],
-    "id" : "213"
+    "id" : "240"
   }, {
     "iri" : "http://purl.org/ontology/bibo/Article",
     "baseIri" : "http://purl.org/ontology/bibo",
@@ -1998,8 +2307,8 @@
       "en" : "Class representing OERs that are articles (e.g academic article)"
     },
     "attributes" : [ "external" ],
-    "id" : "106",
-    "superClasses" : [ "43" ]
+    "id" : "102",
+    "superClasses" : [ "46" ]
   }, {
     "iri" : "http://w3id.org/nfdi4ing/metadata4ing#Method",
     "baseIri" : "http://w3id.org/nfdi4ing/metadata4ing",
@@ -2023,7 +2332,7 @@
       "en" : "research method"
     },
     "attributes" : [ "external" ],
-    "id" : "184"
+    "id" : "189"
   }, {
     "iri" : "https://purl.org/ontology/modalia#CodeNotebook",
     "baseIri" : "https://purl.org/ontology/modalia",
@@ -2046,8 +2355,8 @@
       "IRI-based" : "CodeNotebook",
       "en" : "code notebook"
     },
-    "id" : "109",
-    "superClasses" : [ "43" ]
+    "id" : "106",
+    "superClasses" : [ "46" ]
   }, {
     "iri" : "https://purl.org/ontology/modalia#Code",
     "baseIri" : "https://purl.org/ontology/modalia",
@@ -2067,40 +2376,40 @@
     "comment" : {
       "en" : "Class representing OER which are code like Jupyternotebook."
     },
-    "id" : "68",
-    "superClasses" : [ "46" ]
+    "id" : "235",
+    "superClasses" : [ "19" ]
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#integer",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "173",
+    "id" : "178",
     "label" : {
       "IRI-based" : "integer"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "241",
+    "id" : "268",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#duration",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "201",
+    "id" : "225",
     "label" : {
       "IRI-based" : "duration"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "242",
+    "id" : "269",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "204",
+    "id" : "228",
     "label" : {
       "IRI-based" : "boolean"
     }
@@ -2124,40 +2433,59 @@
       "en" : "Computer programming source code. Example: Full (compile ready) solutions, code snippet samples, scripts, templates."
     },
     "attributes" : [ "external" ],
-    "id" : "112",
-    "superClasses" : [ "43" ]
+    "id" : "108",
+    "superClasses" : [ "46" ]
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "243",
+    "id" : "270",
     "label" : {
       "IRI-based" : "anyURI"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#integer",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "244",
+    "id" : "271",
     "label" : {
       "IRI-based" : "integer"
     }
   }, {
+    "iri" : "https://w3id.org/kim/hcrt/questionnaire",
+    "baseIri" : "https://w3id.org/kim/hcrt",
+    "instances" : 0,
+    "annotations" : {
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "questionnaire",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "questionnaire",
+      "en" : "questionnaire"
+    },
+    "attributes" : [ "external" ],
+    "id" : "110",
+    "superClasses" : [ "46" ]
+  }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "177",
+    "id" : "182",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "114",
+    "id" : "127",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "240",
+    "id" : "267",
     "label" : {
       "IRI-based" : "string"
     }
@@ -2169,8 +2497,8 @@
       "IRI-based" : "CuratorRole",
       "en" : "curator role"
     },
-    "id" : "18",
-    "superClasses" : [ "16" ]
+    "id" : "202",
+    "superClasses" : [ "62" ]
   }, {
     "iri" : "https://schema.org/PodcastSeries",
     "baseIri" : "https://schema.org",
@@ -2194,8 +2522,8 @@
       "en" : "podcast series"
     },
     "attributes" : [ "external" ],
-    "id" : "98",
-    "superClasses" : [ "43" ]
+    "id" : "117",
+    "superClasses" : [ "46" ]
   }, {
     "iri" : "https://purl.org/ontology/modalia#RDMResource",
     "baseIri" : "https://purl.org/ontology/modalia",
@@ -2207,30 +2535,8 @@
     "comment" : {
       "en" : "OER related to Research Data Management"
     },
-    "id" : "25",
-    "superClasses" : [ "28" ]
-  }, {
-    "iri" : "https://w3id.org/kim/hcrt/case_study",
-    "baseIri" : "https://w3id.org/kim/hcrt",
-    "instances" : 0,
-    "annotations" : {
-      "prefLabel" : [ {
-        "identifier" : "prefLabel",
-        "language" : "en",
-        "value" : "Case Study",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "case_study",
-      "en" : "case study"
-    },
-    "comment" : {
-      "en" : "Class representing OERs that are in form of case study."
-    },
-    "attributes" : [ "external" ],
-    "id" : "101",
-    "superClasses" : [ "43" ]
+    "id" : "26",
+    "superClasses" : [ "29" ]
   }, {
     "iri" : "https://purl.org/ontology/modalia#MastersStudent",
     "baseIri" : "https://purl.org/ontology/modalia",
@@ -2259,8 +2565,30 @@
       "IRI-based" : "MastersStudent",
       "en" : "master's student"
     },
-    "id" : "121",
-    "superClasses" : [ "10" ]
+    "id" : "58",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "https://w3id.org/kim/hcrt/case_study",
+    "baseIri" : "https://w3id.org/kim/hcrt",
+    "instances" : 0,
+    "annotations" : {
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Case Study",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "case_study",
+      "en" : "case study"
+    },
+    "comment" : {
+      "en" : "Class representing OERs that are in form of case study."
+    },
+    "attributes" : [ "external" ],
+    "id" : "118",
+    "superClasses" : [ "46" ]
   }, {
     "iri" : "https://purl.org/ontology/modalia#Poster",
     "baseIri" : "https://purl.org/ontology/modalia",
@@ -2280,13 +2608,13 @@
     "comment" : {
       "en" : "Class representing OERs that are Posters"
     },
-    "id" : "103",
-    "superClasses" : [ "43" ]
+    "id" : "120",
+    "superClasses" : [ "46" ]
   }, {
     "instances" : 0,
-    "union" : [ "136", "214" ],
+    "union" : [ "142", "241" ],
     "attributes" : [ "anonymous", "union" ],
-    "id" : "239"
+    "id" : "266"
   }, {
     "iri" : "https://github.com/tibonto/educor#LearningPreference",
     "baseIri" : "https://github.com/tibonto/educor",
@@ -2309,63 +2637,63 @@
       "IRI-based" : "LearningPreference",
       "en" : "learning preference"
     },
-    "subClasses" : [ "48", "1", "6", "8" ],
+    "subClasses" : [ "209", "211", "170", "128" ],
     "comment" : {
       "en" : "It is based on the theory which identifies four learning styles (visual, auditory, reading, and kinesthetic)."
     },
     "attributes" : [ "external" ],
-    "id" : "2"
+    "id" : "129"
   }, {
     "instances" : 0,
-    "union" : [ "136", "214" ],
+    "union" : [ "142", "241" ],
     "attributes" : [ "anonymous", "union" ],
-    "id" : "252"
+    "id" : "279"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "218",
+    "id" : "245",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "253",
+    "id" : "280",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "254",
+    "id" : "281",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "41",
+    "id" : "44",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#int",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "188",
+    "id" : "194",
     "label" : {
       "IRI-based" : "int"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "255",
+    "id" : "282",
     "label" : {
       "IRI-based" : "anyURI"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "257",
+    "id" : "284",
     "label" : {
       "IRI-based" : "dateTime"
     }
@@ -2385,8 +2713,8 @@
       "IRI-based" : "MuseumProfessional",
       "en" : "museum professional"
     },
-    "id" : "115",
-    "superClasses" : [ "10" ]
+    "id" : "130",
+    "superClasses" : [ "11" ]
   }, {
     "iri" : "http://edamontology.org/data_0006",
     "baseIri" : "http://edamontology.org",
@@ -2404,7 +2732,7 @@
       "en" : "data"
     },
     "attributes" : [ "external" ],
-    "id" : "247"
+    "id" : "274"
   }, {
     "iri" : "https://purl.org/ontology/modalia#ResearcherRole",
     "baseIri" : "https://purl.org/ontology/modalia",
@@ -2413,8 +2741,8 @@
       "IRI-based" : "ResearcherRole",
       "en" : "researcher role"
     },
-    "id" : "23",
-    "superClasses" : [ "16" ]
+    "id" : "205",
+    "superClasses" : [ "62" ]
   }, {
     "iri" : "https://purl.org/ontology/modalia#PhDStudent",
     "baseIri" : "https://purl.org/ontology/modalia",
@@ -2443,8 +2771,27 @@
       "IRI-based" : "PhDStudent",
       "en" : "PhD student"
     },
-    "id" : "122",
-    "superClasses" : [ "10" ]
+    "id" : "60",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "https://w3id.org/kim/hcrt/lesson_plan",
+    "baseIri" : "https://w3id.org/kim/hcrt",
+    "instances" : 0,
+    "annotations" : {
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Lesson_plan",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "lesson_plan",
+      "en" : "lesson_plan"
+    },
+    "attributes" : [ "external" ],
+    "id" : "112",
+    "superClasses" : [ "46" ]
   }, {
     "iri" : "https://purl.org/ontology/modalia#StudentSchool",
     "baseIri" : "https://purl.org/ontology/modalia",
@@ -2461,8 +2808,27 @@
       "IRI-based" : "StudentSchool",
       "en" : "student (school)"
     },
-    "id" : "116",
-    "superClasses" : [ "10" ]
+    "id" : "131",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "https://schema.org/Rating",
+    "baseIri" : "https://schema.org",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "en",
+        "value" : "A rating is an evaluation on a numeric scale, such as 1 to 5 stars.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Rating",
+      "en" : "rating indicator"
+    },
+    "subClasses" : [ "75" ],
+    "attributes" : [ "external" ],
+    "id" : "76"
   }, {
     "iri" : "https://schema.org/Organization",
     "baseIri" : "https://schema.org",
@@ -2486,26 +2852,7 @@
       "en" : "organization"
     },
     "attributes" : [ "external" ],
-    "id" : "215"
-  }, {
-    "iri" : "https://schema.org/Rating",
-    "baseIri" : "https://schema.org",
-    "instances" : 0,
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "en",
-        "value" : "A rating is an evaluation on a numeric scale, such as 1 to 5 stars.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "Rating",
-      "en" : "rating indicator"
-    },
-    "subClasses" : [ "12" ],
-    "attributes" : [ "external" ],
-    "id" : "13"
+    "id" : "242"
   }, {
     "iri" : "https://purl.org/ontology/modalia#CollectPhase",
     "baseIri" : "https://purl.org/ontology/modalia",
@@ -2514,8 +2861,8 @@
       "IRI-based" : "CollectPhase",
       "en" : "collect phase"
     },
-    "id" : "89",
-    "superClasses" : [ "55" ]
+    "id" : "1",
+    "superClasses" : [ "2" ]
   }, {
     "iri" : "https://w3id.org/kim/hcrt/assessment",
     "baseIri" : "https://w3id.org/kim/hcrt",
@@ -2536,8 +2883,8 @@
       "en" : "Class representing OERs that are in form of assessment of knowledge."
     },
     "attributes" : [ "external" ],
-    "id" : "105",
-    "superClasses" : [ "43" ]
+    "id" : "122",
+    "superClasses" : [ "46" ]
   }, {
     "iri" : "http://purl.obolibrary.org/obo/T4FS_0000178",
     "baseIri" : "http://purl.obolibrary.org/obo",
@@ -2555,11 +2902,11 @@
       "en" : "data steward"
     },
     "attributes" : [ "external" ],
-    "id" : "117",
-    "superClasses" : [ "10" ]
+    "id" : "89",
+    "superClasses" : [ "11" ]
   }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
-    "id" : "182",
+    "id" : "187",
     "label" : {
       "IRI-based" : "Literal",
       "undefined" : "Literal"
@@ -2581,32 +2928,32 @@
       "en" : "report"
     },
     "attributes" : [ "external" ],
-    "id" : "111",
-    "superClasses" : [ "43" ]
+    "id" : "125",
+    "superClasses" : [ "46" ]
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#Thing",
     "baseIri" : "http://owl2vowl.de",
-    "id" : "35",
+    "id" : "38",
     "label" : {
       "undefined" : "Thing"
     }
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#Thing",
     "baseIri" : "http://owl2vowl.de",
-    "id" : "31",
+    "id" : "32",
     "label" : {
       "undefined" : "Thing"
     }
   }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
-    "id" : "170",
+    "id" : "175",
     "label" : {
       "IRI-based" : "Literal",
       "undefined" : "Literal"
     }
   }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
-    "id" : "138",
+    "id" : "144",
     "label" : {
       "IRI-based" : "Literal",
       "undefined" : "Literal"
@@ -2627,8 +2974,27 @@
       "IRI-based" : "AnalyzePhase",
       "en" : "analyze phase"
     },
-    "id" : "125",
-    "superClasses" : [ "55" ]
+    "id" : "69",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://w3id.org/kim/hcrt/course",
+    "baseIri" : "https://w3id.org/kim/hcrt",
+    "instances" : 0,
+    "annotations" : {
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Course",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "course",
+      "en" : "course"
+    },
+    "attributes" : [ "external" ],
+    "id" : "95",
+    "superClasses" : [ "46" ]
   }, {
     "iri" : "https://schema.org/ImageObject",
     "baseIri" : "https://schema.org",
@@ -2649,7 +3015,26 @@
       "en" : "An image file."
     },
     "attributes" : [ "external" ],
-    "id" : "64",
+    "id" : "24",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "https://w3id.org/kim/hcrt/map",
+    "baseIri" : "https://w3id.org/kim/hcrt",
+    "instances" : 0,
+    "annotations" : {
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Map",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "map",
+      "en" : "map"
+    },
+    "attributes" : [ "external" ],
+    "id" : "96",
     "superClasses" : [ "46" ]
   }, {
     "iri" : "https://schema.org/Text",
@@ -2671,8 +3056,8 @@
       "en" : "Class representing OER which are text."
     },
     "attributes" : [ "external" ],
-    "id" : "66",
-    "superClasses" : [ "46" ]
+    "id" : "233",
+    "superClasses" : [ "19" ]
   }, {
     "iri" : "https://schema.org/Person",
     "baseIri" : "https://schema.org",
@@ -2693,17 +3078,17 @@
       "en" : "can be author or contributor"
     },
     "attributes" : [ "external" ],
-    "id" : "216"
+    "id" : "243"
   }, {
     "instances" : 0,
-    "union" : [ "28", "58" ],
+    "union" : [ "29", "16" ],
     "attributes" : [ "anonymous", "union" ],
-    "id" : "249"
+    "id" : "276"
   }, {
     "instances" : 0,
-    "union" : [ "136", "186" ],
+    "union" : [ "142", "192" ],
     "attributes" : [ "anonymous", "union" ],
-    "id" : "301"
+    "id" : "328"
   }, {
     "iri" : "https://purl.org/ontology/modalia#Community",
     "baseIri" : "https://purl.org/ontology/modalia",
@@ -2720,7 +3105,7 @@
       "IRI-based" : "Community",
       "en" : "community"
     },
-    "id" : "139"
+    "id" : "36"
   }, {
     "iri" : "https://purl.org/ontology/modalia#RDMSubjectCluster",
     "baseIri" : "https://purl.org/ontology/modalia",
@@ -2737,7 +3122,7 @@
       "IRI-based" : "RDMSubjectCluster",
       "en" : "RDM subject cluster"
     },
-    "id" : "175"
+    "id" : "180"
   }, {
     "iri" : "https://purl.org/ontology/modalia#UserRole",
     "baseIri" : "https://purl.org/ontology/modalia",
@@ -2746,8 +3131,8 @@
       "IRI-based" : "UserRole",
       "en" : "user role"
     },
-    "subClasses" : [ "15", "18", "20", "23" ],
-    "id" : "16"
+    "subClasses" : [ "61", "202", "197", "205" ],
+    "id" : "62"
   }, {
     "iri" : "https://purl.org/ontology/modalia#Skill",
     "baseIri" : "https://purl.org/ontology/modalia",
@@ -2767,11 +3152,11 @@
     "instances" : 0,
     "label" : {
       "IRI-based" : "other",
-      "en" : "Other resource type"
+      "en" : "other resource type"
     },
     "attributes" : [ "external" ],
-    "id" : "92",
-    "superClasses" : [ "43" ]
+    "id" : "111",
+    "superClasses" : [ "46" ]
   }, {
     "iri" : "https://purl.org/ontology/modalia#VARKVisual",
     "baseIri" : "https://purl.org/ontology/modalia",
@@ -2788,8 +3173,8 @@
       "IRI-based" : "VARKVisual",
       "en" : "VARK visual"
     },
-    "id" : "48",
-    "superClasses" : [ "2" ]
+    "id" : "209",
+    "superClasses" : [ "129" ]
   }, {
     "iri" : "https://github.com/tibonto/educor#Recommendation",
     "baseIri" : "https://github.com/tibonto/educor",
@@ -2816,7 +3201,7 @@
       "en" : "The recommendation in advanced systems can also be an action (take a small break), an exercise, a knowledge topic, a skill, or a learning path"
     },
     "attributes" : [ "external" ],
-    "id" : "186"
+    "id" : "192"
   }, {
     "iri" : "https://purl.org/ontology/modalia#VARKAuditory",
     "baseIri" : "https://purl.org/ontology/modalia",
@@ -2833,8 +3218,8 @@
       "IRI-based" : "VARKAuditory",
       "en" : "VARK auditory"
     },
-    "id" : "1",
-    "superClasses" : [ "2" ]
+    "id" : "211",
+    "superClasses" : [ "129" ]
   }, {
     "iri" : "https://purl.org/ontology/modalia#Tutorial",
     "baseIri" : "https://purl.org/ontology/modalia",
@@ -2854,8 +3239,8 @@
     "comment" : {
       "en" : "Class representing OERs that are in form of tutorial."
     },
-    "id" : "97",
-    "superClasses" : [ "43" ]
+    "id" : "116",
+    "superClasses" : [ "46" ]
   }, {
     "iri" : "https://purl.org/ontology/modalia#TeacherHigherEducation",
     "baseIri" : "https://purl.org/ontology/modalia",
@@ -2872,8 +3257,8 @@
       "IRI-based" : "TeacherHigherEducation",
       "en" : "teacher (higher education)"
     },
-    "id" : "120",
-    "superClasses" : [ "10" ]
+    "id" : "55",
+    "superClasses" : [ "11" ]
   }, {
     "iri" : "https://w3id.org/kim/hcrt/diagram",
     "baseIri" : "https://w3id.org/kim/hcrt",
@@ -2894,8 +3279,27 @@
       "en" : "Class representing an OER that is a diagram"
     },
     "attributes" : [ "external" ],
-    "id" : "104",
-    "superClasses" : [ "43" ]
+    "id" : "121",
+    "superClasses" : [ "46" ]
+  }, {
+    "iri" : "https://w3id.org/kim/hcrt/sheet_music",
+    "baseIri" : "https://w3id.org/kim/hcrt",
+    "instances" : 0,
+    "annotations" : {
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Sheet_music",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "sheet_music",
+      "en" : "sheet_music"
+    },
+    "attributes" : [ "external" ],
+    "id" : "123",
+    "superClasses" : [ "46" ]
   }, {
     "iri" : "http://w3id.org/nfdi4ing/metadata4ing#Tool",
     "baseIri" : "http://w3id.org/nfdi4ing/metadata4ing",
@@ -2913,7 +3317,7 @@
       "en" : "tool"
     },
     "attributes" : [ "external" ],
-    "id" : "221"
+    "id" : "248"
   }, {
     "iri" : "https://github.com/tibonto/educor#EducationalResource",
     "baseIri" : "https://github.com/tibonto/educor",
@@ -2936,9 +3340,9 @@
       "IRI-based" : "EducationalResource",
       "en" : "educational resource"
     },
-    "subClasses" : [ "25" ],
+    "subClasses" : [ "26" ],
     "attributes" : [ "external" ],
-    "id" : "28"
+    "id" : "29"
   }, {
     "iri" : "https://purl.org/ontology/modalia#LearningPathStep",
     "baseIri" : "https://purl.org/ontology/modalia",
@@ -2955,7 +3359,7 @@
       "IRI-based" : "LearningPathStep",
       "en" : "learning path step"
     },
-    "id" : "222"
+    "id" : "249"
   } ],
   "property" : [ {
     "id" : "0",
@@ -2967,7 +3371,7 @@
     "id" : "7",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "11",
+    "id" : "12",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "14",
@@ -2976,29 +3380,29 @@
     "id" : "17",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "19",
+    "id" : "20",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "22",
+    "id" : "23",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "24",
+    "id" : "25",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "27",
+    "id" : "28",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "30",
+    "id" : "31",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "34",
+    "id" : "35",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "40",
+    "id" : "37",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "43",
     "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "44",
-    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "47",
     "type" : "rdfs:SubClassOf"
@@ -3006,16 +3410,16 @@
     "id" : "49",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "52",
+    "id" : "51",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "56",
+    "id" : "54",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "57",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "59",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "61",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "63",
@@ -3027,22 +3431,22 @@
     "id" : "67",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "69",
+    "id" : "68",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "71",
+    "id" : "70",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "72",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "74",
+    "id" : "78",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "82",
+    "id" : "85",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "84",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "86",
+    "id" : "87",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "88",
@@ -3051,88 +3455,79 @@
     "id" : "90",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "113",
-    "type" : "owl:datatypeProperty"
+    "id" : "92",
+    "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "128",
+    "id" : "126",
     "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "131",
-    "type" : "owl:objectProperty"
   }, {
     "id" : "133",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "134",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "135",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "137",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "38",
+    "id" : "136",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "140",
+    "id" : "138",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "32",
+    "id" : "139",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "156",
+    "id" : "141",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "143",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "159",
-    "type" : "owl:datatypeProperty"
+    "id" : "145",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "41",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "33",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "161",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "163",
+    "id" : "164",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "165",
-    "type" : "owl:objectProperty"
-  }, {
     "id" : "166",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "149",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "167",
-    "type" : "owl:objectProperty"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "168",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "171",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "174",
     "type" : "owl:objectProperty"
+  }, {
+    "id" : "154",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "172",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "173",
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "176",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "178",
+    "id" : "179",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "180",
+    "id" : "181",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "183",
     "type" : "owl:objectProperty"
   }, {
     "id" : "185",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "187",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "189",
+    "id" : "188",
     "type" : "owl:objectProperty"
   }, {
     "id" : "190",
@@ -3141,227 +3536,182 @@
     "id" : "191",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "153",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "192",
-    "type" : "owl:objectProperty"
-  }, {
     "id" : "193",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "195",
-    "type" : "owl:objectProperty"
-  }, {
     "id" : "196",
-    "type" : "owl:datatypeProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "198",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "200",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "146",
+    "id" : "199",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "202",
+    "id" : "200",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "201",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "158",
     "type" : "owl:objectProperty"
   }, {
     "id" : "203",
-    "type" : "owl:datatypeProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "205",
-    "type" : "owl:datatypeProperty"
+    "id" : "204",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "206",
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "207",
-    "type" : "owl:objectProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "208",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "209",
-    "type" : "rdfs:SubClassOf"
-  }, {
     "id" : "210",
-    "type" : "owl:datatypeProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "212",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "217",
+    "id" : "213",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "214",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "215",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "216",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "219",
+    "id" : "218",
     "type" : "owl:objectProperty"
+  }, {
+    "id" : "219",
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "220",
-    "type" : "owl:objectProperty"
+    "type" : "owl:datatypeProperty"
   }, {
-    "id" : "223",
+    "id" : "222",
     "type" : "owl:objectProperty"
   }, {
     "id" : "224",
     "type" : "owl:datatypeProperty"
   }, {
+    "id" : "151",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "226",
+    "type" : "owl:objectProperty"
+  }, {
     "id" : "227",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "141",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "143",
-    "type" : "owl:objectProperty"
+    "id" : "229",
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "231",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "150",
-    "type" : "owl:objectProperty"
+    "id" : "232",
+    "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "233",
+    "id" : "234",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "236",
     "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "36",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "237",
-    "type" : "owl:objectProperty"
   }, {
     "id" : "238",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "239",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "244",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "199",
+    "id" : "246",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "144",
+    "id" : "247",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "152",
+    "id" : "250",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "251",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "254",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "146",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "148",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "258",
     "type" : "owl:objectProperty"
   }, {
     "id" : "155",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "245",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "246",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "248",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "250",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "251",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "256",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "258",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "259",
-    "type" : "owl:objectProperty"
-  }, {
     "id" : "260",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "261",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "262",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "263",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "264",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "265",
     "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "266",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "267",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "148",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "268",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "269",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "270",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "271",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "272",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "273",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "274",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "275",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "276",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "277",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "278",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "37",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "279",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "280",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "147",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "281",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "282",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "283",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "284",
-    "type" : "owl:objectProperty"
   }, {
     "id" : "39",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "151",
+    "id" : "264",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "265",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "223",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "149",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "157",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "160",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "272",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "273",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "275",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "277",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "278",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "283",
     "type" : "owl:objectProperty"
   }, {
     "id" : "285",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "286",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "287",
     "type" : "owl:objectProperty"
@@ -3376,79 +3726,91 @@
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "291",
-    "type" : "owl:objectProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "292",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "293",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "294",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "295",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "296",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "297",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "298",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "299",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "300",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "302",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "303",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "304",
+    "id" : "293",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "145",
+    "id" : "294",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "153",
     "type" : "owl:objectProperty"
+  }, {
+    "id" : "295",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "296",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "297",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "298",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "299",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "300",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "301",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "302",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "303",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "304",
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "305",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "40",
     "type" : "owl:objectProperty"
   }, {
     "id" : "306",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "307",
-    "type" : "owl:disjointWith"
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "152",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "308",
-    "type" : "owl:disjointWith"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "309",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "310",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "154",
+    "id" : "311",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "311",
-    "type" : "rdfs:SubClassOf"
+    "id" : "42",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "156",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "312",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "313",
-    "type" : "owl:objectProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "314",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "315",
     "type" : "rdfs:SubClassOf"
@@ -3457,51 +3819,132 @@
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "317",
-    "type" : "owl:datatypeProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "318",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "319",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "320",
-    "type" : "owl:datatypeProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "321",
-    "type" : "owl:objectProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "322",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "142",
-    "type" : "owl:objectProperty"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "323",
-    "type" : "owl:objectProperty"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "324",
-    "type" : "owl:objectProperty"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "325",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "326",
-    "type" : "owl:objectProperty"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "327",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "328",
-    "type" : "owl:objectProperty"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "329",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "330",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "331",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "150",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "332",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "333",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "334",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "335",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "336",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "337",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "159",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "338",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "339",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "340",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "341",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "342",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "343",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "344",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "345",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "346",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "347",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "348",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "147",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "349",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "350",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "351",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "352",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "353",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "354",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "355",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "356",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "357",
     "type" : "rdfs:SubClassOf"
   } ],
   "propertyAttribute" : [ {
@@ -3515,50 +3958,50 @@
     "attributes" : [ "anonymous", "object" ],
     "id" : "5"
   }, {
-    "range" : "2",
+    "range" : "9",
     "domain" : "8",
     "attributes" : [ "anonymous", "object" ],
     "id" : "7"
   }, {
-    "range" : "13",
-    "domain" : "12",
+    "range" : "9",
+    "domain" : "13",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "11"
+    "id" : "12"
   }, {
     "range" : "16",
     "domain" : "15",
     "attributes" : [ "anonymous", "object" ],
     "id" : "14"
   }, {
-    "range" : "16",
+    "range" : "19",
     "domain" : "18",
     "attributes" : [ "anonymous", "object" ],
     "id" : "17"
   }, {
-    "range" : "16",
-    "domain" : "20",
+    "range" : "19",
+    "domain" : "21",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "19"
+    "id" : "20"
   }, {
-    "range" : "16",
-    "domain" : "23",
+    "range" : "19",
+    "domain" : "24",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "22"
+    "id" : "23"
   }, {
     "iri" : "https://purl.org/ontology/modalia#coversManagementOfDataDescribing",
     "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "26",
+    "range" : "27",
     "label" : {
       "IRI-based" : "coversManagementOfDataDescribing",
       "en" : "covers management of data describing"
     },
-    "domain" : "25",
+    "domain" : "26",
     "attributes" : [ "object" ],
-    "id" : "24"
+    "id" : "25"
   }, {
     "iri" : "https://purl.org/ontology/modalia#hasDOI",
     "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "29",
+    "range" : "30",
     "annotations" : {
       "example" : [ {
         "identifier" : "example",
@@ -3571,16 +4014,16 @@
       "IRI-based" : "hasDOI",
       "en" : "has DOI"
     },
-    "domain" : "28",
+    "domain" : "29",
     "comment" : {
       "en" : "the DOI of the resource if exists."
     },
     "attributes" : [ "datatype" ],
-    "id" : "27"
+    "id" : "28"
   }, {
     "iri" : "https://purl.org/ontology/modalia#isDescribedBy",
     "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "31",
+    "range" : "32",
     "annotations" : {
       "prefLabel" : [ {
         "identifier" : "prefLabel",
@@ -3593,402 +4036,14 @@
       "IRI-based" : "isDescribedBy",
       "en" : "is described by"
     },
-    "superproperty" : [ "32" ],
-    "domain" : "28",
+    "superproperty" : [ "33" ],
+    "domain" : "29",
     "attributes" : [ "object" ],
-    "id" : "30"
+    "id" : "31"
   }, {
-    "iri" : "http://www.w3.org/2002/07/owl#topObjectProperty",
-    "baseIri" : "http://www.w3.org/2002/07/owl",
-    "range" : "35",
-    "label" : {
-      "IRI-based" : "topObjectProperty"
-    },
-    "domain" : "35",
-    "subproperty" : [ "36", "37", "38", "39" ],
-    "attributes" : [ "object", "external" ],
-    "id" : "34"
-  }, {
-    "iri" : "https://schema.org/abstract",
-    "baseIri" : "https://schema.org",
-    "range" : "41",
-    "label" : {
-      "IRI-based" : "abstract",
-      "en" : "abstract"
-    },
-    "domain" : "28",
-    "comment" : {
-      "en" : "An abstract is a short description that summarizes an OER."
-    },
-    "attributes" : [ "external", "datatype" ],
-    "id" : "40"
-  }, {
-    "range" : "46",
-    "domain" : "45",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "44"
-  }, {
-    "range" : "2",
-    "domain" : "48",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "47"
-  }, {
-    "range" : "51",
-    "domain" : "50",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "49"
-  }, {
-    "range" : "51",
-    "domain" : "53",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "52"
-  }, {
-    "range" : "58",
-    "domain" : "57",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "56"
-  }, {
-    "range" : "46",
-    "domain" : "60",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "59"
-  }, {
-    "range" : "46",
-    "domain" : "62",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "61"
-  }, {
-    "range" : "46",
-    "domain" : "64",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "63"
-  }, {
-    "range" : "46",
-    "domain" : "66",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "65"
-  }, {
-    "range" : "46",
-    "domain" : "68",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "67"
-  }, {
-    "range" : "46",
-    "domain" : "70",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "69"
-  }, {
-    "iri" : "https://purl.org/ontology/modalia#studyPlan",
+    "iri" : "https://purl.org/ontology/modalia#supportinghost",
     "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "73",
-    "label" : {
-      "IRI-based" : "studyPlan",
-      "en" : "study plan"
-    },
-    "domain" : "72",
-    "attributes" : [ "datatype" ],
-    "id" : "71"
-  }, {
-    "iri" : "https://purl.org/ontology/modalia#commentDate",
-    "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "76",
-    "annotations" : {
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "The date of a user comment",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "commentDate",
-      "en" : "comment date"
-    },
-    "domain" : "75",
-    "attributes" : [ "datatype" ],
-    "id" : "74"
-  }, {
-    "iri" : "http://purl.org/dc/terms/language",
-    "baseIri" : "http://purl.org/dc/terms",
-    "range" : "83",
-    "label" : {
-      "IRI-based" : "language",
-      "en" : "language"
-    },
-    "domain" : "28",
-    "comment" : {
-      "en" : "language of resource"
-    },
-    "attributes" : [ "object", "external" ],
-    "id" : "82"
-  }, {
-    "range" : "55",
-    "domain" : "85",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "84"
-  }, {
-    "range" : "55",
-    "domain" : "87",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "86"
-  }, {
-    "range" : "55",
-    "domain" : "89",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "88"
-  }, {
-    "range" : "55",
-    "domain" : "91",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "90"
-  }, {
-    "iri" : "https://schema.org/identifier",
-    "baseIri" : "https://schema.org",
-    "range" : "114",
-    "label" : {
-      "IRI-based" : "identifier",
-      "en" : "identifier"
-    },
-    "domain" : "28",
-    "attributes" : [ "external", "datatype" ],
-    "id" : "113"
-  }, {
-    "iri" : "https://purl.org/ontology/modalia#notesForLearner",
-    "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "130",
-    "label" : {
-      "IRI-based" : "notesForLearner",
-      "en" : "has notes for learner"
-    },
-    "domain" : "129",
-    "attributes" : [ "datatype" ],
-    "id" : "128"
-  }, {
-    "iri" : "https://purl.org/ontology/modalia#essentialFor",
-    "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "132",
-    "label" : {
-      "IRI-based" : "essentialFor",
-      "en" : "essential for"
-    },
-    "domain" : "4",
-    "comment" : {
-      "en" : "a property defining the essential skills for a certain job"
-    },
-    "attributes" : [ "object" ],
-    "id" : "131"
-  }, {
-    "iri" : "https://w3id.org/citedcat-ap/isSupplementTo",
-    "baseIri" : "https://w3id.org/citedcat-ap",
-    "range" : "31",
-    "annotations" : {
-      "prefLabel" : [ {
-        "identifier" : "prefLabel",
-        "language" : "en",
-        "value" : "Is supplement to",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "isSupplementTo",
-      "en" : "isSupplementTo"
-    },
-    "superproperty" : [ "32" ],
-    "domain" : "28",
-    "attributes" : [ "object", "external" ],
-    "id" : "133"
-  }, {
-    "iri" : "https://purl.org/ontology/modalia#describes",
-    "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "31",
-    "annotations" : {
-      "prefLabel" : [ {
-        "identifier" : "prefLabel",
-        "language" : "en",
-        "value" : "Describes",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "describes",
-      "en" : "describes"
-    },
-    "superproperty" : [ "32" ],
-    "domain" : "28",
-    "attributes" : [ "object" ],
-    "id" : "134"
-  }, {
-    "iri" : "https://purl.org/ontology/modalia#hasLearningPreference",
-    "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "2",
-    "annotations" : {
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "The preferenced learning class from VARK",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "hasLearningPreference",
-      "en" : "has learning preference"
-    },
-    "domain" : "136",
-    "attributes" : [ "object" ],
-    "id" : "135"
-  }, {
-    "iri" : "http://www.w3.org/2002/07/owl#topDataProperty",
-    "baseIri" : "http://www.w3.org/2002/07/owl",
-    "range" : "138",
-    "label" : {
-      "IRI-based" : "topDataProperty"
-    },
-    "domain" : "35",
-    "attributes" : [ "external", "datatype" ],
-    "id" : "137"
-  }, {
-    "iri" : "https://purl.org/ontology/modalia#isMemberOf",
-    "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "139",
-    "label" : {
-      "IRI-based" : "isMemberOf",
-      "en" : "is member of"
-    },
-    "superproperty" : [ "34" ],
-    "domain" : "136",
-    "attributes" : [ "object" ],
-    "id" : "38"
-  }, {
-    "iri" : "https://schema.org/isBasedOn",
-    "baseIri" : "https://schema.org",
-    "range" : "31",
-    "annotations" : {
-      "prefLabel" : [ {
-        "identifier" : "prefLabel",
-        "language" : "en",
-        "value" : "Is based on",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "isBasedOn",
-      "en" : "isBasedOn"
-    },
-    "superproperty" : [ "32" ],
-    "domain" : "28",
-    "attributes" : [ "object", "external" ],
-    "id" : "140"
-  }, {
-    "iri" : "http://purl.org/dc/terms/relation",
-    "baseIri" : "http://purl.org/dc/terms",
-    "range" : "31",
-    "annotations" : {
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "The relation(s) to other resources.  It is required to identify the related resource by means of a URI.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "relation",
-      "en" : "relation"
-    },
-    "domain" : "28",
-    "subproperty" : [ "141", "133", "134", "142", "30", "143", "144", "145", "146", "147", "148", "149", "150", "140", "151", "152", "153", "154", "155" ],
-    "attributes" : [ "object", "external" ],
-    "id" : "32"
-  }, {
-    "iri" : "https://purl.org/ontology/modalia#hasOrder",
-    "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "158",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "en",
-        "value" : "Order of proficiency level, starting from 1 for Novice and increasing by proficiency",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "hasOrder",
-      "en" : "has order"
-    },
-    "domain" : "157",
-    "attributes" : [ "datatype" ],
-    "id" : "156"
-  }, {
-    "iri" : "http://purl.org/dc/terms/issued",
-    "baseIri" : "http://purl.org/dc/terms",
-    "range" : "160",
-    "annotations" : {
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Date of formal issuance (e.g., publication) of the resource.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "issued",
-      "en" : "issued"
-    },
-    "domain" : "28",
-    "attributes" : [ "external", "datatype" ],
-    "id" : "159"
-  }, {
-    "iri" : "https://purl.org/ontology/modalia#commentText",
-    "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "162",
-    "annotations" : {
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "The OER of a user comment",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "commentText",
-      "en" : "comment text"
-    },
-    "domain" : "75",
-    "attributes" : [ "datatype" ],
-    "id" : "161"
-  }, {
-    "iri" : "http://purl.org/spar/fabio/hasSubtitle",
-    "baseIri" : "http://purl.org/spar/fabio",
-    "range" : "164",
-    "label" : {
-      "IRI-based" : "hasSubtitle",
-      "en" : "has subtitle"
-    },
-    "domain" : "28",
-    "attributes" : [ "external", "datatype" ],
-    "id" : "163"
-  }, {
-    "iri" : "https://purl.org/ontology/modalia#hasOwner",
-    "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "136",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "en",
-        "value" : "defines the user who owns a specific community. There is only one owner to a specific community",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "hasOwner",
-      "en" : "has owner"
-    },
-    "domain" : "139",
-    "attributes" : [ "functional", "object" ],
-    "id" : "165"
-  }, {
-    "iri" : "http://bibfra.me/vocab/relation/supportinghost",
-    "baseIri" : "http://bibfra.me/vocab/relation",
-    "range" : "139",
+    "range" : "36",
     "annotations" : {
       "definition" : [ {
         "identifier" : "definition",
@@ -4001,13 +4056,401 @@
       "IRI-based" : "supportinghost",
       "en" : "supportinghost"
     },
-    "domain" : "28",
+    "domain" : "29",
+    "attributes" : [ "object" ],
+    "id" : "35"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#topObjectProperty",
+    "baseIri" : "http://www.w3.org/2002/07/owl",
+    "range" : "38",
+    "label" : {
+      "IRI-based" : "topObjectProperty"
+    },
+    "domain" : "38",
+    "subproperty" : [ "39", "40", "41", "42" ],
     "attributes" : [ "object", "external" ],
+    "id" : "37"
+  }, {
+    "iri" : "https://schema.org/abstract",
+    "baseIri" : "https://schema.org",
+    "range" : "44",
+    "label" : {
+      "IRI-based" : "abstract",
+      "en" : "abstract"
+    },
+    "domain" : "29",
+    "comment" : {
+      "en" : "An abstract is a short description that summarizes an OER."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "43"
+  }, {
+    "range" : "2",
+    "domain" : "48",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "47"
+  }, {
+    "range" : "2",
+    "domain" : "50",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "49"
+  }, {
+    "range" : "11",
+    "domain" : "52",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "51"
+  }, {
+    "range" : "11",
+    "domain" : "55",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "54"
+  }, {
+    "range" : "11",
+    "domain" : "58",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "57"
+  }, {
+    "range" : "11",
+    "domain" : "60",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "59"
+  }, {
+    "range" : "11",
+    "domain" : "64",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "63"
+  }, {
+    "range" : "2",
+    "domain" : "66",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "65"
+  }, {
+    "range" : "2",
+    "domain" : "56",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "67"
+  }, {
+    "range" : "2",
+    "domain" : "69",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "68"
+  }, {
+    "range" : "2",
+    "domain" : "71",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "70"
+  }, {
+    "iri" : "https://purl.org/ontology/modalia#studyPlan",
+    "baseIri" : "https://purl.org/ontology/modalia",
+    "range" : "74",
+    "label" : {
+      "IRI-based" : "studyPlan",
+      "en" : "study plan"
+    },
+    "domain" : "73",
+    "attributes" : [ "datatype" ],
+    "id" : "72"
+  }, {
+    "iri" : "https://purl.org/ontology/modalia#commentDate",
+    "baseIri" : "https://purl.org/ontology/modalia",
+    "range" : "80",
+    "annotations" : {
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "The date of a user comment",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "commentDate",
+      "en" : "comment date"
+    },
+    "domain" : "79",
+    "attributes" : [ "datatype" ],
+    "id" : "78"
+  }, {
+    "iri" : "http://purl.org/dc/terms/language",
+    "baseIri" : "http://purl.org/dc/terms",
+    "range" : "86",
+    "label" : {
+      "IRI-based" : "language",
+      "en" : "language"
+    },
+    "domain" : "29",
+    "comment" : {
+      "en" : "language of resource"
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "85"
+  }, {
+    "range" : "11",
+    "domain" : "83",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "87"
+  }, {
+    "range" : "11",
+    "domain" : "89",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "88"
+  }, {
+    "range" : "11",
+    "domain" : "91",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "90"
+  }, {
+    "range" : "11",
+    "domain" : "93",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "92"
+  }, {
+    "iri" : "https://schema.org/identifier",
+    "baseIri" : "https://schema.org",
+    "range" : "127",
+    "label" : {
+      "IRI-based" : "identifier",
+      "en" : "identifier"
+    },
+    "domain" : "29",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "126"
+  }, {
+    "iri" : "https://purl.org/ontology/modalia#notesForLearner",
+    "baseIri" : "https://purl.org/ontology/modalia",
+    "range" : "135",
+    "label" : {
+      "IRI-based" : "notesForLearner",
+      "en" : "has notes for learner"
+    },
+    "domain" : "134",
+    "attributes" : [ "datatype" ],
+    "id" : "133"
+  }, {
+    "iri" : "https://purl.org/ontology/modalia#essentialFor",
+    "baseIri" : "https://purl.org/ontology/modalia",
+    "range" : "137",
+    "label" : {
+      "IRI-based" : "essentialFor",
+      "en" : "essential for"
+    },
+    "domain" : "4",
+    "comment" : {
+      "en" : "a property defining the essential skills for a certain job"
+    },
+    "attributes" : [ "object" ],
+    "id" : "136"
+  }, {
+    "iri" : "https://w3id.org/citedcat-ap/isSupplementTo",
+    "baseIri" : "https://w3id.org/citedcat-ap",
+    "range" : "32",
+    "annotations" : {
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Is supplement to",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isSupplementTo",
+      "en" : "isSupplementTo"
+    },
+    "superproperty" : [ "33" ],
+    "domain" : "29",
+    "attributes" : [ "object", "external" ],
+    "id" : "138"
+  }, {
+    "iri" : "https://purl.org/ontology/modalia#describes",
+    "baseIri" : "https://purl.org/ontology/modalia",
+    "range" : "32",
+    "annotations" : {
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Describes",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "describes",
+      "en" : "describes"
+    },
+    "superproperty" : [ "33" ],
+    "domain" : "29",
+    "attributes" : [ "object" ],
+    "id" : "139"
+  }, {
+    "iri" : "https://purl.org/ontology/modalia#hasLearningPreference",
+    "baseIri" : "https://purl.org/ontology/modalia",
+    "range" : "129",
+    "annotations" : {
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "The preferenced learning class from VARK",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasLearningPreference",
+      "en" : "has learning preference"
+    },
+    "domain" : "142",
+    "attributes" : [ "object" ],
+    "id" : "141"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#topDataProperty",
+    "baseIri" : "http://www.w3.org/2002/07/owl",
+    "range" : "144",
+    "label" : {
+      "IRI-based" : "topDataProperty"
+    },
+    "domain" : "38",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "143"
+  }, {
+    "iri" : "https://schema.org/isBasedOn",
+    "baseIri" : "https://schema.org",
+    "range" : "32",
+    "annotations" : {
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Is based on",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isBasedOn",
+      "en" : "isBasedOn"
+    },
+    "superproperty" : [ "33" ],
+    "domain" : "29",
+    "attributes" : [ "object", "external" ],
+    "id" : "145"
+  }, {
+    "iri" : "https://purl.org/ontology/modalia#isMemberOf",
+    "baseIri" : "https://purl.org/ontology/modalia",
+    "range" : "36",
+    "label" : {
+      "IRI-based" : "isMemberOf",
+      "en" : "is member of"
+    },
+    "superproperty" : [ "37" ],
+    "domain" : "142",
+    "attributes" : [ "object" ],
+    "id" : "41"
+  }, {
+    "iri" : "http://purl.org/dc/terms/relation",
+    "baseIri" : "http://purl.org/dc/terms",
+    "range" : "32",
+    "annotations" : {
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "The relation(s) to other resources.  It is required to identify the related resource by means of a URI.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "relation",
+      "en" : "relation"
+    },
+    "domain" : "29",
+    "subproperty" : [ "146", "138", "139", "147", "31", "148", "149", "150", "151", "152", "153", "154", "155", "145", "156", "157", "158", "159", "160" ],
+    "attributes" : [ "object", "external" ],
+    "id" : "33"
+  }, {
+    "iri" : "https://purl.org/ontology/modalia#hasOrder",
+    "baseIri" : "https://purl.org/ontology/modalia",
+    "range" : "163",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "en",
+        "value" : "Order of proficiency level, starting from 1 for Novice and increasing by proficiency",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasOrder",
+      "en" : "has order"
+    },
+    "domain" : "162",
+    "attributes" : [ "datatype" ],
+    "id" : "161"
+  }, {
+    "iri" : "http://purl.org/dc/terms/issued",
+    "baseIri" : "http://purl.org/dc/terms",
+    "range" : "165",
+    "annotations" : {
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Date of formal issuance (e.g., publication) of the resource.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "issued",
+      "en" : "issued"
+    },
+    "domain" : "29",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "164"
+  }, {
+    "iri" : "https://purl.org/ontology/modalia#commentText",
+    "baseIri" : "https://purl.org/ontology/modalia",
+    "range" : "167",
+    "annotations" : {
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "The OER of a user comment",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "commentText",
+      "en" : "comment text"
+    },
+    "domain" : "79",
+    "attributes" : [ "datatype" ],
     "id" : "166"
+  }, {
+    "iri" : "http://purl.org/spar/fabio/hasSubtitle",
+    "baseIri" : "http://purl.org/spar/fabio",
+    "range" : "169",
+    "label" : {
+      "IRI-based" : "hasSubtitle",
+      "en" : "has subtitle"
+    },
+    "domain" : "29",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "168"
+  }, {
+    "iri" : "https://purl.org/ontology/modalia#hasOwner",
+    "baseIri" : "https://purl.org/ontology/modalia",
+    "range" : "142",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "en",
+        "value" : "defines the user who owns a specific community. There is only one owner to a specific community",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasOwner",
+      "en" : "has owner"
+    },
+    "domain" : "36",
+    "attributes" : [ "functional", "object" ],
+    "id" : "171"
   }, {
     "iri" : "http://purl.org/dc/terms/replaces",
     "baseIri" : "http://purl.org/dc/terms",
-    "range" : "28",
+    "range" : "29",
     "annotations" : {
       "prefLabel" : [ {
         "identifier" : "prefLabel",
@@ -4020,35 +4463,35 @@
       "IRI-based" : "replaces",
       "en" : "replaces"
     },
-    "superproperty" : [ "32" ],
-    "domain" : "28",
+    "superproperty" : [ "33" ],
+    "domain" : "29",
     "attributes" : [ "object", "external" ],
-    "id" : "149"
+    "id" : "154"
   }, {
     "iri" : "https://purl.org/ontology/modalia#prerequisites",
     "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "58",
+    "range" : "16",
     "label" : {
       "IRI-based" : "prerequisites",
       "en" : "prerequisites"
     },
-    "domain" : "58",
+    "domain" : "16",
     "attributes" : [ "object" ],
-    "id" : "167"
+    "id" : "172"
   }, {
     "iri" : "http://w3id.org/nfdi4ing/metadata4ing#orcidId",
     "baseIri" : "http://w3id.org/nfdi4ing/metadata4ing",
-    "range" : "170",
+    "range" : "175",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
-        "language" : "en",
-        "value" : "Open Researcher and Contributor ID: an identifier, that allows unique identification of a person, usually active in research.",
+        "language" : "de",
+        "value" : "Open Researcher and Contributor ID: ein persistenter Identifikator, der eine in der Forschung t?tige Person eindeutig identifiziert.",
         "type" : "label"
       }, {
         "identifier" : "isDefinedBy",
-        "language" : "de",
-        "value" : "Open Researcher and Contributor ID: ein persistenter Identifikator, der eine in der Forschung t?tige Person eindeutig identifiziert.",
+        "language" : "en",
+        "value" : "Open Researcher and Contributor ID: an identifier, that allows unique identification of a person, usually active in research.",
         "type" : "label"
       } ],
       "prefLabel" : [ {
@@ -4066,13 +4509,13 @@
     "label" : {
       "IRI-based" : "orcidId"
     },
-    "domain" : "169",
-    "attributes" : [ "external", "datatype" ],
-    "id" : "168"
+    "domain" : "174",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "173"
   }, {
     "iri" : "https://schema.org/reviewRating",
     "baseIri" : "https://schema.org",
-    "range" : "173",
+    "range" : "178",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -4091,52 +4534,52 @@
       "IRI-based" : "reviewRating",
       "en" : "review rating"
     },
-    "domain" : "172",
-    "attributes" : [ "external", "datatype" ],
-    "id" : "171"
+    "domain" : "177",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "176"
   }, {
     "iri" : "https://purl.org/ontology/modalia#belongsToCluster",
     "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "175",
+    "range" : "180",
     "label" : {
       "IRI-based" : "belongsToCluster",
       "en" : "belongs to cluster"
     },
-    "domain" : "57",
+    "domain" : "15",
     "comment" : {
       "en" : "relates RDM Topic to RDM Topic Cluster, similar to LZM"
     },
     "attributes" : [ "object" ],
-    "id" : "174"
+    "id" : "179"
   }, {
     "iri" : "https://schema.org/keywords",
     "baseIri" : "https://schema.org",
-    "range" : "177",
+    "range" : "182",
     "label" : {
       "IRI-based" : "keywords",
       "en" : "keywords"
     },
-    "domain" : "28",
+    "domain" : "29",
     "comment" : {
       "en" : "Keywords or tags used to describe some item."
     },
-    "attributes" : [ "external", "datatype" ],
-    "id" : "176"
+    "attributes" : [ "datatype", "external" ],
+    "id" : "181"
   }, {
     "iri" : "https://purl.org/ontology/modalia#hasLearningObjective",
     "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "78",
+    "range" : "82",
     "label" : {
       "IRI-based" : "hasLearningObjective",
       "en" : "has learning objective"
     },
-    "domain" : "179",
+    "domain" : "184",
     "attributes" : [ "object" ],
-    "id" : "178"
+    "id" : "183"
   }, {
     "iri" : "http://w3id.org/nfdi4ing/metadata4ing#hasRorId",
     "baseIri" : "http://w3id.org/nfdi4ing/metadata4ing",
-    "range" : "182",
+    "range" : "187",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -4175,1225 +4618,24 @@
     "label" : {
       "IRI-based" : "hasRorId"
     },
-    "domain" : "181",
-    "attributes" : [ "external", "datatype" ],
-    "id" : "180"
+    "domain" : "186",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "185"
   }, {
     "iri" : "https://purl.org/ontology/modalia#coversManagementOfDataObtainedWithMethod",
     "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "184",
+    "range" : "189",
     "label" : {
       "IRI-based" : "coversManagementOfDataObtainedWithMethod",
       "en" : "covers management of data obtained with method"
     },
-    "domain" : "25",
+    "domain" : "26",
     "attributes" : [ "object" ],
-    "id" : "183"
+    "id" : "188"
   }, {
-    "iri" : "https://github.com/tibonto/educor#generatedFrom",
-    "baseIri" : "https://github.com/tibonto/educor",
-    "range" : "136",
-    "label" : {
-      "IRI-based" : "generatedFrom",
-      "en" : "generated from"
-    },
-    "domain" : "186",
-    "attributes" : [ "object", "external" ],
-    "id" : "185"
-  }, {
-    "iri" : "https://purl.org/ontology/modalia#viewCount",
+    "iri" : "https://purl.org/ontology/modalia#recommender",
     "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "188",
-    "label" : {
-      "IRI-based" : "viewCount",
-      "en" : "view count"
-    },
-    "domain" : "28",
-    "attributes" : [ "datatype" ],
-    "id" : "187"
-  }, {
-    "iri" : "https://purl.org/ontology/modalia#userLikes",
-    "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "28",
-    "annotations" : {
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "stores that user liked a given OER",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "userLikes",
-      "en" : "user likes"
-    },
-    "domain" : "136",
-    "attributes" : [ "object" ],
-    "id" : "189"
-  }, {
-    "iri" : "https://purl.org/ontology/modalia#optionalFor",
-    "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "132",
-    "label" : {
-      "IRI-based" : "optionalFor",
-      "en" : "optional for"
-    },
-    "domain" : "4",
-    "comment" : {
-      "en" : "Defines the skills that are optional for a certain Job"
-    },
-    "attributes" : [ "object" ],
-    "id" : "190"
-  }, {
-    "iri" : "https://purl.org/ontology/modalia#nextPhase",
-    "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "55",
-    "label" : {
-      "IRI-based" : "nextPhase",
-      "en" : "next phase"
-    },
-    "domain" : "55",
-    "attributes" : [ "object" ],
-    "id" : "191"
-  }, {
-    "iri" : "https://purl.org/ontology/modalia#hasTranslation",
-    "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "31",
-    "annotations" : {
-      "prefLabel" : [ {
-        "identifier" : "prefLabel",
-        "language" : "en",
-        "value" : "Has translation",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "hasTranslation",
-      "en" : "has translation"
-    },
-    "superproperty" : [ "32" ],
-    "domain" : "28",
-    "attributes" : [ "object" ],
-    "id" : "153"
-  }, {
-    "iri" : "https://purl.org/ontology/modalia#hasRole",
-    "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "16",
-    "label" : {
-      "IRI-based" : "hasRole",
-      "en" : "has role"
-    },
-    "domain" : "136",
-    "attributes" : [ "object" ],
-    "id" : "192"
-  }, {
-    "iri" : "http://purl.org/dc/terms/rights",
-    "baseIri" : "http://purl.org/dc/terms",
-    "range" : "194",
-    "label" : {
-      "IRI-based" : "rights",
-      "en" : "rights"
-    },
-    "domain" : "28",
-    "attributes" : [ "external", "datatype" ],
-    "id" : "193"
-  }, {
-    "iri" : "https://purl.org/ontology/modalia#givesProficiencyLevel",
-    "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "127",
-    "label" : {
-      "IRI-based" : "givesProficiencyLevel",
-      "en" : "gives proficiency level"
-    },
-    "domain" : "28",
-    "attributes" : [ "object" ],
-    "id" : "195"
-  }, {
-    "iri" : "http://purl.org/dc/terms/format",
-    "baseIri" : "http://purl.org/dc/terms",
-    "range" : "197",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "File format of the file representing the resource",
-        "type" : "label"
-      } ],
-      "example" : [ {
-        "identifier" : "example",
-        "language" : "undefined",
-        "value" : "PDF, AVI",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "format",
-      "en" : "file format"
-    },
-    "domain" : "28",
-    "attributes" : [ "external", "datatype" ],
-    "id" : "196"
-  }, {
-    "iri" : "https://purl.org/ontology/modalia#isLessProficientThan",
-    "inverse" : "199",
-    "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "127",
-    "label" : {
-      "IRI-based" : "isLessProficientThan",
-      "en" : "is less proficient than"
-    },
-    "domain" : "127",
-    "attributes" : [ "transitive", "object" ],
-    "id" : "198"
-  }, {
-    "iri" : "https://schema.org/timeRequired",
-    "baseIri" : "https://schema.org",
-    "range" : "201",
-    "annotations" : {
-      "example" : [ {
-        "identifier" : "example",
-        "language" : "undefined",
-        "value" : "\"PT7M11S\"^^xsd:duration",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "timeRequired",
-      "en" : "timeRequired"
-    },
-    "domain" : "28",
-    "comment" : {
-      "en" : "in format xsd:duration"
-    },
-    "attributes" : [ "external", "datatype" ],
-    "id" : "200"
-  }, {
-    "iri" : "https://purl.org/ontology/modalia#isIdenticalTo",
-    "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "28",
-    "annotations" : {
-      "prefLabel" : [ {
-        "identifier" : "prefLabel",
-        "language" : "en",
-        "value" : "Is identical to",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "isIdenticalTo",
-      "en" : "is identical to"
-    },
-    "superproperty" : [ "32" ],
-    "domain" : "28",
-    "attributes" : [ "object" ],
-    "id" : "146"
-  }, {
-    "iri" : "https://purl.org/ontology/modalia#hasRating",
-    "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "13",
-    "label" : {
-      "IRI-based" : "hasRating",
-      "en" : "has rating"
-    },
-    "domain" : "28",
-    "attributes" : [ "object" ],
-    "id" : "202"
-  }, {
-    "iri" : "https://schema.org/isAccessibleForFree",
-    "baseIri" : "https://schema.org",
-    "range" : "204",
-    "label" : {
-      "IRI-based" : "isAccessibleForFree",
-      "en" : "isAccessibleForFree"
-    },
-    "domain" : "28",
-    "attributes" : [ "external", "datatype" ],
-    "id" : "203"
-  }, {
-    "iri" : "https://purl.org/ontology/modalia#authorUnordered",
-    "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "206",
-    "label" : {
-      "IRI-based" : "authorUnordered",
-      "en" : "has author (unordered)"
-    },
-    "domain" : "28",
-    "comment" : {
-      "en" : "A property that links OER to its authors in unordered way to improve perrformance."
-    },
-    "attributes" : [ "datatype" ],
-    "id" : "205"
-  }, {
-    "iri" : "https://purl.org/ontology/modalia#hasLearningResource",
-    "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "28",
-    "label" : {
-      "IRI-based" : "hasLearningResource",
-      "en" : "has learning resource"
-    },
-    "domain" : "72",
-    "attributes" : [ "object" ],
-    "id" : "207"
-  }, {
-    "range" : "4",
-    "domain" : "3",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "208"
-  }, {
-    "range" : "28",
-    "domain" : "25",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "209"
-  }, {
-    "iri" : "https://purl.org/ontology/modalia#likesCount",
-    "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "211",
-    "label" : {
-      "IRI-based" : "likesCount",
-      "en" : "likes count"
-    },
-    "domain" : "28",
-    "attributes" : [ "datatype" ],
-    "id" : "210"
-  }, {
-    "iri" : "http://id.loc.gov/ontologies/bibframe/contribution",
-    "baseIri" : "http://id.loc.gov/ontologies/bibframe",
-    "range" : "213",
-    "label" : {
-      "IRI-based" : "contribution",
-      "en" : "contribution"
-    },
-    "domain" : "28",
-    "comment" : {
-      "en" : "Property linking an OER to its contribution (e.g., editing)."
-    },
-    "attributes" : [ "object", "external" ],
-    "id" : "212"
-  }, {
-    "iri" : "https://schema.org/email",
-    "baseIri" : "https://schema.org",
-    "range" : "218",
-    "label" : {
-      "IRI-based" : "email",
-      "en" : "email"
-    },
-    "domain" : "136",
-    "attributes" : [ "functional", "external", "datatype" ],
-    "id" : "217"
-  }, {
-    "iri" : "https://github.com/tibonto/educor#consistsOfKnowledge",
-    "baseIri" : "https://github.com/tibonto/educor",
-    "range" : "58",
-    "label" : {
-      "IRI-based" : "consistsOfKnowledge",
-      "undefined" : "consistsOfKnowledge"
-    },
-    "domain" : "72",
-    "attributes" : [ "object", "external" ],
-    "id" : "219"
-  }, {
-    "iri" : "https://purl.org/ontology/modalia#coversManagementOfDataObtainedWithTool",
-    "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "221",
-    "label" : {
-      "IRI-based" : "coversManagementOfDataObtainedWithTool",
-      "en" : "covers management of data obtained with tool"
-    },
-    "domain" : "25",
-    "attributes" : [ "object" ],
-    "id" : "220"
-  }, {
-    "iri" : "https://purl.org/ontology/modalia#hasLearningType",
-    "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "43",
-    "annotations" : {
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "The value is the learning type of content of a learning resource (e.g Lecture)",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "hasLearningType",
-      "en" : "has learning type"
-    },
-    "domain" : "28",
-    "attributes" : [ "functional", "object" ],
-    "id" : "223"
-  }, {
-    "iri" : "https://purl.org/ontology/modalia#industry",
-    "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "225",
-    "annotations" : {
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "The industry of a job",
-        "type" : "label"
-      } ],
-      "example" : [ {
-        "identifier" : "example",
-        "language" : "undefined",
-        "value" : "Research & Academia",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "industry",
-      "en" : "job has industry"
-    },
-    "domain" : "132",
-    "attributes" : [ "datatype" ],
-    "id" : "224"
-  }, {
-    "iri" : "https://schema.org/title",
-    "baseIri" : "https://schema.org",
-    "range" : "228",
-    "label" : {
-      "IRI-based" : "title",
-      "en" : "Job title"
-    },
-    "domain" : "132",
-    "attributes" : [ "external", "datatype" ],
-    "id" : "227"
-  }, {
-    "iri" : "http://purl.org/dc/terms/isReferencedBy",
-    "baseIri" : "http://purl.org/dc/terms",
-    "range" : "31",
-    "annotations" : {
-      "prefLabel" : [ {
-        "identifier" : "prefLabel",
-        "language" : "en",
-        "value" : "Is referenced by",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "isReferencedBy",
-      "en" : "isReferencedBy"
-    },
-    "superproperty" : [ "32" ],
-    "domain" : "28",
-    "attributes" : [ "object", "external" ],
-    "id" : "141"
-  }, {
-    "iri" : "https://purl.org/ontology/modalia#isVersionOf",
-    "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "28",
-    "annotations" : {
-      "prefLabel" : [ {
-        "identifier" : "prefLabel",
-        "language" : "en",
-        "value" : "Is version of",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "isVersionOf",
-      "en" : "is version of"
-    },
-    "superproperty" : [ "32" ],
-    "domain" : "28",
-    "attributes" : [ "object", "symmetric" ],
-    "id" : "143"
-  }, {
-    "iri" : "https://purl.org/ontology/modalia#belongsToLearningPath",
-    "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "72",
-    "label" : {
-      "IRI-based" : "belongsToLearningPath",
-      "en" : "belongs to learning path"
-    },
-    "domain" : "222",
-    "attributes" : [ "object" ],
-    "id" : "231"
-  }, {
-    "iri" : "https://w3id.org/citedcat-ap/isSupplementedBy",
-    "baseIri" : "https://w3id.org/citedcat-ap",
-    "range" : "31",
-    "annotations" : {
-      "prefLabel" : [ {
-        "identifier" : "prefLabel",
-        "language" : "en",
-        "value" : "Is supplemented by",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "isSupplementedBy",
-      "en" : "isSupplementedBy"
-    },
-    "superproperty" : [ "32" ],
-    "domain" : "28",
-    "attributes" : [ "object", "external" ],
-    "id" : "150"
-  }, {
-    "iri" : "https://schema.org/version",
-    "baseIri" : "https://schema.org",
-    "range" : "234",
-    "label" : {
-      "IRI-based" : "version",
-      "en" : "version"
-    },
-    "domain" : "28",
-    "comment" : {
-      "en" : "The version of the OER."
-    },
-    "attributes" : [ "external", "datatype" ],
-    "id" : "233"
-  }, {
-    "iri" : "https://purl.org/ontology/modalia#isDuplicateOf",
-    "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "28",
-    "annotations" : {
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Dublicated metadata in DALIA platform",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "isDuplicateOf",
-      "en" : "is duplicate of"
-    },
-    "superproperty" : [ "34" ],
-    "domain" : "28",
-    "attributes" : [ "object" ],
-    "id" : "36"
-  }, {
-    "iri" : "https://purl.org/ontology/modalia#belongsToPhase",
-    "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "55",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "en",
-        "value" : "defines the data life cycle phase that the resource covers",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "belongsToPhase",
-      "en" : "belongs to phase"
-    },
-    "domain" : "25",
-    "attributes" : [ "object" ],
-    "id" : "237"
-  }, {
-    "iri" : "https://schema.org/givenName",
-    "baseIri" : "https://schema.org",
-    "range" : "240",
-    "label" : {
-      "IRI-based" : "givenName",
-      "en" : "givenName"
-    },
-    "domain" : "239",
-    "attributes" : [ "external", "datatype" ],
-    "id" : "238"
-  }, {
-    "iri" : "https://purl.org/ontology/modalia#isMoreProficientThan",
-    "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "127",
-    "label" : {
-      "IRI-based" : "isMoreProficientThan",
-      "en" : "is more proficient than"
-    },
-    "domain" : "127",
-    "attributes" : [ "transitive", "object" ],
-    "id" : "199"
-  }, {
-    "iri" : "https://purl.org/ontology/modalia#isNewVersionOf",
-    "inverse" : "145",
-    "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "28",
-    "annotations" : {
-      "prefLabel" : [ {
-        "identifier" : "prefLabel",
-        "language" : "en",
-        "value" : "Is new version of",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "isNewVersionOf",
-      "en" : "is new version of"
-    },
-    "superproperty" : [ "32" ],
-    "domain" : "28",
-    "attributes" : [ "object", "irreflexive" ],
-    "id" : "144"
-  }, {
-    "iri" : "http://purl.org/dc/terms/isPartOf",
-    "baseIri" : "http://purl.org/dc/terms",
-    "range" : "31",
-    "annotations" : {
-      "prefLabel" : [ {
-        "identifier" : "prefLabel",
-        "language" : "en",
-        "value" : "Is part of",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "isPartOf",
-      "en" : "isPartOf"
-    },
-    "superproperty" : [ "32" ],
-    "domain" : "28",
-    "attributes" : [ "object", "external" ],
-    "id" : "152"
-  }, {
-    "iri" : "https://purl.org/ontology/modalia#isTranslationOf",
-    "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "31",
-    "annotations" : {
-      "prefLabel" : [ {
-        "identifier" : "prefLabel",
-        "language" : "en",
-        "value" : "Is translation of",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "isTranslationOf",
-      "en" : "is translation of"
-    },
-    "superproperty" : [ "32" ],
-    "domain" : "28",
-    "attributes" : [ "object" ],
-    "id" : "155"
-  }, {
-    "iri" : "https://purl.org/ontology/modalia#commentUserID",
-    "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "136",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "en",
-        "value" : "relates a user to his/her comment",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "commentUserID",
-      "en" : "comment has user"
-    },
-    "domain" : "75",
-    "attributes" : [ "object" ],
-    "id" : "245"
-  }, {
-    "iri" : "https://purl.org/ontology/modalia#coversManagementOfDataKind",
-    "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "247",
-    "label" : {
-      "IRI-based" : "coversManagementOfDataKind",
-      "en" : "covers management of data kind"
-    },
-    "domain" : "25",
-    "comment" : {
-      "en" : "A property that relates a RDMResource to data kind being managed"
-    },
-    "attributes" : [ "object" ],
-    "id" : "246"
-  }, {
-    "iri" : "http://purl.org/spar/fabio/hasDiscipline",
-    "baseIri" : "http://purl.org/spar/fabio",
-    "range" : "21",
-    "label" : {
-      "IRI-based" : "hasDiscipline",
-      "undefined" : "hasDiscipline"
-    },
-    "domain" : "249",
-    "attributes" : [ "object", "external" ],
-    "id" : "248"
-  }, {
-    "iri" : "https://schema.org/teaches",
-    "baseIri" : "https://schema.org",
-    "range" : "242",
-    "label" : {
-      "IRI-based" : "teaches",
-      "en" : "teaches"
-    },
-    "domain" : "28",
-    "comment" : {
-      "en" : "The item being described is intended to help a person learn the competency or learning outcome defined by the referenced term."
-    },
-    "attributes" : [ "external", "datatype" ],
-    "id" : "250"
-  }, {
-    "iri" : "https://schema.org/reviewBody",
-    "baseIri" : "https://schema.org",
-    "range" : "241",
-    "label" : {
-      "IRI-based" : "reviewBody",
-      "en" : "review body"
-    },
-    "domain" : "172",
-    "attributes" : [ "external", "datatype" ],
-    "id" : "251"
-  }, {
-    "iri" : "https://schema.org/itemReviewed",
-    "baseIri" : "https://schema.org",
-    "range" : "28",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "en",
-        "value" : "The item that is being reviewed/rated.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "itemReviewed"
-    },
-    "domain" : "172",
-    "attributes" : [ "object", "external" ],
-    "id" : "256"
-  }, {
-    "range" : "43",
-    "domain" : "77",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "258"
-  }, {
-    "iri" : "https://schema.org/author",
-    "baseIri" : "https://schema.org",
-    "range" : "81",
-    "label" : {
-      "IRI-based" : "author",
-      "en" : "author"
-    },
-    "domain" : "28",
-    "comment" : {
-      "en" : "Property linking an OER  to a list of authors."
-    },
-    "attributes" : [ "object", "external" ],
-    "id" : "259"
-  }, {
-    "iri" : "https://purl.org/ontology/modalia#educationalLevel",
-    "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "230",
-    "label" : {
-      "IRI-based" : "educationalLevel",
-      "en" : "educational level"
-    },
-    "domain" : "136",
-    "attributes" : [ "object" ],
-    "id" : "260"
-  }, {
-    "range" : "43",
-    "domain" : "105",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "261"
-  }, {
-    "range" : "43",
-    "domain" : "107",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "262"
-  }, {
-    "range" : "43",
-    "domain" : "106",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "263"
-  }, {
-    "range" : "43",
-    "domain" : "104",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "264"
-  }, {
-    "iri" : "https://schema.org/image",
-    "baseIri" : "https://schema.org",
-    "range" : "243",
-    "label" : {
-      "IRI-based" : "image",
-      "en" : "image"
-    },
-    "domain" : "28",
-    "comment" : {
-      "en" : "Property linking an OER to an image representing it."
-    },
-    "attributes" : [ "external", "datatype" ],
-    "id" : "265"
-  }, {
-    "iri" : "https://purl.org/ontology/modalia#requiresProficiencyLevel",
-    "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "127",
-    "label" : {
-      "IRI-based" : "requiresProficiencyLevel",
-      "en" : "requires proficiency level"
-    },
-    "domain" : "28",
-    "attributes" : [ "object" ],
-    "id" : "266"
-  }, {
-    "iri" : "https://schema.org/url",
-    "baseIri" : "https://schema.org",
-    "range" : "236",
-    "label" : {
-      "IRI-based" : "url",
-      "en" : "url"
-    },
-    "domain" : "28",
-    "attributes" : [ "external", "datatype" ],
-    "id" : "267"
-  }, {
-    "iri" : "http://purl.org/dc/terms/references",
-    "baseIri" : "http://purl.org/dc/terms",
-    "range" : "31",
-    "annotations" : {
-      "prefLabel" : [ {
-        "identifier" : "prefLabel",
-        "language" : "en",
-        "value" : "References",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "references",
-      "en" : "references"
-    },
-    "superproperty" : [ "32" ],
-    "domain" : "28",
-    "attributes" : [ "object", "external" ],
-    "id" : "148"
-  }, {
-    "range" : "43",
-    "domain" : "103",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "268"
-  }, {
-    "iri" : "https://schema.org/familyName",
-    "baseIri" : "https://schema.org",
-    "range" : "254",
-    "label" : {
-      "IRI-based" : "familyName",
-      "en" : "familyName"
-    },
-    "domain" : "252",
-    "comment" : {
-      "en" : "Family name. In the U.S., the last name of a Person."
-    },
-    "attributes" : [ "external", "datatype" ],
-    "id" : "269"
-  }, {
-    "range" : "43",
-    "domain" : "102",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "270"
-  }, {
-    "range" : "43",
-    "domain" : "99",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "271"
-  }, {
-    "range" : "43",
-    "domain" : "98",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "272"
-  }, {
-    "range" : "43",
-    "domain" : "101",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "273"
-  }, {
-    "range" : "43",
-    "domain" : "100",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "274"
-  }, {
-    "range" : "43",
-    "domain" : "95",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "275"
-  }, {
-    "range" : "43",
-    "domain" : "94",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "276"
-  }, {
-    "range" : "43",
-    "domain" : "97",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "277"
-  }, {
-    "range" : "43",
-    "domain" : "96",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "278"
-  }, {
-    "iri" : "https://purl.org/ontology/modalia#userViews",
-    "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "28",
-    "label" : {
-      "IRI-based" : "userViews",
-      "en" : "user views"
-    },
-    "superproperty" : [ "34" ],
-    "domain" : "136",
-    "attributes" : [ "object" ],
-    "id" : "37"
-  }, {
-    "iri" : "https://purl.org/ontology/modalia#teachesSkill",
-    "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "4",
-    "label" : {
-      "IRI-based" : "teachesSkill",
-      "en" : "teaches skill"
-    },
-    "domain" : "28",
-    "attributes" : [ "object" ],
-    "id" : "279"
-  }, {
-    "iri" : "https://purl.org/ontology/modalia#createdBy",
-    "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "136",
-    "label" : {
-      "IRI-based" : "createdBy",
-      "en" : "created by"
-    },
-    "domain" : "139",
-    "comment" : {
-      "en" : "a property defining the user who created a community"
-    },
-    "attributes" : [ "object" ],
-    "id" : "280"
-  }, {
-    "iri" : "http://purl.org/dc/terms/hasPart",
-    "baseIri" : "http://purl.org/dc/terms",
-    "range" : "31",
-    "annotations" : {
-      "prefLabel" : [ {
-        "identifier" : "prefLabel",
-        "language" : "en",
-        "value" : "Has part",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "hasPart",
-      "en" : "hasPart"
-    },
-    "superproperty" : [ "32" ],
-    "domain" : "28",
-    "attributes" : [ "object", "external" ],
-    "id" : "147"
-  }, {
-    "iri" : "https://schema.org/fileSize",
-    "baseIri" : "https://schema.org",
-    "range" : "253",
-    "label" : {
-      "IRI-based" : "fileSize",
-      "en" : "fileSize"
-    },
-    "domain" : "28",
-    "attributes" : [ "external", "datatype" ],
-    "id" : "281"
-  }, {
-    "iri" : "https://purl.org/ontology/modalia#commentID",
-    "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "226",
-    "annotations" : {
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "ID of a user comment",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "commentID",
-      "en" : "comment has identifier"
-    },
-    "domain" : "75",
-    "attributes" : [ "datatype" ],
-    "id" : "282"
-  }, {
-    "range" : "43",
-    "domain" : "92",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "283"
-  }, {
-    "iri" : "https://purl.org/ontology/modalia#hasMediaType",
-    "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "46",
-    "label" : {
-      "IRI-based" : "hasMediaType",
-      "en" : "has media type"
-    },
-    "domain" : "28",
-    "attributes" : [ "object" ],
-    "id" : "284"
-  }, {
-    "iri" : "https://purl.org/ontology/modalia#hasUser",
-    "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "136",
-    "label" : {
-      "IRI-based" : "hasUser",
-      "en" : "has user"
-    },
-    "superproperty" : [ "34" ],
-    "domain" : "13",
-    "attributes" : [ "object" ],
-    "id" : "39"
-  }, {
-    "iri" : "https://w3id.org/citedcat-ap/isContinuedBy",
-    "baseIri" : "https://w3id.org/citedcat-ap",
-    "range" : "28",
-    "annotations" : {
-      "prefLabel" : [ {
-        "identifier" : "prefLabel",
-        "language" : "en",
-        "value" : "Is continued by",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "isContinuedBy",
-      "en" : "isContinuedBy"
-    },
-    "superproperty" : [ "32" ],
-    "domain" : "28",
-    "attributes" : [ "object", "external" ],
-    "id" : "151"
-  }, {
-    "range" : "43",
-    "domain" : "93",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "285"
-  }, {
-    "range" : "55",
-    "domain" : "54",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "286"
-  }, {
-    "iri" : "https://purl.org/ontology/modalia#commentedOER",
-    "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "28",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "en",
-        "value" : "commentedOER",
-        "type" : "label"
-      }, {
-        "identifier" : "isDefinedBy",
-        "language" : "en",
-        "value" : "defines the OER that is commented in a user comment",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "commentedOER",
-      "en" : "comment has OER"
-    },
-    "domain" : "75",
-    "attributes" : [ "object" ],
-    "id" : "287"
-  }, {
-    "range" : "55",
-    "domain" : "124",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "288"
-  }, {
-    "range" : "55",
-    "domain" : "126",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "289"
-  }, {
-    "range" : "55",
-    "domain" : "125",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "290"
-  }, {
-    "iri" : "https://purl.org/ontology/modalia#solves",
-    "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "235",
-    "label" : {
-      "IRI-based" : "solves",
-      "en" : "solves"
-    },
-    "domain" : "136",
-    "attributes" : [ "object" ],
-    "id" : "291"
-  }, {
-    "range" : "10",
-    "domain" : "121",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "292"
-  }, {
-    "range" : "10",
-    "domain" : "123",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "293"
-  }, {
-    "range" : "10",
-    "domain" : "122",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "294"
-  }, {
-    "range" : "124",
-    "domain" : "125",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "295"
-  }, {
-    "range" : "85",
-    "domain" : "125",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "296"
-  }, {
-    "range" : "89",
-    "domain" : "125",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "297"
-  }, {
-    "range" : "54",
-    "domain" : "125",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "298"
-  }, {
-    "range" : "126",
-    "domain" : "125",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "299"
-  }, {
-    "range" : "87",
-    "domain" : "125",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "300"
-  }, {
-    "iri" : "http://id.loc.gov/ontologies/bibframe/role",
-    "baseIri" : "http://id.loc.gov/ontologies/bibframe",
-    "range" : "33",
-    "label" : {
-      "IRI-based" : "role",
-      "en" : "role"
-    },
-    "domain" : "213",
-    "comment" : {
-      "en" : "Property that links a contribution to a role (e.g., contactPerson, editor)."
-    },
-    "attributes" : [ "object", "external" ],
-    "id" : "302"
-  }, {
-    "iri" : "https://schema.org/datePublished",
-    "baseIri" : "https://schema.org",
-    "range" : "257",
-    "label" : {
-      "IRI-based" : "datePublished",
-      "en" : "Publication Date"
-    },
-    "domain" : "28",
-    "attributes" : [ "external", "datatype" ],
-    "id" : "303"
-  }, {
-    "iri" : "https://purl.org/ontology/modalia#userBookmarks",
-    "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "28",
-    "label" : {
-      "IRI-based" : "userBookmarks",
-      "en" : "user bookmarks"
-    },
-    "domain" : "136",
-    "attributes" : [ "object" ],
-    "id" : "304"
-  }, {
-    "iri" : "https://purl.org/ontology/modalia#isPreviousVersionOf",
-    "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "28",
-    "annotations" : {
-      "prefLabel" : [ {
-        "identifier" : "prefLabel",
-        "language" : "en",
-        "value" : "Is previous version of",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "isPreviousVersionOf",
-      "en" : "is previous version of"
-    },
-    "superproperty" : [ "32" ],
-    "domain" : "28",
-    "attributes" : [ "object" ],
-    "id" : "145"
-  }, {
-    "iri" : "https://purl.org/ontology/modalia#hasQuality",
-    "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "229",
-    "label" : {
-      "IRI-based" : "hasQuality",
-      "en" : "has quality"
-    },
-    "domain" : "28",
-    "attributes" : [ "object" ],
-    "id" : "305"
-  }, {
-    "iri" : "https://schema.org/ratingValue",
-    "baseIri" : "https://schema.org",
-    "range" : "244",
-    "label" : {
-      "IRI-based" : "ratingValue",
-      "undefined" : "rating value"
-    },
-    "domain" : "13",
-    "attributes" : [ "external", "datatype" ],
-    "id" : "306"
-  }, {
-    "range" : "4",
-    "domain" : "58",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "307"
-  }, {
-    "range" : "91",
-    "domain" : "125",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "308"
-  }, {
-    "range" : "10",
-    "domain" : "119",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "309"
-  }, {
-    "range" : "10",
-    "domain" : "118",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "310"
-  }, {
-    "iri" : "https://w3id.org/citedcat-ap/continues",
-    "inverse" : "151",
-    "baseIri" : "https://w3id.org/citedcat-ap",
-    "range" : "28",
-    "annotations" : {
-      "prefLabel" : [ {
-        "identifier" : "prefLabel",
-        "language" : "en",
-        "value" : "Continues",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "continues",
-      "en" : "continues"
-    },
-    "superproperty" : [ "32" ],
-    "domain" : "28",
-    "attributes" : [ "object", "external" ],
-    "id" : "154"
-  }, {
-    "range" : "10",
-    "domain" : "120",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "311"
-  }, {
-    "range" : "10",
-    "domain" : "80",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "312"
-  }, {
-    "iri" : "http://purl.org/ontology/rec/core#recommender",
-    "baseIri" : "http://purl.org/ontology/rec/core",
-    "range" : "139",
+    "range" : "36",
     "description" : {
       "undefined" : "A community which provides the recommendation of the OER. In the context of DIF, the recommending community is the organization or institution or project or body or online group which recommends the OER."
     },
@@ -5431,83 +4673,1349 @@
       "IRI-based" : "recommender",
       "en" : "recommender"
     },
-    "domain" : "28",
+    "domain" : "29",
+    "attributes" : [ "object" ],
+    "id" : "190"
+  }, {
+    "iri" : "https://github.com/tibonto/educor#generatedFrom",
+    "baseIri" : "https://github.com/tibonto/educor",
+    "range" : "142",
+    "label" : {
+      "IRI-based" : "generatedFrom",
+      "en" : "generated from"
+    },
+    "domain" : "192",
     "attributes" : [ "object", "external" ],
+    "id" : "191"
+  }, {
+    "iri" : "https://purl.org/ontology/modalia#viewCount",
+    "baseIri" : "https://purl.org/ontology/modalia",
+    "range" : "194",
+    "label" : {
+      "IRI-based" : "viewCount",
+      "en" : "view count"
+    },
+    "domain" : "29",
+    "attributes" : [ "datatype" ],
+    "id" : "193"
+  }, {
+    "range" : "29",
+    "domain" : "26",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "196"
+  }, {
+    "iri" : "https://purl.org/ontology/modalia#userLikes",
+    "baseIri" : "https://purl.org/ontology/modalia",
+    "range" : "29",
+    "annotations" : {
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "stores that user liked a given OER",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "userLikes",
+      "en" : "user likes"
+    },
+    "domain" : "142",
+    "attributes" : [ "object" ],
+    "id" : "198"
+  }, {
+    "iri" : "https://purl.org/ontology/modalia#optionalFor",
+    "baseIri" : "https://purl.org/ontology/modalia",
+    "range" : "137",
+    "label" : {
+      "IRI-based" : "optionalFor",
+      "en" : "optional for"
+    },
+    "domain" : "4",
+    "comment" : {
+      "en" : "Defines the skills that are optional for a certain Job"
+    },
+    "attributes" : [ "object" ],
+    "id" : "199"
+  }, {
+    "iri" : "https://purl.org/ontology/modalia#nextPhase",
+    "baseIri" : "https://purl.org/ontology/modalia",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "nextPhase",
+      "en" : "next phase"
+    },
+    "domain" : "2",
+    "attributes" : [ "object" ],
+    "id" : "200"
+  }, {
+    "range" : "62",
+    "domain" : "202",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "201"
+  }, {
+    "iri" : "https://purl.org/ontology/modalia#hasTranslation",
+    "baseIri" : "https://purl.org/ontology/modalia",
+    "range" : "32",
+    "annotations" : {
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Has translation",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasTranslation",
+      "en" : "has translation"
+    },
+    "superproperty" : [ "33" ],
+    "domain" : "29",
+    "attributes" : [ "object" ],
+    "id" : "158"
+  }, {
+    "range" : "62",
+    "domain" : "197",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "203"
+  }, {
+    "range" : "62",
+    "domain" : "205",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "204"
+  }, {
+    "range" : "4",
+    "domain" : "3",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "206"
+  }, {
+    "range" : "19",
+    "domain" : "140",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "207"
+  }, {
+    "range" : "129",
+    "domain" : "209",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "208"
+  }, {
+    "range" : "129",
+    "domain" : "211",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "210"
+  }, {
+    "iri" : "https://purl.org/ontology/modalia#hasRole",
+    "baseIri" : "https://purl.org/ontology/modalia",
+    "range" : "62",
+    "label" : {
+      "IRI-based" : "hasRole",
+      "en" : "has role"
+    },
+    "domain" : "142",
+    "attributes" : [ "object" ],
+    "id" : "212"
+  }, {
+    "range" : "129",
+    "domain" : "170",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "213"
+  }, {
+    "range" : "129",
+    "domain" : "128",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "214"
+  }, {
+    "range" : "76",
+    "domain" : "75",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "215"
+  }, {
+    "iri" : "http://purl.org/dc/terms/rights",
+    "baseIri" : "http://purl.org/dc/terms",
+    "range" : "217",
+    "label" : {
+      "IRI-based" : "rights",
+      "en" : "rights"
+    },
+    "domain" : "29",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "216"
+  }, {
+    "iri" : "https://purl.org/ontology/modalia#givesProficiencyLevel",
+    "baseIri" : "https://purl.org/ontology/modalia",
+    "range" : "132",
+    "label" : {
+      "IRI-based" : "givesProficiencyLevel",
+      "en" : "gives proficiency level"
+    },
+    "domain" : "29",
+    "attributes" : [ "object" ],
+    "id" : "218"
+  }, {
+    "range" : "62",
+    "domain" : "61",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "219"
+  }, {
+    "iri" : "http://purl.org/dc/terms/format",
+    "baseIri" : "http://purl.org/dc/terms",
+    "range" : "221",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "File format of the file representing the resource",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "PDF, AVI",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "format",
+      "en" : "file format"
+    },
+    "domain" : "29",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "220"
+  }, {
+    "iri" : "https://purl.org/ontology/modalia#isLessProficientThan",
+    "inverse" : "223",
+    "baseIri" : "https://purl.org/ontology/modalia",
+    "range" : "132",
+    "label" : {
+      "IRI-based" : "isLessProficientThan",
+      "en" : "is less proficient than"
+    },
+    "domain" : "132",
+    "attributes" : [ "transitive", "object" ],
+    "id" : "222"
+  }, {
+    "iri" : "https://schema.org/timeRequired",
+    "baseIri" : "https://schema.org",
+    "range" : "225",
+    "annotations" : {
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "\"PT7M11S\"^^xsd:duration",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "timeRequired",
+      "en" : "timeRequired"
+    },
+    "domain" : "29",
+    "comment" : {
+      "en" : "in format xsd:duration"
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "224"
+  }, {
+    "iri" : "https://purl.org/ontology/modalia#isIdenticalTo",
+    "baseIri" : "https://purl.org/ontology/modalia",
+    "range" : "29",
+    "annotations" : {
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Is identical to",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isIdenticalTo",
+      "en" : "is identical to"
+    },
+    "superproperty" : [ "33" ],
+    "domain" : "29",
+    "attributes" : [ "object" ],
+    "id" : "151"
+  }, {
+    "iri" : "https://purl.org/ontology/modalia#hasRating",
+    "baseIri" : "https://purl.org/ontology/modalia",
+    "range" : "76",
+    "label" : {
+      "IRI-based" : "hasRating",
+      "en" : "has rating"
+    },
+    "domain" : "29",
+    "attributes" : [ "object" ],
+    "id" : "226"
+  }, {
+    "iri" : "https://schema.org/isAccessibleForFree",
+    "baseIri" : "https://schema.org",
+    "range" : "228",
+    "label" : {
+      "IRI-based" : "isAccessibleForFree",
+      "en" : "isAccessibleForFree"
+    },
+    "domain" : "29",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "227"
+  }, {
+    "iri" : "https://purl.org/ontology/modalia#authorUnordered",
+    "baseIri" : "https://purl.org/ontology/modalia",
+    "range" : "230",
+    "label" : {
+      "IRI-based" : "authorUnordered",
+      "en" : "has author (unordered)"
+    },
+    "domain" : "29",
+    "comment" : {
+      "en" : "authorUnordered"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "229"
+  }, {
+    "iri" : "https://purl.org/ontology/modalia#hasLearningResource",
+    "baseIri" : "https://purl.org/ontology/modalia",
+    "range" : "29",
+    "label" : {
+      "IRI-based" : "hasLearningResource",
+      "en" : "has learning resource"
+    },
+    "domain" : "73",
+    "attributes" : [ "object" ],
+    "id" : "231"
+  }, {
+    "range" : "19",
+    "domain" : "233",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "232"
+  }, {
+    "range" : "19",
+    "domain" : "235",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "234"
+  }, {
+    "iri" : "https://purl.org/ontology/modalia#likesCount",
+    "baseIri" : "https://purl.org/ontology/modalia",
+    "range" : "237",
+    "label" : {
+      "IRI-based" : "likesCount",
+      "en" : "likes count"
+    },
+    "domain" : "29",
+    "attributes" : [ "datatype" ],
+    "id" : "236"
+  }, {
+    "range" : "19",
+    "domain" : "195",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "238"
+  }, {
+    "iri" : "http://id.loc.gov/ontologies/bibframe/contribution",
+    "baseIri" : "http://id.loc.gov/ontologies/bibframe",
+    "range" : "240",
+    "label" : {
+      "IRI-based" : "contribution",
+      "en" : "contribution"
+    },
+    "domain" : "29",
+    "comment" : {
+      "en" : "Property linking an OER to its contribution (e.g., editing)."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "239"
+  }, {
+    "iri" : "https://schema.org/email",
+    "baseIri" : "https://schema.org",
+    "range" : "245",
+    "label" : {
+      "IRI-based" : "email",
+      "en" : "email"
+    },
+    "domain" : "142",
+    "attributes" : [ "functional", "datatype", "external" ],
+    "id" : "244"
+  }, {
+    "iri" : "https://github.com/tibonto/educor#consistsOfKnowledge",
+    "baseIri" : "https://github.com/tibonto/educor",
+    "range" : "16",
+    "label" : {
+      "IRI-based" : "consistsOfKnowledge",
+      "undefined" : "consistsOfKnowledge"
+    },
+    "domain" : "73",
+    "attributes" : [ "object", "external" ],
+    "id" : "246"
+  }, {
+    "iri" : "https://purl.org/ontology/modalia#coversManagementOfDataObtainedWithTool",
+    "baseIri" : "https://purl.org/ontology/modalia",
+    "range" : "248",
+    "label" : {
+      "IRI-based" : "coversManagementOfDataObtainedWithTool",
+      "en" : "covers management of data obtained with tool"
+    },
+    "domain" : "26",
+    "attributes" : [ "object" ],
+    "id" : "247"
+  }, {
+    "iri" : "https://purl.org/ontology/modalia#hasLearningType",
+    "baseIri" : "https://purl.org/ontology/modalia",
+    "range" : "46",
+    "annotations" : {
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "The value is the learning type of content of a learning resource (e.g Lecture)",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasLearningType",
+      "en" : "has learning type"
+    },
+    "domain" : "29",
+    "attributes" : [ "functional", "object" ],
+    "id" : "250"
+  }, {
+    "iri" : "https://purl.org/ontology/modalia#industry",
+    "baseIri" : "https://purl.org/ontology/modalia",
+    "range" : "252",
+    "annotations" : {
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "The industry of a job",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "Research & Academia",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "industry",
+      "en" : "job has industry"
+    },
+    "domain" : "137",
+    "attributes" : [ "datatype" ],
+    "id" : "251"
+  }, {
+    "iri" : "https://schema.org/title",
+    "baseIri" : "https://schema.org",
+    "range" : "255",
+    "label" : {
+      "IRI-based" : "title",
+      "en" : "Job title"
+    },
+    "domain" : "137",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "254"
+  }, {
+    "iri" : "http://purl.org/dc/terms/isReferencedBy",
+    "baseIri" : "http://purl.org/dc/terms",
+    "range" : "32",
+    "annotations" : {
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Is referenced by",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isReferencedBy",
+      "en" : "isReferencedBy"
+    },
+    "superproperty" : [ "33" ],
+    "domain" : "29",
+    "attributes" : [ "object", "external" ],
+    "id" : "146"
+  }, {
+    "iri" : "https://purl.org/ontology/modalia#isVersionOf",
+    "baseIri" : "https://purl.org/ontology/modalia",
+    "range" : "29",
+    "annotations" : {
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Is version of",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isVersionOf",
+      "en" : "is version of"
+    },
+    "superproperty" : [ "33" ],
+    "domain" : "29",
+    "attributes" : [ "object", "symmetric" ],
+    "id" : "148"
+  }, {
+    "iri" : "https://purl.org/ontology/modalia#belongsToLearningPath",
+    "baseIri" : "https://purl.org/ontology/modalia",
+    "range" : "73",
+    "label" : {
+      "IRI-based" : "belongsToLearningPath",
+      "en" : "belongs to learning path"
+    },
+    "domain" : "249",
+    "attributes" : [ "object" ],
+    "id" : "258"
+  }, {
+    "iri" : "https://w3id.org/citedcat-ap/isSupplementedBy",
+    "baseIri" : "https://w3id.org/citedcat-ap",
+    "range" : "32",
+    "annotations" : {
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Is supplemented by",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isSupplementedBy",
+      "en" : "isSupplementedBy"
+    },
+    "superproperty" : [ "33" ],
+    "domain" : "29",
+    "attributes" : [ "object", "external" ],
+    "id" : "155"
+  }, {
+    "iri" : "https://schema.org/version",
+    "baseIri" : "https://schema.org",
+    "range" : "261",
+    "label" : {
+      "IRI-based" : "version",
+      "en" : "version"
+    },
+    "domain" : "29",
+    "comment" : {
+      "en" : "The version of the OER."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "260"
+  }, {
+    "iri" : "https://purl.org/ontology/modalia#isDuplicateOf",
+    "baseIri" : "https://purl.org/ontology/modalia",
+    "range" : "29",
+    "annotations" : {
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Dublicated metadata in DALIA platform",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isDuplicateOf",
+      "en" : "is duplicate of"
+    },
+    "superproperty" : [ "37" ],
+    "domain" : "29",
+    "attributes" : [ "object" ],
+    "id" : "39"
+  }, {
+    "iri" : "https://purl.org/ontology/modalia#belongsToPhase",
+    "baseIri" : "https://purl.org/ontology/modalia",
+    "range" : "2",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "en",
+        "value" : "defines the data life cycle phase that the resource covers",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "belongsToPhase",
+      "en" : "belongs to phase"
+    },
+    "domain" : "26",
+    "attributes" : [ "object" ],
+    "id" : "264"
+  }, {
+    "iri" : "https://schema.org/givenName",
+    "baseIri" : "https://schema.org",
+    "range" : "267",
+    "label" : {
+      "IRI-based" : "givenName",
+      "en" : "givenName"
+    },
+    "domain" : "266",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "265"
+  }, {
+    "iri" : "https://purl.org/ontology/modalia#isMoreProficientThan",
+    "baseIri" : "https://purl.org/ontology/modalia",
+    "range" : "132",
+    "label" : {
+      "IRI-based" : "isMoreProficientThan",
+      "en" : "is more proficient than"
+    },
+    "domain" : "132",
+    "attributes" : [ "transitive", "object" ],
+    "id" : "223"
+  }, {
+    "iri" : "https://purl.org/ontology/modalia#isNewVersionOf",
+    "inverse" : "150",
+    "baseIri" : "https://purl.org/ontology/modalia",
+    "range" : "29",
+    "annotations" : {
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Is new version of",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isNewVersionOf",
+      "en" : "is new version of"
+    },
+    "superproperty" : [ "33" ],
+    "domain" : "29",
+    "attributes" : [ "irreflexive", "object" ],
+    "id" : "149"
+  }, {
+    "iri" : "http://purl.org/dc/terms/isPartOf",
+    "baseIri" : "http://purl.org/dc/terms",
+    "range" : "32",
+    "annotations" : {
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Is part of",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isPartOf",
+      "en" : "isPartOf"
+    },
+    "superproperty" : [ "33" ],
+    "domain" : "29",
+    "attributes" : [ "object", "external" ],
+    "id" : "157"
+  }, {
+    "iri" : "https://purl.org/ontology/modalia#isTranslationOf",
+    "baseIri" : "https://purl.org/ontology/modalia",
+    "range" : "32",
+    "annotations" : {
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Is translation of",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isTranslationOf",
+      "en" : "is translation of"
+    },
+    "superproperty" : [ "33" ],
+    "domain" : "29",
+    "attributes" : [ "object" ],
+    "id" : "160"
+  }, {
+    "iri" : "https://purl.org/ontology/modalia#commentUserID",
+    "baseIri" : "https://purl.org/ontology/modalia",
+    "range" : "142",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "en",
+        "value" : "relates a user to his/her comment",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "commentUserID",
+      "en" : "comment has user"
+    },
+    "domain" : "79",
+    "attributes" : [ "object" ],
+    "id" : "272"
+  }, {
+    "iri" : "https://purl.org/ontology/modalia#coversManagementOfDataKind",
+    "baseIri" : "https://purl.org/ontology/modalia",
+    "range" : "274",
+    "label" : {
+      "IRI-based" : "coversManagementOfDataKind",
+      "en" : "covers management of data kind"
+    },
+    "domain" : "26",
+    "comment" : {
+      "en" : "A property that relates a RDMResource to data kind being managed"
+    },
+    "attributes" : [ "object" ],
+    "id" : "273"
+  }, {
+    "iri" : "http://purl.org/spar/fabio/hasDiscipline",
+    "baseIri" : "http://purl.org/spar/fabio",
+    "range" : "22",
+    "label" : {
+      "IRI-based" : "hasDiscipline",
+      "undefined" : "hasDiscipline"
+    },
+    "domain" : "276",
+    "attributes" : [ "object", "external" ],
+    "id" : "275"
+  }, {
+    "iri" : "https://schema.org/teaches",
+    "baseIri" : "https://schema.org",
+    "range" : "269",
+    "label" : {
+      "IRI-based" : "teaches",
+      "en" : "teaches"
+    },
+    "domain" : "29",
+    "comment" : {
+      "en" : "The item being described is intended to help a person learn the competency or learning outcome defined by the referenced term."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "277"
+  }, {
+    "iri" : "https://schema.org/reviewBody",
+    "baseIri" : "https://schema.org",
+    "range" : "268",
+    "label" : {
+      "IRI-based" : "reviewBody",
+      "en" : "review body"
+    },
+    "domain" : "177",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "278"
+  }, {
+    "iri" : "https://schema.org/itemReviewed",
+    "baseIri" : "https://schema.org",
+    "range" : "29",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "en",
+        "value" : "The item that is being reviewed/rated.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "itemReviewed"
+    },
+    "domain" : "177",
+    "attributes" : [ "object", "external" ],
+    "id" : "283"
+  }, {
+    "range" : "46",
+    "domain" : "107",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "285"
+  }, {
+    "iri" : "https://schema.org/author",
+    "baseIri" : "https://schema.org",
+    "range" : "84",
+    "label" : {
+      "IRI-based" : "author",
+      "en" : "author"
+    },
+    "domain" : "29",
+    "comment" : {
+      "en" : "Property linking an OER  to a list of authors."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "286"
+  }, {
+    "iri" : "https://purl.org/ontology/modalia#educationalLevel",
+    "baseIri" : "https://purl.org/ontology/modalia",
+    "range" : "257",
+    "label" : {
+      "IRI-based" : "educationalLevel",
+      "en" : "educational level"
+    },
+    "domain" : "142",
+    "attributes" : [ "object" ],
+    "id" : "287"
+  }, {
+    "range" : "46",
+    "domain" : "45",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "288"
+  }, {
+    "range" : "46",
+    "domain" : "109",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "289"
+  }, {
+    "range" : "46",
+    "domain" : "108",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "290"
+  }, {
+    "range" : "46",
+    "domain" : "106",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "291"
+  }, {
+    "iri" : "https://schema.org/image",
+    "baseIri" : "https://schema.org",
+    "range" : "270",
+    "label" : {
+      "IRI-based" : "image",
+      "en" : "image"
+    },
+    "domain" : "29",
+    "comment" : {
+      "en" : "Property linking an OER to an image representing it."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "292"
+  }, {
+    "iri" : "https://purl.org/ontology/modalia#requiresProficiencyLevel",
+    "baseIri" : "https://purl.org/ontology/modalia",
+    "range" : "132",
+    "label" : {
+      "IRI-based" : "requiresProficiencyLevel",
+      "en" : "requires proficiency level"
+    },
+    "domain" : "29",
+    "attributes" : [ "object" ],
+    "id" : "293"
+  }, {
+    "iri" : "https://schema.org/url",
+    "baseIri" : "https://schema.org",
+    "range" : "263",
+    "label" : {
+      "IRI-based" : "url",
+      "en" : "url"
+    },
+    "domain" : "29",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "294"
+  }, {
+    "iri" : "http://purl.org/dc/terms/references",
+    "baseIri" : "http://purl.org/dc/terms",
+    "range" : "32",
+    "annotations" : {
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "References",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "references",
+      "en" : "references"
+    },
+    "superproperty" : [ "33" ],
+    "domain" : "29",
+    "attributes" : [ "object", "external" ],
+    "id" : "153"
+  }, {
+    "range" : "46",
+    "domain" : "105",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "295"
+  }, {
+    "iri" : "https://schema.org/familyName",
+    "baseIri" : "https://schema.org",
+    "range" : "281",
+    "label" : {
+      "IRI-based" : "familyName",
+      "en" : "familyName"
+    },
+    "domain" : "279",
+    "comment" : {
+      "en" : "Family name. In the U.S., the last name of a Person."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "296"
+  }, {
+    "range" : "46",
+    "domain" : "104",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "297"
+  }, {
+    "range" : "46",
+    "domain" : "101",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "298"
+  }, {
+    "range" : "46",
+    "domain" : "100",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "299"
+  }, {
+    "range" : "46",
+    "domain" : "103",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "300"
+  }, {
+    "range" : "46",
+    "domain" : "102",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "301"
+  }, {
+    "range" : "46",
+    "domain" : "97",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "302"
+  }, {
+    "range" : "46",
+    "domain" : "96",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "303"
+  }, {
+    "range" : "46",
+    "domain" : "99",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "304"
+  }, {
+    "range" : "46",
+    "domain" : "98",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "305"
+  }, {
+    "iri" : "https://purl.org/ontology/modalia#userViews",
+    "baseIri" : "https://purl.org/ontology/modalia",
+    "range" : "29",
+    "label" : {
+      "IRI-based" : "userViews",
+      "en" : "user views"
+    },
+    "superproperty" : [ "37" ],
+    "domain" : "142",
+    "attributes" : [ "object" ],
+    "id" : "40"
+  }, {
+    "iri" : "https://purl.org/ontology/modalia#teachesSkill",
+    "baseIri" : "https://purl.org/ontology/modalia",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "teachesSkill",
+      "en" : "teaches skill"
+    },
+    "domain" : "29",
+    "attributes" : [ "object" ],
+    "id" : "306"
+  }, {
+    "iri" : "https://purl.org/ontology/modalia#createdBy",
+    "baseIri" : "https://purl.org/ontology/modalia",
+    "range" : "142",
+    "label" : {
+      "IRI-based" : "createdBy",
+      "en" : "created by"
+    },
+    "domain" : "36",
+    "comment" : {
+      "en" : "a property defining the user who created a community"
+    },
+    "attributes" : [ "object" ],
+    "id" : "307"
+  }, {
+    "iri" : "http://purl.org/dc/terms/hasPart",
+    "baseIri" : "http://purl.org/dc/terms",
+    "range" : "32",
+    "annotations" : {
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Has part",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasPart",
+      "en" : "hasPart"
+    },
+    "superproperty" : [ "33" ],
+    "domain" : "29",
+    "attributes" : [ "object", "external" ],
+    "id" : "152"
+  }, {
+    "iri" : "https://schema.org/fileSize",
+    "baseIri" : "https://schema.org",
+    "range" : "280",
+    "label" : {
+      "IRI-based" : "fileSize",
+      "en" : "fileSize"
+    },
+    "domain" : "29",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "308"
+  }, {
+    "iri" : "https://purl.org/ontology/modalia#commentID",
+    "baseIri" : "https://purl.org/ontology/modalia",
+    "range" : "253",
+    "annotations" : {
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "ID of a user comment",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "commentID",
+      "en" : "comment has identifier"
+    },
+    "domain" : "79",
+    "attributes" : [ "datatype" ],
+    "id" : "309"
+  }, {
+    "range" : "46",
+    "domain" : "94",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "310"
+  }, {
+    "iri" : "https://purl.org/ontology/modalia#hasMediaType",
+    "baseIri" : "https://purl.org/ontology/modalia",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "hasMediaType",
+      "en" : "has media type"
+    },
+    "domain" : "29",
+    "attributes" : [ "object" ],
+    "id" : "311"
+  }, {
+    "iri" : "https://purl.org/ontology/modalia#hasUser",
+    "baseIri" : "https://purl.org/ontology/modalia",
+    "range" : "142",
+    "label" : {
+      "IRI-based" : "hasUser",
+      "en" : "has user"
+    },
+    "superproperty" : [ "37" ],
+    "domain" : "76",
+    "attributes" : [ "object" ],
+    "id" : "42"
+  }, {
+    "iri" : "https://w3id.org/citedcat-ap/isContinuedBy",
+    "baseIri" : "https://w3id.org/citedcat-ap",
+    "range" : "29",
+    "annotations" : {
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Is continued by",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isContinuedBy",
+      "en" : "isContinuedBy"
+    },
+    "superproperty" : [ "33" ],
+    "domain" : "29",
+    "attributes" : [ "object", "external" ],
+    "id" : "156"
+  }, {
+    "range" : "46",
+    "domain" : "95",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "312"
+  }, {
+    "range" : "11",
+    "domain" : "130",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "313"
   }, {
-    "range" : "10",
-    "domain" : "9",
-    "attributes" : [ "anonymous", "object" ],
+    "iri" : "https://purl.org/ontology/modalia#commentedOER",
+    "baseIri" : "https://purl.org/ontology/modalia",
+    "range" : "29",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "en",
+        "value" : "defines the OER that is commented in a user comment",
+        "type" : "label"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "en",
+        "value" : "commentedOER",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "commentedOER",
+      "en" : "comment has OER"
+    },
+    "domain" : "79",
+    "attributes" : [ "object" ],
     "id" : "314"
   }, {
-    "range" : "10",
-    "domain" : "116",
+    "range" : "46",
+    "domain" : "125",
     "attributes" : [ "anonymous", "object" ],
     "id" : "315"
   }, {
-    "range" : "10",
-    "domain" : "79",
+    "range" : "11",
+    "domain" : "10",
     "attributes" : [ "anonymous", "object" ],
     "id" : "316"
   }, {
+    "range" : "11",
+    "domain" : "131",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "317"
+  }, {
+    "iri" : "https://purl.org/ontology/modalia#solves",
+    "baseIri" : "https://purl.org/ontology/modalia",
+    "range" : "262",
+    "label" : {
+      "IRI-based" : "solves",
+      "en" : "solves"
+    },
+    "domain" : "142",
+    "attributes" : [ "object" ],
+    "id" : "318"
+  }, {
+    "range" : "46",
+    "domain" : "77",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "319"
+  }, {
+    "range" : "46",
+    "domain" : "124",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "320"
+  }, {
+    "range" : "46",
+    "domain" : "81",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "321"
+  }, {
+    "range" : "50",
+    "domain" : "69",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "322"
+  }, {
+    "range" : "1",
+    "domain" : "69",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "323"
+  }, {
+    "range" : "66",
+    "domain" : "69",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "324"
+  }, {
+    "range" : "6",
+    "domain" : "69",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "325"
+  }, {
+    "range" : "48",
+    "domain" : "69",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "326"
+  }, {
+    "range" : "56",
+    "domain" : "69",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "327"
+  }, {
+    "iri" : "http://id.loc.gov/ontologies/bibframe/role",
+    "baseIri" : "http://id.loc.gov/ontologies/bibframe",
+    "range" : "34",
+    "label" : {
+      "IRI-based" : "role",
+      "en" : "role"
+    },
+    "domain" : "240",
+    "comment" : {
+      "en" : "Property that links a contribution to a role (e.g., contactPerson, editor)."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "329"
+  }, {
+    "iri" : "https://schema.org/datePublished",
+    "baseIri" : "https://schema.org",
+    "range" : "284",
+    "label" : {
+      "IRI-based" : "datePublished",
+      "en" : "Publication Date"
+    },
+    "domain" : "29",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "330"
+  }, {
+    "iri" : "https://purl.org/ontology/modalia#userBookmarks",
+    "baseIri" : "https://purl.org/ontology/modalia",
+    "range" : "29",
+    "label" : {
+      "IRI-based" : "userBookmarks",
+      "en" : "user bookmarks"
+    },
+    "domain" : "142",
+    "attributes" : [ "object" ],
+    "id" : "331"
+  }, {
+    "iri" : "https://purl.org/ontology/modalia#isPreviousVersionOf",
+    "baseIri" : "https://purl.org/ontology/modalia",
+    "range" : "29",
+    "annotations" : {
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Is previous version of",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isPreviousVersionOf",
+      "en" : "is previous version of"
+    },
+    "superproperty" : [ "33" ],
+    "domain" : "29",
+    "attributes" : [ "object" ],
+    "id" : "150"
+  }, {
+    "iri" : "https://purl.org/ontology/modalia#hasQuality",
+    "baseIri" : "https://purl.org/ontology/modalia",
+    "range" : "256",
+    "label" : {
+      "IRI-based" : "hasQuality",
+      "en" : "has quality"
+    },
+    "domain" : "29",
+    "attributes" : [ "object" ],
+    "id" : "332"
+  }, {
+    "iri" : "https://schema.org/ratingValue",
+    "baseIri" : "https://schema.org",
+    "range" : "271",
+    "label" : {
+      "IRI-based" : "ratingValue",
+      "undefined" : "rating value"
+    },
+    "domain" : "76",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "333"
+  }, {
+    "range" : "4",
+    "domain" : "16",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "334"
+  }, {
+    "range" : "71",
+    "domain" : "69",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "335"
+  }, {
+    "range" : "46",
+    "domain" : "121",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "336"
+  }, {
+    "range" : "46",
+    "domain" : "120",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "337"
+  }, {
+    "iri" : "https://w3id.org/citedcat-ap/continues",
+    "inverse" : "156",
+    "baseIri" : "https://w3id.org/citedcat-ap",
+    "range" : "29",
+    "annotations" : {
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Continues",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "continues",
+      "en" : "continues"
+    },
+    "superproperty" : [ "33" ],
+    "domain" : "29",
+    "attributes" : [ "object", "external" ],
+    "id" : "159"
+  }, {
+    "range" : "46",
+    "domain" : "123",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "338"
+  }, {
+    "range" : "46",
+    "domain" : "122",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "339"
+  }, {
+    "range" : "46",
+    "domain" : "117",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "340"
+  }, {
+    "range" : "46",
+    "domain" : "116",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "341"
+  }, {
+    "range" : "46",
+    "domain" : "119",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "342"
+  }, {
     "iri" : "https://purl.org/ontology/modalia#citation",
     "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "232",
+    "range" : "259",
     "label" : {
       "IRI-based" : "citation",
       "en" : "citation"
     },
-    "domain" : "28",
+    "domain" : "29",
     "comment" : {
       "en" : "Citation text of the OER (APA)"
     },
     "attributes" : [ "datatype" ],
-    "id" : "317"
+    "id" : "343"
   }, {
-    "range" : "10",
-    "domain" : "117",
+    "range" : "46",
+    "domain" : "118",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "318"
+    "id" : "344"
   }, {
-    "range" : "10",
+    "range" : "46",
     "domain" : "115",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "319"
+    "id" : "345"
   }, {
     "iri" : "https://schema.org/downloadUrl",
     "baseIri" : "https://schema.org",
-    "range" : "255",
+    "range" : "282",
     "label" : {
       "IRI-based" : "downloadUrl",
       "en" : "has download URL"
     },
-    "domain" : "28",
+    "domain" : "29",
     "comment" : {
       "en" : "If the OER can be downloaded, URL to download it."
     },
-    "attributes" : [ "external", "datatype" ],
-    "id" : "320"
+    "attributes" : [ "datatype", "external" ],
+    "id" : "346"
   }, {
     "iri" : "https://purl.org/ontology/modalia#requiresKnowledge",
     "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "58",
+    "range" : "16",
     "label" : {
       "IRI-based" : "requiresKnowledge",
       "en" : "requires knowledge"
     },
     "domain" : "4",
     "attributes" : [ "object" ],
-    "id" : "321"
+    "id" : "347"
   }, {
-    "range" : "43",
-    "domain" : "112",
+    "range" : "46",
+    "domain" : "114",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "322"
+    "id" : "348"
   }, {
     "iri" : "http://purl.org/dc/terms/isReplacedBy",
-    "inverse" : "149",
+    "inverse" : "154",
     "baseIri" : "http://purl.org/dc/terms",
-    "range" : "28",
+    "range" : "29",
     "annotations" : {
       "prefLabel" : [ {
         "identifier" : "prefLabel",
@@ -5520,14 +6028,14 @@
       "IRI-based" : "isReplacedBy",
       "en" : "isReplacedBy"
     },
-    "superproperty" : [ "32" ],
-    "domain" : "28",
+    "superproperty" : [ "33" ],
+    "domain" : "29",
     "attributes" : [ "object", "external" ],
-    "id" : "142"
+    "id" : "147"
   }, {
     "iri" : "http://id.loc.gov/ontologies/bibframe/agent",
     "baseIri" : "http://id.loc.gov/ontologies/bibframe",
-    "range" : "214",
+    "range" : "241",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -5539,16 +6047,16 @@
     "label" : {
       "IRI-based" : "agent"
     },
-    "domain" : "213",
+    "domain" : "240",
     "comment" : {
       "en" : "agent"
     },
     "attributes" : [ "object", "external" ],
-    "id" : "323"
+    "id" : "349"
   }, {
     "iri" : "https://purl.org/ontology/modalia#covers",
     "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "58",
+    "range" : "16",
     "annotations" : {
       "definition" : [ {
         "identifier" : "definition",
@@ -5561,55 +6069,55 @@
       "IRI-based" : "covers",
       "en" : "covers"
     },
-    "domain" : "28",
+    "domain" : "29",
     "attributes" : [ "object" ],
-    "id" : "324"
+    "id" : "350"
   }, {
-    "range" : "43",
-    "domain" : "111",
+    "range" : "46",
+    "domain" : "113",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "325"
+    "id" : "351"
   }, {
     "iri" : "https://purl.org/ontology/modalia#definesLearningPath",
     "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "72",
+    "range" : "73",
     "label" : {
       "IRI-based" : "definesLearningPath",
       "en" : "defines learning path"
     },
-    "domain" : "301",
+    "domain" : "328",
     "attributes" : [ "object" ],
-    "id" : "326"
+    "id" : "352"
   }, {
-    "range" : "43",
-    "domain" : "109",
+    "range" : "46",
+    "domain" : "111",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "327"
+    "id" : "353"
   }, {
     "iri" : "https://purl.org/ontology/modalia#hasTargetGroup",
     "baseIri" : "https://purl.org/ontology/modalia",
-    "range" : "10",
+    "range" : "11",
     "label" : {
       "IRI-based" : "hasTargetGroup",
       "en" : "has target group"
     },
-    "domain" : "28",
+    "domain" : "29",
     "attributes" : [ "object" ],
-    "id" : "328"
+    "id" : "354"
   }, {
-    "range" : "43",
-    "domain" : "108",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "329"
-  }, {
-    "range" : "43",
-    "domain" : "42",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "330"
-  }, {
-    "range" : "43",
+    "range" : "46",
     "domain" : "110",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "331"
+    "id" : "355"
+  }, {
+    "range" : "46",
+    "domain" : "112",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "356"
+  }, {
+    "range" : "46",
+    "domain" : "53",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "357"
   } ]
 }
