@@ -42,6 +42,11 @@ Documentation of MoDALIA is found
 $ npx --yes prettier --write --prose-wrap always "**/*.md"
 ```
 
+## Exporting OBO
+
+1. Make sure you download and install [ROBOT](https://robot.obolibrary.org/)
+2. Run `just export`
+
 ## References
 
 - Ilkou, E. et al. (2021). EduCOR: An Educational and Career-Oriented

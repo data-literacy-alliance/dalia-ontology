@@ -1,6 +1,9 @@
 test:
     uv run tests.py
 
+export:
+    robot convert -i MoDalia.ttl -o modalia.obo -v --check=false
+
 WIDOCO_VERSION := "1.4.25"
 WIDOCO_JDK_VERSION := "11"
 
