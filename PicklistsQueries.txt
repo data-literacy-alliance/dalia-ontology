@@ -1,0 +1,68 @@
+### Picklists for Developers:
+==========================
+###### 1- TargetGroup
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix mo: <https://purl.org/ontology/modalia#>
+SELECT ?s ?lbl
+	WHERE { ?s rdfs:subClassOf mo:TargetGroup ;
+rdfs:label ?lbl }
+order by ?lbl 
+
+###################### 2- Proficiency
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix mo: <https://purl.org/ontology/modalia#>
+SELECT ?s ?lbl
+	WHERE { ?s a mo:Proficiency ;
+rdfs:label ?lbl }
+
+#################### 3- MediaType
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix mo: <https://purl.org/ontology/modalia#>
+SELECT ?s ?lbl
+	WHERE { ?s rdfs:subClassOf mo:MediaType ;
+rdfs:label ?lbl }
+order by ?lbl
+
+################ 4- RelationType
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix mo: <https://purl.org/ontology/modalia#>
+prefix dcterms: <http://purl.org/dc/terms/>
+SELECT ?s ?lbl
+	WHERE { ?s rdfs:subPropertyOf dcterms:relation ;
+rdfs:label ?lbl }
+order by ?lbl
+
+############ 5- LRT
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix mo: <https://purl.org/ontology/modalia#>
+prefix dcterms: <http://purl.org/dc/terms/>
+SELECT ?s ?lbl
+	WHERE { ?s rdfs:subClassOf dcterms:relation ;
+rdfs:label ?lbl }
+order by ?lbl
+############### 6- Roles
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix mo: <https://purl.org/ontology/modalia#>
+SELECT ?s ?lbl
+	WHERE { ?s a mo:ContributorRole ;
+rdfs:label ?lbl }
+order by ?lbl
+
+
+
