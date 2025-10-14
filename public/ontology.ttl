@@ -21,7 +21,7 @@
 The ontology is used for making a knowledge graph as a backend to platform for teaching, personal learning, and recommendation.
 The ontology is developed in OWL in Protege 5.5.0."""@en ;
                                       <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
-                                      <http://purl.org/dc/terms/modified> "2025-10-08" ;
+                                      <http://purl.org/dc/terms/modified> "2025-10-14" ;
                                       <http://purl.org/dc/terms/publisher> "ULB TUDa – University and State Library, Technical University, Darmstadt, Germany" ;
                                       <http://purl.org/dc/terms/title> "MoDALIA Ontology"@en ;
                                       <http://purl.org/vocab/vann/preferredNamespacePrefix> "modalia" ;
@@ -151,7 +151,8 @@ xsd:duration rdf:type rdfs:Datatype .
                                               rdfs:domain <http://id.loc.gov/ontologies/bibframe/Contribution> ;
                                               rdfs:range :Contributor ;
                                               rdfs:comment "agent"@en ;
-                                              rdfs:isDefinedBy "Property that links a contribution to the agent (e.g., the person or organization making the contribution)." .
+                                              rdfs:isDefinedBy <http://id.loc.gov/ontologies/bibframe> ;
+                                              <http://www.w3.org/2004/02/skos/core#definition> "Property that links a contribution to the agent (e.g., the person or organization making the contribution)." .
 
 
 ###  http://id.loc.gov/ontologies/bibframe/contribution
@@ -165,7 +166,7 @@ xsd:duration rdf:type rdfs:Datatype .
 ###  http://id.loc.gov/ontologies/bibframe/role
 <http://id.loc.gov/ontologies/bibframe/role> rdf:type owl:ObjectProperty ;
                                              rdfs:domain <http://id.loc.gov/ontologies/bibframe/Contribution> ;
-                                             rdfs:range :ContributorRole ;
+                                             rdfs:range <http://www.w3.org/ns/prov#Role> ;
                                              rdfs:comment "Property that links a contribution to a role (e.g., contactPerson, editor)."@en ;
                                              rdfs:label "role"@en .
 
@@ -285,25 +286,25 @@ xsd:duration rdf:type rdfs:Datatype .
 :belongsToPhase rdf:type owl:ObjectProperty ;
                 rdfs:domain :RDMResource ;
                 rdfs:range :DataLifeCyclePhase ;
-                rdfs:isDefinedBy "defines the data life cycle phase that the resource covers"@en ;
-                rdfs:label "belongs to phase"@en .
+                rdfs:label "belongs to phase"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "defines the data life cycle phase that the resource covers"@en .
 
 
 ###  https://purl.org/ontology/modalia#commentUserID
 :commentUserID rdf:type owl:ObjectProperty ;
                rdfs:domain :UserComment ;
                rdfs:range :User ;
-               rdfs:isDefinedBy "relates a user to his/her comment"@en ;
-               rdfs:label "comment has user"@en .
+               rdfs:label "comment has user"@en ;
+               <http://www.w3.org/2004/02/skos/core#definition> "relates a user to his/her comment"@en .
 
 
 ###  https://purl.org/ontology/modalia#commentedOER
 :commentedOER rdf:type owl:ObjectProperty ;
               rdfs:domain :UserComment ;
               rdfs:range <https://github.com/tibonto/educor#EducationalResource> ;
-              rdfs:isDefinedBy "commentedOER"@en ,
-                               "defines the OER that is commented in a user comment"@en ;
-              rdfs:label "comment has OER"@en .
+              rdfs:label "comment has OER"@en ;
+              <http://www.w3.org/2004/02/skos/core#definition> "commentedOER"@en ,
+                                                               "defines the OER that is commented in a user comment"@en .
 
 
 ###  https://purl.org/ontology/modalia#covers
@@ -440,8 +441,8 @@ xsd:duration rdf:type rdfs:Datatype .
                    owl:FunctionalProperty ;
           rdfs:domain :Community ;
           rdfs:range :User ;
-          rdfs:isDefinedBy "defines the user who owns a specific community. There is only one owner to a specific community"@en ;
-          rdfs:label "has owner"@en .
+          rdfs:label "has owner"@en ;
+          <http://www.w3.org/2004/02/skos/core#definition> "defines the user who owns a specific community. There is only one owner to a specific community"@en .
 
 
 ###  https://purl.org/ontology/modalia#hasQuality
@@ -705,7 +706,7 @@ xsd:duration rdf:type rdfs:Datatype .
 <https://schema.org/itemReviewed> rdf:type owl:ObjectProperty ;
                                   rdfs:domain <https://schema.org/Review> ;
                                   rdfs:range <https://github.com/tibonto/educor#EducationalResource> ;
-                                  rdfs:isDefinedBy "The item that is being reviewed/rated."@en .
+                                  <http://www.w3.org/2004/02/skos/core#definition> "The item that is being reviewed/rated."@en .
 
 
 ###  https://w3id.org/citedcat-ap/continues
@@ -753,8 +754,9 @@ xsd:duration rdf:type rdfs:Datatype .
 <http://purl.org/dc/terms/format> rdf:type owl:DatatypeProperty ;
                                   rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
                                   rdfs:range xsd:string ;
-                                  rdfs:isDefinedBy "File format of the file representing the resource" ;
+                                  rdfs:isDefinedBy <http://purl.org/dc/terms> ;
                                   rdfs:label "file format"@en ;
+                                  <http://www.w3.org/2004/02/skos/core#definition> "File format of the file representing the resource" ;
                                   <http://www.w3.org/2004/02/skos/core#example> "PDF, AVI" .
 
 
@@ -793,10 +795,11 @@ xsd:duration rdf:type rdfs:Datatype .
                                                                                      ]
                                                                                    )
                                                             ] ;
-                                                 rdfs:isDefinedBy "A Research Organization Registry identifier that persistently and uniquely identifies a research organization"@en ,
-                                                                  "Ein persistenter Identifikator für Organisationen, vergeben durch die Research Organization Registry, der eine Forschungseinrichtung eindeutig identifiziert."@de ;
+                                                 rdfs:isDefinedBy "http://w3id.org/nfdi4ing/metadata4ing" ;
                                                  <http://www.w3.org/2004/02/skos/core#altLabel> "has research organization registry id"@en ,
                                                                                                 "hat Forschungsorganisationsid"@de ;
+                                                 <http://www.w3.org/2004/02/skos/core#definition> "A Research Organization Registry identifier that persistently and uniquely identifies a research organization"@en ,
+                                                                                                  "Ein persistenter Identifikator für Organisationen, vergeben durch die Research Organization Registry, der eine Forschungseinrichtung eindeutig identifiziert."@de ;
                                                  <http://www.w3.org/2004/02/skos/core#prefLabel> "has ROR ID"@en ,
                                                                                                  "hat ROR ID"@de .
 
@@ -814,8 +817,8 @@ xsd:duration rdf:type rdfs:Datatype .
                                                                                     ]
                                                                                   )
                                                            ] ;
-                                                rdfs:isDefinedBy "Open Researcher and Contributor ID: an identifier, that allows unique identification of a person, usually active in research."@en ,
-                                                                 "Open Researcher and Contributor ID: ein persistenter Identifikator, der eine in der Forschung tätige Person eindeutig identifiziert."@de ;
+                                                <http://www.w3.org/2004/02/skos/core#definition> "Open Researcher and Contributor ID: an identifier, that allows unique identification of a person, usually active in research."@en ,
+                                                                                                 "Open Researcher and Contributor ID: ein persistenter Identifikator, der eine in der Forschung tätige Person eindeutig identifiziert."@de ;
                                                 <http://www.w3.org/2004/02/skos/core#prefLabel> "has ORCID ID"@en ,
                                                                                                 "hat ORCID ID"@de .
 
@@ -878,8 +881,8 @@ xsd:duration rdf:type rdfs:Datatype .
                                     )
                       ] ;
           rdfs:range xsd:integer ;
-          rdfs:isDefinedBy "Order of proficiency level, starting from 1 for Novice and increasing by proficiency"@en ;
-          rdfs:label "has order"@en .
+          rdfs:label "has order"@en ;
+          <http://www.w3.org/2004/02/skos/core#definition> "Order of proficiency level, starting from 1 for Novice and increasing by proficiency"@en .
 
 
 ###  https://purl.org/ontology/modalia#industry
@@ -1033,9 +1036,9 @@ xsd:duration rdf:type rdfs:Datatype .
 <https://schema.org/reviewRating> rdf:type owl:DatatypeProperty ;
                                   rdfs:domain <https://schema.org/Review> ;
                                   rdfs:range xsd:integer ;
-                                  rdfs:isDefinedBy "The rating given in this review. Note that reviews can themselves be rated. The reviewRating applies to rating given by the review."@en ;
+                                  rdfs:comment "rating according to the reviewer of the OER"@en ;
                                   rdfs:label "review rating"@en ;
-                                  <http://www.w3.org/2004/02/skos/core#definition> "rating according to the reviewer of the OER"@en .
+                                  <http://www.w3.org/2004/02/skos/core#definition> "The rating given in this review. Note that reviews can themselves be rated. The reviewRating applies to rating given by the review."@en .
 
 
 ###  https://schema.org/teaches
@@ -1083,27 +1086,27 @@ xsd:duration rdf:type rdfs:Datatype .
 
 ###  http://edamontology.org/data_0006
 <http://edamontology.org/data_0006> rdf:type owl:Class ;
-                                    rdfs:isDefinedBy "Kind of data being managed"@en ;
-                                    rdfs:label "data"@en .
+                                    rdfs:label "data"@en ;
+                                    <http://www.w3.org/2004/02/skos/core#definition> "Kind of data being managed"@en .
 
 
 ###  http://id.loc.gov/ontologies/bibframe/Contribution
 <http://id.loc.gov/ontologies/bibframe/Contribution> rdf:type owl:Class ;
-                                                     rdfs:isDefinedBy "A contribution to an OER, including agent and role information."@en .
+                                                     <http://www.w3.org/2004/02/skos/core#definition> "A contribution to an OER, including agent and role information."@en .
 
 
 ###  http://lexvo.org/ontology#Language
 <http://lexvo.org/ontology#Language> rdf:type owl:Class ;
-                                     rdfs:isDefinedBy "Natural language"@en ;
                                      rdfs:label "language"@en ;
-                                     rdfs:seeAlso "https://www.wikidata.org/wiki/Q315"@en .
+                                     rdfs:seeAlso "https://www.wikidata.org/wiki/Q315"@en ;
+                                     <http://www.w3.org/2004/02/skos/core#definition> "Natural language"@en .
 
 
 ###  http://purl.obolibrary.org/obo/OCCO_25401100
 <http://purl.obolibrary.org/obo/OCCO_25401100> rdf:type owl:Class ;
                                                rdfs:subClassOf :TargetGroup ;
-                                               rdfs:isDefinedBy "A person who appraises, edits, and directs safekeeping of permanent records and historically valuable documents. Participate in research activities based on archival materials."@en ;
                                                rdfs:label "archivist"@en ;
+                                               <http://www.w3.org/2004/02/skos/core#definition> "A person who appraises, edits, and directs safekeeping of permanent records and historically valuable documents. Participate in research activities based on archival materials."@en ;
                                                <http://www.w3.org/2004/02/skos/core#prefLabel> "Archivist"@en .
 
 
@@ -1161,85 +1164,100 @@ xsd:duration rdf:type rdfs:Datatype .
 ###  http://purl.org/ontology/bibo/Workshop
 <http://purl.org/ontology/bibo/Workshop> rdf:type owl:Class ;
                                          rdfs:subClassOf :LearningResourceType ;
-                                         rdfs:isDefinedBy "A seminar, discussion group, or the like, that emphasizes zxchange of ideas and the demonstration and application of techniques, skills, etc."@en ;
+                                         rdfs:isDefinedBy <http://purl.org/ontology/bibo> ;
                                          rdfs:label "workshop"@en ;
+                                         <http://www.w3.org/2004/02/skos/core#definition> "A seminar, discussion group, or the like, that emphasizes zxchange of ideas and the demonstration and application of techniques, skills, etc."@en ;
                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "workshop"@en .
 
 
 ###  http://semanticscience.org/resource/SIO_000776
 <http://semanticscience.org/resource/SIO_000776> rdf:type owl:Class ;
-                                                 rdfs:isDefinedBy "an object that is described (chemical substance, living organism, building, ...)"@en ;
+                                                 rdfs:isDefinedBy <http://semanticscience.org> ;
                                                  rdfs:label "object"@en ;
+                                                 <http://www.w3.org/2004/02/skos/core#definition> "an object that is described (chemical substance, living organism, building, ...)"@en ;
                                                  <http://www.w3.org/2004/02/skos/core#example> "mouse cells"@en .
 
 
 ###  http://w3id.org/nfdi4ing/metadata4ing#Method
 <http://w3id.org/nfdi4ing/metadata4ing#Method> rdf:type owl:Class ;
-                                               rdfs:isDefinedBy "a method with which data was obtained"@en ;
+                                               rdfs:isDefinedBy <http://w3id.org/nfdi4ing/metadata4ing> ;
                                                rdfs:label "research method"@en ;
+                                               <http://www.w3.org/2004/02/skos/core#definition> "a method with which data was obtained"@en ;
                                                <http://www.w3.org/2004/02/skos/core#example> "bioassay, microscopy, measurement"@en .
 
 
 ###  http://w3id.org/nfdi4ing/metadata4ing#Tool
 <http://w3id.org/nfdi4ing/metadata4ing#Tool> rdf:type owl:Class ;
-                                             rdfs:isDefinedBy "a tool with which data was obtained (microscope, sensor, ...)"@en ;
-                                             rdfs:label "tool"@en .
+                                             rdfs:isDefinedBy <http://w3id.org/nfdi4ing/metadata4ing> ;
+                                             rdfs:label "tool"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "a tool with which data was obtained (microscope, sensor, ...)"@en .
 
 
 ###  http://www.w3.org/1999/02/22-rdf-syntax-ns#List
 rdf:List rdf:type owl:Class .
 
 
+###  http://www.w3.org/ns/prov#Role
+<http://www.w3.org/ns/prov#Role> rdf:type owl:Class ;
+                                 rdfs:label "contributor role"@en ;
+                                 <http://www.w3.org/2004/02/skos/core#definition> "types of contribution to an OER."@en ;
+                                 <http://www.w3.org/2004/02/skos/core#example> "Editor"@en .
+
+
 ###  https://github.com/tibonto/educor#EducationalResource
 <https://github.com/tibonto/educor#EducationalResource> rdf:type owl:Class ;
-                                                        rdfs:isDefinedBy "Any educational resources online or offline"@en ;
+                                                        rdfs:isDefinedBy <https://github.com/tibonto/educor> ;
                                                         rdfs:label "educational resource"@en ;
+                                                        <http://www.w3.org/2004/02/skos/core#definition> "Any educational resources online or offline"@en ;
                                                         <http://www.w3.org/2004/02/skos/core#example> "A video describing how lists work in Python programming language"@en .
 
 
 ###  https://github.com/tibonto/educor#KnowledgeTopic
 <https://github.com/tibonto/educor#KnowledgeTopic> rdf:type owl:Class ;
                                                    owl:disjointWith :Skill ;
-                                                   rdfs:isDefinedBy "A single node representing a learning module based on the domain ontology. It contains all the learning material for the specific learning module."@en ;
+                                                   rdfs:isDefinedBy <https://github.com/tibonto/educor> ;
                                                    rdfs:label "knowledge topic"@en ;
                                                    rdfs:seeAlso "https://w3id.org/ccso/ccso#Topic"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A single node representing a learning module based on the domain ontology. It contains all the learning material for the specific learning module."@en ;
                                                    <http://www.w3.org/2004/02/skos/core#example> "A knowledge topic can be the “Quadratic equations” in the domain of Mathematics Algebra"@en .
 
 
 ###  https://github.com/tibonto/educor#LearningPreference
 <https://github.com/tibonto/educor#LearningPreference> rdf:type owl:Class ;
                                                        rdfs:comment "It is based on the theory which identifies four learning styles (visual, auditory, reading, and kinesthetic)."@en ;
-                                                       rdfs:isDefinedBy "The learning preference of the user based on the learning styles theory"@en ;
+                                                       rdfs:isDefinedBy <https://github.com/tibonto/educor> ;
                                                        rdfs:label "learning preference"@en ;
+                                                       <http://www.w3.org/2004/02/skos/core#definition> "The learning preference of the user based on the learning styles theory"@en ;
                                                        <http://www.w3.org/2004/02/skos/core#example> "Visual"@en .
 
 
 ###  https://github.com/tibonto/educor#Recommendation
 <https://github.com/tibonto/educor#Recommendation> rdf:type owl:Class ;
                                                    rdfs:comment "The recommendation in advanced systems can also be an action (take a small break), an exercise, a knowledge topic, a skill, or a learning path"@en ;
-                                                   rdfs:isDefinedBy "The output of the recommendation system algorithm. The system that reads user profile, content information, ratings and any available rules, in order to generate a meaningful recommendation."@en ;
+                                                   rdfs:isDefinedBy <https://github.com/tibonto/educor> ;
                                                    rdfs:label "recommendation"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "The output of the recommendation system algorithm. The system that reads user profile, content information, ratings and any available rules, in order to generate a meaningful recommendation."@en ;
                                                    <http://www.w3.org/2004/02/skos/core#example> "The recommendation is \"Quadratic Equation\""@en .
 
 
-###  https://purl.org/ontology/modalia#AnalyzePhase
-:AnalyzePhase rdf:type owl:Class ;
-              rdfs:subClassOf :DataLifeCyclePhase ;
-              owl:disjointWith :AssurePhase ,
-                               :CollectPhase ,
-                               :DescribePhase ,
-                               :DiscoverPhase ,
-                               :IntegratePhase ,
-                               :PlanPhase ,
-                               :PreservePhase ;
-              rdfs:label "analyze phase"@en ;
-              <http://www.w3.org/2004/02/skos/core#definition> "The last phase in data life cycle."@en .
+###  https://purl.org/ontology/modalia#AnalysingPhase
+:AnalysingPhase rdf:type owl:Class ;
+                rdfs:subClassOf :DataLifeCyclePhase ;
+                owl:disjointWith :AssurancePhase ,
+                                 :CollectionPhase ,
+                                 :DescriptionPhase ,
+                                 :DiscoveryPhase ,
+                                 :IntegratePhase ,
+                                 :PlanningPhase ,
+                                 :PreservationPhase ;
+                rdfs:label "analysing phase"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "The last phase in data life cycle."@en .
 
 
-###  https://purl.org/ontology/modalia#AssurePhase
-:AssurePhase rdf:type owl:Class ;
-             rdfs:subClassOf :DataLifeCyclePhase ;
-             rdfs:label "assure phase"@en .
+###  https://purl.org/ontology/modalia#AssurancePhase
+:AssurancePhase rdf:type owl:Class ;
+                rdfs:subClassOf :DataLifeCyclePhase ;
+                rdfs:label "assurance phase"@en .
 
 
 ###  https://purl.org/ontology/modalia#BachelorStudent
@@ -1275,10 +1293,10 @@ rdf:List rdf:type owl:Class .
               <http://www.w3.org/2004/02/skos/core#prefLabel> "Code Notebook"@en .
 
 
-###  https://purl.org/ontology/modalia#CollectPhase
-:CollectPhase rdf:type owl:Class ;
-              rdfs:subClassOf :DataLifeCyclePhase ;
-              rdfs:label "collect phase"@en .
+###  https://purl.org/ontology/modalia#CollectionPhase
+:CollectionPhase rdf:type owl:Class ;
+                 rdfs:subClassOf :DataLifeCyclePhase ;
+                 rdfs:label "collection phase"@en .
 
 
 ###  https://purl.org/ontology/modalia#Community
@@ -1314,13 +1332,6 @@ rdf:List rdf:type owl:Class .
              rdfs:label "contributor"@en .
 
 
-###  https://purl.org/ontology/modalia#ContributorRole
-:ContributorRole rdf:type owl:Class ;
-                 rdfs:label "contributor role"@en ;
-                 <http://www.w3.org/2004/02/skos/core#definition> "types of contribution to an OER."@en ;
-                 <http://www.w3.org/2004/02/skos/core#example> "Editor"@en .
-
-
 ###  https://purl.org/ontology/modalia#Cookbook
 :Cookbook rdf:type owl:Class ;
           rdfs:subClassOf :LearningResourceType ;
@@ -1339,27 +1350,27 @@ rdf:List rdf:type owl:Class .
 :DataLifeCyclePhase rdf:type owl:Class ;
                     rdfs:label "data life cycle phase"@en ;
                     rdfs:seeAlso "https://towson.libguides.com/dataresearch/datamangement/dldataone"@en ;
-                    <http://www.w3.org/2004/02/skos/core#definition> "One of the eight known phases of data life cycle."@en .
+                    <http://www.w3.org/2004/02/skos/core#definition> "One of the phases of data life cycle."@en .
 
 
-###  https://purl.org/ontology/modalia#DescribePhase
-:DescribePhase rdf:type owl:Class ;
-               rdfs:subClassOf :DataLifeCyclePhase ;
-               rdfs:label "describe phase"@en .
+###  https://purl.org/ontology/modalia#DescriptionPhase
+:DescriptionPhase rdf:type owl:Class ;
+                  rdfs:subClassOf :DataLifeCyclePhase ;
+                  rdfs:label "description phase"@en .
 
 
 ###  https://purl.org/ontology/modalia#Discipline
 :Discipline rdf:type owl:Class ;
-            rdfs:isDefinedBy "knowledge of a specific, specialized discipline or field"@en ;
             rdfs:label "discipline"@en ;
             rdfs:seeAlso "http://purl.org/spar/fabio/SubjectDiscipline"@en ;
+            <http://www.w3.org/2004/02/skos/core#definition> "knowledge of a specific, specialized discipline or field"@en ;
             <http://www.w3.org/2004/02/skos/core#example> "e.g Engineering"@en .
 
 
-###  https://purl.org/ontology/modalia#DiscoverPhase
-:DiscoverPhase rdf:type owl:Class ;
-               rdfs:subClassOf :DataLifeCyclePhase ;
-               rdfs:label "discover phase"@en .
+###  https://purl.org/ontology/modalia#DiscoveryPhase
+:DiscoveryPhase rdf:type owl:Class ;
+                rdfs:subClassOf :DataLifeCyclePhase ;
+                rdfs:label "discovery phase"@en .
 
 
 ###  https://purl.org/ontology/modalia#EducationalLevel
@@ -1386,7 +1397,7 @@ rdf:List rdf:type owl:Class .
 ###  https://purl.org/ontology/modalia#IntegratePhase
 :IntegratePhase rdf:type owl:Class ;
                 rdfs:subClassOf :DataLifeCyclePhase ;
-                rdfs:label "integrate phase"@en .
+                rdfs:label "integration phase"@en .
 
 
 ###  https://purl.org/ontology/modalia#Job
@@ -1482,11 +1493,11 @@ rdf:List rdf:type owl:Class .
             <http://www.w3.org/2004/02/skos/core#prefLabel> "PhD student"@en .
 
 
-###  https://purl.org/ontology/modalia#PlanPhase
-:PlanPhase rdf:type owl:Class ;
-           rdfs:subClassOf :DataLifeCyclePhase ;
-           rdfs:label "plan phase"@en ;
-           <http://www.w3.org/2004/02/skos/core#definition> "First phase in data life cycle. Description of the data that will be compiled."@en .
+###  https://purl.org/ontology/modalia#PlanningPhase
+:PlanningPhase rdf:type owl:Class ;
+               rdfs:subClassOf :DataLifeCyclePhase ;
+               rdfs:label "planning phase"@en ;
+               <http://www.w3.org/2004/02/skos/core#definition> "First phase in data life cycle. Description of the data that will be compiled."@en .
 
 
 ###  https://purl.org/ontology/modalia#Podcast
@@ -1504,10 +1515,10 @@ rdf:List rdf:type owl:Class .
         <http://www.w3.org/2004/02/skos/core#prefLabel> "poster"@en .
 
 
-###  https://purl.org/ontology/modalia#PreservePhase
-:PreservePhase rdf:type owl:Class ;
-               rdfs:subClassOf :DataLifeCyclePhase ;
-               rdfs:label "preserve phase"@en .
+###  https://purl.org/ontology/modalia#PreservationPhase
+:PreservationPhase rdf:type owl:Class ;
+                   rdfs:subClassOf :DataLifeCyclePhase ;
+                   rdfs:label "preservation phase"@en .
 
 
 ###  https://purl.org/ontology/modalia#Proficiency
@@ -1549,7 +1560,7 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 ###  https://purl.org/ontology/modalia#RDMSubjectCluster
 :RDMSubjectCluster rdf:type owl:Class ;
                    rdfs:label "RDM subject cluster"@en ;
-                   <http://www.w3.org/2004/02/skos/core#definition> "Cluster of RDM topics areas."@en .
+                   <http://www.w3.org/2004/02/skos/core#definition> "Cluster of RDM topics areas. Matches Subject area in Learning Objective Matrix version 3 ( https://zenodo.org/records/15846806 )"@en .
 
 
 ###  https://purl.org/ontology/modalia#RDMTopic
@@ -1686,16 +1697,18 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 
 ###  https://schema.org/Organization
 <https://schema.org/Organization> rdf:type owl:Class ;
-                                  rdfs:isDefinedBy "An organization such as a school (including Universities), NGO, corporation, club, etc."@en ;
+                                  rdfs:isDefinedBy <https://schema.org> ;
                                   rdfs:label "organization"@en ;
-                                  rdfs:seeAlso <http://xmlns.com/foaf/0.1/Organization> .
+                                  rdfs:seeAlso <http://xmlns.com/foaf/0.1/Organization> ;
+                                  <http://www.w3.org/2004/02/skos/core#definition> "An organization such as a school (including Universities), NGO, corporation, club, etc."@en .
 
 
 ###  https://schema.org/Person
 <https://schema.org/Person> rdf:type owl:Class ;
                             rdfs:comment "can be author or contributor"@en ;
-                            rdfs:isDefinedBy "A person (alive, dead, undead, or fictional)."@en ;
-                            rdfs:label "person"@en .
+                            rdfs:isDefinedBy <https://schema.org> ;
+                            rdfs:label "person"@en ;
+                            <http://www.w3.org/2004/02/skos/core#definition> "A person (alive, dead, undead, or fictional)."@en .
 
 
 ###  https://schema.org/PodcastEpisode
@@ -1722,14 +1735,16 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 
 ###  https://schema.org/Rating
 <https://schema.org/Rating> rdf:type owl:Class ;
-                            rdfs:isDefinedBy "A rating is an evaluation on a numeric scale, such as 1 to 5 stars."@en ;
-                            rdfs:label "rating indicator"@en .
+                            rdfs:isDefinedBy <https://schema.org> ;
+                            rdfs:label "rating indicator"@en ;
+                            <http://www.w3.org/2004/02/skos/core#definition> "A rating is an evaluation on a numeric scale, such as 1 to 5 stars."@en .
 
 
 ###  https://schema.org/Review
 <https://schema.org/Review> rdf:type owl:Class ;
-                            rdfs:isDefinedBy "A review of an item - for example, of a restaurant, movie, or store."@en ;
-                            rdfs:label "review"@en .
+                            rdfs:isDefinedBy <https://schema.org> ;
+                            rdfs:label "review"@en ;
+                            <http://www.w3.org/2004/02/skos/core#definition> "A review of an item - for example, of a restaurant, movie, or store."@en .
 
 
 ###  https://schema.org/SoftwareSourceCode
@@ -1909,133 +1924,139 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 
 ###  http://w3id.org/nfdi4ing/metadata4ing#ContactPerson
 <http://w3id.org/nfdi4ing/metadata4ing#ContactPerson> rdf:type owl:NamedIndividual ,
-                                                               :ContributorRole ;
+                                                               <http://www.w3.org/ns/prov#Role> ;
                                                       rdfs:label "contact person"@en .
 
 
 ###  http://w3id.org/nfdi4ing/metadata4ing#DataCollector
 <http://w3id.org/nfdi4ing/metadata4ing#DataCollector> rdf:type owl:NamedIndividual ,
-                                                               :ContributorRole ;
+                                                               <http://www.w3.org/ns/prov#Role> ;
                                                       rdfs:label "datacollector role"@en .
 
 
 ###  http://w3id.org/nfdi4ing/metadata4ing#DataCurator
 <http://w3id.org/nfdi4ing/metadata4ing#DataCurator> rdf:type owl:NamedIndividual ,
-                                                             :ContributorRole ;
+                                                             <http://www.w3.org/ns/prov#Role> ;
                                                     rdfs:label "data curator role"@en .
 
 
 ###  http://w3id.org/nfdi4ing/metadata4ing#DataManager
 <http://w3id.org/nfdi4ing/metadata4ing#DataManager> rdf:type owl:NamedIndividual ,
-                                                             :ContributorRole ;
+                                                             <http://www.w3.org/ns/prov#Role> ;
                                                     rdfs:label "data manager role"@en .
 
 
 ###  http://w3id.org/nfdi4ing/metadata4ing#Distributor
 <http://w3id.org/nfdi4ing/metadata4ing#Distributor> rdf:type owl:NamedIndividual ,
-                                                             :ContributorRole ;
+                                                             <http://www.w3.org/ns/prov#Role> ;
                                                     rdfs:label "distributor role"@en .
 
 
 ###  http://w3id.org/nfdi4ing/metadata4ing#Editor
 <http://w3id.org/nfdi4ing/metadata4ing#Editor> rdf:type owl:NamedIndividual ,
-                                                        :ContributorRole ;
+                                                        <http://www.w3.org/ns/prov#Role> ;
                                                rdfs:label "editor role"@en .
 
 
 ###  http://w3id.org/nfdi4ing/metadata4ing#HostingInstitution
 <http://w3id.org/nfdi4ing/metadata4ing#HostingInstitution> rdf:type owl:NamedIndividual ,
-                                                                    :ContributorRole ;
+                                                                    <http://www.w3.org/ns/prov#Role> ;
                                                            rdfs:label "hostinginstitution role"@en .
 
 
-###  http://w3id.org/nfdi4ing/metadata4ing#OtherPerson
-<http://w3id.org/nfdi4ing/metadata4ing#OtherPerson> rdf:type owl:NamedIndividual ,
-                                                             :ContributorRole ;
-                                                    rdfs:label "otherperson role"@en .
+###  http://w3id.org/nfdi4ing/metadata4ing#Other
+<http://w3id.org/nfdi4ing/metadata4ing#Other> rdf:type owl:NamedIndividual ,
+                                                       <http://www.w3.org/ns/prov#Role> ;
+                                              rdfs:label "otherperson role"@en .
 
 
 ###  http://w3id.org/nfdi4ing/metadata4ing#Producer
 <http://w3id.org/nfdi4ing/metadata4ing#Producer> rdf:type owl:NamedIndividual ,
-                                                          :ContributorRole ;
+                                                          <http://www.w3.org/ns/prov#Role> ;
                                                  rdfs:label "producer role"@en .
 
 
 ###  http://w3id.org/nfdi4ing/metadata4ing#ProjectLeader
 <http://w3id.org/nfdi4ing/metadata4ing#ProjectLeader> rdf:type owl:NamedIndividual ,
-                                                               :ContributorRole ;
+                                                               <http://www.w3.org/ns/prov#Role> ;
                                                       rdfs:label "projectleader role"@en .
 
 
 ###  http://w3id.org/nfdi4ing/metadata4ing#ProjectManager
 <http://w3id.org/nfdi4ing/metadata4ing#ProjectManager> rdf:type owl:NamedIndividual ,
-                                                                :ContributorRole ;
+                                                                <http://www.w3.org/ns/prov#Role> ;
                                                        rdfs:label "projectmanager role"@en .
 
 
 ###  http://w3id.org/nfdi4ing/metadata4ing#ProjectMember
 <http://w3id.org/nfdi4ing/metadata4ing#ProjectMember> rdf:type owl:NamedIndividual ,
-                                                               :ContributorRole ;
+                                                               <http://www.w3.org/ns/prov#Role> ;
                                                       rdfs:label "projectmember role"@en .
 
 
 ###  http://w3id.org/nfdi4ing/metadata4ing#RegistrationAgency
 <http://w3id.org/nfdi4ing/metadata4ing#RegistrationAgency> rdf:type owl:NamedIndividual ,
-                                                                    :ContributorRole ;
+                                                                    <http://www.w3.org/ns/prov#Role> ;
                                                            rdfs:label "registrationagency role"@en .
 
 
 ###  http://w3id.org/nfdi4ing/metadata4ing#RegistrationAuthority
 <http://w3id.org/nfdi4ing/metadata4ing#RegistrationAuthority> rdf:type owl:NamedIndividual ,
-                                                                       :ContributorRole ;
+                                                                       <http://www.w3.org/ns/prov#Role> ;
                                                               rdfs:label "registrationauthority role"@en .
 
 
 ###  http://w3id.org/nfdi4ing/metadata4ing#RelatedPerson
 <http://w3id.org/nfdi4ing/metadata4ing#RelatedPerson> rdf:type owl:NamedIndividual ,
-                                                               :ContributorRole ;
+                                                               <http://www.w3.org/ns/prov#Role> ;
                                                       rdfs:label "relatedperson role"@en .
 
 
 ###  http://w3id.org/nfdi4ing/metadata4ing#ResearchGroup
 <http://w3id.org/nfdi4ing/metadata4ing#ResearchGroup> rdf:type owl:NamedIndividual ,
-                                                               :ContributorRole ;
+                                                               <http://www.w3.org/ns/prov#Role> ;
                                                       rdfs:label "researchgroup role"@en .
 
 
 ###  http://w3id.org/nfdi4ing/metadata4ing#Researcher
 <http://w3id.org/nfdi4ing/metadata4ing#Researcher> rdf:type owl:NamedIndividual ,
-                                                            :ContributorRole ;
+                                                            <http://www.w3.org/ns/prov#Role> ;
                                                    rdfs:label "researcher role"@en .
 
 
 ###  http://w3id.org/nfdi4ing/metadata4ing#RightsHolder
 <http://w3id.org/nfdi4ing/metadata4ing#RightsHolder> rdf:type owl:NamedIndividual ,
-                                                              :ContributorRole ;
+                                                              <http://www.w3.org/ns/prov#Role> ;
                                                      rdfs:label "rightsholder role"@en .
 
 
 ###  http://w3id.org/nfdi4ing/metadata4ing#Sponsor
 <http://w3id.org/nfdi4ing/metadata4ing#Sponsor> rdf:type owl:NamedIndividual ,
-                                                         :ContributorRole ;
+                                                         <http://www.w3.org/ns/prov#Role> ;
                                                 rdfs:label "sponsor role"@en .
 
 
 ###  http://w3id.org/nfdi4ing/metadata4ing#Supervisor
 <http://w3id.org/nfdi4ing/metadata4ing#Supervisor> rdf:type owl:NamedIndividual ,
-                                                            :ContributorRole ;
+                                                            <http://www.w3.org/ns/prov#Role> ;
                                                    rdfs:label "supervisor role"@en .
 
 
 ###  http://w3id.org/nfdi4ing/metadata4ing#WorkPackageLeader
 <http://w3id.org/nfdi4ing/metadata4ing#WorkPackageLeader> rdf:type owl:NamedIndividual ,
-                                                                   :ContributorRole ;
+                                                                   <http://www.w3.org/ns/prov#Role> ;
                                                           rdfs:label "workpackageleader role"@en .
 
 
 ###  https://creativecommons.org/licenses/by/4.0/
 <https://creativecommons.org/licenses/by/4.0/> rdf:type owl:NamedIndividual ;
                                                rdfs:label "CC-BY-4.0" .
+
+
+###  https://purl.org/ontology/modalia#Annotator
+:Annotator rdf:type owl:NamedIndividual ,
+                    <http://www.w3.org/ns/prov#Role> ;
+           rdfs:label "annotator role"@en .
 
 
 ###  https://purl.org/ontology/modalia#Beginner
@@ -2071,6 +2092,24 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
         rdfs:label "expert"@en .
 
 
+###  https://purl.org/ontology/modalia#Interviewee
+:Interviewee rdf:type owl:NamedIndividual ,
+                      <http://www.w3.org/ns/prov#Role> ;
+             rdfs:label "interviewee role"@en .
+
+
+###  https://purl.org/ontology/modalia#Interviewer
+:Interviewer rdf:type owl:NamedIndividual ,
+                      <http://www.w3.org/ns/prov#Role> ;
+             rdfs:label "interviewer role"@en .
+
+
+###  https://purl.org/ontology/modalia#MetadataContact
+:MetadataContact rdf:type owl:NamedIndividual ,
+                          <http://www.w3.org/ns/prov#Role> ;
+                 rdfs:label "metadatacontact role"@en .
+
+
 ###  https://purl.org/ontology/modalia#Novice
 :Novice rdf:type owl:NamedIndividual ,
                  :Proficiency ;
@@ -2097,6 +2136,30 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 :Proprietary rdf:type owl:NamedIndividual ,
                       :ProprietaryLicense ;
              rdfs:label "proprietary license"@en .
+
+
+###  https://purl.org/ontology/modalia#SoftwareDeveloper
+:SoftwareDeveloper rdf:type owl:NamedIndividual ,
+                            <http://www.w3.org/ns/prov#Role> ;
+                   rdfs:label "softwaredeveloper role"@en .
+
+
+###  https://purl.org/ontology/modalia#Speaker
+:Speaker rdf:type owl:NamedIndividual ,
+                  <http://www.w3.org/ns/prov#Role> ;
+         rdfs:label "speaker role"@en .
+
+
+###  https://purl.org/ontology/modalia#TeacherContributor
+:TeacherContributor rdf:type owl:NamedIndividual ,
+                             <http://www.w3.org/ns/prov#Role> ;
+                    rdfs:label "teacher (contributor) role"@en .
+
+
+###  https://purl.org/ontology/modalia#Translator
+:Translator rdf:type owl:NamedIndividual ,
+                     <http://www.w3.org/ns/prov#Role> ;
+            rdfs:label "translator role"@en .
 
 
 #################################################################
