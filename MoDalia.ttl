@@ -184,7 +184,7 @@ bf:contribution rdf:type owl:ObjectProperty ;
 ###  http://id.loc.gov/ontologies/bibframe/role
 bf:role rdf:type owl:ObjectProperty ;
         rdfs:domain bf:Contribution ;
-        rdfs:range <http://www.w3.org/ns/prov#Role> ;
+        rdfs:range bf:Role ;
         rdfs:comment "Property that links a contribution to a role (e.g., contactPerson, editor)."@en ;
         rdfs:label "role"@en .
 
@@ -258,6 +258,13 @@ dcterms:replaces rdf:type owl:ObjectProperty ;
                  rdfs:range ec:EducationalResource ;
                  rdfs:label "replaces"@en ;
                  skos:prefLabel "Replaces"@en .
+
+
+###  http://purl.org/dc/terms/requires
+dcterms:requires rdf:type owl:ObjectProperty ;
+                 rdfs:domain ec:EducationalResource ;
+                 rdfs:range owl:Thing ;
+                 rdfs:label "requires"@en .
 
 
 ###  http://purl.org/spar/fabio/hasDiscipline
@@ -454,6 +461,13 @@ ec:generatedFrom rdf:type owl:ObjectProperty ;
               rdfs:label "has media type"@en .
 
 
+###  https://purl.org/ontology/modalia#hasMetadata
+:hasMetadata rdf:type owl:ObjectProperty ;
+             rdfs:domain ec:EducationalResource ;
+             rdfs:range owl:Thing ;
+             rdfs:label "has metadata"@en .
+
+
 ###  https://purl.org/ontology/modalia#hasOwner
 :hasOwner rdf:type owl:ObjectProperty ,
                    owl:FunctionalProperty ;
@@ -482,6 +496,13 @@ ec:generatedFrom rdf:type owl:ObjectProperty ;
          rdfs:domain :User ;
          rdfs:range :UserRole ;
          rdfs:label "has role"@en .
+
+
+###  https://purl.org/ontology/modalia#hasSourceCode
+:hasSourceCode rdf:type owl:ObjectProperty ;
+               rdfs:domain ec:EducationalResource ;
+               rdfs:range owl:Thing ;
+               rdfs:label "has source code"@en .
 
 
 ###  https://purl.org/ontology/modalia#hasTargetGroup
@@ -578,6 +599,13 @@ ec:generatedFrom rdf:type owl:ObjectProperty ;
                      rdfs:range ec:EducationalResource ;
                      rdfs:label "is previous version of"@en ;
                      skos:prefLabel "Is previous version of"@en .
+
+
+###  https://purl.org/ontology/modalia#isSourceCodeOf
+:isSourceCodeOf rdf:type owl:ObjectProperty ;
+                rdfs:domain ec:EducationalResource ;
+                rdfs:range owl:Thing ;
+                rdfs:label "is source code of"@en .
 
 
 ###  https://purl.org/ontology/modalia#isTranslationOf
@@ -735,6 +763,13 @@ schema:itemReviewed rdf:type owl:ObjectProperty ;
                                          rdfs:range ec:EducationalResource ;
                                          rdfs:label "continues"@en ;
                                          skos:prefLabel "Continues"@en .
+
+
+###  https://w3id.org/citedcat-ap/isCompiledBy
+<https://w3id.org/citedcat-ap/isCompiledBy> rdf:type owl:ObjectProperty ;
+                                            rdfs:domain ec:EducationalResource ;
+                                            rdfs:range owl:Thing ;
+                                            rdfs:label "isCompiledBy"@en .
 
 
 ###  https://w3id.org/citedcat-ap/isContinuedBy
@@ -953,6 +988,13 @@ schema:abstract rdf:type owl:DatatypeProperty ;
                 rdfs:label "abstract"@en .
 
 
+###  https://schema.org/accessibilityFeature
+schema:accessibilityFeature rdf:type owl:DatatypeProperty ;
+                            rdfs:domain ec:EducationalResource ;
+                            rdfs:range xsd:string ;
+                            rdfs:label "accessibilityfeature"@en .
+
+
 ###  https://schema.org/datePublished
 schema:datePublished rdf:type owl:DatatypeProperty ;
                      rdfs:domain ec:EducationalResource ;
@@ -1113,10 +1155,17 @@ bf:Contribution rdf:type owl:Class ;
                 skos:definition "A contribution to an OER, including agent and role information."@en .
 
 
+###  http://id.loc.gov/ontologies/bibframe/Role
+bf:Role rdf:type owl:Class ;
+        rdfs:label "contributor role"@en ;
+        skos:definition "types of contribution to an OER."@en ;
+        skos:example "Editor"@en .
+
+
 ###  http://lexvo.org/ontology#Language
 <http://lexvo.org/ontology#Language> rdf:type owl:Class ;
                                      rdfs:label "language"@en ;
-                                     rdfs:seeAlso "https://www.wikidata.org/wiki/Q315"@en ;
+                                     rdfs:seeAlso <https://www.wikidata.org/wiki/Q315> ;
                                      skos:definition "Natural language"@en .
 
 
@@ -1213,13 +1262,6 @@ m4i:Tool rdf:type owl:Class ;
 
 ###  http://www.w3.org/1999/02/22-rdf-syntax-ns#List
 rdf:List rdf:type owl:Class .
-
-
-###  http://www.w3.org/ns/prov#Role
-<http://www.w3.org/ns/prov#Role> rdf:type owl:Class ;
-                                 rdfs:label "contributor role"@en ;
-                                 skos:definition "types of contribution to an OER."@en ;
-                                 skos:example "Editor"@en .
 
 
 ###  https://github.com/tibonto/educor#EducationalResource
@@ -1361,7 +1403,7 @@ ec:Recommendation rdf:type owl:Class ;
 ###  https://purl.org/ontology/modalia#CuratorRole
 :CuratorRole rdf:type owl:Class ;
              rdfs:subClassOf :UserRole ;
-             rdfs:label "curator role"@en .
+             rdfs:label "curator user role"@en .
 
 
 ###  https://purl.org/ontology/modalia#DataLifeCyclePhase
@@ -1596,10 +1638,10 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
             skos:prefLabel "Researcher"@en .
 
 
-###  https://purl.org/ontology/modalia#ResearcherRole
-:ResearcherRole rdf:type owl:Class ;
-                rdfs:subClassOf :UserRole ;
-                rdfs:label "researcher role"@en .
+###  https://purl.org/ontology/modalia#ResearcherUserRole
+:ResearcherUserRole rdf:type owl:Class ;
+                    rdfs:subClassOf :UserRole ;
+                    rdfs:label "researcher user role"@en .
 
 
 ###  https://purl.org/ontology/modalia#Skill
@@ -1632,7 +1674,7 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 ###  https://purl.org/ontology/modalia#TeacherRole
 :TeacherRole rdf:type owl:Class ;
              rdfs:subClassOf :UserRole ;
-             rdfs:label "teacher role"@en .
+             rdfs:label "teacher user role"@en .
 
 
 ###  https://purl.org/ontology/modalia#TeacherSchool
@@ -1940,132 +1982,6 @@ hcrt:worksheet rdf:type owl:Class ;
 #    Individuals
 #################################################################
 
-###  http://w3id.org/nfdi4ing/metadata4ing#ContactPerson
-m4i:ContactPerson rdf:type owl:NamedIndividual ,
-                           <http://www.w3.org/ns/prov#Role> ;
-                  rdfs:label "contact person"@en .
-
-
-###  http://w3id.org/nfdi4ing/metadata4ing#DataCollector
-m4i:DataCollector rdf:type owl:NamedIndividual ,
-                           <http://www.w3.org/ns/prov#Role> ;
-                  rdfs:label "datacollector role"@en .
-
-
-###  http://w3id.org/nfdi4ing/metadata4ing#DataCurator
-m4i:DataCurator rdf:type owl:NamedIndividual ,
-                         <http://www.w3.org/ns/prov#Role> ;
-                rdfs:label "data curator role"@en .
-
-
-###  http://w3id.org/nfdi4ing/metadata4ing#DataManager
-m4i:DataManager rdf:type owl:NamedIndividual ,
-                         <http://www.w3.org/ns/prov#Role> ;
-                rdfs:label "data manager role"@en .
-
-
-###  http://w3id.org/nfdi4ing/metadata4ing#Distributor
-m4i:Distributor rdf:type owl:NamedIndividual ,
-                         <http://www.w3.org/ns/prov#Role> ;
-                rdfs:label "distributor role"@en .
-
-
-###  http://w3id.org/nfdi4ing/metadata4ing#Editor
-m4i:Editor rdf:type owl:NamedIndividual ,
-                    <http://www.w3.org/ns/prov#Role> ;
-           rdfs:label "editor role"@en .
-
-
-###  http://w3id.org/nfdi4ing/metadata4ing#HostingInstitution
-m4i:HostingInstitution rdf:type owl:NamedIndividual ,
-                                <http://www.w3.org/ns/prov#Role> ;
-                       rdfs:label "hostinginstitution role"@en .
-
-
-###  http://w3id.org/nfdi4ing/metadata4ing#Other
-m4i:Other rdf:type owl:NamedIndividual ,
-                   <http://www.w3.org/ns/prov#Role> ;
-          rdfs:label "otherperson role"@en .
-
-
-###  http://w3id.org/nfdi4ing/metadata4ing#Producer
-m4i:Producer rdf:type owl:NamedIndividual ,
-                      <http://www.w3.org/ns/prov#Role> ;
-             rdfs:label "producer role"@en .
-
-
-###  http://w3id.org/nfdi4ing/metadata4ing#ProjectLeader
-m4i:ProjectLeader rdf:type owl:NamedIndividual ,
-                           <http://www.w3.org/ns/prov#Role> ;
-                  rdfs:label "projectleader role"@en .
-
-
-###  http://w3id.org/nfdi4ing/metadata4ing#ProjectManager
-m4i:ProjectManager rdf:type owl:NamedIndividual ,
-                            <http://www.w3.org/ns/prov#Role> ;
-                   rdfs:label "projectmanager role"@en .
-
-
-###  http://w3id.org/nfdi4ing/metadata4ing#ProjectMember
-m4i:ProjectMember rdf:type owl:NamedIndividual ,
-                           <http://www.w3.org/ns/prov#Role> ;
-                  rdfs:label "projectmember role"@en .
-
-
-###  http://w3id.org/nfdi4ing/metadata4ing#RegistrationAgency
-m4i:RegistrationAgency rdf:type owl:NamedIndividual ,
-                                <http://www.w3.org/ns/prov#Role> ;
-                       rdfs:label "registrationagency role"@en .
-
-
-###  http://w3id.org/nfdi4ing/metadata4ing#RegistrationAuthority
-m4i:RegistrationAuthority rdf:type owl:NamedIndividual ,
-                                   <http://www.w3.org/ns/prov#Role> ;
-                          rdfs:label "registrationauthority role"@en .
-
-
-###  http://w3id.org/nfdi4ing/metadata4ing#RelatedPerson
-m4i:RelatedPerson rdf:type owl:NamedIndividual ,
-                           <http://www.w3.org/ns/prov#Role> ;
-                  rdfs:label "relatedperson role"@en .
-
-
-###  http://w3id.org/nfdi4ing/metadata4ing#ResearchGroup
-m4i:ResearchGroup rdf:type owl:NamedIndividual ,
-                           <http://www.w3.org/ns/prov#Role> ;
-                  rdfs:label "researchgroup role"@en .
-
-
-###  http://w3id.org/nfdi4ing/metadata4ing#Researcher
-m4i:Researcher rdf:type owl:NamedIndividual ,
-                        <http://www.w3.org/ns/prov#Role> ;
-               rdfs:label "researcher role"@en .
-
-
-###  http://w3id.org/nfdi4ing/metadata4ing#RightsHolder
-m4i:RightsHolder rdf:type owl:NamedIndividual ,
-                          <http://www.w3.org/ns/prov#Role> ;
-                 rdfs:label "rightsholder role"@en .
-
-
-###  http://w3id.org/nfdi4ing/metadata4ing#Sponsor
-m4i:Sponsor rdf:type owl:NamedIndividual ,
-                     <http://www.w3.org/ns/prov#Role> ;
-            rdfs:label "sponsor role"@en .
-
-
-###  http://w3id.org/nfdi4ing/metadata4ing#Supervisor
-m4i:Supervisor rdf:type owl:NamedIndividual ,
-                        <http://www.w3.org/ns/prov#Role> ;
-               rdfs:label "supervisor role"@en .
-
-
-###  http://w3id.org/nfdi4ing/metadata4ing#WorkPackageLeader
-m4i:WorkPackageLeader rdf:type owl:NamedIndividual ,
-                               <http://www.w3.org/ns/prov#Role> ;
-                      rdfs:label "workpackageleader role"@en .
-
-
 ###  https://creativecommons.org/licenses/by/4.0/
 <https://creativecommons.org/licenses/by/4.0/> rdf:type owl:NamedIndividual ;
                                                rdfs:label "CC-BY-4.0" .
@@ -2073,8 +1989,9 @@ m4i:WorkPackageLeader rdf:type owl:NamedIndividual ,
 
 ###  https://purl.org/ontology/modalia#Annotator
 :Annotator rdf:type owl:NamedIndividual ,
-                    <http://www.w3.org/ns/prov#Role> ;
-           rdfs:label "annotator role"@en .
+                    bf:Role ;
+           rdfs:label "annotator role"@en ;
+           rdfs:seeAlso <http://id.loc.gov/vocabulary/relators/ann> .
 
 
 ###  https://purl.org/ontology/modalia#Beginner
@@ -2099,6 +2016,48 @@ m4i:WorkPackageLeader rdf:type owl:NamedIndividual ,
            rdfs:label "competent"@en .
 
 
+###  https://purl.org/ontology/modalia#ContactPerson
+:ContactPerson rdf:type owl:NamedIndividual ,
+                        bf:Role ;
+               rdfs:label "contactperson role"@en ;
+               rdfs:seeAlso m4i:ContactPerson .
+
+
+###  https://purl.org/ontology/modalia#DataCollector
+:DataCollector rdf:type owl:NamedIndividual ,
+                        bf:Role ;
+               rdfs:label "datacollector role"@en ;
+               rdfs:seeAlso m4i:DataCollector .
+
+
+###  https://purl.org/ontology/modalia#DataCurator
+:DataCurator rdf:type owl:NamedIndividual ,
+                      bf:Role ;
+             rdfs:label "datacurator role"@en ;
+             rdfs:seeAlso m4i:DataCurator .
+
+
+###  https://purl.org/ontology/modalia#DataManager
+:DataManager rdf:type owl:NamedIndividual ,
+                      bf:Role ;
+             rdfs:label "datamanager role"@en ;
+             rdfs:seeAlso <http://id.loc.gov/vocabulary/relators/dtm> .
+
+
+###  https://purl.org/ontology/modalia#Distributor
+:Distributor rdf:type owl:NamedIndividual ,
+                      bf:Role ;
+             rdfs:label "distributor role"@en ;
+             rdfs:seeAlso m4i:Distributor .
+
+
+###  https://purl.org/ontology/modalia#Editor
+:Editor rdf:type owl:NamedIndividual ,
+                 bf:Role ;
+        rdfs:label "editor role"@en ;
+        rdfs:seeAlso m4i:Editor .
+
+
 ###  https://purl.org/ontology/modalia#Expert
 :Expert rdf:type owl:NamedIndividual ,
                  :Proficiency ;
@@ -2110,22 +2069,32 @@ m4i:WorkPackageLeader rdf:type owl:NamedIndividual ,
         rdfs:label "expert"@en .
 
 
+###  https://purl.org/ontology/modalia#HostingInstitution
+:HostingInstitution rdf:type owl:NamedIndividual ,
+                             bf:Role ;
+                    rdfs:label "hostinginstitution role"@en ;
+                    rdfs:seeAlso m4i:HostingInstitution .
+
+
 ###  https://purl.org/ontology/modalia#Interviewee
 :Interviewee rdf:type owl:NamedIndividual ,
-                      <http://www.w3.org/ns/prov#Role> ;
-             rdfs:label "interviewee role"@en .
+                      bf:Role ;
+             rdfs:label "interviewee role"@en ;
+             rdfs:seeAlso <http://id.loc.gov/vocabulary/relators/ive> .
 
 
 ###  https://purl.org/ontology/modalia#Interviewer
 :Interviewer rdf:type owl:NamedIndividual ,
-                      <http://www.w3.org/ns/prov#Role> ;
-             rdfs:label "interviewer role"@en .
+                      bf:Role ;
+             rdfs:label "interviewer role"@en ;
+             rdfs:seeAlso <http://id.loc.gov/vocabulary/relators/ivr> .
 
 
 ###  https://purl.org/ontology/modalia#MetadataContact
 :MetadataContact rdf:type owl:NamedIndividual ,
-                          <http://www.w3.org/ns/prov#Role> ;
-                 rdfs:label "metadatacontact role"@en .
+                          bf:Role ;
+                 rdfs:label "metadatacontact role"@en ;
+                 rdfs:seeAlso <http://id.loc.gov/vocabulary/relators/mdc> .
 
 
 ###  https://purl.org/ontology/modalia#Novice
@@ -2139,6 +2108,20 @@ m4i:WorkPackageLeader rdf:type owl:NamedIndividual ,
         rdfs:label "novice"@en .
 
 
+###  https://purl.org/ontology/modalia#OtherRole
+:OtherRole rdf:type owl:NamedIndividual ,
+                    bf:Role ;
+           rdfs:label "other role"@en ;
+           rdfs:seeAlso m4i:Other .
+
+
+###  https://purl.org/ontology/modalia#Producer
+:Producer rdf:type owl:NamedIndividual ,
+                   bf:Role ;
+          rdfs:label "producer role"@en ;
+          rdfs:seeAlso m4i:Producer .
+
+
 ###  https://purl.org/ontology/modalia#Proficient
 :Proficient rdf:type owl:NamedIndividual ,
                      :Proficiency ;
@@ -2150,34 +2133,120 @@ m4i:WorkPackageLeader rdf:type owl:NamedIndividual ,
             rdfs:label "proficient"@en .
 
 
+###  https://purl.org/ontology/modalia#ProjectLeader
+:ProjectLeader rdf:type owl:NamedIndividual ,
+                        bf:Role ;
+               rdfs:label "projectleader role"@en ;
+               rdfs:seeAlso m4i:ProjectLeader .
+
+
+###  https://purl.org/ontology/modalia#ProjectManager
+:ProjectManager rdf:type owl:NamedIndividual ,
+                         bf:Role ;
+                rdfs:label "projectmanager role"@en ;
+                rdfs:seeAlso m4i:ProjectManager .
+
+
+###  https://purl.org/ontology/modalia#ProjectMember
+:ProjectMember rdf:type owl:NamedIndividual ,
+                        bf:Role ;
+               rdfs:label "projectmember role"@en ;
+               rdfs:seeAlso m4i:ProjectMember .
+
+
 ###  https://purl.org/ontology/modalia#Proprietary
 :Proprietary rdf:type owl:NamedIndividual ,
                       :ProprietaryLicense ;
              rdfs:label "proprietary license"@en .
 
 
+###  https://purl.org/ontology/modalia#RegistrationAgency
+:RegistrationAgency rdf:type owl:NamedIndividual ,
+                             bf:Role ;
+                    rdfs:label "registrationagency role"@en ;
+                    rdfs:seeAlso m4i:RegistrationAgency .
+
+
+###  https://purl.org/ontology/modalia#RegistrationAuthority
+:RegistrationAuthority rdf:type owl:NamedIndividual ,
+                                bf:Role ;
+                       rdfs:label "registrationauthority role"@en ;
+                       rdfs:seeAlso m4i:RegistrationAuthority .
+
+
+###  https://purl.org/ontology/modalia#RelatedPerson
+:RelatedPerson rdf:type owl:NamedIndividual ,
+                        bf:Role ;
+               rdfs:label "relatedperson role"@en ;
+               rdfs:seeAlso m4i:RelatedPerson .
+
+
+###  https://purl.org/ontology/modalia#ResearchGroup
+:ResearchGroup rdf:type owl:NamedIndividual ,
+                        bf:Role ;
+               rdfs:label "researchgroup role"@en ;
+               rdfs:seeAlso m4i:ResearchGroup .
+
+
+###  https://purl.org/ontology/modalia#ResearcherRole
+:ResearcherRole rdf:type owl:NamedIndividual ,
+                         bf:Role ;
+                rdfs:label "researcher role"@en ;
+                rdfs:seeAlso m4i:Researcher .
+
+
+###  https://purl.org/ontology/modalia#RightsHolder
+:RightsHolder rdf:type owl:NamedIndividual ,
+                       bf:Role ;
+              rdfs:label "rightsholder role"@en ;
+              rdfs:seeAlso m4i:RightsHolder .
+
+
 ###  https://purl.org/ontology/modalia#SoftwareDeveloper
 :SoftwareDeveloper rdf:type owl:NamedIndividual ,
-                            <http://www.w3.org/ns/prov#Role> ;
-                   rdfs:label "softwaredeveloper role"@en .
+                            bf:Role ;
+                   rdfs:label "software developer role"@en .
 
 
 ###  https://purl.org/ontology/modalia#Speaker
 :Speaker rdf:type owl:NamedIndividual ,
-                  <http://www.w3.org/ns/prov#Role> ;
-         rdfs:label "speaker role"@en .
+                  bf:Role ;
+         rdfs:label "speaker role"@en ;
+         rdfs:seeAlso <http://id.loc.gov/vocabulary/relators/spk> .
 
 
-###  https://purl.org/ontology/modalia#TeacherContributor
-:TeacherContributor rdf:type owl:NamedIndividual ,
-                             <http://www.w3.org/ns/prov#Role> ;
-                    rdfs:label "teacher (contributor) role"@en .
+###  https://purl.org/ontology/modalia#Sponsor
+:Sponsor rdf:type owl:NamedIndividual ,
+                  bf:Role ;
+         rdfs:label "sponsor role"@en ;
+         rdfs:seeAlso m4i:Sponsor .
+
+
+###  https://purl.org/ontology/modalia#Supervisor
+:Supervisor rdf:type owl:NamedIndividual ,
+                     bf:Role ;
+            rdfs:label "supervisor role"@en ;
+            rdfs:seeAlso m4i:Supervisor .
+
+
+###  https://purl.org/ontology/modalia#TeacherContributorRole
+:TeacherContributorRole rdf:type owl:NamedIndividual ,
+                                 bf:Role ;
+                        rdfs:label "teacher (contributor) role"@en ;
+                        rdfs:seeAlso <http://id.loc.gov/vocabulary/relators/tch> .
 
 
 ###  https://purl.org/ontology/modalia#Translator
 :Translator rdf:type owl:NamedIndividual ,
-                     <http://www.w3.org/ns/prov#Role> ;
+                     bf:Role ;
             rdfs:label "translator role"@en .
+
+
+###  https://purl.org/ontology/modalia#WorkPackageLeader
+:WorkPackageLeader rdf:type owl:NamedIndividual ,
+                            bf:Role ;
+                   rdfs:label "workpackageleader role"@en ;
+                   rdfs:seeAlso m4i:WorkPackageLeader .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
