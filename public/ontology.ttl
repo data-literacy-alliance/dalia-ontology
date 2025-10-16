@@ -447,7 +447,7 @@ xsd:duration rdf:type rdfs:Datatype .
 :hasMetadata rdf:type owl:ObjectProperty ;
              rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
              rdfs:range owl:Thing ;
-             rdfs:label "hasMetadata"@en .
+             rdfs:label "has metadata"@en .
 
 
 ###  https://purl.org/ontology/modalia#hasOwner
@@ -484,7 +484,7 @@ xsd:duration rdf:type rdfs:Datatype .
 :hasSourceCode rdf:type owl:ObjectProperty ;
                rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
                rdfs:range owl:Thing ;
-               rdfs:label "hasSourceCode"@en .
+               rdfs:label "has source code"@en .
 
 
 ###  https://purl.org/ontology/modalia#hasTargetGroup
@@ -587,7 +587,7 @@ xsd:duration rdf:type rdfs:Datatype .
 :isSourceCodeOf rdf:type owl:ObjectProperty ;
                 rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
                 rdfs:range owl:Thing ;
-                rdfs:label "isSourceCodeOf"@en .
+                rdfs:label "is source code of"@en .
 
 
 ###  https://purl.org/ontology/modalia#isTranslationOf
@@ -970,8 +970,8 @@ xsd:duration rdf:type rdfs:Datatype .
                               rdfs:label "abstract"@en .
 
 
-###  https://schema.org/accessibilityfeature
-<https://schema.org/accessibilityfeature> rdf:type owl:DatatypeProperty ;
+###  https://schema.org/accessibilityFeature
+<https://schema.org/accessibilityFeature> rdf:type owl:DatatypeProperty ;
                                           rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
                                           rdfs:range xsd:string ;
                                           rdfs:label "accessibilityfeature"@en .
