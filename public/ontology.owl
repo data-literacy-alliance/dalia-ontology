@@ -281,7 +281,7 @@ The ontology is developed in OWL in Protege 5.5.0.</terms:description>
 
     <owl:ObjectProperty rdf:about="http://id.loc.gov/ontologies/bibframe/role">
         <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Contribution"/>
-        <rdfs:range rdf:resource="http://www.w3.org/ns/prov#Role"/>
+        <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Role"/>
         <rdfs:comment xml:lang="en">Property that links a contribution to a role (e.g., contactPerson, editor).</rdfs:comment>
         <rdfs:label xml:lang="en">role</rdfs:label>
     </owl:ObjectProperty>
@@ -387,6 +387,17 @@ The ontology is developed in OWL in Protege 5.5.0.</terms:description>
         <rdfs:range rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:label xml:lang="en">replaces</rdfs:label>
         <skos:prefLabel xml:lang="en">Replaces</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/requires -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/requires">
+        <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label xml:lang="en">requires</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -690,6 +701,17 @@ The ontology is developed in OWL in Protege 5.5.0.</terms:description>
     
 
 
+    <!-- https://purl.org/ontology/modalia#hasMetadata -->
+
+
+    <owl:ObjectProperty rdf:about="https://purl.org/ontology/modalia#hasMetadata">
+        <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label xml:lang="en">hasMetadata</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://purl.org/ontology/modalia#hasOwner -->
 
 
@@ -732,6 +754,17 @@ The ontology is developed in OWL in Protege 5.5.0.</terms:description>
         <rdfs:domain rdf:resource="https://purl.org/ontology/modalia#User"/>
         <rdfs:range rdf:resource="https://purl.org/ontology/modalia#UserRole"/>
         <rdfs:label xml:lang="en">has role</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purl.org/ontology/modalia#hasSourceCode -->
+
+
+    <owl:ObjectProperty rdf:about="https://purl.org/ontology/modalia#hasSourceCode">
+        <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label xml:lang="en">hasSourceCode</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -872,6 +905,17 @@ The ontology is developed in OWL in Protege 5.5.0.</terms:description>
         <rdfs:range rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:label xml:lang="en">is previous version of</rdfs:label>
         <skos:prefLabel xml:lang="en">Is previous version of</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purl.org/ontology/modalia#isSourceCodeOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://purl.org/ontology/modalia#isSourceCodeOf">
+        <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label xml:lang="en">isSourceCodeOf</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1103,6 +1147,17 @@ The ontology is developed in OWL in Protege 5.5.0.</terms:description>
         <rdfs:range rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:label xml:lang="en">continues</rdfs:label>
         <skos:prefLabel xml:lang="en">Continues</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/citedcat-ap/isCompiledBy -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/citedcat-ap/isCompiledBy">
+        <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label xml:lang="en">isCompiledBy</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1439,6 +1494,17 @@ The ontology is developed in OWL in Protege 5.5.0.</terms:description>
     
 
 
+    <!-- https://schema.org/accessibilityfeature -->
+
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/accessibilityfeature">
+        <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">accessibilityfeature</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://schema.org/datePublished -->
 
 
@@ -1693,12 +1759,23 @@ The ontology is developed in OWL in Protege 5.5.0.</terms:description>
     
 
 
+    <!-- http://id.loc.gov/ontologies/bibframe/Role -->
+
+
+    <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Role">
+        <rdfs:label xml:lang="en">contributor role</rdfs:label>
+        <skos:definition xml:lang="en">types of contribution to an OER.</skos:definition>
+        <skos:example xml:lang="en">Editor</skos:example>
+    </owl:Class>
+    
+
+
     <!-- http://lexvo.org/ontology#Language -->
 
 
     <owl:Class rdf:about="http://lexvo.org/ontology#Language">
         <rdfs:label xml:lang="en">language</rdfs:label>
-        <rdfs:seeAlso xml:lang="en">https://www.wikidata.org/wiki/Q315</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:resource="https://www.wikidata.org/wiki/Q315"/>
         <skos:definition xml:lang="en">Natural language</skos:definition>
     </owl:Class>
     
@@ -1847,17 +1924,6 @@ The ontology is developed in OWL in Protege 5.5.0.</terms:description>
 
 
     <owl:Class rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-    
-
-
-    <!-- http://www.w3.org/ns/prov#Role -->
-
-
-    <owl:Class rdf:about="http://www.w3.org/ns/prov#Role">
-        <rdfs:label xml:lang="en">contributor role</rdfs:label>
-        <skos:definition xml:lang="en">types of contribution to an OER.</skos:definition>
-        <skos:example xml:lang="en">Editor</skos:example>
-    </owl:Class>
     
 
 
@@ -2069,7 +2135,7 @@ The ontology is developed in OWL in Protege 5.5.0.</terms:description>
 
     <owl:Class rdf:about="https://purl.org/ontology/modalia#CuratorRole">
         <rdfs:subClassOf rdf:resource="https://purl.org/ontology/modalia#UserRole"/>
-        <rdfs:label xml:lang="en">curator role</rdfs:label>
+        <rdfs:label xml:lang="en">curator user role</rdfs:label>
     </owl:Class>
     
 
@@ -2437,12 +2503,12 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
     
 
 
-    <!-- https://purl.org/ontology/modalia#ResearcherRole -->
+    <!-- https://purl.org/ontology/modalia#ResearcherUserRole -->
 
 
-    <owl:Class rdf:about="https://purl.org/ontology/modalia#ResearcherRole">
+    <owl:Class rdf:about="https://purl.org/ontology/modalia#ResearcherUserRole">
         <rdfs:subClassOf rdf:resource="https://purl.org/ontology/modalia#UserRole"/>
-        <rdfs:label xml:lang="en">researcher role</rdfs:label>
+        <rdfs:label xml:lang="en">researcher user role</rdfs:label>
     </owl:Class>
     
 
@@ -2495,7 +2561,7 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 
     <owl:Class rdf:about="https://purl.org/ontology/modalia#TeacherRole">
         <rdfs:subClassOf rdf:resource="https://purl.org/ontology/modalia#UserRole"/>
-        <rdfs:label xml:lang="en">teacher role</rdfs:label>
+        <rdfs:label xml:lang="en">teacher user role</rdfs:label>
     </owl:Class>
     
 
@@ -2977,216 +3043,6 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
     
 
 
-    <!-- http://w3id.org/nfdi4ing/metadata4ing#ContactPerson -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/nfdi4ing/metadata4ing#ContactPerson">
-        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Role"/>
-        <rdfs:label xml:lang="en">contact person</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/nfdi4ing/metadata4ing#DataCollector -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/nfdi4ing/metadata4ing#DataCollector">
-        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Role"/>
-        <rdfs:label xml:lang="en">datacollector role</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/nfdi4ing/metadata4ing#DataCurator -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/nfdi4ing/metadata4ing#DataCurator">
-        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Role"/>
-        <rdfs:label xml:lang="en">data curator role</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/nfdi4ing/metadata4ing#DataManager -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/nfdi4ing/metadata4ing#DataManager">
-        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Role"/>
-        <rdfs:label xml:lang="en">data manager role</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/nfdi4ing/metadata4ing#Distributor -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/nfdi4ing/metadata4ing#Distributor">
-        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Role"/>
-        <rdfs:label xml:lang="en">distributor role</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/nfdi4ing/metadata4ing#Editor -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/nfdi4ing/metadata4ing#Editor">
-        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Role"/>
-        <rdfs:label xml:lang="en">editor role</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/nfdi4ing/metadata4ing#HostingInstitution -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/nfdi4ing/metadata4ing#HostingInstitution">
-        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Role"/>
-        <rdfs:label xml:lang="en">hostinginstitution role</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/nfdi4ing/metadata4ing#Other -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/nfdi4ing/metadata4ing#Other">
-        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Role"/>
-        <rdfs:label xml:lang="en">otherperson role</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/nfdi4ing/metadata4ing#Producer -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/nfdi4ing/metadata4ing#Producer">
-        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Role"/>
-        <rdfs:label xml:lang="en">producer role</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/nfdi4ing/metadata4ing#ProjectLeader -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/nfdi4ing/metadata4ing#ProjectLeader">
-        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Role"/>
-        <rdfs:label xml:lang="en">projectleader role</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/nfdi4ing/metadata4ing#ProjectManager -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/nfdi4ing/metadata4ing#ProjectManager">
-        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Role"/>
-        <rdfs:label xml:lang="en">projectmanager role</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/nfdi4ing/metadata4ing#ProjectMember -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/nfdi4ing/metadata4ing#ProjectMember">
-        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Role"/>
-        <rdfs:label xml:lang="en">projectmember role</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/nfdi4ing/metadata4ing#RegistrationAgency -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/nfdi4ing/metadata4ing#RegistrationAgency">
-        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Role"/>
-        <rdfs:label xml:lang="en">registrationagency role</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/nfdi4ing/metadata4ing#RegistrationAuthority -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/nfdi4ing/metadata4ing#RegistrationAuthority">
-        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Role"/>
-        <rdfs:label xml:lang="en">registrationauthority role</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/nfdi4ing/metadata4ing#RelatedPerson -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/nfdi4ing/metadata4ing#RelatedPerson">
-        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Role"/>
-        <rdfs:label xml:lang="en">relatedperson role</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/nfdi4ing/metadata4ing#ResearchGroup -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/nfdi4ing/metadata4ing#ResearchGroup">
-        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Role"/>
-        <rdfs:label xml:lang="en">researchgroup role</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/nfdi4ing/metadata4ing#Researcher -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/nfdi4ing/metadata4ing#Researcher">
-        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Role"/>
-        <rdfs:label xml:lang="en">researcher role</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/nfdi4ing/metadata4ing#RightsHolder -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/nfdi4ing/metadata4ing#RightsHolder">
-        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Role"/>
-        <rdfs:label xml:lang="en">rightsholder role</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/nfdi4ing/metadata4ing#Sponsor -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/nfdi4ing/metadata4ing#Sponsor">
-        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Role"/>
-        <rdfs:label xml:lang="en">sponsor role</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/nfdi4ing/metadata4ing#Supervisor -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/nfdi4ing/metadata4ing#Supervisor">
-        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Role"/>
-        <rdfs:label xml:lang="en">supervisor role</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/nfdi4ing/metadata4ing#WorkPackageLeader -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/nfdi4ing/metadata4ing#WorkPackageLeader">
-        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Role"/>
-        <rdfs:label xml:lang="en">workpackageleader role</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
     <!-- https://creativecommons.org/licenses/by/4.0/ -->
 
 
@@ -3200,8 +3056,9 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 
 
     <owl:NamedIndividual rdf:about="https://purl.org/ontology/modalia#Annotator">
-        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Role"/>
+        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Role"/>
         <rdfs:label xml:lang="en">annotator role</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://id.loc.gov/vocabulary/relators/ann"/>
     </owl:NamedIndividual>
     
 
@@ -3236,6 +3093,72 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
     
 
 
+    <!-- https://purl.org/ontology/modalia#ContactPerson -->
+
+
+    <owl:NamedIndividual rdf:about="https://purl.org/ontology/modalia#ContactPerson">
+        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Role"/>
+        <rdfs:label xml:lang="en">contactperson role</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://w3id.org/nfdi4ing/metadata4ing#ContactPerson"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/ontology/modalia#DataCollector -->
+
+
+    <owl:NamedIndividual rdf:about="https://purl.org/ontology/modalia#DataCollector">
+        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Role"/>
+        <rdfs:label xml:lang="en">datacollector role</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://w3id.org/nfdi4ing/metadata4ing#DataCollector"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/ontology/modalia#DataCurator -->
+
+
+    <owl:NamedIndividual rdf:about="https://purl.org/ontology/modalia#DataCurator">
+        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Role"/>
+        <rdfs:label xml:lang="en">datacurator role</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://w3id.org/nfdi4ing/metadata4ing#DataCurator"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/ontology/modalia#DataManager -->
+
+
+    <owl:NamedIndividual rdf:about="https://purl.org/ontology/modalia#DataManager">
+        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Role"/>
+        <rdfs:label xml:lang="en">datamanager role</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://id.loc.gov/vocabulary/relators/dtm"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/ontology/modalia#Distributor -->
+
+
+    <owl:NamedIndividual rdf:about="https://purl.org/ontology/modalia#Distributor">
+        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Role"/>
+        <rdfs:label xml:lang="en">distributor role</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://w3id.org/nfdi4ing/metadata4ing#Distributor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/ontology/modalia#Editor -->
+
+
+    <owl:NamedIndividual rdf:about="https://purl.org/ontology/modalia#Editor">
+        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Role"/>
+        <rdfs:label xml:lang="en">editor role</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://w3id.org/nfdi4ing/metadata4ing#Editor"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://purl.org/ontology/modalia#Expert -->
 
 
@@ -3251,12 +3174,24 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
     
 
 
+    <!-- https://purl.org/ontology/modalia#HostingInstitution -->
+
+
+    <owl:NamedIndividual rdf:about="https://purl.org/ontology/modalia#HostingInstitution">
+        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Role"/>
+        <rdfs:label xml:lang="en">hostinginstitution role</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://w3id.org/nfdi4ing/metadata4ing#HostingInstitution"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://purl.org/ontology/modalia#Interviewee -->
 
 
     <owl:NamedIndividual rdf:about="https://purl.org/ontology/modalia#Interviewee">
-        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Role"/>
+        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Role"/>
         <rdfs:label xml:lang="en">interviewee role</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://id.loc.gov/vocabulary/relators/ive"/>
     </owl:NamedIndividual>
     
 
@@ -3265,8 +3200,9 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 
 
     <owl:NamedIndividual rdf:about="https://purl.org/ontology/modalia#Interviewer">
-        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Role"/>
+        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Role"/>
         <rdfs:label xml:lang="en">interviewer role</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://id.loc.gov/vocabulary/relators/ivr"/>
     </owl:NamedIndividual>
     
 
@@ -3275,8 +3211,9 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 
 
     <owl:NamedIndividual rdf:about="https://purl.org/ontology/modalia#MetadataContact">
-        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Role"/>
+        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Role"/>
         <rdfs:label xml:lang="en">metadatacontact role</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://id.loc.gov/vocabulary/relators/mdc"/>
     </owl:NamedIndividual>
     
 
@@ -3296,6 +3233,28 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
     
 
 
+    <!-- https://purl.org/ontology/modalia#OtherRole -->
+
+
+    <owl:NamedIndividual rdf:about="https://purl.org/ontology/modalia#OtherRole">
+        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Role"/>
+        <rdfs:label xml:lang="en">other role</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://w3id.org/nfdi4ing/metadata4ing#Other"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/ontology/modalia#Producer -->
+
+
+    <owl:NamedIndividual rdf:about="https://purl.org/ontology/modalia#Producer">
+        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Role"/>
+        <rdfs:label xml:lang="en">producer role</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://w3id.org/nfdi4ing/metadata4ing#Producer"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://purl.org/ontology/modalia#Proficient -->
 
 
@@ -3311,6 +3270,39 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
     
 
 
+    <!-- https://purl.org/ontology/modalia#ProjectLeader -->
+
+
+    <owl:NamedIndividual rdf:about="https://purl.org/ontology/modalia#ProjectLeader">
+        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Role"/>
+        <rdfs:label xml:lang="en">projectleader role</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://w3id.org/nfdi4ing/metadata4ing#ProjectLeader"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/ontology/modalia#ProjectManager -->
+
+
+    <owl:NamedIndividual rdf:about="https://purl.org/ontology/modalia#ProjectManager">
+        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Role"/>
+        <rdfs:label xml:lang="en">projectmanager role</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://w3id.org/nfdi4ing/metadata4ing#ProjectManager"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/ontology/modalia#ProjectMember -->
+
+
+    <owl:NamedIndividual rdf:about="https://purl.org/ontology/modalia#ProjectMember">
+        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Role"/>
+        <rdfs:label xml:lang="en">projectmember role</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://w3id.org/nfdi4ing/metadata4ing#ProjectMember"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://purl.org/ontology/modalia#Proprietary -->
 
 
@@ -3321,12 +3313,78 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
     
 
 
+    <!-- https://purl.org/ontology/modalia#RegistrationAgency -->
+
+
+    <owl:NamedIndividual rdf:about="https://purl.org/ontology/modalia#RegistrationAgency">
+        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Role"/>
+        <rdfs:label xml:lang="en">registrationagency role</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://w3id.org/nfdi4ing/metadata4ing#RegistrationAgency"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/ontology/modalia#RegistrationAuthority -->
+
+
+    <owl:NamedIndividual rdf:about="https://purl.org/ontology/modalia#RegistrationAuthority">
+        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Role"/>
+        <rdfs:label xml:lang="en">registrationauthority role</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://w3id.org/nfdi4ing/metadata4ing#RegistrationAuthority"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/ontology/modalia#RelatedPerson -->
+
+
+    <owl:NamedIndividual rdf:about="https://purl.org/ontology/modalia#RelatedPerson">
+        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Role"/>
+        <rdfs:label xml:lang="en">relatedperson role</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://w3id.org/nfdi4ing/metadata4ing#RelatedPerson"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/ontology/modalia#ResearchGroup -->
+
+
+    <owl:NamedIndividual rdf:about="https://purl.org/ontology/modalia#ResearchGroup">
+        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Role"/>
+        <rdfs:label xml:lang="en">researchgroup role</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://w3id.org/nfdi4ing/metadata4ing#ResearchGroup"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/ontology/modalia#ResearcherRole -->
+
+
+    <owl:NamedIndividual rdf:about="https://purl.org/ontology/modalia#ResearcherRole">
+        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Role"/>
+        <rdfs:label xml:lang="en">researcher role</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://w3id.org/nfdi4ing/metadata4ing#Researcher"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/ontology/modalia#RightsHolder -->
+
+
+    <owl:NamedIndividual rdf:about="https://purl.org/ontology/modalia#RightsHolder">
+        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Role"/>
+        <rdfs:label xml:lang="en">rightsholder role</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://w3id.org/nfdi4ing/metadata4ing#RightsHolder"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://purl.org/ontology/modalia#SoftwareDeveloper -->
 
 
     <owl:NamedIndividual rdf:about="https://purl.org/ontology/modalia#SoftwareDeveloper">
-        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Role"/>
-        <rdfs:label xml:lang="en">softwaredeveloper role</rdfs:label>
+        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Role"/>
+        <rdfs:label xml:lang="en">software developer role</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3335,18 +3393,42 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 
 
     <owl:NamedIndividual rdf:about="https://purl.org/ontology/modalia#Speaker">
-        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Role"/>
+        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Role"/>
         <rdfs:label xml:lang="en">speaker role</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://id.loc.gov/vocabulary/relators/spk"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://purl.org/ontology/modalia#TeacherContributor -->
+    <!-- https://purl.org/ontology/modalia#Sponsor -->
 
 
-    <owl:NamedIndividual rdf:about="https://purl.org/ontology/modalia#TeacherContributor">
-        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Role"/>
+    <owl:NamedIndividual rdf:about="https://purl.org/ontology/modalia#Sponsor">
+        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Role"/>
+        <rdfs:label xml:lang="en">sponsor role</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://w3id.org/nfdi4ing/metadata4ing#Sponsor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/ontology/modalia#Supervisor -->
+
+
+    <owl:NamedIndividual rdf:about="https://purl.org/ontology/modalia#Supervisor">
+        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Role"/>
+        <rdfs:label xml:lang="en">supervisor role</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://w3id.org/nfdi4ing/metadata4ing#Supervisor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/ontology/modalia#TeacherContributorRole -->
+
+
+    <owl:NamedIndividual rdf:about="https://purl.org/ontology/modalia#TeacherContributorRole">
+        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Role"/>
         <rdfs:label xml:lang="en">teacher (contributor) role</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://id.loc.gov/vocabulary/relators/tch"/>
     </owl:NamedIndividual>
     
 
@@ -3355,8 +3437,19 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 
 
     <owl:NamedIndividual rdf:about="https://purl.org/ontology/modalia#Translator">
-        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Role"/>
+        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Role"/>
         <rdfs:label xml:lang="en">translator role</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/ontology/modalia#WorkPackageLeader -->
+
+
+    <owl:NamedIndividual rdf:about="https://purl.org/ontology/modalia#WorkPackageLeader">
+        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Role"/>
+        <rdfs:label xml:lang="en">workpackageleader role</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://w3id.org/nfdi4ing/metadata4ing#WorkPackageLeader"/>
     </owl:NamedIndividual>
     
 

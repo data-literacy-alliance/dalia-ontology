@@ -458,6 +458,21 @@
     "@value" : "A contribution to an OER, including agent and role information."
   } ]
 }, {
+  "@id" : "http://id.loc.gov/ontologies/bibframe/Role",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "contributor role"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "types of contribution to an OER."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Editor"
+  } ]
+}, {
   "@id" : "http://id.loc.gov/ontologies/bibframe/agent",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -508,7 +523,7 @@
     "@value" : "role"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/ns/prov#Role"
+    "@id" : "http://id.loc.gov/ontologies/bibframe/Role"
   } ]
 }, {
   "@id" : "http://lexvo.org/ontology#Language",
@@ -518,8 +533,7 @@
     "@value" : "language"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@language" : "en",
-    "@value" : "https://www.wikidata.org/wiki/Q315"
+    "@id" : "https://www.wikidata.org/wiki/Q315"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -813,6 +827,19 @@
     "@value" : "Replaces"
   } ]
 }, {
+  "@id" : "http://purl.org/dc/terms/requires",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://github.com/tibonto/educor#EducationalResource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "requires"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ]
+}, {
   "@id" : "http://purl.org/dc/terms/rights",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -987,76 +1014,6 @@
   "@id" : "http://usefulinc.com/ns/doap#bug-database",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "http://w3id.org/nfdi4ing/metadata4ing#ContactPerson",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/ns/prov#Role"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "contact person"
-  } ]
-}, {
-  "@id" : "http://w3id.org/nfdi4ing/metadata4ing#DataCollector",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/ns/prov#Role"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "datacollector role"
-  } ]
-}, {
-  "@id" : "http://w3id.org/nfdi4ing/metadata4ing#DataCurator",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/ns/prov#Role"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "data curator role"
-  } ]
-}, {
-  "@id" : "http://w3id.org/nfdi4ing/metadata4ing#DataManager",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/ns/prov#Role"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "data manager role"
-  } ]
-}, {
-  "@id" : "http://w3id.org/nfdi4ing/metadata4ing#Distributor",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/ns/prov#Role"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "distributor role"
-  } ]
-}, {
-  "@id" : "http://w3id.org/nfdi4ing/metadata4ing#Editor",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/ns/prov#Role"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "editor role"
-  } ]
-}, {
-  "@id" : "http://w3id.org/nfdi4ing/metadata4ing#HostingInstitution",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/ns/prov#Role"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "hostinginstitution role"
-  } ]
-}, {
   "@id" : "http://w3id.org/nfdi4ing/metadata4ing#Method",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
@@ -1075,136 +1032,6 @@
     "@value" : "bioassay, microscopy, measurement"
   } ]
 }, {
-  "@id" : "http://w3id.org/nfdi4ing/metadata4ing#Other",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/ns/prov#Role"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "otherperson role"
-  } ]
-}, {
-  "@id" : "http://w3id.org/nfdi4ing/metadata4ing#Producer",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/ns/prov#Role"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "producer role"
-  } ]
-}, {
-  "@id" : "http://w3id.org/nfdi4ing/metadata4ing#ProjectLeader",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/ns/prov#Role"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "projectleader role"
-  } ]
-}, {
-  "@id" : "http://w3id.org/nfdi4ing/metadata4ing#ProjectManager",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/ns/prov#Role"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "projectmanager role"
-  } ]
-}, {
-  "@id" : "http://w3id.org/nfdi4ing/metadata4ing#ProjectMember",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/ns/prov#Role"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "projectmember role"
-  } ]
-}, {
-  "@id" : "http://w3id.org/nfdi4ing/metadata4ing#RegistrationAgency",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/ns/prov#Role"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "registrationagency role"
-  } ]
-}, {
-  "@id" : "http://w3id.org/nfdi4ing/metadata4ing#RegistrationAuthority",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/ns/prov#Role"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "registrationauthority role"
-  } ]
-}, {
-  "@id" : "http://w3id.org/nfdi4ing/metadata4ing#RelatedPerson",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/ns/prov#Role"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "relatedperson role"
-  } ]
-}, {
-  "@id" : "http://w3id.org/nfdi4ing/metadata4ing#ResearchGroup",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/ns/prov#Role"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "researchgroup role"
-  } ]
-}, {
-  "@id" : "http://w3id.org/nfdi4ing/metadata4ing#Researcher",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/ns/prov#Role"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "researcher role"
-  } ]
-}, {
-  "@id" : "http://w3id.org/nfdi4ing/metadata4ing#RightsHolder",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/ns/prov#Role"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "rightsholder role"
-  } ]
-}, {
-  "@id" : "http://w3id.org/nfdi4ing/metadata4ing#Sponsor",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/ns/prov#Role"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "sponsor role"
-  } ]
-}, {
-  "@id" : "http://w3id.org/nfdi4ing/metadata4ing#Supervisor",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/ns/prov#Role"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "supervisor role"
-  } ]
-}, {
   "@id" : "http://w3id.org/nfdi4ing/metadata4ing#Tool",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
@@ -1217,16 +1044,6 @@
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
     "@value" : "a tool with which data was obtained (microscope, sensor, ...)"
-  } ]
-}, {
-  "@id" : "http://w3id.org/nfdi4ing/metadata4ing#WorkPackageLeader",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/ns/prov#Role"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "workpackageleader role"
   } ]
 }, {
   "@id" : "http://w3id.org/nfdi4ing/metadata4ing#hasRorId",
@@ -1311,21 +1128,6 @@
 }, {
   "@id" : "http://www.w3.org/2004/02/skos/core#scopeNote",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "http://www.w3.org/ns/prov#Role",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "contributor role"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "types of contribution to an OER."
-  } ],
-  "http://www.w3.org/2004/02/skos/core#example" : [ {
-    "@language" : "en",
-    "@value" : "Editor"
-  } ]
 }, {
   "@id" : "https://creativecommons.org/licenses/by/4.0/",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
@@ -1549,11 +1351,14 @@
   "@id" : "https://purl.org/ontology/modalia#Annotator",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/ns/prov#Role"
+    "@id" : "http://id.loc.gov/ontologies/bibframe/Role"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "annotator role"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://id.loc.gov/vocabulary/relators/ann"
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#AssurancePhase",
@@ -1710,6 +1515,19 @@
     "@id" : "https://purl.org/ontology/modalia#Novice"
   } ]
 }, {
+  "@id" : "https://purl.org/ontology/modalia#ContactPerson",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://id.loc.gov/ontologies/bibframe/Role"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "contactperson role"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://w3id.org/nfdi4ing/metadata4ing#ContactPerson"
+  } ]
+}, {
   "@id" : "https://purl.org/ontology/modalia#ContentProvider",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -1782,10 +1600,36 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "curator role"
+    "@value" : "curator user role"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://purl.org/ontology/modalia#UserRole"
+  } ]
+}, {
+  "@id" : "https://purl.org/ontology/modalia#DataCollector",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://id.loc.gov/ontologies/bibframe/Role"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "datacollector role"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://w3id.org/nfdi4ing/metadata4ing#DataCollector"
+  } ]
+}, {
+  "@id" : "https://purl.org/ontology/modalia#DataCurator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://id.loc.gov/ontologies/bibframe/Role"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "datacurator role"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://w3id.org/nfdi4ing/metadata4ing#DataCurator"
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#DataLifeCyclePhase",
@@ -1801,6 +1645,19 @@
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
     "@value" : "One of the phases of data life cycle."
+  } ]
+}, {
+  "@id" : "https://purl.org/ontology/modalia#DataManager",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://id.loc.gov/ontologies/bibframe/Role"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "datamanager role"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://id.loc.gov/vocabulary/relators/dtm"
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#DescriptionPhase",
@@ -1840,6 +1697,32 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://purl.org/ontology/modalia#DataLifeCyclePhase"
+  } ]
+}, {
+  "@id" : "https://purl.org/ontology/modalia#Distributor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://id.loc.gov/ontologies/bibframe/Role"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "distributor role"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://w3id.org/nfdi4ing/metadata4ing#Distributor"
+  } ]
+}, {
+  "@id" : "https://purl.org/ontology/modalia#Editor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://id.loc.gov/ontologies/bibframe/Role"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "editor role"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://w3id.org/nfdi4ing/metadata4ing#Editor"
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#EducationalLevel",
@@ -1908,6 +1791,19 @@
     "@id" : "https://purl.org/ontology/modalia#License"
   } ]
 }, {
+  "@id" : "https://purl.org/ontology/modalia#HostingInstitution",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://id.loc.gov/ontologies/bibframe/Role"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "hostinginstitution role"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://w3id.org/nfdi4ing/metadata4ing#HostingInstitution"
+  } ]
+}, {
   "@id" : "https://purl.org/ontology/modalia#IntegratePhase",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -1921,21 +1817,27 @@
   "@id" : "https://purl.org/ontology/modalia#Interviewee",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/ns/prov#Role"
+    "@id" : "http://id.loc.gov/ontologies/bibframe/Role"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "interviewee role"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://id.loc.gov/vocabulary/relators/ive"
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#Interviewer",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/ns/prov#Role"
+    "@id" : "http://id.loc.gov/ontologies/bibframe/Role"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "interviewer role"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://id.loc.gov/vocabulary/relators/ivr"
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#Job",
@@ -2082,11 +1984,14 @@
   "@id" : "https://purl.org/ontology/modalia#MetadataContact",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/ns/prov#Role"
+    "@id" : "http://id.loc.gov/ontologies/bibframe/Role"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "metadatacontact role"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://id.loc.gov/vocabulary/relators/mdc"
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#Multipart",
@@ -2142,6 +2047,19 @@
     "@id" : "https://purl.org/ontology/modalia#Expert"
   }, {
     "@id" : "https://purl.org/ontology/modalia#Proficient"
+  } ]
+}, {
+  "@id" : "https://purl.org/ontology/modalia#OtherRole",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://id.loc.gov/ontologies/bibframe/Role"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "other role"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://w3id.org/nfdi4ing/metadata4ing#Other"
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#PhDStudent",
@@ -2221,6 +2139,19 @@
     "@id" : "https://purl.org/ontology/modalia#DataLifeCyclePhase"
   } ]
 }, {
+  "@id" : "https://purl.org/ontology/modalia#Producer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://id.loc.gov/ontologies/bibframe/Role"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "producer role"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://w3id.org/nfdi4ing/metadata4ing#Producer"
+  } ]
+}, {
   "@id" : "https://purl.org/ontology/modalia#Proficiency",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -2257,6 +2188,45 @@
     "@id" : "https://purl.org/ontology/modalia#Competent"
   }, {
     "@id" : "https://purl.org/ontology/modalia#Novice"
+  } ]
+}, {
+  "@id" : "https://purl.org/ontology/modalia#ProjectLeader",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://id.loc.gov/ontologies/bibframe/Role"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "projectleader role"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://w3id.org/nfdi4ing/metadata4ing#ProjectLeader"
+  } ]
+}, {
+  "@id" : "https://purl.org/ontology/modalia#ProjectManager",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://id.loc.gov/ontologies/bibframe/Role"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "projectmanager role"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://w3id.org/nfdi4ing/metadata4ing#ProjectManager"
+  } ]
+}, {
+  "@id" : "https://purl.org/ontology/modalia#ProjectMember",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://id.loc.gov/ontologies/bibframe/Role"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "projectmember role"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://w3id.org/nfdi4ing/metadata4ing#ProjectMember"
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#Proprietary",
@@ -2336,6 +2306,58 @@
     "@value" : "Topic related to research data management"
   } ]
 }, {
+  "@id" : "https://purl.org/ontology/modalia#RegistrationAgency",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://id.loc.gov/ontologies/bibframe/Role"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "registrationagency role"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://w3id.org/nfdi4ing/metadata4ing#RegistrationAgency"
+  } ]
+}, {
+  "@id" : "https://purl.org/ontology/modalia#RegistrationAuthority",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://id.loc.gov/ontologies/bibframe/Role"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "registrationauthority role"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://w3id.org/nfdi4ing/metadata4ing#RegistrationAuthority"
+  } ]
+}, {
+  "@id" : "https://purl.org/ontology/modalia#RelatedPerson",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://id.loc.gov/ontologies/bibframe/Role"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "relatedperson role"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://w3id.org/nfdi4ing/metadata4ing#RelatedPerson"
+  } ]
+}, {
+  "@id" : "https://purl.org/ontology/modalia#ResearchGroup",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://id.loc.gov/ontologies/bibframe/Role"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "researchgroup role"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://w3id.org/nfdi4ing/metadata4ing#ResearchGroup"
+  } ]
+}, {
   "@id" : "https://purl.org/ontology/modalia#Researcher",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -2355,13 +2377,39 @@
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#ResearcherRole",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://id.loc.gov/ontologies/bibframe/Role"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "researcher role"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://w3id.org/nfdi4ing/metadata4ing#Researcher"
+  } ]
+}, {
+  "@id" : "https://purl.org/ontology/modalia#ResearcherUserRole",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "researcher user role"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://purl.org/ontology/modalia#UserRole"
+  } ]
+}, {
+  "@id" : "https://purl.org/ontology/modalia#RightsHolder",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://id.loc.gov/ontologies/bibframe/Role"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "rightsholder role"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://w3id.org/nfdi4ing/metadata4ing#RightsHolder"
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#Skill",
@@ -2378,21 +2426,37 @@
   "@id" : "https://purl.org/ontology/modalia#SoftwareDeveloper",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/ns/prov#Role"
+    "@id" : "http://id.loc.gov/ontologies/bibframe/Role"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "softwaredeveloper role"
+    "@value" : "software developer role"
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#Speaker",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/ns/prov#Role"
+    "@id" : "http://id.loc.gov/ontologies/bibframe/Role"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "speaker role"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://id.loc.gov/vocabulary/relators/spk"
+  } ]
+}, {
+  "@id" : "https://purl.org/ontology/modalia#Sponsor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://id.loc.gov/ontologies/bibframe/Role"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "sponsor role"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://w3id.org/nfdi4ing/metadata4ing#Sponsor"
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#StudentSchool",
@@ -2409,6 +2473,19 @@
     "@value" : "Student (School)"
   } ]
 }, {
+  "@id" : "https://purl.org/ontology/modalia#Supervisor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://id.loc.gov/ontologies/bibframe/Role"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "supervisor role"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://w3id.org/nfdi4ing/metadata4ing#Supervisor"
+  } ]
+}, {
   "@id" : "https://purl.org/ontology/modalia#TargetGroup",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -2423,14 +2500,17 @@
     "@value" : "The target group of the learning resource, e.g. students, data stewards, researchers, etc"
   } ]
 }, {
-  "@id" : "https://purl.org/ontology/modalia#TeacherContributor",
+  "@id" : "https://purl.org/ontology/modalia#TeacherContributorRole",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/ns/prov#Role"
+    "@id" : "http://id.loc.gov/ontologies/bibframe/Role"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "teacher (contributor) role"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://id.loc.gov/vocabulary/relators/tch"
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#TeacherHigherEducation",
@@ -2451,7 +2531,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "teacher role"
+    "@value" : "teacher user role"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://purl.org/ontology/modalia#UserRole"
@@ -2478,7 +2558,7 @@
   "@id" : "https://purl.org/ontology/modalia#Translator",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/ns/prov#Role"
+    "@id" : "http://id.loc.gov/ontologies/bibframe/Role"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -2589,6 +2669,19 @@
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
     "@value" : "Visual learning (pictures, movies, diagrams)"
+  } ]
+}, {
+  "@id" : "https://purl.org/ontology/modalia#WorkPackageLeader",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://id.loc.gov/ontologies/bibframe/Role"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "workpackageleader role"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://w3id.org/nfdi4ing/metadata4ing#WorkPackageLeader"
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#authorUnordered",
@@ -3022,6 +3115,19 @@
     "@id" : "https://purl.org/ontology/modalia#MediaType"
   } ]
 }, {
+  "@id" : "https://purl.org/ontology/modalia#hasMetadata",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://github.com/tibonto/educor#EducationalResource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "hasMetadata"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ]
+}, {
   "@id" : "https://purl.org/ontology/modalia#hasOrder",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -3093,6 +3199,19 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://purl.org/ontology/modalia#UserRole"
+  } ]
+}, {
+  "@id" : "https://purl.org/ontology/modalia#hasSourceCode",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://github.com/tibonto/educor#EducationalResource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "hasSourceCode"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#hasTargetGroup",
@@ -3313,6 +3432,19 @@
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Is previous version of"
+  } ]
+}, {
+  "@id" : "https://purl.org/ontology/modalia#isSourceCodeOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://github.com/tibonto/educor#EducationalResource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "isSourceCodeOf"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#isTranslationOf",
@@ -3801,6 +3933,19 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
+  "@id" : "https://schema.org/accessibilityfeature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://github.com/tibonto/educor#EducationalResource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "accessibilityfeature"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
   "@id" : "https://schema.org/author",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -4150,6 +4295,19 @@
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Continues"
+  } ]
+}, {
+  "@id" : "https://w3id.org/citedcat-ap/isCompiledBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://github.com/tibonto/educor#EducationalResource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "isCompiledBy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
   } ]
 }, {
   "@id" : "https://w3id.org/citedcat-ap/isContinuedBy",

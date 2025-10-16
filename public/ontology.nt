@@ -138,7 +138,7 @@
 # http://id.loc.gov/ontologies/bibframe/role
 <http://id.loc.gov/ontologies/bibframe/role> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://id.loc.gov/ontologies/bibframe/role> <http://www.w3.org/2000/01/rdf-schema#domain> <http://id.loc.gov/ontologies/bibframe/Contribution> .
-<http://id.loc.gov/ontologies/bibframe/role> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/prov#Role> .
+<http://id.loc.gov/ontologies/bibframe/role> <http://www.w3.org/2000/01/rdf-schema#range> <http://id.loc.gov/ontologies/bibframe/Role> .
 <http://id.loc.gov/ontologies/bibframe/role> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that links a contribution to a role (e.g., contactPerson, editor)."@en .
 <http://id.loc.gov/ontologies/bibframe/role> <http://www.w3.org/2000/01/rdf-schema#label> "role"@en .
 # 
@@ -204,6 +204,12 @@
 <http://purl.org/dc/terms/replaces> <http://www.w3.org/2000/01/rdf-schema#range> <https://github.com/tibonto/educor#EducationalResource> .
 <http://purl.org/dc/terms/replaces> <http://www.w3.org/2000/01/rdf-schema#label> "replaces"@en .
 <http://purl.org/dc/terms/replaces> <http://www.w3.org/2004/02/skos/core#prefLabel> "Replaces"@en .
+# 
+# http://purl.org/dc/terms/requires
+<http://purl.org/dc/terms/requires> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/dc/terms/requires> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
+<http://purl.org/dc/terms/requires> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> .
+<http://purl.org/dc/terms/requires> <http://www.w3.org/2000/01/rdf-schema#label> "requires"@en .
 # 
 # http://purl.org/spar/fabio/hasDiscipline
 <http://purl.org/spar/fabio/hasDiscipline> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -387,6 +393,12 @@ _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://purl.org/ontology/modalia#hasMediaType> <http://www.w3.org/2000/01/rdf-schema#range> <https://purl.org/ontology/modalia#MediaType> .
 <https://purl.org/ontology/modalia#hasMediaType> <http://www.w3.org/2000/01/rdf-schema#label> "has media type"@en .
 # 
+# https://purl.org/ontology/modalia#hasMetadata
+<https://purl.org/ontology/modalia#hasMetadata> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://purl.org/ontology/modalia#hasMetadata> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
+<https://purl.org/ontology/modalia#hasMetadata> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> .
+<https://purl.org/ontology/modalia#hasMetadata> <http://www.w3.org/2000/01/rdf-schema#label> "hasMetadata"@en .
+# 
 # https://purl.org/ontology/modalia#hasOwner
 <https://purl.org/ontology/modalia#hasOwner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://purl.org/ontology/modalia#hasOwner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
@@ -412,6 +424,12 @@ _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://purl.org/ontology/modalia#hasRole> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/ontology/modalia#User> .
 <https://purl.org/ontology/modalia#hasRole> <http://www.w3.org/2000/01/rdf-schema#range> <https://purl.org/ontology/modalia#UserRole> .
 <https://purl.org/ontology/modalia#hasRole> <http://www.w3.org/2000/01/rdf-schema#label> "has role"@en .
+# 
+# https://purl.org/ontology/modalia#hasSourceCode
+<https://purl.org/ontology/modalia#hasSourceCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://purl.org/ontology/modalia#hasSourceCode> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
+<https://purl.org/ontology/modalia#hasSourceCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> .
+<https://purl.org/ontology/modalia#hasSourceCode> <http://www.w3.org/2000/01/rdf-schema#label> "hasSourceCode"@en .
 # 
 # https://purl.org/ontology/modalia#hasTargetGroup
 <https://purl.org/ontology/modalia#hasTargetGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -497,6 +515,12 @@ _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://purl.org/ontology/modalia#isPreviousVersionOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://github.com/tibonto/educor#EducationalResource> .
 <https://purl.org/ontology/modalia#isPreviousVersionOf> <http://www.w3.org/2000/01/rdf-schema#label> "is previous version of"@en .
 <https://purl.org/ontology/modalia#isPreviousVersionOf> <http://www.w3.org/2004/02/skos/core#prefLabel> "Is previous version of"@en .
+# 
+# https://purl.org/ontology/modalia#isSourceCodeOf
+<https://purl.org/ontology/modalia#isSourceCodeOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://purl.org/ontology/modalia#isSourceCodeOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
+<https://purl.org/ontology/modalia#isSourceCodeOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> .
+<https://purl.org/ontology/modalia#isSourceCodeOf> <http://www.w3.org/2000/01/rdf-schema#label> "isSourceCodeOf"@en .
 # 
 # https://purl.org/ontology/modalia#isTranslationOf
 <https://purl.org/ontology/modalia#isTranslationOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -638,6 +662,12 @@ _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/citedcat-ap/continues> <http://www.w3.org/2000/01/rdf-schema#range> <https://github.com/tibonto/educor#EducationalResource> .
 <https://w3id.org/citedcat-ap/continues> <http://www.w3.org/2000/01/rdf-schema#label> "continues"@en .
 <https://w3id.org/citedcat-ap/continues> <http://www.w3.org/2004/02/skos/core#prefLabel> "Continues"@en .
+# 
+# https://w3id.org/citedcat-ap/isCompiledBy
+<https://w3id.org/citedcat-ap/isCompiledBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/citedcat-ap/isCompiledBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
+<https://w3id.org/citedcat-ap/isCompiledBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> .
+<https://w3id.org/citedcat-ap/isCompiledBy> <http://www.w3.org/2000/01/rdf-schema#label> "isCompiledBy"@en .
 # 
 # https://w3id.org/citedcat-ap/isContinuedBy
 <https://w3id.org/citedcat-ap/isContinuedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -858,6 +888,12 @@ _:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://schema.org/abstract> <http://www.w3.org/2000/01/rdf-schema#comment> "An abstract is a short description that summarizes an OER."@en .
 <https://schema.org/abstract> <http://www.w3.org/2000/01/rdf-schema#label> "abstract"@en .
 # 
+# https://schema.org/accessibilityfeature
+<https://schema.org/accessibilityfeature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.org/accessibilityfeature> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
+<https://schema.org/accessibilityfeature> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://schema.org/accessibilityfeature> <http://www.w3.org/2000/01/rdf-schema#label> "accessibilityfeature"@en .
+# 
 # https://schema.org/datePublished
 <https://schema.org/datePublished> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://schema.org/datePublished> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
@@ -1011,10 +1047,16 @@ _:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://id.loc.gov/ontologies/bibframe/Contribution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://id.loc.gov/ontologies/bibframe/Contribution> <http://www.w3.org/2004/02/skos/core#definition> "A contribution to an OER, including agent and role information."@en .
 # 
+# http://id.loc.gov/ontologies/bibframe/Role
+<http://id.loc.gov/ontologies/bibframe/Role> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/ontologies/bibframe/Role> <http://www.w3.org/2000/01/rdf-schema#label> "contributor role"@en .
+<http://id.loc.gov/ontologies/bibframe/Role> <http://www.w3.org/2004/02/skos/core#definition> "types of contribution to an OER."@en .
+<http://id.loc.gov/ontologies/bibframe/Role> <http://www.w3.org/2004/02/skos/core#example> "Editor"@en .
+# 
 # http://lexvo.org/ontology#Language
 <http://lexvo.org/ontology#Language> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://lexvo.org/ontology#Language> <http://www.w3.org/2000/01/rdf-schema#label> "language"@en .
-<http://lexvo.org/ontology#Language> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.wikidata.org/wiki/Q315"@en .
+<http://lexvo.org/ontology#Language> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.wikidata.org/wiki/Q315> .
 <http://lexvo.org/ontology#Language> <http://www.w3.org/2004/02/skos/core#definition> "Natural language"@en .
 # 
 # http://purl.obolibrary.org/obo/OCCO_25401100
@@ -1098,12 +1140,6 @@ _:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # http://www.w3.org/1999/02/22-rdf-syntax-ns#List
 <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-# 
-# http://www.w3.org/ns/prov#Role
-<http://www.w3.org/ns/prov#Role> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.w3.org/ns/prov#Role> <http://www.w3.org/2000/01/rdf-schema#label> "contributor role"@en .
-<http://www.w3.org/ns/prov#Role> <http://www.w3.org/2004/02/skos/core#definition> "types of contribution to an OER."@en .
-<http://www.w3.org/ns/prov#Role> <http://www.w3.org/2004/02/skos/core#example> "Editor"@en .
 # 
 # https://github.com/tibonto/educor#EducationalResource
 <https://github.com/tibonto/educor#EducationalResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -1232,7 +1268,7 @@ _:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # https://purl.org/ontology/modalia#CuratorRole
 <https://purl.org/ontology/modalia#CuratorRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://purl.org/ontology/modalia#CuratorRole> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purl.org/ontology/modalia#UserRole> .
-<https://purl.org/ontology/modalia#CuratorRole> <http://www.w3.org/2000/01/rdf-schema#label> "curator role"@en .
+<https://purl.org/ontology/modalia#CuratorRole> <http://www.w3.org/2000/01/rdf-schema#label> "curator user role"@en .
 # 
 # https://purl.org/ontology/modalia#DataLifeCyclePhase
 <https://purl.org/ontology/modalia#DataLifeCyclePhase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -1443,10 +1479,10 @@ _:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://purl.org/ontology/modalia#Researcher> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.wikidata.org/wiki/Q1650915"@en .
 <https://purl.org/ontology/modalia#Researcher> <http://www.w3.org/2004/02/skos/core#prefLabel> "Researcher"@en .
 # 
-# https://purl.org/ontology/modalia#ResearcherRole
-<https://purl.org/ontology/modalia#ResearcherRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://purl.org/ontology/modalia#ResearcherRole> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purl.org/ontology/modalia#UserRole> .
-<https://purl.org/ontology/modalia#ResearcherRole> <http://www.w3.org/2000/01/rdf-schema#label> "researcher role"@en .
+# https://purl.org/ontology/modalia#ResearcherUserRole
+<https://purl.org/ontology/modalia#ResearcherUserRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purl.org/ontology/modalia#ResearcherUserRole> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purl.org/ontology/modalia#UserRole> .
+<https://purl.org/ontology/modalia#ResearcherUserRole> <http://www.w3.org/2000/01/rdf-schema#label> "researcher user role"@en .
 # 
 # https://purl.org/ontology/modalia#Skill
 <https://purl.org/ontology/modalia#Skill> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -1474,7 +1510,7 @@ _:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # https://purl.org/ontology/modalia#TeacherRole
 <https://purl.org/ontology/modalia#TeacherRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://purl.org/ontology/modalia#TeacherRole> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purl.org/ontology/modalia#UserRole> .
-<https://purl.org/ontology/modalia#TeacherRole> <http://www.w3.org/2000/01/rdf-schema#label> "teacher role"@en .
+<https://purl.org/ontology/modalia#TeacherRole> <http://www.w3.org/2000/01/rdf-schema#label> "teacher user role"@en .
 # 
 # https://purl.org/ontology/modalia#TeacherSchool
 <https://purl.org/ontology/modalia#TeacherSchool> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -1745,119 +1781,15 @@ _:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # #################################################################
 # 
 # 
-# http://w3id.org/nfdi4ing/metadata4ing#ContactPerson
-<http://w3id.org/nfdi4ing/metadata4ing#ContactPerson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://w3id.org/nfdi4ing/metadata4ing#ContactPerson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Role> .
-<http://w3id.org/nfdi4ing/metadata4ing#ContactPerson> <http://www.w3.org/2000/01/rdf-schema#label> "contact person"@en .
-# 
-# http://w3id.org/nfdi4ing/metadata4ing#DataCollector
-<http://w3id.org/nfdi4ing/metadata4ing#DataCollector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://w3id.org/nfdi4ing/metadata4ing#DataCollector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Role> .
-<http://w3id.org/nfdi4ing/metadata4ing#DataCollector> <http://www.w3.org/2000/01/rdf-schema#label> "datacollector role"@en .
-# 
-# http://w3id.org/nfdi4ing/metadata4ing#DataCurator
-<http://w3id.org/nfdi4ing/metadata4ing#DataCurator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://w3id.org/nfdi4ing/metadata4ing#DataCurator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Role> .
-<http://w3id.org/nfdi4ing/metadata4ing#DataCurator> <http://www.w3.org/2000/01/rdf-schema#label> "data curator role"@en .
-# 
-# http://w3id.org/nfdi4ing/metadata4ing#DataManager
-<http://w3id.org/nfdi4ing/metadata4ing#DataManager> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://w3id.org/nfdi4ing/metadata4ing#DataManager> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Role> .
-<http://w3id.org/nfdi4ing/metadata4ing#DataManager> <http://www.w3.org/2000/01/rdf-schema#label> "data manager role"@en .
-# 
-# http://w3id.org/nfdi4ing/metadata4ing#Distributor
-<http://w3id.org/nfdi4ing/metadata4ing#Distributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://w3id.org/nfdi4ing/metadata4ing#Distributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Role> .
-<http://w3id.org/nfdi4ing/metadata4ing#Distributor> <http://www.w3.org/2000/01/rdf-schema#label> "distributor role"@en .
-# 
-# http://w3id.org/nfdi4ing/metadata4ing#Editor
-<http://w3id.org/nfdi4ing/metadata4ing#Editor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://w3id.org/nfdi4ing/metadata4ing#Editor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Role> .
-<http://w3id.org/nfdi4ing/metadata4ing#Editor> <http://www.w3.org/2000/01/rdf-schema#label> "editor role"@en .
-# 
-# http://w3id.org/nfdi4ing/metadata4ing#HostingInstitution
-<http://w3id.org/nfdi4ing/metadata4ing#HostingInstitution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://w3id.org/nfdi4ing/metadata4ing#HostingInstitution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Role> .
-<http://w3id.org/nfdi4ing/metadata4ing#HostingInstitution> <http://www.w3.org/2000/01/rdf-schema#label> "hostinginstitution role"@en .
-# 
-# http://w3id.org/nfdi4ing/metadata4ing#Other
-<http://w3id.org/nfdi4ing/metadata4ing#Other> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://w3id.org/nfdi4ing/metadata4ing#Other> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Role> .
-<http://w3id.org/nfdi4ing/metadata4ing#Other> <http://www.w3.org/2000/01/rdf-schema#label> "otherperson role"@en .
-# 
-# http://w3id.org/nfdi4ing/metadata4ing#Producer
-<http://w3id.org/nfdi4ing/metadata4ing#Producer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://w3id.org/nfdi4ing/metadata4ing#Producer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Role> .
-<http://w3id.org/nfdi4ing/metadata4ing#Producer> <http://www.w3.org/2000/01/rdf-schema#label> "producer role"@en .
-# 
-# http://w3id.org/nfdi4ing/metadata4ing#ProjectLeader
-<http://w3id.org/nfdi4ing/metadata4ing#ProjectLeader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://w3id.org/nfdi4ing/metadata4ing#ProjectLeader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Role> .
-<http://w3id.org/nfdi4ing/metadata4ing#ProjectLeader> <http://www.w3.org/2000/01/rdf-schema#label> "projectleader role"@en .
-# 
-# http://w3id.org/nfdi4ing/metadata4ing#ProjectManager
-<http://w3id.org/nfdi4ing/metadata4ing#ProjectManager> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://w3id.org/nfdi4ing/metadata4ing#ProjectManager> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Role> .
-<http://w3id.org/nfdi4ing/metadata4ing#ProjectManager> <http://www.w3.org/2000/01/rdf-schema#label> "projectmanager role"@en .
-# 
-# http://w3id.org/nfdi4ing/metadata4ing#ProjectMember
-<http://w3id.org/nfdi4ing/metadata4ing#ProjectMember> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://w3id.org/nfdi4ing/metadata4ing#ProjectMember> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Role> .
-<http://w3id.org/nfdi4ing/metadata4ing#ProjectMember> <http://www.w3.org/2000/01/rdf-schema#label> "projectmember role"@en .
-# 
-# http://w3id.org/nfdi4ing/metadata4ing#RegistrationAgency
-<http://w3id.org/nfdi4ing/metadata4ing#RegistrationAgency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://w3id.org/nfdi4ing/metadata4ing#RegistrationAgency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Role> .
-<http://w3id.org/nfdi4ing/metadata4ing#RegistrationAgency> <http://www.w3.org/2000/01/rdf-schema#label> "registrationagency role"@en .
-# 
-# http://w3id.org/nfdi4ing/metadata4ing#RegistrationAuthority
-<http://w3id.org/nfdi4ing/metadata4ing#RegistrationAuthority> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://w3id.org/nfdi4ing/metadata4ing#RegistrationAuthority> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Role> .
-<http://w3id.org/nfdi4ing/metadata4ing#RegistrationAuthority> <http://www.w3.org/2000/01/rdf-schema#label> "registrationauthority role"@en .
-# 
-# http://w3id.org/nfdi4ing/metadata4ing#RelatedPerson
-<http://w3id.org/nfdi4ing/metadata4ing#RelatedPerson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://w3id.org/nfdi4ing/metadata4ing#RelatedPerson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Role> .
-<http://w3id.org/nfdi4ing/metadata4ing#RelatedPerson> <http://www.w3.org/2000/01/rdf-schema#label> "relatedperson role"@en .
-# 
-# http://w3id.org/nfdi4ing/metadata4ing#ResearchGroup
-<http://w3id.org/nfdi4ing/metadata4ing#ResearchGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://w3id.org/nfdi4ing/metadata4ing#ResearchGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Role> .
-<http://w3id.org/nfdi4ing/metadata4ing#ResearchGroup> <http://www.w3.org/2000/01/rdf-schema#label> "researchgroup role"@en .
-# 
-# http://w3id.org/nfdi4ing/metadata4ing#Researcher
-<http://w3id.org/nfdi4ing/metadata4ing#Researcher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://w3id.org/nfdi4ing/metadata4ing#Researcher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Role> .
-<http://w3id.org/nfdi4ing/metadata4ing#Researcher> <http://www.w3.org/2000/01/rdf-schema#label> "researcher role"@en .
-# 
-# http://w3id.org/nfdi4ing/metadata4ing#RightsHolder
-<http://w3id.org/nfdi4ing/metadata4ing#RightsHolder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://w3id.org/nfdi4ing/metadata4ing#RightsHolder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Role> .
-<http://w3id.org/nfdi4ing/metadata4ing#RightsHolder> <http://www.w3.org/2000/01/rdf-schema#label> "rightsholder role"@en .
-# 
-# http://w3id.org/nfdi4ing/metadata4ing#Sponsor
-<http://w3id.org/nfdi4ing/metadata4ing#Sponsor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://w3id.org/nfdi4ing/metadata4ing#Sponsor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Role> .
-<http://w3id.org/nfdi4ing/metadata4ing#Sponsor> <http://www.w3.org/2000/01/rdf-schema#label> "sponsor role"@en .
-# 
-# http://w3id.org/nfdi4ing/metadata4ing#Supervisor
-<http://w3id.org/nfdi4ing/metadata4ing#Supervisor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://w3id.org/nfdi4ing/metadata4ing#Supervisor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Role> .
-<http://w3id.org/nfdi4ing/metadata4ing#Supervisor> <http://www.w3.org/2000/01/rdf-schema#label> "supervisor role"@en .
-# 
-# http://w3id.org/nfdi4ing/metadata4ing#WorkPackageLeader
-<http://w3id.org/nfdi4ing/metadata4ing#WorkPackageLeader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://w3id.org/nfdi4ing/metadata4ing#WorkPackageLeader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Role> .
-<http://w3id.org/nfdi4ing/metadata4ing#WorkPackageLeader> <http://www.w3.org/2000/01/rdf-schema#label> "workpackageleader role"@en .
-# 
 # https://creativecommons.org/licenses/by/4.0/
 <https://creativecommons.org/licenses/by/4.0/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://creativecommons.org/licenses/by/4.0/> <http://www.w3.org/2000/01/rdf-schema#label> "CC-BY-4.0" .
 # 
 # https://purl.org/ontology/modalia#Annotator
 <https://purl.org/ontology/modalia#Annotator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://purl.org/ontology/modalia#Annotator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Role> .
+<https://purl.org/ontology/modalia#Annotator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Role> .
 <https://purl.org/ontology/modalia#Annotator> <http://www.w3.org/2000/01/rdf-schema#label> "annotator role"@en .
+<https://purl.org/ontology/modalia#Annotator> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://id.loc.gov/vocabulary/relators/ann> .
 # 
 # https://purl.org/ontology/modalia#Beginner
 <https://purl.org/ontology/modalia#Beginner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1879,6 +1811,42 @@ _:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://purl.org/ontology/modalia#Competent> <https://purl.org/ontology/modalia#hasOrder> "3"^^<http://www.w3.org/2001/XMLSchema#integer> .
 <https://purl.org/ontology/modalia#Competent> <http://www.w3.org/2000/01/rdf-schema#label> "competent"@en .
 # 
+# https://purl.org/ontology/modalia#ContactPerson
+<https://purl.org/ontology/modalia#ContactPerson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://purl.org/ontology/modalia#ContactPerson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Role> .
+<https://purl.org/ontology/modalia#ContactPerson> <http://www.w3.org/2000/01/rdf-schema#label> "contactperson role"@en .
+<https://purl.org/ontology/modalia#ContactPerson> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://w3id.org/nfdi4ing/metadata4ing#ContactPerson> .
+# 
+# https://purl.org/ontology/modalia#DataCollector
+<https://purl.org/ontology/modalia#DataCollector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://purl.org/ontology/modalia#DataCollector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Role> .
+<https://purl.org/ontology/modalia#DataCollector> <http://www.w3.org/2000/01/rdf-schema#label> "datacollector role"@en .
+<https://purl.org/ontology/modalia#DataCollector> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://w3id.org/nfdi4ing/metadata4ing#DataCollector> .
+# 
+# https://purl.org/ontology/modalia#DataCurator
+<https://purl.org/ontology/modalia#DataCurator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://purl.org/ontology/modalia#DataCurator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Role> .
+<https://purl.org/ontology/modalia#DataCurator> <http://www.w3.org/2000/01/rdf-schema#label> "datacurator role"@en .
+<https://purl.org/ontology/modalia#DataCurator> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://w3id.org/nfdi4ing/metadata4ing#DataCurator> .
+# 
+# https://purl.org/ontology/modalia#DataManager
+<https://purl.org/ontology/modalia#DataManager> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://purl.org/ontology/modalia#DataManager> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Role> .
+<https://purl.org/ontology/modalia#DataManager> <http://www.w3.org/2000/01/rdf-schema#label> "datamanager role"@en .
+<https://purl.org/ontology/modalia#DataManager> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://id.loc.gov/vocabulary/relators/dtm> .
+# 
+# https://purl.org/ontology/modalia#Distributor
+<https://purl.org/ontology/modalia#Distributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://purl.org/ontology/modalia#Distributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Role> .
+<https://purl.org/ontology/modalia#Distributor> <http://www.w3.org/2000/01/rdf-schema#label> "distributor role"@en .
+<https://purl.org/ontology/modalia#Distributor> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://w3id.org/nfdi4ing/metadata4ing#Distributor> .
+# 
+# https://purl.org/ontology/modalia#Editor
+<https://purl.org/ontology/modalia#Editor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://purl.org/ontology/modalia#Editor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Role> .
+<https://purl.org/ontology/modalia#Editor> <http://www.w3.org/2000/01/rdf-schema#label> "editor role"@en .
+<https://purl.org/ontology/modalia#Editor> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://w3id.org/nfdi4ing/metadata4ing#Editor> .
+# 
 # https://purl.org/ontology/modalia#Expert
 <https://purl.org/ontology/modalia#Expert> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://purl.org/ontology/modalia#Expert> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://purl.org/ontology/modalia#Proficiency> .
@@ -1889,20 +1857,29 @@ _:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://purl.org/ontology/modalia#Expert> <https://purl.org/ontology/modalia#hasOrder> "5"^^<http://www.w3.org/2001/XMLSchema#integer> .
 <https://purl.org/ontology/modalia#Expert> <http://www.w3.org/2000/01/rdf-schema#label> "expert"@en .
 # 
+# https://purl.org/ontology/modalia#HostingInstitution
+<https://purl.org/ontology/modalia#HostingInstitution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://purl.org/ontology/modalia#HostingInstitution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Role> .
+<https://purl.org/ontology/modalia#HostingInstitution> <http://www.w3.org/2000/01/rdf-schema#label> "hostinginstitution role"@en .
+<https://purl.org/ontology/modalia#HostingInstitution> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://w3id.org/nfdi4ing/metadata4ing#HostingInstitution> .
+# 
 # https://purl.org/ontology/modalia#Interviewee
 <https://purl.org/ontology/modalia#Interviewee> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://purl.org/ontology/modalia#Interviewee> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Role> .
+<https://purl.org/ontology/modalia#Interviewee> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Role> .
 <https://purl.org/ontology/modalia#Interviewee> <http://www.w3.org/2000/01/rdf-schema#label> "interviewee role"@en .
+<https://purl.org/ontology/modalia#Interviewee> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://id.loc.gov/vocabulary/relators/ive> .
 # 
 # https://purl.org/ontology/modalia#Interviewer
 <https://purl.org/ontology/modalia#Interviewer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://purl.org/ontology/modalia#Interviewer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Role> .
+<https://purl.org/ontology/modalia#Interviewer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Role> .
 <https://purl.org/ontology/modalia#Interviewer> <http://www.w3.org/2000/01/rdf-schema#label> "interviewer role"@en .
+<https://purl.org/ontology/modalia#Interviewer> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://id.loc.gov/vocabulary/relators/ivr> .
 # 
 # https://purl.org/ontology/modalia#MetadataContact
 <https://purl.org/ontology/modalia#MetadataContact> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://purl.org/ontology/modalia#MetadataContact> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Role> .
+<https://purl.org/ontology/modalia#MetadataContact> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Role> .
 <https://purl.org/ontology/modalia#MetadataContact> <http://www.w3.org/2000/01/rdf-schema#label> "metadatacontact role"@en .
+<https://purl.org/ontology/modalia#MetadataContact> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://id.loc.gov/vocabulary/relators/mdc> .
 # 
 # https://purl.org/ontology/modalia#Novice
 <https://purl.org/ontology/modalia#Novice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1914,6 +1891,18 @@ _:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://purl.org/ontology/modalia#Novice> <https://purl.org/ontology/modalia#hasOrder> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
 <https://purl.org/ontology/modalia#Novice> <http://www.w3.org/2000/01/rdf-schema#label> "novice"@en .
 # 
+# https://purl.org/ontology/modalia#OtherRole
+<https://purl.org/ontology/modalia#OtherRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://purl.org/ontology/modalia#OtherRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Role> .
+<https://purl.org/ontology/modalia#OtherRole> <http://www.w3.org/2000/01/rdf-schema#label> "other role"@en .
+<https://purl.org/ontology/modalia#OtherRole> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://w3id.org/nfdi4ing/metadata4ing#Other> .
+# 
+# https://purl.org/ontology/modalia#Producer
+<https://purl.org/ontology/modalia#Producer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://purl.org/ontology/modalia#Producer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Role> .
+<https://purl.org/ontology/modalia#Producer> <http://www.w3.org/2000/01/rdf-schema#label> "producer role"@en .
+<https://purl.org/ontology/modalia#Producer> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://w3id.org/nfdi4ing/metadata4ing#Producer> .
+# 
 # https://purl.org/ontology/modalia#Proficient
 <https://purl.org/ontology/modalia#Proficient> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://purl.org/ontology/modalia#Proficient> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://purl.org/ontology/modalia#Proficiency> .
@@ -1924,30 +1913,104 @@ _:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://purl.org/ontology/modalia#Proficient> <https://purl.org/ontology/modalia#hasOrder> "4"^^<http://www.w3.org/2001/XMLSchema#integer> .
 <https://purl.org/ontology/modalia#Proficient> <http://www.w3.org/2000/01/rdf-schema#label> "proficient"@en .
 # 
+# https://purl.org/ontology/modalia#ProjectLeader
+<https://purl.org/ontology/modalia#ProjectLeader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://purl.org/ontology/modalia#ProjectLeader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Role> .
+<https://purl.org/ontology/modalia#ProjectLeader> <http://www.w3.org/2000/01/rdf-schema#label> "projectleader role"@en .
+<https://purl.org/ontology/modalia#ProjectLeader> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://w3id.org/nfdi4ing/metadata4ing#ProjectLeader> .
+# 
+# https://purl.org/ontology/modalia#ProjectManager
+<https://purl.org/ontology/modalia#ProjectManager> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://purl.org/ontology/modalia#ProjectManager> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Role> .
+<https://purl.org/ontology/modalia#ProjectManager> <http://www.w3.org/2000/01/rdf-schema#label> "projectmanager role"@en .
+<https://purl.org/ontology/modalia#ProjectManager> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://w3id.org/nfdi4ing/metadata4ing#ProjectManager> .
+# 
+# https://purl.org/ontology/modalia#ProjectMember
+<https://purl.org/ontology/modalia#ProjectMember> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://purl.org/ontology/modalia#ProjectMember> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Role> .
+<https://purl.org/ontology/modalia#ProjectMember> <http://www.w3.org/2000/01/rdf-schema#label> "projectmember role"@en .
+<https://purl.org/ontology/modalia#ProjectMember> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://w3id.org/nfdi4ing/metadata4ing#ProjectMember> .
+# 
 # https://purl.org/ontology/modalia#Proprietary
 <https://purl.org/ontology/modalia#Proprietary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://purl.org/ontology/modalia#Proprietary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://purl.org/ontology/modalia#ProprietaryLicense> .
 <https://purl.org/ontology/modalia#Proprietary> <http://www.w3.org/2000/01/rdf-schema#label> "proprietary license"@en .
 # 
+# https://purl.org/ontology/modalia#RegistrationAgency
+<https://purl.org/ontology/modalia#RegistrationAgency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://purl.org/ontology/modalia#RegistrationAgency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Role> .
+<https://purl.org/ontology/modalia#RegistrationAgency> <http://www.w3.org/2000/01/rdf-schema#label> "registrationagency role"@en .
+<https://purl.org/ontology/modalia#RegistrationAgency> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://w3id.org/nfdi4ing/metadata4ing#RegistrationAgency> .
+# 
+# https://purl.org/ontology/modalia#RegistrationAuthority
+<https://purl.org/ontology/modalia#RegistrationAuthority> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://purl.org/ontology/modalia#RegistrationAuthority> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Role> .
+<https://purl.org/ontology/modalia#RegistrationAuthority> <http://www.w3.org/2000/01/rdf-schema#label> "registrationauthority role"@en .
+<https://purl.org/ontology/modalia#RegistrationAuthority> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://w3id.org/nfdi4ing/metadata4ing#RegistrationAuthority> .
+# 
+# https://purl.org/ontology/modalia#RelatedPerson
+<https://purl.org/ontology/modalia#RelatedPerson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://purl.org/ontology/modalia#RelatedPerson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Role> .
+<https://purl.org/ontology/modalia#RelatedPerson> <http://www.w3.org/2000/01/rdf-schema#label> "relatedperson role"@en .
+<https://purl.org/ontology/modalia#RelatedPerson> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://w3id.org/nfdi4ing/metadata4ing#RelatedPerson> .
+# 
+# https://purl.org/ontology/modalia#ResearchGroup
+<https://purl.org/ontology/modalia#ResearchGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://purl.org/ontology/modalia#ResearchGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Role> .
+<https://purl.org/ontology/modalia#ResearchGroup> <http://www.w3.org/2000/01/rdf-schema#label> "researchgroup role"@en .
+<https://purl.org/ontology/modalia#ResearchGroup> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://w3id.org/nfdi4ing/metadata4ing#ResearchGroup> .
+# 
+# https://purl.org/ontology/modalia#ResearcherRole
+<https://purl.org/ontology/modalia#ResearcherRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://purl.org/ontology/modalia#ResearcherRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Role> .
+<https://purl.org/ontology/modalia#ResearcherRole> <http://www.w3.org/2000/01/rdf-schema#label> "researcher role"@en .
+<https://purl.org/ontology/modalia#ResearcherRole> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://w3id.org/nfdi4ing/metadata4ing#Researcher> .
+# 
+# https://purl.org/ontology/modalia#RightsHolder
+<https://purl.org/ontology/modalia#RightsHolder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://purl.org/ontology/modalia#RightsHolder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Role> .
+<https://purl.org/ontology/modalia#RightsHolder> <http://www.w3.org/2000/01/rdf-schema#label> "rightsholder role"@en .
+<https://purl.org/ontology/modalia#RightsHolder> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://w3id.org/nfdi4ing/metadata4ing#RightsHolder> .
+# 
 # https://purl.org/ontology/modalia#SoftwareDeveloper
 <https://purl.org/ontology/modalia#SoftwareDeveloper> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://purl.org/ontology/modalia#SoftwareDeveloper> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Role> .
-<https://purl.org/ontology/modalia#SoftwareDeveloper> <http://www.w3.org/2000/01/rdf-schema#label> "softwaredeveloper role"@en .
+<https://purl.org/ontology/modalia#SoftwareDeveloper> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Role> .
+<https://purl.org/ontology/modalia#SoftwareDeveloper> <http://www.w3.org/2000/01/rdf-schema#label> "software developer role"@en .
 # 
 # https://purl.org/ontology/modalia#Speaker
 <https://purl.org/ontology/modalia#Speaker> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://purl.org/ontology/modalia#Speaker> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Role> .
+<https://purl.org/ontology/modalia#Speaker> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Role> .
 <https://purl.org/ontology/modalia#Speaker> <http://www.w3.org/2000/01/rdf-schema#label> "speaker role"@en .
+<https://purl.org/ontology/modalia#Speaker> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://id.loc.gov/vocabulary/relators/spk> .
 # 
-# https://purl.org/ontology/modalia#TeacherContributor
-<https://purl.org/ontology/modalia#TeacherContributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://purl.org/ontology/modalia#TeacherContributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Role> .
-<https://purl.org/ontology/modalia#TeacherContributor> <http://www.w3.org/2000/01/rdf-schema#label> "teacher (contributor) role"@en .
+# https://purl.org/ontology/modalia#Sponsor
+<https://purl.org/ontology/modalia#Sponsor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://purl.org/ontology/modalia#Sponsor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Role> .
+<https://purl.org/ontology/modalia#Sponsor> <http://www.w3.org/2000/01/rdf-schema#label> "sponsor role"@en .
+<https://purl.org/ontology/modalia#Sponsor> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://w3id.org/nfdi4ing/metadata4ing#Sponsor> .
+# 
+# https://purl.org/ontology/modalia#Supervisor
+<https://purl.org/ontology/modalia#Supervisor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://purl.org/ontology/modalia#Supervisor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Role> .
+<https://purl.org/ontology/modalia#Supervisor> <http://www.w3.org/2000/01/rdf-schema#label> "supervisor role"@en .
+<https://purl.org/ontology/modalia#Supervisor> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://w3id.org/nfdi4ing/metadata4ing#Supervisor> .
+# 
+# https://purl.org/ontology/modalia#TeacherContributorRole
+<https://purl.org/ontology/modalia#TeacherContributorRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://purl.org/ontology/modalia#TeacherContributorRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Role> .
+<https://purl.org/ontology/modalia#TeacherContributorRole> <http://www.w3.org/2000/01/rdf-schema#label> "teacher (contributor) role"@en .
+<https://purl.org/ontology/modalia#TeacherContributorRole> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://id.loc.gov/vocabulary/relators/tch> .
 # 
 # https://purl.org/ontology/modalia#Translator
 <https://purl.org/ontology/modalia#Translator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://purl.org/ontology/modalia#Translator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Role> .
+<https://purl.org/ontology/modalia#Translator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Role> .
 <https://purl.org/ontology/modalia#Translator> <http://www.w3.org/2000/01/rdf-schema#label> "translator role"@en .
+# 
+# https://purl.org/ontology/modalia#WorkPackageLeader
+<https://purl.org/ontology/modalia#WorkPackageLeader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://purl.org/ontology/modalia#WorkPackageLeader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Role> .
+<https://purl.org/ontology/modalia#WorkPackageLeader> <http://www.w3.org/2000/01/rdf-schema#label> "workpackageleader role"@en .
+<https://purl.org/ontology/modalia#WorkPackageLeader> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://w3id.org/nfdi4ing/metadata4ing#WorkPackageLeader> .
 # 
 # 
 # 

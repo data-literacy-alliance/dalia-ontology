@@ -17,7 +17,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://purl.org/ontology/modalia#","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://purl.org/ontology/modalia#","name":"MoDALIA Ontology", "headline":"The aim of DALIA project is to build a platform for learning material for Research Data Management (RDM) and Data Science. The platform is based on a knowledge graph. We introduce MoDalia, the base ontology of DALIA knowledge graph. Modalia inherits some modules from EduCOR. It includes also modelling of micro -credentials and certificates", "dateReleased":"04-09-2024", "dateModified":"14-10-2025", "version":"v1.0.0", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"BMFTR DALIA project"}], "contributor":[{"@type":"Person","name":"Abdelmoneim Amer Desouki","url":"https://orcid.org/0000-0003-2083-1277"},{"@type":"Person","name":"Marc Fuhrmans","url":"https://orcid.org/0000-0002-9826-018X"},{"@type":"Person","name":"Petra C. Steiner","url":"https://orcid.org/0000-0001-8997-2620"},{"@type":"Person","name":"Charles Tapley Hoyt","url":"https://orcid.org/0000-0003-4423-4370"},{"@type":"Person","name":"Frank Lange","url":"https://orcid.org/0000-0002-9346-6031"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://purl.org/ontology/modalia#","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://purl.org/ontology/modalia#","name":"MoDALIA Ontology", "headline":"The aim of DALIA project is to build a platform for learning material for Research Data Management (RDM) and Data Science. The platform is based on a knowledge graph. We introduce MoDalia, the base ontology of DALIA knowledge graph. Modalia inherits some modules from EduCOR. It includes also modelling of micro -credentials and certificates", "dateReleased":"04-09-2024", "dateModified":"15-10-2025", "version":"v1.0.0", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"BMFTR DALIA project"}], "contributor":[{"@type":"Person","name":"Abdelmoneim Amer Desouki","url":"https://orcid.org/0000-0003-2083-1277"},{"@type":"Person","name":"Marc Fuhrmans","url":"https://orcid.org/0000-0002-9826-018X"},{"@type":"Person","name":"Petra C. Steiner","url":"https://orcid.org/0000-0001-8997-2620"},{"@type":"Person","name":"Charles Tapley Hoyt","url":"https://orcid.org/0000-0003-4423-4370"},{"@type":"Person","name":"Frank Lange","url":"https://orcid.org/0000-0002-9346-6031"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -70,7 +70,7 @@ $(function(){
 
 
 <dl>
-<dt>Modified on: 14-10-2025</dt>
+<dt>Modified on: 15-10-2025</dt>
 <dt>This version:</dt>
 <dd><a href="https://purl.org/ontology/modalia#">https://purl.org/ontology/modalia#</a></dd>
 <dt>Latest version:</dt>
@@ -136,7 +136,6 @@ This is a place holder text for the introduction. The introduction should briefl
 <tr><td><b>ontology</b></td><td>&lt;http://lexvo.org/ontology#&gt;</td></tr>
 <tr><td><b>orcid</b></td><td>&lt;https://orcid.org/&gt;</td></tr>
 <tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl#&gt;</td></tr>
-<tr><td><b>prov</b></td><td>&lt;http://www.w3.org/ns/prov#&gt;</td></tr>
 <tr><td><b>rdf</b></td><td>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</td></tr>
 <tr><td><b>rdfs</b></td><td>&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</td></tr>
 <tr><td><b>rec</b></td><td>&lt;http://purl.org/ontology/rec/core#&gt;</td></tr>
@@ -229,7 +228,7 @@ This ontology has the following classes and properties.</span>
       <a href="#Contributor" title="https://purl.org/ontology/modalia#Contributor">contributor</a>
    </li>
    <li>
-      <a href="#http://www.w3.org/ns/prov#Role" title="http://www.w3.org/ns/prov#Role">contributor role</a>
+      <a href="#http://id.loc.gov/ontologies/bibframe/Role" title="http://id.loc.gov/ontologies/bibframe/Role">contributor role</a>
    </li>
    <li>
       <a href="#Cookbook" title="https://purl.org/ontology/modalia#Cookbook">cookbook</a>
@@ -238,7 +237,7 @@ This ontology has the following classes and properties.</span>
       <a href="#https://w3id.org/kim/hcrt/course" title="https://w3id.org/kim/hcrt/course">course</a>
    </li>
    <li>
-      <a href="#CuratorRole" title="https://purl.org/ontology/modalia#CuratorRole">curator role</a>
+      <a href="#CuratorRole" title="https://purl.org/ontology/modalia#CuratorRole">curator user role</a>
    </li>
    <li>
       <a href="#http://edamontology.org/data_0006" title="http://edamontology.org/data_0006">data</a>
@@ -442,8 +441,8 @@ This ontology has the following classes and properties.</span>
       <a href="#Researcher" title="https://purl.org/ontology/modalia#Researcher">researcher</a>
    </li>
    <li>
-      <a href="#ResearcherRole"
-         title="https://purl.org/ontology/modalia#ResearcherRole">researcher role</a>
+      <a href="#ResearcherUserRole"
+         title="https://purl.org/ontology/modalia#ResearcherUserRole">researcher user role</a>
    </li>
    <li>
       <a href="#https://schema.org/Review" title="https://schema.org/Review">review</a>
@@ -477,7 +476,7 @@ This ontology has the following classes and properties.</span>
       <a href="#TeacherSchool" title="https://purl.org/ontology/modalia#TeacherSchool">teacher (school)</a>
    </li>
    <li>
-      <a href="#TeacherRole" title="https://purl.org/ontology/modalia#TeacherRole">teacher role</a>
+      <a href="#TeacherRole" title="https://purl.org/ontology/modalia#TeacherRole">teacher user role</a>
    </li>
    <li>
       <a href="#https://schema.org/Text" title="https://schema.org/Text">text</a>
@@ -654,7 +653,13 @@ This ontology has the following classes and properties.</span>
       <a href="#http://purl.org/spar/fabio/hasDiscipline" title="http://purl.org/spar/fabio/hasDiscipline">hasDiscipline</a>
    </li>
    <li>
+      <a href="#hasMetadata" title="https://purl.org/ontology/modalia#hasMetadata">hasMetadata</a>
+   </li>
+   <li>
       <a href="#http://purl.org/dc/terms/hasPart" title="http://purl.org/dc/terms/hasPart">hasPart</a>
+   </li>
+   <li>
+      <a href="#hasSourceCode" title="https://purl.org/ontology/modalia#hasSourceCode">hasSourceCode</a>
    </li>
    <li>
       <a href="#isDescribedBy" title="https://purl.org/ontology/modalia#isDescribedBy">is described by</a>
@@ -694,6 +699,9 @@ This ontology has the following classes and properties.</span>
       <a href="#https://schema.org/isBasedOn" title="https://schema.org/isBasedOn">isBasedOn</a>
    </li>
    <li>
+      <a href="#https://w3id.org/citedcat-ap/isCompiledBy" title="https://w3id.org/citedcat-ap/isCompiledBy">isCompiledBy</a>
+   </li>
+   <li>
       <a href="#https://w3id.org/citedcat-ap/isContinuedBy" title="https://w3id.org/citedcat-ap/isContinuedBy">isContinuedBy</a>
    </li>
    <li>
@@ -704,6 +712,10 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#http://purl.org/dc/terms/isReplacedBy" title="http://purl.org/dc/terms/isReplacedBy">isReplacedBy</a>
+   </li>
+   <li>
+      <a href="#isSourceCodeOf"
+         title="https://purl.org/ontology/modalia#isSourceCodeOf">isSourceCodeOf</a>
    </li>
    <li>
       <a href="#https://w3id.org/citedcat-ap/isSupplementedBy" title="https://w3id.org/citedcat-ap/isSupplementedBy">isSupplementedBy</a>
@@ -741,6 +753,9 @@ This ontology has the following classes and properties.</span>
       <a href="#http://purl.org/dc/terms/replaces" title="http://purl.org/dc/terms/replaces">replaces</a>
    </li>
    <li>
+      <a href="#http://purl.org/dc/terms/requires" title="http://purl.org/dc/terms/requires">requires</a>
+   </li>
+   <li>
       <a href="#requiresKnowledge"
          title="https://purl.org/ontology/modalia#requiresKnowledge">requires knowledge</a>
    </li>
@@ -775,6 +790,9 @@ This ontology has the following classes and properties.</span>
     class="hlist">
    <li>
       <a href="#https://schema.org/abstract" title="https://schema.org/abstract">abstract</a>
+   </li>
+   <li>
+      <a href="#https://schema.org/accessibilityfeature" title="https://schema.org/accessibilityfeature">accessibilityfeature</a>
    </li>
    <li>
       <a href="#citation" title="https://purl.org/ontology/modalia#citation">citation</a>
@@ -1011,34 +1029,29 @@ This ontology has the following classes and properties.</span>
       <a href="#Competent" title="https://purl.org/ontology/modalia#Competent">competent</a>
    </li>
    <li>
-      <a href="#http://w3id.org/nfdi4ing/metadata4ing#ContactPerson"
-         title="http://w3id.org/nfdi4ing/metadata4ing#ContactPerson">contact person</a>
+      <a href="#ContactPerson" title="https://purl.org/ontology/modalia#ContactPerson">contactperson role</a>
    </li>
    <li>
-      <a href="#http://w3id.org/nfdi4ing/metadata4ing#DataCurator"
-         title="http://w3id.org/nfdi4ing/metadata4ing#DataCurator">data curator role</a>
+      <a href="#DataCollector" title="https://purl.org/ontology/modalia#DataCollector">datacollector role</a>
    </li>
    <li>
-      <a href="#http://w3id.org/nfdi4ing/metadata4ing#DataManager"
-         title="http://w3id.org/nfdi4ing/metadata4ing#DataManager">data manager role</a>
+      <a href="#DataCurator" title="https://purl.org/ontology/modalia#DataCurator">datacurator role</a>
    </li>
    <li>
-      <a href="#http://w3id.org/nfdi4ing/metadata4ing#DataCollector"
-         title="http://w3id.org/nfdi4ing/metadata4ing#DataCollector">datacollector role</a>
+      <a href="#DataManager" title="https://purl.org/ontology/modalia#DataManager">datamanager role</a>
    </li>
    <li>
-      <a href="#http://w3id.org/nfdi4ing/metadata4ing#Distributor"
-         title="http://w3id.org/nfdi4ing/metadata4ing#Distributor">distributor role</a>
+      <a href="#Distributor" title="https://purl.org/ontology/modalia#Distributor">distributor role</a>
    </li>
    <li>
-      <a href="#http://w3id.org/nfdi4ing/metadata4ing#Editor" title="http://w3id.org/nfdi4ing/metadata4ing#Editor">editor role</a>
+      <a href="#Editor" title="https://purl.org/ontology/modalia#Editor">editor role</a>
    </li>
    <li>
       <a href="#Expert" title="https://purl.org/ontology/modalia#Expert">expert</a>
    </li>
    <li>
-      <a href="#http://w3id.org/nfdi4ing/metadata4ing#HostingInstitution"
-         title="http://w3id.org/nfdi4ing/metadata4ing#HostingInstitution">hostinginstitution role</a>
+      <a href="#HostingInstitution"
+         title="https://purl.org/ontology/modalia#HostingInstitution">hostinginstitution role</a>
    </li>
    <li>
       <a href="#Interviewee" title="https://purl.org/ontology/modalia#Interviewee">interviewee role</a>
@@ -1054,77 +1067,71 @@ This ontology has the following classes and properties.</span>
       <a href="#Novice" title="https://purl.org/ontology/modalia#Novice">novice</a>
    </li>
    <li>
-      <a href="#http://w3id.org/nfdi4ing/metadata4ing#Other" title="http://w3id.org/nfdi4ing/metadata4ing#Other">otherperson role</a>
+      <a href="#OtherRole" title="https://purl.org/ontology/modalia#OtherRole">other role</a>
    </li>
    <li>
-      <a href="#http://w3id.org/nfdi4ing/metadata4ing#Producer" title="http://w3id.org/nfdi4ing/metadata4ing#Producer">producer role</a>
+      <a href="#Producer" title="https://purl.org/ontology/modalia#Producer">producer role</a>
    </li>
    <li>
       <a href="#Proficient" title="https://purl.org/ontology/modalia#Proficient">proficient</a>
    </li>
    <li>
-      <a href="#http://w3id.org/nfdi4ing/metadata4ing#ProjectLeader"
-         title="http://w3id.org/nfdi4ing/metadata4ing#ProjectLeader">projectleader role</a>
+      <a href="#ProjectLeader" title="https://purl.org/ontology/modalia#ProjectLeader">projectleader role</a>
    </li>
    <li>
-      <a href="#http://w3id.org/nfdi4ing/metadata4ing#ProjectManager"
-         title="http://w3id.org/nfdi4ing/metadata4ing#ProjectManager">projectmanager role</a>
+      <a href="#ProjectManager"
+         title="https://purl.org/ontology/modalia#ProjectManager">projectmanager role</a>
    </li>
    <li>
-      <a href="#http://w3id.org/nfdi4ing/metadata4ing#ProjectMember"
-         title="http://w3id.org/nfdi4ing/metadata4ing#ProjectMember">projectmember role</a>
+      <a href="#ProjectMember" title="https://purl.org/ontology/modalia#ProjectMember">projectmember role</a>
    </li>
    <li>
       <a href="#Proprietary" title="https://purl.org/ontology/modalia#Proprietary">proprietary license</a>
    </li>
    <li>
-      <a href="#http://w3id.org/nfdi4ing/metadata4ing#RegistrationAgency"
-         title="http://w3id.org/nfdi4ing/metadata4ing#RegistrationAgency">registrationagency role</a>
+      <a href="#RegistrationAgency"
+         title="https://purl.org/ontology/modalia#RegistrationAgency">registrationagency role</a>
    </li>
    <li>
-      <a href="#http://w3id.org/nfdi4ing/metadata4ing#RegistrationAuthority"
-         title="http://w3id.org/nfdi4ing/metadata4ing#RegistrationAuthority">registrationauthority role</a>
+      <a href="#RegistrationAuthority"
+         title="https://purl.org/ontology/modalia#RegistrationAuthority">registrationauthority role</a>
    </li>
    <li>
-      <a href="#http://w3id.org/nfdi4ing/metadata4ing#RelatedPerson"
-         title="http://w3id.org/nfdi4ing/metadata4ing#RelatedPerson">relatedperson role</a>
+      <a href="#RelatedPerson" title="https://purl.org/ontology/modalia#RelatedPerson">relatedperson role</a>
    </li>
    <li>
-      <a href="#http://w3id.org/nfdi4ing/metadata4ing#Researcher"
-         title="http://w3id.org/nfdi4ing/metadata4ing#Researcher">researcher role</a>
+      <a href="#ResearcherRole"
+         title="https://purl.org/ontology/modalia#ResearcherRole">researcher role</a>
    </li>
    <li>
-      <a href="#http://w3id.org/nfdi4ing/metadata4ing#ResearchGroup"
-         title="http://w3id.org/nfdi4ing/metadata4ing#ResearchGroup">researchgroup role</a>
+      <a href="#ResearchGroup" title="https://purl.org/ontology/modalia#ResearchGroup">researchgroup role</a>
    </li>
    <li>
-      <a href="#http://w3id.org/nfdi4ing/metadata4ing#RightsHolder"
-         title="http://w3id.org/nfdi4ing/metadata4ing#RightsHolder">rightsholder role</a>
+      <a href="#RightsHolder" title="https://purl.org/ontology/modalia#RightsHolder">rightsholder role</a>
    </li>
    <li>
       <a href="#SoftwareDeveloper"
-         title="https://purl.org/ontology/modalia#SoftwareDeveloper">softwaredeveloper role</a>
+         title="https://purl.org/ontology/modalia#SoftwareDeveloper">software developer role</a>
    </li>
    <li>
       <a href="#Speaker" title="https://purl.org/ontology/modalia#Speaker">speaker role</a>
    </li>
    <li>
-      <a href="#http://w3id.org/nfdi4ing/metadata4ing#Sponsor" title="http://w3id.org/nfdi4ing/metadata4ing#Sponsor">sponsor role</a>
+      <a href="#Sponsor" title="https://purl.org/ontology/modalia#Sponsor">sponsor role</a>
    </li>
    <li>
-      <a href="#http://w3id.org/nfdi4ing/metadata4ing#Supervisor"
-         title="http://w3id.org/nfdi4ing/metadata4ing#Supervisor">supervisor role</a>
+      <a href="#Supervisor" title="https://purl.org/ontology/modalia#Supervisor">supervisor role</a>
    </li>
    <li>
-      <a href="#TeacherContributor"
-         title="https://purl.org/ontology/modalia#TeacherContributor">teacher (contributor) role</a>
+      <a href="#TeacherContributorRole"
+         title="https://purl.org/ontology/modalia#TeacherContributorRole">teacher (contributor) role</a>
    </li>
    <li>
       <a href="#Translator" title="https://purl.org/ontology/modalia#Translator">translator role</a>
    </li>
    <li>
-      <a href="#http://w3id.org/nfdi4ing/metadata4ing#WorkPackageLeader"
-         title="http://w3id.org/nfdi4ing/metadata4ing#WorkPackageLeader">workpackageleader role</a>
+      <a href="#WorkPackageLeader"
+         title="https://purl.org/ontology/modalia#WorkPackageLeader">workpackageleader role</a>
    </li>
 </ul><iframe src="webvowl/index.html"></iframe> 
 </div>
@@ -1159,10 +1166,10 @@ This section provides details for each class and property defined by MoDALIA.
   <li><a href="#ContentQuality" title="https://purl.org/ontology/modalia#ContentQuality">content quality</a></li>
   <li><a href="#http://id.loc.gov/ontologies/bibframe/Contribution" title="http://id.loc.gov/ontologies/bibframe/Contribution"> <span>Contribution</span> </a></li>
   <li><a href="#Contributor" title="https://purl.org/ontology/modalia#Contributor">contributor</a></li>
-  <li><a href="#http://www.w3.org/ns/prov#Role" title="http://www.w3.org/ns/prov#Role">contributor role</a></li>
+  <li><a href="#http://id.loc.gov/ontologies/bibframe/Role" title="http://id.loc.gov/ontologies/bibframe/Role">contributor role</a></li>
   <li><a href="#Cookbook" title="https://purl.org/ontology/modalia#Cookbook">cookbook</a></li>
   <li><a href="#https://w3id.org/kim/hcrt/course" title="https://w3id.org/kim/hcrt/course">course</a></li>
-  <li><a href="#CuratorRole" title="https://purl.org/ontology/modalia#CuratorRole">curator role</a></li>
+  <li><a href="#CuratorRole" title="https://purl.org/ontology/modalia#CuratorRole">curator user role</a></li>
   <li><a href="#http://edamontology.org/data_0006" title="http://edamontology.org/data_0006">data</a></li>
   <li><a href="#https://w3id.org/kim/hcrt/data" title="https://w3id.org/kim/hcrt/data">data</a></li>
   <li><a href="#DataLifeCyclePhase" title="https://purl.org/ontology/modalia#DataLifeCyclePhase">data life cycle phase</a></li>
@@ -1224,7 +1231,7 @@ This section provides details for each class and property defined by MoDALIA.
   <li><a href="#http://purl.org/ontology/bibo/Report" title="http://purl.org/ontology/bibo/Report">report</a></li>
   <li><a href="#http://w3id.org/nfdi4ing/metadata4ing#Method" title="http://w3id.org/nfdi4ing/metadata4ing#Method">research method</a></li>
   <li><a href="#Researcher" title="https://purl.org/ontology/modalia#Researcher">researcher</a></li>
-  <li><a href="#ResearcherRole" title="https://purl.org/ontology/modalia#ResearcherRole">researcher role</a></li>
+  <li><a href="#ResearcherUserRole" title="https://purl.org/ontology/modalia#ResearcherUserRole">researcher user role</a></li>
   <li><a href="#https://schema.org/Review" title="https://schema.org/Review">review</a></li>
   <li><a href="#https://w3id.org/kim/hcrt/script" title="https://w3id.org/kim/hcrt/script">script</a></li>
   <li><a href="#https://w3id.org/kim/hcrt/sheet_music" title="https://w3id.org/kim/hcrt/sheet_music">sheet_music</a></li>
@@ -1235,7 +1242,7 @@ This section provides details for each class and property defined by MoDALIA.
   <li><a href="#TargetGroup" title="https://purl.org/ontology/modalia#TargetGroup">target group</a></li>
   <li><a href="#TeacherHigherEducation" title="https://purl.org/ontology/modalia#TeacherHigherEducation">teacher (higher education)</a></li>
   <li><a href="#TeacherSchool" title="https://purl.org/ontology/modalia#TeacherSchool">teacher (school)</a></li>
-  <li><a href="#TeacherRole" title="https://purl.org/ontology/modalia#TeacherRole">teacher role</a></li>
+  <li><a href="#TeacherRole" title="https://purl.org/ontology/modalia#TeacherRole">teacher user role</a></li>
   <li><a href="#https://schema.org/Text" title="https://schema.org/Text">text</a></li>
   <li><a href="#https://w3id.org/kim/hcrt/textbook" title="https://w3id.org/kim/hcrt/textbook">textbook</a></li>
   <li><a href="#http://purl.org/ontology/bibo/Thesis" title="http://purl.org/ontology/bibo/Thesis">thesis</a></li>
@@ -1590,9 +1597,9 @@ This section provides details for each class and property defined by MoDALIA.
    </dd>
   </dl>
  </div>
- <div class="entity" id="http://www.w3.org/ns/prov#Role">
+ <div class="entity" id="http://id.loc.gov/ontologies/bibframe/Role">
   <h3>contributor role<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.w3.org/ns/prov#Role</p>
+  <p><strong>IRI:</strong> http://id.loc.gov/ontologies/bibframe/Role</p>
   <div class="comment">
    <span class="markdown">types of contribution to an OER.</span>
   </div>
@@ -1615,7 +1622,7 @@ This section provides details for each class and property defined by MoDALIA.
     has members
    </dt>
    <dd>
-    <a href="#Annotator" title="https://purl.org/ontology/modalia#Annotator">annotator role</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/nfdi4ing/metadata4ing#ContactPerson" title="http://w3id.org/nfdi4ing/metadata4ing#ContactPerson">contact person</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/nfdi4ing/metadata4ing#DataCurator" title="http://w3id.org/nfdi4ing/metadata4ing#DataCurator">data curator role</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/nfdi4ing/metadata4ing#DataManager" title="http://w3id.org/nfdi4ing/metadata4ing#DataManager">data manager role</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/nfdi4ing/metadata4ing#DataCollector" title="http://w3id.org/nfdi4ing/metadata4ing#DataCollector">datacollector role</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/nfdi4ing/metadata4ing#Distributor" title="http://w3id.org/nfdi4ing/metadata4ing#Distributor">distributor role</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/nfdi4ing/metadata4ing#Editor" title="http://w3id.org/nfdi4ing/metadata4ing#Editor">editor role</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/nfdi4ing/metadata4ing#HostingInstitution" title="http://w3id.org/nfdi4ing/metadata4ing#HostingInstitution">hostinginstitution role</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Interviewee" title="https://purl.org/ontology/modalia#Interviewee">interviewee role</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Interviewer" title="https://purl.org/ontology/modalia#Interviewer">interviewer role</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#MetadataContact" title="https://purl.org/ontology/modalia#MetadataContact">metadatacontact role</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/nfdi4ing/metadata4ing#Other" title="http://w3id.org/nfdi4ing/metadata4ing#Other">otherperson role</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/nfdi4ing/metadata4ing#Producer" title="http://w3id.org/nfdi4ing/metadata4ing#Producer">producer role</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/nfdi4ing/metadata4ing#ProjectLeader" title="http://w3id.org/nfdi4ing/metadata4ing#ProjectLeader">projectleader role</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/nfdi4ing/metadata4ing#ProjectManager" title="http://w3id.org/nfdi4ing/metadata4ing#ProjectManager">projectmanager role</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/nfdi4ing/metadata4ing#ProjectMember" title="http://w3id.org/nfdi4ing/metadata4ing#ProjectMember">projectmember role</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/nfdi4ing/metadata4ing#RegistrationAgency" title="http://w3id.org/nfdi4ing/metadata4ing#RegistrationAgency">registrationagency role</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/nfdi4ing/metadata4ing#RegistrationAuthority" title="http://w3id.org/nfdi4ing/metadata4ing#RegistrationAuthority">registrationauthority role</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/nfdi4ing/metadata4ing#RelatedPerson" title="http://w3id.org/nfdi4ing/metadata4ing#RelatedPerson">relatedperson role</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/nfdi4ing/metadata4ing#Researcher" title="http://w3id.org/nfdi4ing/metadata4ing#Researcher">researcher role</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/nfdi4ing/metadata4ing#ResearchGroup" title="http://w3id.org/nfdi4ing/metadata4ing#ResearchGroup">researchgroup role</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/nfdi4ing/metadata4ing#RightsHolder" title="http://w3id.org/nfdi4ing/metadata4ing#RightsHolder">rightsholder role</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#SoftwareDeveloper" title="https://purl.org/ontology/modalia#SoftwareDeveloper">softwaredeveloper role</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Speaker" title="https://purl.org/ontology/modalia#Speaker">speaker role</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/nfdi4ing/metadata4ing#Sponsor" title="http://w3id.org/nfdi4ing/metadata4ing#Sponsor">sponsor role</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/nfdi4ing/metadata4ing#Supervisor" title="http://w3id.org/nfdi4ing/metadata4ing#Supervisor">supervisor role</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#TeacherContributor" title="https://purl.org/ontology/modalia#TeacherContributor">teacher (contributor) role</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Translator" title="https://purl.org/ontology/modalia#Translator">translator role</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/nfdi4ing/metadata4ing#WorkPackageLeader" title="http://w3id.org/nfdi4ing/metadata4ing#WorkPackageLeader">workpackageleader role</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#Annotator" title="https://purl.org/ontology/modalia#Annotator">annotator role</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#ContactPerson" title="https://purl.org/ontology/modalia#ContactPerson">contactperson role</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#DataCollector" title="https://purl.org/ontology/modalia#DataCollector">datacollector role</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#DataCurator" title="https://purl.org/ontology/modalia#DataCurator">datacurator role</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#DataManager" title="https://purl.org/ontology/modalia#DataManager">datamanager role</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Distributor" title="https://purl.org/ontology/modalia#Distributor">distributor role</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Editor" title="https://purl.org/ontology/modalia#Editor">editor role</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#HostingInstitution" title="https://purl.org/ontology/modalia#HostingInstitution">hostinginstitution role</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Interviewee" title="https://purl.org/ontology/modalia#Interviewee">interviewee role</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Interviewer" title="https://purl.org/ontology/modalia#Interviewer">interviewer role</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#MetadataContact" title="https://purl.org/ontology/modalia#MetadataContact">metadatacontact role</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#OtherRole" title="https://purl.org/ontology/modalia#OtherRole">other role</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Producer" title="https://purl.org/ontology/modalia#Producer">producer role</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#ProjectLeader" title="https://purl.org/ontology/modalia#ProjectLeader">projectleader role</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#ProjectManager" title="https://purl.org/ontology/modalia#ProjectManager">projectmanager role</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#ProjectMember" title="https://purl.org/ontology/modalia#ProjectMember">projectmember role</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#RegistrationAgency" title="https://purl.org/ontology/modalia#RegistrationAgency">registrationagency role</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#RegistrationAuthority" title="https://purl.org/ontology/modalia#RegistrationAuthority">registrationauthority role</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#RelatedPerson" title="https://purl.org/ontology/modalia#RelatedPerson">relatedperson role</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#ResearcherRole" title="https://purl.org/ontology/modalia#ResearcherRole">researcher role</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#ResearchGroup" title="https://purl.org/ontology/modalia#ResearchGroup">researchgroup role</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#RightsHolder" title="https://purl.org/ontology/modalia#RightsHolder">rightsholder role</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#SoftwareDeveloper" title="https://purl.org/ontology/modalia#SoftwareDeveloper">software developer role</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Speaker" title="https://purl.org/ontology/modalia#Speaker">speaker role</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Sponsor" title="https://purl.org/ontology/modalia#Sponsor">sponsor role</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Supervisor" title="https://purl.org/ontology/modalia#Supervisor">supervisor role</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#TeacherContributorRole" title="https://purl.org/ontology/modalia#TeacherContributorRole">teacher (contributor) role</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Translator" title="https://purl.org/ontology/modalia#Translator">translator role</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#WorkPackageLeader" title="https://purl.org/ontology/modalia#WorkPackageLeader">workpackageleader role</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
   </dl>
  </div>
@@ -1644,7 +1651,7 @@ This section provides details for each class and property defined by MoDALIA.
   </dl>
  </div>
  <div class="entity" id="CuratorRole">
-  <h3>curator role<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <h3>curator user role<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://purl.org/ontology/modalia#CuratorRole</p>
   <dl class="description">
    <dt>
@@ -1870,7 +1877,7 @@ This section provides details for each class and property defined by MoDALIA.
     is in domain of
    </dt>
    <dd>
-    <a href="#https://schema.org/datePublished" title="https://schema.org/datePublished">Publication Date</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://schema.org/abstract" title="https://schema.org/abstract">abstract</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://schema.org/author" title="https://schema.org/author">author</a> <sup class="type-op" title="object property">op</sup>, <a href="#citation" title="https://purl.org/ontology/modalia#citation">citation</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/citedcat-ap/continues" title="https://w3id.org/citedcat-ap/continues">continues</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://id.loc.gov/ontologies/bibframe/contribution" title="http://id.loc.gov/ontologies/bibframe/contribution">contribution</a> <sup class="type-op" title="object property">op</sup>, <a href="#covers" title="https://purl.org/ontology/modalia#covers">covers</a> <sup class="type-op" title="object property">op</sup>, <a href="#describes" title="https://purl.org/ontology/modalia#describes">describes</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/dc/terms/format" title="http://purl.org/dc/terms/format">file format</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://schema.org/fileSize" title="https://schema.org/fileSize">fileSize</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#givesProficiencyLevel" title="https://purl.org/ontology/modalia#givesProficiencyLevel">gives proficiency level</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasDOI" title="https://purl.org/ontology/modalia#hasDOI">has DOI</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#authorUnordered" title="https://purl.org/ontology/modalia#authorUnordered">has author (unordered)</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://schema.org/downloadUrl" title="https://schema.org/downloadUrl">has download URL</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasLearningObjective" title="https://purl.org/ontology/modalia#hasLearningObjective">has learning objective</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasLearningType" title="https://purl.org/ontology/modalia#hasLearningType">has learning type</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasMediaType" title="https://purl.org/ontology/modalia#hasMediaType">has media type</a> <sup class="type-op" title="object property">op</sup>, <a href="#notesForLearner" title="https://purl.org/ontology/modalia#notesForLearner">has notes for learner</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasQuality" title="https://purl.org/ontology/modalia#hasQuality">has quality</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasRating" title="https://purl.org/ontology/modalia#hasRating">has rating</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/spar/fabio/hasSubtitle" title="http://purl.org/spar/fabio/hasSubtitle">has subtitle</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasTargetGroup" title="https://purl.org/ontology/modalia#hasTargetGroup">has target group</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasTranslation" title="https://purl.org/ontology/modalia#hasTranslation">has translation</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/spar/fabio/hasDiscipline" title="http://purl.org/spar/fabio/hasDiscipline">hasDiscipline</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/dc/terms/hasPart" title="http://purl.org/dc/terms/hasPart">hasPart</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://schema.org/identifier" title="https://schema.org/identifier">identifier</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://schema.org/image" title="https://schema.org/image">image</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#isDescribedBy" title="https://purl.org/ontology/modalia#isDescribedBy">is described by</a> <sup class="type-op" title="object property">op</sup>, <a href="#isDuplicateOf" title="https://purl.org/ontology/modalia#isDuplicateOf">is duplicate of</a> <sup class="type-op" title="object property">op</sup>, <a href="#isIdenticalTo" title="https://purl.org/ontology/modalia#isIdenticalTo">is identical to</a> <sup class="type-op" title="object property">op</sup>, <a href="#isNewVersionOf" title="https://purl.org/ontology/modalia#isNewVersionOf">is new version of</a> <sup class="type-op" title="object property">op</sup>, <a href="#isPreviousVersionOf" title="https://purl.org/ontology/modalia#isPreviousVersionOf">is previous version of</a> <sup class="type-op" title="object property">op</sup>, <a href="#isTranslationOf" title="https://purl.org/ontology/modalia#isTranslationOf">is translation of</a> <sup class="type-op" title="object property">op</sup>, <a href="#isVersionOf" title="https://purl.org/ontology/modalia#isVersionOf">is version of</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://schema.org/isAccessibleForFree" title="https://schema.org/isAccessibleForFree">isAccessibleForFree</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://schema.org/isBasedOn" title="https://schema.org/isBasedOn">isBasedOn</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/citedcat-ap/isContinuedBy" title="https://w3id.org/citedcat-ap/isContinuedBy">isContinuedBy</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/dc/terms/isPartOf" title="http://purl.org/dc/terms/isPartOf">isPartOf</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/dc/terms/isReferencedBy" title="http://purl.org/dc/terms/isReferencedBy">isReferencedBy</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/dc/terms/isReplacedBy" title="http://purl.org/dc/terms/isReplacedBy">isReplacedBy</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/citedcat-ap/isSupplementTo" title="https://w3id.org/citedcat-ap/isSupplementTo">isSupplementTo</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/citedcat-ap/isSupplementedBy" title="https://w3id.org/citedcat-ap/isSupplementedBy">isSupplementedBy</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/dc/terms/issued" title="http://purl.org/dc/terms/issued">issued</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://schema.org/keywords" title="https://schema.org/keywords">keywords</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://purl.org/dc/terms/language" title="http://purl.org/dc/terms/language">language</a> <sup class="type-op" title="object property">op</sup>, <a href="http://purl.org/dc/terms/license" target="_blank" title="http://purl.org/dc/terms/license">license</a> <sup class="type-ap" title="annotation property">ap</sup>, <a href="#likesCount" title="https://purl.org/ontology/modalia#likesCount">likes count</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#recommender" title="https://purl.org/ontology/modalia#recommender">recommender</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/dc/terms/references" title="http://purl.org/dc/terms/references">references</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/dc/terms/relation" title="http://purl.org/dc/terms/relation">relation</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/dc/terms/replaces" title="http://purl.org/dc/terms/replaces">replaces</a> <sup class="type-op" title="object property">op</sup>, <a href="#requiresProficiencyLevel" title="https://purl.org/ontology/modalia#requiresProficiencyLevel">requires proficiency level</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/dc/terms/rights" title="http://purl.org/dc/terms/rights">rights</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#supportinghost" title="https://purl.org/ontology/modalia#supportinghost">supportinghost</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://schema.org/teaches" title="https://schema.org/teaches">teaches</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#teachesSkill" title="https://purl.org/ontology/modalia#teachesSkill">teaches skill</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://schema.org/timeRequired" title="https://schema.org/timeRequired">timeRequired</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://schema.org/url" title="https://schema.org/url">url</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://schema.org/version" title="https://schema.org/version">version</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#viewCount" title="https://purl.org/ontology/modalia#viewCount">view count</a> <sup class="type-dp" title="data property">dp</sup>
+    <a href="#https://schema.org/datePublished" title="https://schema.org/datePublished">Publication Date</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://schema.org/abstract" title="https://schema.org/abstract">abstract</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://schema.org/accessibilityfeature" title="https://schema.org/accessibilityfeature">accessibilityfeature</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://schema.org/author" title="https://schema.org/author">author</a> <sup class="type-op" title="object property">op</sup>, <a href="#citation" title="https://purl.org/ontology/modalia#citation">citation</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/citedcat-ap/continues" title="https://w3id.org/citedcat-ap/continues">continues</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://id.loc.gov/ontologies/bibframe/contribution" title="http://id.loc.gov/ontologies/bibframe/contribution">contribution</a> <sup class="type-op" title="object property">op</sup>, <a href="#covers" title="https://purl.org/ontology/modalia#covers">covers</a> <sup class="type-op" title="object property">op</sup>, <a href="#describes" title="https://purl.org/ontology/modalia#describes">describes</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/dc/terms/format" title="http://purl.org/dc/terms/format">file format</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://schema.org/fileSize" title="https://schema.org/fileSize">fileSize</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#givesProficiencyLevel" title="https://purl.org/ontology/modalia#givesProficiencyLevel">gives proficiency level</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasDOI" title="https://purl.org/ontology/modalia#hasDOI">has DOI</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#authorUnordered" title="https://purl.org/ontology/modalia#authorUnordered">has author (unordered)</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://schema.org/downloadUrl" title="https://schema.org/downloadUrl">has download URL</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasLearningObjective" title="https://purl.org/ontology/modalia#hasLearningObjective">has learning objective</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasLearningType" title="https://purl.org/ontology/modalia#hasLearningType">has learning type</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasMediaType" title="https://purl.org/ontology/modalia#hasMediaType">has media type</a> <sup class="type-op" title="object property">op</sup>, <a href="#notesForLearner" title="https://purl.org/ontology/modalia#notesForLearner">has notes for learner</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasQuality" title="https://purl.org/ontology/modalia#hasQuality">has quality</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasRating" title="https://purl.org/ontology/modalia#hasRating">has rating</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/spar/fabio/hasSubtitle" title="http://purl.org/spar/fabio/hasSubtitle">has subtitle</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasTargetGroup" title="https://purl.org/ontology/modalia#hasTargetGroup">has target group</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasTranslation" title="https://purl.org/ontology/modalia#hasTranslation">has translation</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/spar/fabio/hasDiscipline" title="http://purl.org/spar/fabio/hasDiscipline">hasDiscipline</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasMetadata" title="https://purl.org/ontology/modalia#hasMetadata">hasMetadata</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/dc/terms/hasPart" title="http://purl.org/dc/terms/hasPart">hasPart</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasSourceCode" title="https://purl.org/ontology/modalia#hasSourceCode">hasSourceCode</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://schema.org/identifier" title="https://schema.org/identifier">identifier</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://schema.org/image" title="https://schema.org/image">image</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#isDescribedBy" title="https://purl.org/ontology/modalia#isDescribedBy">is described by</a> <sup class="type-op" title="object property">op</sup>, <a href="#isDuplicateOf" title="https://purl.org/ontology/modalia#isDuplicateOf">is duplicate of</a> <sup class="type-op" title="object property">op</sup>, <a href="#isIdenticalTo" title="https://purl.org/ontology/modalia#isIdenticalTo">is identical to</a> <sup class="type-op" title="object property">op</sup>, <a href="#isNewVersionOf" title="https://purl.org/ontology/modalia#isNewVersionOf">is new version of</a> <sup class="type-op" title="object property">op</sup>, <a href="#isPreviousVersionOf" title="https://purl.org/ontology/modalia#isPreviousVersionOf">is previous version of</a> <sup class="type-op" title="object property">op</sup>, <a href="#isTranslationOf" title="https://purl.org/ontology/modalia#isTranslationOf">is translation of</a> <sup class="type-op" title="object property">op</sup>, <a href="#isVersionOf" title="https://purl.org/ontology/modalia#isVersionOf">is version of</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://schema.org/isAccessibleForFree" title="https://schema.org/isAccessibleForFree">isAccessibleForFree</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://schema.org/isBasedOn" title="https://schema.org/isBasedOn">isBasedOn</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/citedcat-ap/isCompiledBy" title="https://w3id.org/citedcat-ap/isCompiledBy">isCompiledBy</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/citedcat-ap/isContinuedBy" title="https://w3id.org/citedcat-ap/isContinuedBy">isContinuedBy</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/dc/terms/isPartOf" title="http://purl.org/dc/terms/isPartOf">isPartOf</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/dc/terms/isReferencedBy" title="http://purl.org/dc/terms/isReferencedBy">isReferencedBy</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/dc/terms/isReplacedBy" title="http://purl.org/dc/terms/isReplacedBy">isReplacedBy</a> <sup class="type-op" title="object property">op</sup>, <a href="#isSourceCodeOf" title="https://purl.org/ontology/modalia#isSourceCodeOf">isSourceCodeOf</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/citedcat-ap/isSupplementTo" title="https://w3id.org/citedcat-ap/isSupplementTo">isSupplementTo</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/citedcat-ap/isSupplementedBy" title="https://w3id.org/citedcat-ap/isSupplementedBy">isSupplementedBy</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/dc/terms/issued" title="http://purl.org/dc/terms/issued">issued</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://schema.org/keywords" title="https://schema.org/keywords">keywords</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://purl.org/dc/terms/language" title="http://purl.org/dc/terms/language">language</a> <sup class="type-op" title="object property">op</sup>, <a href="http://purl.org/dc/terms/license" target="_blank" title="http://purl.org/dc/terms/license">license</a> <sup class="type-ap" title="annotation property">ap</sup>, <a href="#likesCount" title="https://purl.org/ontology/modalia#likesCount">likes count</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#recommender" title="https://purl.org/ontology/modalia#recommender">recommender</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/dc/terms/references" title="http://purl.org/dc/terms/references">references</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/dc/terms/relation" title="http://purl.org/dc/terms/relation">relation</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/dc/terms/replaces" title="http://purl.org/dc/terms/replaces">replaces</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/dc/terms/requires" title="http://purl.org/dc/terms/requires">requires</a> <sup class="type-op" title="object property">op</sup>, <a href="#requiresProficiencyLevel" title="https://purl.org/ontology/modalia#requiresProficiencyLevel">requires proficiency level</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/dc/terms/rights" title="http://purl.org/dc/terms/rights">rights</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#supportinghost" title="https://purl.org/ontology/modalia#supportinghost">supportinghost</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://schema.org/teaches" title="https://schema.org/teaches">teaches</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#teachesSkill" title="https://purl.org/ontology/modalia#teachesSkill">teaches skill</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://schema.org/timeRequired" title="https://schema.org/timeRequired">timeRequired</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://schema.org/url" title="https://schema.org/url">url</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://schema.org/version" title="https://schema.org/version">version</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#viewCount" title="https://purl.org/ontology/modalia#viewCount">view count</a> <sup class="type-dp" title="data property">dp</sup>
    </dd>
    <dt>
     is in range of
@@ -2825,9 +2832,9 @@ This section provides details for each class and property defined by MoDALIA.
    </dd>
   </dl>
  </div>
- <div class="entity" id="ResearcherRole">
-  <h3>researcher role<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://purl.org/ontology/modalia#ResearcherRole</p>
+ <div class="entity" id="ResearcherUserRole">
+  <h3>researcher user role<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.org/ontology/modalia#ResearcherUserRole</p>
   <dl class="description">
    <dt>
     has super-classes
@@ -3002,7 +3009,7 @@ This section provides details for each class and property defined by MoDALIA.
   </dl>
  </div>
  <div class="entity" id="TeacherRole">
-  <h3>teacher role<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <h3>teacher user role<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://purl.org/ontology/modalia#TeacherRole</p>
   <dl class="description">
    <dt>
@@ -3134,7 +3141,7 @@ This section provides details for each class and property defined by MoDALIA.
     has sub-classes
    </dt>
    <dd>
-    <a href="#CuratorRole" title="https://purl.org/ontology/modalia#CuratorRole">curator role</a> <sup class="type-c" title="class">c</sup>, <a href="#LearnerRole" title="https://purl.org/ontology/modalia#LearnerRole">learner role</a> <sup class="type-c" title="class">c</sup>, <a href="#ResearcherRole" title="https://purl.org/ontology/modalia#ResearcherRole">researcher role</a> <sup class="type-c" title="class">c</sup>, <a href="#TeacherRole" title="https://purl.org/ontology/modalia#TeacherRole">teacher role</a> <sup class="type-c" title="class">c</sup>
+    <a href="#CuratorRole" title="https://purl.org/ontology/modalia#CuratorRole">curator user role</a> <sup class="type-c" title="class">c</sup>, <a href="#LearnerRole" title="https://purl.org/ontology/modalia#LearnerRole">learner role</a> <sup class="type-c" title="class">c</sup>, <a href="#ResearcherUserRole" title="https://purl.org/ontology/modalia#ResearcherUserRole">researcher user role</a> <sup class="type-c" title="class">c</sup>, <a href="#TeacherRole" title="https://purl.org/ontology/modalia#TeacherRole">teacher user role</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
     is in range of
@@ -3304,7 +3311,9 @@ This section provides details for each class and property defined by MoDALIA.
   <li><a href="#hasTranslation" title="https://purl.org/ontology/modalia#hasTranslation">has translation</a></li>
   <li><a href="#hasUser" title="https://purl.org/ontology/modalia#hasUser">has user</a></li>
   <li><a href="#http://purl.org/spar/fabio/hasDiscipline" title="http://purl.org/spar/fabio/hasDiscipline">hasDiscipline</a></li>
+  <li><a href="#hasMetadata" title="https://purl.org/ontology/modalia#hasMetadata">hasMetadata</a></li>
   <li><a href="#http://purl.org/dc/terms/hasPart" title="http://purl.org/dc/terms/hasPart">hasPart</a></li>
+  <li><a href="#hasSourceCode" title="https://purl.org/ontology/modalia#hasSourceCode">hasSourceCode</a></li>
   <li><a href="#isDescribedBy" title="https://purl.org/ontology/modalia#isDescribedBy">is described by</a></li>
   <li><a href="#isDuplicateOf" title="https://purl.org/ontology/modalia#isDuplicateOf">is duplicate of</a></li>
   <li><a href="#isIdenticalTo" title="https://purl.org/ontology/modalia#isIdenticalTo">is identical to</a></li>
@@ -3316,10 +3325,12 @@ This section provides details for each class and property defined by MoDALIA.
   <li><a href="#isTranslationOf" title="https://purl.org/ontology/modalia#isTranslationOf">is translation of</a></li>
   <li><a href="#isVersionOf" title="https://purl.org/ontology/modalia#isVersionOf">is version of</a></li>
   <li><a href="#https://schema.org/isBasedOn" title="https://schema.org/isBasedOn">isBasedOn</a></li>
+  <li><a href="#https://w3id.org/citedcat-ap/isCompiledBy" title="https://w3id.org/citedcat-ap/isCompiledBy">isCompiledBy</a></li>
   <li><a href="#https://w3id.org/citedcat-ap/isContinuedBy" title="https://w3id.org/citedcat-ap/isContinuedBy">isContinuedBy</a></li>
   <li><a href="#http://purl.org/dc/terms/isPartOf" title="http://purl.org/dc/terms/isPartOf">isPartOf</a></li>
   <li><a href="#http://purl.org/dc/terms/isReferencedBy" title="http://purl.org/dc/terms/isReferencedBy">isReferencedBy</a></li>
   <li><a href="#http://purl.org/dc/terms/isReplacedBy" title="http://purl.org/dc/terms/isReplacedBy">isReplacedBy</a></li>
+  <li><a href="#isSourceCodeOf" title="https://purl.org/ontology/modalia#isSourceCodeOf">isSourceCodeOf</a></li>
   <li><a href="#https://w3id.org/citedcat-ap/isSupplementedBy" title="https://w3id.org/citedcat-ap/isSupplementedBy">isSupplementedBy</a></li>
   <li><a href="#https://w3id.org/citedcat-ap/isSupplementTo" title="https://w3id.org/citedcat-ap/isSupplementTo">isSupplementTo</a></li>
   <li><a href="#https://schema.org/itemReviewed" title="https://schema.org/itemReviewed"> <span>item Reviewed</span> </a></li>
@@ -3331,6 +3342,7 @@ This section provides details for each class and property defined by MoDALIA.
   <li><a href="#http://purl.org/dc/terms/references" title="http://purl.org/dc/terms/references">references</a></li>
   <li><a href="#http://purl.org/dc/terms/relation" title="http://purl.org/dc/terms/relation">relation</a></li>
   <li><a href="#http://purl.org/dc/terms/replaces" title="http://purl.org/dc/terms/replaces">replaces</a></li>
+  <li><a href="#http://purl.org/dc/terms/requires" title="http://purl.org/dc/terms/requires">requires</a></li>
   <li><a href="#requiresKnowledge" title="https://purl.org/ontology/modalia#requiresKnowledge">requires knowledge</a></li>
   <li><a href="#requiresProficiencyLevel" title="https://purl.org/ontology/modalia#requiresProficiencyLevel">requires proficiency level</a></li>
   <li><a href="#http://id.loc.gov/ontologies/bibframe/role" title="http://id.loc.gov/ontologies/bibframe/role">role</a></li>
@@ -4126,6 +4138,26 @@ This section provides details for each class and property defined by MoDALIA.
    </dl>
   </div>
  </div>
+ <div class="entity" id="hasMetadata">
+  <h3>hasMetadata<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.org/ontology/modalia#hasMetadata</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://github.com/tibonto/educor#EducationalResource" title="https://github.com/tibonto/educor#EducationalResource">educational resource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
  <div class="entity" id="http://purl.org/dc/terms/hasPart">
   <h3>hasPart<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://purl.org/dc/terms/hasPart</p>
@@ -4137,6 +4169,26 @@ This section provides details for each class and property defined by MoDALIA.
     <dd>
      <a href="#http://purl.org/dc/terms/relation" title="http://purl.org/dc/terms/relation">relation</a> <sup class="type-op" title="object property">op</sup>
     </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://github.com/tibonto/educor#EducationalResource" title="https://github.com/tibonto/educor#EducationalResource">educational resource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasSourceCode">
+  <h3>hasSourceCode<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.org/ontology/modalia#hasSourceCode</p>
+  <div class="description">
+   <dl>
     <dt>
      has domain
     </dt>
@@ -4457,6 +4509,26 @@ This section provides details for each class and property defined by MoDALIA.
    </dl>
   </div>
  </div>
+ <div class="entity" id="https://w3id.org/citedcat-ap/isCompiledBy">
+  <h3>isCompiledBy<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/citedcat-ap/isCompiledBy</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://github.com/tibonto/educor#EducationalResource" title="https://github.com/tibonto/educor#EducationalResource">educational resource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
  <div class="entity" id="https://w3id.org/citedcat-ap/isContinuedBy">
   <h3>isContinuedBy<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/citedcat-ap/isContinuedBy</p>
@@ -4569,6 +4641,26 @@ This section provides details for each class and property defined by MoDALIA.
     </dt>
     <dd>
      <a href="#http://purl.org/dc/terms/replaces" title="http://purl.org/dc/terms/replaces">replaces</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="isSourceCodeOf">
+  <h3>isSourceCodeOf<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.org/ontology/modalia#isSourceCodeOf</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://github.com/tibonto/educor#EducationalResource" title="https://github.com/tibonto/educor#EducationalResource">educational resource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -4844,6 +4936,26 @@ This section provides details for each class and property defined by MoDALIA.
    </dl>
   </div>
  </div>
+ <div class="entity" id="http://purl.org/dc/terms/requires">
+  <h3>requires<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/requires</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://github.com/tibonto/educor#EducationalResource" title="https://github.com/tibonto/educor#EducationalResource">educational resource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
  <div class="entity" id="requiresKnowledge">
   <h3>requires knowledge<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://purl.org/ontology/modalia#requiresKnowledge</p>
@@ -4902,7 +5014,7 @@ This section provides details for each class and property defined by MoDALIA.
      has range
     </dt>
     <dd>
-     <a href="#http://www.w3.org/ns/prov#Role" title="http://www.w3.org/ns/prov#Role">contributor role</a> <sup class="type-c" title="class">c</sup>
+     <a href="#http://id.loc.gov/ontologies/bibframe/Role" title="http://id.loc.gov/ontologies/bibframe/Role">contributor role</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -5043,6 +5155,7 @@ This section provides details for each class and property defined by MoDALIA.
  <h3 id="dataproperties-headline" class="list">Data Properties</h3>
  <ul class="hlist">
   <li><a href="#https://schema.org/abstract" title="https://schema.org/abstract">abstract</a></li>
+  <li><a href="#https://schema.org/accessibilityfeature" title="https://schema.org/accessibilityfeature">accessibilityfeature</a></li>
   <li><a href="#citation" title="https://purl.org/ontology/modalia#citation">citation</a></li>
   <li><a href="#commentDate" title="https://purl.org/ontology/modalia#commentDate">comment date</a></li>
   <li><a href="#commentID" title="https://purl.org/ontology/modalia#commentID">comment has identifier</a></li>
@@ -5086,6 +5199,26 @@ This section provides details for each class and property defined by MoDALIA.
   <div class="comment">
    <span class="markdown">An abstract is a short description that summarizes an OER.</span>
   </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://github.com/tibonto/educor#EducationalResource" title="https://github.com/tibonto/educor#EducationalResource">educational resource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://schema.org/accessibilityfeature">
+  <h3>accessibilityfeature<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.org/accessibilityfeature</p>
   <div class="description">
    <dl>
     <dt>
@@ -6079,38 +6212,38 @@ This section provides details for each class and property defined by MoDALIA.
   <li><a href="#Annotator" title="https://purl.org/ontology/modalia#Annotator">annotator role</a></li>
   <li><a href="#https://creativecommons.org/licenses/by/4.0/" title="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0</a></li>
   <li><a href="#Competent" title="https://purl.org/ontology/modalia#Competent">competent</a></li>
-  <li><a href="#http://w3id.org/nfdi4ing/metadata4ing#ContactPerson" title="http://w3id.org/nfdi4ing/metadata4ing#ContactPerson">contact person</a></li>
-  <li><a href="#http://w3id.org/nfdi4ing/metadata4ing#DataCurator" title="http://w3id.org/nfdi4ing/metadata4ing#DataCurator">data curator role</a></li>
-  <li><a href="#http://w3id.org/nfdi4ing/metadata4ing#DataManager" title="http://w3id.org/nfdi4ing/metadata4ing#DataManager">data manager role</a></li>
-  <li><a href="#http://w3id.org/nfdi4ing/metadata4ing#DataCollector" title="http://w3id.org/nfdi4ing/metadata4ing#DataCollector">datacollector role</a></li>
-  <li><a href="#http://w3id.org/nfdi4ing/metadata4ing#Distributor" title="http://w3id.org/nfdi4ing/metadata4ing#Distributor">distributor role</a></li>
-  <li><a href="#http://w3id.org/nfdi4ing/metadata4ing#Editor" title="http://w3id.org/nfdi4ing/metadata4ing#Editor">editor role</a></li>
+  <li><a href="#ContactPerson" title="https://purl.org/ontology/modalia#ContactPerson">contactperson role</a></li>
+  <li><a href="#DataCollector" title="https://purl.org/ontology/modalia#DataCollector">datacollector role</a></li>
+  <li><a href="#DataCurator" title="https://purl.org/ontology/modalia#DataCurator">datacurator role</a></li>
+  <li><a href="#DataManager" title="https://purl.org/ontology/modalia#DataManager">datamanager role</a></li>
+  <li><a href="#Distributor" title="https://purl.org/ontology/modalia#Distributor">distributor role</a></li>
+  <li><a href="#Editor" title="https://purl.org/ontology/modalia#Editor">editor role</a></li>
   <li><a href="#Expert" title="https://purl.org/ontology/modalia#Expert">expert</a></li>
-  <li><a href="#http://w3id.org/nfdi4ing/metadata4ing#HostingInstitution" title="http://w3id.org/nfdi4ing/metadata4ing#HostingInstitution">hostinginstitution role</a></li>
+  <li><a href="#HostingInstitution" title="https://purl.org/ontology/modalia#HostingInstitution">hostinginstitution role</a></li>
   <li><a href="#Interviewee" title="https://purl.org/ontology/modalia#Interviewee">interviewee role</a></li>
   <li><a href="#Interviewer" title="https://purl.org/ontology/modalia#Interviewer">interviewer role</a></li>
   <li><a href="#MetadataContact" title="https://purl.org/ontology/modalia#MetadataContact">metadatacontact role</a></li>
   <li><a href="#Novice" title="https://purl.org/ontology/modalia#Novice">novice</a></li>
-  <li><a href="#http://w3id.org/nfdi4ing/metadata4ing#Other" title="http://w3id.org/nfdi4ing/metadata4ing#Other">otherperson role</a></li>
-  <li><a href="#http://w3id.org/nfdi4ing/metadata4ing#Producer" title="http://w3id.org/nfdi4ing/metadata4ing#Producer">producer role</a></li>
+  <li><a href="#OtherRole" title="https://purl.org/ontology/modalia#OtherRole">other role</a></li>
+  <li><a href="#Producer" title="https://purl.org/ontology/modalia#Producer">producer role</a></li>
   <li><a href="#Proficient" title="https://purl.org/ontology/modalia#Proficient">proficient</a></li>
-  <li><a href="#http://w3id.org/nfdi4ing/metadata4ing#ProjectLeader" title="http://w3id.org/nfdi4ing/metadata4ing#ProjectLeader">projectleader role</a></li>
-  <li><a href="#http://w3id.org/nfdi4ing/metadata4ing#ProjectManager" title="http://w3id.org/nfdi4ing/metadata4ing#ProjectManager">projectmanager role</a></li>
-  <li><a href="#http://w3id.org/nfdi4ing/metadata4ing#ProjectMember" title="http://w3id.org/nfdi4ing/metadata4ing#ProjectMember">projectmember role</a></li>
+  <li><a href="#ProjectLeader" title="https://purl.org/ontology/modalia#ProjectLeader">projectleader role</a></li>
+  <li><a href="#ProjectManager" title="https://purl.org/ontology/modalia#ProjectManager">projectmanager role</a></li>
+  <li><a href="#ProjectMember" title="https://purl.org/ontology/modalia#ProjectMember">projectmember role</a></li>
   <li><a href="#Proprietary" title="https://purl.org/ontology/modalia#Proprietary">proprietary license</a></li>
-  <li><a href="#http://w3id.org/nfdi4ing/metadata4ing#RegistrationAgency" title="http://w3id.org/nfdi4ing/metadata4ing#RegistrationAgency">registrationagency role</a></li>
-  <li><a href="#http://w3id.org/nfdi4ing/metadata4ing#RegistrationAuthority" title="http://w3id.org/nfdi4ing/metadata4ing#RegistrationAuthority">registrationauthority role</a></li>
-  <li><a href="#http://w3id.org/nfdi4ing/metadata4ing#RelatedPerson" title="http://w3id.org/nfdi4ing/metadata4ing#RelatedPerson">relatedperson role</a></li>
-  <li><a href="#http://w3id.org/nfdi4ing/metadata4ing#Researcher" title="http://w3id.org/nfdi4ing/metadata4ing#Researcher">researcher role</a></li>
-  <li><a href="#http://w3id.org/nfdi4ing/metadata4ing#ResearchGroup" title="http://w3id.org/nfdi4ing/metadata4ing#ResearchGroup">researchgroup role</a></li>
-  <li><a href="#http://w3id.org/nfdi4ing/metadata4ing#RightsHolder" title="http://w3id.org/nfdi4ing/metadata4ing#RightsHolder">rightsholder role</a></li>
-  <li><a href="#SoftwareDeveloper" title="https://purl.org/ontology/modalia#SoftwareDeveloper">softwaredeveloper role</a></li>
+  <li><a href="#RegistrationAgency" title="https://purl.org/ontology/modalia#RegistrationAgency">registrationagency role</a></li>
+  <li><a href="#RegistrationAuthority" title="https://purl.org/ontology/modalia#RegistrationAuthority">registrationauthority role</a></li>
+  <li><a href="#RelatedPerson" title="https://purl.org/ontology/modalia#RelatedPerson">relatedperson role</a></li>
+  <li><a href="#ResearcherRole" title="https://purl.org/ontology/modalia#ResearcherRole">researcher role</a></li>
+  <li><a href="#ResearchGroup" title="https://purl.org/ontology/modalia#ResearchGroup">researchgroup role</a></li>
+  <li><a href="#RightsHolder" title="https://purl.org/ontology/modalia#RightsHolder">rightsholder role</a></li>
+  <li><a href="#SoftwareDeveloper" title="https://purl.org/ontology/modalia#SoftwareDeveloper">software developer role</a></li>
   <li><a href="#Speaker" title="https://purl.org/ontology/modalia#Speaker">speaker role</a></li>
-  <li><a href="#http://w3id.org/nfdi4ing/metadata4ing#Sponsor" title="http://w3id.org/nfdi4ing/metadata4ing#Sponsor">sponsor role</a></li>
-  <li><a href="#http://w3id.org/nfdi4ing/metadata4ing#Supervisor" title="http://w3id.org/nfdi4ing/metadata4ing#Supervisor">supervisor role</a></li>
-  <li><a href="#TeacherContributor" title="https://purl.org/ontology/modalia#TeacherContributor">teacher (contributor) role</a></li>
+  <li><a href="#Sponsor" title="https://purl.org/ontology/modalia#Sponsor">sponsor role</a></li>
+  <li><a href="#Supervisor" title="https://purl.org/ontology/modalia#Supervisor">supervisor role</a></li>
+  <li><a href="#TeacherContributorRole" title="https://purl.org/ontology/modalia#TeacherContributorRole">teacher (contributor) role</a></li>
   <li><a href="#Translator" title="https://purl.org/ontology/modalia#Translator">translator role</a></li>
-  <li><a href="#http://w3id.org/nfdi4ing/metadata4ing#WorkPackageLeader" title="http://w3id.org/nfdi4ing/metadata4ing#WorkPackageLeader">workpackageleader role</a></li>
+  <li><a href="#WorkPackageLeader" title="https://purl.org/ontology/modalia#WorkPackageLeader">workpackageleader role</a></li>
  </ul>
  <div class="entity" id="Beginner">
   <h3>advanced beginner<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
@@ -6150,7 +6283,7 @@ This section provides details for each class and property defined by MoDALIA.
     belongs to
    </dt>
    <dd>
-    <a href="#http://www.w3.org/ns/prov#Role" title="http://www.w3.org/ns/prov#Role">contributor role</a> <sup class="type-c" title="class">c</sup>
+    <a href="#http://id.loc.gov/ontologies/bibframe/Role" title="http://id.loc.gov/ontologies/bibframe/Role">contributor role</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -6188,75 +6321,75 @@ This section provides details for each class and property defined by MoDALIA.
    </dd>
   </dl>
  </div>
- <div class="entity" id="http://w3id.org/nfdi4ing/metadata4ing#ContactPerson">
-  <h3>contact person<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://w3id.org/nfdi4ing/metadata4ing#ContactPerson</p>
+ <div class="entity" id="ContactPerson">
+  <h3>contactperson role<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.org/ontology/modalia#ContactPerson</p>
   <dl class="description">
    <dt>
     belongs to
    </dt>
    <dd>
-    <a href="#http://www.w3.org/ns/prov#Role" title="http://www.w3.org/ns/prov#Role">contributor role</a> <sup class="type-c" title="class">c</sup>
+    <a href="#http://id.loc.gov/ontologies/bibframe/Role" title="http://id.loc.gov/ontologies/bibframe/Role">contributor role</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="http://w3id.org/nfdi4ing/metadata4ing#DataCurator">
-  <h3>data curator role<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://w3id.org/nfdi4ing/metadata4ing#DataCurator</p>
-  <dl class="description">
-   <dt>
-    belongs to
-   </dt>
-   <dd>
-    <a href="#http://www.w3.org/ns/prov#Role" title="http://www.w3.org/ns/prov#Role">contributor role</a> <sup class="type-c" title="class">c</sup>
-   </dd>
-  </dl>
- </div>
- <div class="entity" id="http://w3id.org/nfdi4ing/metadata4ing#DataManager">
-  <h3>data manager role<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://w3id.org/nfdi4ing/metadata4ing#DataManager</p>
-  <dl class="description">
-   <dt>
-    belongs to
-   </dt>
-   <dd>
-    <a href="#http://www.w3.org/ns/prov#Role" title="http://www.w3.org/ns/prov#Role">contributor role</a> <sup class="type-c" title="class">c</sup>
-   </dd>
-  </dl>
- </div>
- <div class="entity" id="http://w3id.org/nfdi4ing/metadata4ing#DataCollector">
+ <div class="entity" id="DataCollector">
   <h3>datacollector role<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://w3id.org/nfdi4ing/metadata4ing#DataCollector</p>
+  <p><strong>IRI:</strong> https://purl.org/ontology/modalia#DataCollector</p>
   <dl class="description">
    <dt>
     belongs to
    </dt>
    <dd>
-    <a href="#http://www.w3.org/ns/prov#Role" title="http://www.w3.org/ns/prov#Role">contributor role</a> <sup class="type-c" title="class">c</sup>
+    <a href="#http://id.loc.gov/ontologies/bibframe/Role" title="http://id.loc.gov/ontologies/bibframe/Role">contributor role</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="http://w3id.org/nfdi4ing/metadata4ing#Distributor">
+ <div class="entity" id="DataCurator">
+  <h3>datacurator role<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.org/ontology/modalia#DataCurator</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#http://id.loc.gov/ontologies/bibframe/Role" title="http://id.loc.gov/ontologies/bibframe/Role">contributor role</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="DataManager">
+  <h3>datamanager role<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.org/ontology/modalia#DataManager</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#http://id.loc.gov/ontologies/bibframe/Role" title="http://id.loc.gov/ontologies/bibframe/Role">contributor role</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Distributor">
   <h3>distributor role<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://w3id.org/nfdi4ing/metadata4ing#Distributor</p>
+  <p><strong>IRI:</strong> https://purl.org/ontology/modalia#Distributor</p>
   <dl class="description">
    <dt>
     belongs to
    </dt>
    <dd>
-    <a href="#http://www.w3.org/ns/prov#Role" title="http://www.w3.org/ns/prov#Role">contributor role</a> <sup class="type-c" title="class">c</sup>
+    <a href="#http://id.loc.gov/ontologies/bibframe/Role" title="http://id.loc.gov/ontologies/bibframe/Role">contributor role</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="http://w3id.org/nfdi4ing/metadata4ing#Editor">
+ <div class="entity" id="Editor">
   <h3>editor role<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://w3id.org/nfdi4ing/metadata4ing#Editor</p>
+  <p><strong>IRI:</strong> https://purl.org/ontology/modalia#Editor</p>
   <dl class="description">
    <dt>
     belongs to
    </dt>
    <dd>
-    <a href="#http://www.w3.org/ns/prov#Role" title="http://www.w3.org/ns/prov#Role">contributor role</a> <sup class="type-c" title="class">c</sup>
+    <a href="#http://id.loc.gov/ontologies/bibframe/Role" title="http://id.loc.gov/ontologies/bibframe/Role">contributor role</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -6290,15 +6423,15 @@ This section provides details for each class and property defined by MoDALIA.
    </dd>
   </dl>
  </div>
- <div class="entity" id="http://w3id.org/nfdi4ing/metadata4ing#HostingInstitution">
+ <div class="entity" id="HostingInstitution">
   <h3>hostinginstitution role<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://w3id.org/nfdi4ing/metadata4ing#HostingInstitution</p>
+  <p><strong>IRI:</strong> https://purl.org/ontology/modalia#HostingInstitution</p>
   <dl class="description">
    <dt>
     belongs to
    </dt>
    <dd>
-    <a href="#http://www.w3.org/ns/prov#Role" title="http://www.w3.org/ns/prov#Role">contributor role</a> <sup class="type-c" title="class">c</sup>
+    <a href="#http://id.loc.gov/ontologies/bibframe/Role" title="http://id.loc.gov/ontologies/bibframe/Role">contributor role</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -6310,7 +6443,7 @@ This section provides details for each class and property defined by MoDALIA.
     belongs to
    </dt>
    <dd>
-    <a href="#http://www.w3.org/ns/prov#Role" title="http://www.w3.org/ns/prov#Role">contributor role</a> <sup class="type-c" title="class">c</sup>
+    <a href="#http://id.loc.gov/ontologies/bibframe/Role" title="http://id.loc.gov/ontologies/bibframe/Role">contributor role</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -6322,7 +6455,7 @@ This section provides details for each class and property defined by MoDALIA.
     belongs to
    </dt>
    <dd>
-    <a href="#http://www.w3.org/ns/prov#Role" title="http://www.w3.org/ns/prov#Role">contributor role</a> <sup class="type-c" title="class">c</sup>
+    <a href="#http://id.loc.gov/ontologies/bibframe/Role" title="http://id.loc.gov/ontologies/bibframe/Role">contributor role</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -6334,7 +6467,7 @@ This section provides details for each class and property defined by MoDALIA.
     belongs to
    </dt>
    <dd>
-    <a href="#http://www.w3.org/ns/prov#Role" title="http://www.w3.org/ns/prov#Role">contributor role</a> <sup class="type-c" title="class">c</sup>
+    <a href="#http://id.loc.gov/ontologies/bibframe/Role" title="http://id.loc.gov/ontologies/bibframe/Role">contributor role</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -6368,27 +6501,27 @@ This section provides details for each class and property defined by MoDALIA.
    </dd>
   </dl>
  </div>
- <div class="entity" id="http://w3id.org/nfdi4ing/metadata4ing#Other">
-  <h3>otherperson role<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://w3id.org/nfdi4ing/metadata4ing#Other</p>
+ <div class="entity" id="OtherRole">
+  <h3>other role<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.org/ontology/modalia#OtherRole</p>
   <dl class="description">
    <dt>
     belongs to
    </dt>
    <dd>
-    <a href="#http://www.w3.org/ns/prov#Role" title="http://www.w3.org/ns/prov#Role">contributor role</a> <sup class="type-c" title="class">c</sup>
+    <a href="#http://id.loc.gov/ontologies/bibframe/Role" title="http://id.loc.gov/ontologies/bibframe/Role">contributor role</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="http://w3id.org/nfdi4ing/metadata4ing#Producer">
+ <div class="entity" id="Producer">
   <h3>producer role<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://w3id.org/nfdi4ing/metadata4ing#Producer</p>
+  <p><strong>IRI:</strong> https://purl.org/ontology/modalia#Producer</p>
   <dl class="description">
    <dt>
     belongs to
    </dt>
    <dd>
-    <a href="#http://www.w3.org/ns/prov#Role" title="http://www.w3.org/ns/prov#Role">contributor role</a> <sup class="type-c" title="class">c</sup>
+    <a href="#http://id.loc.gov/ontologies/bibframe/Role" title="http://id.loc.gov/ontologies/bibframe/Role">contributor role</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -6422,39 +6555,39 @@ This section provides details for each class and property defined by MoDALIA.
    </dd>
   </dl>
  </div>
- <div class="entity" id="http://w3id.org/nfdi4ing/metadata4ing#ProjectLeader">
+ <div class="entity" id="ProjectLeader">
   <h3>projectleader role<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://w3id.org/nfdi4ing/metadata4ing#ProjectLeader</p>
+  <p><strong>IRI:</strong> https://purl.org/ontology/modalia#ProjectLeader</p>
   <dl class="description">
    <dt>
     belongs to
    </dt>
    <dd>
-    <a href="#http://www.w3.org/ns/prov#Role" title="http://www.w3.org/ns/prov#Role">contributor role</a> <sup class="type-c" title="class">c</sup>
+    <a href="#http://id.loc.gov/ontologies/bibframe/Role" title="http://id.loc.gov/ontologies/bibframe/Role">contributor role</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="http://w3id.org/nfdi4ing/metadata4ing#ProjectManager">
+ <div class="entity" id="ProjectManager">
   <h3>projectmanager role<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://w3id.org/nfdi4ing/metadata4ing#ProjectManager</p>
+  <p><strong>IRI:</strong> https://purl.org/ontology/modalia#ProjectManager</p>
   <dl class="description">
    <dt>
     belongs to
    </dt>
    <dd>
-    <a href="#http://www.w3.org/ns/prov#Role" title="http://www.w3.org/ns/prov#Role">contributor role</a> <sup class="type-c" title="class">c</sup>
+    <a href="#http://id.loc.gov/ontologies/bibframe/Role" title="http://id.loc.gov/ontologies/bibframe/Role">contributor role</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="http://w3id.org/nfdi4ing/metadata4ing#ProjectMember">
+ <div class="entity" id="ProjectMember">
   <h3>projectmember role<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://w3id.org/nfdi4ing/metadata4ing#ProjectMember</p>
+  <p><strong>IRI:</strong> https://purl.org/ontology/modalia#ProjectMember</p>
   <dl class="description">
    <dt>
     belongs to
    </dt>
    <dd>
-    <a href="#http://www.w3.org/ns/prov#Role" title="http://www.w3.org/ns/prov#Role">contributor role</a> <sup class="type-c" title="class">c</sup>
+    <a href="#http://id.loc.gov/ontologies/bibframe/Role" title="http://id.loc.gov/ontologies/bibframe/Role">contributor role</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -6470,87 +6603,87 @@ This section provides details for each class and property defined by MoDALIA.
    </dd>
   </dl>
  </div>
- <div class="entity" id="http://w3id.org/nfdi4ing/metadata4ing#RegistrationAgency">
+ <div class="entity" id="RegistrationAgency">
   <h3>registrationagency role<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://w3id.org/nfdi4ing/metadata4ing#RegistrationAgency</p>
+  <p><strong>IRI:</strong> https://purl.org/ontology/modalia#RegistrationAgency</p>
   <dl class="description">
    <dt>
     belongs to
    </dt>
    <dd>
-    <a href="#http://www.w3.org/ns/prov#Role" title="http://www.w3.org/ns/prov#Role">contributor role</a> <sup class="type-c" title="class">c</sup>
+    <a href="#http://id.loc.gov/ontologies/bibframe/Role" title="http://id.loc.gov/ontologies/bibframe/Role">contributor role</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="http://w3id.org/nfdi4ing/metadata4ing#RegistrationAuthority">
+ <div class="entity" id="RegistrationAuthority">
   <h3>registrationauthority role<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://w3id.org/nfdi4ing/metadata4ing#RegistrationAuthority</p>
+  <p><strong>IRI:</strong> https://purl.org/ontology/modalia#RegistrationAuthority</p>
   <dl class="description">
    <dt>
     belongs to
    </dt>
    <dd>
-    <a href="#http://www.w3.org/ns/prov#Role" title="http://www.w3.org/ns/prov#Role">contributor role</a> <sup class="type-c" title="class">c</sup>
+    <a href="#http://id.loc.gov/ontologies/bibframe/Role" title="http://id.loc.gov/ontologies/bibframe/Role">contributor role</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="http://w3id.org/nfdi4ing/metadata4ing#RelatedPerson">
+ <div class="entity" id="RelatedPerson">
   <h3>relatedperson role<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://w3id.org/nfdi4ing/metadata4ing#RelatedPerson</p>
+  <p><strong>IRI:</strong> https://purl.org/ontology/modalia#RelatedPerson</p>
   <dl class="description">
    <dt>
     belongs to
    </dt>
    <dd>
-    <a href="#http://www.w3.org/ns/prov#Role" title="http://www.w3.org/ns/prov#Role">contributor role</a> <sup class="type-c" title="class">c</sup>
+    <a href="#http://id.loc.gov/ontologies/bibframe/Role" title="http://id.loc.gov/ontologies/bibframe/Role">contributor role</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="http://w3id.org/nfdi4ing/metadata4ing#Researcher">
+ <div class="entity" id="ResearcherRole">
   <h3>researcher role<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://w3id.org/nfdi4ing/metadata4ing#Researcher</p>
+  <p><strong>IRI:</strong> https://purl.org/ontology/modalia#ResearcherRole</p>
   <dl class="description">
    <dt>
     belongs to
    </dt>
    <dd>
-    <a href="#http://www.w3.org/ns/prov#Role" title="http://www.w3.org/ns/prov#Role">contributor role</a> <sup class="type-c" title="class">c</sup>
+    <a href="#http://id.loc.gov/ontologies/bibframe/Role" title="http://id.loc.gov/ontologies/bibframe/Role">contributor role</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="http://w3id.org/nfdi4ing/metadata4ing#ResearchGroup">
+ <div class="entity" id="ResearchGroup">
   <h3>researchgroup role<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://w3id.org/nfdi4ing/metadata4ing#ResearchGroup</p>
+  <p><strong>IRI:</strong> https://purl.org/ontology/modalia#ResearchGroup</p>
   <dl class="description">
    <dt>
     belongs to
    </dt>
    <dd>
-    <a href="#http://www.w3.org/ns/prov#Role" title="http://www.w3.org/ns/prov#Role">contributor role</a> <sup class="type-c" title="class">c</sup>
+    <a href="#http://id.loc.gov/ontologies/bibframe/Role" title="http://id.loc.gov/ontologies/bibframe/Role">contributor role</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="http://w3id.org/nfdi4ing/metadata4ing#RightsHolder">
+ <div class="entity" id="RightsHolder">
   <h3>rightsholder role<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://w3id.org/nfdi4ing/metadata4ing#RightsHolder</p>
+  <p><strong>IRI:</strong> https://purl.org/ontology/modalia#RightsHolder</p>
   <dl class="description">
    <dt>
     belongs to
    </dt>
    <dd>
-    <a href="#http://www.w3.org/ns/prov#Role" title="http://www.w3.org/ns/prov#Role">contributor role</a> <sup class="type-c" title="class">c</sup>
+    <a href="#http://id.loc.gov/ontologies/bibframe/Role" title="http://id.loc.gov/ontologies/bibframe/Role">contributor role</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
  <div class="entity" id="SoftwareDeveloper">
-  <h3>softwaredeveloper role<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <h3>software developer role<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://purl.org/ontology/modalia#SoftwareDeveloper</p>
   <dl class="description">
    <dt>
     belongs to
    </dt>
    <dd>
-    <a href="#http://www.w3.org/ns/prov#Role" title="http://www.w3.org/ns/prov#Role">contributor role</a> <sup class="type-c" title="class">c</sup>
+    <a href="#http://id.loc.gov/ontologies/bibframe/Role" title="http://id.loc.gov/ontologies/bibframe/Role">contributor role</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -6562,43 +6695,43 @@ This section provides details for each class and property defined by MoDALIA.
     belongs to
    </dt>
    <dd>
-    <a href="#http://www.w3.org/ns/prov#Role" title="http://www.w3.org/ns/prov#Role">contributor role</a> <sup class="type-c" title="class">c</sup>
+    <a href="#http://id.loc.gov/ontologies/bibframe/Role" title="http://id.loc.gov/ontologies/bibframe/Role">contributor role</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="http://w3id.org/nfdi4ing/metadata4ing#Sponsor">
+ <div class="entity" id="Sponsor">
   <h3>sponsor role<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://w3id.org/nfdi4ing/metadata4ing#Sponsor</p>
+  <p><strong>IRI:</strong> https://purl.org/ontology/modalia#Sponsor</p>
   <dl class="description">
    <dt>
     belongs to
    </dt>
    <dd>
-    <a href="#http://www.w3.org/ns/prov#Role" title="http://www.w3.org/ns/prov#Role">contributor role</a> <sup class="type-c" title="class">c</sup>
+    <a href="#http://id.loc.gov/ontologies/bibframe/Role" title="http://id.loc.gov/ontologies/bibframe/Role">contributor role</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="http://w3id.org/nfdi4ing/metadata4ing#Supervisor">
+ <div class="entity" id="Supervisor">
   <h3>supervisor role<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://w3id.org/nfdi4ing/metadata4ing#Supervisor</p>
+  <p><strong>IRI:</strong> https://purl.org/ontology/modalia#Supervisor</p>
   <dl class="description">
    <dt>
     belongs to
    </dt>
    <dd>
-    <a href="#http://www.w3.org/ns/prov#Role" title="http://www.w3.org/ns/prov#Role">contributor role</a> <sup class="type-c" title="class">c</sup>
+    <a href="#http://id.loc.gov/ontologies/bibframe/Role" title="http://id.loc.gov/ontologies/bibframe/Role">contributor role</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="TeacherContributor">
+ <div class="entity" id="TeacherContributorRole">
   <h3>teacher (contributor) role<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://purl.org/ontology/modalia#TeacherContributor</p>
+  <p><strong>IRI:</strong> https://purl.org/ontology/modalia#TeacherContributorRole</p>
   <dl class="description">
    <dt>
     belongs to
    </dt>
    <dd>
-    <a href="#http://www.w3.org/ns/prov#Role" title="http://www.w3.org/ns/prov#Role">contributor role</a> <sup class="type-c" title="class">c</sup>
+    <a href="#http://id.loc.gov/ontologies/bibframe/Role" title="http://id.loc.gov/ontologies/bibframe/Role">contributor role</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -6610,19 +6743,19 @@ This section provides details for each class and property defined by MoDALIA.
     belongs to
    </dt>
    <dd>
-    <a href="#http://www.w3.org/ns/prov#Role" title="http://www.w3.org/ns/prov#Role">contributor role</a> <sup class="type-c" title="class">c</sup>
+    <a href="#http://id.loc.gov/ontologies/bibframe/Role" title="http://id.loc.gov/ontologies/bibframe/Role">contributor role</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="http://w3id.org/nfdi4ing/metadata4ing#WorkPackageLeader">
+ <div class="entity" id="WorkPackageLeader">
   <h3>workpackageleader role<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://w3id.org/nfdi4ing/metadata4ing#WorkPackageLeader</p>
+  <p><strong>IRI:</strong> https://purl.org/ontology/modalia#WorkPackageLeader</p>
   <dl class="description">
    <dt>
     belongs to
    </dt>
    <dd>
-    <a href="#http://www.w3.org/ns/prov#Role" title="http://www.w3.org/ns/prov#Role">contributor role</a> <sup class="type-c" title="class">c</sup>
+    <a href="#http://id.loc.gov/ontologies/bibframe/Role" title="http://id.loc.gov/ontologies/bibframe/Role">contributor role</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
