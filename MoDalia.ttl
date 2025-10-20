@@ -544,7 +544,7 @@ ec:generatedFrom rdf:type owl:ObjectProperty ;
                rdfs:domain ec:EducationalResource ;
                rdfs:range ec:EducationalResource ;
                rdfs:label "is duplicate of"@en ;
-               skos:definition "Dublicated metadata in DALIA platform"@en .
+               skos:definition "Duplicated metadata in DALIA platform"@en .
 
 
 ###  https://purl.org/ontology/modalia#isIdenticalTo
@@ -693,8 +693,8 @@ ec:generatedFrom rdf:type owl:ObjectProperty ;
         rdfs:label "solves"@en .
 
 
-###  https://purl.org/ontology/modalia#supportinghost
-:supportinghost rdf:type owl:ObjectProperty ;
+###  https://purl.org/ontology/modalia#supportingHost
+:supportingHost rdf:type owl:ObjectProperty ;
                 rdfs:domain ec:EducationalResource ;
                 rdfs:range :Community ;
                 rdfs:label "supportinghost"@en ;
