@@ -466,7 +466,7 @@ _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://purl.org/ontology/modalia#isDuplicateOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
 <https://purl.org/ontology/modalia#isDuplicateOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://github.com/tibonto/educor#EducationalResource> .
 <https://purl.org/ontology/modalia#isDuplicateOf> <http://www.w3.org/2000/01/rdf-schema#label> "is duplicate of"@en .
-<https://purl.org/ontology/modalia#isDuplicateOf> <http://www.w3.org/2004/02/skos/core#definition> "Dublicated metadata in DALIA platform"@en .
+<https://purl.org/ontology/modalia#isDuplicateOf> <http://www.w3.org/2004/02/skos/core#definition> "Duplicated metadata in DALIA platform"@en .
 # 
 # https://purl.org/ontology/modalia#isIdenticalTo
 <https://purl.org/ontology/modalia#isIdenticalTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -600,12 +600,12 @@ _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://purl.org/ontology/modalia#solves> <http://www.w3.org/2000/01/rdf-schema#label> "solves"@en .
 # 
-# https://purl.org/ontology/modalia#supportinghost
-<https://purl.org/ontology/modalia#supportinghost> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://purl.org/ontology/modalia#supportinghost> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
-<https://purl.org/ontology/modalia#supportinghost> <http://www.w3.org/2000/01/rdf-schema#range> <https://purl.org/ontology/modalia#Community> .
-<https://purl.org/ontology/modalia#supportinghost> <http://www.w3.org/2000/01/rdf-schema#label> "supportinghost"@en .
-<https://purl.org/ontology/modalia#supportinghost> <http://www.w3.org/2004/02/skos/core#definition> "Associated community(ies) of the resource who are either the supporting organization/institution, or the recommender, or both. Here indicates supporting."@en .
+# https://purl.org/ontology/modalia#supportingHost
+<https://purl.org/ontology/modalia#supportingHost> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://purl.org/ontology/modalia#supportingHost> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/tibonto/educor#EducationalResource> .
+<https://purl.org/ontology/modalia#supportingHost> <http://www.w3.org/2000/01/rdf-schema#range> <https://purl.org/ontology/modalia#Community> .
+<https://purl.org/ontology/modalia#supportingHost> <http://www.w3.org/2000/01/rdf-schema#label> "supportinghost"@en .
+<https://purl.org/ontology/modalia#supportingHost> <http://www.w3.org/2004/02/skos/core#definition> "Associated community(ies) of the resource who are either the supporting organization/institution, or the recommender, or both. Here indicates supporting."@en .
 # 
 # https://purl.org/ontology/modalia#teachesSkill
 <https://purl.org/ontology/modalia#teachesSkill> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -1716,7 +1716,7 @@ _:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # https://w3id.org/kim/hcrt/lesson_plan
 <https://w3id.org/kim/hcrt/lesson_plan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/kim/hcrt/lesson_plan> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purl.org/ontology/modalia#LearningResourceType> .
-<https://w3id.org/kim/hcrt/lesson_plan> <http://www.w3.org/2000/01/rdf-schema#label> "lesson_plan"@en .
+<https://w3id.org/kim/hcrt/lesson_plan> <http://www.w3.org/2000/01/rdf-schema#label> "lesson plan"@en .
 <https://w3id.org/kim/hcrt/lesson_plan> <http://www.w3.org/2004/02/skos/core#prefLabel> "Lesson_plan"@en .
 # 
 # https://w3id.org/kim/hcrt/map
@@ -1751,7 +1751,7 @@ _:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # https://w3id.org/kim/hcrt/sheet_music
 <https://w3id.org/kim/hcrt/sheet_music> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/kim/hcrt/sheet_music> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purl.org/ontology/modalia#LearningResourceType> .
-<https://w3id.org/kim/hcrt/sheet_music> <http://www.w3.org/2000/01/rdf-schema#label> "sheet_music"@en .
+<https://w3id.org/kim/hcrt/sheet_music> <http://www.w3.org/2000/01/rdf-schema#label> "sheet music"@en .
 <https://w3id.org/kim/hcrt/sheet_music> <http://www.w3.org/2004/02/skos/core#prefLabel> "Sheet_music"@en .
 # 
 # https://w3id.org/kim/hcrt/simulation

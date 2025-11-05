@@ -526,7 +526,7 @@ xsd:duration rdf:type rdfs:Datatype .
                rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
                rdfs:range <https://github.com/tibonto/educor#EducationalResource> ;
                rdfs:label "is duplicate of"@en ;
-               <http://www.w3.org/2004/02/skos/core#definition> "Dublicated metadata in DALIA platform"@en .
+               <http://www.w3.org/2004/02/skos/core#definition> "Duplicated metadata in DALIA platform"@en .
 
 
 ###  https://purl.org/ontology/modalia#isIdenticalTo
@@ -675,8 +675,8 @@ xsd:duration rdf:type rdfs:Datatype .
         rdfs:label "solves"@en .
 
 
-###  https://purl.org/ontology/modalia#supportinghost
-:supportinghost rdf:type owl:ObjectProperty ;
+###  https://purl.org/ontology/modalia#supportingHost
+:supportingHost rdf:type owl:ObjectProperty ;
                 rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
                 rdfs:range :Community ;
                 rdfs:label "supportinghost"@en ;
@@ -1894,7 +1894,7 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 ###  https://w3id.org/kim/hcrt/lesson_plan
 <https://w3id.org/kim/hcrt/lesson_plan> rdf:type owl:Class ;
                                         rdfs:subClassOf :LearningResourceType ;
-                                        rdfs:label "lesson_plan"@en ;
+                                        rdfs:label "lesson plan"@en ;
                                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Lesson_plan"@en .
 
 
@@ -1935,7 +1935,7 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 ###  https://w3id.org/kim/hcrt/sheet_music
 <https://w3id.org/kim/hcrt/sheet_music> rdf:type owl:Class ;
                                         rdfs:subClassOf :LearningResourceType ;
-                                        rdfs:label "sheet_music"@en ;
+                                        rdfs:label "sheet music"@en ;
                                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Sheet_music"@en .
 
 

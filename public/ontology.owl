@@ -826,7 +826,7 @@ The ontology is developed in OWL in Protege 5.5.0.</terms:description>
         <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:range rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:label xml:lang="en">is duplicate of</rdfs:label>
-        <skos:definition xml:lang="en">Dublicated metadata in DALIA platform</skos:definition>
+        <skos:definition xml:lang="en">Duplicated metadata in DALIA platform</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -1043,10 +1043,10 @@ The ontology is developed in OWL in Protege 5.5.0.</terms:description>
     
 
 
-    <!-- https://purl.org/ontology/modalia#supportinghost -->
+    <!-- https://purl.org/ontology/modalia#supportingHost -->
 
 
-    <owl:ObjectProperty rdf:about="https://purl.org/ontology/modalia#supportinghost">
+    <owl:ObjectProperty rdf:about="https://purl.org/ontology/modalia#supportingHost">
         <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:range rdf:resource="https://purl.org/ontology/modalia#Community"/>
         <rdfs:label xml:lang="en">supportinghost</rdfs:label>
@@ -2927,7 +2927,7 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 
     <owl:Class rdf:about="https://w3id.org/kim/hcrt/lesson_plan">
         <rdfs:subClassOf rdf:resource="https://purl.org/ontology/modalia#LearningResourceType"/>
-        <rdfs:label xml:lang="en">lesson_plan</rdfs:label>
+        <rdfs:label xml:lang="en">lesson plan</rdfs:label>
         <skos:prefLabel xml:lang="en">Lesson_plan</skos:prefLabel>
     </owl:Class>
     
@@ -2992,7 +2992,7 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 
     <owl:Class rdf:about="https://w3id.org/kim/hcrt/sheet_music">
         <rdfs:subClassOf rdf:resource="https://purl.org/ontology/modalia#LearningResourceType"/>
-        <rdfs:label xml:lang="en">sheet_music</rdfs:label>
+        <rdfs:label xml:lang="en">sheet music</rdfs:label>
         <skos:prefLabel xml:lang="en">Sheet_music</skos:prefLabel>
     </owl:Class>
     
