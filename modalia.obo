@@ -2,17 +2,12 @@ format-version: 1.2
 data-version: https://purl.org/ontology/modalia#1.0.0
 idspace: bf http://id.loc.gov/ontologies/bibframe/ 
 idspace: bibo http://purl.org/ontology/bibo/ 
-idspace: citedcat https://w3id.org/citedcat-ap/ 
 idspace: dcterms http://purl.org/dc/terms/ 
 idspace: doap http://usefulinc.com/ns/doap# 
 idspace: ec https://github.com/tibonto/educor# 
-idspace: edamdata http://edamontology.org/data_ 
 idspace: fabio http://purl.org/spar/fabio/ 
-idspace: foaf http://xmlns.com/foaf/0.1/ 
 idspace: hcrt https://w3id.org/kim/hcrt/ 
-idspace: lexvo http://lexvo.org/ontology# 
 idspace: m4i http://w3id.org/nfdi4ing/metadata4ing# 
-idspace: modalia https://purl.org/ontology/modalia# 
 idspace: orcid https://orcid.org/ 
 idspace: rec http://purl.org/ontology/rec/core# 
 idspace: schema https://schema.org/ 
@@ -30,8 +25,9 @@ property_value: dcterms:contributor "Frank Lange (https://orcid.org/0000-0002-93
 property_value: dcterms:contributor orcid:0000-0003-4423-4370
 property_value: dcterms:created "2023-02-02" xsd:string
 property_value: dcterms:creator "BMFTR DALIA project" xsd:string
+property_value: dcterms:description "MoDALIA: An Ontology for Educational Material in Research Data Management (RDM) and Data Science.\nThe ontology is used for making a knowledge graph as a backend to platform for teaching, personal learning, and recommendation.\nThe ontology is developed in OWL in Protege 5.5.0." xsd:string
 property_value: dcterms:license https://creativecommons.org/licenses/by/4.0/
-property_value: dcterms:modified "2025-10-08" xsd:string
+property_value: dcterms:modified "2025-10-14" xsd:string
 property_value: dcterms:publisher "ULB TUDa – University and State Library, Technical University, Darmstadt, Germany" xsd:string
 property_value: dcterms:title "MoDALIA Ontology" xsd:string
 property_value: doap:bug-database "https://git.rwth-aachen.de/dalia/dalia-ontology/-/issues" xsd:anyURI
@@ -39,755 +35,810 @@ property_value: http://www.loc.gov/premis/rdf/v3/documentation "https://dalia.pa
 property_value: owl:versionInfo "v1.0.0" xsd:string
 property_value: vann:preferredNamespacePrefix "modalia" xsd:string
 property_value: vann:preferredNamespaceUri "https://purl.org/ontology/modalia#" xsd:anyURI
-owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nDeclaration(Class(<https://github.com/tibonto/educor#EducationalResource>))\nDeclaration(Class(<https://purl.org/ontology/modalia#Community>))\nDeclaration(Class(<https://purl.org/ontology/modalia#Contributor>))\nDeclaration(Class(<https://purl.org/ontology/modalia#Job>))\nDeclaration(Class(<https://purl.org/ontology/modalia#LearningPath>))\nDeclaration(Class(<https://purl.org/ontology/modalia#LearningPathStep>))\nDeclaration(Class(<https://purl.org/ontology/modalia#Proficiency>))\nDeclaration(Class(<https://purl.org/ontology/modalia#User>))\nDeclaration(Class(<https://purl.org/ontology/modalia#UserComment>))\nDeclaration(Class(<https://schema.org/Organization>))\nDeclaration(Class(<https://schema.org/Rating>))\nDeclaration(Class(<https://schema.org/Review>))\nDeclaration(Class(<https://w3id.org/kim/hcrt/assessment>))\nDeclaration(Class(<https://w3id.org/kim/hcrt/questionnaire>))\nDeclaration(ObjectProperty(<http://purl.org/dc/terms/hasPart>))\nDeclaration(ObjectProperty(<http://purl.org/dc/terms/isPartOf>))\nDeclaration(ObjectProperty(<http://purl.org/dc/terms/isReferencedBy>))\nDeclaration(ObjectProperty(<http://purl.org/dc/terms/references>))\nDeclaration(ObjectProperty(<http://purl.org/dc/terms/relation>))\nDeclaration(ObjectProperty(<https://purl.org/ontology/modalia#describes>))\nDeclaration(ObjectProperty(<https://purl.org/ontology/modalia#hasTranslation>))\nDeclaration(ObjectProperty(<https://purl.org/ontology/modalia#isDescribedBy>))\nDeclaration(ObjectProperty(<https://purl.org/ontology/modalia#isLessProficientThan>))\nDeclaration(ObjectProperty(<https://purl.org/ontology/modalia#isMoreProficientThan>))\nDeclaration(ObjectProperty(<https://purl.org/ontology/modalia#isNewVersionOf>))\nDeclaration(ObjectProperty(<https://purl.org/ontology/modalia#isTranslationOf>))\nDeclaration(ObjectProperty(<https://purl.org/ontology/modalia#solves>))\nDeclaration(ObjectProperty(<https://schema.org/isBasedOn>))\nDeclaration(ObjectProperty(<https://w3id.org/citedcat-ap/isSupplementTo>))\nDeclaration(ObjectProperty(<https://w3id.org/citedcat-ap/isSupplementedBy>))\nDeclaration(DataProperty(<http://purl.org/dc/terms/format>))\nDeclaration(DataProperty(<http://purl.org/dc/terms/issued>))\nDeclaration(DataProperty(<http://purl.org/dc/terms/rights>))\nDeclaration(DataProperty(<http://purl.org/spar/fabio/hasSubtitle>))\nDeclaration(DataProperty(<http://w3id.org/nfdi4ing/metadata4ing#hasRorId>))\nDeclaration(DataProperty(<http://w3id.org/nfdi4ing/metadata4ing#orcidId>))\nDeclaration(DataProperty(<https://purl.org/ontology/modalia#authorUnordered>))\nDeclaration(DataProperty(<https://purl.org/ontology/modalia#citation>))\nDeclaration(DataProperty(<https://purl.org/ontology/modalia#commentDate>))\nDeclaration(DataProperty(<https://purl.org/ontology/modalia#commentID>))\nDeclaration(DataProperty(<https://purl.org/ontology/modalia#commentText>))\nDeclaration(DataProperty(<https://purl.org/ontology/modalia#hasDOI>))\nDeclaration(DataProperty(<https://purl.org/ontology/modalia#hasOrder>))\nDeclaration(DataProperty(<https://purl.org/ontology/modalia#industry>))\nDeclaration(DataProperty(<https://purl.org/ontology/modalia#likesCount>))\nDeclaration(DataProperty(<https://purl.org/ontology/modalia#notesForLearner>))\nDeclaration(DataProperty(<https://purl.org/ontology/modalia#studyPlan>))\nDeclaration(DataProperty(<https://purl.org/ontology/modalia#viewCount>))\nDeclaration(DataProperty(<https://schema.org/abstract>))\nDeclaration(DataProperty(<https://schema.org/datePublished>))\nDeclaration(DataProperty(<https://schema.org/downloadUrl>))\nDeclaration(DataProperty(<https://schema.org/email>))\nDeclaration(DataProperty(<https://schema.org/familyName>))\nDeclaration(DataProperty(<https://schema.org/fileSize>))\nDeclaration(DataProperty(<https://schema.org/givenName>))\nDeclaration(DataProperty(<https://schema.org/identifier>))\nDeclaration(DataProperty(<https://schema.org/image>))\nDeclaration(DataProperty(<https://schema.org/isAccessibleForFree>))\nDeclaration(DataProperty(<https://schema.org/keywords>))\nDeclaration(DataProperty(<https://schema.org/ratingValue>))\nDeclaration(DataProperty(<https://schema.org/reviewBody>))\nDeclaration(DataProperty(<https://schema.org/reviewRating>))\nDeclaration(DataProperty(<https://schema.org/teaches>))\nDeclaration(DataProperty(<https://schema.org/timeRequired>))\nDeclaration(DataProperty(<https://schema.org/title>))\nDeclaration(DataProperty(<https://schema.org/url>))\nDeclaration(DataProperty(<https://schema.org/version>))\nDeclaration(NamedIndividual(<https://purl.org/ontology/modalia#Beginner>))\nDeclaration(NamedIndividual(<https://purl.org/ontology/modalia#Competent>))\nDeclaration(NamedIndividual(<https://purl.org/ontology/modalia#Expert>))\nDeclaration(NamedIndividual(<https://purl.org/ontology/modalia#Novice>))\nDeclaration(NamedIndividual(<https://purl.org/ontology/modalia#Proficient>))\nDeclaration(AnnotationProperty(<http://purl.org/dc/terms/created>))\nDeclaration(AnnotationProperty(<http://purl.org/dc/terms/license>))\nDeclaration(Datatype(xsd:duration))\n############################\n#   Annotation Properties\n############################\n\n# Annotation Property: <http://purl.org/dc/terms/created> (<http://purl.org/dc/terms/created>)\n\nAnnotationPropertyRange(<http://purl.org/dc/terms/created> xsd:dateTime)\n\n# Annotation Property: <http://purl.org/dc/terms/license> (<http://purl.org/dc/terms/license>)\n\nAnnotationPropertyRange(<http://purl.org/dc/terms/license> <https://purl.org/ontology/modalia#License>)\nAnnotationPropertyDomain(<http://purl.org/dc/terms/license> <https://github.com/tibonto/educor#EducationalResource>)\n\n\n############################\n#   Object Properties\n############################\n\n# Object Property: <http://purl.org/dc/terms/hasPart> (<http://purl.org/dc/terms/hasPart>)\n\nObjectPropertyRange(<http://purl.org/dc/terms/hasPart> owl:Thing)\n\n# Object Property: <http://purl.org/dc/terms/isPartOf> (<http://purl.org/dc/terms/isPartOf>)\n\nObjectPropertyRange(<http://purl.org/dc/terms/isPartOf> owl:Thing)\n\n# Object Property: <http://purl.org/dc/terms/isReferencedBy> (<http://purl.org/dc/terms/isReferencedBy>)\n\nObjectPropertyRange(<http://purl.org/dc/terms/isReferencedBy> owl:Thing)\n\n# Object Property: <http://purl.org/dc/terms/references> (<http://purl.org/dc/terms/references>)\n\nObjectPropertyRange(<http://purl.org/dc/terms/references> owl:Thing)\n\n# Object Property: <http://purl.org/dc/terms/relation> (<http://purl.org/dc/terms/relation>)\n\nObjectPropertyRange(<http://purl.org/dc/terms/relation> owl:Thing)\n\n# Object Property: <https://purl.org/ontology/modalia#describes> (<https://purl.org/ontology/modalia#describes>)\n\nObjectPropertyRange(<https://purl.org/ontology/modalia#describes> owl:Thing)\n\n# Object Property: <https://purl.org/ontology/modalia#hasTranslation> (<https://purl.org/ontology/modalia#hasTranslation>)\n\nObjectPropertyRange(<https://purl.org/ontology/modalia#hasTranslation> owl:Thing)\n\n# Object Property: <https://purl.org/ontology/modalia#isDescribedBy> (<https://purl.org/ontology/modalia#isDescribedBy>)\n\nObjectPropertyRange(<https://purl.org/ontology/modalia#isDescribedBy> owl:Thing)\n\n# Object Property: <https://purl.org/ontology/modalia#isNewVersionOf> (<https://purl.org/ontology/modalia#isNewVersionOf>)\n\nIrreflexiveObjectProperty(<https://purl.org/ontology/modalia#isNewVersionOf>)\n\n# Object Property: <https://purl.org/ontology/modalia#isTranslationOf> (<https://purl.org/ontology/modalia#isTranslationOf>)\n\nObjectPropertyRange(<https://purl.org/ontology/modalia#isTranslationOf> owl:Thing)\n\n# Object Property: <https://purl.org/ontology/modalia#solves> (<https://purl.org/ontology/modalia#solves>)\n\nObjectPropertyRange(<https://purl.org/ontology/modalia#solves> ObjectUnionOf(<https://w3id.org/kim/hcrt/assessment> <https://w3id.org/kim/hcrt/questionnaire>))\n\n# Object Property: <https://schema.org/isBasedOn> (<https://schema.org/isBasedOn>)\n\nObjectPropertyRange(<https://schema.org/isBasedOn> owl:Thing)\n\n# Object Property: <https://w3id.org/citedcat-ap/isSupplementTo> (<https://w3id.org/citedcat-ap/isSupplementTo>)\n\nObjectPropertyRange(<https://w3id.org/citedcat-ap/isSupplementTo> owl:Thing)\n\n# Object Property: <https://w3id.org/citedcat-ap/isSupplementedBy> (<https://w3id.org/citedcat-ap/isSupplementedBy>)\n\nObjectPropertyRange(<https://w3id.org/citedcat-ap/isSupplementedBy> owl:Thing)\n\n\n############################\n#   Data Properties\n############################\n\n# Data Property: <http://purl.org/dc/terms/format> (<http://purl.org/dc/terms/format>)\n\nDataPropertyDomain(<http://purl.org/dc/terms/format> <https://github.com/tibonto/educor#EducationalResource>)\nDataPropertyRange(<http://purl.org/dc/terms/format> xsd:string)\n\n# Data Property: <http://purl.org/dc/terms/issued> (<http://purl.org/dc/terms/issued>)\n\nDataPropertyDomain(<http://purl.org/dc/terms/issued> <https://github.com/tibonto/educor#EducationalResource>)\nDataPropertyRange(<http://purl.org/dc/terms/issued> xsd:dateTime)\n\n# Data Property: <http://purl.org/dc/terms/rights> (<http://purl.org/dc/terms/rights>)\n\nDataPropertyDomain(<http://purl.org/dc/terms/rights> <https://github.com/tibonto/educor#EducationalResource>)\nDataPropertyRange(<http://purl.org/dc/terms/rights> xsd:string)\n\n# Data Property: <http://purl.org/spar/fabio/hasSubtitle> (<http://purl.org/spar/fabio/hasSubtitle>)\n\nDataPropertyDomain(<http://purl.org/spar/fabio/hasSubtitle> <https://github.com/tibonto/educor#EducationalResource>)\nDataPropertyRange(<http://purl.org/spar/fabio/hasSubtitle> xsd:string)\n\n# Data Property: <http://w3id.org/nfdi4ing/metadata4ing#hasRorId> (<http://w3id.org/nfdi4ing/metadata4ing#hasRorId>)\n\nDataPropertyDomain(<http://w3id.org/nfdi4ing/metadata4ing#hasRorId> ObjectUnionOf(<https://purl.org/ontology/modalia#Community> <https://schema.org/Organization>))\nDataPropertyRange(<http://w3id.org/nfdi4ing/metadata4ing#hasRorId> DatatypeRestriction(xsd:string xsd:pattern \"https://ror.org/[0-9][0-9][a-z0-9][a-z0-9][a-z0-9][a-z0-9][a-z0-9][0-9][0-9]\"))\n\n# Data Property: <http://w3id.org/nfdi4ing/metadata4ing#orcidId> (<http://w3id.org/nfdi4ing/metadata4ing#orcidId>)\n\nDataPropertyDomain(<http://w3id.org/nfdi4ing/metadata4ing#orcidId> ObjectUnionOf(<https://purl.org/ontology/modalia#Contributor> <https://purl.org/ontology/modalia#User>))\nDataPropertyRange(<http://w3id.org/nfdi4ing/metadata4ing#orcidId> DatatypeRestriction(xsd:string xsd:pattern \"https://orcid.org/[0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9X]\"))\n\n# Data Property: <https://purl.org/ontology/modalia#authorUnordered> (<https://purl.org/ontology/modalia#authorUnordered>)\n\nDataPropertyDomain(<https://purl.org/ontology/modalia#authorUnordered> <https://github.com/tibonto/educor#EducationalResource>)\nDataPropertyRange(<https://purl.org/ontology/modalia#authorUnordered> xsd:string)\n\n# Data Property: <https://purl.org/ontology/modalia#citation> (<https://purl.org/ontology/modalia#citation>)\n\nDataPropertyDomain(<https://purl.org/ontology/modalia#citation> <https://github.com/tibonto/educor#EducationalResource>)\nDataPropertyRange(<https://purl.org/ontology/modalia#citation> xsd:string)\n\n# Data Property: <https://purl.org/ontology/modalia#commentDate> (<https://purl.org/ontology/modalia#commentDate>)\n\nDataPropertyDomain(<https://purl.org/ontology/modalia#commentDate> <https://purl.org/ontology/modalia#UserComment>)\nDataPropertyRange(<https://purl.org/ontology/modalia#commentDate> xsd:dateTimeStamp)\n\n# Data Property: <https://purl.org/ontology/modalia#commentID> (<https://purl.org/ontology/modalia#commentID>)\n\nDataPropertyDomain(<https://purl.org/ontology/modalia#commentID> <https://purl.org/ontology/modalia#UserComment>)\nDataPropertyRange(<https://purl.org/ontology/modalia#commentID> xsd:string)\n\n# Data Property: <https://purl.org/ontology/modalia#commentText> (<https://purl.org/ontology/modalia#commentText>)\n\nDataPropertyDomain(<https://purl.org/ontology/modalia#commentText> <https://purl.org/ontology/modalia#UserComment>)\nDataPropertyRange(<https://purl.org/ontology/modalia#commentText> xsd:string)\n\n# Data Property: <https://purl.org/ontology/modalia#hasDOI> (<https://purl.org/ontology/modalia#hasDOI>)\n\nDataPropertyDomain(<https://purl.org/ontology/modalia#hasDOI> <https://github.com/tibonto/educor#EducationalResource>)\nDataPropertyRange(<https://purl.org/ontology/modalia#hasDOI> xsd:string)\n\n# Data Property: <https://purl.org/ontology/modalia#hasOrder> (<https://purl.org/ontology/modalia#hasOrder>)\n\nDataPropertyDomain(<https://purl.org/ontology/modalia#hasOrder> ObjectUnionOf(<https://purl.org/ontology/modalia#LearningPathStep> <https://purl.org/ontology/modalia#Proficiency>))\nDataPropertyRange(<https://purl.org/ontology/modalia#hasOrder> xsd:integer)\n\n# Data Property: <https://purl.org/ontology/modalia#industry> (<https://purl.org/ontology/modalia#industry>)\n\nSubDataPropertyOf(<https://purl.org/ontology/modalia#industry> owl:topDataProperty)\nDataPropertyDomain(<https://purl.org/ontology/modalia#industry> <https://purl.org/ontology/modalia#Job>)\nDataPropertyRange(<https://purl.org/ontology/modalia#industry> xsd:string)\n\n# Data Property: <https://purl.org/ontology/modalia#likesCount> (<https://purl.org/ontology/modalia#likesCount>)\n\nDataPropertyDomain(<https://purl.org/ontology/modalia#likesCount> <https://github.com/tibonto/educor#EducationalResource>)\nDataPropertyRange(<https://purl.org/ontology/modalia#likesCount> xsd:int)\n\n# Data Property: <https://purl.org/ontology/modalia#notesForLearner> (<https://purl.org/ontology/modalia#notesForLearner>)\n\nDataPropertyDomain(<https://purl.org/ontology/modalia#notesForLearner> ObjectUnionOf(<https://github.com/tibonto/educor#EducationalResource> <https://purl.org/ontology/modalia#LearningPathStep>))\nDataPropertyRange(<https://purl.org/ontology/modalia#notesForLearner> xsd:string)\n\n# Data Property: <https://purl.org/ontology/modalia#studyPlan> (<https://purl.org/ontology/modalia#studyPlan>)\n\nDataPropertyDomain(<https://purl.org/ontology/modalia#studyPlan> <https://purl.org/ontology/modalia#LearningPath>)\nDataPropertyRange(<https://purl.org/ontology/modalia#studyPlan> rdf:langString)\n\n# Data Property: <https://purl.org/ontology/modalia#viewCount> (<https://purl.org/ontology/modalia#viewCount>)\n\nDataPropertyDomain(<https://purl.org/ontology/modalia#viewCount> <https://github.com/tibonto/educor#EducationalResource>)\nDataPropertyRange(<https://purl.org/ontology/modalia#viewCount> xsd:int)\n\n# Data Property: <https://schema.org/abstract> (<https://schema.org/abstract>)\n\nDataPropertyDomain(<https://schema.org/abstract> <https://github.com/tibonto/educor#EducationalResource>)\nDataPropertyRange(<https://schema.org/abstract> xsd:string)\n\n# Data Property: <https://schema.org/datePublished> (<https://schema.org/datePublished>)\n\nDataPropertyDomain(<https://schema.org/datePublished> <https://github.com/tibonto/educor#EducationalResource>)\nDataPropertyRange(<https://schema.org/datePublished> xsd:dateTime)\n\n# Data Property: <https://schema.org/downloadUrl> (<https://schema.org/downloadUrl>)\n\nDataPropertyDomain(<https://schema.org/downloadUrl> <https://github.com/tibonto/educor#EducationalResource>)\nDataPropertyRange(<https://schema.org/downloadUrl> xsd:anyURI)\n\n# Data Property: <https://schema.org/email> (<https://schema.org/email>)\n\nFunctionalDataProperty(<https://schema.org/email>)\nDataPropertyDomain(<https://schema.org/email> <https://purl.org/ontology/modalia#User>)\nDataPropertyRange(<https://schema.org/email> xsd:string)\n\n# Data Property: <https://schema.org/familyName> (<https://schema.org/familyName>)\n\nDataPropertyDomain(<https://schema.org/familyName> ObjectUnionOf(<https://purl.org/ontology/modalia#Contributor> <https://purl.org/ontology/modalia#User>))\nDataPropertyRange(<https://schema.org/familyName> xsd:string)\n\n# Data Property: <https://schema.org/fileSize> (<https://schema.org/fileSize>)\n\nDataPropertyDomain(<https://schema.org/fileSize> <https://github.com/tibonto/educor#EducationalResource>)\nDataPropertyRange(<https://schema.org/fileSize> xsd:string)\n\n# Data Property: <https://schema.org/givenName> (<https://schema.org/givenName>)\n\nDataPropertyDomain(<https://schema.org/givenName> ObjectUnionOf(<https://purl.org/ontology/modalia#Contributor> <https://purl.org/ontology/modalia#User>))\nDataPropertyRange(<https://schema.org/givenName> xsd:string)\n\n# Data Property: <https://schema.org/identifier> (<https://schema.org/identifier>)\n\nDataPropertyDomain(<https://schema.org/identifier> <https://github.com/tibonto/educor#EducationalResource>)\nDataPropertyRange(<https://schema.org/identifier> xsd:string)\n\n# Data Property: <https://schema.org/image> (<https://schema.org/image>)\n\nDataPropertyDomain(<https://schema.org/image> <https://github.com/tibonto/educor#EducationalResource>)\nDataPropertyRange(<https://schema.org/image> xsd:anyURI)\n\n# Data Property: <https://schema.org/isAccessibleForFree> (<https://schema.org/isAccessibleForFree>)\n\nDataPropertyDomain(<https://schema.org/isAccessibleForFree> <https://github.com/tibonto/educor#EducationalResource>)\nDataPropertyRange(<https://schema.org/isAccessibleForFree> xsd:boolean)\n\n# Data Property: <https://schema.org/keywords> (<https://schema.org/keywords>)\n\nDataPropertyDomain(<https://schema.org/keywords> <https://github.com/tibonto/educor#EducationalResource>)\nDataPropertyRange(<https://schema.org/keywords> xsd:string)\n\n# Data Property: <https://schema.org/ratingValue> (<https://schema.org/ratingValue>)\n\nDataPropertyDomain(<https://schema.org/ratingValue> <https://schema.org/Rating>)\nDataPropertyRange(<https://schema.org/ratingValue> xsd:integer)\n\n# Data Property: <https://schema.org/reviewBody> (<https://schema.org/reviewBody>)\n\nDataPropertyDomain(<https://schema.org/reviewBody> <https://schema.org/Review>)\nDataPropertyRange(<https://schema.org/reviewBody> xsd:string)\n\n# Data Property: <https://schema.org/reviewRating> (<https://schema.org/reviewRating>)\n\nDataPropertyDomain(<https://schema.org/reviewRating> <https://schema.org/Review>)\nDataPropertyRange(<https://schema.org/reviewRating> xsd:integer)\n\n# Data Property: <https://schema.org/teaches> (<https://schema.org/teaches>)\n\nDataPropertyDomain(<https://schema.org/teaches> <https://github.com/tibonto/educor#EducationalResource>)\nDataPropertyRange(<https://schema.org/teaches> xsd:string)\n\n# Data Property: <https://schema.org/timeRequired> (<https://schema.org/timeRequired>)\n\nDataPropertyDomain(<https://schema.org/timeRequired> <https://github.com/tibonto/educor#EducationalResource>)\nDataPropertyRange(<https://schema.org/timeRequired> xsd:duration)\n\n# Data Property: <https://schema.org/title> (<https://schema.org/title>)\n\nDataPropertyDomain(<https://schema.org/title> <https://purl.org/ontology/modalia#Job>)\nDataPropertyRange(<https://schema.org/title> xsd:string)\n\n# Data Property: <https://schema.org/url> (<https://schema.org/url>)\n\nDataPropertyDomain(<https://schema.org/url> <https://github.com/tibonto/educor#EducationalResource>)\nDataPropertyRange(<https://schema.org/url> xsd:anyURI)\n\n# Data Property: <https://schema.org/version> (<https://schema.org/version>)\n\nDataPropertyDomain(<https://schema.org/version> <https://github.com/tibonto/educor#EducationalResource>)\nDataPropertyRange(<https://schema.org/version> xsd:string)\n\n\n\n############################\n#   Classes\n############################\n\n# Class: <https://purl.org/ontology/modalia#Proficiency> (<https://purl.org/ontology/modalia#Proficiency>)\n\nEquivalentClasses(<https://purl.org/ontology/modalia#Proficiency> ObjectOneOf(<https://purl.org/ontology/modalia#Beginner> <https://purl.org/ontology/modalia#Competent> <https://purl.org/ontology/modalia#Expert> <https://purl.org/ontology/modalia#Novice> <https://purl.org/ontology/modalia#Proficient>))\n\n\n############################\n#   Named Individuals\n############################\n\n# Individual: <https://purl.org/ontology/modalia#Beginner> (<https://purl.org/ontology/modalia#Beginner>)\n\nObjectPropertyAssertion(<https://purl.org/ontology/modalia#isLessProficientThan> <https://purl.org/ontology/modalia#Beginner> <https://purl.org/ontology/modalia#Competent>)\nObjectPropertyAssertion(<https://purl.org/ontology/modalia#isLessProficientThan> <https://purl.org/ontology/modalia#Beginner> <https://purl.org/ontology/modalia#Expert>)\nObjectPropertyAssertion(<https://purl.org/ontology/modalia#isLessProficientThan> <https://purl.org/ontology/modalia#Beginner> <https://purl.org/ontology/modalia#Proficient>)\nObjectPropertyAssertion(<https://purl.org/ontology/modalia#isMoreProficientThan> <https://purl.org/ontology/modalia#Beginner> <https://purl.org/ontology/modalia#Novice>)\nDataPropertyAssertion(<https://purl.org/ontology/modalia#hasOrder> <https://purl.org/ontology/modalia#Beginner> \"2\"^^xsd:integer)\n\n# Individual: <https://purl.org/ontology/modalia#Competent> (<https://purl.org/ontology/modalia#Competent>)\n\nObjectPropertyAssertion(<https://purl.org/ontology/modalia#isLessProficientThan> <https://purl.org/ontology/modalia#Competent> <https://purl.org/ontology/modalia#Expert>)\nObjectPropertyAssertion(<https://purl.org/ontology/modalia#isLessProficientThan> <https://purl.org/ontology/modalia#Competent> <https://purl.org/ontology/modalia#Proficient>)\nObjectPropertyAssertion(<https://purl.org/ontology/modalia#isMoreProficientThan> <https://purl.org/ontology/modalia#Competent> <https://purl.org/ontology/modalia#Beginner>)\nObjectPropertyAssertion(<https://purl.org/ontology/modalia#isMoreProficientThan> <https://purl.org/ontology/modalia#Competent> <https://purl.org/ontology/modalia#Novice>)\nDataPropertyAssertion(<https://purl.org/ontology/modalia#hasOrder> <https://purl.org/ontology/modalia#Competent> \"3\"^^xsd:integer)\n\n# Individual: <https://purl.org/ontology/modalia#Expert> (<https://purl.org/ontology/modalia#Expert>)\n\nObjectPropertyAssertion(<https://purl.org/ontology/modalia#isMoreProficientThan> <https://purl.org/ontology/modalia#Expert> <https://purl.org/ontology/modalia#Beginner>)\nObjectPropertyAssertion(<https://purl.org/ontology/modalia#isMoreProficientThan> <https://purl.org/ontology/modalia#Expert> <https://purl.org/ontology/modalia#Competent>)\nObjectPropertyAssertion(<https://purl.org/ontology/modalia#isMoreProficientThan> <https://purl.org/ontology/modalia#Expert> <https://purl.org/ontology/modalia#Novice>)\nObjectPropertyAssertion(<https://purl.org/ontology/modalia#isMoreProficientThan> <https://purl.org/ontology/modalia#Expert> <https://purl.org/ontology/modalia#Proficient>)\nDataPropertyAssertion(<https://purl.org/ontology/modalia#hasOrder> <https://purl.org/ontology/modalia#Expert> \"5\"^^xsd:integer)\n\n# Individual: <https://purl.org/ontology/modalia#Novice> (<https://purl.org/ontology/modalia#Novice>)\n\nObjectPropertyAssertion(<https://purl.org/ontology/modalia#isLessProficientThan> <https://purl.org/ontology/modalia#Novice> <https://purl.org/ontology/modalia#Beginner>)\nObjectPropertyAssertion(<https://purl.org/ontology/modalia#isLessProficientThan> <https://purl.org/ontology/modalia#Novice> <https://purl.org/ontology/modalia#Competent>)\nObjectPropertyAssertion(<https://purl.org/ontology/modalia#isLessProficientThan> <https://purl.org/ontology/modalia#Novice> <https://purl.org/ontology/modalia#Expert>)\nObjectPropertyAssertion(<https://purl.org/ontology/modalia#isLessProficientThan> <https://purl.org/ontology/modalia#Novice> <https://purl.org/ontology/modalia#Proficient>)\nDataPropertyAssertion(<https://purl.org/ontology/modalia#hasOrder> <https://purl.org/ontology/modalia#Novice> \"1\"^^xsd:integer)\n\n# Individual: <https://purl.org/ontology/modalia#Proficient> (<https://purl.org/ontology/modalia#Proficient>)\n\nObjectPropertyAssertion(<https://purl.org/ontology/modalia#isLessProficientThan> <https://purl.org/ontology/modalia#Proficient> <https://purl.org/ontology/modalia#Expert>)\nObjectPropertyAssertion(<https://purl.org/ontology/modalia#isMoreProficientThan> <https://purl.org/ontology/modalia#Proficient> <https://purl.org/ontology/modalia#Beginner>)\nObjectPropertyAssertion(<https://purl.org/ontology/modalia#isMoreProficientThan> <https://purl.org/ontology/modalia#Proficient> <https://purl.org/ontology/modalia#Competent>)\nObjectPropertyAssertion(<https://purl.org/ontology/modalia#isMoreProficientThan> <https://purl.org/ontology/modalia#Proficient> <https://purl.org/ontology/modalia#Novice>)\nDataPropertyAssertion(<https://purl.org/ontology/modalia#hasOrder> <https://purl.org/ontology/modalia#Proficient> \"4\"^^xsd:integer)\n\n\n)
-def: MoDALIA: An Ontology for Educational Material in Research Data Management (RDM) and Data Science.\nThe ontology is used for making a knowledge graph as a backend to platform for teaching, personal learning, and recommendation.\nThe ontology is developed in OWL in Protege 5.5.0.
+owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nDeclaration(Class(<https://github.com/tibonto/educor#EducationalResource>))\nDeclaration(Class(<https://purl.org/ontology/modalia#Community>))\nDeclaration(Class(<https://purl.org/ontology/modalia#Contributor>))\nDeclaration(Class(<https://purl.org/ontology/modalia#Job>))\nDeclaration(Class(<https://purl.org/ontology/modalia#LearningPath>))\nDeclaration(Class(<https://purl.org/ontology/modalia#LearningPathStep>))\nDeclaration(Class(<https://purl.org/ontology/modalia#Proficiency>))\nDeclaration(Class(<https://purl.org/ontology/modalia#User>))\nDeclaration(Class(<https://purl.org/ontology/modalia#UserComment>))\nDeclaration(Class(<https://schema.org/Organization>))\nDeclaration(Class(<https://schema.org/Rating>))\nDeclaration(Class(<https://schema.org/Review>))\nDeclaration(Class(<https://w3id.org/kim/hcrt/assessment>))\nDeclaration(Class(<https://w3id.org/kim/hcrt/questionnaire>))\nDeclaration(ObjectProperty(<http://purl.org/dc/terms/hasPart>))\nDeclaration(ObjectProperty(<http://purl.org/dc/terms/isPartOf>))\nDeclaration(ObjectProperty(<http://purl.org/dc/terms/isReferencedBy>))\nDeclaration(ObjectProperty(<http://purl.org/dc/terms/references>))\nDeclaration(ObjectProperty(<http://purl.org/dc/terms/relation>))\nDeclaration(ObjectProperty(<http://purl.org/dc/terms/requires>))\nDeclaration(ObjectProperty(<https://purl.org/ontology/modalia#describes>))\nDeclaration(ObjectProperty(<https://purl.org/ontology/modalia#hasMetadata>))\nDeclaration(ObjectProperty(<https://purl.org/ontology/modalia#hasSourceCode>))\nDeclaration(ObjectProperty(<https://purl.org/ontology/modalia#hasTranslation>))\nDeclaration(ObjectProperty(<https://purl.org/ontology/modalia#isDescribedBy>))\nDeclaration(ObjectProperty(<https://purl.org/ontology/modalia#isLessProficientThan>))\nDeclaration(ObjectProperty(<https://purl.org/ontology/modalia#isMoreProficientThan>))\nDeclaration(ObjectProperty(<https://purl.org/ontology/modalia#isNewVersionOf>))\nDeclaration(ObjectProperty(<https://purl.org/ontology/modalia#isSourceCodeOf>))\nDeclaration(ObjectProperty(<https://purl.org/ontology/modalia#isTranslationOf>))\nDeclaration(ObjectProperty(<https://purl.org/ontology/modalia#solves>))\nDeclaration(ObjectProperty(<https://schema.org/isBasedOn>))\nDeclaration(ObjectProperty(<https://w3id.org/citedcat-ap/isCompiledBy>))\nDeclaration(ObjectProperty(<https://w3id.org/citedcat-ap/isSupplementTo>))\nDeclaration(ObjectProperty(<https://w3id.org/citedcat-ap/isSupplementedBy>))\nDeclaration(DataProperty(<http://purl.org/dc/terms/format>))\nDeclaration(DataProperty(<http://purl.org/dc/terms/issued>))\nDeclaration(DataProperty(<http://purl.org/dc/terms/rights>))\nDeclaration(DataProperty(<http://purl.org/spar/fabio/hasSubtitle>))\nDeclaration(DataProperty(<http://w3id.org/nfdi4ing/metadata4ing#hasRorId>))\nDeclaration(DataProperty(<http://w3id.org/nfdi4ing/metadata4ing#orcidId>))\nDeclaration(DataProperty(<https://purl.org/ontology/modalia#authorUnordered>))\nDeclaration(DataProperty(<https://purl.org/ontology/modalia#citation>))\nDeclaration(DataProperty(<https://purl.org/ontology/modalia#commentDate>))\nDeclaration(DataProperty(<https://purl.org/ontology/modalia#commentID>))\nDeclaration(DataProperty(<https://purl.org/ontology/modalia#commentText>))\nDeclaration(DataProperty(<https://purl.org/ontology/modalia#hasDOI>))\nDeclaration(DataProperty(<https://purl.org/ontology/modalia#hasOrder>))\nDeclaration(DataProperty(<https://purl.org/ontology/modalia#industry>))\nDeclaration(DataProperty(<https://purl.org/ontology/modalia#likesCount>))\nDeclaration(DataProperty(<https://purl.org/ontology/modalia#notesForLearner>))\nDeclaration(DataProperty(<https://purl.org/ontology/modalia#studyPlan>))\nDeclaration(DataProperty(<https://purl.org/ontology/modalia#viewCount>))\nDeclaration(DataProperty(<https://schema.org/abstract>))\nDeclaration(DataProperty(<https://schema.org/accessibilityFeature>))\nDeclaration(DataProperty(<https://schema.org/datePublished>))\nDeclaration(DataProperty(<https://schema.org/downloadUrl>))\nDeclaration(DataProperty(<https://schema.org/email>))\nDeclaration(DataProperty(<https://schema.org/familyName>))\nDeclaration(DataProperty(<https://schema.org/fileSize>))\nDeclaration(DataProperty(<https://schema.org/givenName>))\nDeclaration(DataProperty(<https://schema.org/identifier>))\nDeclaration(DataProperty(<https://schema.org/image>))\nDeclaration(DataProperty(<https://schema.org/isAccessibleForFree>))\nDeclaration(DataProperty(<https://schema.org/keywords>))\nDeclaration(DataProperty(<https://schema.org/ratingValue>))\nDeclaration(DataProperty(<https://schema.org/reviewBody>))\nDeclaration(DataProperty(<https://schema.org/reviewRating>))\nDeclaration(DataProperty(<https://schema.org/teaches>))\nDeclaration(DataProperty(<https://schema.org/timeRequired>))\nDeclaration(DataProperty(<https://schema.org/title>))\nDeclaration(DataProperty(<https://schema.org/url>))\nDeclaration(DataProperty(<https://schema.org/version>))\nDeclaration(NamedIndividual(<https://purl.org/ontology/modalia#Beginner>))\nDeclaration(NamedIndividual(<https://purl.org/ontology/modalia#Competent>))\nDeclaration(NamedIndividual(<https://purl.org/ontology/modalia#Expert>))\nDeclaration(NamedIndividual(<https://purl.org/ontology/modalia#Novice>))\nDeclaration(NamedIndividual(<https://purl.org/ontology/modalia#Proficient>))\nDeclaration(AnnotationProperty(<http://purl.org/dc/terms/created>))\nDeclaration(AnnotationProperty(<http://purl.org/dc/terms/license>))\nDeclaration(Datatype(xsd:duration))\n############################\n#   Annotation Properties\n############################\n\n# Annotation Property: <http://purl.org/dc/terms/created> (<http://purl.org/dc/terms/created>)\n\nAnnotationPropertyRange(<http://purl.org/dc/terms/created> xsd:dateTime)\n\n# Annotation Property: <http://purl.org/dc/terms/license> (<http://purl.org/dc/terms/license>)\n\nAnnotationPropertyRange(<http://purl.org/dc/terms/license> <https://purl.org/ontology/modalia#License>)\nAnnotationPropertyDomain(<http://purl.org/dc/terms/license> <https://github.com/tibonto/educor#EducationalResource>)\n\n\n############################\n#   Object Properties\n############################\n\n# Object Property: <http://purl.org/dc/terms/hasPart> (<http://purl.org/dc/terms/hasPart>)\n\nObjectPropertyRange(<http://purl.org/dc/terms/hasPart> owl:Thing)\n\n# Object Property: <http://purl.org/dc/terms/isPartOf> (<http://purl.org/dc/terms/isPartOf>)\n\nObjectPropertyRange(<http://purl.org/dc/terms/isPartOf> owl:Thing)\n\n# Object Property: <http://purl.org/dc/terms/isReferencedBy> (<http://purl.org/dc/terms/isReferencedBy>)\n\nObjectPropertyRange(<http://purl.org/dc/terms/isReferencedBy> owl:Thing)\n\n# Object Property: <http://purl.org/dc/terms/references> (<http://purl.org/dc/terms/references>)\n\nObjectPropertyRange(<http://purl.org/dc/terms/references> owl:Thing)\n\n# Object Property: <http://purl.org/dc/terms/relation> (<http://purl.org/dc/terms/relation>)\n\nObjectPropertyRange(<http://purl.org/dc/terms/relation> owl:Thing)\n\n# Object Property: <http://purl.org/dc/terms/requires> (<http://purl.org/dc/terms/requires>)\n\nObjectPropertyRange(<http://purl.org/dc/terms/requires> owl:Thing)\n\n# Object Property: <https://purl.org/ontology/modalia#describes> (<https://purl.org/ontology/modalia#describes>)\n\nObjectPropertyRange(<https://purl.org/ontology/modalia#describes> owl:Thing)\n\n# Object Property: <https://purl.org/ontology/modalia#hasMetadata> (<https://purl.org/ontology/modalia#hasMetadata>)\n\nObjectPropertyRange(<https://purl.org/ontology/modalia#hasMetadata> owl:Thing)\n\n# Object Property: <https://purl.org/ontology/modalia#hasSourceCode> (<https://purl.org/ontology/modalia#hasSourceCode>)\n\nObjectPropertyRange(<https://purl.org/ontology/modalia#hasSourceCode> owl:Thing)\n\n# Object Property: <https://purl.org/ontology/modalia#hasTranslation> (<https://purl.org/ontology/modalia#hasTranslation>)\n\nObjectPropertyRange(<https://purl.org/ontology/modalia#hasTranslation> owl:Thing)\n\n# Object Property: <https://purl.org/ontology/modalia#isDescribedBy> (<https://purl.org/ontology/modalia#isDescribedBy>)\n\nObjectPropertyRange(<https://purl.org/ontology/modalia#isDescribedBy> owl:Thing)\n\n# Object Property: <https://purl.org/ontology/modalia#isNewVersionOf> (<https://purl.org/ontology/modalia#isNewVersionOf>)\n\nIrreflexiveObjectProperty(<https://purl.org/ontology/modalia#isNewVersionOf>)\n\n# Object Property: <https://purl.org/ontology/modalia#isSourceCodeOf> (<https://purl.org/ontology/modalia#isSourceCodeOf>)\n\nObjectPropertyRange(<https://purl.org/ontology/modalia#isSourceCodeOf> owl:Thing)\n\n# Object Property: <https://purl.org/ontology/modalia#isTranslationOf> (<https://purl.org/ontology/modalia#isTranslationOf>)\n\nObjectPropertyRange(<https://purl.org/ontology/modalia#isTranslationOf> owl:Thing)\n\n# Object Property: <https://purl.org/ontology/modalia#solves> (<https://purl.org/ontology/modalia#solves>)\n\nObjectPropertyRange(<https://purl.org/ontology/modalia#solves> ObjectUnionOf(<https://w3id.org/kim/hcrt/assessment> <https://w3id.org/kim/hcrt/questionnaire>))\n\n# Object Property: <https://schema.org/isBasedOn> (<https://schema.org/isBasedOn>)\n\nObjectPropertyRange(<https://schema.org/isBasedOn> owl:Thing)\n\n# Object Property: <https://w3id.org/citedcat-ap/isCompiledBy> (<https://w3id.org/citedcat-ap/isCompiledBy>)\n\nObjectPropertyRange(<https://w3id.org/citedcat-ap/isCompiledBy> owl:Thing)\n\n# Object Property: <https://w3id.org/citedcat-ap/isSupplementTo> (<https://w3id.org/citedcat-ap/isSupplementTo>)\n\nObjectPropertyRange(<https://w3id.org/citedcat-ap/isSupplementTo> owl:Thing)\n\n# Object Property: <https://w3id.org/citedcat-ap/isSupplementedBy> (<https://w3id.org/citedcat-ap/isSupplementedBy>)\n\nObjectPropertyRange(<https://w3id.org/citedcat-ap/isSupplementedBy> owl:Thing)\n\n\n############################\n#   Data Properties\n############################\n\n# Data Property: <http://purl.org/dc/terms/format> (<http://purl.org/dc/terms/format>)\n\nDataPropertyDomain(<http://purl.org/dc/terms/format> <https://github.com/tibonto/educor#EducationalResource>)\nDataPropertyRange(<http://purl.org/dc/terms/format> xsd:string)\n\n# Data Property: <http://purl.org/dc/terms/issued> (<http://purl.org/dc/terms/issued>)\n\nDataPropertyDomain(<http://purl.org/dc/terms/issued> <https://github.com/tibonto/educor#EducationalResource>)\nDataPropertyRange(<http://purl.org/dc/terms/issued> xsd:dateTime)\n\n# Data Property: <http://purl.org/dc/terms/rights> (<http://purl.org/dc/terms/rights>)\n\nDataPropertyDomain(<http://purl.org/dc/terms/rights> <https://github.com/tibonto/educor#EducationalResource>)\nDataPropertyRange(<http://purl.org/dc/terms/rights> xsd:string)\n\n# Data Property: <http://purl.org/spar/fabio/hasSubtitle> (<http://purl.org/spar/fabio/hasSubtitle>)\n\nDataPropertyDomain(<http://purl.org/spar/fabio/hasSubtitle> <https://github.com/tibonto/educor#EducationalResource>)\nDataPropertyRange(<http://purl.org/spar/fabio/hasSubtitle> xsd:string)\n\n# Data Property: <http://w3id.org/nfdi4ing/metadata4ing#hasRorId> (<http://w3id.org/nfdi4ing/metadata4ing#hasRorId>)\n\nDataPropertyDomain(<http://w3id.org/nfdi4ing/metadata4ing#hasRorId> ObjectUnionOf(<https://purl.org/ontology/modalia#Community> <https://schema.org/Organization>))\nDataPropertyRange(<http://w3id.org/nfdi4ing/metadata4ing#hasRorId> DatatypeRestriction(xsd:string xsd:pattern \"https://ror.org/[0-9][0-9][a-z0-9][a-z0-9][a-z0-9][a-z0-9][a-z0-9][0-9][0-9]\"))\n\n# Data Property: <http://w3id.org/nfdi4ing/metadata4ing#orcidId> (<http://w3id.org/nfdi4ing/metadata4ing#orcidId>)\n\nDataPropertyDomain(<http://w3id.org/nfdi4ing/metadata4ing#orcidId> ObjectUnionOf(<https://purl.org/ontology/modalia#Contributor> <https://purl.org/ontology/modalia#User>))\nDataPropertyRange(<http://w3id.org/nfdi4ing/metadata4ing#orcidId> DatatypeRestriction(xsd:string xsd:pattern \"https://orcid.org/[0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9X]\"))\n\n# Data Property: <https://purl.org/ontology/modalia#authorUnordered> (<https://purl.org/ontology/modalia#authorUnordered>)\n\nDataPropertyDomain(<https://purl.org/ontology/modalia#authorUnordered> <https://github.com/tibonto/educor#EducationalResource>)\nDataPropertyRange(<https://purl.org/ontology/modalia#authorUnordered> xsd:string)\n\n# Data Property: <https://purl.org/ontology/modalia#citation> (<https://purl.org/ontology/modalia#citation>)\n\nDataPropertyDomain(<https://purl.org/ontology/modalia#citation> <https://github.com/tibonto/educor#EducationalResource>)\nDataPropertyRange(<https://purl.org/ontology/modalia#citation> xsd:string)\n\n# Data Property: <https://purl.org/ontology/modalia#commentDate> (<https://purl.org/ontology/modalia#commentDate>)\n\nDataPropertyDomain(<https://purl.org/ontology/modalia#commentDate> <https://purl.org/ontology/modalia#UserComment>)\nDataPropertyRange(<https://purl.org/ontology/modalia#commentDate> xsd:dateTimeStamp)\n\n# Data Property: <https://purl.org/ontology/modalia#commentID> (<https://purl.org/ontology/modalia#commentID>)\n\nDataPropertyDomain(<https://purl.org/ontology/modalia#commentID> <https://purl.org/ontology/modalia#UserComment>)\nDataPropertyRange(<https://purl.org/ontology/modalia#commentID> xsd:string)\n\n# Data Property: <https://purl.org/ontology/modalia#commentText> (<https://purl.org/ontology/modalia#commentText>)\n\nDataPropertyDomain(<https://purl.org/ontology/modalia#commentText> <https://purl.org/ontology/modalia#UserComment>)\nDataPropertyRange(<https://purl.org/ontology/modalia#commentText> xsd:string)\n\n# Data Property: <https://purl.org/ontology/modalia#hasDOI> (<https://purl.org/ontology/modalia#hasDOI>)\n\nDataPropertyDomain(<https://purl.org/ontology/modalia#hasDOI> <https://github.com/tibonto/educor#EducationalResource>)\nDataPropertyRange(<https://purl.org/ontology/modalia#hasDOI> xsd:string)\n\n# Data Property: <https://purl.org/ontology/modalia#hasOrder> (<https://purl.org/ontology/modalia#hasOrder>)\n\nDataPropertyDomain(<https://purl.org/ontology/modalia#hasOrder> ObjectUnionOf(<https://purl.org/ontology/modalia#LearningPathStep> <https://purl.org/ontology/modalia#Proficiency>))\nDataPropertyRange(<https://purl.org/ontology/modalia#hasOrder> xsd:integer)\n\n# Data Property: <https://purl.org/ontology/modalia#industry> (<https://purl.org/ontology/modalia#industry>)\n\nSubDataPropertyOf(<https://purl.org/ontology/modalia#industry> owl:topDataProperty)\nDataPropertyDomain(<https://purl.org/ontology/modalia#industry> <https://purl.org/ontology/modalia#Job>)\nDataPropertyRange(<https://purl.org/ontology/modalia#industry> xsd:string)\n\n# Data Property: <https://purl.org/ontology/modalia#likesCount> (<https://purl.org/ontology/modalia#likesCount>)\n\nDataPropertyDomain(<https://purl.org/ontology/modalia#likesCount> <https://github.com/tibonto/educor#EducationalResource>)\nDataPropertyRange(<https://purl.org/ontology/modalia#likesCount> xsd:int)\n\n# Data Property: <https://purl.org/ontology/modalia#notesForLearner> (<https://purl.org/ontology/modalia#notesForLearner>)\n\nDataPropertyDomain(<https://purl.org/ontology/modalia#notesForLearner> ObjectUnionOf(<https://github.com/tibonto/educor#EducationalResource> <https://purl.org/ontology/modalia#LearningPathStep>))\nDataPropertyRange(<https://purl.org/ontology/modalia#notesForLearner> xsd:string)\n\n# Data Property: <https://purl.org/ontology/modalia#studyPlan> (<https://purl.org/ontology/modalia#studyPlan>)\n\nDataPropertyDomain(<https://purl.org/ontology/modalia#studyPlan> <https://purl.org/ontology/modalia#LearningPath>)\nDataPropertyRange(<https://purl.org/ontology/modalia#studyPlan> rdf:langString)\n\n# Data Property: <https://purl.org/ontology/modalia#viewCount> (<https://purl.org/ontology/modalia#viewCount>)\n\nDataPropertyDomain(<https://purl.org/ontology/modalia#viewCount> <https://github.com/tibonto/educor#EducationalResource>)\nDataPropertyRange(<https://purl.org/ontology/modalia#viewCount> xsd:int)\n\n# Data Property: <https://schema.org/abstract> (<https://schema.org/abstract>)\n\nDataPropertyDomain(<https://schema.org/abstract> <https://github.com/tibonto/educor#EducationalResource>)\nDataPropertyRange(<https://schema.org/abstract> xsd:string)\n\n# Data Property: <https://schema.org/accessibilityFeature> (<https://schema.org/accessibilityFeature>)\n\nDataPropertyDomain(<https://schema.org/accessibilityFeature> <https://github.com/tibonto/educor#EducationalResource>)\nDataPropertyRange(<https://schema.org/accessibilityFeature> xsd:string)\n\n# Data Property: <https://schema.org/datePublished> (<https://schema.org/datePublished>)\n\nDataPropertyDomain(<https://schema.org/datePublished> <https://github.com/tibonto/educor#EducationalResource>)\nDataPropertyRange(<https://schema.org/datePublished> xsd:dateTime)\n\n# Data Property: <https://schema.org/downloadUrl> (<https://schema.org/downloadUrl>)\n\nDataPropertyDomain(<https://schema.org/downloadUrl> <https://github.com/tibonto/educor#EducationalResource>)\nDataPropertyRange(<https://schema.org/downloadUrl> xsd:anyURI)\n\n# Data Property: <https://schema.org/email> (<https://schema.org/email>)\n\nFunctionalDataProperty(<https://schema.org/email>)\nDataPropertyDomain(<https://schema.org/email> <https://purl.org/ontology/modalia#User>)\nDataPropertyRange(<https://schema.org/email> xsd:string)\n\n# Data Property: <https://schema.org/familyName> (<https://schema.org/familyName>)\n\nDataPropertyDomain(<https://schema.org/familyName> ObjectUnionOf(<https://purl.org/ontology/modalia#Contributor> <https://purl.org/ontology/modalia#User>))\nDataPropertyRange(<https://schema.org/familyName> xsd:string)\n\n# Data Property: <https://schema.org/fileSize> (<https://schema.org/fileSize>)\n\nDataPropertyDomain(<https://schema.org/fileSize> <https://github.com/tibonto/educor#EducationalResource>)\nDataPropertyRange(<https://schema.org/fileSize> xsd:string)\n\n# Data Property: <https://schema.org/givenName> (<https://schema.org/givenName>)\n\nDataPropertyDomain(<https://schema.org/givenName> ObjectUnionOf(<https://purl.org/ontology/modalia#Contributor> <https://purl.org/ontology/modalia#User>))\nDataPropertyRange(<https://schema.org/givenName> xsd:string)\n\n# Data Property: <https://schema.org/identifier> (<https://schema.org/identifier>)\n\nDataPropertyDomain(<https://schema.org/identifier> <https://github.com/tibonto/educor#EducationalResource>)\nDataPropertyRange(<https://schema.org/identifier> xsd:string)\n\n# Data Property: <https://schema.org/image> (<https://schema.org/image>)\n\nDataPropertyDomain(<https://schema.org/image> <https://github.com/tibonto/educor#EducationalResource>)\nDataPropertyRange(<https://schema.org/image> xsd:anyURI)\n\n# Data Property: <https://schema.org/isAccessibleForFree> (<https://schema.org/isAccessibleForFree>)\n\nDataPropertyDomain(<https://schema.org/isAccessibleForFree> <https://github.com/tibonto/educor#EducationalResource>)\nDataPropertyRange(<https://schema.org/isAccessibleForFree> xsd:boolean)\n\n# Data Property: <https://schema.org/keywords> (<https://schema.org/keywords>)\n\nDataPropertyDomain(<https://schema.org/keywords> <https://github.com/tibonto/educor#EducationalResource>)\nDataPropertyRange(<https://schema.org/keywords> xsd:string)\n\n# Data Property: <https://schema.org/ratingValue> (<https://schema.org/ratingValue>)\n\nDataPropertyDomain(<https://schema.org/ratingValue> <https://schema.org/Rating>)\nDataPropertyRange(<https://schema.org/ratingValue> xsd:integer)\n\n# Data Property: <https://schema.org/reviewBody> (<https://schema.org/reviewBody>)\n\nDataPropertyDomain(<https://schema.org/reviewBody> <https://schema.org/Review>)\nDataPropertyRange(<https://schema.org/reviewBody> xsd:string)\n\n# Data Property: <https://schema.org/reviewRating> (<https://schema.org/reviewRating>)\n\nDataPropertyDomain(<https://schema.org/reviewRating> <https://schema.org/Review>)\nDataPropertyRange(<https://schema.org/reviewRating> xsd:integer)\n\n# Data Property: <https://schema.org/teaches> (<https://schema.org/teaches>)\n\nDataPropertyDomain(<https://schema.org/teaches> <https://github.com/tibonto/educor#EducationalResource>)\nDataPropertyRange(<https://schema.org/teaches> xsd:string)\n\n# Data Property: <https://schema.org/timeRequired> (<https://schema.org/timeRequired>)\n\nDataPropertyDomain(<https://schema.org/timeRequired> <https://github.com/tibonto/educor#EducationalResource>)\nDataPropertyRange(<https://schema.org/timeRequired> xsd:duration)\n\n# Data Property: <https://schema.org/title> (<https://schema.org/title>)\n\nDataPropertyDomain(<https://schema.org/title> <https://purl.org/ontology/modalia#Job>)\nDataPropertyRange(<https://schema.org/title> xsd:string)\n\n# Data Property: <https://schema.org/url> (<https://schema.org/url>)\n\nDataPropertyDomain(<https://schema.org/url> <https://github.com/tibonto/educor#EducationalResource>)\nDataPropertyRange(<https://schema.org/url> xsd:anyURI)\n\n# Data Property: <https://schema.org/version> (<https://schema.org/version>)\n\nDataPropertyDomain(<https://schema.org/version> <https://github.com/tibonto/educor#EducationalResource>)\nDataPropertyRange(<https://schema.org/version> xsd:string)\n\n\n\n############################\n#   Classes\n############################\n\n# Class: <https://purl.org/ontology/modalia#Proficiency> (<https://purl.org/ontology/modalia#Proficiency>)\n\nEquivalentClasses(<https://purl.org/ontology/modalia#Proficiency> ObjectOneOf(<https://purl.org/ontology/modalia#Beginner> <https://purl.org/ontology/modalia#Competent> <https://purl.org/ontology/modalia#Expert> <https://purl.org/ontology/modalia#Novice> <https://purl.org/ontology/modalia#Proficient>))\n\n\n############################\n#   Named Individuals\n############################\n\n# Individual: <https://purl.org/ontology/modalia#Beginner> (<https://purl.org/ontology/modalia#Beginner>)\n\nObjectPropertyAssertion(<https://purl.org/ontology/modalia#isLessProficientThan> <https://purl.org/ontology/modalia#Beginner> <https://purl.org/ontology/modalia#Competent>)\nObjectPropertyAssertion(<https://purl.org/ontology/modalia#isLessProficientThan> <https://purl.org/ontology/modalia#Beginner> <https://purl.org/ontology/modalia#Expert>)\nObjectPropertyAssertion(<https://purl.org/ontology/modalia#isLessProficientThan> <https://purl.org/ontology/modalia#Beginner> <https://purl.org/ontology/modalia#Proficient>)\nObjectPropertyAssertion(<https://purl.org/ontology/modalia#isMoreProficientThan> <https://purl.org/ontology/modalia#Beginner> <https://purl.org/ontology/modalia#Novice>)\nDataPropertyAssertion(<https://purl.org/ontology/modalia#hasOrder> <https://purl.org/ontology/modalia#Beginner> \"2\"^^xsd:integer)\n\n# Individual: <https://purl.org/ontology/modalia#Competent> (<https://purl.org/ontology/modalia#Competent>)\n\nObjectPropertyAssertion(<https://purl.org/ontology/modalia#isLessProficientThan> <https://purl.org/ontology/modalia#Competent> <https://purl.org/ontology/modalia#Expert>)\nObjectPropertyAssertion(<https://purl.org/ontology/modalia#isLessProficientThan> <https://purl.org/ontology/modalia#Competent> <https://purl.org/ontology/modalia#Proficient>)\nObjectPropertyAssertion(<https://purl.org/ontology/modalia#isMoreProficientThan> <https://purl.org/ontology/modalia#Competent> <https://purl.org/ontology/modalia#Beginner>)\nObjectPropertyAssertion(<https://purl.org/ontology/modalia#isMoreProficientThan> <https://purl.org/ontology/modalia#Competent> <https://purl.org/ontology/modalia#Novice>)\nDataPropertyAssertion(<https://purl.org/ontology/modalia#hasOrder> <https://purl.org/ontology/modalia#Competent> \"3\"^^xsd:integer)\n\n# Individual: <https://purl.org/ontology/modalia#Expert> (<https://purl.org/ontology/modalia#Expert>)\n\nObjectPropertyAssertion(<https://purl.org/ontology/modalia#isMoreProficientThan> <https://purl.org/ontology/modalia#Expert> <https://purl.org/ontology/modalia#Beginner>)\nObjectPropertyAssertion(<https://purl.org/ontology/modalia#isMoreProficientThan> <https://purl.org/ontology/modalia#Expert> <https://purl.org/ontology/modalia#Competent>)\nObjectPropertyAssertion(<https://purl.org/ontology/modalia#isMoreProficientThan> <https://purl.org/ontology/modalia#Expert> <https://purl.org/ontology/modalia#Novice>)\nObjectPropertyAssertion(<https://purl.org/ontology/modalia#isMoreProficientThan> <https://purl.org/ontology/modalia#Expert> <https://purl.org/ontology/modalia#Proficient>)\nDataPropertyAssertion(<https://purl.org/ontology/modalia#hasOrder> <https://purl.org/ontology/modalia#Expert> \"5\"^^xsd:integer)\n\n# Individual: <https://purl.org/ontology/modalia#Novice> (<https://purl.org/ontology/modalia#Novice>)\n\nObjectPropertyAssertion(<https://purl.org/ontology/modalia#isLessProficientThan> <https://purl.org/ontology/modalia#Novice> <https://purl.org/ontology/modalia#Beginner>)\nObjectPropertyAssertion(<https://purl.org/ontology/modalia#isLessProficientThan> <https://purl.org/ontology/modalia#Novice> <https://purl.org/ontology/modalia#Competent>)\nObjectPropertyAssertion(<https://purl.org/ontology/modalia#isLessProficientThan> <https://purl.org/ontology/modalia#Novice> <https://purl.org/ontology/modalia#Expert>)\nObjectPropertyAssertion(<https://purl.org/ontology/modalia#isLessProficientThan> <https://purl.org/ontology/modalia#Novice> <https://purl.org/ontology/modalia#Proficient>)\nDataPropertyAssertion(<https://purl.org/ontology/modalia#hasOrder> <https://purl.org/ontology/modalia#Novice> \"1\"^^xsd:integer)\n\n# Individual: <https://purl.org/ontology/modalia#Proficient> (<https://purl.org/ontology/modalia#Proficient>)\n\nObjectPropertyAssertion(<https://purl.org/ontology/modalia#isLessProficientThan> <https://purl.org/ontology/modalia#Proficient> <https://purl.org/ontology/modalia#Expert>)\nObjectPropertyAssertion(<https://purl.org/ontology/modalia#isMoreProficientThan> <https://purl.org/ontology/modalia#Proficient> <https://purl.org/ontology/modalia#Beginner>)\nObjectPropertyAssertion(<https://purl.org/ontology/modalia#isMoreProficientThan> <https://purl.org/ontology/modalia#Proficient> <https://purl.org/ontology/modalia#Competent>)\nObjectPropertyAssertion(<https://purl.org/ontology/modalia#isMoreProficientThan> <https://purl.org/ontology/modalia#Proficient> <https://purl.org/ontology/modalia#Novice>)\nDataPropertyAssertion(<https://purl.org/ontology/modalia#hasOrder> <https://purl.org/ontology/modalia#Proficient> \"4\"^^xsd:integer)\n\n\n)
 name: MoDALIA
+
+[Term]
+id: AnalysingPhase
+name: analysing phase
+is_a: DataLifeCyclePhase ! data life cycle phase
+disjoint_from: AssurancePhase ! assurance phase
+disjoint_from: CollectionPhase ! collection phase
+disjoint_from: DescriptionPhase ! description phase
+disjoint_from: DiscoveryPhase ! discovery phase
+disjoint_from: IntegratePhase ! integration phase
+disjoint_from: PlanningPhase ! planning phase
+disjoint_from: PreservationPhase ! preservation phase
+property_value: skos:definition "The last phase in data life cycle." xsd:string
+
+[Term]
+id: AssurancePhase
+name: assurance phase
+is_a: DataLifeCyclePhase ! data life cycle phase
+
+[Term]
+id: BachelorStudent
+name: bachelor student
+is_a: TargetGroup ! target group
+property_value: seeAlso "http://vivoweb.org/ontology/core#UndergraduateStudent" xsd:string
+property_value: skos:definition "Student in Bachelor's degree" xsd:string
+property_value: skos:prefLabel "Bachelor Student" xsd:string
+
+[Term]
+id: BestPractices
+name: best practices
+comment: Class representing OERs that are best practices in scientific area.
+is_a: LearningResourceType ! learning resource type
+property_value: skos:prefLabel "best practices" xsd:string
+
+[Term]
+id: Code
+name: code
+comment: Class representing OER which are code like Jupyternotebook.
+is_a: MediaType ! media type
+property_value: skos:prefLabel "code" xsd:string
+
+[Term]
+id: CodeNotebook
+name: code notebook
+is_a: LearningResourceType ! learning resource type
+property_value: skos:example "Jupyter Notebook" xsd:string
+property_value: skos:prefLabel "Code Notebook" xsd:string
+
+[Term]
+id: CollectionPhase
+name: collection phase
+is_a: DataLifeCyclePhase ! data life cycle phase
+
+[Term]
+id: Community
+name: community
+property_value: skos:definition "A Community gathers users (members) and educational resources/learning paths similar  to Zenodo communities" xsd:string
+
+[Term]
+id: ContentProvider
+name: content provider
+is_a: TargetGroup ! target group
+property_value: seeAlso "https://bibfra.me/view/rare/lite/provider" xsd:string
+property_value: skos:definition "a person or group who is providing OER" xsd:string
+property_value: skos:prefLabel "Content Provider" xsd:string
+
+[Term]
+id: ContentQuality
+name: content quality
+property_value: skos:definition "Educational quality of an OER" xsd:string
+property_value: skos:example "High quality" xsd:string
+
+[Term]
+id: Contributor
+name: contributor
+comment: Contributed to OER with some contribution type
+union_of: schema:Organization ! organization
+union_of: schema:Person ! person
+
+[Term]
+id: Cookbook
+name: cookbook
+is_a: LearningResourceType ! learning resource type
+property_value: seeAlso "https://www.wikidata.org/wiki/Q3689925" xsd:string
+property_value: skos:prefLabel "cookbook" xsd:string
+
+[Term]
+id: CuratorRole
+name: curator user role
+is_a: UserRole ! user role
+
+[Term]
+id: DataLifeCyclePhase
+name: data life cycle phase
+property_value: seeAlso "https://towson.libguides.com/dataresearch/datamangement/dldataone" xsd:string
+property_value: skos:definition "One of the phases of data life cycle." xsd:string
+
+[Term]
+id: DescriptionPhase
+name: description phase
+is_a: DataLifeCyclePhase ! data life cycle phase
+
+[Term]
+id: Discipline
+name: discipline
+property_value: seeAlso "http://purl.org/spar/fabio/SubjectDiscipline" xsd:string
+property_value: skos:definition "knowledge of a specific, specialized discipline or field" xsd:string
+property_value: skos:example "e.g Engineering" xsd:string
+
+[Term]
+id: DiscoveryPhase
+name: discovery phase
+is_a: DataLifeCyclePhase ! data life cycle phase
+
+[Term]
+id: EducationalLevel
+name: education level
+property_value: skos:definition "The educational level of a user: Bachlors, Masters or PhD" xsd:string
+
+[Term]
+id: FiveStarRating
+name: five star rating
+is_a: schema:Rating ! rating indicator
+property_value: schema:bestRating "5" xsd:integer
+property_value: schema:worstRating "1" xsd:integer
+property_value: skos:definition "Standard five star rating, min value 1 maximum 5" xsd:string
+
+[Term]
+id: FreeLicense
+name: free license
+is_a: License ! license
+
+[Term]
+id: IntegratePhase
+name: integration phase
+is_a: DataLifeCyclePhase ! data life cycle phase
+
+[Term]
+id: Job
+name: job
+property_value: seeAlso "https://schema.org/Occupation" xsd:string
+property_value: skos:definition "name of a profession" xsd:string
+property_value: skos:example "Software Developer" xsd:string
+
+[Term]
+id: Language
+name: language
+property_value: seeAlso https://www.wikidata.org/wiki/Q315
+property_value: skos:definition "Natural language" xsd:string
+
+[Term]
+id: LearnerRole
+name: learner role
+is_a: UserRole ! user role
+
+[Term]
+id: LearningObjective
+name: learning objective
+comment: The Learning Goal can vary depending on the personalisation level. For example a user might care to learn some specific topics and not all the skill set.
+property_value: seeAlso "https://github.com/tibonto/educor#LearningGoal" xsd:string
+property_value: skos:definition "Learning Objective as defined in learning objective matrix (LZM)" xsd:string
+
+[Term]
+id: LearningPath
+name: learning path
+property_value: skos:definition "The learning path consists of a set of learning units (Educational Resources) in a specified order  to reach a learning objective." xsd:string
+property_value: skos:example "\"Hello world in python\", \"Comments in python\", \"Strings in python\"" xsd:string
+
+[Term]
+id: LearningPathStep
+name: learning path step
+property_value: skos:definition "One step of a learning path, it has an order and one educational resource. Optionally a learning path step can have a note for learner." xsd:string
+
+[Term]
+id: LearningResourceType
+name: learning resource type
+property_value: skos:definition "The type of the learning resource can be lecture, experiment, Assessment, etc." xsd:string
+
+[Term]
+id: Lecture
+name: lecture
+comment: Class representing OERs that are lectures.
+is_a: LearningResourceType ! learning resource type
+property_value: skos:prefLabel "lecture" xsd:string
+
+[Term]
+id: License
+name: license
+
+[Term]
+id: MastersStudent
+name: master's student
+is_a: TargetGroup ! target group
+property_value: seeAlso "http://w3id.org/roh#MastersStudent" xsd:string
+property_value: skos:definition "A student in Master's degree" xsd:string
+property_value: skos:prefLabel "Master's Student" xsd:string
+
+[Term]
+id: MediaType
+name: media type
+property_value: skos:definition "General type of data content encoded in a computer file. Digital media type of the resource. To be used with user preferences according to VARK learning style." xsd:string
+
+[Term]
+id: Multipart
+name: multipart
+is_a: MediaType ! media type
+property_value: skos:definition "If the resource consists of more than one item with different DOIs, the MediaType is \"multipart\" and the relations are provided in the field \"RelatedWork\"." xsd:string
+property_value: skos:prefLabel "Multipart" xsd:string
+
+[Term]
+id: MuseumProfessional
+name: museum professional
+is_a: TargetGroup ! target group
+property_value: skos:prefLabel "Museum Professional" xsd:string
 
 [Term]
 id: OCCO:25401100
 name: archivist
-def: "A person who appraises, edits, and directs safekeeping of permanent records and historically valuable documents. Participate in research activities based on archival materials." []
-is_a: modalia:TargetGroup ! target group
+is_a: TargetGroup ! target group
+property_value: skos:definition "A person who appraises, edits, and directs safekeeping of permanent records and historically valuable documents. Participate in research activities based on archival materials." xsd:string
 property_value: skos:prefLabel "Archivist" xsd:string
 
 [Term]
 id: OCCO:25402200
 name: librarian
-is_a: modalia:TargetGroup ! target group
+is_a: TargetGroup ! target group
 property_value: skos:prefLabel "Librarian" xsd:string
+
+[Term]
+id: PhDStudent
+name: PhD student
+is_a: TargetGroup ! target group
+property_value: seeAlso "http://vivoweb.org/ontology/core#GraduateStudent" xsd:string
+property_value: skos:definition "A student in PhD degree" xsd:string
+property_value: skos:prefLabel "PhD student" xsd:string
+
+[Term]
+id: PlanningPhase
+name: planning phase
+is_a: DataLifeCyclePhase ! data life cycle phase
+property_value: skos:definition "First phase in data life cycle. Description of the data that will be compiled." xsd:string
+
+[Term]
+id: Podcast
+name: podcast
+is_a: LearningResourceType ! learning resource type
+property_value: skos:definition "The learning resource type podcast is an episodic series of digital audio or video files or an episode of that, which a user can download and listen to." xsd:string
+
+[Term]
+id: Poster
+name: poster
+comment: Class representing OERs that are Posters
+is_a: LearningResourceType ! learning resource type
+property_value: skos:prefLabel "poster" xsd:string
+
+[Term]
+id: PreservationPhase
+name: preservation phase
+is_a: DataLifeCyclePhase ! data life cycle phase
+
+[Term]
+id: Proficiency
+name: proficiency
+property_value: skos:definition "Benner’s Novice to Expert\nThe five stages of proficiency in the novice to expert model are: novice, advanced beginner, competent, proficient, and expert (Benner, 1982)." xsd:string
+
+[Term]
+id: ProprietaryLicense
+name: proprietary license
+is_a: License ! license
+
+[Term]
+id: RDMResource
+name: RDM resource
+comment: OER related to Research Data Management
+is_a: ec:EducationalResource ! educational resource
+
+[Term]
+id: RDMSkill
+name: RDM skill
+comment: Research Data Managment Skill
+is_a: Skill ! skill
+property_value: skos:definition "The ability to carry out tasks." xsd:string
+
+[Term]
+id: RDMSubjectCluster
+name: RDM subject cluster
+property_value: skos:definition "Cluster of RDM topics areas. Matches Subject area in Learning Objective Matrix version 3 ( https://zenodo.org/records/15846806 )" xsd:string
+
+[Term]
+id: RDMTopic
+name: RDM topic
+is_a: ec:KnowledgeTopic ! knowledge topic
+property_value: skos:definition "Topic related to research data management" xsd:string
+
+[Term]
+id: Researcher
+name: researcher
+is_a: TargetGroup ! target group
+property_value: seeAlso "https://www.wikidata.org/wiki/Q1650915" xsd:string
+property_value: skos:prefLabel "Researcher" xsd:string
+
+[Term]
+id: ResearcherUserRole
+name: researcher user role
+is_a: UserRole ! user role
 
 [Term]
 id: SIO:000776
 name: object
-def: "an object that is described (chemical substance, living organism, building, ...)" []
+property_value: isDefinedBy http://semanticscience.org
+property_value: skos:definition "an object that is described (chemical substance, living organism, building, ...)" xsd:string
 property_value: skos:example "mouse cells" xsd:string
+
+[Term]
+id: Skill
+name: skill
+comment: Job Skill, ability to perform some tasks.
+
+[Term]
+id: StudentSchool
+name: student (school)
+is_a: TargetGroup ! target group
+property_value: skos:prefLabel "Student (School)" xsd:string
 
 [Term]
 id: T4FS:0000178
 name: data steward
-is_a: modalia:TargetGroup ! target group
+is_a: TargetGroup ! target group
 property_value: skos:prefLabel "Data Steward" xsd:string
 
 [Term]
+id: TargetGroup
+name: target group
+property_value: seeAlso "http://purl.org/dcx/lrmi-terms/EducationalAudience" xsd:string
+property_value: skos:definition "The target group of the learning resource, e.g. students, data stewards, researchers, etc" xsd:string
+
+[Term]
+id: TeacherHigherEducation
+name: teacher (higher education)
+is_a: TargetGroup ! target group
+property_value: skos:prefLabel "Teacher (Higher Education)" xsd:string
+
+[Term]
+id: TeacherRole
+name: teacher user role
+is_a: UserRole ! user role
+
+[Term]
+id: TeacherSchool
+name: teacher (school)
+is_a: TargetGroup ! target group
+property_value: seeAlso "https://www.wikidata.org/wiki/Q37226" xsd:string
+property_value: skos:prefLabel "Teacher (School)" xsd:string
+
+[Term]
+id: Tutorial
+name: tutorial
+comment: Class representing OERs that are in form of tutorial.
+is_a: LearningResourceType ! learning resource type
+property_value: skos:prefLabel "tutorial" xsd:string
+
+[Term]
+id: User
+name: user
+property_value: seeAlso http://xmlns.com/foaf/0.1/Person
+property_value: skos:definition "Registered user in the system, can have different roles i.e learner , teacher , curator, etc" xsd:string
+
+[Term]
+id: UserComment
+name: user comment
+property_value: skos:definition "Comment added by a user on an educational resource" xsd:string
+
+[Term]
+id: UserRole
+name: user role
+
+[Term]
+id: VARKAuditory
+name: VARK auditory
+is_a: ec:LearningPreference ! learning preference
+property_value: skos:definition "Auditory learning (music, discussion, lectures)" xsd:string
+
+[Term]
+id: VARKKinesthetic
+name: VARK kinesthetic
+is_a: ec:LearningPreference ! learning preference
+property_value: skos:definition "Kinesthetic learning (movement, experiments, hands-on activities)" xsd:string
+
+[Term]
+id: VARKReading
+name: VARK reading
+is_a: ec:LearningPreference ! learning preference
+property_value: skos:definition "Reading and writing (making lists, reading textbooks, taking notes)" xsd:string
+
+[Term]
+id: VARKVisual
+name: VARK visual
+is_a: ec:LearningPreference ! learning preference
+property_value: skos:definition "Visual learning (pictures, movies, diagrams)" xsd:string
+
+[Term]
 id: bf:Contribution
-def: "A contribution to an OER, including agent and role information." []
+property_value: skos:definition "A contribution to an OER, including agent and role information." xsd:string
+
+[Term]
+id: bf:Role
+name: contributor role
+property_value: skos:definition "types of contribution to an OER." xsd:string
+property_value: skos:example "Editor" xsd:string
 
 [Term]
 id: bibo:Article
 name: article
-def: "Class representing OERs that are articles (e.g academic article)" []
-is_a: modalia:LearningResourceType ! learning resource type
+comment: Class representing OERs that are articles (e.g academic article)
+is_a: LearningResourceType ! learning resource type
 property_value: skos:prefLabel "Article" xsd:string
 
 [Term]
 id: bibo:Book
 name: book
-def: "Class representing OER which is a book." []
-is_a: modalia:LearningResourceType ! learning resource type
+is_a: LearningResourceType ! learning resource type
+property_value: skos:definition "Class representing OER which is a book." xsd:string
 property_value: skos:prefLabel "Book" xsd:string
 
 [Term]
 id: bibo:Report
 name: report
-is_a: modalia:LearningResourceType ! learning resource type
+is_a: LearningResourceType ! learning resource type
 property_value: skos:prefLabel "Report" xsd:string
 
 [Term]
 id: bibo:Thesis
 name: thesis
-is_a: modalia:LearningResourceType ! learning resource type
+is_a: LearningResourceType ! learning resource type
 property_value: skos:prefLabel "Thesis" xsd:string
 
 [Term]
 id: bibo:Webpage
 name: webpage
-is_a: modalia:LearningResourceType ! learning resource type
+is_a: LearningResourceType ! learning resource type
 property_value: skos:prefLabel "Web page" xsd:string
 
 [Term]
 id: bibo:Workshop
 name: workshop
-def: "A seminar, discussion group, or the like, that emphasizes zxchange of ideas and the demonstration and application of techniques, skills, etc." []
-is_a: modalia:LearningResourceType ! learning resource type
+is_a: LearningResourceType ! learning resource type
+property_value: isDefinedBy http://purl.org/ontology/bibo
+property_value: skos:definition "A seminar, discussion group, or the like, that emphasizes zxchange of ideas and the demonstration and application of techniques, skills, etc." xsd:string
 property_value: skos:prefLabel "workshop" xsd:string
+
+[Term]
+id: data:0006
+name: data
+property_value: skos:definition "Kind of data being managed" xsd:string
 
 [Term]
 id: ec:EducationalResource
 name: educational resource
-def: "Any educational resources online or offline" []
+property_value: isDefinedBy https://github.com/tibonto/educor
+property_value: skos:definition "Any educational resources online or offline" xsd:string
 property_value: skos:example "A video describing how lists work in Python programming language" xsd:string
 
 [Term]
 id: ec:KnowledgeTopic
 name: knowledge topic
-def: "A single node representing a learning module based on the domain ontology. It contains all the learning material for the specific learning module." []
-disjoint_from: modalia:Skill ! skill
+disjoint_from: Skill ! skill
+property_value: isDefinedBy https://github.com/tibonto/educor
 property_value: seeAlso "https://w3id.org/ccso/ccso#Topic" xsd:string
+property_value: skos:definition "A single node representing a learning module based on the domain ontology. It contains all the learning material for the specific learning module." xsd:string
 property_value: skos:example "A knowledge topic can be the “Quadratic equations” in the domain of Mathematics Algebra" xsd:string
 
 [Term]
 id: ec:LearningPreference
 name: learning preference
-def: "The learning preference of the user based on the learning styles theory" []
 comment: It is based on the theory which identifies four learning styles (visual, auditory, reading, and kinesthetic).
+property_value: isDefinedBy https://github.com/tibonto/educor
+property_value: skos:definition "The learning preference of the user based on the learning styles theory" xsd:string
 property_value: skos:example "Visual" xsd:string
 
 [Term]
 id: ec:Recommendation
 name: recommendation
-def: "The output of the recommendation system algorithm. The system that reads user profile, content information, ratings and any available rules, in order to generate a meaningful recommendation." []
 comment: The recommendation in advanced systems can also be an action (take a small break), an exercise, a knowledge topic, a skill, or a learning path
+property_value: isDefinedBy https://github.com/tibonto/educor
+property_value: skos:definition "The output of the recommendation system algorithm. The system that reads user profile, content information, ratings and any available rules, in order to generate a meaningful recommendation." xsd:string
 property_value: skos:example "The recommendation is \"Quadratic Equation\"" xsd:string
-
-[Term]
-id: edamdata:0006
-name: data
-def: "Kind of data being managed" []
 
 [Term]
 id: hcrt:application
 name: application
-is_a: modalia:LearningResourceType ! learning resource type
+is_a: LearningResourceType ! learning resource type
 property_value: skos:prefLabel "Application" xsd:string
 
 [Term]
 id: hcrt:assessment
 name: assessment
-def: "Class representing OERs that are in form of assessment of knowledge." []
-is_a: modalia:LearningResourceType ! learning resource type
+comment: Class representing OERs that are in form of assessment of knowledge.
+is_a: LearningResourceType ! learning resource type
 property_value: skos:prefLabel "Assessment" xsd:string
 
 [Term]
 id: hcrt:case_study
 name: case study
-def: "Class representing OERs that are in form of case study." []
-is_a: modalia:LearningResourceType ! learning resource type
+comment: Class representing OERs that are in form of case study.
+is_a: LearningResourceType ! learning resource type
 property_value: skos:prefLabel "Case Study" xsd:string
 
 [Term]
 id: hcrt:course
 name: course
-is_a: modalia:LearningResourceType ! learning resource type
+is_a: LearningResourceType ! learning resource type
 property_value: skos:prefLabel "Course" xsd:string
 
 [Term]
 id: hcrt:data
 name: data
-is_a: modalia:LearningResourceType ! learning resource type
+is_a: LearningResourceType ! learning resource type
 property_value: skos:prefLabel "Data" xsd:string
 
 [Term]
 id: hcrt:diagram
 name: diagram
-def: "Class representing an OER that is a diagram" []
-is_a: modalia:LearningResourceType ! learning resource type
+comment: Class representing an OER that is a diagram
+is_a: LearningResourceType ! learning resource type
 property_value: skos:prefLabel "Diagram" xsd:string
 
 [Term]
 id: hcrt:drill_and_practice
 name: drill_and_practice
-is_a: modalia:LearningResourceType ! learning resource type
+is_a: LearningResourceType ! learning resource type
 property_value: skos:prefLabel "Drill and practice" xsd:string
 
 [Term]
 id: hcrt:educational_game
 name: educational game
-def: "Class representing OERs that are in form of educational games." []
-is_a: modalia:LearningResourceType ! learning resource type
+comment: Class representing OERs that are in form of educational games.
+is_a: LearningResourceType ! learning resource type
 property_value: skos:prefLabel "Educational Game" xsd:string
 
 [Term]
 id: hcrt:experiment
 name: experiment
-def: "Class representing OERs that are describing an experiment" []
-is_a: modalia:LearningResourceType ! learning resource type
+comment: Class representing OERs that are describing an experiment
+is_a: LearningResourceType ! learning resource type
 property_value: skos:prefLabel "Experiment" xsd:string
 
 [Term]
 id: hcrt:index
 name: index
 name: Nachschlagewerk
-is_a: modalia:LearningResourceType ! learning resource type
+is_a: LearningResourceType ! learning resource type
 property_value: skos:example "glossary, encyclopedia, dictionary" xsd:string
 property_value: skos:prefLabel "Reference Work" xsd:string
 property_value: skos:scopeNote "zum Beispiel Glossar, Enzyklopädie, Lexikonzum Beispiel Glossar, Enzyklopädie, Lexikon" xsd:string
 
 [Term]
 id: hcrt:lesson_plan
-name: lesson_plan
-is_a: modalia:LearningResourceType ! learning resource type
+name: lesson plan
+is_a: LearningResourceType ! learning resource type
 property_value: skos:prefLabel "Lesson_plan" xsd:string
 
 [Term]
 id: hcrt:map
 name: map
-is_a: modalia:LearningResourceType ! learning resource type
+is_a: LearningResourceType ! learning resource type
 property_value: skos:prefLabel "Map" xsd:string
 
 [Term]
 id: hcrt:other
 name: other resource type
-is_a: modalia:LearningResourceType ! learning resource type
+is_a: LearningResourceType ! learning resource type
 
 [Term]
 id: hcrt:portal
 name: portal
-is_a: modalia:LearningResourceType ! learning resource type
+is_a: LearningResourceType ! learning resource type
 property_value: skos:prefLabel "Portal" xsd:string
 
 [Term]
 id: hcrt:questionnaire
 name: questionnaire
-is_a: modalia:LearningResourceType ! learning resource type
+is_a: LearningResourceType ! learning resource type
 property_value: skos:prefLabel "questionnaire" xsd:string
 
 [Term]
 id: hcrt:script
 name: script
-is_a: modalia:LearningResourceType ! learning resource type
+is_a: LearningResourceType ! learning resource type
 property_value: skos:prefLabel "Script" xsd:string
 
 [Term]
 id: hcrt:sheet_music
-name: sheet_music
-is_a: modalia:LearningResourceType ! learning resource type
+name: sheet music
+is_a: LearningResourceType ! learning resource type
 property_value: skos:prefLabel "Sheet_music" xsd:string
 
 [Term]
 id: hcrt:simulation
 name: simulation
-is_a: modalia:LearningResourceType ! learning resource type
+is_a: LearningResourceType ! learning resource type
 property_value: skos:prefLabel "Simulation" xsd:string
 
 [Term]
 id: hcrt:textbook
 name: textbook
-is_a: modalia:LearningResourceType ! learning resource type
+is_a: LearningResourceType ! learning resource type
 property_value: skos:prefLabel "Textbook" xsd:string
 
 [Term]
 id: hcrt:worksheet
 name: worksheet
-is_a: modalia:LearningResourceType ! learning resource type
+is_a: LearningResourceType ! learning resource type
 property_value: skos:prefLabel "Worksheet" xsd:string
-
-[Term]
-id: lexvo:Language
-name: language
-def: "Natural language" []
-property_value: seeAlso "https://www.wikidata.org/wiki/Q315" xsd:string
 
 [Term]
 id: m4i:Method
 name: research method
-def: "a method with which data was obtained" []
+property_value: isDefinedBy http://w3id.org/nfdi4ing/metadata4ing
+property_value: skos:definition "a method with which data was obtained" xsd:string
 property_value: skos:example "bioassay, microscopy, measurement" xsd:string
 
 [Term]
 id: m4i:Tool
 name: tool
-def: "a tool with which data was obtained (microscope, sensor, ...)" []
-
-[Term]
-id: modalia:AnalyzePhase
-name: analyze phase
-def: "The last phase in data life cycle." []
-is_a: modalia:DataLifeCyclePhase ! data life cycle phase
-disjoint_from: modalia:AssurePhase ! assure phase
-disjoint_from: modalia:CollectPhase ! collect phase
-disjoint_from: modalia:DescribePhase ! describe phase
-disjoint_from: modalia:DiscoverPhase ! discover phase
-disjoint_from: modalia:IntegratePhase ! integrate phase
-disjoint_from: modalia:PlanPhase ! plan phase
-disjoint_from: modalia:PreservePhase ! preserve phase
-
-[Term]
-id: modalia:AssurePhase
-name: assure phase
-is_a: modalia:DataLifeCyclePhase ! data life cycle phase
-
-[Term]
-id: modalia:BachelorStudent
-name: bachelor student
-def: "Student in Bachelor's degree" []
-is_a: modalia:TargetGroup ! target group
-property_value: seeAlso "http://vivoweb.org/ontology/core#UndergraduateStudent" xsd:string
-property_value: skos:prefLabel "Bachelor Student" xsd:string
-
-[Term]
-id: modalia:BestPractices
-name: best practices
-def: "Class representing OERs that are best practices in scientific area." []
-is_a: modalia:LearningResourceType ! learning resource type
-property_value: skos:prefLabel "best practices" xsd:string
-
-[Term]
-id: modalia:Code
-name: code
-def: "Class representing OER which are code like Jupyternotebook." []
-is_a: modalia:MediaType ! media type
-property_value: skos:prefLabel "code" xsd:string
-
-[Term]
-id: modalia:CodeNotebook
-name: code notebook
-is_a: modalia:LearningResourceType ! learning resource type
-property_value: skos:example "Jupyter Notebook" xsd:string
-property_value: skos:prefLabel "Code Notebook" xsd:string
-
-[Term]
-id: modalia:CollectPhase
-name: collect phase
-is_a: modalia:DataLifeCyclePhase ! data life cycle phase
-
-[Term]
-id: modalia:Community
-name: community
-def: "A Community gathers users (members) and educational resources/learning paths similar  to Zenodo communities" []
-
-[Term]
-id: modalia:ContentProvider
-name: content provider
-def: "a person or group who is providing OER" []
-is_a: modalia:TargetGroup ! target group
-property_value: seeAlso "https://bibfra.me/view/rare/lite/provider" xsd:string
-property_value: skos:prefLabel "Content Provider" xsd:string
-
-[Term]
-id: modalia:ContentQuality
-name: content quality
-def: "Educational quality of an OER" []
-property_value: skos:example "High quality" xsd:string
-
-[Term]
-id: modalia:Contributor
-name: contributor
-def: "Contributed to OER with some contribution type" []
-union_of: schema:Organization ! organization
-union_of: schema:Person ! person
-
-[Term]
-id: modalia:ContributorRole
-name: contributor role
-def: "types of contribution to an OER." []
-property_value: skos:example "Editor" xsd:string
-
-[Term]
-id: modalia:Cookbook
-name: cookbook
-is_a: modalia:LearningResourceType ! learning resource type
-property_value: seeAlso "https://www.wikidata.org/wiki/Q3689925" xsd:string
-property_value: skos:prefLabel "cookbook" xsd:string
-
-[Term]
-id: modalia:CuratorRole
-name: curator role
-is_a: modalia:UserRole ! user role
-
-[Term]
-id: modalia:DataLifeCyclePhase
-name: data life cycle phase
-def: "One of the eight known phases of data life cycle." []
-property_value: seeAlso "https://towson.libguides.com/dataresearch/datamangement/dldataone" xsd:string
-
-[Term]
-id: modalia:DescribePhase
-name: describe phase
-is_a: modalia:DataLifeCyclePhase ! data life cycle phase
-
-[Term]
-id: modalia:Discipline
-name: discipline
-def: "knowledge of a specific, specialized discipline or field" []
-property_value: seeAlso "http://purl.org/spar/fabio/SubjectDiscipline" xsd:string
-property_value: skos:example "e.g Engineering" xsd:string
-
-[Term]
-id: modalia:DiscoverPhase
-name: discover phase
-is_a: modalia:DataLifeCyclePhase ! data life cycle phase
-
-[Term]
-id: modalia:EducationalLevel
-name: education level
-def: "The educational level of a user: Bachlors, Masters or PhD" []
-
-[Term]
-id: modalia:FiveStarRating
-name: five star rating
-def: "Standard five star rating, min value 1 maximum 5" []
-is_a: schema:Rating ! rating indicator
-property_value: schema:bestRating "5" xsd:integer
-property_value: schema:worstRating "1" xsd:integer
-
-[Term]
-id: modalia:FreeLicense
-name: free license
-is_a: modalia:License ! license
-
-[Term]
-id: modalia:IntegratePhase
-name: integrate phase
-is_a: modalia:DataLifeCyclePhase ! data life cycle phase
-
-[Term]
-id: modalia:Job
-name: job
-def: "name of a profession" []
-property_value: seeAlso "https://schema.org/Occupation" xsd:string
-property_value: skos:example "Software Developer" xsd:string
-
-[Term]
-id: modalia:LearnerRole
-name: learner role
-is_a: modalia:UserRole ! user role
-
-[Term]
-id: modalia:LearningObjective
-name: learning objective
-def: "Learning Objective as defined in learning objective matrix (LZM)" []
-def: "The Learning Goal can vary depending on the personalisation level. For example a user might care to learn some specific topics and not all the skill set." []
-property_value: seeAlso "https://github.com/tibonto/educor#LearningGoal" xsd:string
-
-[Term]
-id: modalia:LearningPath
-name: learning path
-def: "The learning path consists of a set of learning units (Educational Resources) in a specified order  to reach a learning objective." []
-property_value: skos:example "\"Hello world in python\", \"Comments in python\", \"Strings in python\"" xsd:string
-
-[Term]
-id: modalia:LearningPathStep
-name: learning path step
-def: "One step of a learning path, it has an order and one educational resource. Optionally a learning path step can have a note for learner." []
-
-[Term]
-id: modalia:LearningResourceType
-name: learning resource type
-def: "The type of the learning resource can be lecture, experiment, Assessment, etc." []
-
-[Term]
-id: modalia:Lecture
-name: lecture
-def: "Class representing OERs that are lectures." []
-is_a: modalia:LearningResourceType ! learning resource type
-property_value: skos:prefLabel "lecture" xsd:string
-
-[Term]
-id: modalia:License
-name: license
-
-[Term]
-id: modalia:MastersStudent
-name: master's student
-def: "A student in Master's degree" []
-is_a: modalia:TargetGroup ! target group
-property_value: seeAlso "http://w3id.org/roh#MastersStudent" xsd:string
-property_value: skos:prefLabel "Master's Student" xsd:string
-
-[Term]
-id: modalia:MediaType
-name: media type
-def: "General type of data content encoded in a computer file. Digital media type of the resource. To be used with user preferences according to VARK learning style." []
-
-[Term]
-id: modalia:Multipart
-name: multipart
-def: "If the resource consists of more than one item with different DOIs, the MediaType is \"multipart\" and the relations are provided in the field \"RelatedWork\"." []
-is_a: modalia:MediaType ! media type
-property_value: skos:prefLabel "Multipart" xsd:string
-
-[Term]
-id: modalia:MuseumProfessional
-name: museum professional
-is_a: modalia:TargetGroup ! target group
-property_value: skos:prefLabel "Museum Professional" xsd:string
-
-[Term]
-id: modalia:PhDStudent
-name: PhD student
-def: "A student in PhD degree" []
-is_a: modalia:TargetGroup ! target group
-property_value: seeAlso "http://vivoweb.org/ontology/core#GraduateStudent" xsd:string
-property_value: skos:prefLabel "PhD student" xsd:string
-
-[Term]
-id: modalia:PlanPhase
-name: plan phase
-def: "First phase in data life cycle. Description of the data that will be compiled." []
-is_a: modalia:DataLifeCyclePhase ! data life cycle phase
-
-[Term]
-id: modalia:Podcast
-name: podcast
-def: "The learning resource type podcast is an episodic series of digital audio or video files or an episode of that, which a user can download and listen to." []
-is_a: modalia:LearningResourceType ! learning resource type
-
-[Term]
-id: modalia:Poster
-name: poster
-def: "Class representing OERs that are Posters" []
-is_a: modalia:LearningResourceType ! learning resource type
-property_value: skos:prefLabel "poster" xsd:string
-
-[Term]
-id: modalia:PreservePhase
-name: preserve phase
-is_a: modalia:DataLifeCyclePhase ! data life cycle phase
-
-[Term]
-id: modalia:Proficiency
-name: proficiency
-def: "Benner’s Novice to Expert\nThe five stages of proficiency in the novice to expert model are: novice, advanced beginner, competent, proficient, and expert (Benner, 1982)." []
-
-[Term]
-id: modalia:ProprietaryLicense
-name: proprietary license
-is_a: modalia:License ! license
-
-[Term]
-id: modalia:RDMResource
-name: RDM resource
-def: "OER related to Research Data Management" []
-is_a: ec:EducationalResource ! educational resource
-
-[Term]
-id: modalia:RDMSkill
-name: RDM skill
-def: "Research Data Managment Skill" []
-def: "The ability to carry out tasks." []
-is_a: modalia:Skill ! skill
-
-[Term]
-id: modalia:RDMSubjectCluster
-name: RDM subject cluster
-def: "Cluster of RDM topics areas." []
-
-[Term]
-id: modalia:RDMTopic
-name: RDM topic
-def: "Topic related to research data management" []
-is_a: ec:KnowledgeTopic ! knowledge topic
-
-[Term]
-id: modalia:Researcher
-name: researcher
-is_a: modalia:TargetGroup ! target group
-property_value: seeAlso "https://www.wikidata.org/wiki/Q1650915" xsd:string
-property_value: skos:prefLabel "Researcher" xsd:string
-
-[Term]
-id: modalia:ResearcherRole
-name: researcher role
-is_a: modalia:UserRole ! user role
-
-[Term]
-id: modalia:Skill
-name: skill
-def: "Job Skill, ability to perform some tasks." []
-
-[Term]
-id: modalia:StudentSchool
-name: student (school)
-is_a: modalia:TargetGroup ! target group
-property_value: skos:prefLabel "Student (School)" xsd:string
-
-[Term]
-id: modalia:TargetGroup
-name: target group
-def: "The target group of the learning resource, e.g. students, data stewards, researchers, etc" []
-property_value: seeAlso "http://purl.org/dcx/lrmi-terms/EducationalAudience" xsd:string
-
-[Term]
-id: modalia:TeacherHigherEducation
-name: teacher (higher education)
-is_a: modalia:TargetGroup ! target group
-property_value: skos:prefLabel "Teacher (Higher Education)" xsd:string
-
-[Term]
-id: modalia:TeacherRole
-name: teacher role
-is_a: modalia:UserRole ! user role
-
-[Term]
-id: modalia:TeacherSchool
-name: teacher (school)
-is_a: modalia:TargetGroup ! target group
-property_value: seeAlso "https://www.wikidata.org/wiki/Q37226" xsd:string
-property_value: skos:prefLabel "Teacher (School)" xsd:string
-
-[Term]
-id: modalia:Tutorial
-name: tutorial
-def: "Class representing OERs that are in form of tutorial." []
-is_a: modalia:LearningResourceType ! learning resource type
-property_value: skos:prefLabel "tutorial" xsd:string
-
-[Term]
-id: modalia:User
-name: user
-def: "Registered user in the system, can have different roles i.e learner , teacher , curator, etc" []
-property_value: seeAlso foaf:Person
-
-[Term]
-id: modalia:UserComment
-name: user comment
-def: "Comment added by a user on an educational resource" []
-
-[Term]
-id: modalia:UserRole
-name: user role
-
-[Term]
-id: modalia:VARKAuditory
-name: VARK auditory
-def: "Auditory learning (music, discussion, lectures)" []
-is_a: ec:LearningPreference ! learning preference
-
-[Term]
-id: modalia:VARKKinesthetic
-name: VARK kinesthetic
-def: "Kinesthetic learning (movement, experiments, hands-on activities)" []
-is_a: ec:LearningPreference ! learning preference
-
-[Term]
-id: modalia:VARKReading
-name: VARK reading
-def: "Reading and writing (making lists, reading textbooks, taking notes)" []
-is_a: ec:LearningPreference ! learning preference
-
-[Term]
-id: modalia:VARKVisual
-name: VARK visual
-def: "Visual learning (pictures, movies, diagrams)" []
-is_a: ec:LearningPreference ! learning preference
+property_value: isDefinedBy http://w3id.org/nfdi4ing/metadata4ing
+property_value: skos:definition "a tool with which data was obtained (microscope, sensor, ...)" xsd:string
 
 [Term]
 id: schema:AudioObject
 name: audio
-def: "A class representing OERs which are audio files." []
-is_a: modalia:MediaType ! media type
+comment: A class representing OERs which are audio files.
+is_a: MediaType ! media type
 property_value: skos:prefLabel "Audio" xsd:string
 
 [Term]
 id: schema:ImageObject
 name: image
-def: "An image file." []
-is_a: modalia:MediaType ! media type
+comment: An image file.
+is_a: MediaType ! media type
 property_value: skos:prefLabel "Image" xsd:string
 
 [Term]
 id: schema:Organization
 name: organization
-def: "An organization such as a school (including Universities), NGO, corporation, club, etc." []
-property_value: seeAlso foaf:Organization
+property_value: isDefinedBy https://schema.org
+property_value: seeAlso http://xmlns.com/foaf/0.1/Organization
+property_value: skos:definition "An organization such as a school (including Universities), NGO, corporation, club, etc." xsd:string
 
 [Term]
 id: schema:Person
 name: person
-def: "A person (alive, dead, undead, or fictional)." []
-def: "can be author or contributor" []
+comment: can be author or contributor
+property_value: isDefinedBy https://schema.org
+property_value: skos:definition "A person (alive, dead, undead, or fictional)." xsd:string
 
 [Term]
 id: schema:PodcastEpisode
 name: podcast episode
-is_a: modalia:LearningResourceType ! learning resource type
+is_a: LearningResourceType ! learning resource type
 
 [Term]
 id: schema:PodcastSeries
 name: podcast series
-def: "A podcast is an episodic series of digital audio or video files which a user can download and listen to." []
-is_a: modalia:LearningResourceType ! learning resource type
+is_a: LearningResourceType ! learning resource type
+property_value: skos:definition "A podcast is an episodic series of digital audio or video files which a user can download and listen to." xsd:string
 property_value: skos:prefLabel "Podcast Series" xsd:string
 
 [Term]
 id: schema:PresentationDigitalDocument
 name: presentation
-def: "A presentation / slides file." []
-is_a: modalia:MediaType ! media type
+comment: A presentation / slides file.
+is_a: MediaType ! media type
 property_value: skos:prefLabel "Presentation" xsd:string
 
 [Term]
 id: schema:Rating
 name: rating indicator
-def: "A rating is an evaluation on a numeric scale, such as 1 to 5 stars." []
+property_value: isDefinedBy https://schema.org
+property_value: skos:definition "A rating is an evaluation on a numeric scale, such as 1 to 5 stars." xsd:string
 
 [Term]
 id: schema:Review
 name: review
-def: "A review of an item - for example, of a restaurant, movie, or store." []
+property_value: isDefinedBy https://schema.org
+property_value: skos:definition "A review of an item - for example, of a restaurant, movie, or store." xsd:string
 
 [Term]
 id: schema:SoftwareSourceCode
 name: software source code
-def: "Computer programming source code. Example: Full (compile ready) solutions, code snippet samples, scripts, templates." []
-is_a: modalia:LearningResourceType ! learning resource type
+comment: Computer programming source code. Example: Full (compile ready) solutions, code snippet samples, scripts, templates.
+is_a: LearningResourceType ! learning resource type
 property_value: skos:prefLabel "Software Source Code" xsd:string
 
 [Term]
 id: schema:Text
 name: text
-def: "Class representing OER which are text." []
-is_a: modalia:MediaType ! media type
+comment: Class representing OER which are text.
+is_a: MediaType ! media type
 property_value: skos:prefLabel "Text" xsd:string
 
 [Term]
 id: schema:VideoObject
 name: video
-def: "A video file." []
-is_a: modalia:MediaType ! media type
+comment: A video file.
+is_a: MediaType ! media type
 property_value: skos:prefLabel "Video" xsd:string
 
 [Typedef]
+id: belongsToCluster
+name: belongs to cluster
+comment: relates RDM Topic to RDM Topic Cluster, similar to LZM
+domain: RDMTopic ! RDM topic
+range: RDMSubjectCluster ! RDM subject cluster
+
+[Typedef]
+id: belongsToLearningPath
+name: belongs to learning path
+domain: LearningPathStep ! learning path step
+range: LearningPath ! learning path
+
+[Typedef]
+id: belongsToPhase
+name: belongs to phase
+property_value: skos:definition "defines the data life cycle phase that the resource covers" xsd:string
+domain: RDMResource ! RDM resource
+range: DataLifeCyclePhase ! data life cycle phase
+
+[Typedef]
 id: bf:agent
-name: agent
-property_value: isDefinedBy "Property that links a contribution to the agent (e.g., the person or organization making the contribution)." xsd:string
+comment: agent
+property_value: isDefinedBy http://id.loc.gov/ontologies/bibframe
+property_value: skos:definition "Property that links a contribution to the agent (e.g., the person or organization making the contribution)." xsd:string
 domain: bf:Contribution
-range: modalia:Contributor ! contributor
+range: Contributor ! contributor
 
 [Typedef]
 id: bf:contribution
 name: contribution
-def: "Property linking an OER to its contribution (e.g., editing)." []
+comment: Property linking an OER to its contribution (e.g., editing).
 domain: ec:EducationalResource ! educational resource
 range: bf:Contribution
 
 [Typedef]
 id: bf:role
 name: role
-def: "Property that links a contribution to a role (e.g., contactPerson, editor)." []
+comment: Property that links a contribution to a role (e.g., contactPerson, editor).
 domain: bf:Contribution
-range: modalia:ContributorRole ! contributor role
+range: bf:Role ! contributor role
 
 [Typedef]
-id: citedcat:continues
-name: continues
-property_value: skos:prefLabel "Continues" xsd:string
-domain: ec:EducationalResource ! educational resource
+id: commentUserID
+name: comment has user
+property_value: skos:definition "relates a user to his/her comment" xsd:string
+domain: UserComment ! user comment
+range: User ! user
+
+[Typedef]
+id: commentedOER
+name: comment has OER
+property_value: skos:definition "commentedOER" xsd:string
+property_value: skos:definition "defines the OER that is commented in a user comment" xsd:string
+domain: UserComment ! user comment
 range: ec:EducationalResource ! educational resource
-is_a: dcterms:relation ! relation
-inverse_of: citedcat:isContinuedBy ! isContinuedBy
 
 [Typedef]
-id: citedcat:isContinuedBy
-name: isContinuedBy
-property_value: skos:prefLabel "Is continued by" xsd:string
+id: covers
+name: covers
+property_value: skos:definition "Defines the topics covered in a learning resource" xsd:string
 domain: ec:EducationalResource ! educational resource
-range: ec:EducationalResource ! educational resource
-is_a: dcterms:relation ! relation
+range: ec:KnowledgeTopic ! knowledge topic
 
 [Typedef]
-id: citedcat:isSupplementTo
-name: isSupplementTo
-property_value: skos:prefLabel "Is supplement to" xsd:string
-domain: ec:EducationalResource ! educational resource
-is_a: dcterms:relation ! relation
+id: coversManagementOfDataDescribing
+name: covers management of data describing
+domain: RDMResource ! RDM resource
+range: SIO:000776 ! object
 
 [Typedef]
-id: citedcat:isSupplementedBy
-name: isSupplementedBy
-property_value: skos:prefLabel "Is supplemented by" xsd:string
-domain: ec:EducationalResource ! educational resource
-is_a: dcterms:relation ! relation
+id: coversManagementOfDataKind
+name: covers management of data kind
+comment: A property that relates a RDMResource to data kind being managed
+domain: RDMResource ! RDM resource
+range: data:0006 ! data
+
+[Typedef]
+id: coversManagementOfDataObtainedWithMethod
+name: covers management of data obtained with method
+domain: RDMResource ! RDM resource
+range: m4i:Method ! research method
+
+[Typedef]
+id: coversManagementOfDataObtainedWithTool
+name: covers management of data obtained with tool
+domain: RDMResource ! RDM resource
+range: m4i:Tool ! tool
+
+[Typedef]
+id: createdBy
+name: created by
+comment: a property defining the user who created a community
+domain: Community ! community
+range: User ! user
 
 [Typedef]
 id: dcterms:hasPart
@@ -822,9 +873,9 @@ inverse_of: dcterms:replaces ! replaces
 [Typedef]
 id: dcterms:language
 name: language
-def: "language of resource" []
+comment: language of resource
 domain: ec:EducationalResource ! educational resource
-range: lexvo:Language ! language
+range: Language ! language
 
 [Typedef]
 id: dcterms:references
@@ -836,7 +887,7 @@ is_a: dcterms:relation ! relation
 [Typedef]
 id: dcterms:relation
 name: relation
-def: "The relation(s) to other resources.  It is required to identify the related resource by means of a URI." []
+property_value: skos:definition "The relation(s) to other resources.  It is required to identify the related resource by means of a URI." xsd:string
 domain: ec:EducationalResource ! educational resource
 
 [Typedef]
@@ -848,220 +899,197 @@ range: ec:EducationalResource ! educational resource
 is_a: dcterms:relation ! relation
 
 [Typedef]
-id: ec:consistsOfKnowledge
-name: consistsOfKnowledge
-domain: modalia:LearningPath ! learning path
-range: ec:KnowledgeTopic ! knowledge topic
-
-[Typedef]
-id: ec:generatedFrom
-name: generated from
-domain: ec:Recommendation ! recommendation
-range: modalia:User ! user
-
-[Typedef]
-id: fabio:hasDiscipline
-name: hasDiscipline
-range: modalia:Discipline ! discipline
-
-[Typedef]
-id: modalia:belongsToCluster
-name: belongs to cluster
-def: "relates RDM Topic to RDM Topic Cluster, similar to LZM" []
-domain: modalia:RDMTopic ! RDM topic
-range: modalia:RDMSubjectCluster ! RDM subject cluster
-
-[Typedef]
-id: modalia:belongsToLearningPath
-name: belongs to learning path
-domain: modalia:LearningPathStep ! learning path step
-range: modalia:LearningPath ! learning path
-
-[Typedef]
-id: modalia:belongsToPhase
-name: belongs to phase
-def: "defines the data life cycle phase that the resource covers" []
-domain: modalia:RDMResource ! RDM resource
-range: modalia:DataLifeCyclePhase ! data life cycle phase
-
-[Typedef]
-id: modalia:commentUserID
-name: comment has user
-def: "relates a user to his/her comment" []
-domain: modalia:UserComment ! user comment
-range: modalia:User ! user
-
-[Typedef]
-id: modalia:commentedOER
-name: comment has OER
-def: "commentedOER" []
-def: "defines the OER that is commented in a user comment" []
-domain: modalia:UserComment ! user comment
-range: ec:EducationalResource ! educational resource
-
-[Typedef]
-id: modalia:covers
-name: covers
-def: "Defines the topics covered in a learning resource" []
+id: dcterms:requires
+name: requires
 domain: ec:EducationalResource ! educational resource
-range: ec:KnowledgeTopic ! knowledge topic
 
 [Typedef]
-id: modalia:coversManagementOfDataDescribing
-name: covers management of data describing
-domain: modalia:RDMResource ! RDM resource
-range: SIO:000776 ! object
-
-[Typedef]
-id: modalia:coversManagementOfDataKind
-name: covers management of data kind
-def: "A property that relates a RDMResource to data kind being managed" []
-domain: modalia:RDMResource ! RDM resource
-range: edamdata:0006 ! data
-
-[Typedef]
-id: modalia:coversManagementOfDataObtainedWithMethod
-name: covers management of data obtained with method
-domain: modalia:RDMResource ! RDM resource
-range: m4i:Method ! research method
-
-[Typedef]
-id: modalia:coversManagementOfDataObtainedWithTool
-name: covers management of data obtained with tool
-domain: modalia:RDMResource ! RDM resource
-range: m4i:Tool ! tool
-
-[Typedef]
-id: modalia:createdBy
-name: created by
-def: "a property defining the user who created a community" []
-domain: modalia:Community ! community
-range: modalia:User ! user
-
-[Typedef]
-id: modalia:definesLearningPath
+id: definesLearningPath
 name: defines learning path
-range: modalia:LearningPath ! learning path
+range: LearningPath ! learning path
 
 [Typedef]
-id: modalia:describes
+id: describes
 name: describes
 property_value: skos:prefLabel "Describes" xsd:string
 domain: ec:EducationalResource ! educational resource
 is_a: dcterms:relation ! relation
 
 [Typedef]
-id: modalia:educationalLevel
+id: ec:consistsOfKnowledge
+name: consistsOfKnowledge
+domain: LearningPath ! learning path
+range: ec:KnowledgeTopic ! knowledge topic
+
+[Typedef]
+id: ec:generatedFrom
+name: generated from
+domain: ec:Recommendation ! recommendation
+range: User ! user
+
+[Typedef]
+id: educationalLevel
 name: educational level
-domain: modalia:User ! user
-range: modalia:EducationalLevel ! education level
+domain: User ! user
+range: EducationalLevel ! education level
 
 [Typedef]
-id: modalia:essentialFor
+id: essentialFor
 name: essential for
-def: "a property defining the essential skills for a certain job" []
-domain: modalia:Skill ! skill
-range: modalia:Job ! job
+comment: a property defining the essential skills for a certain job
+domain: Skill ! skill
+range: Job ! job
 
 [Typedef]
-id: modalia:givesProficiencyLevel
+id: fabio:hasDiscipline
+name: hasDiscipline
+range: Discipline ! discipline
+
+[Typedef]
+id: givesProficiencyLevel
 name: gives proficiency level
 domain: ec:EducationalResource ! educational resource
-range: modalia:Proficiency ! proficiency
+range: Proficiency ! proficiency
 
 [Typedef]
-id: modalia:hasLearningObjective
+id: hasLearningObjective
 name: has learning objective
-range: modalia:LearningObjective ! learning objective
+range: LearningObjective ! learning objective
 
 [Typedef]
-id: modalia:hasLearningPreference
+id: hasLearningPreference
 name: has learning preference
-def: "The preferenced learning class from VARK" []
-domain: modalia:User ! user
+property_value: skos:definition "The preferenced learning class from VARK" xsd:string
+domain: User ! user
 range: ec:LearningPreference ! learning preference
 
 [Typedef]
-id: modalia:hasLearningResource
+id: hasLearningResource
 name: has learning resource
-domain: modalia:LearningPath ! learning path
+domain: LearningPath ! learning path
 range: ec:EducationalResource ! educational resource
 
 [Typedef]
-id: modalia:hasLearningType
+id: hasLearningType
 name: has learning type
-def: "The value is the learning type of content of a learning resource (e.g Lecture)" []
+property_value: skos:definition "The value is the learning type of content of a learning resource (e.g Lecture)" xsd:string
 domain: ec:EducationalResource ! educational resource
-range: modalia:LearningResourceType ! learning resource type
+range: LearningResourceType ! learning resource type
 is_functional: true
 
 [Typedef]
-id: modalia:hasMediaType
+id: hasMediaType
 name: has media type
 domain: ec:EducationalResource ! educational resource
-range: modalia:MediaType ! media type
+range: MediaType ! media type
 
 [Typedef]
-id: modalia:hasOwner
+id: hasMetadata
+name: has metadata
+domain: ec:EducationalResource ! educational resource
+
+[Typedef]
+id: hasOwner
 name: has owner
-def: "defines the user who owns a specific community. There is only one owner to a specific community" []
-domain: modalia:Community ! community
-range: modalia:User ! user
+property_value: skos:definition "defines the user who owns a specific community. There is only one owner to a specific community" xsd:string
+domain: Community ! community
+range: User ! user
 is_functional: true
 
 [Typedef]
-id: modalia:hasQuality
+id: hasQuality
 name: has quality
 domain: ec:EducationalResource ! educational resource
-range: modalia:ContentQuality ! content quality
+range: ContentQuality ! content quality
 
 [Typedef]
-id: modalia:hasRating
+id: hasRating
 name: has rating
 domain: ec:EducationalResource ! educational resource
 range: schema:Rating ! rating indicator
 
 [Typedef]
-id: modalia:hasRole
+id: hasRole
 name: has role
-domain: modalia:User ! user
-range: modalia:UserRole ! user role
+domain: User ! user
+range: UserRole ! user role
 
 [Typedef]
-id: modalia:hasTargetGroup
+id: hasSourceCode
+name: has source code
+domain: ec:EducationalResource ! educational resource
+
+[Typedef]
+id: hasTargetGroup
 name: has target group
 domain: ec:EducationalResource ! educational resource
-range: modalia:TargetGroup ! target group
+range: TargetGroup ! target group
 
 [Typedef]
-id: modalia:hasTranslation
+id: hasTranslation
 name: has translation
 property_value: skos:prefLabel "Has translation" xsd:string
 domain: ec:EducationalResource ! educational resource
 is_a: dcterms:relation ! relation
 
 [Typedef]
-id: modalia:hasUser
+id: hasUser
 name: has user
 domain: schema:Rating ! rating indicator
-range: modalia:User ! user
+range: User ! user
 
 [Typedef]
-id: modalia:isDescribedBy
+id: https://w3id.org/citedcat-ap/continues
+name: continues
+property_value: skos:prefLabel "Continues" xsd:string
+domain: ec:EducationalResource ! educational resource
+range: ec:EducationalResource ! educational resource
+is_a: dcterms:relation ! relation
+inverse_of: https://w3id.org/citedcat-ap/isContinuedBy ! isContinuedBy
+
+[Typedef]
+id: https://w3id.org/citedcat-ap/isCompiledBy
+name: isCompiledBy
+domain: ec:EducationalResource ! educational resource
+
+[Typedef]
+id: https://w3id.org/citedcat-ap/isContinuedBy
+name: isContinuedBy
+property_value: skos:prefLabel "Is continued by" xsd:string
+domain: ec:EducationalResource ! educational resource
+range: ec:EducationalResource ! educational resource
+is_a: dcterms:relation ! relation
+
+[Typedef]
+id: https://w3id.org/citedcat-ap/isSupplementTo
+name: isSupplementTo
+property_value: skos:prefLabel "Is supplement to" xsd:string
+domain: ec:EducationalResource ! educational resource
+is_a: dcterms:relation ! relation
+
+[Typedef]
+id: https://w3id.org/citedcat-ap/isSupplementedBy
+name: isSupplementedBy
+property_value: skos:prefLabel "Is supplemented by" xsd:string
+domain: ec:EducationalResource ! educational resource
+is_a: dcterms:relation ! relation
+
+[Typedef]
+id: isDescribedBy
 name: is described by
 property_value: skos:prefLabel "Is described by" xsd:string
 domain: ec:EducationalResource ! educational resource
 is_a: dcterms:relation ! relation
 
 [Typedef]
-id: modalia:isDuplicateOf
+id: isDuplicateOf
 name: is duplicate of
-def: "Dublicated metadata in DALIA platform" []
+property_value: skos:definition "Duplicated metadata in DALIA platform" xsd:string
 domain: ec:EducationalResource ! educational resource
 range: ec:EducationalResource ! educational resource
 
 [Typedef]
-id: modalia:isIdenticalTo
+id: isIdenticalTo
 name: is identical to
 property_value: skos:prefLabel "Is identical to" xsd:string
 domain: ec:EducationalResource ! educational resource
@@ -1069,37 +1097,37 @@ range: ec:EducationalResource ! educational resource
 is_a: dcterms:relation ! relation
 
 [Typedef]
-id: modalia:isLessProficientThan
+id: isLessProficientThan
 name: is less proficient than
-domain: modalia:Proficiency ! proficiency
-range: modalia:Proficiency ! proficiency
+domain: Proficiency ! proficiency
+range: Proficiency ! proficiency
 is_transitive: true
-inverse_of: modalia:isMoreProficientThan ! is more proficient than
+inverse_of: isMoreProficientThan ! is more proficient than
 
 [Typedef]
-id: modalia:isMemberOf
+id: isMemberOf
 name: is member of
-domain: modalia:User ! user
-range: modalia:Community ! community
+domain: User ! user
+range: Community ! community
 
 [Typedef]
-id: modalia:isMoreProficientThan
+id: isMoreProficientThan
 name: is more proficient than
-domain: modalia:Proficiency ! proficiency
-range: modalia:Proficiency ! proficiency
+domain: Proficiency ! proficiency
+range: Proficiency ! proficiency
 is_transitive: true
 
 [Typedef]
-id: modalia:isNewVersionOf
+id: isNewVersionOf
 name: is new version of
 property_value: skos:prefLabel "Is new version of" xsd:string
 domain: ec:EducationalResource ! educational resource
 range: ec:EducationalResource ! educational resource
 is_a: dcterms:relation ! relation
-inverse_of: modalia:isPreviousVersionOf ! is previous version of
+inverse_of: isPreviousVersionOf ! is previous version of
 
 [Typedef]
-id: modalia:isPreviousVersionOf
+id: isPreviousVersionOf
 name: is previous version of
 property_value: skos:prefLabel "Is previous version of" xsd:string
 domain: ec:EducationalResource ! educational resource
@@ -1107,14 +1135,19 @@ range: ec:EducationalResource ! educational resource
 is_a: dcterms:relation ! relation
 
 [Typedef]
-id: modalia:isTranslationOf
+id: isSourceCodeOf
+name: is source code of
+domain: ec:EducationalResource ! educational resource
+
+[Typedef]
+id: isTranslationOf
 name: is translation of
 property_value: skos:prefLabel "Is translation of" xsd:string
 domain: ec:EducationalResource ! educational resource
 is_a: dcterms:relation ! relation
 
 [Typedef]
-id: modalia:isVersionOf
+id: isVersionOf
 name: is version of
 property_value: skos:prefLabel "Is version of" xsd:string
 domain: ec:EducationalResource ! educational resource
@@ -1123,85 +1156,48 @@ is_symmetric: true
 is_a: dcterms:relation ! relation
 
 [Typedef]
-id: modalia:nextPhase
+id: nextPhase
 name: next phase
-domain: modalia:DataLifeCyclePhase ! data life cycle phase
-range: modalia:DataLifeCyclePhase ! data life cycle phase
+domain: DataLifeCyclePhase ! data life cycle phase
+range: DataLifeCyclePhase ! data life cycle phase
 
 [Typedef]
-id: modalia:optionalFor
+id: optionalFor
 name: optional for
-def: "Defines the skills that are optional for a certain Job" []
-domain: modalia:Skill ! skill
-range: modalia:Job ! job
+comment: Defines the skills that are optional for a certain Job
+domain: Skill ! skill
+range: Job ! job
 
 [Typedef]
-id: modalia:prerequisites
+id: prerequisites
 name: prerequisites
 domain: ec:KnowledgeTopic ! knowledge topic
 range: ec:KnowledgeTopic ! knowledge topic
 
 [Typedef]
-id: modalia:recommender
+id: recommender
 name: recommender
-def: "A community which provides the recommendation of the OER. In the context of DIF, the recommending community is the organization or institution or project or body or online group which recommends the OER." [] {dcterms:contributor="orcid:0000-0002-0452-7075", dcterms:source="DIF1.3", dcterms:source="recommendationontology", dcterms:contributor="orcid:0000-0001-8997-2620"}
-def: "Associated community(ies) of the resource who are either the supporting organization/institution, or the recommender, or both.  Here indicates recommender" []
+property_value: dcterms:description "A community which provides the recommendation of the OER. In the context of DIF, the recommending community is the organization or institution or project or body or online group which recommends the OER." xsd:string {dcterms:contributor="orcid:0000-0001-8997-2620", dcterms:contributor="orcid:0000-0002-0452-7075", dcterms:source="DIF1.3", dcterms:source="recommendationontology"}
+property_value: skos:definition "Associated community(ies) of the resource who are either the supporting organization/institution, or the recommender, or both.  Here indicates recommender" xsd:string
 domain: ec:EducationalResource ! educational resource
-range: modalia:Community ! community
+range: Community ! community
 
 [Typedef]
-id: modalia:requiresKnowledge
+id: requiresKnowledge
 name: requires knowledge
-domain: modalia:Skill ! skill
+domain: Skill ! skill
 range: ec:KnowledgeTopic ! knowledge topic
 
 [Typedef]
-id: modalia:requiresProficiencyLevel
+id: requiresProficiencyLevel
 name: requires proficiency level
 domain: ec:EducationalResource ! educational resource
-range: modalia:Proficiency ! proficiency
-
-[Typedef]
-id: modalia:solves
-name: solves
-domain: modalia:User ! user
-
-[Typedef]
-id: modalia:supportinghost
-name: supportinghost
-def: "Associated community(ies) of the resource who are either the supporting organization/institution, or the recommender, or both. Here indicates supporting." []
-domain: ec:EducationalResource ! educational resource
-range: modalia:Community ! community
-
-[Typedef]
-id: modalia:teachesSkill
-name: teaches skill
-domain: ec:EducationalResource ! educational resource
-range: modalia:Skill ! skill
-
-[Typedef]
-id: modalia:userBookmarks
-name: user bookmarks
-domain: modalia:User ! user
-range: ec:EducationalResource ! educational resource
-
-[Typedef]
-id: modalia:userLikes
-name: user likes
-def: "stores that user liked a given OER" []
-domain: modalia:User ! user
-range: ec:EducationalResource ! educational resource
-
-[Typedef]
-id: modalia:userViews
-name: user views
-domain: modalia:User ! user
-range: ec:EducationalResource ! educational resource
+range: Proficiency ! proficiency
 
 [Typedef]
 id: schema:author
 name: author
-def: "Property linking an OER  to a list of authors." []
+comment: Property linking an OER  to a list of authors.
 domain: ec:EducationalResource ! educational resource
 range: List
 
@@ -1214,7 +1210,44 @@ is_a: dcterms:relation ! relation
 
 [Typedef]
 id: schema:itemReviewed
-def: "The item that is being reviewed/rated." []
+property_value: skos:definition "The item that is being reviewed/rated." xsd:string
 domain: schema:Review ! review
+range: ec:EducationalResource ! educational resource
+
+[Typedef]
+id: solves
+name: solves
+domain: User ! user
+
+[Typedef]
+id: supportingHost
+name: supportinghost
+property_value: skos:definition "Associated community(ies) of the resource who are either the supporting organization/institution, or the recommender, or both. Here indicates supporting." xsd:string
+domain: ec:EducationalResource ! educational resource
+range: Community ! community
+
+[Typedef]
+id: teachesSkill
+name: teaches skill
+domain: ec:EducationalResource ! educational resource
+range: Skill ! skill
+
+[Typedef]
+id: userBookmarks
+name: user bookmarks
+domain: User ! user
+range: ec:EducationalResource ! educational resource
+
+[Typedef]
+id: userLikes
+name: user likes
+property_value: skos:definition "stores that user liked a given OER" xsd:string
+domain: User ! user
+range: ec:EducationalResource ! educational resource
+
+[Typedef]
+id: userViews
+name: user views
+domain: User ! user
 range: ec:EducationalResource ! educational resource
 

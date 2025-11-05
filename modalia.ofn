@@ -1,0 +1,2123 @@
+Prefix(:=<https://purl.org/ontology/modalia#>)
+Prefix(bf:=<http://id.loc.gov/ontologies/bibframe/>)
+Prefix(ec:=<https://github.com/tibonto/educor#>)
+Prefix(SIO:=<http://semanticscience.org/resource/SIO_>)
+Prefix(m4i:=<http://w3id.org/nfdi4ing/metadata4ing#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(rec:=<http://purl.org/ontology/rec/core#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(bibo:=<http://purl.org/ontology/bibo/>)
+Prefix(doap:=<http://usefulinc.com/ns/doap#>)
+Prefix(hcrt:=<https://w3id.org/kim/hcrt/>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(skos:=<http://www.w3.org/2004/02/skos/core#>)
+Prefix(vann:=<http://purl.org/vocab/vann/>)
+Prefix(fabio:=<http://purl.org/spar/fabio/>)
+Prefix(orcid:=<https://orcid.org/>)
+Prefix(schema:=<https://schema.org/>)
+Prefix(dcterms:=<http://purl.org/dc/terms/>)
+
+
+Ontology(<https://purl.org/ontology/modalia#>
+<https://purl.org/ontology/modalia#1.0.0>
+Annotation(dcterms:abstract "The aim of the DALIA project is to build a platform for learning material for research data management (RDM) and data science. The platform is based on a knowledge graph. We introduce MoDALIA, the base ontology of DALIA knowledge graph. MoDALIA inherits some modules from EduCOR. It includes also modelling of micro-credentials and certificates."@en)
+Annotation(dcterms:contributor <https://orcid.org/0000-0003-4423-4370>)
+Annotation(dcterms:contributor "Dr. Abdelmoneim Amer Desouki (https://orcid.org/0000-0003-2083-1277), Technical University of Darmstadt (https://ror.org/05n911h24, https://isni.org/isni/0000000109401669)")
+Annotation(dcterms:contributor "Dr. Charles Tapley Hoyt (https://orcid.org/0000-0003-4423-4370), RWTH Aachen University (https://ror.org/04xfq0f34, https://isni.org/isni/000000010728696X)")
+Annotation(dcterms:contributor "Dr. Marc Fuhrmans (https://orcid.org/0000-0002-9826-018X), Technical University of Darmstadt (https://ror.org/05n911h24, https://isni.org/isni/0000000109401669)")
+Annotation(dcterms:contributor "Dr. Petra C. Steiner (https://orcid.org/0000-0001-8997-2620), Technical University of Darmstadt (https://ror.org/05n911h24, https://isni.org/isni/0000000109401669)")
+Annotation(dcterms:contributor "Frank Lange (https://orcid.org/0000-0002-9346-6031), RWTH Aachen University (https://ror.org/04xfq0f34, https://isni.org/isni/000000010728696X)")
+Annotation(dcterms:created "2023-02-02")
+Annotation(dcterms:creator "BMFTR DALIA project")
+Annotation(dcterms:description "MoDALIA: An Ontology for Educational Material in Research Data Management (RDM) and Data Science.
+The ontology is used for making a knowledge graph as a backend to platform for teaching, personal learning, and recommendation.
+The ontology is developed in OWL in Protege 5.5.0."@en)
+Annotation(dcterms:license <https://creativecommons.org/licenses/by/4.0/>)
+Annotation(dcterms:modified "2025-10-14")
+Annotation(dcterms:publisher "ULB TUDa – University and State Library, Technical University, Darmstadt, Germany")
+Annotation(dcterms:title "MoDALIA Ontology"@en)
+Annotation(vann:preferredNamespacePrefix "modalia")
+Annotation(vann:preferredNamespaceUri "https://purl.org/ontology/modalia#"^^xsd:anyURI)
+Annotation(doap:bug-database "https://git.rwth-aachen.de/dalia/dalia-ontology/-/issues"^^xsd:anyURI)
+Annotation(<http://www.loc.gov/premis/rdf/v3/documentation> "https://dalia.pages.rwth-aachen.de/dalia-ontology/"^^xsd:anyURI)
+Annotation(rdfs:comment "MoDALIA reuses elements from the following ontologies:
+- DCTERMS = Dublin Core Terms  
+- OWL = Web Ontology Language  
+- RDF = Resource Description Framework  
+- RDFS = RDF Schema  
+- SCHEMA = schema.org  
+- SKOS = Simple Knowledge Organization System  
+- EC = EduCOR"@en)
+Annotation(rdfs:label "MoDALIA")
+Annotation(owl:versionInfo "v1.0.0"@en)
+
+Declaration(Class(<http://edamontology.org/data_0006>))
+Declaration(Class(bf:Contribution))
+Declaration(Class(bf:Role))
+Declaration(Class(<http://lexvo.org/ontology#Language>))
+Declaration(Class(<http://purl.obolibrary.org/obo/OCCO_25401100>))
+Declaration(Class(<http://purl.obolibrary.org/obo/OCCO_25402200>))
+Declaration(Class(<http://purl.obolibrary.org/obo/T4FS_0000178>))
+Declaration(Class(bibo:Article))
+Declaration(Class(bibo:Book))
+Declaration(Class(bibo:Report))
+Declaration(Class(bibo:Thesis))
+Declaration(Class(bibo:Webpage))
+Declaration(Class(bibo:Workshop))
+Declaration(Class(<http://semanticscience.org/resource/SIO_000776>))
+Declaration(Class(m4i:Method))
+Declaration(Class(m4i:Tool))
+Declaration(Class(rdf:List))
+Declaration(Class(ec:EducationalResource))
+Declaration(Class(ec:KnowledgeTopic))
+Declaration(Class(ec:LearningPreference))
+Declaration(Class(ec:Recommendation))
+Declaration(Class(:AnalysingPhase))
+Declaration(Class(:AssurancePhase))
+Declaration(Class(:BachelorStudent))
+Declaration(Class(:BestPractices))
+Declaration(Class(:Code))
+Declaration(Class(:CodeNotebook))
+Declaration(Class(:CollectionPhase))
+Declaration(Class(:Community))
+Declaration(Class(:ContentProvider))
+Declaration(Class(:ContentQuality))
+Declaration(Class(:Contributor))
+Declaration(Class(:Cookbook))
+Declaration(Class(:CuratorRole))
+Declaration(Class(:DataLifeCyclePhase))
+Declaration(Class(:DescriptionPhase))
+Declaration(Class(:Discipline))
+Declaration(Class(:DiscoveryPhase))
+Declaration(Class(:EducationalLevel))
+Declaration(Class(:FiveStarRating))
+Declaration(Class(:FreeLicense))
+Declaration(Class(:IntegratePhase))
+Declaration(Class(:Job))
+Declaration(Class(:LearnerRole))
+Declaration(Class(:LearningObjective))
+Declaration(Class(:LearningPath))
+Declaration(Class(:LearningPathStep))
+Declaration(Class(:LearningResourceType))
+Declaration(Class(:Lecture))
+Declaration(Class(:License))
+Declaration(Class(:MastersStudent))
+Declaration(Class(:MediaType))
+Declaration(Class(:Multipart))
+Declaration(Class(:MuseumProfessional))
+Declaration(Class(:PhDStudent))
+Declaration(Class(:PlanningPhase))
+Declaration(Class(:Podcast))
+Declaration(Class(:Poster))
+Declaration(Class(:PreservationPhase))
+Declaration(Class(:Proficiency))
+Declaration(Class(:ProprietaryLicense))
+Declaration(Class(:RDMResource))
+Declaration(Class(:RDMSkill))
+Declaration(Class(:RDMSubjectCluster))
+Declaration(Class(:RDMTopic))
+Declaration(Class(:Researcher))
+Declaration(Class(:ResearcherUserRole))
+Declaration(Class(:Skill))
+Declaration(Class(:StudentSchool))
+Declaration(Class(:TargetGroup))
+Declaration(Class(:TeacherHigherEducation))
+Declaration(Class(:TeacherRole))
+Declaration(Class(:TeacherSchool))
+Declaration(Class(:Tutorial))
+Declaration(Class(:User))
+Declaration(Class(:UserComment))
+Declaration(Class(:UserRole))
+Declaration(Class(:VARKAuditory))
+Declaration(Class(:VARKKinesthetic))
+Declaration(Class(:VARKReading))
+Declaration(Class(:VARKVisual))
+Declaration(Class(schema:AudioObject))
+Declaration(Class(schema:ImageObject))
+Declaration(Class(schema:Organization))
+Declaration(Class(schema:Person))
+Declaration(Class(schema:PodcastEpisode))
+Declaration(Class(schema:PodcastSeries))
+Declaration(Class(schema:PresentationDigitalDocument))
+Declaration(Class(schema:Rating))
+Declaration(Class(schema:Review))
+Declaration(Class(schema:SoftwareSourceCode))
+Declaration(Class(schema:Text))
+Declaration(Class(schema:VideoObject))
+Declaration(Class(hcrt:application))
+Declaration(Class(hcrt:assessment))
+Declaration(Class(hcrt:case_study))
+Declaration(Class(hcrt:course))
+Declaration(Class(hcrt:data))
+Declaration(Class(hcrt:diagram))
+Declaration(Class(hcrt:drill_and_practice))
+Declaration(Class(hcrt:educational_game))
+Declaration(Class(hcrt:experiment))
+Declaration(Class(hcrt:index))
+Declaration(Class(hcrt:lesson_plan))
+Declaration(Class(hcrt:map))
+Declaration(Class(hcrt:other))
+Declaration(Class(hcrt:portal))
+Declaration(Class(hcrt:questionnaire))
+Declaration(Class(hcrt:script))
+Declaration(Class(hcrt:sheet_music))
+Declaration(Class(hcrt:simulation))
+Declaration(Class(hcrt:textbook))
+Declaration(Class(hcrt:worksheet))
+Declaration(ObjectProperty(bf:agent))
+Declaration(ObjectProperty(bf:contribution))
+Declaration(ObjectProperty(bf:role))
+Declaration(ObjectProperty(dcterms:hasPart))
+Declaration(ObjectProperty(dcterms:isPartOf))
+Declaration(ObjectProperty(dcterms:isReferencedBy))
+Declaration(ObjectProperty(dcterms:isReplacedBy))
+Declaration(ObjectProperty(dcterms:language))
+Declaration(ObjectProperty(dcterms:references))
+Declaration(ObjectProperty(dcterms:relation))
+Declaration(ObjectProperty(dcterms:replaces))
+Declaration(ObjectProperty(dcterms:requires))
+Declaration(ObjectProperty(fabio:hasDiscipline))
+Declaration(ObjectProperty(ec:consistsOfKnowledge))
+Declaration(ObjectProperty(ec:generatedFrom))
+Declaration(ObjectProperty(:belongsToCluster))
+Declaration(ObjectProperty(:belongsToLearningPath))
+Declaration(ObjectProperty(:belongsToPhase))
+Declaration(ObjectProperty(:commentUserID))
+Declaration(ObjectProperty(:commentedOER))
+Declaration(ObjectProperty(:covers))
+Declaration(ObjectProperty(:coversManagementOfDataDescribing))
+Declaration(ObjectProperty(:coversManagementOfDataKind))
+Declaration(ObjectProperty(:coversManagementOfDataObtainedWithMethod))
+Declaration(ObjectProperty(:coversManagementOfDataObtainedWithTool))
+Declaration(ObjectProperty(:createdBy))
+Declaration(ObjectProperty(:definesLearningPath))
+Declaration(ObjectProperty(:describes))
+Declaration(ObjectProperty(:educationalLevel))
+Declaration(ObjectProperty(:essentialFor))
+Declaration(ObjectProperty(:givesProficiencyLevel))
+Declaration(ObjectProperty(:hasLearningObjective))
+Declaration(ObjectProperty(:hasLearningPreference))
+Declaration(ObjectProperty(:hasLearningResource))
+Declaration(ObjectProperty(:hasLearningType))
+Declaration(ObjectProperty(:hasMediaType))
+Declaration(ObjectProperty(:hasMetadata))
+Declaration(ObjectProperty(:hasOwner))
+Declaration(ObjectProperty(:hasQuality))
+Declaration(ObjectProperty(:hasRating))
+Declaration(ObjectProperty(:hasRole))
+Declaration(ObjectProperty(:hasSourceCode))
+Declaration(ObjectProperty(:hasTargetGroup))
+Declaration(ObjectProperty(:hasTranslation))
+Declaration(ObjectProperty(:hasUser))
+Declaration(ObjectProperty(:isDescribedBy))
+Declaration(ObjectProperty(:isDuplicateOf))
+Declaration(ObjectProperty(:isIdenticalTo))
+Declaration(ObjectProperty(:isLessProficientThan))
+Declaration(ObjectProperty(:isMemberOf))
+Declaration(ObjectProperty(:isMoreProficientThan))
+Declaration(ObjectProperty(:isNewVersionOf))
+Declaration(ObjectProperty(:isPreviousVersionOf))
+Declaration(ObjectProperty(:isSourceCodeOf))
+Declaration(ObjectProperty(:isTranslationOf))
+Declaration(ObjectProperty(:isVersionOf))
+Declaration(ObjectProperty(:nextPhase))
+Declaration(ObjectProperty(:optionalFor))
+Declaration(ObjectProperty(:prerequisites))
+Declaration(ObjectProperty(:recommender))
+Declaration(ObjectProperty(:requiresKnowledge))
+Declaration(ObjectProperty(:requiresProficiencyLevel))
+Declaration(ObjectProperty(:solves))
+Declaration(ObjectProperty(:supportingHost))
+Declaration(ObjectProperty(:teachesSkill))
+Declaration(ObjectProperty(:userBookmarks))
+Declaration(ObjectProperty(:userLikes))
+Declaration(ObjectProperty(:userViews))
+Declaration(ObjectProperty(schema:author))
+Declaration(ObjectProperty(schema:isBasedOn))
+Declaration(ObjectProperty(schema:itemReviewed))
+Declaration(ObjectProperty(<https://w3id.org/citedcat-ap/continues>))
+Declaration(ObjectProperty(<https://w3id.org/citedcat-ap/isCompiledBy>))
+Declaration(ObjectProperty(<https://w3id.org/citedcat-ap/isContinuedBy>))
+Declaration(ObjectProperty(<https://w3id.org/citedcat-ap/isSupplementTo>))
+Declaration(ObjectProperty(<https://w3id.org/citedcat-ap/isSupplementedBy>))
+Declaration(DataProperty(dcterms:format))
+Declaration(DataProperty(dcterms:issued))
+Declaration(DataProperty(dcterms:rights))
+Declaration(DataProperty(fabio:hasSubtitle))
+Declaration(DataProperty(m4i:hasRorId))
+Declaration(DataProperty(m4i:orcidId))
+Declaration(DataProperty(:authorUnordered))
+Declaration(DataProperty(:citation))
+Declaration(DataProperty(:commentDate))
+Declaration(DataProperty(:commentID))
+Declaration(DataProperty(:commentText))
+Declaration(DataProperty(:hasDOI))
+Declaration(DataProperty(:hasOrder))
+Declaration(DataProperty(:industry))
+Declaration(DataProperty(:likesCount))
+Declaration(DataProperty(:notesForLearner))
+Declaration(DataProperty(:studyPlan))
+Declaration(DataProperty(:viewCount))
+Declaration(DataProperty(schema:abstract))
+Declaration(DataProperty(schema:accessibilityFeature))
+Declaration(DataProperty(schema:datePublished))
+Declaration(DataProperty(schema:downloadUrl))
+Declaration(DataProperty(schema:email))
+Declaration(DataProperty(schema:familyName))
+Declaration(DataProperty(schema:fileSize))
+Declaration(DataProperty(schema:givenName))
+Declaration(DataProperty(schema:identifier))
+Declaration(DataProperty(schema:image))
+Declaration(DataProperty(schema:isAccessibleForFree))
+Declaration(DataProperty(schema:keywords))
+Declaration(DataProperty(schema:ratingValue))
+Declaration(DataProperty(schema:reviewBody))
+Declaration(DataProperty(schema:reviewRating))
+Declaration(DataProperty(schema:teaches))
+Declaration(DataProperty(schema:timeRequired))
+Declaration(DataProperty(schema:title))
+Declaration(DataProperty(schema:url))
+Declaration(DataProperty(schema:version))
+Declaration(NamedIndividual(<https://creativecommons.org/licenses/by/4.0/>))
+Declaration(NamedIndividual(:Annotator))
+Declaration(NamedIndividual(:Beginner))
+Declaration(NamedIndividual(:Competent))
+Declaration(NamedIndividual(:ContactPerson))
+Declaration(NamedIndividual(:DataCollector))
+Declaration(NamedIndividual(:DataCurator))
+Declaration(NamedIndividual(:DataManager))
+Declaration(NamedIndividual(:Distributor))
+Declaration(NamedIndividual(:Editor))
+Declaration(NamedIndividual(:Expert))
+Declaration(NamedIndividual(:HostingInstitution))
+Declaration(NamedIndividual(:Interviewee))
+Declaration(NamedIndividual(:Interviewer))
+Declaration(NamedIndividual(:MetadataContact))
+Declaration(NamedIndividual(:Novice))
+Declaration(NamedIndividual(:OtherRole))
+Declaration(NamedIndividual(:Producer))
+Declaration(NamedIndividual(:Proficient))
+Declaration(NamedIndividual(:ProjectLeader))
+Declaration(NamedIndividual(:ProjectManager))
+Declaration(NamedIndividual(:ProjectMember))
+Declaration(NamedIndividual(:Proprietary))
+Declaration(NamedIndividual(:RegistrationAgency))
+Declaration(NamedIndividual(:RegistrationAuthority))
+Declaration(NamedIndividual(:RelatedPerson))
+Declaration(NamedIndividual(:ResearchGroup))
+Declaration(NamedIndividual(:ResearcherRole))
+Declaration(NamedIndividual(:RightsHolder))
+Declaration(NamedIndividual(:SoftwareDeveloper))
+Declaration(NamedIndividual(:Speaker))
+Declaration(NamedIndividual(:Sponsor))
+Declaration(NamedIndividual(:Supervisor))
+Declaration(NamedIndividual(:TeacherContributorRole))
+Declaration(NamedIndividual(:Translator))
+Declaration(NamedIndividual(:WorkPackageLeader))
+Declaration(AnnotationProperty(dcterms:abstract))
+Declaration(AnnotationProperty(dcterms:contributor))
+Declaration(AnnotationProperty(dcterms:created))
+Declaration(AnnotationProperty(dcterms:creator))
+Declaration(AnnotationProperty(dcterms:description))
+Declaration(AnnotationProperty(dcterms:license))
+Declaration(AnnotationProperty(dcterms:modified))
+Declaration(AnnotationProperty(dcterms:publisher))
+Declaration(AnnotationProperty(dcterms:source))
+Declaration(AnnotationProperty(dcterms:title))
+Declaration(AnnotationProperty(vann:preferredNamespacePrefix))
+Declaration(AnnotationProperty(vann:preferredNamespaceUri))
+Declaration(AnnotationProperty(doap:bug-database))
+Declaration(AnnotationProperty(<http://www.loc.gov/premis/rdf/v3/documentation>))
+Declaration(AnnotationProperty(skos:altLabel))
+Declaration(AnnotationProperty(skos:definition))
+Declaration(AnnotationProperty(skos:example))
+Declaration(AnnotationProperty(skos:prefLabel))
+Declaration(AnnotationProperty(skos:scopeNote))
+Declaration(AnnotationProperty(schema:bestRating))
+Declaration(AnnotationProperty(schema:worstRating))
+Declaration(Datatype(rdf:langString))
+Declaration(Datatype(xsd:duration))
+############################
+#   Annotation Properties
+############################
+
+# Annotation Property: dcterms:created (dcterms:created)
+
+AnnotationPropertyRange(dcterms:created xsd:dateTime)
+
+# Annotation Property: dcterms:description (description)
+
+AnnotationAssertion(rdfs:label dcterms:description "description"@en)
+
+# Annotation Property: dcterms:license (license)
+
+AnnotationAssertion(rdfs:label dcterms:license "license"@en)
+AnnotationAssertion(skos:definition dcterms:license "Property identifying the license of an Educational Resource"@en)
+AnnotationPropertyRange(dcterms:license :License)
+AnnotationPropertyDomain(dcterms:license ec:EducationalResource)
+
+# Annotation Property: dcterms:title (title)
+
+AnnotationAssertion(rdfs:label dcterms:title "title"@en)
+
+
+############################
+#   Object Properties
+############################
+
+# Object Property: bf:agent (bf:agent)
+
+AnnotationAssertion(rdfs:comment bf:agent "agent"@en)
+AnnotationAssertion(rdfs:isDefinedBy bf:agent <http://id.loc.gov/ontologies/bibframe>)
+AnnotationAssertion(skos:definition bf:agent "Property that links a contribution to the agent (e.g., the person or organization making the contribution).")
+ObjectPropertyDomain(bf:agent bf:Contribution)
+ObjectPropertyRange(bf:agent :Contributor)
+
+# Object Property: bf:contribution (contribution)
+
+AnnotationAssertion(rdfs:comment bf:contribution "Property linking an OER to its contribution (e.g., editing)."@en)
+AnnotationAssertion(rdfs:label bf:contribution "contribution"@en)
+ObjectPropertyDomain(bf:contribution ec:EducationalResource)
+ObjectPropertyRange(bf:contribution bf:Contribution)
+
+# Object Property: bf:role (role)
+
+AnnotationAssertion(rdfs:comment bf:role "Property that links a contribution to a role (e.g., contactPerson, editor)."@en)
+AnnotationAssertion(rdfs:label bf:role "role"@en)
+ObjectPropertyDomain(bf:role bf:Contribution)
+ObjectPropertyRange(bf:role bf:Role)
+
+# Object Property: dcterms:hasPart (hasPart)
+
+AnnotationAssertion(rdfs:label dcterms:hasPart "hasPart"@en)
+AnnotationAssertion(skos:prefLabel dcterms:hasPart "Has part"@en)
+SubObjectPropertyOf(dcterms:hasPart dcterms:relation)
+ObjectPropertyDomain(dcterms:hasPart ec:EducationalResource)
+ObjectPropertyRange(dcterms:hasPart owl:Thing)
+
+# Object Property: dcterms:isPartOf (isPartOf)
+
+AnnotationAssertion(rdfs:label dcterms:isPartOf "isPartOf"@en)
+AnnotationAssertion(skos:prefLabel dcterms:isPartOf "Is part of"@en)
+SubObjectPropertyOf(dcterms:isPartOf dcterms:relation)
+ObjectPropertyDomain(dcterms:isPartOf ec:EducationalResource)
+ObjectPropertyRange(dcterms:isPartOf owl:Thing)
+
+# Object Property: dcterms:isReferencedBy (isReferencedBy)
+
+AnnotationAssertion(rdfs:label dcterms:isReferencedBy "isReferencedBy"@en)
+AnnotationAssertion(skos:prefLabel dcterms:isReferencedBy "Is referenced by"@en)
+SubObjectPropertyOf(dcterms:isReferencedBy dcterms:relation)
+ObjectPropertyDomain(dcterms:isReferencedBy ec:EducationalResource)
+ObjectPropertyRange(dcterms:isReferencedBy owl:Thing)
+
+# Object Property: dcterms:isReplacedBy (isReplacedBy)
+
+AnnotationAssertion(rdfs:label dcterms:isReplacedBy "isReplacedBy"@en)
+AnnotationAssertion(skos:prefLabel dcterms:isReplacedBy "Is replaced by"@en)
+SubObjectPropertyOf(dcterms:isReplacedBy dcterms:relation)
+InverseObjectProperties(dcterms:isReplacedBy dcterms:replaces)
+ObjectPropertyDomain(dcterms:isReplacedBy ec:EducationalResource)
+ObjectPropertyRange(dcterms:isReplacedBy ec:EducationalResource)
+
+# Object Property: dcterms:language (language)
+
+AnnotationAssertion(rdfs:comment dcterms:language "language of resource"@en)
+AnnotationAssertion(rdfs:label dcterms:language "language"@en)
+ObjectPropertyDomain(dcterms:language ec:EducationalResource)
+ObjectPropertyRange(dcterms:language <http://lexvo.org/ontology#Language>)
+
+# Object Property: dcterms:references (references)
+
+AnnotationAssertion(rdfs:label dcterms:references "references"@en)
+AnnotationAssertion(skos:prefLabel dcterms:references "References"@en)
+SubObjectPropertyOf(dcterms:references dcterms:relation)
+ObjectPropertyDomain(dcterms:references ec:EducationalResource)
+ObjectPropertyRange(dcterms:references owl:Thing)
+
+# Object Property: dcterms:relation (relation)
+
+AnnotationAssertion(rdfs:label dcterms:relation "relation"@en)
+AnnotationAssertion(skos:definition dcterms:relation "The relation(s) to other resources.  It is required to identify the related resource by means of a URI."@en)
+ObjectPropertyDomain(dcterms:relation ec:EducationalResource)
+ObjectPropertyRange(dcterms:relation owl:Thing)
+
+# Object Property: dcterms:replaces (replaces)
+
+AnnotationAssertion(rdfs:label dcterms:replaces "replaces"@en)
+AnnotationAssertion(skos:prefLabel dcterms:replaces "Replaces"@en)
+SubObjectPropertyOf(dcterms:replaces dcterms:relation)
+ObjectPropertyDomain(dcterms:replaces ec:EducationalResource)
+ObjectPropertyRange(dcterms:replaces ec:EducationalResource)
+
+# Object Property: dcterms:requires (requires)
+
+AnnotationAssertion(rdfs:label dcterms:requires "requires"@en)
+ObjectPropertyDomain(dcterms:requires ec:EducationalResource)
+ObjectPropertyRange(dcterms:requires owl:Thing)
+
+# Object Property: fabio:hasDiscipline (hasDiscipline)
+
+AnnotationAssertion(rdfs:label fabio:hasDiscipline "hasDiscipline")
+ObjectPropertyDomain(fabio:hasDiscipline ObjectUnionOf(ec:EducationalResource ec:KnowledgeTopic))
+ObjectPropertyRange(fabio:hasDiscipline :Discipline)
+
+# Object Property: ec:consistsOfKnowledge (consistsOfKnowledge)
+
+AnnotationAssertion(rdfs:label ec:consistsOfKnowledge "consistsOfKnowledge")
+ObjectPropertyDomain(ec:consistsOfKnowledge :LearningPath)
+ObjectPropertyRange(ec:consistsOfKnowledge ec:KnowledgeTopic)
+
+# Object Property: ec:generatedFrom (generated from)
+
+AnnotationAssertion(rdfs:label ec:generatedFrom "generated from"@en)
+ObjectPropertyDomain(ec:generatedFrom ec:Recommendation)
+ObjectPropertyRange(ec:generatedFrom :User)
+
+# Object Property: :belongsToCluster (belongs to cluster)
+
+AnnotationAssertion(rdfs:comment :belongsToCluster "relates RDM Topic to RDM Topic Cluster, similar to LZM"@en)
+AnnotationAssertion(rdfs:label :belongsToCluster "belongs to cluster"@en)
+ObjectPropertyDomain(:belongsToCluster :RDMTopic)
+ObjectPropertyRange(:belongsToCluster :RDMSubjectCluster)
+
+# Object Property: :belongsToLearningPath (belongs to learning path)
+
+AnnotationAssertion(rdfs:label :belongsToLearningPath "belongs to learning path"@en)
+ObjectPropertyDomain(:belongsToLearningPath :LearningPathStep)
+ObjectPropertyRange(:belongsToLearningPath :LearningPath)
+
+# Object Property: :belongsToPhase (belongs to phase)
+
+AnnotationAssertion(rdfs:label :belongsToPhase "belongs to phase"@en)
+AnnotationAssertion(skos:definition :belongsToPhase "defines the data life cycle phase that the resource covers"@en)
+ObjectPropertyDomain(:belongsToPhase :RDMResource)
+ObjectPropertyRange(:belongsToPhase :DataLifeCyclePhase)
+
+# Object Property: :commentUserID (comment has user)
+
+AnnotationAssertion(rdfs:label :commentUserID "comment has user"@en)
+AnnotationAssertion(skos:definition :commentUserID "relates a user to his/her comment"@en)
+ObjectPropertyDomain(:commentUserID :UserComment)
+ObjectPropertyRange(:commentUserID :User)
+
+# Object Property: :commentedOER (comment has OER)
+
+AnnotationAssertion(rdfs:label :commentedOER "comment has OER"@en)
+AnnotationAssertion(skos:definition :commentedOER "commentedOER"@en)
+AnnotationAssertion(skos:definition :commentedOER "defines the OER that is commented in a user comment"@en)
+ObjectPropertyDomain(:commentedOER :UserComment)
+ObjectPropertyRange(:commentedOER ec:EducationalResource)
+
+# Object Property: :covers (covers)
+
+AnnotationAssertion(rdfs:label :covers "covers"@en)
+AnnotationAssertion(skos:definition :covers "Defines the topics covered in a learning resource"@en)
+ObjectPropertyDomain(:covers ec:EducationalResource)
+ObjectPropertyRange(:covers ec:KnowledgeTopic)
+
+# Object Property: :coversManagementOfDataDescribing (covers management of data describing)
+
+AnnotationAssertion(rdfs:label :coversManagementOfDataDescribing "covers management of data describing"@en)
+ObjectPropertyDomain(:coversManagementOfDataDescribing :RDMResource)
+ObjectPropertyRange(:coversManagementOfDataDescribing <http://semanticscience.org/resource/SIO_000776>)
+
+# Object Property: :coversManagementOfDataKind (covers management of data kind)
+
+AnnotationAssertion(rdfs:comment :coversManagementOfDataKind "A property that relates a RDMResource to data kind being managed"@en)
+AnnotationAssertion(rdfs:label :coversManagementOfDataKind "covers management of data kind"@en)
+ObjectPropertyDomain(:coversManagementOfDataKind :RDMResource)
+ObjectPropertyRange(:coversManagementOfDataKind <http://edamontology.org/data_0006>)
+
+# Object Property: :coversManagementOfDataObtainedWithMethod (covers management of data obtained with method)
+
+AnnotationAssertion(rdfs:label :coversManagementOfDataObtainedWithMethod "covers management of data obtained with method"@en)
+ObjectPropertyDomain(:coversManagementOfDataObtainedWithMethod :RDMResource)
+ObjectPropertyRange(:coversManagementOfDataObtainedWithMethod m4i:Method)
+
+# Object Property: :coversManagementOfDataObtainedWithTool (covers management of data obtained with tool)
+
+AnnotationAssertion(rdfs:label :coversManagementOfDataObtainedWithTool "covers management of data obtained with tool"@en)
+ObjectPropertyDomain(:coversManagementOfDataObtainedWithTool :RDMResource)
+ObjectPropertyRange(:coversManagementOfDataObtainedWithTool m4i:Tool)
+
+# Object Property: :createdBy (created by)
+
+AnnotationAssertion(rdfs:comment :createdBy "a property defining the user who created a community"@en)
+AnnotationAssertion(rdfs:label :createdBy "created by"@en)
+ObjectPropertyDomain(:createdBy :Community)
+ObjectPropertyRange(:createdBy :User)
+
+# Object Property: :definesLearningPath (defines learning path)
+
+AnnotationAssertion(rdfs:label :definesLearningPath "defines learning path"@en)
+ObjectPropertyDomain(:definesLearningPath ObjectUnionOf(ec:Recommendation :User))
+ObjectPropertyRange(:definesLearningPath :LearningPath)
+
+# Object Property: :describes (describes)
+
+AnnotationAssertion(rdfs:label :describes "describes"@en)
+AnnotationAssertion(skos:prefLabel :describes "Describes"@en)
+SubObjectPropertyOf(:describes dcterms:relation)
+ObjectPropertyDomain(:describes ec:EducationalResource)
+ObjectPropertyRange(:describes owl:Thing)
+
+# Object Property: :educationalLevel (educational level)
+
+AnnotationAssertion(rdfs:label :educationalLevel "educational level"@en)
+ObjectPropertyDomain(:educationalLevel :User)
+ObjectPropertyRange(:educationalLevel :EducationalLevel)
+
+# Object Property: :essentialFor (essential for)
+
+AnnotationAssertion(rdfs:comment :essentialFor "a property defining the essential skills for a certain job"@en)
+AnnotationAssertion(rdfs:label :essentialFor "essential for"@en)
+ObjectPropertyDomain(:essentialFor :Skill)
+ObjectPropertyRange(:essentialFor :Job)
+
+# Object Property: :givesProficiencyLevel (gives proficiency level)
+
+AnnotationAssertion(rdfs:label :givesProficiencyLevel "gives proficiency level"@en)
+ObjectPropertyDomain(:givesProficiencyLevel ec:EducationalResource)
+ObjectPropertyRange(:givesProficiencyLevel :Proficiency)
+
+# Object Property: :hasLearningObjective (has learning objective)
+
+AnnotationAssertion(rdfs:label :hasLearningObjective "has learning objective"@en)
+ObjectPropertyDomain(:hasLearningObjective ObjectUnionOf(ec:EducationalResource :LearningPath))
+ObjectPropertyRange(:hasLearningObjective :LearningObjective)
+
+# Object Property: :hasLearningPreference (has learning preference)
+
+AnnotationAssertion(rdfs:label :hasLearningPreference "has learning preference"@en)
+AnnotationAssertion(skos:definition :hasLearningPreference "The preferenced learning class from VARK"@en)
+ObjectPropertyDomain(:hasLearningPreference :User)
+ObjectPropertyRange(:hasLearningPreference ec:LearningPreference)
+
+# Object Property: :hasLearningResource (has learning resource)
+
+AnnotationAssertion(rdfs:label :hasLearningResource "has learning resource"@en)
+ObjectPropertyDomain(:hasLearningResource :LearningPath)
+ObjectPropertyRange(:hasLearningResource ec:EducationalResource)
+
+# Object Property: :hasLearningType (has learning type)
+
+AnnotationAssertion(rdfs:label :hasLearningType "has learning type"@en)
+AnnotationAssertion(skos:definition :hasLearningType "The value is the learning type of content of a learning resource (e.g Lecture)"@en)
+FunctionalObjectProperty(:hasLearningType)
+ObjectPropertyDomain(:hasLearningType ec:EducationalResource)
+ObjectPropertyRange(:hasLearningType :LearningResourceType)
+
+# Object Property: :hasMediaType (has media type)
+
+AnnotationAssertion(rdfs:label :hasMediaType "has media type"@en)
+ObjectPropertyDomain(:hasMediaType ec:EducationalResource)
+ObjectPropertyRange(:hasMediaType :MediaType)
+
+# Object Property: :hasMetadata (has metadata)
+
+AnnotationAssertion(rdfs:label :hasMetadata "has metadata"@en)
+ObjectPropertyDomain(:hasMetadata ec:EducationalResource)
+ObjectPropertyRange(:hasMetadata owl:Thing)
+
+# Object Property: :hasOwner (has owner)
+
+AnnotationAssertion(rdfs:label :hasOwner "has owner"@en)
+AnnotationAssertion(skos:definition :hasOwner "defines the user who owns a specific community. There is only one owner to a specific community"@en)
+FunctionalObjectProperty(:hasOwner)
+ObjectPropertyDomain(:hasOwner :Community)
+ObjectPropertyRange(:hasOwner :User)
+
+# Object Property: :hasQuality (has quality)
+
+AnnotationAssertion(rdfs:label :hasQuality "has quality"@en)
+ObjectPropertyDomain(:hasQuality ec:EducationalResource)
+ObjectPropertyRange(:hasQuality :ContentQuality)
+
+# Object Property: :hasRating (has rating)
+
+AnnotationAssertion(rdfs:label :hasRating "has rating"@en)
+ObjectPropertyDomain(:hasRating ec:EducationalResource)
+ObjectPropertyRange(:hasRating schema:Rating)
+
+# Object Property: :hasRole (has role)
+
+AnnotationAssertion(rdfs:label :hasRole "has role"@en)
+ObjectPropertyDomain(:hasRole :User)
+ObjectPropertyRange(:hasRole :UserRole)
+
+# Object Property: :hasSourceCode (has source code)
+
+AnnotationAssertion(rdfs:label :hasSourceCode "has source code"@en)
+ObjectPropertyDomain(:hasSourceCode ec:EducationalResource)
+ObjectPropertyRange(:hasSourceCode owl:Thing)
+
+# Object Property: :hasTargetGroup (has target group)
+
+AnnotationAssertion(rdfs:label :hasTargetGroup "has target group"@en)
+ObjectPropertyDomain(:hasTargetGroup ec:EducationalResource)
+ObjectPropertyRange(:hasTargetGroup :TargetGroup)
+
+# Object Property: :hasTranslation (has translation)
+
+AnnotationAssertion(rdfs:label :hasTranslation "has translation"@en)
+AnnotationAssertion(skos:prefLabel :hasTranslation "Has translation"@en)
+SubObjectPropertyOf(:hasTranslation dcterms:relation)
+ObjectPropertyDomain(:hasTranslation ec:EducationalResource)
+ObjectPropertyRange(:hasTranslation owl:Thing)
+
+# Object Property: :hasUser (has user)
+
+AnnotationAssertion(rdfs:label :hasUser "has user"@en)
+SubObjectPropertyOf(:hasUser owl:topObjectProperty)
+ObjectPropertyDomain(:hasUser schema:Rating)
+ObjectPropertyRange(:hasUser :User)
+
+# Object Property: :isDescribedBy (is described by)
+
+AnnotationAssertion(rdfs:label :isDescribedBy "is described by"@en)
+AnnotationAssertion(skos:prefLabel :isDescribedBy "Is described by"@en)
+SubObjectPropertyOf(:isDescribedBy dcterms:relation)
+ObjectPropertyDomain(:isDescribedBy ec:EducationalResource)
+ObjectPropertyRange(:isDescribedBy owl:Thing)
+
+# Object Property: :isDuplicateOf (is duplicate of)
+
+AnnotationAssertion(rdfs:label :isDuplicateOf "is duplicate of"@en)
+AnnotationAssertion(skos:definition :isDuplicateOf "Duplicated metadata in DALIA platform"@en)
+SubObjectPropertyOf(:isDuplicateOf owl:topObjectProperty)
+ObjectPropertyDomain(:isDuplicateOf ec:EducationalResource)
+ObjectPropertyRange(:isDuplicateOf ec:EducationalResource)
+
+# Object Property: :isIdenticalTo (is identical to)
+
+AnnotationAssertion(rdfs:label :isIdenticalTo "is identical to"@en)
+AnnotationAssertion(skos:prefLabel :isIdenticalTo "Is identical to"@en)
+SubObjectPropertyOf(:isIdenticalTo dcterms:relation)
+ObjectPropertyDomain(:isIdenticalTo ec:EducationalResource)
+ObjectPropertyRange(:isIdenticalTo ec:EducationalResource)
+
+# Object Property: :isLessProficientThan (is less proficient than)
+
+AnnotationAssertion(rdfs:label :isLessProficientThan "is less proficient than"@en)
+InverseObjectProperties(:isLessProficientThan :isMoreProficientThan)
+TransitiveObjectProperty(:isLessProficientThan)
+ObjectPropertyDomain(:isLessProficientThan :Proficiency)
+ObjectPropertyRange(:isLessProficientThan :Proficiency)
+
+# Object Property: :isMemberOf (is member of)
+
+AnnotationAssertion(rdfs:label :isMemberOf "is member of"@en)
+SubObjectPropertyOf(:isMemberOf owl:topObjectProperty)
+ObjectPropertyDomain(:isMemberOf :User)
+ObjectPropertyRange(:isMemberOf :Community)
+
+# Object Property: :isMoreProficientThan (is more proficient than)
+
+AnnotationAssertion(rdfs:label :isMoreProficientThan "is more proficient than"@en)
+TransitiveObjectProperty(:isMoreProficientThan)
+ObjectPropertyDomain(:isMoreProficientThan :Proficiency)
+ObjectPropertyRange(:isMoreProficientThan :Proficiency)
+
+# Object Property: :isNewVersionOf (is new version of)
+
+AnnotationAssertion(rdfs:label :isNewVersionOf "is new version of"@en)
+AnnotationAssertion(skos:prefLabel :isNewVersionOf "Is new version of"@en)
+SubObjectPropertyOf(:isNewVersionOf dcterms:relation)
+InverseObjectProperties(:isNewVersionOf :isPreviousVersionOf)
+IrreflexiveObjectProperty(:isNewVersionOf)
+ObjectPropertyDomain(:isNewVersionOf ec:EducationalResource)
+ObjectPropertyRange(:isNewVersionOf ec:EducationalResource)
+
+# Object Property: :isPreviousVersionOf (is previous version of)
+
+AnnotationAssertion(rdfs:label :isPreviousVersionOf "is previous version of"@en)
+AnnotationAssertion(skos:prefLabel :isPreviousVersionOf "Is previous version of"@en)
+SubObjectPropertyOf(:isPreviousVersionOf dcterms:relation)
+ObjectPropertyDomain(:isPreviousVersionOf ec:EducationalResource)
+ObjectPropertyRange(:isPreviousVersionOf ec:EducationalResource)
+
+# Object Property: :isSourceCodeOf (is source code of)
+
+AnnotationAssertion(rdfs:label :isSourceCodeOf "is source code of"@en)
+ObjectPropertyDomain(:isSourceCodeOf ec:EducationalResource)
+ObjectPropertyRange(:isSourceCodeOf owl:Thing)
+
+# Object Property: :isTranslationOf (is translation of)
+
+AnnotationAssertion(rdfs:label :isTranslationOf "is translation of"@en)
+AnnotationAssertion(skos:prefLabel :isTranslationOf "Is translation of"@en)
+SubObjectPropertyOf(:isTranslationOf dcterms:relation)
+ObjectPropertyDomain(:isTranslationOf ec:EducationalResource)
+ObjectPropertyRange(:isTranslationOf owl:Thing)
+
+# Object Property: :isVersionOf (is version of)
+
+AnnotationAssertion(rdfs:label :isVersionOf "is version of"@en)
+AnnotationAssertion(skos:prefLabel :isVersionOf "Is version of"@en)
+SubObjectPropertyOf(:isVersionOf dcterms:relation)
+SymmetricObjectProperty(:isVersionOf)
+ObjectPropertyDomain(:isVersionOf ec:EducationalResource)
+ObjectPropertyRange(:isVersionOf ec:EducationalResource)
+
+# Object Property: :nextPhase (next phase)
+
+AnnotationAssertion(rdfs:label :nextPhase "next phase"@en)
+ObjectPropertyDomain(:nextPhase :DataLifeCyclePhase)
+ObjectPropertyRange(:nextPhase :DataLifeCyclePhase)
+
+# Object Property: :optionalFor (optional for)
+
+AnnotationAssertion(rdfs:comment :optionalFor "Defines the skills that are optional for a certain Job"@en)
+AnnotationAssertion(rdfs:label :optionalFor "optional for"@en)
+ObjectPropertyDomain(:optionalFor :Skill)
+ObjectPropertyRange(:optionalFor :Job)
+
+# Object Property: :prerequisites (prerequisites)
+
+AnnotationAssertion(rdfs:label :prerequisites "prerequisites"@en)
+ObjectPropertyDomain(:prerequisites ec:KnowledgeTopic)
+ObjectPropertyRange(:prerequisites ec:KnowledgeTopic)
+
+# Object Property: :recommender (recommender)
+
+AnnotationAssertion(Annotation(dcterms:contributor <https://orcid.org/0000-0001-8997-2620>) Annotation(dcterms:contributor <https://orcid.org/0000-0002-0452-7075>) Annotation(dcterms:source "DIF1.3") Annotation(dcterms:source "recommendationontology") dcterms:description :recommender "A community which provides the recommendation of the OER. In the context of DIF, the recommending community is the organization or institution or project or body or online group which recommends the OER.")
+AnnotationAssertion(rdfs:label :recommender "recommender"@en)
+AnnotationAssertion(skos:definition :recommender "Associated community(ies) of the resource who are either the supporting organization/institution, or the recommender, or both.  Here indicates recommender"@en)
+ObjectPropertyDomain(:recommender ec:EducationalResource)
+ObjectPropertyRange(:recommender :Community)
+
+# Object Property: :requiresKnowledge (requires knowledge)
+
+AnnotationAssertion(rdfs:label :requiresKnowledge "requires knowledge"@en)
+ObjectPropertyDomain(:requiresKnowledge :Skill)
+ObjectPropertyRange(:requiresKnowledge ec:KnowledgeTopic)
+
+# Object Property: :requiresProficiencyLevel (requires proficiency level)
+
+AnnotationAssertion(rdfs:label :requiresProficiencyLevel "requires proficiency level"@en)
+ObjectPropertyDomain(:requiresProficiencyLevel ec:EducationalResource)
+ObjectPropertyRange(:requiresProficiencyLevel :Proficiency)
+
+# Object Property: :solves (solves)
+
+AnnotationAssertion(rdfs:label :solves "solves"@en)
+ObjectPropertyDomain(:solves :User)
+ObjectPropertyRange(:solves ObjectUnionOf(hcrt:assessment hcrt:questionnaire))
+
+# Object Property: :supportingHost (supportinghost)
+
+AnnotationAssertion(rdfs:label :supportingHost "supportinghost"@en)
+AnnotationAssertion(skos:definition :supportingHost "Associated community(ies) of the resource who are either the supporting organization/institution, or the recommender, or both. Here indicates supporting."@en)
+ObjectPropertyDomain(:supportingHost ec:EducationalResource)
+ObjectPropertyRange(:supportingHost :Community)
+
+# Object Property: :teachesSkill (teaches skill)
+
+AnnotationAssertion(rdfs:label :teachesSkill "teaches skill"@en)
+ObjectPropertyDomain(:teachesSkill ec:EducationalResource)
+ObjectPropertyRange(:teachesSkill :Skill)
+
+# Object Property: :userBookmarks (user bookmarks)
+
+AnnotationAssertion(rdfs:label :userBookmarks "user bookmarks"@en)
+ObjectPropertyDomain(:userBookmarks :User)
+ObjectPropertyRange(:userBookmarks ec:EducationalResource)
+
+# Object Property: :userLikes (user likes)
+
+AnnotationAssertion(rdfs:label :userLikes "user likes"@en)
+AnnotationAssertion(skos:definition :userLikes "stores that user liked a given OER"@en)
+ObjectPropertyDomain(:userLikes :User)
+ObjectPropertyRange(:userLikes ec:EducationalResource)
+
+# Object Property: :userViews (user views)
+
+AnnotationAssertion(rdfs:label :userViews "user views"@en)
+SubObjectPropertyOf(:userViews owl:topObjectProperty)
+ObjectPropertyDomain(:userViews :User)
+ObjectPropertyRange(:userViews ec:EducationalResource)
+
+# Object Property: schema:author (author)
+
+AnnotationAssertion(rdfs:comment schema:author "Property linking an OER  to a list of authors."@en)
+AnnotationAssertion(rdfs:label schema:author "author"@en)
+ObjectPropertyDomain(schema:author ec:EducationalResource)
+ObjectPropertyRange(schema:author rdf:List)
+
+# Object Property: schema:isBasedOn (isBasedOn)
+
+AnnotationAssertion(rdfs:label schema:isBasedOn "isBasedOn"@en)
+AnnotationAssertion(skos:prefLabel schema:isBasedOn "Is based on"@en)
+SubObjectPropertyOf(schema:isBasedOn dcterms:relation)
+ObjectPropertyDomain(schema:isBasedOn ec:EducationalResource)
+ObjectPropertyRange(schema:isBasedOn owl:Thing)
+
+# Object Property: schema:itemReviewed (schema:itemReviewed)
+
+AnnotationAssertion(skos:definition schema:itemReviewed "The item that is being reviewed/rated."@en)
+ObjectPropertyDomain(schema:itemReviewed schema:Review)
+ObjectPropertyRange(schema:itemReviewed ec:EducationalResource)
+
+# Object Property: <https://w3id.org/citedcat-ap/continues> (continues)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/citedcat-ap/continues> "continues"@en)
+AnnotationAssertion(skos:prefLabel <https://w3id.org/citedcat-ap/continues> "Continues"@en)
+SubObjectPropertyOf(<https://w3id.org/citedcat-ap/continues> dcterms:relation)
+InverseObjectProperties(<https://w3id.org/citedcat-ap/continues> <https://w3id.org/citedcat-ap/isContinuedBy>)
+ObjectPropertyDomain(<https://w3id.org/citedcat-ap/continues> ec:EducationalResource)
+ObjectPropertyRange(<https://w3id.org/citedcat-ap/continues> ec:EducationalResource)
+
+# Object Property: <https://w3id.org/citedcat-ap/isCompiledBy> (isCompiledBy)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/citedcat-ap/isCompiledBy> "isCompiledBy"@en)
+ObjectPropertyDomain(<https://w3id.org/citedcat-ap/isCompiledBy> ec:EducationalResource)
+ObjectPropertyRange(<https://w3id.org/citedcat-ap/isCompiledBy> owl:Thing)
+
+# Object Property: <https://w3id.org/citedcat-ap/isContinuedBy> (isContinuedBy)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/citedcat-ap/isContinuedBy> "isContinuedBy"@en)
+AnnotationAssertion(skos:prefLabel <https://w3id.org/citedcat-ap/isContinuedBy> "Is continued by"@en)
+SubObjectPropertyOf(<https://w3id.org/citedcat-ap/isContinuedBy> dcterms:relation)
+ObjectPropertyDomain(<https://w3id.org/citedcat-ap/isContinuedBy> ec:EducationalResource)
+ObjectPropertyRange(<https://w3id.org/citedcat-ap/isContinuedBy> ec:EducationalResource)
+
+# Object Property: <https://w3id.org/citedcat-ap/isSupplementTo> (isSupplementTo)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/citedcat-ap/isSupplementTo> "isSupplementTo"@en)
+AnnotationAssertion(skos:prefLabel <https://w3id.org/citedcat-ap/isSupplementTo> "Is supplement to"@en)
+SubObjectPropertyOf(<https://w3id.org/citedcat-ap/isSupplementTo> dcterms:relation)
+ObjectPropertyDomain(<https://w3id.org/citedcat-ap/isSupplementTo> ec:EducationalResource)
+ObjectPropertyRange(<https://w3id.org/citedcat-ap/isSupplementTo> owl:Thing)
+
+# Object Property: <https://w3id.org/citedcat-ap/isSupplementedBy> (isSupplementedBy)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/citedcat-ap/isSupplementedBy> "isSupplementedBy"@en)
+AnnotationAssertion(skos:prefLabel <https://w3id.org/citedcat-ap/isSupplementedBy> "Is supplemented by"@en)
+SubObjectPropertyOf(<https://w3id.org/citedcat-ap/isSupplementedBy> dcterms:relation)
+ObjectPropertyDomain(<https://w3id.org/citedcat-ap/isSupplementedBy> ec:EducationalResource)
+ObjectPropertyRange(<https://w3id.org/citedcat-ap/isSupplementedBy> owl:Thing)
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: dcterms:format (file format)
+
+AnnotationAssertion(rdfs:isDefinedBy dcterms:format <http://purl.org/dc/terms>)
+AnnotationAssertion(rdfs:label dcterms:format "file format"@en)
+AnnotationAssertion(skos:definition dcterms:format "File format of the file representing the resource")
+AnnotationAssertion(skos:example dcterms:format "PDF, AVI")
+DataPropertyDomain(dcterms:format ec:EducationalResource)
+DataPropertyRange(dcterms:format xsd:string)
+
+# Data Property: dcterms:issued (issued)
+
+AnnotationAssertion(rdfs:label dcterms:issued "issued"@en)
+AnnotationAssertion(skos:definition dcterms:issued "Date of formal issuance (e.g., publication) of the resource."@en)
+DataPropertyDomain(dcterms:issued ec:EducationalResource)
+DataPropertyRange(dcterms:issued xsd:dateTime)
+
+# Data Property: dcterms:rights (rights)
+
+AnnotationAssertion(rdfs:label dcterms:rights "rights"@en)
+DataPropertyDomain(dcterms:rights ec:EducationalResource)
+DataPropertyRange(dcterms:rights xsd:string)
+
+# Data Property: fabio:hasSubtitle (has subtitle)
+
+AnnotationAssertion(rdfs:label fabio:hasSubtitle "has subtitle"@en)
+DataPropertyDomain(fabio:hasSubtitle ec:EducationalResource)
+DataPropertyRange(fabio:hasSubtitle xsd:string)
+
+# Data Property: m4i:hasRorId (m4i:hasRorId)
+
+AnnotationAssertion(rdfs:isDefinedBy m4i:hasRorId "http://w3id.org/nfdi4ing/metadata4ing")
+AnnotationAssertion(skos:altLabel m4i:hasRorId "has research organization registry id"@en)
+AnnotationAssertion(skos:altLabel m4i:hasRorId "hat Forschungsorganisationsid"@de)
+AnnotationAssertion(skos:definition m4i:hasRorId "A Research Organization Registry identifier that persistently and uniquely identifies a research organization"@en)
+AnnotationAssertion(skos:definition m4i:hasRorId "Ein persistenter Identifikator für Organisationen, vergeben durch die Research Organization Registry, der eine Forschungseinrichtung eindeutig identifiziert."@de)
+AnnotationAssertion(skos:prefLabel m4i:hasRorId "has ROR ID"@en)
+AnnotationAssertion(skos:prefLabel m4i:hasRorId "hat ROR ID"@de)
+DataPropertyDomain(m4i:hasRorId ObjectUnionOf(:Community schema:Organization))
+DataPropertyRange(m4i:hasRorId DatatypeRestriction(xsd:string xsd:pattern "https://ror.org/[0-9][0-9][a-z0-9][a-z0-9][a-z0-9][a-z0-9][a-z0-9][0-9][0-9]"))
+
+# Data Property: m4i:orcidId (m4i:orcidId)
+
+AnnotationAssertion(skos:definition m4i:orcidId "Open Researcher and Contributor ID: an identifier, that allows unique identification of a person, usually active in research."@en)
+AnnotationAssertion(skos:definition m4i:orcidId "Open Researcher and Contributor ID: ein persistenter Identifikator, der eine in der Forschung tätige Person eindeutig identifiziert."@de)
+AnnotationAssertion(skos:prefLabel m4i:orcidId "has ORCID ID"@en)
+AnnotationAssertion(skos:prefLabel m4i:orcidId "hat ORCID ID"@de)
+DataPropertyDomain(m4i:orcidId ObjectUnionOf(:Contributor :User))
+DataPropertyRange(m4i:orcidId DatatypeRestriction(xsd:string xsd:pattern "https://orcid.org/[0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9X]"))
+
+# Data Property: :authorUnordered (has author (unordered))
+
+AnnotationAssertion(rdfs:comment :authorUnordered "A property that links OER to its authors in unordered way to improve perrformance."@en)
+AnnotationAssertion(rdfs:comment :authorUnordered "authorUnordered"@en)
+AnnotationAssertion(rdfs:label :authorUnordered "has author (unordered)"@en)
+DataPropertyDomain(:authorUnordered ec:EducationalResource)
+DataPropertyRange(:authorUnordered xsd:string)
+
+# Data Property: :citation (citation)
+
+AnnotationAssertion(rdfs:comment :citation "Citation text of the OER (APA)"@en)
+AnnotationAssertion(rdfs:label :citation "citation"@en)
+DataPropertyDomain(:citation ec:EducationalResource)
+DataPropertyRange(:citation xsd:string)
+
+# Data Property: :commentDate (comment date)
+
+AnnotationAssertion(rdfs:label :commentDate "comment date"@en)
+AnnotationAssertion(skos:definition :commentDate "The date of a user comment"@en)
+DataPropertyDomain(:commentDate :UserComment)
+DataPropertyRange(:commentDate xsd:dateTimeStamp)
+
+# Data Property: :commentID (comment has identifier)
+
+AnnotationAssertion(rdfs:label :commentID "comment has identifier"@en)
+AnnotationAssertion(skos:definition :commentID "ID of a user comment"@en)
+DataPropertyDomain(:commentID :UserComment)
+DataPropertyRange(:commentID xsd:string)
+
+# Data Property: :commentText (comment text)
+
+AnnotationAssertion(rdfs:label :commentText "comment text"@en)
+AnnotationAssertion(skos:definition :commentText "The OER of a user comment"@en)
+DataPropertyDomain(:commentText :UserComment)
+DataPropertyRange(:commentText xsd:string)
+
+# Data Property: :hasDOI (has DOI)
+
+AnnotationAssertion(rdfs:comment :hasDOI "the DOI of the resource if exists."@en)
+AnnotationAssertion(rdfs:label :hasDOI "has DOI"@en)
+AnnotationAssertion(skos:example :hasDOI "example: 10.18450/dataman/90")
+DataPropertyDomain(:hasDOI ec:EducationalResource)
+DataPropertyRange(:hasDOI xsd:string)
+
+# Data Property: :hasOrder (has order)
+
+AnnotationAssertion(rdfs:label :hasOrder "has order"@en)
+AnnotationAssertion(skos:definition :hasOrder "Order of proficiency level, starting from 1 for Novice and increasing by proficiency"@en)
+DataPropertyDomain(:hasOrder ObjectUnionOf(:LearningPathStep :Proficiency))
+DataPropertyRange(:hasOrder xsd:integer)
+
+# Data Property: :industry (job has industry)
+
+AnnotationAssertion(rdfs:label :industry "job has industry"@en)
+AnnotationAssertion(skos:definition :industry "The industry of a job"@en)
+AnnotationAssertion(skos:example :industry "Research & Academia")
+SubDataPropertyOf(:industry owl:topDataProperty)
+DataPropertyDomain(:industry :Job)
+DataPropertyRange(:industry xsd:string)
+
+# Data Property: :likesCount (likes count)
+
+AnnotationAssertion(rdfs:label :likesCount "likes count"@en)
+DataPropertyDomain(:likesCount ec:EducationalResource)
+DataPropertyRange(:likesCount xsd:int)
+
+# Data Property: :notesForLearner (has notes for learner)
+
+AnnotationAssertion(rdfs:label :notesForLearner "has notes for learner"@en)
+DataPropertyDomain(:notesForLearner ObjectUnionOf(ec:EducationalResource :LearningPathStep))
+DataPropertyRange(:notesForLearner xsd:string)
+
+# Data Property: :studyPlan (study plan)
+
+AnnotationAssertion(rdfs:label :studyPlan "study plan"@en)
+DataPropertyDomain(:studyPlan :LearningPath)
+DataPropertyRange(:studyPlan rdf:langString)
+
+# Data Property: :viewCount (view count)
+
+AnnotationAssertion(rdfs:label :viewCount "view count"@en)
+DataPropertyDomain(:viewCount ec:EducationalResource)
+DataPropertyRange(:viewCount xsd:int)
+
+# Data Property: schema:abstract (abstract)
+
+AnnotationAssertion(rdfs:comment schema:abstract "An abstract is a short description that summarizes an OER."@en)
+AnnotationAssertion(rdfs:label schema:abstract "abstract"@en)
+DataPropertyDomain(schema:abstract ec:EducationalResource)
+DataPropertyRange(schema:abstract xsd:string)
+
+# Data Property: schema:accessibilityFeature (accessibilityfeature)
+
+AnnotationAssertion(rdfs:label schema:accessibilityFeature "accessibilityfeature"@en)
+DataPropertyDomain(schema:accessibilityFeature ec:EducationalResource)
+DataPropertyRange(schema:accessibilityFeature xsd:string)
+
+# Data Property: schema:datePublished (Publication Date)
+
+AnnotationAssertion(rdfs:label schema:datePublished "Publication Date"@en)
+DataPropertyDomain(schema:datePublished ec:EducationalResource)
+DataPropertyRange(schema:datePublished xsd:dateTime)
+
+# Data Property: schema:downloadUrl (has download URL)
+
+AnnotationAssertion(rdfs:comment schema:downloadUrl "If the OER can be downloaded, URL to download it."@en)
+AnnotationAssertion(rdfs:label schema:downloadUrl "has download URL"@en)
+DataPropertyDomain(schema:downloadUrl ec:EducationalResource)
+DataPropertyRange(schema:downloadUrl xsd:anyURI)
+
+# Data Property: schema:email (email)
+
+AnnotationAssertion(rdfs:label schema:email "email"@en)
+FunctionalDataProperty(schema:email)
+DataPropertyDomain(schema:email :User)
+DataPropertyRange(schema:email xsd:string)
+
+# Data Property: schema:familyName (familyName)
+
+AnnotationAssertion(rdfs:comment schema:familyName "Family name. In the U.S., the last name of a Person."@en)
+AnnotationAssertion(rdfs:label schema:familyName "familyName"@en)
+DataPropertyDomain(schema:familyName ObjectUnionOf(:Contributor :User))
+DataPropertyRange(schema:familyName xsd:string)
+
+# Data Property: schema:fileSize (fileSize)
+
+AnnotationAssertion(rdfs:label schema:fileSize "fileSize"@en)
+DataPropertyDomain(schema:fileSize ec:EducationalResource)
+DataPropertyRange(schema:fileSize xsd:string)
+
+# Data Property: schema:givenName (givenName)
+
+AnnotationAssertion(rdfs:label schema:givenName "givenName"@en)
+DataPropertyDomain(schema:givenName ObjectUnionOf(:Contributor :User))
+DataPropertyRange(schema:givenName xsd:string)
+
+# Data Property: schema:identifier (identifier)
+
+AnnotationAssertion(rdfs:label schema:identifier "identifier"@en)
+DataPropertyDomain(schema:identifier ec:EducationalResource)
+DataPropertyRange(schema:identifier xsd:string)
+
+# Data Property: schema:image (image)
+
+AnnotationAssertion(rdfs:comment schema:image "Property linking an OER to an image representing it."@en)
+AnnotationAssertion(rdfs:label schema:image "image"@en)
+DataPropertyDomain(schema:image ec:EducationalResource)
+DataPropertyRange(schema:image xsd:anyURI)
+
+# Data Property: schema:isAccessibleForFree (isAccessibleForFree)
+
+AnnotationAssertion(rdfs:label schema:isAccessibleForFree "isAccessibleForFree"@en)
+DataPropertyDomain(schema:isAccessibleForFree ec:EducationalResource)
+DataPropertyRange(schema:isAccessibleForFree xsd:boolean)
+
+# Data Property: schema:keywords (keywords)
+
+AnnotationAssertion(rdfs:comment schema:keywords "Keywords or tags used to describe some item."@en)
+AnnotationAssertion(rdfs:label schema:keywords "keywords"@en)
+DataPropertyDomain(schema:keywords ec:EducationalResource)
+DataPropertyRange(schema:keywords xsd:string)
+
+# Data Property: schema:ratingValue (rating value)
+
+AnnotationAssertion(rdfs:label schema:ratingValue "rating value")
+DataPropertyDomain(schema:ratingValue schema:Rating)
+DataPropertyRange(schema:ratingValue xsd:integer)
+
+# Data Property: schema:reviewBody (review body)
+
+AnnotationAssertion(rdfs:label schema:reviewBody "review body"@en)
+DataPropertyDomain(schema:reviewBody schema:Review)
+DataPropertyRange(schema:reviewBody xsd:string)
+
+# Data Property: schema:reviewRating (review rating)
+
+AnnotationAssertion(rdfs:comment schema:reviewRating "rating according to the reviewer of the OER"@en)
+AnnotationAssertion(rdfs:label schema:reviewRating "review rating"@en)
+AnnotationAssertion(skos:definition schema:reviewRating "The rating given in this review. Note that reviews can themselves be rated. The reviewRating applies to rating given by the review."@en)
+DataPropertyDomain(schema:reviewRating schema:Review)
+DataPropertyRange(schema:reviewRating xsd:integer)
+
+# Data Property: schema:teaches (teaches)
+
+AnnotationAssertion(rdfs:comment schema:teaches "The item being described is intended to help a person learn the competency or learning outcome defined by the referenced term."@en)
+AnnotationAssertion(rdfs:label schema:teaches "teaches"@en)
+DataPropertyDomain(schema:teaches ec:EducationalResource)
+DataPropertyRange(schema:teaches xsd:string)
+
+# Data Property: schema:timeRequired (timeRequired)
+
+AnnotationAssertion(rdfs:comment schema:timeRequired "in format xsd:duration"@en)
+AnnotationAssertion(rdfs:label schema:timeRequired "timeRequired"@en)
+AnnotationAssertion(skos:example schema:timeRequired "\"PT7M11S\"^^xsd:duration")
+DataPropertyDomain(schema:timeRequired ec:EducationalResource)
+DataPropertyRange(schema:timeRequired xsd:duration)
+
+# Data Property: schema:title (Job title)
+
+AnnotationAssertion(rdfs:label schema:title "Job title"@en)
+DataPropertyDomain(schema:title :Job)
+DataPropertyRange(schema:title xsd:string)
+
+# Data Property: schema:url (url)
+
+AnnotationAssertion(rdfs:label schema:url "url"@en)
+DataPropertyDomain(schema:url ec:EducationalResource)
+DataPropertyRange(schema:url xsd:anyURI)
+
+# Data Property: schema:version (version)
+
+AnnotationAssertion(rdfs:comment schema:version "The version of the OER."@en)
+AnnotationAssertion(rdfs:label schema:version "version"@en)
+DataPropertyDomain(schema:version ec:EducationalResource)
+DataPropertyRange(schema:version xsd:string)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://edamontology.org/data_0006> (data)
+
+AnnotationAssertion(rdfs:label <http://edamontology.org/data_0006> "data"@en)
+AnnotationAssertion(skos:definition <http://edamontology.org/data_0006> "Kind of data being managed"@en)
+
+# Class: bf:Contribution (bf:Contribution)
+
+AnnotationAssertion(skos:definition bf:Contribution "A contribution to an OER, including agent and role information."@en)
+
+# Class: bf:Role (contributor role)
+
+AnnotationAssertion(rdfs:label bf:Role "contributor role"@en)
+AnnotationAssertion(skos:definition bf:Role "types of contribution to an OER."@en)
+AnnotationAssertion(skos:example bf:Role "Editor"@en)
+
+# Class: <http://lexvo.org/ontology#Language> (language)
+
+AnnotationAssertion(rdfs:label <http://lexvo.org/ontology#Language> "language"@en)
+AnnotationAssertion(rdfs:seeAlso <http://lexvo.org/ontology#Language> <https://www.wikidata.org/wiki/Q315>)
+AnnotationAssertion(skos:definition <http://lexvo.org/ontology#Language> "Natural language"@en)
+
+# Class: <http://purl.obolibrary.org/obo/OCCO_25401100> (archivist)
+
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/OCCO_25401100> "archivist"@en)
+AnnotationAssertion(skos:definition <http://purl.obolibrary.org/obo/OCCO_25401100> "A person who appraises, edits, and directs safekeeping of permanent records and historically valuable documents. Participate in research activities based on archival materials."@en)
+AnnotationAssertion(skos:prefLabel <http://purl.obolibrary.org/obo/OCCO_25401100> "Archivist"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/OCCO_25401100> :TargetGroup)
+
+# Class: <http://purl.obolibrary.org/obo/OCCO_25402200> (librarian)
+
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/OCCO_25402200> "librarian"@en)
+AnnotationAssertion(skos:prefLabel <http://purl.obolibrary.org/obo/OCCO_25402200> "Librarian"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/OCCO_25402200> :TargetGroup)
+
+# Class: <http://purl.obolibrary.org/obo/T4FS_0000178> (data steward)
+
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/T4FS_0000178> "data steward"@en)
+AnnotationAssertion(skos:prefLabel <http://purl.obolibrary.org/obo/T4FS_0000178> "Data Steward"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/T4FS_0000178> :TargetGroup)
+
+# Class: bibo:Article (article)
+
+AnnotationAssertion(rdfs:comment bibo:Article "Class representing OERs that are articles (e.g academic article)"@en)
+AnnotationAssertion(rdfs:label bibo:Article "article"@en)
+AnnotationAssertion(skos:prefLabel bibo:Article "Article"@en)
+SubClassOf(bibo:Article :LearningResourceType)
+
+# Class: bibo:Book (book)
+
+AnnotationAssertion(rdfs:label bibo:Book "book"@en)
+AnnotationAssertion(skos:definition bibo:Book "Class representing OER which is a book."@en)
+AnnotationAssertion(skos:prefLabel bibo:Book "Book"@en)
+SubClassOf(bibo:Book :LearningResourceType)
+
+# Class: bibo:Report (report)
+
+AnnotationAssertion(rdfs:label bibo:Report "report"@en)
+AnnotationAssertion(skos:prefLabel bibo:Report "Report"@en)
+SubClassOf(bibo:Report :LearningResourceType)
+
+# Class: bibo:Thesis (thesis)
+
+AnnotationAssertion(rdfs:label bibo:Thesis "thesis"@en)
+AnnotationAssertion(skos:prefLabel bibo:Thesis "Thesis"@en)
+SubClassOf(bibo:Thesis :LearningResourceType)
+
+# Class: bibo:Webpage (webpage)
+
+AnnotationAssertion(rdfs:label bibo:Webpage "webpage"@en)
+AnnotationAssertion(skos:prefLabel bibo:Webpage "Web page"@en)
+SubClassOf(bibo:Webpage :LearningResourceType)
+
+# Class: bibo:Workshop (workshop)
+
+AnnotationAssertion(rdfs:isDefinedBy bibo:Workshop <http://purl.org/ontology/bibo>)
+AnnotationAssertion(rdfs:label bibo:Workshop "workshop"@en)
+AnnotationAssertion(skos:definition bibo:Workshop "A seminar, discussion group, or the like, that emphasizes zxchange of ideas and the demonstration and application of techniques, skills, etc."@en)
+AnnotationAssertion(skos:prefLabel bibo:Workshop "workshop"@en)
+SubClassOf(bibo:Workshop :LearningResourceType)
+
+# Class: <http://semanticscience.org/resource/SIO_000776> (object)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://semanticscience.org/resource/SIO_000776> <http://semanticscience.org>)
+AnnotationAssertion(rdfs:label <http://semanticscience.org/resource/SIO_000776> "object"@en)
+AnnotationAssertion(skos:definition <http://semanticscience.org/resource/SIO_000776> "an object that is described (chemical substance, living organism, building, ...)"@en)
+AnnotationAssertion(skos:example <http://semanticscience.org/resource/SIO_000776> "mouse cells"@en)
+
+# Class: m4i:Method (research method)
+
+AnnotationAssertion(rdfs:isDefinedBy m4i:Method <http://w3id.org/nfdi4ing/metadata4ing>)
+AnnotationAssertion(rdfs:label m4i:Method "research method"@en)
+AnnotationAssertion(skos:definition m4i:Method "a method with which data was obtained"@en)
+AnnotationAssertion(skos:example m4i:Method "bioassay, microscopy, measurement"@en)
+
+# Class: m4i:Tool (tool)
+
+AnnotationAssertion(rdfs:isDefinedBy m4i:Tool <http://w3id.org/nfdi4ing/metadata4ing>)
+AnnotationAssertion(rdfs:label m4i:Tool "tool"@en)
+AnnotationAssertion(skos:definition m4i:Tool "a tool with which data was obtained (microscope, sensor, ...)"@en)
+
+# Class: ec:EducationalResource (educational resource)
+
+AnnotationAssertion(rdfs:isDefinedBy ec:EducationalResource <https://github.com/tibonto/educor>)
+AnnotationAssertion(rdfs:label ec:EducationalResource "educational resource"@en)
+AnnotationAssertion(skos:definition ec:EducationalResource "Any educational resources online or offline"@en)
+AnnotationAssertion(skos:example ec:EducationalResource "A video describing how lists work in Python programming language"@en)
+
+# Class: ec:KnowledgeTopic (knowledge topic)
+
+AnnotationAssertion(rdfs:isDefinedBy ec:KnowledgeTopic <https://github.com/tibonto/educor>)
+AnnotationAssertion(rdfs:label ec:KnowledgeTopic "knowledge topic"@en)
+AnnotationAssertion(rdfs:seeAlso ec:KnowledgeTopic "https://w3id.org/ccso/ccso#Topic"@en)
+AnnotationAssertion(skos:definition ec:KnowledgeTopic "A single node representing a learning module based on the domain ontology. It contains all the learning material for the specific learning module."@en)
+AnnotationAssertion(skos:example ec:KnowledgeTopic "A knowledge topic can be the “Quadratic equations” in the domain of Mathematics Algebra"@en)
+DisjointClasses(ec:KnowledgeTopic :Skill)
+
+# Class: ec:LearningPreference (learning preference)
+
+AnnotationAssertion(rdfs:comment ec:LearningPreference "It is based on the theory which identifies four learning styles (visual, auditory, reading, and kinesthetic)."@en)
+AnnotationAssertion(rdfs:isDefinedBy ec:LearningPreference <https://github.com/tibonto/educor>)
+AnnotationAssertion(rdfs:label ec:LearningPreference "learning preference"@en)
+AnnotationAssertion(skos:definition ec:LearningPreference "The learning preference of the user based on the learning styles theory"@en)
+AnnotationAssertion(skos:example ec:LearningPreference "Visual"@en)
+
+# Class: ec:Recommendation (recommendation)
+
+AnnotationAssertion(rdfs:comment ec:Recommendation "The recommendation in advanced systems can also be an action (take a small break), an exercise, a knowledge topic, a skill, or a learning path"@en)
+AnnotationAssertion(rdfs:isDefinedBy ec:Recommendation <https://github.com/tibonto/educor>)
+AnnotationAssertion(rdfs:label ec:Recommendation "recommendation"@en)
+AnnotationAssertion(skos:definition ec:Recommendation "The output of the recommendation system algorithm. The system that reads user profile, content information, ratings and any available rules, in order to generate a meaningful recommendation."@en)
+AnnotationAssertion(skos:example ec:Recommendation "The recommendation is \"Quadratic Equation\""@en)
+
+# Class: :AnalysingPhase (analysing phase)
+
+AnnotationAssertion(rdfs:label :AnalysingPhase "analysing phase"@en)
+AnnotationAssertion(skos:definition :AnalysingPhase "The last phase in data life cycle."@en)
+SubClassOf(:AnalysingPhase :DataLifeCyclePhase)
+DisjointClasses(:AnalysingPhase :AssurancePhase)
+DisjointClasses(:AnalysingPhase :CollectionPhase)
+DisjointClasses(:AnalysingPhase :DescriptionPhase)
+DisjointClasses(:AnalysingPhase :DiscoveryPhase)
+DisjointClasses(:AnalysingPhase :IntegratePhase)
+DisjointClasses(:AnalysingPhase :PlanningPhase)
+DisjointClasses(:AnalysingPhase :PreservationPhase)
+
+# Class: :AssurancePhase (assurance phase)
+
+AnnotationAssertion(rdfs:label :AssurancePhase "assurance phase"@en)
+SubClassOf(:AssurancePhase :DataLifeCyclePhase)
+
+# Class: :BachelorStudent (bachelor student)
+
+AnnotationAssertion(rdfs:label :BachelorStudent "bachelor student"@en)
+AnnotationAssertion(rdfs:seeAlso :BachelorStudent "http://vivoweb.org/ontology/core#UndergraduateStudent")
+AnnotationAssertion(skos:definition :BachelorStudent "Student in Bachelor's degree"@en)
+AnnotationAssertion(skos:prefLabel :BachelorStudent "Bachelor Student"@en)
+SubClassOf(:BachelorStudent :TargetGroup)
+
+# Class: :BestPractices (best practices)
+
+AnnotationAssertion(rdfs:comment :BestPractices "Class representing OERs that are best practices in scientific area."@en)
+AnnotationAssertion(rdfs:label :BestPractices "best practices"@en)
+AnnotationAssertion(skos:prefLabel :BestPractices "best practices"@en)
+SubClassOf(:BestPractices :LearningResourceType)
+
+# Class: :Code (code)
+
+AnnotationAssertion(rdfs:comment :Code "Class representing OER which are code like Jupyternotebook."@en)
+AnnotationAssertion(rdfs:label :Code "code"@en)
+AnnotationAssertion(skos:prefLabel :Code "code"@en)
+SubClassOf(:Code :MediaType)
+
+# Class: :CodeNotebook (code notebook)
+
+AnnotationAssertion(rdfs:label :CodeNotebook "code notebook"@en)
+AnnotationAssertion(skos:example :CodeNotebook "Jupyter Notebook"@en)
+AnnotationAssertion(skos:prefLabel :CodeNotebook "Code Notebook"@en)
+SubClassOf(:CodeNotebook :LearningResourceType)
+
+# Class: :CollectionPhase (collection phase)
+
+AnnotationAssertion(rdfs:label :CollectionPhase "collection phase"@en)
+SubClassOf(:CollectionPhase :DataLifeCyclePhase)
+
+# Class: :Community (community)
+
+AnnotationAssertion(rdfs:label :Community "community"@en)
+AnnotationAssertion(skos:definition :Community "A Community gathers users (members) and educational resources/learning paths similar  to Zenodo communities"@en)
+
+# Class: :ContentProvider (content provider)
+
+AnnotationAssertion(rdfs:label :ContentProvider "content provider"@en)
+AnnotationAssertion(rdfs:seeAlso :ContentProvider "https://bibfra.me/view/rare/lite/provider")
+AnnotationAssertion(skos:definition :ContentProvider "a person or group who is providing OER"@en)
+AnnotationAssertion(skos:prefLabel :ContentProvider "Content Provider"@en)
+SubClassOf(:ContentProvider :TargetGroup)
+
+# Class: :ContentQuality (content quality)
+
+AnnotationAssertion(rdfs:label :ContentQuality "content quality"@en)
+AnnotationAssertion(skos:definition :ContentQuality "Educational quality of an OER"@en)
+AnnotationAssertion(skos:example :ContentQuality "High quality"@en)
+
+# Class: :Contributor (contributor)
+
+AnnotationAssertion(rdfs:comment :Contributor "Contributed to OER with some contribution type"@en)
+AnnotationAssertion(rdfs:label :Contributor "contributor"@en)
+EquivalentClasses(:Contributor ObjectUnionOf(schema:Organization schema:Person))
+
+# Class: :Cookbook (cookbook)
+
+AnnotationAssertion(rdfs:label :Cookbook "cookbook"@en)
+AnnotationAssertion(rdfs:seeAlso :Cookbook "https://www.wikidata.org/wiki/Q3689925"@en)
+AnnotationAssertion(skos:prefLabel :Cookbook "cookbook"@en)
+SubClassOf(:Cookbook :LearningResourceType)
+
+# Class: :CuratorRole (curator user role)
+
+AnnotationAssertion(rdfs:label :CuratorRole "curator user role"@en)
+SubClassOf(:CuratorRole :UserRole)
+
+# Class: :DataLifeCyclePhase (data life cycle phase)
+
+AnnotationAssertion(rdfs:label :DataLifeCyclePhase "data life cycle phase"@en)
+AnnotationAssertion(rdfs:seeAlso :DataLifeCyclePhase "https://towson.libguides.com/dataresearch/datamangement/dldataone"@en)
+AnnotationAssertion(skos:definition :DataLifeCyclePhase "One of the phases of data life cycle."@en)
+
+# Class: :DescriptionPhase (description phase)
+
+AnnotationAssertion(rdfs:label :DescriptionPhase "description phase"@en)
+SubClassOf(:DescriptionPhase :DataLifeCyclePhase)
+
+# Class: :Discipline (discipline)
+
+AnnotationAssertion(rdfs:label :Discipline "discipline"@en)
+AnnotationAssertion(rdfs:seeAlso :Discipline "http://purl.org/spar/fabio/SubjectDiscipline"@en)
+AnnotationAssertion(skos:definition :Discipline "knowledge of a specific, specialized discipline or field"@en)
+AnnotationAssertion(skos:example :Discipline "e.g Engineering"@en)
+
+# Class: :DiscoveryPhase (discovery phase)
+
+AnnotationAssertion(rdfs:label :DiscoveryPhase "discovery phase"@en)
+SubClassOf(:DiscoveryPhase :DataLifeCyclePhase)
+
+# Class: :EducationalLevel (education level)
+
+AnnotationAssertion(rdfs:label :EducationalLevel "education level"@en)
+AnnotationAssertion(skos:definition :EducationalLevel "The educational level of a user: Bachlors, Masters or PhD"@en)
+
+# Class: :FiveStarRating (five star rating)
+
+AnnotationAssertion(rdfs:label :FiveStarRating "five star rating"@en)
+AnnotationAssertion(skos:definition :FiveStarRating "Standard five star rating, min value 1 maximum 5"@en)
+AnnotationAssertion(schema:bestRating :FiveStarRating "5"^^xsd:integer)
+AnnotationAssertion(schema:worstRating :FiveStarRating "1"^^xsd:integer)
+SubClassOf(:FiveStarRating schema:Rating)
+
+# Class: :FreeLicense (free license)
+
+AnnotationAssertion(rdfs:label :FreeLicense "free license"@en)
+SubClassOf(:FreeLicense :License)
+
+# Class: :IntegratePhase (integration phase)
+
+AnnotationAssertion(rdfs:label :IntegratePhase "integration phase"@en)
+SubClassOf(:IntegratePhase :DataLifeCyclePhase)
+
+# Class: :Job (job)
+
+AnnotationAssertion(rdfs:label :Job "job"@en)
+AnnotationAssertion(rdfs:seeAlso :Job "https://schema.org/Occupation"@en)
+AnnotationAssertion(skos:definition :Job "name of a profession"@en)
+AnnotationAssertion(skos:example :Job "Software Developer"@en)
+
+# Class: :LearnerRole (learner role)
+
+AnnotationAssertion(rdfs:label :LearnerRole "learner role"@en)
+SubClassOf(:LearnerRole :UserRole)
+
+# Class: :LearningObjective (learning objective)
+
+AnnotationAssertion(rdfs:comment :LearningObjective "The Learning Goal can vary depending on the personalisation level. For example a user might care to learn some specific topics and not all the skill set."@en)
+AnnotationAssertion(rdfs:label :LearningObjective "learning objective"@en)
+AnnotationAssertion(rdfs:seeAlso :LearningObjective "https://github.com/tibonto/educor#LearningGoal")
+AnnotationAssertion(skos:definition :LearningObjective "Learning Objective as defined in learning objective matrix (LZM)"@en)
+
+# Class: :LearningPath (learning path)
+
+AnnotationAssertion(rdfs:label :LearningPath "learning path"@en)
+AnnotationAssertion(skos:definition :LearningPath "The learning path consists of a set of learning units (Educational Resources) in a specified order  to reach a learning objective."@en)
+AnnotationAssertion(skos:example :LearningPath "\"Hello world in python\", \"Comments in python\", \"Strings in python\""@en)
+
+# Class: :LearningPathStep (learning path step)
+
+AnnotationAssertion(rdfs:label :LearningPathStep "learning path step"@en)
+AnnotationAssertion(skos:definition :LearningPathStep "One step of a learning path, it has an order and one educational resource. Optionally a learning path step can have a note for learner."@en)
+
+# Class: :LearningResourceType (learning resource type)
+
+AnnotationAssertion(rdfs:label :LearningResourceType "learning resource type"@en)
+AnnotationAssertion(skos:definition :LearningResourceType "The type of the learning resource can be lecture, experiment, Assessment, etc."@en)
+
+# Class: :Lecture (lecture)
+
+AnnotationAssertion(rdfs:comment :Lecture "Class representing OERs that are lectures."@en)
+AnnotationAssertion(rdfs:label :Lecture "lecture"@en)
+AnnotationAssertion(skos:prefLabel :Lecture "lecture"@en)
+SubClassOf(:Lecture :LearningResourceType)
+
+# Class: :License (license)
+
+AnnotationAssertion(rdfs:label :License "license"@en)
+
+# Class: :MastersStudent (master's student)
+
+AnnotationAssertion(rdfs:label :MastersStudent "master's student"@en)
+AnnotationAssertion(rdfs:seeAlso :MastersStudent "http://w3id.org/roh#MastersStudent")
+AnnotationAssertion(skos:definition :MastersStudent "A student in Master's degree"@en)
+AnnotationAssertion(skos:prefLabel :MastersStudent "Master's Student"@en)
+SubClassOf(:MastersStudent :TargetGroup)
+
+# Class: :MediaType (media type)
+
+AnnotationAssertion(rdfs:label :MediaType "media type"@en)
+AnnotationAssertion(skos:definition :MediaType "General type of data content encoded in a computer file. Digital media type of the resource. To be used with user preferences according to VARK learning style."@en)
+
+# Class: :Multipart (multipart)
+
+AnnotationAssertion(rdfs:label :Multipart "multipart"@en)
+AnnotationAssertion(skos:definition :Multipart "If the resource consists of more than one item with different DOIs, the MediaType is \"multipart\" and the relations are provided in the field \"RelatedWork\"."@en)
+AnnotationAssertion(skos:prefLabel :Multipart "Multipart"@en)
+SubClassOf(:Multipart :MediaType)
+
+# Class: :MuseumProfessional (museum professional)
+
+AnnotationAssertion(rdfs:label :MuseumProfessional "museum professional"@en)
+AnnotationAssertion(skos:prefLabel :MuseumProfessional "Museum Professional"@en)
+SubClassOf(:MuseumProfessional :TargetGroup)
+
+# Class: :PhDStudent (PhD student)
+
+AnnotationAssertion(rdfs:label :PhDStudent "PhD student"@en)
+AnnotationAssertion(rdfs:seeAlso :PhDStudent "http://vivoweb.org/ontology/core#GraduateStudent")
+AnnotationAssertion(skos:definition :PhDStudent "A student in PhD degree"@en)
+AnnotationAssertion(skos:prefLabel :PhDStudent "PhD student"@en)
+SubClassOf(:PhDStudent :TargetGroup)
+
+# Class: :PlanningPhase (planning phase)
+
+AnnotationAssertion(rdfs:label :PlanningPhase "planning phase"@en)
+AnnotationAssertion(skos:definition :PlanningPhase "First phase in data life cycle. Description of the data that will be compiled."@en)
+SubClassOf(:PlanningPhase :DataLifeCyclePhase)
+
+# Class: :Podcast (podcast)
+
+AnnotationAssertion(rdfs:label :Podcast "podcast"@en)
+AnnotationAssertion(skos:definition :Podcast "The learning resource type podcast is an episodic series of digital audio or video files or an episode of that, which a user can download and listen to."@en)
+SubClassOf(:Podcast :LearningResourceType)
+
+# Class: :Poster (poster)
+
+AnnotationAssertion(rdfs:comment :Poster "Class representing OERs that are Posters"@en)
+AnnotationAssertion(rdfs:label :Poster "poster"@en)
+AnnotationAssertion(skos:prefLabel :Poster "poster"@en)
+SubClassOf(:Poster :LearningResourceType)
+
+# Class: :PreservationPhase (preservation phase)
+
+AnnotationAssertion(rdfs:label :PreservationPhase "preservation phase"@en)
+SubClassOf(:PreservationPhase :DataLifeCyclePhase)
+
+# Class: :Proficiency (proficiency)
+
+AnnotationAssertion(rdfs:label :Proficiency "proficiency"@en)
+AnnotationAssertion(skos:definition :Proficiency "Benner’s Novice to Expert
+The five stages of proficiency in the novice to expert model are: novice, advanced beginner, competent, proficient, and expert (Benner, 1982)."@en)
+EquivalentClasses(:Proficiency ObjectOneOf(:Beginner :Competent :Expert :Novice :Proficient))
+
+# Class: :ProprietaryLicense (proprietary license)
+
+AnnotationAssertion(rdfs:label :ProprietaryLicense "proprietary license"@en)
+SubClassOf(:ProprietaryLicense :License)
+
+# Class: :RDMResource (RDM resource)
+
+AnnotationAssertion(rdfs:comment :RDMResource "OER related to Research Data Management"@en)
+AnnotationAssertion(rdfs:label :RDMResource "RDM resource"@en)
+SubClassOf(:RDMResource ec:EducationalResource)
+
+# Class: :RDMSkill (RDM skill)
+
+AnnotationAssertion(rdfs:comment :RDMSkill "Research Data Managment Skill"@en)
+AnnotationAssertion(rdfs:label :RDMSkill "RDM skill"@en)
+AnnotationAssertion(skos:definition :RDMSkill "The ability to carry out tasks."@en)
+SubClassOf(:RDMSkill :Skill)
+
+# Class: :RDMSubjectCluster (RDM subject cluster)
+
+AnnotationAssertion(rdfs:label :RDMSubjectCluster "RDM subject cluster"@en)
+AnnotationAssertion(skos:definition :RDMSubjectCluster "Cluster of RDM topics areas. Matches Subject area in Learning Objective Matrix version 3 ( https://zenodo.org/records/15846806 )"@en)
+
+# Class: :RDMTopic (RDM topic)
+
+AnnotationAssertion(rdfs:label :RDMTopic "RDM topic"@en)
+AnnotationAssertion(skos:definition :RDMTopic "Topic related to research data management"@en)
+SubClassOf(:RDMTopic ec:KnowledgeTopic)
+
+# Class: :Researcher (researcher)
+
+AnnotationAssertion(rdfs:label :Researcher "researcher"@en)
+AnnotationAssertion(rdfs:seeAlso :Researcher "https://www.wikidata.org/wiki/Q1650915"@en)
+AnnotationAssertion(skos:prefLabel :Researcher "Researcher"@en)
+SubClassOf(:Researcher :TargetGroup)
+
+# Class: :ResearcherUserRole (researcher user role)
+
+AnnotationAssertion(rdfs:label :ResearcherUserRole "researcher user role"@en)
+SubClassOf(:ResearcherUserRole :UserRole)
+
+# Class: :Skill (skill)
+
+AnnotationAssertion(rdfs:comment :Skill "Job Skill, ability to perform some tasks."@en)
+AnnotationAssertion(rdfs:label :Skill "skill"@en)
+
+# Class: :StudentSchool (student (school))
+
+AnnotationAssertion(rdfs:label :StudentSchool "student (school)"@en)
+AnnotationAssertion(skos:prefLabel :StudentSchool "Student (School)"@en)
+SubClassOf(:StudentSchool :TargetGroup)
+
+# Class: :TargetGroup (target group)
+
+AnnotationAssertion(rdfs:label :TargetGroup "target group"@en)
+AnnotationAssertion(rdfs:seeAlso :TargetGroup "http://purl.org/dcx/lrmi-terms/EducationalAudience")
+AnnotationAssertion(skos:definition :TargetGroup "The target group of the learning resource, e.g. students, data stewards, researchers, etc"@en)
+
+# Class: :TeacherHigherEducation (teacher (higher education))
+
+AnnotationAssertion(rdfs:label :TeacherHigherEducation "teacher (higher education)"@en)
+AnnotationAssertion(skos:prefLabel :TeacherHigherEducation "Teacher (Higher Education)"@en)
+SubClassOf(:TeacherHigherEducation :TargetGroup)
+
+# Class: :TeacherRole (teacher user role)
+
+AnnotationAssertion(rdfs:label :TeacherRole "teacher user role"@en)
+SubClassOf(:TeacherRole :UserRole)
+
+# Class: :TeacherSchool (teacher (school))
+
+AnnotationAssertion(rdfs:label :TeacherSchool "teacher (school)"@en)
+AnnotationAssertion(rdfs:seeAlso :TeacherSchool "https://www.wikidata.org/wiki/Q37226"@en)
+AnnotationAssertion(skos:prefLabel :TeacherSchool "Teacher (School)"@en)
+SubClassOf(:TeacherSchool :TargetGroup)
+
+# Class: :Tutorial (tutorial)
+
+AnnotationAssertion(rdfs:comment :Tutorial "Class representing OERs that are in form of tutorial."@en)
+AnnotationAssertion(rdfs:label :Tutorial "tutorial"@en)
+AnnotationAssertion(skos:prefLabel :Tutorial "tutorial"@en)
+SubClassOf(:Tutorial :LearningResourceType)
+
+# Class: :User (user)
+
+AnnotationAssertion(rdfs:label :User "user"@en)
+AnnotationAssertion(rdfs:seeAlso :User <http://xmlns.com/foaf/0.1/Person>)
+AnnotationAssertion(skos:definition :User "Registered user in the system, can have different roles i.e learner , teacher , curator, etc"@en)
+
+# Class: :UserComment (user comment)
+
+AnnotationAssertion(rdfs:label :UserComment "user comment"@en)
+AnnotationAssertion(skos:definition :UserComment "Comment added by a user on an educational resource"@en)
+
+# Class: :UserRole (user role)
+
+AnnotationAssertion(rdfs:label :UserRole "user role"@en)
+
+# Class: :VARKAuditory (VARK auditory)
+
+AnnotationAssertion(rdfs:label :VARKAuditory "VARK auditory"@en)
+AnnotationAssertion(skos:definition :VARKAuditory "Auditory learning (music, discussion, lectures)"@en)
+SubClassOf(:VARKAuditory ec:LearningPreference)
+
+# Class: :VARKKinesthetic (VARK kinesthetic)
+
+AnnotationAssertion(rdfs:label :VARKKinesthetic "VARK kinesthetic"@en)
+AnnotationAssertion(skos:definition :VARKKinesthetic "Kinesthetic learning (movement, experiments, hands-on activities)"@en)
+SubClassOf(:VARKKinesthetic ec:LearningPreference)
+
+# Class: :VARKReading (VARK reading)
+
+AnnotationAssertion(rdfs:label :VARKReading "VARK reading"@en)
+AnnotationAssertion(skos:definition :VARKReading "Reading and writing (making lists, reading textbooks, taking notes)"@en)
+SubClassOf(:VARKReading ec:LearningPreference)
+
+# Class: :VARKVisual (VARK visual)
+
+AnnotationAssertion(rdfs:label :VARKVisual "VARK visual"@en)
+AnnotationAssertion(skos:definition :VARKVisual "Visual learning (pictures, movies, diagrams)"@en)
+SubClassOf(:VARKVisual ec:LearningPreference)
+
+# Class: schema:AudioObject (audio)
+
+AnnotationAssertion(rdfs:comment schema:AudioObject "A class representing OERs which are audio files."@en)
+AnnotationAssertion(rdfs:label schema:AudioObject "audio"@en)
+AnnotationAssertion(skos:prefLabel schema:AudioObject "Audio"@en)
+SubClassOf(schema:AudioObject :MediaType)
+
+# Class: schema:ImageObject (image)
+
+AnnotationAssertion(rdfs:comment schema:ImageObject "An image file."@en)
+AnnotationAssertion(rdfs:label schema:ImageObject "image"@en)
+AnnotationAssertion(skos:prefLabel schema:ImageObject "Image"@en)
+SubClassOf(schema:ImageObject :MediaType)
+
+# Class: schema:Organization (organization)
+
+AnnotationAssertion(rdfs:isDefinedBy schema:Organization <https://schema.org>)
+AnnotationAssertion(rdfs:label schema:Organization "organization"@en)
+AnnotationAssertion(rdfs:seeAlso schema:Organization <http://xmlns.com/foaf/0.1/Organization>)
+AnnotationAssertion(skos:definition schema:Organization "An organization such as a school (including Universities), NGO, corporation, club, etc."@en)
+
+# Class: schema:Person (person)
+
+AnnotationAssertion(rdfs:comment schema:Person "can be author or contributor"@en)
+AnnotationAssertion(rdfs:isDefinedBy schema:Person <https://schema.org>)
+AnnotationAssertion(rdfs:label schema:Person "person"@en)
+AnnotationAssertion(skos:definition schema:Person "A person (alive, dead, undead, or fictional)."@en)
+
+# Class: schema:PodcastEpisode (podcast episode)
+
+AnnotationAssertion(rdfs:label schema:PodcastEpisode "podcast episode"@en)
+SubClassOf(schema:PodcastEpisode :LearningResourceType)
+
+# Class: schema:PodcastSeries (podcast series)
+
+AnnotationAssertion(rdfs:label schema:PodcastSeries "podcast series"@en)
+AnnotationAssertion(skos:definition schema:PodcastSeries "A podcast is an episodic series of digital audio or video files which a user can download and listen to."@en)
+AnnotationAssertion(skos:prefLabel schema:PodcastSeries "Podcast Series"@en)
+SubClassOf(schema:PodcastSeries :LearningResourceType)
+
+# Class: schema:PresentationDigitalDocument (presentation)
+
+AnnotationAssertion(rdfs:comment schema:PresentationDigitalDocument "A presentation / slides file."@en)
+AnnotationAssertion(rdfs:label schema:PresentationDigitalDocument "presentation"@en)
+AnnotationAssertion(skos:prefLabel schema:PresentationDigitalDocument "Presentation"@en)
+SubClassOf(schema:PresentationDigitalDocument :MediaType)
+
+# Class: schema:Rating (rating indicator)
+
+AnnotationAssertion(rdfs:isDefinedBy schema:Rating <https://schema.org>)
+AnnotationAssertion(rdfs:label schema:Rating "rating indicator"@en)
+AnnotationAssertion(skos:definition schema:Rating "A rating is an evaluation on a numeric scale, such as 1 to 5 stars."@en)
+
+# Class: schema:Review (review)
+
+AnnotationAssertion(rdfs:isDefinedBy schema:Review <https://schema.org>)
+AnnotationAssertion(rdfs:label schema:Review "review"@en)
+AnnotationAssertion(skos:definition schema:Review "A review of an item - for example, of a restaurant, movie, or store."@en)
+
+# Class: schema:SoftwareSourceCode (software source code)
+
+AnnotationAssertion(rdfs:comment schema:SoftwareSourceCode "Computer programming source code. Example: Full (compile ready) solutions, code snippet samples, scripts, templates."@en)
+AnnotationAssertion(rdfs:label schema:SoftwareSourceCode "software source code"@en)
+AnnotationAssertion(skos:prefLabel schema:SoftwareSourceCode "Software Source Code"@en)
+SubClassOf(schema:SoftwareSourceCode :LearningResourceType)
+
+# Class: schema:Text (text)
+
+AnnotationAssertion(rdfs:comment schema:Text "Class representing OER which are text."@en)
+AnnotationAssertion(rdfs:label schema:Text "text"@en)
+AnnotationAssertion(skos:prefLabel schema:Text "Text"@en)
+SubClassOf(schema:Text :MediaType)
+
+# Class: schema:VideoObject (video)
+
+AnnotationAssertion(rdfs:comment schema:VideoObject "A video file."@en)
+AnnotationAssertion(rdfs:label schema:VideoObject "video"@en)
+AnnotationAssertion(skos:prefLabel schema:VideoObject "Video"@en)
+SubClassOf(schema:VideoObject :MediaType)
+
+# Class: hcrt:application (application)
+
+AnnotationAssertion(rdfs:label hcrt:application "application"@en)
+AnnotationAssertion(skos:prefLabel hcrt:application "Application"@en)
+SubClassOf(hcrt:application :LearningResourceType)
+
+# Class: hcrt:assessment (assessment)
+
+AnnotationAssertion(rdfs:comment hcrt:assessment "Class representing OERs that are in form of assessment of knowledge."@en)
+AnnotationAssertion(rdfs:label hcrt:assessment "assessment"@en)
+AnnotationAssertion(skos:prefLabel hcrt:assessment "Assessment"@en)
+SubClassOf(hcrt:assessment :LearningResourceType)
+
+# Class: hcrt:case_study (case study)
+
+AnnotationAssertion(rdfs:comment hcrt:case_study "Class representing OERs that are in form of case study."@en)
+AnnotationAssertion(rdfs:label hcrt:case_study "case study"@en)
+AnnotationAssertion(skos:prefLabel hcrt:case_study "Case Study"@en)
+SubClassOf(hcrt:case_study :LearningResourceType)
+
+# Class: hcrt:course (course)
+
+AnnotationAssertion(rdfs:label hcrt:course "course"@en)
+AnnotationAssertion(skos:prefLabel hcrt:course "Course"@en)
+SubClassOf(hcrt:course :LearningResourceType)
+
+# Class: hcrt:data (data)
+
+AnnotationAssertion(rdfs:label hcrt:data "data"@en)
+AnnotationAssertion(skos:prefLabel hcrt:data "Data"@en)
+SubClassOf(hcrt:data :LearningResourceType)
+
+# Class: hcrt:diagram (diagram)
+
+AnnotationAssertion(rdfs:comment hcrt:diagram "Class representing an OER that is a diagram"@en)
+AnnotationAssertion(rdfs:label hcrt:diagram "diagram"@en)
+AnnotationAssertion(skos:prefLabel hcrt:diagram "Diagram"@en)
+SubClassOf(hcrt:diagram :LearningResourceType)
+
+# Class: hcrt:drill_and_practice (drill_and_practice)
+
+AnnotationAssertion(rdfs:label hcrt:drill_and_practice "drill_and_practice"@en)
+AnnotationAssertion(skos:prefLabel hcrt:drill_and_practice "Drill and practice"@en)
+SubClassOf(hcrt:drill_and_practice :LearningResourceType)
+
+# Class: hcrt:educational_game (educational game)
+
+AnnotationAssertion(rdfs:comment hcrt:educational_game "Class representing OERs that are in form of educational games."@en)
+AnnotationAssertion(rdfs:label hcrt:educational_game "educational game"@en)
+AnnotationAssertion(skos:prefLabel hcrt:educational_game "Educational Game"@en)
+SubClassOf(hcrt:educational_game :LearningResourceType)
+
+# Class: hcrt:experiment (experiment)
+
+AnnotationAssertion(rdfs:comment hcrt:experiment "Class representing OERs that are describing an experiment"@en)
+AnnotationAssertion(rdfs:label hcrt:experiment "experiment"@en)
+AnnotationAssertion(skos:prefLabel hcrt:experiment "Experiment"@en)
+SubClassOf(hcrt:experiment :LearningResourceType)
+
+# Class: hcrt:index (Nachschlagewerk)
+
+AnnotationAssertion(rdfs:label hcrt:index "Nachschlagewerk"@de)
+AnnotationAssertion(rdfs:label hcrt:index "index"@en)
+AnnotationAssertion(skos:example hcrt:index "glossary, encyclopedia, dictionary"@en)
+AnnotationAssertion(skos:prefLabel hcrt:index "Reference Work"@en)
+AnnotationAssertion(skos:scopeNote hcrt:index "zum Beispiel Glossar, Enzyklopädie, Lexikonzum Beispiel Glossar, Enzyklopädie, Lexikon"@de)
+SubClassOf(hcrt:index :LearningResourceType)
+
+# Class: hcrt:lesson_plan (lesson plan)
+
+AnnotationAssertion(rdfs:label hcrt:lesson_plan "lesson plan"@en)
+AnnotationAssertion(skos:prefLabel hcrt:lesson_plan "Lesson_plan"@en)
+SubClassOf(hcrt:lesson_plan :LearningResourceType)
+
+# Class: hcrt:map (map)
+
+AnnotationAssertion(rdfs:label hcrt:map "map"@en)
+AnnotationAssertion(skos:prefLabel hcrt:map "Map"@en)
+SubClassOf(hcrt:map :LearningResourceType)
+
+# Class: hcrt:other (other resource type)
+
+AnnotationAssertion(rdfs:label hcrt:other "other resource type"@en)
+SubClassOf(hcrt:other :LearningResourceType)
+
+# Class: hcrt:portal (portal)
+
+AnnotationAssertion(rdfs:label hcrt:portal "portal"@en)
+AnnotationAssertion(skos:prefLabel hcrt:portal "Portal"@en)
+SubClassOf(hcrt:portal :LearningResourceType)
+
+# Class: hcrt:questionnaire (questionnaire)
+
+AnnotationAssertion(rdfs:label hcrt:questionnaire "questionnaire"@en)
+AnnotationAssertion(skos:prefLabel hcrt:questionnaire "questionnaire"@en)
+SubClassOf(hcrt:questionnaire :LearningResourceType)
+
+# Class: hcrt:script (script)
+
+AnnotationAssertion(rdfs:label hcrt:script "script"@en)
+AnnotationAssertion(skos:prefLabel hcrt:script "Script"@en)
+SubClassOf(hcrt:script :LearningResourceType)
+
+# Class: hcrt:sheet_music (sheet music)
+
+AnnotationAssertion(rdfs:label hcrt:sheet_music "sheet music"@en)
+AnnotationAssertion(skos:prefLabel hcrt:sheet_music "Sheet_music"@en)
+SubClassOf(hcrt:sheet_music :LearningResourceType)
+
+# Class: hcrt:simulation (simulation)
+
+AnnotationAssertion(rdfs:label hcrt:simulation "simulation"@en)
+AnnotationAssertion(skos:prefLabel hcrt:simulation "Simulation"@en)
+SubClassOf(hcrt:simulation :LearningResourceType)
+
+# Class: hcrt:textbook (textbook)
+
+AnnotationAssertion(rdfs:label hcrt:textbook "textbook"@en)
+AnnotationAssertion(skos:prefLabel hcrt:textbook "Textbook"@en)
+SubClassOf(hcrt:textbook :LearningResourceType)
+
+# Class: hcrt:worksheet (worksheet)
+
+AnnotationAssertion(rdfs:label hcrt:worksheet "worksheet"@en)
+AnnotationAssertion(skos:prefLabel hcrt:worksheet "Worksheet"@en)
+SubClassOf(hcrt:worksheet :LearningResourceType)
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: <https://creativecommons.org/licenses/by/4.0/> (CC-BY-4.0)
+
+AnnotationAssertion(rdfs:label <https://creativecommons.org/licenses/by/4.0/> "CC-BY-4.0")
+
+# Individual: :Annotator (annotator role)
+
+AnnotationAssertion(rdfs:label :Annotator "annotator role"@en)
+AnnotationAssertion(rdfs:seeAlso :Annotator <http://id.loc.gov/vocabulary/relators/ann>)
+ClassAssertion(bf:Role :Annotator)
+
+# Individual: :Beginner (advanced beginner)
+
+AnnotationAssertion(rdfs:label :Beginner "advanced beginner"@en)
+ClassAssertion(:Proficiency :Beginner)
+ObjectPropertyAssertion(:isLessProficientThan :Beginner :Competent)
+ObjectPropertyAssertion(:isLessProficientThan :Beginner :Expert)
+ObjectPropertyAssertion(:isLessProficientThan :Beginner :Proficient)
+ObjectPropertyAssertion(:isMoreProficientThan :Beginner :Novice)
+DataPropertyAssertion(:hasOrder :Beginner "2"^^xsd:integer)
+
+# Individual: :Competent (competent)
+
+AnnotationAssertion(rdfs:label :Competent "competent"@en)
+ClassAssertion(:Proficiency :Competent)
+ObjectPropertyAssertion(:isLessProficientThan :Competent :Expert)
+ObjectPropertyAssertion(:isLessProficientThan :Competent :Proficient)
+ObjectPropertyAssertion(:isMoreProficientThan :Competent :Beginner)
+ObjectPropertyAssertion(:isMoreProficientThan :Competent :Novice)
+DataPropertyAssertion(:hasOrder :Competent "3"^^xsd:integer)
+
+# Individual: :ContactPerson (contactperson role)
+
+AnnotationAssertion(rdfs:label :ContactPerson "contactperson role"@en)
+AnnotationAssertion(rdfs:seeAlso :ContactPerson m4i:ContactPerson)
+ClassAssertion(bf:Role :ContactPerson)
+
+# Individual: :DataCollector (datacollector role)
+
+AnnotationAssertion(rdfs:label :DataCollector "datacollector role"@en)
+AnnotationAssertion(rdfs:seeAlso :DataCollector m4i:DataCollector)
+ClassAssertion(bf:Role :DataCollector)
+
+# Individual: :DataCurator (datacurator role)
+
+AnnotationAssertion(rdfs:label :DataCurator "datacurator role"@en)
+AnnotationAssertion(rdfs:seeAlso :DataCurator m4i:DataCurator)
+ClassAssertion(bf:Role :DataCurator)
+
+# Individual: :DataManager (datamanager role)
+
+AnnotationAssertion(rdfs:label :DataManager "datamanager role"@en)
+AnnotationAssertion(rdfs:seeAlso :DataManager <http://id.loc.gov/vocabulary/relators/dtm>)
+ClassAssertion(bf:Role :DataManager)
+
+# Individual: :Distributor (distributor role)
+
+AnnotationAssertion(rdfs:label :Distributor "distributor role"@en)
+AnnotationAssertion(rdfs:seeAlso :Distributor m4i:Distributor)
+ClassAssertion(bf:Role :Distributor)
+
+# Individual: :Editor (editor role)
+
+AnnotationAssertion(rdfs:label :Editor "editor role"@en)
+AnnotationAssertion(rdfs:seeAlso :Editor m4i:Editor)
+ClassAssertion(bf:Role :Editor)
+
+# Individual: :Expert (expert)
+
+AnnotationAssertion(rdfs:label :Expert "expert"@en)
+ClassAssertion(:Proficiency :Expert)
+ObjectPropertyAssertion(:isMoreProficientThan :Expert :Beginner)
+ObjectPropertyAssertion(:isMoreProficientThan :Expert :Competent)
+ObjectPropertyAssertion(:isMoreProficientThan :Expert :Novice)
+ObjectPropertyAssertion(:isMoreProficientThan :Expert :Proficient)
+DataPropertyAssertion(:hasOrder :Expert "5"^^xsd:integer)
+
+# Individual: :HostingInstitution (hostinginstitution role)
+
+AnnotationAssertion(rdfs:label :HostingInstitution "hostinginstitution role"@en)
+AnnotationAssertion(rdfs:seeAlso :HostingInstitution m4i:HostingInstitution)
+ClassAssertion(bf:Role :HostingInstitution)
+
+# Individual: :Interviewee (interviewee role)
+
+AnnotationAssertion(rdfs:label :Interviewee "interviewee role"@en)
+AnnotationAssertion(rdfs:seeAlso :Interviewee <http://id.loc.gov/vocabulary/relators/ive>)
+ClassAssertion(bf:Role :Interviewee)
+
+# Individual: :Interviewer (interviewer role)
+
+AnnotationAssertion(rdfs:label :Interviewer "interviewer role"@en)
+AnnotationAssertion(rdfs:seeAlso :Interviewer <http://id.loc.gov/vocabulary/relators/ivr>)
+ClassAssertion(bf:Role :Interviewer)
+
+# Individual: :MetadataContact (metadatacontact role)
+
+AnnotationAssertion(rdfs:label :MetadataContact "metadatacontact role"@en)
+AnnotationAssertion(rdfs:seeAlso :MetadataContact <http://id.loc.gov/vocabulary/relators/mdc>)
+ClassAssertion(bf:Role :MetadataContact)
+
+# Individual: :Novice (novice)
+
+AnnotationAssertion(rdfs:label :Novice "novice"@en)
+ClassAssertion(:Proficiency :Novice)
+ObjectPropertyAssertion(:isLessProficientThan :Novice :Beginner)
+ObjectPropertyAssertion(:isLessProficientThan :Novice :Competent)
+ObjectPropertyAssertion(:isLessProficientThan :Novice :Expert)
+ObjectPropertyAssertion(:isLessProficientThan :Novice :Proficient)
+DataPropertyAssertion(:hasOrder :Novice "1"^^xsd:integer)
+
+# Individual: :OtherRole (other role)
+
+AnnotationAssertion(rdfs:label :OtherRole "other role"@en)
+AnnotationAssertion(rdfs:seeAlso :OtherRole m4i:Other)
+ClassAssertion(bf:Role :OtherRole)
+
+# Individual: :Producer (producer role)
+
+AnnotationAssertion(rdfs:label :Producer "producer role"@en)
+AnnotationAssertion(rdfs:seeAlso :Producer m4i:Producer)
+ClassAssertion(bf:Role :Producer)
+
+# Individual: :Proficient (proficient)
+
+AnnotationAssertion(rdfs:label :Proficient "proficient"@en)
+ClassAssertion(:Proficiency :Proficient)
+ObjectPropertyAssertion(:isLessProficientThan :Proficient :Expert)
+ObjectPropertyAssertion(:isMoreProficientThan :Proficient :Beginner)
+ObjectPropertyAssertion(:isMoreProficientThan :Proficient :Competent)
+ObjectPropertyAssertion(:isMoreProficientThan :Proficient :Novice)
+DataPropertyAssertion(:hasOrder :Proficient "4"^^xsd:integer)
+
+# Individual: :ProjectLeader (projectleader role)
+
+AnnotationAssertion(rdfs:label :ProjectLeader "projectleader role"@en)
+AnnotationAssertion(rdfs:seeAlso :ProjectLeader m4i:ProjectLeader)
+ClassAssertion(bf:Role :ProjectLeader)
+
+# Individual: :ProjectManager (projectmanager role)
+
+AnnotationAssertion(rdfs:label :ProjectManager "projectmanager role"@en)
+AnnotationAssertion(rdfs:seeAlso :ProjectManager m4i:ProjectManager)
+ClassAssertion(bf:Role :ProjectManager)
+
+# Individual: :ProjectMember (projectmember role)
+
+AnnotationAssertion(rdfs:label :ProjectMember "projectmember role"@en)
+AnnotationAssertion(rdfs:seeAlso :ProjectMember m4i:ProjectMember)
+ClassAssertion(bf:Role :ProjectMember)
+
+# Individual: :Proprietary (proprietary license)
+
+AnnotationAssertion(rdfs:label :Proprietary "proprietary license"@en)
+ClassAssertion(:ProprietaryLicense :Proprietary)
+
+# Individual: :RegistrationAgency (registrationagency role)
+
+AnnotationAssertion(rdfs:label :RegistrationAgency "registrationagency role"@en)
+AnnotationAssertion(rdfs:seeAlso :RegistrationAgency m4i:RegistrationAgency)
+ClassAssertion(bf:Role :RegistrationAgency)
+
+# Individual: :RegistrationAuthority (registrationauthority role)
+
+AnnotationAssertion(rdfs:label :RegistrationAuthority "registrationauthority role"@en)
+AnnotationAssertion(rdfs:seeAlso :RegistrationAuthority m4i:RegistrationAuthority)
+ClassAssertion(bf:Role :RegistrationAuthority)
+
+# Individual: :RelatedPerson (relatedperson role)
+
+AnnotationAssertion(rdfs:label :RelatedPerson "relatedperson role"@en)
+AnnotationAssertion(rdfs:seeAlso :RelatedPerson m4i:RelatedPerson)
+ClassAssertion(bf:Role :RelatedPerson)
+
+# Individual: :ResearchGroup (researchgroup role)
+
+AnnotationAssertion(rdfs:label :ResearchGroup "researchgroup role"@en)
+AnnotationAssertion(rdfs:seeAlso :ResearchGroup m4i:ResearchGroup)
+ClassAssertion(bf:Role :ResearchGroup)
+
+# Individual: :ResearcherRole (researcher role)
+
+AnnotationAssertion(rdfs:label :ResearcherRole "researcher role"@en)
+AnnotationAssertion(rdfs:seeAlso :ResearcherRole m4i:Researcher)
+ClassAssertion(bf:Role :ResearcherRole)
+
+# Individual: :RightsHolder (rightsholder role)
+
+AnnotationAssertion(rdfs:label :RightsHolder "rightsholder role"@en)
+AnnotationAssertion(rdfs:seeAlso :RightsHolder m4i:RightsHolder)
+ClassAssertion(bf:Role :RightsHolder)
+
+# Individual: :SoftwareDeveloper (software developer role)
+
+AnnotationAssertion(rdfs:label :SoftwareDeveloper "software developer role"@en)
+ClassAssertion(bf:Role :SoftwareDeveloper)
+
+# Individual: :Speaker (speaker role)
+
+AnnotationAssertion(rdfs:label :Speaker "speaker role"@en)
+AnnotationAssertion(rdfs:seeAlso :Speaker <http://id.loc.gov/vocabulary/relators/spk>)
+ClassAssertion(bf:Role :Speaker)
+
+# Individual: :Sponsor (sponsor role)
+
+AnnotationAssertion(rdfs:label :Sponsor "sponsor role"@en)
+AnnotationAssertion(rdfs:seeAlso :Sponsor m4i:Sponsor)
+ClassAssertion(bf:Role :Sponsor)
+
+# Individual: :Supervisor (supervisor role)
+
+AnnotationAssertion(rdfs:label :Supervisor "supervisor role"@en)
+AnnotationAssertion(rdfs:seeAlso :Supervisor m4i:Supervisor)
+ClassAssertion(bf:Role :Supervisor)
+
+# Individual: :TeacherContributorRole (teacher (contributor) role)
+
+AnnotationAssertion(rdfs:label :TeacherContributorRole "teacher (contributor) role"@en)
+AnnotationAssertion(rdfs:seeAlso :TeacherContributorRole <http://id.loc.gov/vocabulary/relators/tch>)
+ClassAssertion(bf:Role :TeacherContributorRole)
+
+# Individual: :Translator (translator role)
+
+AnnotationAssertion(rdfs:label :Translator "translator role"@en)
+ClassAssertion(bf:Role :Translator)
+
+# Individual: :WorkPackageLeader (workpackageleader role)
+
+AnnotationAssertion(rdfs:label :WorkPackageLeader "workpackageleader role"@en)
+AnnotationAssertion(rdfs:seeAlso :WorkPackageLeader m4i:WorkPackageLeader)
+ClassAssertion(bf:Role :WorkPackageLeader)
+
+
+)

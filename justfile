@@ -3,6 +3,8 @@ test:
 
 export:
     robot convert -i MoDalia.ttl -o modalia.obo -v --check=false
+    robot convert -i MoDalia.ttl -o modalia.owl -v --check=false
+    robot convert -i MoDalia.ttl -o modalia.ofn -v --check=false
 
 WIDOCO_VERSION := "1.4.25"
 WIDOCO_JDK_VERSION := "11"
