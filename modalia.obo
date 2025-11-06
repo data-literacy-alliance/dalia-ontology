@@ -8,6 +8,7 @@ idspace: ec https://github.com/tibonto/educor#
 idspace: fabio http://purl.org/spar/fabio/ 
 idspace: hcrt https://w3id.org/kim/hcrt/ 
 idspace: m4i http://w3id.org/nfdi4ing/metadata4ing# 
+idspace: modalia https://purl.org/ontology/modalia# 
 idspace: orcid https://orcid.org/ 
 idspace: rec http://purl.org/ontology/rec/core# 
 idspace: schema https://schema.org/ 
@@ -22,12 +23,12 @@ property_value: dcterms:contributor "Dr. Charles Tapley Hoyt (https://orcid.org/
 property_value: dcterms:contributor "Dr. Marc Fuhrmans (https://orcid.org/0000-0002-9826-018X), Technical University of Darmstadt (https://ror.org/05n911h24, https://isni.org/isni/0000000109401669)" xsd:string
 property_value: dcterms:contributor "Dr. Petra C. Steiner (https://orcid.org/0000-0001-8997-2620), Technical University of Darmstadt (https://ror.org/05n911h24, https://isni.org/isni/0000000109401669)" xsd:string
 property_value: dcterms:contributor "Frank Lange (https://orcid.org/0000-0002-9346-6031), RWTH Aachen University (https://ror.org/04xfq0f34, https://isni.org/isni/000000010728696X)" xsd:string
-property_value: dcterms:contributor orcid:0000-0003-4423-4370
+property_value: dcterms:contributor "Jonathan Geiger (https://orcid.org/0000-0002-0452-7075), Academy of Sciences and Literature in Mainz (https://ror.org/01kdxra28, https://isni.org/isni/000000012158156X)" xsd:string
 property_value: dcterms:created "2023-02-02" xsd:string
 property_value: dcterms:creator "BMFTR DALIA project" xsd:string
 property_value: dcterms:description "MoDALIA: An Ontology for Educational Material in Research Data Management (RDM) and Data Science.\nThe ontology is used for making a knowledge graph as a backend to platform for teaching, personal learning, and recommendation.\nThe ontology is developed in OWL in Protege 5.5.0." xsd:string
 property_value: dcterms:license https://creativecommons.org/licenses/by/4.0/
-property_value: dcterms:modified "2025-10-14" xsd:string
+property_value: dcterms:modified "2025-11-05" xsd:string
 property_value: dcterms:publisher "ULB TUDa – University and State Library, Technical University, Darmstadt, Germany" xsd:string
 property_value: dcterms:title "MoDALIA Ontology" xsd:string
 property_value: doap:bug-database "https://git.rwth-aachen.de/dalia/dalia-ontology/-/issues" xsd:anyURI
@@ -39,309 +40,23 @@ owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://w
 name: MoDALIA
 
 [Term]
-id: AnalysingPhase
-name: analysing phase
-is_a: DataLifeCyclePhase ! data life cycle phase
-disjoint_from: AssurancePhase ! assurance phase
-disjoint_from: CollectionPhase ! collection phase
-disjoint_from: DescriptionPhase ! description phase
-disjoint_from: DiscoveryPhase ! discovery phase
-disjoint_from: IntegratePhase ! integration phase
-disjoint_from: PlanningPhase ! planning phase
-disjoint_from: PreservationPhase ! preservation phase
-property_value: skos:definition "The last phase in data life cycle." xsd:string
-
-[Term]
-id: AssurancePhase
-name: assurance phase
-is_a: DataLifeCyclePhase ! data life cycle phase
-
-[Term]
-id: BachelorStudent
-name: bachelor student
-is_a: TargetGroup ! target group
-property_value: seeAlso "http://vivoweb.org/ontology/core#UndergraduateStudent" xsd:string
-property_value: skos:definition "Student in Bachelor's degree" xsd:string
-property_value: skos:prefLabel "Bachelor Student" xsd:string
-
-[Term]
-id: BestPractices
-name: best practices
-comment: Class representing OERs that are best practices in scientific area.
-is_a: LearningResourceType ! learning resource type
-property_value: skos:prefLabel "best practices" xsd:string
-
-[Term]
-id: Code
-name: code
-comment: Class representing OER which are code like Jupyternotebook.
-is_a: MediaType ! media type
-property_value: skos:prefLabel "code" xsd:string
-
-[Term]
-id: CodeNotebook
-name: code notebook
-is_a: LearningResourceType ! learning resource type
-property_value: skos:example "Jupyter Notebook" xsd:string
-property_value: skos:prefLabel "Code Notebook" xsd:string
-
-[Term]
-id: CollectionPhase
-name: collection phase
-is_a: DataLifeCyclePhase ! data life cycle phase
-
-[Term]
-id: Community
-name: community
-property_value: skos:definition "A Community gathers users (members) and educational resources/learning paths similar  to Zenodo communities" xsd:string
-
-[Term]
-id: ContentProvider
-name: content provider
-is_a: TargetGroup ! target group
-property_value: seeAlso "https://bibfra.me/view/rare/lite/provider" xsd:string
-property_value: skos:definition "a person or group who is providing OER" xsd:string
-property_value: skos:prefLabel "Content Provider" xsd:string
-
-[Term]
-id: ContentQuality
-name: content quality
-property_value: skos:definition "Educational quality of an OER" xsd:string
-property_value: skos:example "High quality" xsd:string
-
-[Term]
-id: Contributor
-name: contributor
-comment: Contributed to OER with some contribution type
-union_of: schema:Organization ! organization
-union_of: schema:Person ! person
-
-[Term]
-id: Cookbook
-name: cookbook
-is_a: LearningResourceType ! learning resource type
-property_value: seeAlso "https://www.wikidata.org/wiki/Q3689925" xsd:string
-property_value: skos:prefLabel "cookbook" xsd:string
-
-[Term]
-id: CuratorRole
-name: curator user role
-is_a: UserRole ! user role
-
-[Term]
-id: DataLifeCyclePhase
-name: data life cycle phase
-property_value: seeAlso "https://towson.libguides.com/dataresearch/datamangement/dldataone" xsd:string
-property_value: skos:definition "One of the phases of data life cycle." xsd:string
-
-[Term]
-id: DescriptionPhase
-name: description phase
-is_a: DataLifeCyclePhase ! data life cycle phase
-
-[Term]
-id: Discipline
-name: discipline
-property_value: seeAlso "http://purl.org/spar/fabio/SubjectDiscipline" xsd:string
-property_value: skos:definition "knowledge of a specific, specialized discipline or field" xsd:string
-property_value: skos:example "e.g Engineering" xsd:string
-
-[Term]
-id: DiscoveryPhase
-name: discovery phase
-is_a: DataLifeCyclePhase ! data life cycle phase
-
-[Term]
-id: EducationalLevel
-name: education level
-property_value: skos:definition "The educational level of a user: Bachlors, Masters or PhD" xsd:string
-
-[Term]
-id: FiveStarRating
-name: five star rating
-is_a: schema:Rating ! rating indicator
-property_value: schema:bestRating "5" xsd:integer
-property_value: schema:worstRating "1" xsd:integer
-property_value: skos:definition "Standard five star rating, min value 1 maximum 5" xsd:string
-
-[Term]
-id: FreeLicense
-name: free license
-is_a: License ! license
-
-[Term]
-id: IntegratePhase
-name: integration phase
-is_a: DataLifeCyclePhase ! data life cycle phase
-
-[Term]
-id: Job
-name: job
-property_value: seeAlso "https://schema.org/Occupation" xsd:string
-property_value: skos:definition "name of a profession" xsd:string
-property_value: skos:example "Software Developer" xsd:string
-
-[Term]
 id: Language
 name: language
 property_value: seeAlso https://www.wikidata.org/wiki/Q315
 property_value: skos:definition "Natural language" xsd:string
 
 [Term]
-id: LearnerRole
-name: learner role
-is_a: UserRole ! user role
-
-[Term]
-id: LearningObjective
-name: learning objective
-comment: The Learning Goal can vary depending on the personalisation level. For example a user might care to learn some specific topics and not all the skill set.
-property_value: seeAlso "https://github.com/tibonto/educor#LearningGoal" xsd:string
-property_value: skos:definition "Learning Objective as defined in learning objective matrix (LZM)" xsd:string
-
-[Term]
-id: LearningPath
-name: learning path
-property_value: skos:definition "The learning path consists of a set of learning units (Educational Resources) in a specified order  to reach a learning objective." xsd:string
-property_value: skos:example "\"Hello world in python\", \"Comments in python\", \"Strings in python\"" xsd:string
-
-[Term]
-id: LearningPathStep
-name: learning path step
-property_value: skos:definition "One step of a learning path, it has an order and one educational resource. Optionally a learning path step can have a note for learner." xsd:string
-
-[Term]
-id: LearningResourceType
-name: learning resource type
-property_value: skos:definition "The type of the learning resource can be lecture, experiment, Assessment, etc." xsd:string
-
-[Term]
-id: Lecture
-name: lecture
-comment: Class representing OERs that are lectures.
-is_a: LearningResourceType ! learning resource type
-property_value: skos:prefLabel "lecture" xsd:string
-
-[Term]
-id: License
-name: license
-
-[Term]
-id: MastersStudent
-name: master's student
-is_a: TargetGroup ! target group
-property_value: seeAlso "http://w3id.org/roh#MastersStudent" xsd:string
-property_value: skos:definition "A student in Master's degree" xsd:string
-property_value: skos:prefLabel "Master's Student" xsd:string
-
-[Term]
-id: MediaType
-name: media type
-property_value: skos:definition "General type of data content encoded in a computer file. Digital media type of the resource. To be used with user preferences according to VARK learning style." xsd:string
-
-[Term]
-id: Multipart
-name: multipart
-is_a: MediaType ! media type
-property_value: skos:definition "If the resource consists of more than one item with different DOIs, the MediaType is \"multipart\" and the relations are provided in the field \"RelatedWork\"." xsd:string
-property_value: skos:prefLabel "Multipart" xsd:string
-
-[Term]
-id: MuseumProfessional
-name: museum professional
-is_a: TargetGroup ! target group
-property_value: skos:prefLabel "Museum Professional" xsd:string
-
-[Term]
 id: OCCO:25401100
 name: archivist
-is_a: TargetGroup ! target group
+is_a: modalia:TargetGroup ! target group
 property_value: skos:definition "A person who appraises, edits, and directs safekeeping of permanent records and historically valuable documents. Participate in research activities based on archival materials." xsd:string
 property_value: skos:prefLabel "Archivist" xsd:string
 
 [Term]
 id: OCCO:25402200
 name: librarian
-is_a: TargetGroup ! target group
+is_a: modalia:TargetGroup ! target group
 property_value: skos:prefLabel "Librarian" xsd:string
-
-[Term]
-id: PhDStudent
-name: PhD student
-is_a: TargetGroup ! target group
-property_value: seeAlso "http://vivoweb.org/ontology/core#GraduateStudent" xsd:string
-property_value: skos:definition "A student in PhD degree" xsd:string
-property_value: skos:prefLabel "PhD student" xsd:string
-
-[Term]
-id: PlanningPhase
-name: planning phase
-is_a: DataLifeCyclePhase ! data life cycle phase
-property_value: skos:definition "First phase in data life cycle. Description of the data that will be compiled." xsd:string
-
-[Term]
-id: Podcast
-name: podcast
-is_a: LearningResourceType ! learning resource type
-property_value: skos:definition "The learning resource type podcast is an episodic series of digital audio or video files or an episode of that, which a user can download and listen to." xsd:string
-
-[Term]
-id: Poster
-name: poster
-comment: Class representing OERs that are Posters
-is_a: LearningResourceType ! learning resource type
-property_value: skos:prefLabel "poster" xsd:string
-
-[Term]
-id: PreservationPhase
-name: preservation phase
-is_a: DataLifeCyclePhase ! data life cycle phase
-
-[Term]
-id: Proficiency
-name: proficiency
-property_value: skos:definition "Benner’s Novice to Expert\nThe five stages of proficiency in the novice to expert model are: novice, advanced beginner, competent, proficient, and expert (Benner, 1982)." xsd:string
-
-[Term]
-id: ProprietaryLicense
-name: proprietary license
-is_a: License ! license
-
-[Term]
-id: RDMResource
-name: RDM resource
-comment: OER related to Research Data Management
-is_a: ec:EducationalResource ! educational resource
-
-[Term]
-id: RDMSkill
-name: RDM skill
-comment: Research Data Managment Skill
-is_a: Skill ! skill
-property_value: skos:definition "The ability to carry out tasks." xsd:string
-
-[Term]
-id: RDMSubjectCluster
-name: RDM subject cluster
-property_value: skos:definition "Cluster of RDM topics areas. Matches Subject area in Learning Objective Matrix version 3 ( https://zenodo.org/records/15846806 )" xsd:string
-
-[Term]
-id: RDMTopic
-name: RDM topic
-is_a: ec:KnowledgeTopic ! knowledge topic
-property_value: skos:definition "Topic related to research data management" xsd:string
-
-[Term]
-id: Researcher
-name: researcher
-is_a: TargetGroup ! target group
-property_value: seeAlso "https://www.wikidata.org/wiki/Q1650915" xsd:string
-property_value: skos:prefLabel "Researcher" xsd:string
-
-[Term]
-id: ResearcherUserRole
-name: researcher user role
-is_a: UserRole ! user role
 
 [Term]
 id: SIO:000776
@@ -351,91 +66,10 @@ property_value: skos:definition "an object that is described (chemical substance
 property_value: skos:example "mouse cells" xsd:string
 
 [Term]
-id: Skill
-name: skill
-comment: Job Skill, ability to perform some tasks.
-
-[Term]
-id: StudentSchool
-name: student (school)
-is_a: TargetGroup ! target group
-property_value: skos:prefLabel "Student (School)" xsd:string
-
-[Term]
 id: T4FS:0000178
 name: data steward
-is_a: TargetGroup ! target group
+is_a: modalia:TargetGroup ! target group
 property_value: skos:prefLabel "Data Steward" xsd:string
-
-[Term]
-id: TargetGroup
-name: target group
-property_value: seeAlso "http://purl.org/dcx/lrmi-terms/EducationalAudience" xsd:string
-property_value: skos:definition "The target group of the learning resource, e.g. students, data stewards, researchers, etc" xsd:string
-
-[Term]
-id: TeacherHigherEducation
-name: teacher (higher education)
-is_a: TargetGroup ! target group
-property_value: skos:prefLabel "Teacher (Higher Education)" xsd:string
-
-[Term]
-id: TeacherRole
-name: teacher user role
-is_a: UserRole ! user role
-
-[Term]
-id: TeacherSchool
-name: teacher (school)
-is_a: TargetGroup ! target group
-property_value: seeAlso "https://www.wikidata.org/wiki/Q37226" xsd:string
-property_value: skos:prefLabel "Teacher (School)" xsd:string
-
-[Term]
-id: Tutorial
-name: tutorial
-comment: Class representing OERs that are in form of tutorial.
-is_a: LearningResourceType ! learning resource type
-property_value: skos:prefLabel "tutorial" xsd:string
-
-[Term]
-id: User
-name: user
-property_value: seeAlso http://xmlns.com/foaf/0.1/Person
-property_value: skos:definition "Registered user in the system, can have different roles i.e learner , teacher , curator, etc" xsd:string
-
-[Term]
-id: UserComment
-name: user comment
-property_value: skos:definition "Comment added by a user on an educational resource" xsd:string
-
-[Term]
-id: UserRole
-name: user role
-
-[Term]
-id: VARKAuditory
-name: VARK auditory
-is_a: ec:LearningPreference ! learning preference
-property_value: skos:definition "Auditory learning (music, discussion, lectures)" xsd:string
-
-[Term]
-id: VARKKinesthetic
-name: VARK kinesthetic
-is_a: ec:LearningPreference ! learning preference
-property_value: skos:definition "Kinesthetic learning (movement, experiments, hands-on activities)" xsd:string
-
-[Term]
-id: VARKReading
-name: VARK reading
-is_a: ec:LearningPreference ! learning preference
-property_value: skos:definition "Reading and writing (making lists, reading textbooks, taking notes)" xsd:string
-
-[Term]
-id: VARKVisual
-name: VARK visual
-is_a: ec:LearningPreference ! learning preference
-property_value: skos:definition "Visual learning (pictures, movies, diagrams)" xsd:string
 
 [Term]
 id: bf:Contribution
@@ -451,38 +85,38 @@ property_value: skos:example "Editor" xsd:string
 id: bibo:Article
 name: article
 comment: Class representing OERs that are articles (e.g academic article)
-is_a: LearningResourceType ! learning resource type
+is_a: modalia:LearningResourceType ! learning resource type
 property_value: skos:prefLabel "Article" xsd:string
 
 [Term]
 id: bibo:Book
 name: book
-is_a: LearningResourceType ! learning resource type
+is_a: modalia:LearningResourceType ! learning resource type
 property_value: skos:definition "Class representing OER which is a book." xsd:string
 property_value: skos:prefLabel "Book" xsd:string
 
 [Term]
 id: bibo:Report
 name: report
-is_a: LearningResourceType ! learning resource type
+is_a: modalia:LearningResourceType ! learning resource type
 property_value: skos:prefLabel "Report" xsd:string
 
 [Term]
 id: bibo:Thesis
 name: thesis
-is_a: LearningResourceType ! learning resource type
+is_a: modalia:LearningResourceType ! learning resource type
 property_value: skos:prefLabel "Thesis" xsd:string
 
 [Term]
 id: bibo:Webpage
 name: webpage
-is_a: LearningResourceType ! learning resource type
+is_a: modalia:LearningResourceType ! learning resource type
 property_value: skos:prefLabel "Web page" xsd:string
 
 [Term]
 id: bibo:Workshop
 name: workshop
-is_a: LearningResourceType ! learning resource type
+is_a: modalia:LearningResourceType ! learning resource type
 property_value: isDefinedBy http://purl.org/ontology/bibo
 property_value: skos:definition "A seminar, discussion group, or the like, that emphasizes zxchange of ideas and the demonstration and application of techniques, skills, etc." xsd:string
 property_value: skos:prefLabel "workshop" xsd:string
@@ -502,7 +136,7 @@ property_value: skos:example "A video describing how lists work in Python progra
 [Term]
 id: ec:KnowledgeTopic
 name: knowledge topic
-disjoint_from: Skill ! skill
+disjoint_from: modalia:Skill ! skill
 property_value: isDefinedBy https://github.com/tibonto/educor
 property_value: seeAlso "https://w3id.org/ccso/ccso#Topic" xsd:string
 property_value: skos:definition "A single node representing a learning module based on the domain ontology. It contains all the learning material for the specific learning module." xsd:string
@@ -527,67 +161,67 @@ property_value: skos:example "The recommendation is \"Quadratic Equation\"" xsd:
 [Term]
 id: hcrt:application
 name: application
-is_a: LearningResourceType ! learning resource type
+is_a: modalia:LearningResourceType ! learning resource type
 property_value: skos:prefLabel "Application" xsd:string
 
 [Term]
 id: hcrt:assessment
 name: assessment
 comment: Class representing OERs that are in form of assessment of knowledge.
-is_a: LearningResourceType ! learning resource type
+is_a: modalia:LearningResourceType ! learning resource type
 property_value: skos:prefLabel "Assessment" xsd:string
 
 [Term]
 id: hcrt:case_study
 name: case study
 comment: Class representing OERs that are in form of case study.
-is_a: LearningResourceType ! learning resource type
+is_a: modalia:LearningResourceType ! learning resource type
 property_value: skos:prefLabel "Case Study" xsd:string
 
 [Term]
 id: hcrt:course
 name: course
-is_a: LearningResourceType ! learning resource type
+is_a: modalia:LearningResourceType ! learning resource type
 property_value: skos:prefLabel "Course" xsd:string
 
 [Term]
 id: hcrt:data
 name: data
-is_a: LearningResourceType ! learning resource type
+is_a: modalia:LearningResourceType ! learning resource type
 property_value: skos:prefLabel "Data" xsd:string
 
 [Term]
 id: hcrt:diagram
 name: diagram
 comment: Class representing an OER that is a diagram
-is_a: LearningResourceType ! learning resource type
+is_a: modalia:LearningResourceType ! learning resource type
 property_value: skos:prefLabel "Diagram" xsd:string
 
 [Term]
 id: hcrt:drill_and_practice
 name: drill_and_practice
-is_a: LearningResourceType ! learning resource type
+is_a: modalia:LearningResourceType ! learning resource type
 property_value: skos:prefLabel "Drill and practice" xsd:string
 
 [Term]
 id: hcrt:educational_game
 name: educational game
 comment: Class representing OERs that are in form of educational games.
-is_a: LearningResourceType ! learning resource type
+is_a: modalia:LearningResourceType ! learning resource type
 property_value: skos:prefLabel "Educational Game" xsd:string
 
 [Term]
 id: hcrt:experiment
 name: experiment
 comment: Class representing OERs that are describing an experiment
-is_a: LearningResourceType ! learning resource type
+is_a: modalia:LearningResourceType ! learning resource type
 property_value: skos:prefLabel "Experiment" xsd:string
 
 [Term]
 id: hcrt:index
 name: index
 name: Nachschlagewerk
-is_a: LearningResourceType ! learning resource type
+is_a: modalia:LearningResourceType ! learning resource type
 property_value: skos:example "glossary, encyclopedia, dictionary" xsd:string
 property_value: skos:prefLabel "Reference Work" xsd:string
 property_value: skos:scopeNote "zum Beispiel Glossar, Enzyklopädie, Lexikonzum Beispiel Glossar, Enzyklopädie, Lexikon" xsd:string
@@ -595,60 +229,60 @@ property_value: skos:scopeNote "zum Beispiel Glossar, Enzyklopädie, Lexikonzum 
 [Term]
 id: hcrt:lesson_plan
 name: lesson plan
-is_a: LearningResourceType ! learning resource type
+is_a: modalia:LearningResourceType ! learning resource type
 property_value: skos:prefLabel "Lesson_plan" xsd:string
 
 [Term]
 id: hcrt:map
 name: map
-is_a: LearningResourceType ! learning resource type
+is_a: modalia:LearningResourceType ! learning resource type
 property_value: skos:prefLabel "Map" xsd:string
 
 [Term]
 id: hcrt:other
 name: other resource type
-is_a: LearningResourceType ! learning resource type
+is_a: modalia:LearningResourceType ! learning resource type
 
 [Term]
 id: hcrt:portal
 name: portal
-is_a: LearningResourceType ! learning resource type
+is_a: modalia:LearningResourceType ! learning resource type
 property_value: skos:prefLabel "Portal" xsd:string
 
 [Term]
 id: hcrt:questionnaire
 name: questionnaire
-is_a: LearningResourceType ! learning resource type
+is_a: modalia:LearningResourceType ! learning resource type
 property_value: skos:prefLabel "questionnaire" xsd:string
 
 [Term]
 id: hcrt:script
 name: script
-is_a: LearningResourceType ! learning resource type
+is_a: modalia:LearningResourceType ! learning resource type
 property_value: skos:prefLabel "Script" xsd:string
 
 [Term]
 id: hcrt:sheet_music
 name: sheet music
-is_a: LearningResourceType ! learning resource type
+is_a: modalia:LearningResourceType ! learning resource type
 property_value: skos:prefLabel "Sheet_music" xsd:string
 
 [Term]
 id: hcrt:simulation
 name: simulation
-is_a: LearningResourceType ! learning resource type
+is_a: modalia:LearningResourceType ! learning resource type
 property_value: skos:prefLabel "Simulation" xsd:string
 
 [Term]
 id: hcrt:textbook
 name: textbook
-is_a: LearningResourceType ! learning resource type
+is_a: modalia:LearningResourceType ! learning resource type
 property_value: skos:prefLabel "Textbook" xsd:string
 
 [Term]
 id: hcrt:worksheet
 name: worksheet
-is_a: LearningResourceType ! learning resource type
+is_a: modalia:LearningResourceType ! learning resource type
 property_value: skos:prefLabel "Worksheet" xsd:string
 
 [Term]
@@ -665,17 +299,384 @@ property_value: isDefinedBy http://w3id.org/nfdi4ing/metadata4ing
 property_value: skos:definition "a tool with which data was obtained (microscope, sensor, ...)" xsd:string
 
 [Term]
+id: modalia:AnalysingPhase
+name: analysing phase
+is_a: modalia:DataLifeCyclePhase ! data life cycle phase
+disjoint_from: modalia:AssurancePhase ! assurance phase
+disjoint_from: modalia:CollectionPhase ! collection phase
+disjoint_from: modalia:DescriptionPhase ! description phase
+disjoint_from: modalia:DiscoveryPhase ! discovery phase
+disjoint_from: modalia:IntegratePhase ! integration phase
+disjoint_from: modalia:PlanningPhase ! planning phase
+disjoint_from: modalia:PreservationPhase ! preservation phase
+property_value: skos:definition "The last phase in data life cycle." xsd:string
+
+[Term]
+id: modalia:AssurancePhase
+name: assurance phase
+is_a: modalia:DataLifeCyclePhase ! data life cycle phase
+
+[Term]
+id: modalia:BachelorStudent
+name: bachelor student
+is_a: modalia:TargetGroup ! target group
+property_value: seeAlso "http://vivoweb.org/ontology/core#UndergraduateStudent" xsd:string
+property_value: skos:definition "Student in Bachelor's degree" xsd:string
+property_value: skos:prefLabel "Bachelor Student" xsd:string
+
+[Term]
+id: modalia:BestPractices
+name: best practices
+comment: Class representing OERs that are best practices in scientific area.
+is_a: modalia:LearningResourceType ! learning resource type
+property_value: skos:prefLabel "best practices" xsd:string
+
+[Term]
+id: modalia:Code
+name: code
+comment: Class representing OER which are code like Jupyternotebook.
+is_a: modalia:MediaType ! media type
+property_value: skos:prefLabel "code" xsd:string
+
+[Term]
+id: modalia:CodeNotebook
+name: code notebook
+is_a: modalia:LearningResourceType ! learning resource type
+property_value: skos:example "Jupyter Notebook" xsd:string
+property_value: skos:prefLabel "Code Notebook" xsd:string
+
+[Term]
+id: modalia:CollectionPhase
+name: collection phase
+is_a: modalia:DataLifeCyclePhase ! data life cycle phase
+
+[Term]
+id: modalia:Community
+name: community
+property_value: skos:definition "A Community gathers users (members) and educational resources/learning paths similar  to Zenodo communities" xsd:string
+
+[Term]
+id: modalia:ContentProvider
+name: content provider
+is_a: modalia:TargetGroup ! target group
+property_value: seeAlso "https://bibfra.me/view/rare/lite/provider" xsd:string
+property_value: skos:definition "a person or group who is providing OER" xsd:string
+property_value: skos:prefLabel "Content Provider" xsd:string
+
+[Term]
+id: modalia:ContentQuality
+name: content quality
+property_value: skos:definition "Educational quality of an OER" xsd:string
+property_value: skos:example "High quality" xsd:string
+
+[Term]
+id: modalia:Contributor
+name: contributor
+comment: Contributed to OER with some contribution type
+union_of: schema:Organization ! organization
+union_of: schema:Person ! person
+
+[Term]
+id: modalia:Cookbook
+name: cookbook
+is_a: modalia:LearningResourceType ! learning resource type
+property_value: seeAlso "https://www.wikidata.org/wiki/Q3689925" xsd:string
+property_value: skos:prefLabel "cookbook" xsd:string
+
+[Term]
+id: modalia:CuratorRole
+name: curator user role
+is_a: modalia:UserRole ! user role
+
+[Term]
+id: modalia:DataLifeCyclePhase
+name: data life cycle phase
+property_value: seeAlso "https://towson.libguides.com/dataresearch/datamangement/dldataone" xsd:string
+property_value: skos:definition "One of the phases of data life cycle." xsd:string
+
+[Term]
+id: modalia:DescriptionPhase
+name: description phase
+is_a: modalia:DataLifeCyclePhase ! data life cycle phase
+
+[Term]
+id: modalia:Discipline
+name: discipline
+property_value: seeAlso "http://purl.org/spar/fabio/SubjectDiscipline" xsd:string
+property_value: skos:definition "knowledge of a specific, specialized discipline or field" xsd:string
+property_value: skos:example "e.g Engineering" xsd:string
+
+[Term]
+id: modalia:DiscoveryPhase
+name: discovery phase
+is_a: modalia:DataLifeCyclePhase ! data life cycle phase
+
+[Term]
+id: modalia:EducationalLevel
+name: education level
+property_value: skos:definition "The educational level of a user: Bachlors, Masters or PhD" xsd:string
+
+[Term]
+id: modalia:FiveStarRating
+name: five star rating
+is_a: schema:Rating ! rating indicator
+property_value: schema:bestRating "5" xsd:integer
+property_value: schema:worstRating "1" xsd:integer
+property_value: skos:definition "Standard five star rating, min value 1 maximum 5" xsd:string
+
+[Term]
+id: modalia:FreeLicense
+name: free license
+is_a: modalia:License ! license
+
+[Term]
+id: modalia:IntegratePhase
+name: integration phase
+is_a: modalia:DataLifeCyclePhase ! data life cycle phase
+
+[Term]
+id: modalia:Job
+name: job
+property_value: seeAlso "https://schema.org/Occupation" xsd:string
+property_value: skos:definition "name of a profession" xsd:string
+property_value: skos:example "Software Developer" xsd:string
+
+[Term]
+id: modalia:LearnerRole
+name: learner role
+is_a: modalia:UserRole ! user role
+
+[Term]
+id: modalia:LearningObjective
+name: learning objective
+comment: The Learning Goal can vary depending on the personalisation level. For example a user might care to learn some specific topics and not all the skill set.
+property_value: seeAlso "https://github.com/tibonto/educor#LearningGoal" xsd:string
+property_value: skos:definition "Learning Objective as defined in learning objective matrix (LZM)" xsd:string
+
+[Term]
+id: modalia:LearningPath
+name: learning path
+property_value: skos:definition "The learning path consists of a set of learning units (Educational Resources) in a specified order  to reach a learning objective." xsd:string
+property_value: skos:example "\"Hello world in python\", \"Comments in python\", \"Strings in python\"" xsd:string
+
+[Term]
+id: modalia:LearningPathStep
+name: learning path step
+property_value: skos:definition "One step of a learning path, it has an order and one educational resource. Optionally a learning path step can have a note for learner." xsd:string
+
+[Term]
+id: modalia:LearningResourceType
+name: learning resource type
+property_value: skos:definition "The type of the learning resource can be lecture, experiment, Assessment, etc." xsd:string
+
+[Term]
+id: modalia:Lecture
+name: lecture
+comment: Class representing OERs that are lectures.
+is_a: modalia:LearningResourceType ! learning resource type
+property_value: skos:prefLabel "lecture" xsd:string
+
+[Term]
+id: modalia:License
+name: license
+
+[Term]
+id: modalia:MastersStudent
+name: master's student
+is_a: modalia:TargetGroup ! target group
+property_value: seeAlso "http://w3id.org/roh#MastersStudent" xsd:string
+property_value: skos:definition "A student in Master's degree" xsd:string
+property_value: skos:prefLabel "Master's Student" xsd:string
+
+[Term]
+id: modalia:MediaType
+name: media type
+property_value: skos:definition "General type of data content encoded in a computer file. Digital media type of the resource. To be used with user preferences according to VARK learning style." xsd:string
+
+[Term]
+id: modalia:Multipart
+name: multipart
+is_a: modalia:MediaType ! media type
+property_value: skos:definition "If the resource consists of more than one item with different DOIs, the MediaType is \"multipart\" and the relations are provided in the field \"RelatedWork\"." xsd:string
+property_value: skos:prefLabel "Multipart" xsd:string
+
+[Term]
+id: modalia:MuseumProfessional
+name: museum professional
+is_a: modalia:TargetGroup ! target group
+property_value: skos:prefLabel "Museum Professional" xsd:string
+
+[Term]
+id: modalia:PhDStudent
+name: PhD student
+is_a: modalia:TargetGroup ! target group
+property_value: seeAlso "http://vivoweb.org/ontology/core#GraduateStudent" xsd:string
+property_value: skos:definition "A student in PhD degree" xsd:string
+property_value: skos:prefLabel "PhD student" xsd:string
+
+[Term]
+id: modalia:PlanningPhase
+name: planning phase
+is_a: modalia:DataLifeCyclePhase ! data life cycle phase
+property_value: skos:definition "First phase in data life cycle. Description of the data that will be compiled." xsd:string
+
+[Term]
+id: modalia:Podcast
+name: podcast
+is_a: modalia:LearningResourceType ! learning resource type
+property_value: skos:definition "The learning resource type podcast is an episodic series of digital audio or video files or an episode of that, which a user can download and listen to." xsd:string
+
+[Term]
+id: modalia:Poster
+name: poster
+comment: Class representing OERs that are Posters
+is_a: modalia:LearningResourceType ! learning resource type
+property_value: skos:prefLabel "poster" xsd:string
+
+[Term]
+id: modalia:PreservationPhase
+name: preservation phase
+is_a: modalia:DataLifeCyclePhase ! data life cycle phase
+
+[Term]
+id: modalia:Proficiency
+name: proficiency
+property_value: skos:definition "Benner’s Novice to Expert\nThe five stages of proficiency in the novice to expert model are: novice, advanced beginner, competent, proficient, and expert (Benner, 1982)." xsd:string
+
+[Term]
+id: modalia:ProprietaryLicense
+name: proprietary license
+is_a: modalia:License ! license
+
+[Term]
+id: modalia:RDMResource
+name: RDM resource
+comment: OER related to Research Data Management
+is_a: ec:EducationalResource ! educational resource
+
+[Term]
+id: modalia:RDMSkill
+name: RDM skill
+comment: Research Data Managment Skill
+is_a: modalia:Skill ! skill
+property_value: skos:definition "The ability to carry out tasks." xsd:string
+
+[Term]
+id: modalia:RDMSubjectCluster
+name: RDM subject cluster
+property_value: skos:definition "Cluster of RDM topics areas. Matches Subject area in Learning Objective Matrix version 3 ( https://zenodo.org/records/15846806 )" xsd:string
+
+[Term]
+id: modalia:RDMTopic
+name: RDM topic
+is_a: ec:KnowledgeTopic ! knowledge topic
+property_value: skos:definition "Topic related to research data management" xsd:string
+
+[Term]
+id: modalia:Researcher
+name: researcher
+is_a: modalia:TargetGroup ! target group
+property_value: seeAlso "https://www.wikidata.org/wiki/Q1650915" xsd:string
+property_value: skos:prefLabel "Researcher" xsd:string
+
+[Term]
+id: modalia:ResearcherUserRole
+name: researcher user role
+is_a: modalia:UserRole ! user role
+
+[Term]
+id: modalia:Skill
+name: skill
+comment: Job Skill, ability to perform some tasks.
+
+[Term]
+id: modalia:StudentSchool
+name: student (school)
+is_a: modalia:TargetGroup ! target group
+property_value: skos:prefLabel "Student (School)" xsd:string
+
+[Term]
+id: modalia:TargetGroup
+name: target group
+property_value: seeAlso "http://purl.org/dcx/lrmi-terms/EducationalAudience" xsd:string
+property_value: skos:definition "The target group of the learning resource, e.g. students, data stewards, researchers, etc" xsd:string
+
+[Term]
+id: modalia:TeacherHigherEducation
+name: teacher (higher education)
+is_a: modalia:TargetGroup ! target group
+property_value: skos:prefLabel "Teacher (Higher Education)" xsd:string
+
+[Term]
+id: modalia:TeacherRole
+name: teacher user role
+is_a: modalia:UserRole ! user role
+
+[Term]
+id: modalia:TeacherSchool
+name: teacher (school)
+is_a: modalia:TargetGroup ! target group
+property_value: seeAlso "https://www.wikidata.org/wiki/Q37226" xsd:string
+property_value: skos:prefLabel "Teacher (School)" xsd:string
+
+[Term]
+id: modalia:Tutorial
+name: tutorial
+comment: Class representing OERs that are in form of tutorial.
+is_a: modalia:LearningResourceType ! learning resource type
+property_value: skos:prefLabel "tutorial" xsd:string
+
+[Term]
+id: modalia:User
+name: user
+property_value: seeAlso http://xmlns.com/foaf/0.1/Person
+property_value: skos:definition "Registered user in the system, can have different roles i.e learner , teacher , curator, etc" xsd:string
+
+[Term]
+id: modalia:UserComment
+name: user comment
+property_value: skos:definition "Comment added by a user on an educational resource" xsd:string
+
+[Term]
+id: modalia:UserRole
+name: user role
+
+[Term]
+id: modalia:VARKAuditory
+name: VARK auditory
+is_a: ec:LearningPreference ! learning preference
+property_value: skos:definition "Auditory learning (music, discussion, lectures)" xsd:string
+
+[Term]
+id: modalia:VARKKinesthetic
+name: VARK kinesthetic
+is_a: ec:LearningPreference ! learning preference
+property_value: skos:definition "Kinesthetic learning (movement, experiments, hands-on activities)" xsd:string
+
+[Term]
+id: modalia:VARKReading
+name: VARK reading
+is_a: ec:LearningPreference ! learning preference
+property_value: skos:definition "Reading and writing (making lists, reading textbooks, taking notes)" xsd:string
+
+[Term]
+id: modalia:VARKVisual
+name: VARK visual
+is_a: ec:LearningPreference ! learning preference
+property_value: skos:definition "Visual learning (pictures, movies, diagrams)" xsd:string
+
+[Term]
 id: schema:AudioObject
 name: audio
 comment: A class representing OERs which are audio files.
-is_a: MediaType ! media type
+is_a: modalia:MediaType ! media type
 property_value: skos:prefLabel "Audio" xsd:string
 
 [Term]
 id: schema:ImageObject
 name: image
 comment: An image file.
-is_a: MediaType ! media type
+is_a: modalia:MediaType ! media type
 property_value: skos:prefLabel "Image" xsd:string
 
 [Term]
@@ -695,12 +696,12 @@ property_value: skos:definition "A person (alive, dead, undead, or fictional)." 
 [Term]
 id: schema:PodcastEpisode
 name: podcast episode
-is_a: LearningResourceType ! learning resource type
+is_a: modalia:LearningResourceType ! learning resource type
 
 [Term]
 id: schema:PodcastSeries
 name: podcast series
-is_a: LearningResourceType ! learning resource type
+is_a: modalia:LearningResourceType ! learning resource type
 property_value: skos:definition "A podcast is an episodic series of digital audio or video files which a user can download and listen to." xsd:string
 property_value: skos:prefLabel "Podcast Series" xsd:string
 
@@ -708,7 +709,7 @@ property_value: skos:prefLabel "Podcast Series" xsd:string
 id: schema:PresentationDigitalDocument
 name: presentation
 comment: A presentation / slides file.
-is_a: MediaType ! media type
+is_a: modalia:MediaType ! media type
 property_value: skos:prefLabel "Presentation" xsd:string
 
 [Term]
@@ -727,42 +728,22 @@ property_value: skos:definition "A review of an item - for example, of a restaur
 id: schema:SoftwareSourceCode
 name: software source code
 comment: Computer programming source code. Example: Full (compile ready) solutions, code snippet samples, scripts, templates.
-is_a: LearningResourceType ! learning resource type
+is_a: modalia:LearningResourceType ! learning resource type
 property_value: skos:prefLabel "Software Source Code" xsd:string
 
 [Term]
 id: schema:Text
 name: text
 comment: Class representing OER which are text.
-is_a: MediaType ! media type
+is_a: modalia:MediaType ! media type
 property_value: skos:prefLabel "Text" xsd:string
 
 [Term]
 id: schema:VideoObject
 name: video
 comment: A video file.
-is_a: MediaType ! media type
+is_a: modalia:MediaType ! media type
 property_value: skos:prefLabel "Video" xsd:string
-
-[Typedef]
-id: belongsToCluster
-name: belongs to cluster
-comment: relates RDM Topic to RDM Topic Cluster, similar to LZM
-domain: RDMTopic ! RDM topic
-range: RDMSubjectCluster ! RDM subject cluster
-
-[Typedef]
-id: belongsToLearningPath
-name: belongs to learning path
-domain: LearningPathStep ! learning path step
-range: LearningPath ! learning path
-
-[Typedef]
-id: belongsToPhase
-name: belongs to phase
-property_value: skos:definition "defines the data life cycle phase that the resource covers" xsd:string
-domain: RDMResource ! RDM resource
-range: DataLifeCyclePhase ! data life cycle phase
 
 [Typedef]
 id: bf:agent
@@ -770,7 +751,7 @@ comment: agent
 property_value: isDefinedBy http://id.loc.gov/ontologies/bibframe
 property_value: skos:definition "Property that links a contribution to the agent (e.g., the person or organization making the contribution)." xsd:string
 domain: bf:Contribution
-range: Contributor ! contributor
+range: modalia:Contributor ! contributor
 
 [Typedef]
 id: bf:contribution
@@ -785,60 +766,6 @@ name: role
 comment: Property that links a contribution to a role (e.g., contactPerson, editor).
 domain: bf:Contribution
 range: bf:Role ! contributor role
-
-[Typedef]
-id: commentUserID
-name: comment has user
-property_value: skos:definition "relates a user to his/her comment" xsd:string
-domain: UserComment ! user comment
-range: User ! user
-
-[Typedef]
-id: commentedOER
-name: comment has OER
-property_value: skos:definition "commentedOER" xsd:string
-property_value: skos:definition "defines the OER that is commented in a user comment" xsd:string
-domain: UserComment ! user comment
-range: ec:EducationalResource ! educational resource
-
-[Typedef]
-id: covers
-name: covers
-property_value: skos:definition "Defines the topics covered in a learning resource" xsd:string
-domain: ec:EducationalResource ! educational resource
-range: ec:KnowledgeTopic ! knowledge topic
-
-[Typedef]
-id: coversManagementOfDataDescribing
-name: covers management of data describing
-domain: RDMResource ! RDM resource
-range: SIO:000776 ! object
-
-[Typedef]
-id: coversManagementOfDataKind
-name: covers management of data kind
-comment: A property that relates a RDMResource to data kind being managed
-domain: RDMResource ! RDM resource
-range: data:0006 ! data
-
-[Typedef]
-id: coversManagementOfDataObtainedWithMethod
-name: covers management of data obtained with method
-domain: RDMResource ! RDM resource
-range: m4i:Method ! research method
-
-[Typedef]
-id: coversManagementOfDataObtainedWithTool
-name: covers management of data obtained with tool
-domain: RDMResource ! RDM resource
-range: m4i:Tool ! tool
-
-[Typedef]
-id: createdBy
-name: created by
-comment: a property defining the user who created a community
-domain: Community ! community
-range: User ! user
 
 [Typedef]
 id: dcterms:hasPart
@@ -904,139 +831,21 @@ name: requires
 domain: ec:EducationalResource ! educational resource
 
 [Typedef]
-id: definesLearningPath
-name: defines learning path
-range: LearningPath ! learning path
-
-[Typedef]
-id: describes
-name: describes
-property_value: skos:prefLabel "Describes" xsd:string
-domain: ec:EducationalResource ! educational resource
-is_a: dcterms:relation ! relation
-
-[Typedef]
 id: ec:consistsOfKnowledge
 name: consistsOfKnowledge
-domain: LearningPath ! learning path
+domain: modalia:LearningPath ! learning path
 range: ec:KnowledgeTopic ! knowledge topic
 
 [Typedef]
 id: ec:generatedFrom
 name: generated from
 domain: ec:Recommendation ! recommendation
-range: User ! user
-
-[Typedef]
-id: educationalLevel
-name: educational level
-domain: User ! user
-range: EducationalLevel ! education level
-
-[Typedef]
-id: essentialFor
-name: essential for
-comment: a property defining the essential skills for a certain job
-domain: Skill ! skill
-range: Job ! job
+range: modalia:User ! user
 
 [Typedef]
 id: fabio:hasDiscipline
 name: hasDiscipline
-range: Discipline ! discipline
-
-[Typedef]
-id: givesProficiencyLevel
-name: gives proficiency level
-domain: ec:EducationalResource ! educational resource
-range: Proficiency ! proficiency
-
-[Typedef]
-id: hasLearningObjective
-name: has learning objective
-range: LearningObjective ! learning objective
-
-[Typedef]
-id: hasLearningPreference
-name: has learning preference
-property_value: skos:definition "The preferenced learning class from VARK" xsd:string
-domain: User ! user
-range: ec:LearningPreference ! learning preference
-
-[Typedef]
-id: hasLearningResource
-name: has learning resource
-domain: LearningPath ! learning path
-range: ec:EducationalResource ! educational resource
-
-[Typedef]
-id: hasLearningType
-name: has learning type
-property_value: skos:definition "The value is the learning type of content of a learning resource (e.g Lecture)" xsd:string
-domain: ec:EducationalResource ! educational resource
-range: LearningResourceType ! learning resource type
-is_functional: true
-
-[Typedef]
-id: hasMediaType
-name: has media type
-domain: ec:EducationalResource ! educational resource
-range: MediaType ! media type
-
-[Typedef]
-id: hasMetadata
-name: has metadata
-domain: ec:EducationalResource ! educational resource
-
-[Typedef]
-id: hasOwner
-name: has owner
-property_value: skos:definition "defines the user who owns a specific community. There is only one owner to a specific community" xsd:string
-domain: Community ! community
-range: User ! user
-is_functional: true
-
-[Typedef]
-id: hasQuality
-name: has quality
-domain: ec:EducationalResource ! educational resource
-range: ContentQuality ! content quality
-
-[Typedef]
-id: hasRating
-name: has rating
-domain: ec:EducationalResource ! educational resource
-range: schema:Rating ! rating indicator
-
-[Typedef]
-id: hasRole
-name: has role
-domain: User ! user
-range: UserRole ! user role
-
-[Typedef]
-id: hasSourceCode
-name: has source code
-domain: ec:EducationalResource ! educational resource
-
-[Typedef]
-id: hasTargetGroup
-name: has target group
-domain: ec:EducationalResource ! educational resource
-range: TargetGroup ! target group
-
-[Typedef]
-id: hasTranslation
-name: has translation
-property_value: skos:prefLabel "Has translation" xsd:string
-domain: ec:EducationalResource ! educational resource
-is_a: dcterms:relation ! relation
-
-[Typedef]
-id: hasUser
-name: has user
-domain: schema:Rating ! rating indicator
-range: User ! user
+range: modalia:Discipline ! discipline
 
 [Typedef]
 id: https://w3id.org/citedcat-ap/continues
@@ -1075,21 +884,213 @@ domain: ec:EducationalResource ! educational resource
 is_a: dcterms:relation ! relation
 
 [Typedef]
-id: isDescribedBy
+id: modalia:belongsToCluster
+name: belongs to cluster
+comment: relates RDM Topic to RDM Topic Cluster, similar to LZM
+domain: modalia:RDMTopic ! RDM topic
+range: modalia:RDMSubjectCluster ! RDM subject cluster
+
+[Typedef]
+id: modalia:belongsToLearningPath
+name: belongs to learning path
+domain: modalia:LearningPathStep ! learning path step
+range: modalia:LearningPath ! learning path
+
+[Typedef]
+id: modalia:belongsToPhase
+name: belongs to phase
+property_value: skos:definition "defines the data life cycle phase that the resource covers" xsd:string
+domain: modalia:RDMResource ! RDM resource
+range: modalia:DataLifeCyclePhase ! data life cycle phase
+
+[Typedef]
+id: modalia:commentUserID
+name: comment has user
+property_value: skos:definition "relates a user to his/her comment" xsd:string
+domain: modalia:UserComment ! user comment
+range: modalia:User ! user
+
+[Typedef]
+id: modalia:commentedOER
+name: comment has OER
+property_value: skos:definition "commentedOER" xsd:string
+property_value: skos:definition "defines the OER that is commented in a user comment" xsd:string
+domain: modalia:UserComment ! user comment
+range: ec:EducationalResource ! educational resource
+
+[Typedef]
+id: modalia:covers
+name: covers
+property_value: skos:definition "Defines the topics covered in a learning resource" xsd:string
+domain: ec:EducationalResource ! educational resource
+range: ec:KnowledgeTopic ! knowledge topic
+
+[Typedef]
+id: modalia:coversManagementOfDataDescribing
+name: covers management of data describing
+domain: modalia:RDMResource ! RDM resource
+range: SIO:000776 ! object
+
+[Typedef]
+id: modalia:coversManagementOfDataKind
+name: covers management of data kind
+comment: A property that relates a RDMResource to data kind being managed
+domain: modalia:RDMResource ! RDM resource
+range: data:0006 ! data
+
+[Typedef]
+id: modalia:coversManagementOfDataObtainedWithMethod
+name: covers management of data obtained with method
+domain: modalia:RDMResource ! RDM resource
+range: m4i:Method ! research method
+
+[Typedef]
+id: modalia:coversManagementOfDataObtainedWithTool
+name: covers management of data obtained with tool
+domain: modalia:RDMResource ! RDM resource
+range: m4i:Tool ! tool
+
+[Typedef]
+id: modalia:createdBy
+name: created by
+comment: a property defining the user who created a community
+domain: modalia:Community ! community
+range: modalia:User ! user
+
+[Typedef]
+id: modalia:definesLearningPath
+name: defines learning path
+range: modalia:LearningPath ! learning path
+
+[Typedef]
+id: modalia:describes
+name: describes
+property_value: skos:prefLabel "Describes" xsd:string
+domain: ec:EducationalResource ! educational resource
+is_a: dcterms:relation ! relation
+
+[Typedef]
+id: modalia:educationalLevel
+name: educational level
+domain: modalia:User ! user
+range: modalia:EducationalLevel ! education level
+
+[Typedef]
+id: modalia:essentialFor
+name: essential for
+comment: a property defining the essential skills for a certain job
+domain: modalia:Skill ! skill
+range: modalia:Job ! job
+
+[Typedef]
+id: modalia:givesProficiencyLevel
+name: gives proficiency level
+domain: ec:EducationalResource ! educational resource
+range: modalia:Proficiency ! proficiency
+
+[Typedef]
+id: modalia:hasLearningObjective
+name: has learning objective
+range: modalia:LearningObjective ! learning objective
+
+[Typedef]
+id: modalia:hasLearningPreference
+name: has learning preference
+property_value: skos:definition "The preferenced learning class from VARK" xsd:string
+domain: modalia:User ! user
+range: ec:LearningPreference ! learning preference
+
+[Typedef]
+id: modalia:hasLearningResource
+name: has learning resource
+domain: modalia:LearningPath ! learning path
+range: ec:EducationalResource ! educational resource
+
+[Typedef]
+id: modalia:hasLearningType
+name: has learning type
+property_value: skos:definition "The value is the learning type of content of a learning resource (e.g Lecture)" xsd:string
+domain: ec:EducationalResource ! educational resource
+range: modalia:LearningResourceType ! learning resource type
+is_functional: true
+
+[Typedef]
+id: modalia:hasMediaType
+name: has media type
+domain: ec:EducationalResource ! educational resource
+range: modalia:MediaType ! media type
+
+[Typedef]
+id: modalia:hasMetadata
+name: has metadata
+domain: ec:EducationalResource ! educational resource
+
+[Typedef]
+id: modalia:hasOwner
+name: has owner
+property_value: skos:definition "defines the user who owns a specific community. There is only one owner to a specific community" xsd:string
+domain: modalia:Community ! community
+range: modalia:User ! user
+is_functional: true
+
+[Typedef]
+id: modalia:hasQuality
+name: has quality
+domain: ec:EducationalResource ! educational resource
+range: modalia:ContentQuality ! content quality
+
+[Typedef]
+id: modalia:hasRating
+name: has rating
+domain: ec:EducationalResource ! educational resource
+range: schema:Rating ! rating indicator
+
+[Typedef]
+id: modalia:hasRole
+name: has role
+domain: modalia:User ! user
+range: modalia:UserRole ! user role
+
+[Typedef]
+id: modalia:hasSourceCode
+name: has source code
+domain: ec:EducationalResource ! educational resource
+
+[Typedef]
+id: modalia:hasTargetGroup
+name: has target group
+domain: ec:EducationalResource ! educational resource
+range: modalia:TargetGroup ! target group
+
+[Typedef]
+id: modalia:hasTranslation
+name: has translation
+property_value: skos:prefLabel "Has translation" xsd:string
+domain: ec:EducationalResource ! educational resource
+is_a: dcterms:relation ! relation
+
+[Typedef]
+id: modalia:hasUser
+name: has user
+domain: schema:Rating ! rating indicator
+range: modalia:User ! user
+
+[Typedef]
+id: modalia:isDescribedBy
 name: is described by
 property_value: skos:prefLabel "Is described by" xsd:string
 domain: ec:EducationalResource ! educational resource
 is_a: dcterms:relation ! relation
 
 [Typedef]
-id: isDuplicateOf
+id: modalia:isDuplicateOf
 name: is duplicate of
 property_value: skos:definition "Duplicated metadata in DALIA platform" xsd:string
 domain: ec:EducationalResource ! educational resource
 range: ec:EducationalResource ! educational resource
 
 [Typedef]
-id: isIdenticalTo
+id: modalia:isIdenticalTo
 name: is identical to
 property_value: skos:prefLabel "Is identical to" xsd:string
 domain: ec:EducationalResource ! educational resource
@@ -1097,37 +1098,37 @@ range: ec:EducationalResource ! educational resource
 is_a: dcterms:relation ! relation
 
 [Typedef]
-id: isLessProficientThan
+id: modalia:isLessProficientThan
 name: is less proficient than
-domain: Proficiency ! proficiency
-range: Proficiency ! proficiency
+domain: modalia:Proficiency ! proficiency
+range: modalia:Proficiency ! proficiency
 is_transitive: true
-inverse_of: isMoreProficientThan ! is more proficient than
+inverse_of: modalia:isMoreProficientThan ! is more proficient than
 
 [Typedef]
-id: isMemberOf
+id: modalia:isMemberOf
 name: is member of
-domain: User ! user
-range: Community ! community
+domain: modalia:User ! user
+range: modalia:Community ! community
 
 [Typedef]
-id: isMoreProficientThan
+id: modalia:isMoreProficientThan
 name: is more proficient than
-domain: Proficiency ! proficiency
-range: Proficiency ! proficiency
+domain: modalia:Proficiency ! proficiency
+range: modalia:Proficiency ! proficiency
 is_transitive: true
 
 [Typedef]
-id: isNewVersionOf
+id: modalia:isNewVersionOf
 name: is new version of
 property_value: skos:prefLabel "Is new version of" xsd:string
 domain: ec:EducationalResource ! educational resource
 range: ec:EducationalResource ! educational resource
 is_a: dcterms:relation ! relation
-inverse_of: isPreviousVersionOf ! is previous version of
+inverse_of: modalia:isPreviousVersionOf ! is previous version of
 
 [Typedef]
-id: isPreviousVersionOf
+id: modalia:isPreviousVersionOf
 name: is previous version of
 property_value: skos:prefLabel "Is previous version of" xsd:string
 domain: ec:EducationalResource ! educational resource
@@ -1135,19 +1136,19 @@ range: ec:EducationalResource ! educational resource
 is_a: dcterms:relation ! relation
 
 [Typedef]
-id: isSourceCodeOf
+id: modalia:isSourceCodeOf
 name: is source code of
 domain: ec:EducationalResource ! educational resource
 
 [Typedef]
-id: isTranslationOf
+id: modalia:isTranslationOf
 name: is translation of
 property_value: skos:prefLabel "Is translation of" xsd:string
 domain: ec:EducationalResource ! educational resource
 is_a: dcterms:relation ! relation
 
 [Typedef]
-id: isVersionOf
+id: modalia:isVersionOf
 name: is version of
 property_value: skos:prefLabel "Is version of" xsd:string
 domain: ec:EducationalResource ! educational resource
@@ -1156,43 +1157,79 @@ is_symmetric: true
 is_a: dcterms:relation ! relation
 
 [Typedef]
-id: nextPhase
+id: modalia:nextPhase
 name: next phase
-domain: DataLifeCyclePhase ! data life cycle phase
-range: DataLifeCyclePhase ! data life cycle phase
+domain: modalia:DataLifeCyclePhase ! data life cycle phase
+range: modalia:DataLifeCyclePhase ! data life cycle phase
 
 [Typedef]
-id: optionalFor
+id: modalia:optionalFor
 name: optional for
 comment: Defines the skills that are optional for a certain Job
-domain: Skill ! skill
-range: Job ! job
+domain: modalia:Skill ! skill
+range: modalia:Job ! job
 
 [Typedef]
-id: prerequisites
+id: modalia:prerequisites
 name: prerequisites
 domain: ec:KnowledgeTopic ! knowledge topic
 range: ec:KnowledgeTopic ! knowledge topic
 
 [Typedef]
-id: recommender
+id: modalia:recommender
 name: recommender
 property_value: dcterms:description "A community which provides the recommendation of the OER. In the context of DIF, the recommending community is the organization or institution or project or body or online group which recommends the OER." xsd:string {dcterms:contributor="orcid:0000-0001-8997-2620", dcterms:contributor="orcid:0000-0002-0452-7075", dcterms:source="DIF1.3", dcterms:source="recommendationontology"}
 property_value: skos:definition "Associated community(ies) of the resource who are either the supporting organization/institution, or the recommender, or both.  Here indicates recommender" xsd:string
-domain: ec:EducationalResource ! educational resource
-range: Community ! community
+range: modalia:Community ! community
 
 [Typedef]
-id: requiresKnowledge
+id: modalia:requiresKnowledge
 name: requires knowledge
-domain: Skill ! skill
+domain: modalia:Skill ! skill
 range: ec:KnowledgeTopic ! knowledge topic
 
 [Typedef]
-id: requiresProficiencyLevel
+id: modalia:requiresProficiencyLevel
 name: requires proficiency level
 domain: ec:EducationalResource ! educational resource
-range: Proficiency ! proficiency
+range: modalia:Proficiency ! proficiency
+
+[Typedef]
+id: modalia:solves
+name: solves
+domain: modalia:User ! user
+
+[Typedef]
+id: modalia:supportingHost
+name: supportinghost
+property_value: skos:definition "Associated community(ies) of the resource who are either the supporting organization/institution, or the recommender, or both. Here indicates supporting." xsd:string
+domain: ec:EducationalResource ! educational resource
+range: modalia:Community ! community
+
+[Typedef]
+id: modalia:teachesSkill
+name: teaches skill
+domain: ec:EducationalResource ! educational resource
+range: modalia:Skill ! skill
+
+[Typedef]
+id: modalia:userBookmarks
+name: user bookmarks
+domain: modalia:User ! user
+range: ec:EducationalResource ! educational resource
+
+[Typedef]
+id: modalia:userLikes
+name: user likes
+property_value: skos:definition "stores that user liked a given OER" xsd:string
+domain: modalia:User ! user
+range: ec:EducationalResource ! educational resource
+
+[Typedef]
+id: modalia:userViews
+name: user views
+domain: modalia:User ! user
+range: ec:EducationalResource ! educational resource
 
 [Typedef]
 id: schema:author
@@ -1212,42 +1249,5 @@ is_a: dcterms:relation ! relation
 id: schema:itemReviewed
 property_value: skos:definition "The item that is being reviewed/rated." xsd:string
 domain: schema:Review ! review
-range: ec:EducationalResource ! educational resource
-
-[Typedef]
-id: solves
-name: solves
-domain: User ! user
-
-[Typedef]
-id: supportingHost
-name: supportinghost
-property_value: skos:definition "Associated community(ies) of the resource who are either the supporting organization/institution, or the recommender, or both. Here indicates supporting." xsd:string
-domain: ec:EducationalResource ! educational resource
-range: Community ! community
-
-[Typedef]
-id: teachesSkill
-name: teaches skill
-domain: ec:EducationalResource ! educational resource
-range: Skill ! skill
-
-[Typedef]
-id: userBookmarks
-name: user bookmarks
-domain: User ! user
-range: ec:EducationalResource ! educational resource
-
-[Typedef]
-id: userLikes
-name: user likes
-property_value: skos:definition "stores that user liked a given OER" xsd:string
-domain: User ! user
-range: ec:EducationalResource ! educational resource
-
-[Typedef]
-id: userViews
-name: user views
-domain: User ! user
 range: ec:EducationalResource ! educational resource
 

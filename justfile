@@ -2,6 +2,8 @@ test:
     uv run tests.py
 
 export:
+    # before running this, you need to manually remove the blank
+    # prefix entry from TTL and replace it with modalia:
     robot convert -i MoDalia.ttl -o modalia.obo -v --check=false
     robot convert -i MoDalia.ttl -o modalia.owl -v --check=false
     robot convert -i MoDalia.ttl -o modalia.ofn -v --check=false
