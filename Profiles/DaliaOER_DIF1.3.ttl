@@ -107,7 +107,7 @@
 		#sh:datatype xsd:anyURI ;
  sh:nodeKind sh:IRI ;
 	], [
-		sh:name "Author Person"@en ;
+		sh:name "Author"@en ;
 		sh:order 5 ;
 		sh:path schema:author ;
 		sh:severity sh:Violation ;
@@ -117,7 +117,7 @@
     ) ;
     sh:minCount 1 ;
 	], [
-		sh:name "Author Organization"@en ;
+		sh:name "Author internal"@en ;
 		sh:order 6 ;
 		sh:path <https://dalia.education/authorUnordered> ;
 		#sh:node <https://w3id.org/nfdi4ing/profiles/79810e66-fc50-46dd-8b1b-75173bbdd403/> ;
@@ -314,7 +314,7 @@
 	a sh:NodeShape ;
 	sh:closed false ;
 	sh:property [
-		sh:message "schema:Organization must have a valid ROR ID (e.g., https://ror.org/012345678)." ;
+		sh:message "ROR ID is invalid (e.g., https://ror.org/012345678)." ;
 		sh:name "Has ROR ID"@en ;
 		sh:order 4 ;
 		sh:path m4i:hasRorId ;
@@ -339,7 +339,7 @@
 	a sh:NodeShape ;
 	sh:closed false ;
 	sh:property [
-		sh:message "schema:Person must have a valid ORCID iD (e.g., https://orcid.org/0000-0002-1825-0097)." ;
+		sh:message " ORCID is invalid (e.g., https://orcid.org/0000-0002-1825-0097)." ;
 		sh:name "Has ORCID ID"@en ;
 		sh:order 4 ;
 		sh:path m4i:orcidId ;
