@@ -52,7 +52,7 @@
     "@id" : "https://purl.org/ontology/modalia#recommender"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
-    "@value" : "A community which provides the recommendation of the OER. In the context of DIF, the recommending community is the organization or institution or project or body or online group which recommends the OER."
+    "@value" : "A community which provides the recommendation of the OER. In the context of DIF, the recommending community is the organization, institution, project, body, or online group which recommends the OER."
   } ]
 }, {
   "@id" : "_:genid14",
@@ -472,7 +472,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "data"
+    "@value" : "data kind"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -601,6 +601,10 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://purl.org/ontology/modalia#TargetGroup"
   } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A person who administers and maintains libraries or collections of information, for access through reference or borrowing. Librarians work in a variety of settings, such as educational institutions, museums, and corporations, and with various types of informational materials, such as books, films, and databases. Tasks may include acquiring, and circulating library materials, and user services such as organizing information."
+  } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Librarian"
@@ -615,6 +619,13 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://purl.org/ontology/modalia#TargetGroup"
   } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Data Steward is an umbrella term for numerous support roles that involve the creation, management and usage of research data. These can be roles involving data analysis or roles that are more policy and advising-focused. Data stewards facilitate the quality, integrity and access to (meta)data in a manner consistent with the appropriate laws and policies, ensuring professional treatment of data."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#editorialNote" : [ {
+    "@value" : "Source of definition: TuringWay2025, T4FS"
+  } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Data Steward"
@@ -622,6 +633,23 @@
 }, {
   "@id" : "http://purl.org/dc/terms/abstract",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/bibliographicCitation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Citation text of the OER (APA)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://github.com/tibonto/educor#EducationalResource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "citation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
 }, {
   "@id" : "http://purl.org/dc/terms/contributor",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
@@ -911,12 +939,19 @@
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://github.com/tibonto/educor#EducationalResource"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "http://purl.org/dc/terms/"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "requires"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A related resource that is required by the described resource to support its function, delivery, or coherence."
   } ]
 }, {
   "@id" : "http://purl.org/dc/terms/rights",
@@ -978,7 +1013,10 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "Class representing OER which is a book."
+    "@value" : "A non-serial document that is complete in one volume or a designated finite number of volumes. A book published by a publisher is usually identified by an International Standard Book Number (ISBN), and may be manifested as a physical printed publication on paper bound in a hard or soft cover, or in electronic format."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#editorialNote" : [ {
+    "@value" : "Kind of Source: Modified quotation. Source of definition:  http://purl.org/spar/fabio/Book"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
@@ -1393,7 +1431,7 @@
     "@id" : "https://creativecommons.org/licenses/by/4.0/"
   } ],
   "http://purl.org/dc/terms/modified" : [ {
-    "@value" : "2025-11-11"
+    "@value" : "2025-11-26"
   } ],
   "http://purl.org/dc/terms/publisher" : [ {
     "@value" : "ULB TUDa – University and State Library, Technical University, Darmstadt, Germany"
@@ -1432,35 +1470,6 @@
     "@value" : "v1.0.0"
   } ]
 }, {
-  "@id" : "https://purl.org/ontology/modalia#AnalysingPhase",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "analysing phase"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://purl.org/ontology/modalia#DataLifeCyclePhase"
-  } ],
-  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
-    "@id" : "https://purl.org/ontology/modalia#AssurancePhase"
-  }, {
-    "@id" : "https://purl.org/ontology/modalia#CollectionPhase"
-  }, {
-    "@id" : "https://purl.org/ontology/modalia#DescriptionPhase"
-  }, {
-    "@id" : "https://purl.org/ontology/modalia#DiscoveryPhase"
-  }, {
-    "@id" : "https://purl.org/ontology/modalia#IntegratePhase"
-  }, {
-    "@id" : "https://purl.org/ontology/modalia#PlanningPhase"
-  }, {
-    "@id" : "https://purl.org/ontology/modalia#PreservationPhase"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "The last phase in data life cycle."
-  } ]
-}, {
   "@id" : "https://purl.org/ontology/modalia#Annotator",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
@@ -1479,16 +1488,6 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#editorialNote" : [ {
     "@value" : "Kind of Source: Quotation. Source of definition: https://id.loc.gov/vocabulary/relators/ann.html"
-  } ]
-}, {
-  "@id" : "https://purl.org/ontology/modalia#AssurancePhase",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "assurance phase"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://purl.org/ontology/modalia#DataLifeCyclePhase"
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#BachelorStudent",
@@ -1521,6 +1520,13 @@
     "@language" : "en",
     "@value" : "advanced beginner"
   } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Advanced beginner learners are individuals who possess some basic knowledge of the field of learning and are able to recognize patterns. They require instructions and need to follow examples."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#editorialNote" : [ {
+    "@value" : "Kind of Source: paraphrase. Source of definition: Dreyfus2004, Benner1982"
+  } ],
   "https://purl.org/ontology/modalia#hasOrder" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "2"
@@ -1538,10 +1544,6 @@
 }, {
   "@id" : "https://purl.org/ontology/modalia#BestPractices",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Class representing OERs that are best practices in scientific area."
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "best practices"
@@ -1563,10 +1565,6 @@
 }, {
   "@id" : "https://purl.org/ontology/modalia#Code",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Class representing OER which are code like Jupyternotebook."
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "code"
@@ -1616,6 +1614,13 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://purl.org/ontology/modalia#DataLifeCyclePhase"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "https://purl.org/ontology/modalia#ProcessingAndAnalyzingPhase"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The research data life cycle phase of collection involves collecting data through methods such as observations with instruments. The data are placed into a digital form and documented, ideally using metadata schema. The acquisition of existing data can be another activity during this period."
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#Community",
@@ -1626,7 +1631,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "A Community gathers users (members) and educational resources/learning paths similar  to Zenodo communities"
+    "@value" : "The community is the associated organization, institution, project, body, or online group which supports the educational resource, or recommends it, or both. A community gathers users (members) and educational resources/learning paths similar to Zenodo communities."
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#Competent",
@@ -1637,6 +1642,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "competent"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Competent learners have gained moderate experience in the field of learning through consistent application of skills. They possess significant knowledge of the field, are able to evaluate features, and can efficiently and accurately apply various plans and rules according to situations and tasks. At this stage, problem-solving and decision-making are accompanied by emotional involvement."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#editorialNote" : [ {
+    "@value" : "Kind of Source: paraphrase. Source of definition: Dreyfus2004, Benner1982"
   } ],
   "https://purl.org/ontology/modalia#hasOrder" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
@@ -1703,17 +1715,13 @@
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
     "@value" : "Educational quality of an OER"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#example" : [ {
-    "@language" : "en",
-    "@value" : "High quality"
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#Contributor",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Contributed to OER with some contribution type"
+    "@value" : "Contributed to OER with a role"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1810,7 +1818,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "One of the phases of data life cycle."
+    "@value" : "A research data life cycle phase is an element of the research data life cycle model."
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#DataManager",
@@ -1833,18 +1841,12 @@
     "@value" : "Kind of Source: Quotation. Source of definition: http://w3id.org/nfdi4ing/metadata4ing#DataManager https://datacite-metadata-schema.readthedocs.io/en/4.6/"
   } ]
 }, {
-  "@id" : "https://purl.org/ontology/modalia#DescriptionPhase",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "description phase"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://purl.org/ontology/modalia#DataLifeCyclePhase"
-  } ]
-}, {
   "@id" : "https://purl.org/ontology/modalia#Discipline",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@language" : "en",
+    "@value" : "http://purl.org/spar/fabio/"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "discipline"
@@ -1855,21 +1857,11 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "knowledge of a specific, specialized discipline or field"
+    "@value" : "The discipline or university/college subject the learning resource belongs to."
   } ],
   "http://www.w3.org/2004/02/skos/core#example" : [ {
     "@language" : "en",
     "@value" : "e.g Engineering"
-  } ]
-}, {
-  "@id" : "https://purl.org/ontology/modalia#DiscoveryPhase",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "discovery phase"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://purl.org/ontology/modalia#DataLifeCyclePhase"
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#Distributor",
@@ -1920,7 +1912,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "The educational level of a user: Bachlors, Masters or PhD"
+    "@value" : "The educational level of a user: Bachelor, Master's or PhD"
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#Expert",
@@ -1931,6 +1923,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "expert"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Expert learners are individuals knowledgeable in a specialized field, particularly people with the special skill or knowledge representing mastery of a particular subject. They possess a deep and comprehensive understanding of the subject matter, enabling them to quickly and intuitively analyze new situations and tasks, and develop complex solutions without conscious deliberation."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#editorialNote" : [ {
+    "@value" : "Kind of Source: Q, S. Source of definition: http://vocab.getty.edu/aat/scopeNote/49454, Dreyfus2004, Benner1982"
   } ],
   "https://purl.org/ontology/modalia#hasOrder" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
@@ -1968,16 +1967,6 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "https://purl.org/ontology/modalia#FreeLicense",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "free license"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://purl.org/ontology/modalia#License"
-  } ]
-}, {
   "@id" : "https://purl.org/ontology/modalia#HostingInstitution",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
@@ -1996,16 +1985,6 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#editorialNote" : [ {
     "@value" : "Kind of Source: Quotation. Source of definition: http://w3id.org/nfdi4ing/metadata4ing#HostingInstitution https://datacite-metadata-schema.readthedocs.io/en/4.6"
-  } ]
-}, {
-  "@id" : "https://purl.org/ontology/modalia#IntegratePhase",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "integration phase"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://purl.org/ontology/modalia#DataLifeCyclePhase"
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#Interviewee",
@@ -2075,6 +2054,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://purl.org/ontology/modalia#UserRole"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "a person who is using the platform as a learner."
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#LearningObjective",
@@ -2092,7 +2075,10 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "Learning Objective as defined in learning objective matrix (LZM)"
+    "@value" : "A learning objective describes the verifiable increase in knowledge, skills and attitudes in relation to a specific learning content’ (Stangl, n.d.), which should be achieved at the end of a learning process. (cf. Gundermann, 2024)"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#editorialNote" : [ {
+    "@value" : "source https://zenodo.org/records/15846806/files/Glossary_LOM-RDM_V3_eng.pdf"
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#LearningPath",
@@ -2118,7 +2104,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "One step of a learning path, it has an order and one educational resource. Optionally a learning path step can have a note for learner."
+    "@value" : "One step of a learning path, it has an order and one educational resource. A learning path step can have a note for learner."
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#LearningResourceType",
@@ -2134,10 +2120,6 @@
 }, {
   "@id" : "https://purl.org/ontology/modalia#Lecture",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Class representing OERs that are lectures."
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "lecture"
@@ -2162,6 +2144,14 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "license"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@language" : "en",
+    "@value" : "http://purl.org/dc/terms/LicenseDocument"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A legal document giving official permission to do something with the resource."
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#MastersStudent",
@@ -2193,7 +2183,10 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "General type of data content encoded in a computer file. Digital media type of the resource. To be used with user preferences according to VARK learning style."
+    "@value" : "The general type of data content encoded in a computer file in sense of the modality (text, audio, picture etc.).  The media type is to be used  for user preferences for the learning style(s). If the resource consists of more than one item with different DOIs, the MediaType is \\\"multipart\\\" and the relations are provided in the field \\\"RelatedWork\\\"."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#editorialNote" : [ {
+    "@value" : "Kind of Source: Original and paraphrase. Source of definition: https://github.com/patrickmccallum/mimetype-io/blob/master/src/mimeData.json"
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#MetadataContact",
@@ -2252,6 +2245,20 @@
     "@value" : "Museum Professional"
   } ]
 }, {
+  "@id" : "https://purl.org/ontology/modalia#NonProprietaryLicense",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "non-proprietary license"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://purl.org/ontology/modalia#License"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A type of license that grants permission to access and use a work without monetary cost and to redistribute the original work. Some licenses of this type may permit modification and distribution of derivative works, while others may restrict or prohibit these rights."
+  } ]
+}, {
   "@id" : "https://purl.org/ontology/modalia#Novice",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
@@ -2260,6 +2267,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "novice"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Novice learners are individuals who are unpracticed and have little to no knowledge in the field of learning. They lack a fundamental understanding of basic concepts and are not yet able to assess situations and tasks effectively. They require introductions, descriptions, and guidelines."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#editorialNote" : [ {
+    "@value" : "Kind of Source: O, S. Source of definition: Dreyfus2004, Benner1982"
   } ],
   "https://purl.org/ontology/modalia#hasOrder" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
@@ -2301,15 +2315,12 @@
     "@language" : "en",
     "@value" : "PhD student"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@value" : "http://vivoweb.org/ontology/core#GraduateStudent"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://purl.org/ontology/modalia#TargetGroup"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "A student in PhD degree"
+    "@value" : "A student of Higher Education who is attending a university or college (e.g. in USA, GB) for achieving level 8 of the 2011 version of the International Standard Classification of Education structure."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
@@ -2325,9 +2336,12 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://purl.org/ontology/modalia#DataLifeCyclePhase"
   } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "https://purl.org/ontology/modalia#ProcessingAndAnalyzingPhase"
+  } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "First phase in data life cycle. Description of the data that will be compiled."
+    "@value" : "The research data life cycle phase of planning includes the description of the data that will be compiled and how the data will be managed and made accessible throughout its lifetime. For this, the methods of data collection and analyses can be determined,  questions regarding file formats, version control, access, backup and storage, and legal and ethical aspects be clarified, the form of metadata can be specified, and existing data sources explored. Budget and organizational planning can also be part of this phase. Often a research data management plan is compiled."
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#Podcast",
@@ -2380,6 +2394,32 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://purl.org/ontology/modalia#DataLifeCyclePhase"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "https://purl.org/ontology/modalia#ProcessingAndAnalyzingPhase"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The preservation phase of the research data lifecyle includes selecting the data and their appropriate formats to be preserved, performing backup and storage,  and compiling preservation documentation that includes ethical and legal information.  Information on responsibilities and provenance can also be provided. The data are submitted to an appropriate long-term archive , e.g., a data center. The preserved data must be curated to ensure their future use."
+  } ]
+}, {
+  "@id" : "https://purl.org/ontology/modalia#ProcessingAndAnalyzingPhase",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "processing and analyzing phase"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://purl.org/ontology/modalia#DataLifeCyclePhase"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "https://purl.org/ontology/modalia#PublishingAndSharingPhase"
+  }, {
+    "@id" : "https://purl.org/ontology/modalia#ReusingPhase"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The research data life cycle phase of processing and analyzing involves the transformation, derivation, and modification of data, e.g., by anonymization. The data quality is assured and documented. Additionally, the data itself is documented using the appropriate metadata standards. The data is analyzed and interpreted, and research outcomes are produced. This phase overlaps with the assurance phase and the description phase of the DataOne model."
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#Producer",
@@ -2404,6 +2444,10 @@
 }, {
   "@id" : "https://purl.org/ontology/modalia#Proficiency",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Benner’s Novice to Expert\nThe five stages of proficiency in the novice to expert model are: novice, advanced beginner, competent, proficient, and expert (Benner, 1982)."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "proficiency"
@@ -2413,7 +2457,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "Benner’s Novice to Expert\r\nThe five stages of proficiency in the novice to expert model are: novice, advanced beginner, competent, proficient, and expert (Benner, 1982)."
+    "@value" : "The proposed level of proficiency in research data management and data literacy of the learners in regard to the learning content."
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#Proficient",
@@ -2424,6 +2468,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "proficient"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Proficient learners possess a strong foundation of knowledge and skills, enabling them to perform tasks with a high degree of accuracy and efficiency. They are able to recognize patterns in situations and tasks, and can develop complex solutions through conscious deliberation."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#editorialNote" : [ {
+    "@value" : "Kind of Source: paraphrase. Source of definition: Dreyfus2004, Benner1982"
   } ],
   "https://purl.org/ontology/modalia#hasOrder" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
@@ -2518,13 +2569,31 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://purl.org/ontology/modalia#License"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A proprietary license is a type of license for a creative work in which the copyright holder retains most of the rights exclusively."
+  } ]
+}, {
+  "@id" : "https://purl.org/ontology/modalia#PublishingAndSharingPhase",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "publishing and sharing phase"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://purl.org/ontology/modalia#DataLifeCyclePhase"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "In the publishing and sharing phase, copyright issues are clarified. Data is described for users and readers, using the appropriate metadata standards. Suitable publication locations are selected, and then the data is published and promoted."
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#RDMResource",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "OER related to Research Data Management"
+    "@value" : "OER related to research data management"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -2549,7 +2618,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "The ability to carry out tasks."
+    "@value" : "The ability to carry out RDM tasks."
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#RDMSubjectCluster",
@@ -2560,7 +2629,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "Cluster of RDM topics areas. Matches Subject area in Learning Objective Matrix version 3 ( https://zenodo.org/records/15846806 )"
+    "@value" : "Cluster of RDM topics subjects. Matches Subject area in Learning Objective Matrix version 3 ( https://zenodo.org/records/15846806 )"
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#RDMTopic",
@@ -2712,6 +2781,20 @@
     "@id" : "https://purl.org/ontology/modalia#UserRole"
   } ]
 }, {
+  "@id" : "https://purl.org/ontology/modalia#ReusingPhase",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "reusing phase"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://purl.org/ontology/modalia#DataLifeCyclePhase"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The reusing phase of the research data life cycle includes locating and obtaining potentially useful data, along with the relevant information about the data (metadata).  Data from disparate sources are combined to form homogeneous sets of data. These new and old data can be analyzed or re-analyzed, or used for teaching and learning. This phase is identical to the discovery, integration, and analyzing phase of the DataOne lifecycle."
+  } ]
+}, {
   "@id" : "https://purl.org/ontology/modalia#RightsHolder",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
@@ -2736,7 +2819,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Job Skill, ability to perform some tasks."
+    "@value" : "The ability to carry out specific tasks in a job."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -2844,9 +2927,6 @@
     "@language" : "en",
     "@value" : "target group"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@value" : "http://purl.org/dcx/lrmi-terms/EducationalAudience"
-  } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
     "@value" : "The target group refers to the learners of the resource: A class of agents for whom the learning resource is intended or useful."
@@ -2901,6 +2981,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://purl.org/ontology/modalia#UserRole"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "a person who is using the system as a teacher."
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#TeacherSchool",
@@ -2947,10 +3031,6 @@
 }, {
   "@id" : "https://purl.org/ontology/modalia#Tutorial",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Class representing OERs that are in form of tutorial."
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "tutorial"
@@ -2981,7 +3061,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "Registered user in the system, can have different roles i.e learner , teacher , curator, etc"
+    "@value" : "Registered user in the system, can have different roles e.g learner , teacher , curator, etc"
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#UserComment",
@@ -3000,6 +3080,10 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "user role"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "roles of users using the system"
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#VARKAuditory",
@@ -3069,13 +3153,20 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "http://w3id.org/nfdi4ing/metadata4ing#WorkPackageLeader"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A Work Package is a recognized data product, not all of which is included in publication. The package, instead, may include notes, discarded documents, etc. The Work Package Leader is responsible for ensuring the comprehensive contents, versioning, and availability of the Work Package during the development of the resource."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#editorialNote" : [ {
+    "@value" : "A Work Package is a recognized data product, not all of which is included in publication. The package, instead, may include notes, discarded documents, etc. Kind of Source: Quotation. Source of definition: http://w3id.org/nfdi4ing/metadata4ing#WorkPackageLeader https://datacite-metadata-schema.readthedocs.io/en/4.6"
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#authorUnordered",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "A property that links OER to its authors in unordered way to improve perrformance."
+    "@value" : "A property that links the OER to its authors in unordered way (according to order in authorship list) to improve performance."
   }, {
     "@language" : "en",
     "@value" : "authorUnordered"
@@ -3135,24 +3226,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "defines the data life cycle phase that the resource covers"
-  } ]
-}, {
-  "@id" : "https://purl.org/ontology/modalia#citation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Citation text of the OER (APA)"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://github.com/tibonto/educor#EducationalResource"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "citation"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+    "@value" : "refers to the data life cycle phase that the resource covers"
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#commentDate",
@@ -3203,7 +3277,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "The OER of a user comment"
+    "@value" : "The text of a user's comment on an OER"
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#commentUserID",
@@ -3220,7 +3294,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "relates a user to his/her comment"
+    "@value" : "relates a user to their comment"
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#commentedOER",
@@ -3405,6 +3479,10 @@
 }, {
   "@id" : "https://purl.org/ontology/modalia#givesProficiencyLevel",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "gives in sense of produce/yield/leads to proficiency level"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://github.com/tibonto/educor#EducationalResource"
   } ],
@@ -3420,7 +3498,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "the DOI of the resource if exists."
+    "@value" : "the digital object identifier (DOI) of the resource if exists."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://github.com/tibonto/educor#EducationalResource"
@@ -3463,7 +3541,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "The preferenced learning class from VARK"
+    "@value" : "The preferred learning style from VARK"
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#hasLearningResource",
@@ -3486,14 +3564,14 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "has learning type"
+    "@value" : "has learning resource type"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://purl.org/ontology/modalia#LearningResourceType"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "The value is the learning type of content of a learning resource (e.g Lecture)"
+    "@value" : "The pedagogical type of the resource: information for the educational use. (e.g Lecture)"
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#hasMediaType",
@@ -3520,6 +3598,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Additional metadata besides the current metadata."
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#hasOrder",
@@ -3536,7 +3618,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "Order of proficiency level, starting from 1 for Novice and increasing by proficiency"
+    "@value" : "Order of proficiency level or learningPathStep, integer numbers starting from 1."
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#hasOwner",
@@ -3606,6 +3688,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The version of text or software as it is originally written in plain text (i.e., human readable alphanumeric characters)."
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#hasTargetGroup",
@@ -3636,6 +3722,13 @@
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://purl.org/dc/terms/relation"
   } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A related resource that is a translation of the content of the described resource. When a resource is shared in one language, then later translated to another language, use “HasTranslation” to link the original resource to its translation. When a resource is released at the same time in multiple languages, use “HasTranslation” to connect the works to each other in both directions."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#editorialNote" : [ {
+    "@value" : "Kind of Source: Modified quotation. Source of definition: https://datacite-metadata-schema.readthedocs.io/_/downloads/en/4.6/pdf"
+  } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Has translation"
@@ -3655,29 +3748,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
-  } ]
-}, {
-  "@id" : "https://purl.org/ontology/modalia#industry",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://purl.org/ontology/modalia#Job"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "job has industry"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "The industry of a job"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#example" : [ {
-    "@value" : "Research & Academia"
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#isDescribedBy",
@@ -3923,6 +3993,19 @@
     "@value" : "Is version of"
   } ]
 }, {
+  "@id" : "https://purl.org/ontology/modalia#jobTitle",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://purl.org/ontology/modalia#Job"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "job title"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
   "@id" : "https://purl.org/ontology/modalia#likesCount",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -3934,19 +4017,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#int"
-  } ]
-}, {
-  "@id" : "https://purl.org/ontology/modalia#nextPhase",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://purl.org/ontology/modalia#DataLifeCyclePhase"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "next phase"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://purl.org/ontology/modalia#DataLifeCyclePhase"
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#notesForLearner",
@@ -3966,7 +4036,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Defines the skills that are optional for a certain Job"
+    "@value" : "Defines the skills that are optional for a certain job"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://purl.org/ontology/modalia#Skill"
@@ -3979,23 +4049,10 @@
     "@id" : "https://purl.org/ontology/modalia#Job"
   } ]
 }, {
-  "@id" : "https://purl.org/ontology/modalia#prerequisites",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://github.com/tibonto/educor#KnowledgeTopic"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "prerequisites"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://github.com/tibonto/educor#KnowledgeTopic"
-  } ]
-}, {
   "@id" : "https://purl.org/ontology/modalia#recommender",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/terms/description" : [ {
-    "@value" : "A community which provides the recommendation of the OER. In the context of DIF, the recommending community is the organization or institution or project or body or online group which recommends the OER."
+    "@value" : "A community which provides the recommendation of the OER. In the context of DIF, the recommending community is the organization, institution, project, body, or online group which recommends the OER."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "_:genid10"
@@ -4006,10 +4063,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://purl.org/ontology/modalia#Community"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "Associated community(ies) of the resource who are either the supporting organization/institution, or the recommender, or both.  Here indicates recommender"
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#requiresKnowledge",
@@ -4062,6 +4115,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "guiding notes of how to study the learning path material"
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#supportingHost",
@@ -4078,7 +4135,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "Associated community(ies) of the resource who are either the supporting organization/institution, or the recommender, or both. Here indicates supporting."
+    "@value" : "A community that supports (by allocating facilities, staff, or other resources) a project, program, meeting, event, data objects, material culture objects, or other entities capable of support."
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#teachesSkill",
@@ -4121,7 +4178,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "stores that user liked a given OER"
+    "@value" : "the educational resource the user likes"
   } ]
 }, {
   "@id" : "https://purl.org/ontology/modalia#userViews",
@@ -4155,10 +4212,6 @@
 }, {
   "@id" : "https://schema.org/AudioObject",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A class representing OERs which are audio files."
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "audio"
@@ -4177,16 +4230,16 @@
 }, {
   "@id" : "https://schema.org/ImageObject",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "An image file."
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "image"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://purl.org/ontology/modalia#MediaType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A resource has the media type image if it mainly consists of (a) still image(s)."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
@@ -4258,10 +4311,6 @@
 }, {
   "@id" : "https://schema.org/PresentationDigitalDocument",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A presentation / slides file."
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "presentation"
@@ -4333,10 +4382,6 @@
 }, {
   "@id" : "https://schema.org/Text",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Class representing OER which are text."
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "text"
@@ -4355,10 +4400,6 @@
 }, {
   "@id" : "https://schema.org/VideoObject",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A video file."
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "video"
@@ -4397,12 +4438,19 @@
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://github.com/tibonto/educor#EducationalResource"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "https://schema.org/"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "accessibilityfeature"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Content features of the resource, such as accessible media, alternatives and supported enhancements for accessibility."
   } ]
 }, {
   "@id" : "https://schema.org/author",
@@ -4425,10 +4473,31 @@
   "@id" : "https://schema.org/bestRating",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
+  "@id" : "https://schema.org/competencyRequired",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://github.com/tibonto/educor#KnowledgeTopic"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "competency required"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://github.com/tibonto/educor#KnowledgeTopic"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "prerequisits of a knowledge topic"
+  } ]
+}, {
   "@id" : "https://schema.org/datePublished",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://github.com/tibonto/educor#EducationalResource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@language" : "en",
+    "@value" : "https://schema.org/"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -4436,6 +4505,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Date of first publication or broadcast."
   } ]
 }, {
   "@id" : "https://schema.org/downloadUrl",
@@ -4490,12 +4563,20 @@
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://github.com/tibonto/educor#EducationalResource"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@language" : "en",
+    "@value" : "https://schema.org/"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "fileSize"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Size of the application / package (e.g. 18MB). In the absence of a unit (MB, KB etc.), KB will be assumed."
   } ]
 }, {
   "@id" : "https://schema.org/givenName",
@@ -4526,10 +4607,6 @@
 }, {
   "@id" : "https://schema.org/image",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Property linking an OER to an image representing it."
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://github.com/tibonto/educor#EducationalResource"
   } ],
@@ -4542,7 +4619,30 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "A resource has the media type image if it mainly consists of (a) still image(s)."
+    "@value" : "An image representing the OER."
+  } ]
+}, {
+  "@id" : "https://schema.org/industry",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://purl.org/ontology/modalia#Job"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "job has industry"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The industry of a job"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@value" : "Research & Academia"
   } ]
 }, {
   "@id" : "https://schema.org/isAccessibleForFree",
@@ -4694,21 +4794,12 @@
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#duration"
   } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Approximate or typical time it usually takes to work with or through the content of this work for the typical or target audience."
+  } ],
   "http://www.w3.org/2004/02/skos/core#example" : [ {
     "@value" : "\"PT7M11S\"^^xsd:duration"
-  } ]
-}, {
-  "@id" : "https://schema.org/title",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://purl.org/ontology/modalia#Job"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Job title"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "https://schema.org/url",
@@ -4785,6 +4876,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Either a traditional text compilation, or the compiler program used to generate executable software."
   } ]
 }, {
   "@id" : "https://w3id.org/citedcat-ap/isContinuedBy",
@@ -4916,10 +5011,6 @@
 }, {
   "@id" : "https://w3id.org/kim/hcrt/case_study",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Class representing OERs that are in form of case study."
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "case study"
@@ -4968,6 +5059,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://purl.org/ontology/modalia#LearningResourceType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Any form of digital representation, e.g. facts, measurements, records, or observations about the world. Data may be in any format or medium taking the form of text, notes, numbers, symbols, images, films, video, sound recordings, pictorial reproductions, drawing, graphical representations, procedural manuals, forms, data files, data processing algorithms, or statistical records."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
@@ -5019,10 +5114,6 @@
 }, {
   "@id" : "https://w3id.org/kim/hcrt/educational_game",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Class representing OERs that are in form of educational games."
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "educational game"
@@ -5044,10 +5135,6 @@
 }, {
   "@id" : "https://w3id.org/kim/hcrt/experiment",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Class representing OERs that are describing an experiment"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "experiment"
@@ -5128,6 +5215,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://purl.org/ontology/modalia#LearningResourceType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Graphic representations of a geographic area, including physical features and political boundaries, where each point corresponds to a geographical or celestial position according to a definite scale or projection."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",

@@ -35,7 +35,7 @@
 The ontology is used for making a knowledge graph as a backend to platform for teaching, personal learning, and recommendation.
 The ontology is developed in OWL in Protege 5.5.0."""@en ;
                                       dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
-                                      dcterms:modified "2025-11-11" ;
+                                      dcterms:modified "2025-11-26" ;
                                       dcterms:publisher "ULB TUDa – University and State Library, Technical University, Darmstadt, Germany" ;
                                       dcterms:title "MoDALIA Ontology"@en ;
                                       vann:preferredNamespacePrefix "modalia" ;
@@ -281,7 +281,9 @@ dcterms:replaces rdf:type owl:ObjectProperty ;
 dcterms:requires rdf:type owl:ObjectProperty ;
                  rdfs:domain ec:EducationalResource ;
                  rdfs:range owl:Thing ;
-                 rdfs:label "requires"@en .
+                 rdfs:isDefinedBy "http://purl.org/dc/terms/" ;
+                 rdfs:label "requires"@en ;
+                 skos:definition "A related resource that is required by the described resource to support its function, delivery, or coherence."@en .
 
 
 ###  http://purl.org/spar/fabio/hasDiscipline
@@ -485,7 +487,8 @@ ec:generatedFrom rdf:type owl:ObjectProperty ;
 :hasMetadata rdf:type owl:ObjectProperty ;
              rdfs:domain ec:EducationalResource ;
              rdfs:range owl:Thing ;
-             rdfs:label "has metadata"@en .
+             rdfs:label "has metadata"@en ;
+             skos:definition "Additional metadata besides the current metadata."@en .
 
 
 ###  https://purl.org/ontology/modalia#hasOwner
@@ -522,7 +525,8 @@ ec:generatedFrom rdf:type owl:ObjectProperty ;
 :hasSourceCode rdf:type owl:ObjectProperty ;
                rdfs:domain ec:EducationalResource ;
                rdfs:range owl:Thing ;
-               rdfs:label "has source code"@en .
+               rdfs:label "has source code"@en ;
+               skos:definition "The version of text or software as it is originally written in plain text (i.e., human readable alphanumeric characters)."@en .
 
 
 ###  https://purl.org/ontology/modalia#hasTargetGroup
@@ -538,6 +542,8 @@ ec:generatedFrom rdf:type owl:ObjectProperty ;
                 rdfs:domain ec:EducationalResource ;
                 rdfs:range owl:Thing ;
                 rdfs:label "has translation"@en ;
+                skos:definition "A related resource that is a translation of the content of the described resource. When a resource is shared in one language, then later translated to another language, use “HasTranslation” to link the original resource to its translation. When a resource is released at the same time in multiple languages, use “HasTranslation” to connect the works to each other in both directions."@en ;
+                skos:editorialNote "Kind of Source: Modified quotation. Source of definition: https://datacite-metadata-schema.readthedocs.io/_/downloads/en/4.6/pdf" ;
                 skos:prefLabel "Has translation"@en .
 
 
@@ -764,7 +770,8 @@ schema:author rdf:type owl:ObjectProperty ;
 schema:competencyRequired rdf:type owl:ObjectProperty ;
                           rdfs:domain ec:KnowledgeTopic ;
                           rdfs:range ec:KnowledgeTopic ;
-                          rdfs:label "competency required"@en .
+                          rdfs:label "competency required"@en ;
+                          skos:definition "prerequisits of a knowledge topic"@en .
 
 
 ###  https://schema.org/isBasedOn
@@ -801,7 +808,8 @@ schema:itemReviewed rdf:type owl:ObjectProperty ;
 <https://w3id.org/citedcat-ap/isCompiledBy> rdf:type owl:ObjectProperty ;
                                             rdfs:domain ec:EducationalResource ;
                                             rdfs:range owl:Thing ;
-                                            rdfs:label "isCompiledBy"@en .
+                                            rdfs:label "isCompiledBy"@en ;
+                                            skos:definition "Either a traditional text compilation, or the compiler program used to generate executable software."@en .
 
 
 ###  https://w3id.org/citedcat-ap/isContinuedBy
@@ -1101,9 +1109,18 @@ schema:identifier rdf:type owl:DatatypeProperty ;
 schema:image rdf:type owl:DatatypeProperty ;
              rdfs:domain ec:EducationalResource ;
              rdfs:range xsd:anyURI ;
-             rdfs:comment "Property linking an OER to an image representing it."@en ;
              rdfs:label "image"@en ;
-             skos:definition "A resource has the media type image if it mainly consists of (a) still image(s)."@en .
+             skos:definition "An image representing the OER."@en .
+
+
+###  https://schema.org/industry
+schema:industry rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf owl:topDataProperty ;
+                rdfs:domain :Job ;
+                rdfs:range xsd:string ;
+                rdfs:label "job has industry"@en ;
+                skos:definition "The industry of a job"@en ;
+                skos:example "Research & Academia" .
 
 
 ###  https://schema.org/industry
@@ -1230,6 +1247,7 @@ bf:Role rdf:type owl:Class ;
 <http://purl.obolibrary.org/obo/OCCO_25402200> rdf:type owl:Class ;
                                                rdfs:subClassOf :TargetGroup ;
                                                rdfs:label "librarian"@en ;
+                                               skos:definition "A person who administers and maintains libraries or collections of information, for access through reference or borrowing. Librarians work in a variety of settings, such as educational institutions, museums, and corporations, and with various types of informational materials, such as books, films, and databases. Tasks may include acquiring, and circulating library materials, and user services such as organizing information."@en ;
                                                skos:prefLabel "Librarian"@en .
 
 
@@ -1237,6 +1255,8 @@ bf:Role rdf:type owl:Class ;
 <http://purl.obolibrary.org/obo/T4FS_0000178> rdf:type owl:Class ;
                                               rdfs:subClassOf :TargetGroup ;
                                               rdfs:label "data steward"@en ;
+                                              skos:definition "Data Steward is an umbrella term for numerous support roles that involve the creation, management and usage of research data. These can be roles involving data analysis or roles that are more policy and advising-focused. Data stewards facilitate the quality, integrity and access to (meta)data in a manner consistent with the appropriate laws and policies, ensuring professional treatment of data."@en ;
+                                              skos:editorialNote "Source of definition: TuringWay2025, T4FS" ;
                                               skos:prefLabel "Data Steward"@en .
 
 
@@ -1254,7 +1274,8 @@ bibo:Article rdf:type owl:Class ;
 bibo:Book rdf:type owl:Class ;
           rdfs:subClassOf :LearningResourceType ;
           rdfs:label "book"@en ;
-          skos:definition "Class representing OER which is a book."@en ;
+          skos:definition "A non-serial document that is complete in one volume or a designated finite number of volumes. A book published by a publisher is usually identified by an International Standard Book Number (ISBN), and may be manifested as a physical printed publication on paper bound in a hard or soft cover, or in electronic format."@en ;
+          skos:editorialNote "Kind of Source: Modified quotation. Source of definition:  http://purl.org/spar/fabio/Book" ;
           skos:prefLabel "Book"@en .
 
 
@@ -1358,26 +1379,6 @@ ec:Recommendation rdf:type owl:Class ;
                   skos:example "The recommendation is \"Quadratic Equation\""@en .
 
 
-###  https://purl.org/ontology/modalia#AnalysingPhase
-:AnalysingPhase rdf:type owl:Class ;
-                rdfs:subClassOf :DataLifeCyclePhase ;
-                owl:disjointWith :AssurancePhase ,
-                                 :CollectionPhase ,
-                                 :DescriptionPhase ,
-                                 :DiscoveryPhase ,
-                                 :IntegratePhase ,
-                                 :PlanningPhase ,
-                                 :PreservationPhase ;
-                rdfs:label "analysing phase"@en ;
-                skos:definition "The last phase in data life cycle."@en .
-
-
-###  https://purl.org/ontology/modalia#AssurancePhase
-:AssurancePhase rdf:type owl:Class ;
-                rdfs:subClassOf :DataLifeCyclePhase ;
-                rdfs:label "assurance phase"@en .
-
-
 ###  https://purl.org/ontology/modalia#BachelorStudent
 :BachelorStudent rdf:type owl:Class ;
                  rdfs:subClassOf :TargetGroup ;
@@ -1390,7 +1391,6 @@ ec:Recommendation rdf:type owl:Class ;
 ###  https://purl.org/ontology/modalia#BestPractices
 :BestPractices rdf:type owl:Class ;
                rdfs:subClassOf :LearningResourceType ;
-               rdfs:comment "Class representing OERs that are best practices in scientific area."@en ;
                rdfs:label "best practices"@en ;
                skos:definition "A process or method that has been shown to work well, succeeds in achieving its objective(s), is acknowledged and therefore can be recommended as an approach."@en ;
                skos:editorialNote "Kind of Source: Modified quotation. Source of definition: ISO 22163:2024, 4" ;
@@ -1400,7 +1400,6 @@ ec:Recommendation rdf:type owl:Class ;
 ###  https://purl.org/ontology/modalia#Code
 :Code rdf:type owl:Class ;
       rdfs:subClassOf :MediaType ;
-      rdfs:comment "Class representing OER which are code like Jupyternotebook."@en ;
       rdfs:label "code"@en ;
       skos:definition "A resource has the media type code if it mainly consists of programming code."@en ;
       skos:prefLabel "code"@en .
@@ -1419,7 +1418,9 @@ ec:Recommendation rdf:type owl:Class ;
 ###  https://purl.org/ontology/modalia#CollectionPhase
 :CollectionPhase rdf:type owl:Class ;
                  rdfs:subClassOf :DataLifeCyclePhase ;
-                 rdfs:label "collection phase"@en .
+                 owl:disjointWith :ProcessingAndAnalyzingPhase ;
+                 rdfs:label "collection phase"@en ;
+                 skos:definition "The research data life cycle phase of collection involves collecting data through methods such as observations with instruments. The data are placed into a digital form and documented, ideally using metadata schema. The acquisition of existing data can be another activity during this period."@en .
 
 
 ###  https://purl.org/ontology/modalia#Community
@@ -1440,8 +1441,7 @@ ec:Recommendation rdf:type owl:Class ;
 ###  https://purl.org/ontology/modalia#ContentQuality
 :ContentQuality rdf:type owl:Class ;
                 rdfs:label "content quality"@en ;
-                skos:definition "Educational quality of an OER"@en ;
-                skos:example "High quality"@en .
+                skos:definition "Educational quality of an OER"@en .
 
 
 ###  https://purl.org/ontology/modalia#Contributor
@@ -1475,33 +1475,22 @@ ec:Recommendation rdf:type owl:Class ;
 :DataLifeCyclePhase rdf:type owl:Class ;
                     rdfs:label "data life cycle phase"@en ;
                     rdfs:seeAlso "https://towson.libguides.com/dataresearch/datamangement/dldataone"@en ;
-                    skos:definition "One of the phases of data life cycle."@en .
-
-
-###  https://purl.org/ontology/modalia#DescriptionPhase
-:DescriptionPhase rdf:type owl:Class ;
-                  rdfs:subClassOf :DataLifeCyclePhase ;
-                  rdfs:label "description phase"@en .
+                    skos:definition "A research data life cycle phase is an element of the research data life cycle model."@en .
 
 
 ###  https://purl.org/ontology/modalia#Discipline
 :Discipline rdf:type owl:Class ;
+            rdfs:isDefinedBy "http://purl.org/spar/fabio/"@en ;
             rdfs:label "discipline"@en ;
             rdfs:seeAlso "http://purl.org/spar/fabio/SubjectDiscipline"@en ;
-            skos:definition "knowledge of a specific, specialized discipline or field"@en ;
+            skos:definition "The discipline or university/college subject the learning resource belongs to."@en ;
             skos:example "e.g Engineering"@en .
-
-
-###  https://purl.org/ontology/modalia#DiscoveryPhase
-:DiscoveryPhase rdf:type owl:Class ;
-                rdfs:subClassOf :DataLifeCyclePhase ;
-                rdfs:label "discovery phase"@en .
 
 
 ###  https://purl.org/ontology/modalia#EducationalLevel
 :EducationalLevel rdf:type owl:Class ;
                   rdfs:label "education level"@en ;
-                  skos:definition "The educational level of a user: Bachlors, Masters or PhD"@en .
+                  skos:definition "The educational level of a user: Bachelor, Master's or PhD"@en .
 
 
 ###  https://purl.org/ontology/modalia#FiveStarRating
@@ -1511,18 +1500,6 @@ ec:Recommendation rdf:type owl:Class ;
                 skos:definition "Standard five star rating, min value 1 maximum 5"@en ;
                 schema:bestRating 5 ;
                 schema:worstRating 1 .
-
-
-###  https://purl.org/ontology/modalia#FreeLicense
-:FreeLicense rdf:type owl:Class ;
-             rdfs:subClassOf :License ;
-             rdfs:label "free license"@en .
-
-
-###  https://purl.org/ontology/modalia#IntegratePhase
-:IntegratePhase rdf:type owl:Class ;
-                rdfs:subClassOf :DataLifeCyclePhase ;
-                rdfs:label "integration phase"@en .
 
 
 ###  https://purl.org/ontology/modalia#Job
@@ -1536,7 +1513,8 @@ ec:Recommendation rdf:type owl:Class ;
 ###  https://purl.org/ontology/modalia#LearnerRole
 :LearnerRole rdf:type owl:Class ;
              rdfs:subClassOf :UserRole ;
-             rdfs:label "learner role"@en .
+             rdfs:label "learner role"@en ;
+             skos:definition "a person who is using the platform as a learner."@en .
 
 
 ###  https://purl.org/ontology/modalia#LearningObjective
@@ -1544,7 +1522,8 @@ ec:Recommendation rdf:type owl:Class ;
                    rdfs:comment "The Learning Goal can vary depending on the personalisation level. For example a user might care to learn some specific topics and not all the skill set."@en ;
                    rdfs:label "learning objective"@en ;
                    rdfs:seeAlso "https://github.com/tibonto/educor#LearningGoal" ;
-                   skos:definition "Learning Objective as defined in learning objective matrix (LZM)"@en .
+                   skos:definition "A learning objective describes the verifiable increase in knowledge, skills and attitudes in relation to a specific learning content’ (Stangl, n.d.), which should be achieved at the end of a learning process. (cf. Gundermann, 2024)"@en ;
+                   skos:editorialNote "source https://zenodo.org/records/15846806/files/Glossary_LOM-RDM_V3_eng.pdf" .
 
 
 ###  https://purl.org/ontology/modalia#LearningPath
@@ -1557,7 +1536,7 @@ ec:Recommendation rdf:type owl:Class ;
 ###  https://purl.org/ontology/modalia#LearningPathStep
 :LearningPathStep rdf:type owl:Class ;
                   rdfs:label "learning path step"@en ;
-                  skos:definition "One step of a learning path, it has an order and one educational resource. Optionally a learning path step can have a note for learner."@en .
+                  skos:definition "One step of a learning path, it has an order and one educational resource. A learning path step can have a note for learner."@en .
 
 
 ###  https://purl.org/ontology/modalia#LearningResourceType
@@ -1569,7 +1548,6 @@ ec:Recommendation rdf:type owl:Class ;
 ###  https://purl.org/ontology/modalia#Lecture
 :Lecture rdf:type owl:Class ;
          rdfs:subClassOf :LearningResourceType ;
-         rdfs:comment "Class representing OERs that are lectures."@en ;
          rdfs:label "lecture"@en ;
          skos:definition "An informative talk given to an audience or class and usually prepared beforehand, or the text of such a talk."@en ;
          skos:editorialNote "Kind of Source: Quotation. Source of definition: ISO/IEC 19788-5:2014, 30" ;
@@ -1578,7 +1556,9 @@ ec:Recommendation rdf:type owl:Class ;
 
 ###  https://purl.org/ontology/modalia#License
 :License rdf:type owl:Class ;
-         rdfs:label "license"@en .
+         rdfs:label "license"@en ;
+         rdfs:seeAlso "http://purl.org/dc/terms/LicenseDocument"@en ;
+         skos:definition "A legal document giving official permission to do something with the resource."@en .
 
 
 ###  https://purl.org/ontology/modalia#MastersStudent
@@ -1593,7 +1573,8 @@ ec:Recommendation rdf:type owl:Class ;
 ###  https://purl.org/ontology/modalia#MediaType
 :MediaType rdf:type owl:Class ;
            rdfs:label "media type"@en ;
-           skos:definition "General type of data content encoded in a computer file. Digital media type of the resource. To be used with user preferences according to VARK learning style."@en .
+           skos:definition "The general type of data content encoded in a computer file in sense of the modality (text, audio, picture etc.).  The media type is to be used  for user preferences for the learning style(s). If the resource consists of more than one item with different DOIs, the MediaType is \\\"multipart\\\" and the relations are provided in the field \\\"RelatedWork\\\"."@en ;
+           skos:editorialNote "Kind of Source: Original and paraphrase. Source of definition: https://github.com/patrickmccallum/mimetype-io/blob/master/src/mimeData.json" .
 
 
 ###  https://purl.org/ontology/modalia#Multipart
@@ -1612,20 +1593,27 @@ ec:Recommendation rdf:type owl:Class ;
                     skos:prefLabel "Museum Professional"@en .
 
 
+###  https://purl.org/ontology/modalia#NonProprietaryLicense
+:NonProprietaryLicense rdf:type owl:Class ;
+                       rdfs:subClassOf :License ;
+                       rdfs:label "non-proprietary license"@en ;
+                       skos:definition "A type of license that grants permission to access and use a work without monetary cost and to redistribute the original work. Some licenses of this type may permit modification and distribution of derivative works, while others may restrict or prohibit these rights."@en .
+
+
 ###  https://purl.org/ontology/modalia#PhDStudent
 :PhDStudent rdf:type owl:Class ;
             rdfs:subClassOf :TargetGroup ;
             rdfs:label "PhD student"@en ;
-            rdfs:seeAlso "http://vivoweb.org/ontology/core#GraduateStudent" ;
-            skos:definition "A student in PhD degree"@en ;
+            skos:definition "A student of Higher Education who is attending a university or college (e.g. in USA, GB) for achieving level 8 of the 2011 version of the International Standard Classification of Education structure."@en ;
             skos:prefLabel "PhD student"@en .
 
 
 ###  https://purl.org/ontology/modalia#PlanningPhase
 :PlanningPhase rdf:type owl:Class ;
                rdfs:subClassOf :DataLifeCyclePhase ;
+               owl:disjointWith :ProcessingAndAnalyzingPhase ;
                rdfs:label "planning phase"@en ;
-               skos:definition "First phase in data life cycle. Description of the data that will be compiled."@en .
+               skos:definition "The research data life cycle phase of planning includes the description of the data that will be compiled and how the data will be managed and made accessible throughout its lifetime. For this, the methods of data collection and analyses can be determined,  questions regarding file formats, version control, access, backup and storage, and legal and ethical aspects be clarified, the form of metadata can be specified, and existing data sources explored. Budget and organizational planning can also be part of this phase. Often a research data management plan is compiled."@en .
 
 
 ###  https://purl.org/ontology/modalia#Podcast
@@ -1649,7 +1637,18 @@ ec:Recommendation rdf:type owl:Class ;
 ###  https://purl.org/ontology/modalia#PreservationPhase
 :PreservationPhase rdf:type owl:Class ;
                    rdfs:subClassOf :DataLifeCyclePhase ;
-                   rdfs:label "preservation phase"@en .
+                   owl:disjointWith :ProcessingAndAnalyzingPhase ;
+                   rdfs:label "preservation phase"@en ;
+                   skos:definition "The preservation phase of the research data lifecyle includes selecting the data and their appropriate formats to be preserved, performing backup and storage,  and compiling preservation documentation that includes ethical and legal information.  Information on responsibilities and provenance can also be provided. The data are submitted to an appropriate long-term archive , e.g., a data center. The preserved data must be curated to ensure their future use."@en .
+
+
+###  https://purl.org/ontology/modalia#ProcessingAndAnalyzingPhase
+:ProcessingAndAnalyzingPhase rdf:type owl:Class ;
+                             rdfs:subClassOf :DataLifeCyclePhase ;
+                             owl:disjointWith :PublishingAndSharingPhase ,
+                                              :ReusingPhase ;
+                             rdfs:label "processing and analyzing phase"@en ;
+                             skos:definition "The research data life cycle phase of processing and analyzing involves the transformation, derivation, and modification of data, e.g., by anonymization. The data quality is assured and documented. Additionally, the data itself is documented using the appropriate metadata standards. The data is analyzed and interpreted, and research outcomes are produced. This phase overlaps with the assurance phase and the description phase of the DataOne model."@en .
 
 
 ###  https://purl.org/ontology/modalia#Proficiency
@@ -1662,21 +1661,30 @@ ec:Recommendation rdf:type owl:Class ;
                                                :Proficient
                                              )
                                  ] ;
+             rdfs:comment """Benner’s Novice to Expert
+The five stages of proficiency in the novice to expert model are: novice, advanced beginner, competent, proficient, and expert (Benner, 1982)."""@en ;
              rdfs:label "proficiency"@en ;
-             skos:definition """Benner’s Novice to Expert
-The five stages of proficiency in the novice to expert model are: novice, advanced beginner, competent, proficient, and expert (Benner, 1982)."""@en .
+             skos:definition "The proposed level of proficiency in research data management and data literacy of the learners in regard to the learning content."@en .
 
 
 ###  https://purl.org/ontology/modalia#ProprietaryLicense
 :ProprietaryLicense rdf:type owl:Class ;
                     rdfs:subClassOf :License ;
-                    rdfs:label "proprietary license"@en .
+                    rdfs:label "proprietary license"@en ;
+                    skos:definition "A proprietary license is a type of license for a creative work in which the copyright holder retains most of the rights exclusively."@en .
+
+
+###  https://purl.org/ontology/modalia#PublishingAndSharingPhase
+:PublishingAndSharingPhase rdf:type owl:Class ;
+                           rdfs:subClassOf :DataLifeCyclePhase ;
+                           rdfs:label "publishing and sharing phase"@en ;
+                           skos:definition "In the publishing and sharing phase, copyright issues are clarified. Data is described for users and readers, using the appropriate metadata standards. Suitable publication locations are selected, and then the data is published and promoted."@en .
 
 
 ###  https://purl.org/ontology/modalia#RDMResource
 :RDMResource rdf:type owl:Class ;
              rdfs:subClassOf ec:EducationalResource ;
-             rdfs:comment "OER related to Research Data Management"@en ;
+             rdfs:comment "OER related to research data management"@en ;
              rdfs:label "RDM resource"@en .
 
 
@@ -1685,13 +1693,13 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
           rdfs:subClassOf :Skill ;
           rdfs:comment "Research Data Managment Skill"@en ;
           rdfs:label "RDM skill"@en ;
-          skos:definition "The ability to carry out tasks."@en .
+          skos:definition "The ability to carry out RDM tasks."@en .
 
 
 ###  https://purl.org/ontology/modalia#RDMSubjectCluster
 :RDMSubjectCluster rdf:type owl:Class ;
                    rdfs:label "RDM subject cluster"@en ;
-                   skos:definition "Cluster of RDM topics areas. Matches Subject area in Learning Objective Matrix version 3 ( https://zenodo.org/records/15846806 )"@en .
+                   skos:definition "Cluster of RDM topics subjects. Matches Subject area in Learning Objective Matrix version 3 ( https://zenodo.org/records/15846806 )"@en .
 
 
 ###  https://purl.org/ontology/modalia#RDMTopic
@@ -1717,9 +1725,16 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
                     rdfs:label "researcher user role"@en .
 
 
+###  https://purl.org/ontology/modalia#ReusingPhase
+:ReusingPhase rdf:type owl:Class ;
+              rdfs:subClassOf :DataLifeCyclePhase ;
+              rdfs:label "reusing phase"@en ;
+              skos:definition "The reusing phase of the research data life cycle includes locating and obtaining potentially useful data, along with the relevant information about the data (metadata).  Data from disparate sources are combined to form homogeneous sets of data. These new and old data can be analyzed or re-analyzed, or used for teaching and learning. This phase is identical to the discovery, integration, and analyzing phase of the DataOne lifecycle."@en .
+
+
 ###  https://purl.org/ontology/modalia#Skill
 :Skill rdf:type owl:Class ;
-       rdfs:comment "Job Skill, ability to perform some tasks."@en ;
+       rdfs:comment "The ability to carry out specific tasks in a job."@en ;
        rdfs:label "skill"@en .
 
 
@@ -1734,7 +1749,6 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 ###  https://purl.org/ontology/modalia#TargetGroup
 :TargetGroup rdf:type owl:Class ;
              rdfs:label "target group"@en ;
-             rdfs:seeAlso "http://purl.org/dcx/lrmi-terms/EducationalAudience" ;
              skos:definition "The target group refers to the learners of the resource: A class of agents for whom the learning resource is intended or useful."@en ;
              skos:editorialNote "Kind of Source: M, Q. Source of definition: DIF1.3, DIF1.4" .
 
@@ -1750,7 +1764,8 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 ###  https://purl.org/ontology/modalia#TeacherRole
 :TeacherRole rdf:type owl:Class ;
              rdfs:subClassOf :UserRole ;
-             rdfs:label "teacher user role"@en .
+             rdfs:label "teacher user role"@en ;
+             skos:definition "a person who is using the system as a teacher."@en .
 
 
 ###  https://purl.org/ontology/modalia#TeacherSchool
@@ -1766,7 +1781,6 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 ###  https://purl.org/ontology/modalia#Tutorial
 :Tutorial rdf:type owl:Class ;
           rdfs:subClassOf :LearningResourceType ;
-          rdfs:comment "Class representing OERs that are in form of tutorial."@en ;
           rdfs:label "tutorial"@en ;
           skos:definition "A course with strong instructional components containing exercises, information, etc."@en ;
           skos:editorialNote "Kind of Source: Quotation. Source of definition: ISO/IEC 19788-5:2014, 32" ;
@@ -1777,7 +1791,7 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 :User rdf:type owl:Class ;
       rdfs:label "user"@en ;
       rdfs:seeAlso foaf:Person ;
-      skos:definition "Registered user in the system, can have different roles i.e learner , teacher , curator, etc"@en .
+      skos:definition "Registered user in the system, can have different roles e.g learner , teacher , curator, etc"@en .
 
 
 ###  https://purl.org/ontology/modalia#UserComment
@@ -1788,7 +1802,8 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 
 ###  https://purl.org/ontology/modalia#UserRole
 :UserRole rdf:type owl:Class ;
-          rdfs:label "user role"@en .
+          rdfs:label "user role"@en ;
+          skos:definition "roles of users using the system"@en .
 
 
 ###  https://purl.org/ontology/modalia#VARKAuditory
@@ -1822,7 +1837,6 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 ###  https://schema.org/AudioObject
 schema:AudioObject rdf:type owl:Class ;
                    rdfs:subClassOf :MediaType ;
-                   rdfs:comment "A class representing OERs which are audio files."@en ;
                    rdfs:label "audio"@en ;
                    skos:definition "A resource has the media type audio if it mainly consists of aural material."@en ;
                    skos:prefLabel "Audio"@en .
@@ -1831,8 +1845,8 @@ schema:AudioObject rdf:type owl:Class ;
 ###  https://schema.org/ImageObject
 schema:ImageObject rdf:type owl:Class ;
                    rdfs:subClassOf :MediaType ;
-                   rdfs:comment "An image file."@en ;
                    rdfs:label "image"@en ;
+                   skos:definition "A resource has the media type image if it mainly consists of (a) still image(s)."@en ;
                    skos:prefLabel "Image"@en .
 
 
@@ -1869,7 +1883,6 @@ schema:PodcastSeries rdf:type owl:Class ;
 ###  https://schema.org/PresentationDigitalDocument
 schema:PresentationDigitalDocument rdf:type owl:Class ;
                                    rdfs:subClassOf :MediaType ;
-                                   rdfs:comment "A presentation / slides file."@en ;
                                    rdfs:label "presentation"@en ;
                                    skos:definition "A resource has the media type presentation if it mainly consists of slides."@en ;
                                    skos:prefLabel "Presentation"@en .
@@ -1902,7 +1915,6 @@ schema:SoftwareSourceCode rdf:type owl:Class ;
 ###  https://schema.org/Text
 schema:Text rdf:type owl:Class ;
             rdfs:subClassOf :MediaType ;
-            rdfs:comment "Class representing OER which are text."@en ;
             rdfs:label "text"@en ;
             skos:definition "A resource has the media type text if it mainly consists of written  or writing materials."@en ;
             skos:prefLabel "Text"@en .
@@ -1911,7 +1923,6 @@ schema:Text rdf:type owl:Class ;
 ###  https://schema.org/VideoObject
 schema:VideoObject rdf:type owl:Class ;
                    rdfs:subClassOf :MediaType ;
-                   rdfs:comment "A video file."@en ;
                    rdfs:label "video"@en ;
                    skos:definition "A resource has the media type video if it mainly consists of moving images."@en ;
                    skos:prefLabel "Video"@en .
@@ -1939,7 +1950,6 @@ hcrt:assessment rdf:type owl:Class ;
 ###  https://w3id.org/kim/hcrt/case_study
 hcrt:case_study rdf:type owl:Class ;
                 rdfs:subClassOf :LearningResourceType ;
-                rdfs:comment "Class representing OERs that are in form of case study."@en ;
                 rdfs:label "case study"@en ;
                 skos:definition "A description of an actual situation, commonly involving a decision, a challenge, an opportunity, a problem or an issue."@en ;
                 skos:editorialNote "Kind of Source: Quotation. Source of definition: ISO/IEC 19788-5:2014, 30" ;
@@ -1959,6 +1969,7 @@ hcrt:course rdf:type owl:Class ;
 hcrt:data rdf:type owl:Class ;
           rdfs:subClassOf :LearningResourceType ;
           rdfs:label "data"@en ;
+          skos:definition "Any form of digital representation, e.g. facts, measurements, records, or observations about the world. Data may be in any format or medium taking the form of text, notes, numbers, symbols, images, films, video, sound recordings, pictorial reproductions, drawing, graphical representations, procedural manuals, forms, data files, data processing algorithms, or statistical records."@en ;
           skos:prefLabel "Data"@en .
 
 
@@ -1983,7 +1994,6 @@ hcrt:drill_and_practice rdf:type owl:Class ;
 ###  https://w3id.org/kim/hcrt/educational_game
 hcrt:educational_game rdf:type owl:Class ;
                       rdfs:subClassOf :LearningResourceType ;
-                      rdfs:comment "Class representing OERs that are in form of educational games."@en ;
                       rdfs:label "educational game"@en ;
                       skos:definition "An individual or group game intended to teach a subject, skill, or attitude."@en ;
                       skos:editorialNote "Kind of Source: Modified quotation. Source of definition: http://vocab.getty.edu/page/aat/300262798" ;
@@ -1993,7 +2003,6 @@ hcrt:educational_game rdf:type owl:Class ;
 ###  https://w3id.org/kim/hcrt/experiment
 hcrt:experiment rdf:type owl:Class ;
                 rdfs:subClassOf :LearningResourceType ;
-                rdfs:comment "Class representing OERs that are describing an experiment"@en ;
                 rdfs:label "experiment"@en ;
                 skos:definition "A scientific procedure undertaken to make a discovery, test a hypothesis, or demonstrate a known fact."@en ;
                 skos:editorialNote "Kind of Source: Quotation. Source of definition: ISO/IEC 19788-5:2014, 31" ;
@@ -2025,6 +2034,7 @@ hcrt:lesson_plan rdf:type owl:Class ;
 hcrt:map rdf:type owl:Class ;
          rdfs:subClassOf :LearningResourceType ;
          rdfs:label "map"@en ;
+         skos:definition "Graphic representations of a geographic area, including physical features and political boundaries, where each point corresponds to a geographical or celestial position according to a definite scale or projection."@en ;
          skos:prefLabel "Map"@en .
 
 
@@ -2123,7 +2133,9 @@ hcrt:worksheet rdf:type owl:Class ;
                                 :Proficient ;
           :isMoreProficientThan :Novice ;
           :hasOrder 2 ;
-          rdfs:label "advanced beginner"@en .
+          rdfs:label "advanced beginner"@en ;
+          skos:definition "Advanced beginner learners are individuals who possess some basic knowledge of the field of learning and are able to recognize patterns. They require instructions and need to follow examples."@en ;
+          skos:editorialNote "Kind of Source: paraphrase. Source of definition: Dreyfus2004, Benner1982" .
 
 
 ###  https://purl.org/ontology/modalia#Competent
@@ -2134,7 +2146,9 @@ hcrt:worksheet rdf:type owl:Class ;
            :isMoreProficientThan :Beginner ,
                                  :Novice ;
            :hasOrder 3 ;
-           rdfs:label "competent"@en .
+           rdfs:label "competent"@en ;
+           skos:definition "Competent learners have gained moderate experience in the field of learning through consistent application of skills. They possess significant knowledge of the field, are able to evaluate features, and can efficiently and accurately apply various plans and rules according to situations and tasks. At this stage, problem-solving and decision-making are accompanied by emotional involvement."@en ;
+           skos:editorialNote "Kind of Source: paraphrase. Source of definition: Dreyfus2004, Benner1982" .
 
 
 ###  https://purl.org/ontology/modalia#ContactPerson
@@ -2199,7 +2213,9 @@ hcrt:worksheet rdf:type owl:Class ;
                               :Novice ,
                               :Proficient ;
         :hasOrder 5 ;
-        rdfs:label "expert"@en .
+        rdfs:label "expert"@en ;
+        skos:definition "Expert learners are individuals knowledgeable in a specialized field, particularly people with the special skill or knowledge representing mastery of a particular subject. They possess a deep and comprehensive understanding of the subject matter, enabling them to quickly and intuitively analyze new situations and tasks, and develop complex solutions without conscious deliberation."@en ;
+        skos:editorialNote "Kind of Source: Q, S. Source of definition: http://vocab.getty.edu/aat/scopeNote/49454, Dreyfus2004, Benner1982" .
 
 
 ###  https://purl.org/ontology/modalia#HostingInstitution
@@ -2246,7 +2262,9 @@ hcrt:worksheet rdf:type owl:Class ;
                               :Expert ,
                               :Proficient ;
         :hasOrder 1 ;
-        rdfs:label "novice"@en .
+        rdfs:label "novice"@en ;
+        skos:definition "Novice learners are individuals who are unpracticed and have little to no knowledge in the field of learning. They lack a fundamental understanding of basic concepts and are not yet able to assess situations and tasks effectively. They require introductions, descriptions, and guidelines."@en ;
+        skos:editorialNote "Kind of Source: O, S. Source of definition: Dreyfus2004, Benner1982" .
 
 
 ###  https://purl.org/ontology/modalia#OtherRole
@@ -2275,7 +2293,9 @@ hcrt:worksheet rdf:type owl:Class ;
                                   :Competent ,
                                   :Novice ;
             :hasOrder 4 ;
-            rdfs:label "proficient"@en .
+            rdfs:label "proficient"@en ;
+            skos:definition "Proficient learners possess a strong foundation of knowledge and skills, enabling them to perform tasks with a high degree of accuracy and efficiency. They are able to recognize patterns in situations and tasks, and can develop complex solutions through conscious deliberation."@en ;
+            skos:editorialNote "Kind of Source: paraphrase. Source of definition: Dreyfus2004, Benner1982" .
 
 
 ###  https://purl.org/ontology/modalia#ProjectLeader
@@ -2421,7 +2441,9 @@ hcrt:worksheet rdf:type owl:Class ;
 :WorkPackageLeader rdf:type owl:NamedIndividual ,
                             bf:Role ;
                    rdfs:label "workpackageleader role"@en ;
-                   rdfs:seeAlso m4i:WorkPackageLeader .
+                   rdfs:seeAlso m4i:WorkPackageLeader ;
+                   skos:definition "A Work Package is a recognized data product, not all of which is included in publication. The package, instead, may include notes, discarded documents, etc. The Work Package Leader is responsible for ensuring the comprehensive contents, versioning, and availability of the Work Package during the development of the resource."@en ;
+                   skos:editorialNote "A Work Package is a recognized data product, not all of which is included in publication. The package, instead, may include notes, discarded documents, etc. Kind of Source: Quotation. Source of definition: http://w3id.org/nfdi4ing/metadata4ing#WorkPackageLeader https://datacite-metadata-schema.readthedocs.io/en/4.6" .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
