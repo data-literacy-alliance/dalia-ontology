@@ -438,6 +438,7 @@ ec:generatedFrom rdf:type owl:ObjectProperty ;
                        rdfs:domain ec:EducationalResource ;
                        rdfs:range :Proficiency ;
                        rdfs:comment "gives in sense of produce/yield/leads to proficiency level"@en ;
+                       ## ** in the sense ... to a pr... ** #
                        rdfs:label "gives proficiency level"@en .
 
 
@@ -474,6 +475,7 @@ ec:generatedFrom rdf:type owl:ObjectProperty ;
                  rdfs:range :LearningResourceType ;
                  rdfs:label "has learning resource type"@en ;
                  skos:definition "The pedagogical type of the resource: information for the educational use. (e.g Lecture)"@en .
+                 ## ** skos:definition "The pedagogical type of the resource: information for the educational use (e.g., lecture). "@en . ** ##
 
 
 ###  https://purl.org/ontology/modalia#hasMediaType
@@ -498,6 +500,10 @@ ec:generatedFrom rdf:type owl:ObjectProperty ;
           rdfs:range :User ;
           rdfs:label "has owner"@en ;
           skos:definition "defines the user who owns a specific community. There is only one owner to a specific community"@en .
+
+          ##** d -> D ** ##
+
+          ##** owner for/of ?? ** ##
 
 
 ###  https://purl.org/ontology/modalia#hasQuality
@@ -584,6 +590,8 @@ ec:generatedFrom rdf:type owl:ObjectProperty ;
                skos:definition "The related work is the same as the described resource but is saved on another location, maybe another institution."@en ;
                skos:editorialNote "Kind of Source: Modified quotation. Source of definition: https://datacite-metadata-schema.readthedocs.io/_/downloads/en/4.6/pdf" ;
                skos:prefLabel "Is identical to"@en .
+
+               ## ** possibly at another ... ** ##
 
 
 ###  https://purl.org/ontology/modalia#isLessProficientThan
@@ -1543,6 +1551,8 @@ ec:Recommendation rdf:type owl:Class ;
 :LearningResourceType rdf:type owl:Class ;
                       rdfs:label "learning resource type"@en ;
                       skos:definition "The type of the learning resource can be lecture, experiment, Assessment, etc."@en .
+
+                      ## ** this not the DIF definition! and of course there is a mistake: assessment. BUT include the definition from DIF. ** ##
 
 
 ###  https://purl.org/ontology/modalia#Lecture
