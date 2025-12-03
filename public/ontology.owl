@@ -28,7 +28,7 @@
 The ontology is used for making a knowledge graph as a backend to platform for teaching, personal learning, and recommendation.
 The ontology is developed in OWL in Protege 5.5.0.</terms:description>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
-        <terms:modified>2025-11-26</terms:modified>
+        <terms:modified>2025-12-02</terms:modified>
         <terms:publisher>ULB TUDa – University and State Library, Technical University, Darmstadt, Germany</terms:publisher>
         <terms:title xml:lang="en">MoDALIA Ontology</terms:title>
         <vann:preferredNamespacePrefix>modalia</vann:preferredNamespacePrefix>
@@ -264,7 +264,6 @@ The ontology is developed in OWL in Protege 5.5.0.</terms:description>
     <owl:ObjectProperty rdf:about="http://id.loc.gov/ontologies/bibframe/agent">
         <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Contribution"/>
         <rdfs:range rdf:resource="https://purl.org/ontology/modalia#Contributor"/>
-        <rdfs:comment xml:lang="en">agent</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://id.loc.gov/ontologies/bibframe"/>
         <skos:definition>Property that links a contribution to the agent (e.g., the person or organization making the contribution).</skos:definition>
     </owl:ObjectProperty>
@@ -277,8 +276,8 @@ The ontology is developed in OWL in Protege 5.5.0.</terms:description>
     <owl:ObjectProperty rdf:about="http://id.loc.gov/ontologies/bibframe/contribution">
         <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Contribution"/>
-        <rdfs:comment xml:lang="en">Property linking an OER to its contribution (e.g., editing).</rdfs:comment>
         <rdfs:label xml:lang="en">contribution</rdfs:label>
+        <skos:definition xml:lang="en">Property linking an OER to its contribution (e.g., editing).</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -289,8 +288,8 @@ The ontology is developed in OWL in Protege 5.5.0.</terms:description>
     <owl:ObjectProperty rdf:about="http://id.loc.gov/ontologies/bibframe/role">
         <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Contribution"/>
         <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Role"/>
-        <rdfs:comment xml:lang="en">Property that links a contribution to a role (e.g., contactPerson, editor).</rdfs:comment>
         <rdfs:label xml:lang="en">role</rdfs:label>
+        <skos:definition xml:lang="en">Property that links a contribution to a role (e.g., contactPerson, editor).</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -362,8 +361,8 @@ The ontology is developed in OWL in Protege 5.5.0.</terms:description>
     <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/language">
         <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:range rdf:resource="http://lexvo.org/ontology#Language"/>
-        <rdfs:comment xml:lang="en">language of resource</rdfs:comment>
         <rdfs:label xml:lang="en">language</rdfs:label>
+        <skos:definition xml:lang="en">language of resource</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -470,8 +469,8 @@ The ontology is developed in OWL in Protege 5.5.0.</terms:description>
     <owl:ObjectProperty rdf:about="https://purl.org/ontology/modalia#belongsToCluster">
         <rdfs:domain rdf:resource="https://purl.org/ontology/modalia#RDMTopic"/>
         <rdfs:range rdf:resource="https://purl.org/ontology/modalia#RDMSubjectCluster"/>
-        <rdfs:comment xml:lang="en">relates RDM Topic to RDM Topic Cluster, similar to LZM</rdfs:comment>
         <rdfs:label xml:lang="en">belongs to cluster</rdfs:label>
+        <skos:definition xml:lang="en">A property that relates RDM Topic to RDM Topic Cluster, similar to LZM</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -553,8 +552,8 @@ The ontology is developed in OWL in Protege 5.5.0.</terms:description>
     <owl:ObjectProperty rdf:about="https://purl.org/ontology/modalia#coversManagementOfDataKind">
         <rdfs:domain rdf:resource="https://purl.org/ontology/modalia#RDMResource"/>
         <rdfs:range rdf:resource="http://edamontology.org/data_0006"/>
-        <rdfs:comment xml:lang="en">A property that relates a RDMResource to data kind being managed</rdfs:comment>
         <rdfs:label xml:lang="en">covers management of data kind</rdfs:label>
+        <skos:definition xml:lang="en">A property that relates a RDMResource to data kind being managed</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -587,8 +586,8 @@ The ontology is developed in OWL in Protege 5.5.0.</terms:description>
     <owl:ObjectProperty rdf:about="https://purl.org/ontology/modalia#createdBy">
         <rdfs:domain rdf:resource="https://purl.org/ontology/modalia#Community"/>
         <rdfs:range rdf:resource="https://purl.org/ontology/modalia#User"/>
-        <rdfs:comment xml:lang="en">a property defining the user who created a community</rdfs:comment>
         <rdfs:label xml:lang="en">created by</rdfs:label>
+        <skos:definition xml:lang="en">A property defining the user who created a community</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -643,8 +642,8 @@ The ontology is developed in OWL in Protege 5.5.0.</terms:description>
     <owl:ObjectProperty rdf:about="https://purl.org/ontology/modalia#essentialFor">
         <rdfs:domain rdf:resource="https://purl.org/ontology/modalia#Skill"/>
         <rdfs:range rdf:resource="https://purl.org/ontology/modalia#Job"/>
-        <rdfs:comment xml:lang="en">a property defining the essential skills for a certain job</rdfs:comment>
         <rdfs:label xml:lang="en">essential for</rdfs:label>
+        <skos:definition xml:lang="en">A property defining the essential skills for a certain job</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -655,8 +654,8 @@ The ontology is developed in OWL in Protege 5.5.0.</terms:description>
     <owl:ObjectProperty rdf:about="https://purl.org/ontology/modalia#givesProficiencyLevel">
         <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:range rdf:resource="https://purl.org/ontology/modalia#Proficiency"/>
-        <rdfs:comment xml:lang="en">gives in sense of produce/yield/leads to proficiency level</rdfs:comment>
         <rdfs:label xml:lang="en">gives proficiency level</rdfs:label>
+        <skos:definition xml:lang="en">gives in the sense of produce/yield/leads to a proficiency level</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -710,7 +709,7 @@ The ontology is developed in OWL in Protege 5.5.0.</terms:description>
         <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:range rdf:resource="https://purl.org/ontology/modalia#LearningResourceType"/>
         <rdfs:label xml:lang="en">has learning resource type</rdfs:label>
-        <skos:definition xml:lang="en">The pedagogical type of the resource: information for the educational use. (e.g Lecture)</skos:definition>
+        <skos:definition xml:lang="en">The pedagogical type of the resource: information for the educational use (e.g., lecture).</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -746,7 +745,7 @@ The ontology is developed in OWL in Protege 5.5.0.</terms:description>
         <rdfs:domain rdf:resource="https://purl.org/ontology/modalia#Community"/>
         <rdfs:range rdf:resource="https://purl.org/ontology/modalia#User"/>
         <rdfs:label xml:lang="en">has owner</rdfs:label>
-        <skos:definition xml:lang="en">defines the user who owns a specific community. There is only one owner to a specific community</skos:definition>
+        <skos:definition xml:lang="en">Defines the user who owns a specific community. There is only one owner of a specific community</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -791,7 +790,7 @@ The ontology is developed in OWL in Protege 5.5.0.</terms:description>
         <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:label xml:lang="en">has source code</rdfs:label>
-        <skos:definition xml:lang="en">The version of text or software as it is originally written in plain text (i.e., human readable alphanumeric characters).</skos:definition>
+        <skos:definition xml:lang="en">The version of text or software as it was originally written in plain text (i.e., human-readable alphanumeric characters).</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -842,8 +841,7 @@ The ontology is developed in OWL in Protege 5.5.0.</terms:description>
         <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:label xml:lang="en">is described by</rdfs:label>
-        <skos:definition xml:lang="en">A related resource that provides a description (detailed account) of the described resource. This can be a manual, an instruction, a documentation, a cookbook, a README file, or something similar.</skos:definition>
-        <skos:editorialNote>Kind of Source: paraphrase. Source of definition: https://datacite-metadata-schema.readthedocs.io/_/downloads/en/4.6/pdf/ http://semanticscience.org/resource/SIO_000557</skos:editorialNote>
+        <skos:definition xml:lang="en">A related resource that provides a description (detailed account) of the described resource. This can be a manual, instructions, a documentation, a cookbook, a README file, or something similar.</skos:definition>
         <skos:prefLabel xml:lang="en">Is described by</skos:prefLabel>
     </owl:ObjectProperty>
     
@@ -870,7 +868,7 @@ The ontology is developed in OWL in Protege 5.5.0.</terms:description>
         <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:range rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:label xml:lang="en">is identical to</rdfs:label>
-        <skos:definition xml:lang="en">The related work is the same as the described resource but is saved on another location, maybe another institution.</skos:definition>
+        <skos:definition xml:lang="en">The related work is the same as the described resource but is saved on another location, possibly at another institution.</skos:definition>
         <skos:editorialNote>Kind of Source: Modified quotation. Source of definition: https://datacite-metadata-schema.readthedocs.io/_/downloads/en/4.6/pdf</skos:editorialNote>
         <skos:prefLabel xml:lang="en">Is identical to</skos:prefLabel>
     </owl:ObjectProperty>
@@ -924,7 +922,7 @@ The ontology is developed in OWL in Protege 5.5.0.</terms:description>
         <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:range rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:label xml:lang="en">is new version of</rdfs:label>
-        <skos:definition xml:lang="en">The related work is a previous version, or edition of the described resource, of which the described resource has been modified or updated.</skos:definition>
+        <skos:definition xml:lang="en">The related work is a previous version or edition of the described resource, of which the described resource has been modified or updated.</skos:definition>
         <skos:editorialNote>Kind of Source: Modified quotation. Source of definition: https://datacite-metadata-schema.readthedocs.io/_/downloads/en/4.6/pdf  http://purl.org/dc/terms/isVersionOf</skos:editorialNote>
         <skos:prefLabel xml:lang="en">Is new version of</skos:prefLabel>
     </owl:ObjectProperty>
@@ -939,7 +937,7 @@ The ontology is developed in OWL in Protege 5.5.0.</terms:description>
         <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:range rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:label xml:lang="en">is previous version of</rdfs:label>
-        <skos:definition xml:lang="en">The related work is a new version, or edition of the described resource, where the new version has been modified or updated.</skos:definition>
+        <skos:definition xml:lang="en">The related work is a new version or edition of the described resource, where the new version has been modified or updated.</skos:definition>
         <skos:editorialNote>Kind of Source: Modified quotation. Source of definition: https://datacite-metadata-schema.readthedocs.io/_/downloads/en/4.6/pdf  http://purl.org/dc/terms/isVersionOf</skos:editorialNote>
         <skos:prefLabel xml:lang="en">Is previous version of</skos:prefLabel>
     </owl:ObjectProperty>
@@ -981,7 +979,7 @@ The ontology is developed in OWL in Protege 5.5.0.</terms:description>
         <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:range rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:label xml:lang="en">is version of</rdfs:label>
-        <skos:definition xml:lang="en">A related resource of which the described resource is a version, or edition. Can be used instead of isPreviousVersionOf and isNewVersionOf, if the sequence of versioning is unclear. </skos:definition>
+        <skos:definition xml:lang="en">A related resource of which the described resource is a version or edition. Can be used instead of isPreviousVersionOf and isNewVersionOf, if the sequence of versioning is unclear. </skos:definition>
         <skos:editorialNote>Kind of Source: Modified quotation. Source of definition:  http://purl.org/dc/terms/isVersionOf</skos:editorialNote>
         <skos:prefLabel xml:lang="en">Is version of</skos:prefLabel>
     </owl:ObjectProperty>
@@ -994,8 +992,8 @@ The ontology is developed in OWL in Protege 5.5.0.</terms:description>
     <owl:ObjectProperty rdf:about="https://purl.org/ontology/modalia#optionalFor">
         <rdfs:domain rdf:resource="https://purl.org/ontology/modalia#Skill"/>
         <rdfs:range rdf:resource="https://purl.org/ontology/modalia#Job"/>
-        <rdfs:comment xml:lang="en">Defines the skills that are optional for a certain job</rdfs:comment>
         <rdfs:label xml:lang="en">optional for</rdfs:label>
+        <skos:definition xml:lang="en">Defines the skills that are optional for a certain job</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -1109,7 +1107,7 @@ The ontology is developed in OWL in Protege 5.5.0.</terms:description>
         <rdfs:domain rdf:resource="https://purl.org/ontology/modalia#User"/>
         <rdfs:range rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:label xml:lang="en">user likes</rdfs:label>
-        <skos:definition xml:lang="en">the educational resource the user likes</skos:definition>
+        <skos:definition xml:lang="en">The educational resource the user likes.</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -1132,8 +1130,8 @@ The ontology is developed in OWL in Protege 5.5.0.</terms:description>
     <owl:ObjectProperty rdf:about="https://schema.org/author">
         <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-        <rdfs:comment xml:lang="en">Property linking an OER  to a list of authors.</rdfs:comment>
         <rdfs:label xml:lang="en">author</rdfs:label>
+        <skos:definition xml:lang="en">Property linking an OER to a list of authors.</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -1145,7 +1143,7 @@ The ontology is developed in OWL in Protege 5.5.0.</terms:description>
         <rdfs:domain rdf:resource="https://github.com/tibonto/educor#KnowledgeTopic"/>
         <rdfs:range rdf:resource="https://github.com/tibonto/educor#KnowledgeTopic"/>
         <rdfs:label xml:lang="en">competency required</rdfs:label>
-        <skos:definition xml:lang="en">prerequisits of a knowledge topic</skos:definition>
+        <skos:definition xml:lang="en">Prerequisites of a knowledge topic</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -1185,8 +1183,7 @@ The ontology is developed in OWL in Protege 5.5.0.</terms:description>
         <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:range rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:label xml:lang="en">continues</rdfs:label>
-        <skos:definition xml:lang="en">A related resource which is the direct predecessor of the described resource. This applies to a story, a series of lessons, a serial, a journal etc. Predecessors typically form part of a common whole - such as a  series of lectures.</skos:definition>
-        <skos:editorialNote>Kind of Source: S, M. Source of definition: https://github.com/europeana/metis-schema/blob/master/src/main/resources/schema_xsds/EDM-COMMON-MAIN.xsd  https://datacite-metadata-schema.readthedocs.io/_/downloads/en/4.6/pdf/</skos:editorialNote>
+        <skos:definition xml:lang="en">A related resource which is the direct predecessor of the described resource. This applies to a story, a series of lessons, a serial, a journal, etc. Predecessors typically form part of a common whole - such as a  series of lectures.</skos:definition>
         <skos:prefLabel xml:lang="en">Continues</skos:prefLabel>
     </owl:ObjectProperty>
     
@@ -1212,7 +1209,7 @@ The ontology is developed in OWL in Protege 5.5.0.</terms:description>
         <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:range rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:label xml:lang="en">isContinuedBy</rdfs:label>
-        <skos:definition xml:lang="en">A related resource which is the direct continuation of the described resource. This applies to a story, a series of lessons, a serial, a journal etc. Successors typically form part of a common whole - such as a  series of lectures.</skos:definition>
+        <skos:definition xml:lang="en">A related resource which is the direct continuation of the described resource. This applies to a story, a series of lessons, a serial, a journal, etc. Successors typically form part of a common whole - such as a  series of lectures.</skos:definition>
         <skos:editorialNote>Kind of Source: Modified quotation. Source of definition: https://github.com/europeana/metis-schema/blob/master/src/main/resources/schema_xsds/EDM-COMMON-MAIN.xsd</skos:editorialNote>
         <skos:prefLabel xml:lang="en">Is continued by</skos:prefLabel>
     </owl:ObjectProperty>
@@ -1267,8 +1264,8 @@ The ontology is developed in OWL in Protege 5.5.0.</terms:description>
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/bibliographicCitation">
         <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">Citation text of the OER (APA)</rdfs:comment>
         <rdfs:label xml:lang="en">citation</rdfs:label>
+        <skos:definition xml:lang="en">Citation text of the OER (APA).</skos:definition>
     </owl:DatatypeProperty>
     
 
@@ -1344,7 +1341,7 @@ The ontology is developed in OWL in Protege 5.5.0.</terms:description>
             </rdfs:Datatype>
         </rdfs:range>
         <rdfs:isDefinedBy>http://w3id.org/nfdi4ing/metadata4ing</rdfs:isDefinedBy>
-        <skos:altLabel xml:lang="en">has research organization registry id</skos:altLabel>
+        <skos:altLabel xml:lang="en">has research organization registry ID</skos:altLabel>
         <skos:altLabel xml:lang="de">hat Forschungsorganisationsid</skos:altLabel>
         <skos:definition xml:lang="en">A Research Organization Registry identifier that persistently and uniquely identifies a research organization</skos:definition>
         <skos:definition xml:lang="de">Ein persistenter Identifikator für Organisationen, vergeben durch die Research Organization Registry, der eine Forschungseinrichtung eindeutig identifiziert.</skos:definition>
@@ -1376,7 +1373,7 @@ The ontology is developed in OWL in Protege 5.5.0.</terms:description>
                 </owl:withRestrictions>
             </rdfs:Datatype>
         </rdfs:range>
-        <skos:definition xml:lang="en">Open Researcher and Contributor ID: an identifier, that allows unique identification of a person, usually active in research.</skos:definition>
+        <skos:definition xml:lang="en">Open Researcher and Contributor ID: an identifier that allows unique identification of a person, usually active in research.</skos:definition>
         <skos:definition xml:lang="de">Open Researcher and Contributor ID: ein persistenter Identifikator, der eine in der Forschung tätige Person eindeutig identifiziert.</skos:definition>
         <skos:prefLabel xml:lang="en">has ORCID ID</skos:prefLabel>
         <skos:prefLabel xml:lang="de">hat ORCID ID</skos:prefLabel>
@@ -1390,9 +1387,9 @@ The ontology is developed in OWL in Protege 5.5.0.</terms:description>
     <owl:DatatypeProperty rdf:about="https://purl.org/ontology/modalia#authorUnordered">
         <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">A property that links the OER to its authors in unordered way (according to order in authorship list) to improve performance.</rdfs:comment>
-        <rdfs:comment xml:lang="en">authorUnordered</rdfs:comment>
         <rdfs:label xml:lang="en">has author (unordered)</rdfs:label>
+        <skos:definition xml:lang="en">A property that links the OER to its authors in unordered way (according to order in authorship list) to improve performance.</skos:definition>
+        <skos:definition xml:lang="en">authorUnordered</skos:definition>
     </owl:DatatypeProperty>
     
 
@@ -1439,8 +1436,8 @@ The ontology is developed in OWL in Protege 5.5.0.</terms:description>
     <owl:DatatypeProperty rdf:about="https://purl.org/ontology/modalia#hasDOI">
         <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">the digital object identifier (DOI) of the resource if exists.</rdfs:comment>
         <rdfs:label xml:lang="en">has DOI</rdfs:label>
+        <skos:definition xml:lang="en">The digital object identifier (DOI) of the resource if exists.</skos:definition>
         <skos:example>example: 10.18450/dataman/90</skos:example>
     </owl:DatatypeProperty>
     
@@ -1534,8 +1531,8 @@ The ontology is developed in OWL in Protege 5.5.0.</terms:description>
     <owl:DatatypeProperty rdf:about="https://schema.org/abstract">
         <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">An abstract is a short description that summarizes an OER.</rdfs:comment>
         <rdfs:label xml:lang="en">abstract</rdfs:label>
+        <skos:definition xml:lang="en">An abstract is a short description that summarizes an OER.</skos:definition>
     </owl:DatatypeProperty>
     
 
@@ -1572,8 +1569,8 @@ The ontology is developed in OWL in Protege 5.5.0.</terms:description>
     <owl:DatatypeProperty rdf:about="https://schema.org/downloadUrl">
         <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
-        <rdfs:comment xml:lang="en">If the OER can be downloaded, URL to download it.</rdfs:comment>
         <rdfs:label xml:lang="en">has download URL</rdfs:label>
+        <skos:definition xml:lang="en">If the OER can be downloaded, URL to download it.</skos:definition>
     </owl:DatatypeProperty>
     
 
@@ -1603,8 +1600,8 @@ The ontology is developed in OWL in Protege 5.5.0.</terms:description>
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">Family name. In the U.S., the last name of a Person.</rdfs:comment>
         <rdfs:label xml:lang="en">familyName</rdfs:label>
+        <skos:definition xml:lang="en">Family name. In the U.S., the last name of a Person.</skos:definition>
     </owl:DatatypeProperty>
     
 
@@ -1617,7 +1614,7 @@ The ontology is developed in OWL in Protege 5.5.0.</terms:description>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:isDefinedBy xml:lang="en">https://schema.org/</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">fileSize</rdfs:label>
-        <skos:definition xml:lang="en">Size of the application / package (e.g. 18MB). In the absence of a unit (MB, KB etc.), KB will be assumed.</skos:definition>
+        <skos:definition xml:lang="en">Size of the application / package (e.g. 18MB).</skos:definition>
     </owl:DatatypeProperty>
     
 
@@ -1694,8 +1691,8 @@ The ontology is developed in OWL in Protege 5.5.0.</terms:description>
     <owl:DatatypeProperty rdf:about="https://schema.org/keywords">
         <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">Keywords or tags used to describe some item.</rdfs:comment>
         <rdfs:label xml:lang="en">keywords</rdfs:label>
+        <skos:definition xml:lang="en">Keywords or tags used to describe some item.</skos:definition>
     </owl:DatatypeProperty>
     
 
@@ -1741,8 +1738,8 @@ The ontology is developed in OWL in Protege 5.5.0.</terms:description>
     <owl:DatatypeProperty rdf:about="https://schema.org/teaches">
         <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">The item being described is intended to help a person learn the competency or learning outcome defined by the referenced term.</rdfs:comment>
         <rdfs:label xml:lang="en">teaches</rdfs:label>
+        <skos:definition xml:lang="en">The competency, learning outcome, or learning objective the target group is intended to acquire or achieve by the educational resource.</skos:definition>
     </owl:DatatypeProperty>
     
 
@@ -1778,8 +1775,8 @@ The ontology is developed in OWL in Protege 5.5.0.</terms:description>
     <owl:DatatypeProperty rdf:about="https://schema.org/version">
         <rdfs:domain rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">The version of the OER.</rdfs:comment>
         <rdfs:label xml:lang="en">version</rdfs:label>
+        <skos:definition xml:lang="en">The version of the OER.</skos:definition>
     </owl:DatatypeProperty>
     
 
@@ -1881,7 +1878,6 @@ The ontology is developed in OWL in Protege 5.5.0.</terms:description>
 
     <owl:Class rdf:about="http://purl.org/ontology/bibo/Article">
         <rdfs:subClassOf rdf:resource="https://purl.org/ontology/modalia#LearningResourceType"/>
-        <rdfs:comment xml:lang="en">Class representing OERs that are articles (e.g academic article)</rdfs:comment>
         <rdfs:label xml:lang="en">article</rdfs:label>
         <skos:definition xml:lang="en">A written composition in prose, usually nonfiction, on a specific topic, forming an independent part of a book or other publication, as a newspaper or magazine.</skos:definition>
         <skos:editorialNote>Kind of Source: Quotation. Source of definition: http://purl.org/ontology/bibo/Article</skos:editorialNote>
@@ -1962,7 +1958,7 @@ The ontology is developed in OWL in Protege 5.5.0.</terms:description>
     <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000776">
         <rdfs:isDefinedBy rdf:resource="http://semanticscience.org"/>
         <rdfs:label xml:lang="en">object</rdfs:label>
-        <skos:definition xml:lang="en">an object that is described (chemical substance, living organism, building, ...)</skos:definition>
+        <skos:definition xml:lang="en">An object that is described (chemical substance, living organism, building, ...).</skos:definition>
         <skos:example xml:lang="en">mouse cells</skos:example>
     </owl:Class>
     
@@ -1974,7 +1970,7 @@ The ontology is developed in OWL in Protege 5.5.0.</terms:description>
     <owl:Class rdf:about="http://w3id.org/nfdi4ing/metadata4ing#Method">
         <rdfs:isDefinedBy rdf:resource="http://w3id.org/nfdi4ing/metadata4ing"/>
         <rdfs:label xml:lang="en">research method</rdfs:label>
-        <skos:definition xml:lang="en">a method with which data was obtained</skos:definition>
+        <skos:definition xml:lang="en">A method with which data was obtained</skos:definition>
         <skos:example xml:lang="en">bioassay, microscopy, measurement</skos:example>
     </owl:Class>
     
@@ -1986,7 +1982,7 @@ The ontology is developed in OWL in Protege 5.5.0.</terms:description>
     <owl:Class rdf:about="http://w3id.org/nfdi4ing/metadata4ing#Tool">
         <rdfs:isDefinedBy rdf:resource="http://w3id.org/nfdi4ing/metadata4ing"/>
         <rdfs:label xml:lang="en">tool</rdfs:label>
-        <skos:definition xml:lang="en">a tool with which data was obtained (microscope, sensor, ...)</skos:definition>
+        <skos:definition xml:lang="en">A tool with which data was obtained (microscope, sensor, ...).</skos:definition>
     </owl:Class>
     
 
@@ -2041,10 +2037,9 @@ The ontology is developed in OWL in Protege 5.5.0.</terms:description>
 
 
     <owl:Class rdf:about="https://github.com/tibonto/educor#Recommendation">
-        <rdfs:comment xml:lang="en">The recommendation in advanced systems can also be an action (take a small break), an exercise, a knowledge topic, a skill, or a learning path</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://github.com/tibonto/educor"/>
         <rdfs:label xml:lang="en">recommendation</rdfs:label>
-        <skos:definition xml:lang="en">The output of the recommendation system algorithm. The system that reads user profile, content information, ratings and any available rules, in order to generate a meaningful recommendation.</skos:definition>
+        <skos:definition xml:lang="en">The output of the recommendation system algorithm based on user profile, content information, ratings and any available rules, in order to generate a meaningful recommendation.</skos:definition>
         <skos:example xml:lang="en">The recommendation is &quot;Quadratic Equation&quot;</skos:example>
     </owl:Class>
     
@@ -2208,7 +2203,7 @@ The ontology is developed in OWL in Protege 5.5.0.</terms:description>
         <rdfs:label xml:lang="en">discipline</rdfs:label>
         <rdfs:seeAlso xml:lang="en">http://purl.org/spar/fabio/SubjectDiscipline</rdfs:seeAlso>
         <skos:definition xml:lang="en">The discipline or university/college subject the learning resource belongs to.</skos:definition>
-        <skos:example xml:lang="en">e.g Engineering</skos:example>
+        <skos:example xml:lang="en">e.g., Engineering</skos:example>
     </owl:Class>
     
 
@@ -2263,10 +2258,9 @@ The ontology is developed in OWL in Protege 5.5.0.</terms:description>
 
 
     <owl:Class rdf:about="https://purl.org/ontology/modalia#LearningObjective">
-        <rdfs:comment xml:lang="en">The Learning Goal can vary depending on the personalisation level. For example a user might care to learn some specific topics and not all the skill set.</rdfs:comment>
         <rdfs:label xml:lang="en">learning objective</rdfs:label>
         <rdfs:seeAlso>https://github.com/tibonto/educor#LearningGoal</rdfs:seeAlso>
-        <skos:definition xml:lang="en">A learning objective describes the verifiable increase in knowledge, skills and attitudes in relation to a specific learning content’ (Stangl, n.d.), which should be achieved at the end of a learning process. (cf. Gundermann, 2024)</skos:definition>
+        <skos:definition xml:lang="en">A learning objective describes the verifiable increase in knowledge, skills and attitudes in relation to a specific learning content’ (Stangl, n.d.), which should be achieved at the end of a learning process. (cf. Gundermann, 2024).</skos:definition>
         <skos:editorialNote>source https://zenodo.org/records/15846806/files/Glossary_LOM-RDM_V3_eng.pdf</skos:editorialNote>
     </owl:Class>
     
@@ -2298,7 +2292,7 @@ The ontology is developed in OWL in Protege 5.5.0.</terms:description>
 
     <owl:Class rdf:about="https://purl.org/ontology/modalia#LearningResourceType">
         <rdfs:label xml:lang="en">learning resource type</rdfs:label>
-        <skos:definition xml:lang="en">The type of the learning resource can be lecture, experiment, Assessment, etc.</skos:definition>
+        <skos:definition xml:lang="en">The pedagogical type of the resource: information for the educational use. This includes the most specific type: rather textbook than book.</skos:definition>
     </owl:Class>
     
 
@@ -2346,7 +2340,6 @@ The ontology is developed in OWL in Protege 5.5.0.</terms:description>
     <owl:Class rdf:about="https://purl.org/ontology/modalia#MediaType">
         <rdfs:label xml:lang="en">media type</rdfs:label>
         <skos:definition xml:lang="en">The general type of data content encoded in a computer file in sense of the modality (text, audio, picture etc.).  The media type is to be used  for user preferences for the learning style(s). If the resource consists of more than one item with different DOIs, the MediaType is \&quot;multipart\&quot; and the relations are provided in the field \&quot;RelatedWork\&quot;.</skos:definition>
-        <skos:editorialNote>Kind of Source: Original and paraphrase. Source of definition: https://github.com/patrickmccallum/mimetype-io/blob/master/src/mimeData.json</skos:editorialNote>
     </owl:Class>
     
 
@@ -2427,7 +2420,6 @@ The ontology is developed in OWL in Protege 5.5.0.</terms:description>
 
     <owl:Class rdf:about="https://purl.org/ontology/modalia#Poster">
         <rdfs:subClassOf rdf:resource="https://purl.org/ontology/modalia#LearningResourceType"/>
-        <rdfs:comment xml:lang="en">Class representing OERs that are Posters</rdfs:comment>
         <rdfs:label xml:lang="en">poster</rdfs:label>
         <skos:definition xml:lang="en">A large, usually printed placard, bill, or announcement, often illustrated, that is posted to advertise or publicize something.</skos:definition>
         <skos:editorialNote>Kind of Source: Quotation. Source of definition: https://schema.org/Poster</skos:editorialNote>
@@ -2511,8 +2503,8 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 
     <owl:Class rdf:about="https://purl.org/ontology/modalia#RDMResource">
         <rdfs:subClassOf rdf:resource="https://github.com/tibonto/educor#EducationalResource"/>
-        <rdfs:comment xml:lang="en">OER related to research data management</rdfs:comment>
         <rdfs:label xml:lang="en">RDM resource</rdfs:label>
+        <skos:definition xml:lang="en">OER related to research data management</skos:definition>
     </owl:Class>
     
 
@@ -2522,7 +2514,7 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 
     <owl:Class rdf:about="https://purl.org/ontology/modalia#RDMSkill">
         <rdfs:subClassOf rdf:resource="https://purl.org/ontology/modalia#Skill"/>
-        <rdfs:comment xml:lang="en">Research Data Managment Skill</rdfs:comment>
+        <rdfs:comment xml:lang="en">Research Data Management Skill</rdfs:comment>
         <rdfs:label xml:lang="en">RDM skill</rdfs:label>
         <skos:definition xml:lang="en">The ability to carry out RDM tasks.</skos:definition>
     </owl:Class>
@@ -2534,7 +2526,7 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 
     <owl:Class rdf:about="https://purl.org/ontology/modalia#RDMSubjectCluster">
         <rdfs:label xml:lang="en">RDM subject cluster</rdfs:label>
-        <skos:definition xml:lang="en">Cluster of RDM topics subjects. Matches Subject area in Learning Objective Matrix version 3 ( https://zenodo.org/records/15846806 )</skos:definition>
+        <skos:definition xml:lang="en">Cluster of RDM topics subjects. Matches Subject area in Learning Objective Matrix version 3 ( https://zenodo.org/records/15846806 ).</skos:definition>
     </owl:Class>
     
 
@@ -2589,8 +2581,8 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 
 
     <owl:Class rdf:about="https://purl.org/ontology/modalia#Skill">
-        <rdfs:comment xml:lang="en">The ability to carry out specific tasks in a job.</rdfs:comment>
         <rdfs:label xml:lang="en">skill</rdfs:label>
+        <skos:definition xml:lang="en">The ability to carry out specific tasks in a job.</skos:definition>
     </owl:Class>
     
 
@@ -2636,7 +2628,7 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
     <owl:Class rdf:about="https://purl.org/ontology/modalia#TeacherRole">
         <rdfs:subClassOf rdf:resource="https://purl.org/ontology/modalia#UserRole"/>
         <rdfs:label xml:lang="en">teacher user role</rdfs:label>
-        <skos:definition xml:lang="en">a person who is using the system as a teacher.</skos:definition>
+        <skos:definition xml:lang="en">A person who is using the system as a teacher.</skos:definition>
     </owl:Class>
     
 
@@ -2649,7 +2641,6 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
         <rdfs:label xml:lang="en">teacher (school)</rdfs:label>
         <rdfs:seeAlso xml:lang="en">https://www.wikidata.org/wiki/Q37226</rdfs:seeAlso>
         <skos:definition xml:lang="en">A teacher who is working at a school for levels 1, 2, or 3 of the 2011 version of the International Standard Classification of Education structure. </skos:definition>
-        <skos:editorialNote>Kind of Source: paraphrase. Source of definition: https://uis.unesco.org/sites/default/files/documents/international-standard-classification-of-education-isced-2011-en.pdf</skos:editorialNote>
         <skos:prefLabel xml:lang="en">Teacher (School)</skos:prefLabel>
     </owl:Class>
     
@@ -2674,7 +2665,7 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
     <owl:Class rdf:about="https://purl.org/ontology/modalia#User">
         <rdfs:label xml:lang="en">user</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-        <skos:definition xml:lang="en">Registered user in the system, can have different roles e.g learner , teacher , curator, etc</skos:definition>
+        <skos:definition xml:lang="en">Registered user in the system, can have different roles e.g., learner , teacher , curator, etc</skos:definition>
     </owl:Class>
     
 
@@ -2705,7 +2696,7 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
     <owl:Class rdf:about="https://purl.org/ontology/modalia#VARKAuditory">
         <rdfs:subClassOf rdf:resource="https://github.com/tibonto/educor#LearningPreference"/>
         <rdfs:label xml:lang="en">VARK auditory</rdfs:label>
-        <skos:definition xml:lang="en">Auditory learning (music, discussion, lectures)</skos:definition>
+        <skos:definition xml:lang="en">Auditory learning (music, discussion, lectures).</skos:definition>
     </owl:Class>
     
 
@@ -2716,7 +2707,7 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
     <owl:Class rdf:about="https://purl.org/ontology/modalia#VARKKinesthetic">
         <rdfs:subClassOf rdf:resource="https://github.com/tibonto/educor#LearningPreference"/>
         <rdfs:label xml:lang="en">VARK kinesthetic</rdfs:label>
-        <skos:definition xml:lang="en">Kinesthetic learning (movement, experiments, hands-on activities)</skos:definition>
+        <skos:definition xml:lang="en">Kinesthetic learning (movement, experiments, hands-on activities).</skos:definition>
     </owl:Class>
     
 
@@ -2727,7 +2718,7 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
     <owl:Class rdf:about="https://purl.org/ontology/modalia#VARKReading">
         <rdfs:subClassOf rdf:resource="https://github.com/tibonto/educor#LearningPreference"/>
         <rdfs:label xml:lang="en">VARK reading</rdfs:label>
-        <skos:definition xml:lang="en">Reading and writing (making lists, reading textbooks, taking notes)</skos:definition>
+        <skos:definition xml:lang="en">Reading and writing (making lists, reading textbooks, taking notes).</skos:definition>
     </owl:Class>
     
 
@@ -2738,7 +2729,7 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
     <owl:Class rdf:about="https://purl.org/ontology/modalia#VARKVisual">
         <rdfs:subClassOf rdf:resource="https://github.com/tibonto/educor#LearningPreference"/>
         <rdfs:label xml:lang="en">VARK visual</rdfs:label>
-        <skos:definition xml:lang="en">Visual learning (pictures, movies, diagrams)</skos:definition>
+        <skos:definition xml:lang="en">Visual learning (pictures, movies, diagrams).</skos:definition>
     </owl:Class>
     
 
@@ -2774,7 +2765,7 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
         <rdfs:isDefinedBy rdf:resource="https://schema.org"/>
         <rdfs:label xml:lang="en">organization</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
-        <skos:definition xml:lang="en">An organization such as a school (including Universities), NGO, corporation, club, etc.</skos:definition>
+        <skos:definition xml:lang="en">An organization such as a school (including universities), NGO, corporation, club, etc.</skos:definition>
     </owl:Class>
     
 
@@ -2783,10 +2774,10 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 
 
     <owl:Class rdf:about="https://schema.org/Person">
-        <rdfs:comment xml:lang="en">can be author or contributor</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org"/>
         <rdfs:label xml:lang="en">person</rdfs:label>
         <skos:definition xml:lang="en">A person (alive, dead, undead, or fictional).</skos:definition>
+        <skos:definition xml:lang="en">can be author or contributor</skos:definition>
     </owl:Class>
     
 
@@ -2852,7 +2843,6 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 
     <owl:Class rdf:about="https://schema.org/SoftwareSourceCode">
         <rdfs:subClassOf rdf:resource="https://purl.org/ontology/modalia#LearningResourceType"/>
-        <rdfs:comment xml:lang="en">Computer programming source code. Example: Full (compile ready) solutions, code snippet samples, scripts, templates.</rdfs:comment>
         <rdfs:label xml:lang="en">software source code</rdfs:label>
         <skos:definition xml:lang="en">Source code (also referred to as source or code) is the version of software as it is originally written in plain text (i.e., human readable alphanumeric characters).</skos:definition>
         <skos:editorialNote>Kind of Source: Quotation. Source of definition: https://w3id.org/emmo#EMMO_348d39f7_6a17_49d1_9860_9b33b69b51de</skos:editorialNote>
@@ -2903,10 +2893,8 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 
     <owl:Class rdf:about="https://w3id.org/kim/hcrt/assessment">
         <rdfs:subClassOf rdf:resource="https://purl.org/ontology/modalia#LearningResourceType"/>
-        <rdfs:comment xml:lang="en">Class representing OERs that are in form of assessment of knowledge.</rdfs:comment>
         <rdfs:label xml:lang="en">assessment</rdfs:label>
         <skos:definition xml:lang="en">The description of an activity or resource used to ensure attainment of a learning objective or learning outcome.</skos:definition>
-        <skos:editorialNote>Kind of Source: paraphrase. Source of definition: ISO/IEC 19788-5:2014, 14</skos:editorialNote>
         <skos:prefLabel xml:lang="en">Assessment</skos:prefLabel>
     </owl:Class>
     
@@ -2931,7 +2919,7 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
     <owl:Class rdf:about="https://w3id.org/kim/hcrt/course">
         <rdfs:subClassOf rdf:resource="https://purl.org/ontology/modalia#LearningResourceType"/>
         <rdfs:label xml:lang="en">course</rdfs:label>
-        <skos:definition xml:lang="en">An educational course comprises one or more educational events and/or creative works which aims to build knowledge, competence or ability of learners.</skos:definition>
+        <skos:definition xml:lang="en">An educational course comprises one or more educational events and/or creative works that aim to build knowledge, competence or ability of learners.</skos:definition>
         <skos:editorialNote>Kind of Source: Modified quotation. Source of definition: https://schema.org/Course</skos:editorialNote>
         <skos:prefLabel xml:lang="en">Course</skos:prefLabel>
     </owl:Class>
@@ -2944,7 +2932,7 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
     <owl:Class rdf:about="https://w3id.org/kim/hcrt/data">
         <rdfs:subClassOf rdf:resource="https://purl.org/ontology/modalia#LearningResourceType"/>
         <rdfs:label xml:lang="en">data</rdfs:label>
-        <skos:definition xml:lang="en">Any form of digital representation, e.g. facts, measurements, records, or observations about the world. Data may be in any format or medium taking the form of text, notes, numbers, symbols, images, films, video, sound recordings, pictorial reproductions, drawing, graphical representations, procedural manuals, forms, data files, data processing algorithms, or statistical records.</skos:definition>
+        <skos:definition xml:lang="en">Any form of digital representation, e.g. facts, measurements, records, or observations about the world. Data may be in any format or medium taking the form of text, notes, numbers, symbols, images, films, video, sound recordings, pictorial reproductions, drawings, graphical representations, procedural manuals, forms, data files, data processing algorithms, or statistical records.</skos:definition>
         <skos:prefLabel xml:lang="en">Data</skos:prefLabel>
     </owl:Class>
     
@@ -2955,7 +2943,6 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 
     <owl:Class rdf:about="https://w3id.org/kim/hcrt/diagram">
         <rdfs:subClassOf rdf:resource="https://purl.org/ontology/modalia#LearningResourceType"/>
-        <rdfs:comment xml:lang="en">Class representing an OER that is a diagram</rdfs:comment>
         <rdfs:label xml:lang="en">diagram</rdfs:label>
         <skos:definition xml:lang="en"> An image that illustrates the structure and/or its component substructures and/or relations with other structures by using lines, shapes, text, and other symbols. </skos:definition>
         <skos:editorialNote>Kind of Source: Modified quotation. Source of definition: https://schema.org/diagram </skos:editorialNote>
@@ -3013,7 +3000,6 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
         <skos:editorialNote>Kind of Source: Modified quotation. Source of definition: http://purl.org/spar/fabio/ReferenceWork </skos:editorialNote>
         <skos:example xml:lang="en">glossary, encyclopedia, dictionary</skos:example>
         <skos:prefLabel xml:lang="en">Reference Work</skos:prefLabel>
-        <skos:scopeNote xml:lang="de">zum Beispiel Glossar, Enzyklopädie, Lexikonzum Beispiel Glossar, Enzyklopädie, Lexikon</skos:scopeNote>
     </owl:Class>
     
 
@@ -3060,7 +3046,7 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
     <owl:Class rdf:about="https://w3id.org/kim/hcrt/portal">
         <rdfs:subClassOf rdf:resource="https://purl.org/ontology/modalia#LearningResourceType"/>
         <rdfs:label xml:lang="en">portal</rdfs:label>
-        <skos:definition xml:lang="en">A website that integrates applications, processes and services.</skos:definition>
+        <skos:definition xml:lang="en">A website that integrates applications, processes, and services.</skos:definition>
         <skos:editorialNote>Kind of Source: Modified quotation. Source of definition: https://www.wikidata.org/wiki/Q186165</skos:editorialNote>
         <skos:prefLabel xml:lang="en">Portal</skos:prefLabel>
     </owl:Class>
@@ -3111,8 +3097,7 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
         <rdfs:subClassOf rdf:resource="https://purl.org/ontology/modalia#LearningResourceType"/>
         <rdfs:label xml:lang="en">simulation</rdfs:label>
         <skos:definition xml:lang="en">The reproducing of characteristics, conditions, and/or systems, often by the use of a model or a representation. </skos:definition>
-        <skos:editorialNote>Kind of Source: Modified quotation. Source of definition: ISO/IEC 19788-5:2014 , 32
-</skos:editorialNote>
+        <skos:editorialNote>Kind of Source: Modified quotation. Source of definition: ISO/IEC 19788-5:2014 , 32</skos:editorialNote>
         <skos:prefLabel xml:lang="en">Simulation</skos:prefLabel>
     </owl:Class>
     
@@ -3124,7 +3109,7 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
     <owl:Class rdf:about="https://w3id.org/kim/hcrt/textbook">
         <rdfs:subClassOf rdf:resource="https://purl.org/ontology/modalia#LearningResourceType"/>
         <rdfs:label xml:lang="en">textbook</rdfs:label>
-        <skos:definition xml:lang="en">Book used as standard work for the formal study of a particular subject.  </skos:definition>
+        <skos:definition xml:lang="en">A book used as standard work for the formal study of a particular subject.  </skos:definition>
         <skos:editorialNote>Kind of Source: Quotation. Source of definition: https://vocab.getty.edu/aat/300026384</skos:editorialNote>
         <skos:prefLabel xml:lang="en">Textbook</skos:prefLabel>
     </owl:Class>
@@ -3138,7 +3123,6 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
         <rdfs:subClassOf rdf:resource="https://purl.org/ontology/modalia#LearningResourceType"/>
         <rdfs:label xml:lang="en">worksheet</rdfs:label>
         <skos:definition xml:lang="en">A sheet containing exercises or tasks to be completed for the purpose of imparting knowledge, attitudes, or skills.</skos:definition>
-        <skos:editorialNote>Kind of Source: paraphrase, Original. Source of definition: http://vocab.getty.edu/page/aat/300026367</skos:editorialNote>
         <skos:prefLabel xml:lang="en">Worksheet</skos:prefLabel>
     </owl:Class>
     
@@ -3190,7 +3174,6 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
         <hasOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasOrder>
         <rdfs:label xml:lang="en">advanced beginner</rdfs:label>
         <skos:definition xml:lang="en">Advanced beginner learners are individuals who possess some basic knowledge of the field of learning and are able to recognize patterns. They require instructions and need to follow examples.</skos:definition>
-        <skos:editorialNote>Kind of Source: paraphrase. Source of definition: Dreyfus2004, Benner1982</skos:editorialNote>
     </owl:NamedIndividual>
     
 
@@ -3207,7 +3190,6 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
         <hasOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hasOrder>
         <rdfs:label xml:lang="en">competent</rdfs:label>
         <skos:definition xml:lang="en">Competent learners have gained moderate experience in the field of learning through consistent application of skills. They possess significant knowledge of the field, are able to evaluate features, and can efficiently and accurately apply various plans and rules according to situations and tasks. At this stage, problem-solving and decision-making are accompanied by emotional involvement.</skos:definition>
-        <skos:editorialNote>Kind of Source: paraphrase. Source of definition: Dreyfus2004, Benner1982</skos:editorialNote>
     </owl:NamedIndividual>
     
 
@@ -3232,7 +3214,7 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
         <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Role"/>
         <rdfs:label xml:lang="en">datacollector role</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://w3id.org/nfdi4ing/metadata4ing#DataCollector"/>
-        <skos:definition xml:lang="en">Person/institution responsible for finding or gathering/collecting data under the guidelines of the author(s) or Principal Investigator (PI). </skos:definition>
+        <skos:definition xml:lang="en">Person or institution responsible for finding or gathering/collecting data under the guidelines of the author(s) or Principal Investigator (PI). </skos:definition>
         <skos:editorialNote>Kind of Source: Quotation. Source of definition: http://w3id.org/nfdi4ing/metadata4ing/#DataCollector https://datacite-metadata-schema.readthedocs.io/en/4.6/</skos:editorialNote>
     </owl:NamedIndividual>
     
@@ -3302,7 +3284,6 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
         <hasOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</hasOrder>
         <rdfs:label xml:lang="en">expert</rdfs:label>
         <skos:definition xml:lang="en">Expert learners are individuals knowledgeable in a specialized field, particularly people with the special skill or knowledge representing mastery of a particular subject. They possess a deep and comprehensive understanding of the subject matter, enabling them to quickly and intuitively analyze new situations and tasks, and develop complex solutions without conscious deliberation.</skos:definition>
-        <skos:editorialNote>Kind of Source: Q, S. Source of definition: http://vocab.getty.edu/aat/scopeNote/49454, Dreyfus2004, Benner1982</skos:editorialNote>
     </owl:NamedIndividual>
     
 
@@ -3371,7 +3352,6 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
         <hasOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasOrder>
         <rdfs:label xml:lang="en">novice</rdfs:label>
         <skos:definition xml:lang="en">Novice learners are individuals who are unpracticed and have little to no knowledge in the field of learning. They lack a fundamental understanding of basic concepts and are not yet able to assess situations and tasks effectively. They require introductions, descriptions, and guidelines.</skos:definition>
-        <skos:editorialNote>Kind of Source: O, S. Source of definition: Dreyfus2004, Benner1982</skos:editorialNote>
     </owl:NamedIndividual>
     
 
@@ -3414,7 +3394,6 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
         <hasOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</hasOrder>
         <rdfs:label xml:lang="en">proficient</rdfs:label>
         <skos:definition xml:lang="en">Proficient learners possess a strong foundation of knowledge and skills, enabling them to perform tasks with a high degree of accuracy and efficiency. They are able to recognize patterns in situations and tasks, and can develop complex solutions through conscious deliberation.</skos:definition>
-        <skos:editorialNote>Kind of Source: paraphrase. Source of definition: Dreyfus2004, Benner1982</skos:editorialNote>
     </owl:NamedIndividual>
     
 

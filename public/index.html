@@ -17,7 +17,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://purl.org/ontology/modalia#","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://purl.org/ontology/modalia#","name":"MoDALIA Ontology", "headline":"The aim of DALIA project is to build a platform for learning material for Research Data Management (RDM) and Data Science. The platform is based on a knowledge graph. We introduce MoDalia, the base ontology of DALIA knowledge graph. Modalia inherits some modules from EduCOR. It includes also modelling of micro -credentials and certificates", "dateReleased":"04-09-2024", "dateModified":"26-11-2025", "version":"v1.0.0", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"BMFTR DALIA project"}], "contributor":[{"@type":"Person","name":"Abdelmoneim Amer Desouki","url":"https://orcid.org/0000-0003-2083-1277"},{"@type":"Person","name":"Petra C. Steiner","url":"https://orcid.org/0000-0001-8997-2620"},{"@type":"Person","name":"Jonathan Geiger","url":"https://orcid.org/0000-0002-0452-7075"},{"@type":"Person","name":"Charles Tapley Hoyt","url":"https://orcid.org/0000-0003-4423-4370"},{"@type":"Person","name":"Marc Fuhrmans","url":"https://orcid.org/0000-0002-9826-018X"},{"@type":"Person","name":"Frank Lange","url":"https://orcid.org/0000-0002-9346-6031"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://purl.org/ontology/modalia#","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://purl.org/ontology/modalia#","name":"MoDALIA Ontology", "headline":"The aim of DALIA project is to build a platform for learning material for Research Data Management (RDM) and Data Science. The platform is based on a knowledge graph. We introduce MoDalia, the base ontology of DALIA knowledge graph. Modalia inherits some modules from EduCOR. It includes also modelling of micro -credentials and certificates", "dateReleased":"04-09-2024", "dateModified":"02-12-2025", "version":"v1.0.0", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"BMFTR DALIA project"}], "contributor":[{"@type":"Person","name":"Abdelmoneim Amer Desouki","url":"https://orcid.org/0000-0003-2083-1277"},{"@type":"Person","name":"Petra C. Steiner","url":"https://orcid.org/0000-0001-8997-2620"},{"@type":"Person","name":"Jonathan Geiger","url":"https://orcid.org/0000-0002-0452-7075"},{"@type":"Person","name":"Charles Tapley Hoyt","url":"https://orcid.org/0000-0003-4423-4370"},{"@type":"Person","name":"Marc Fuhrmans","url":"https://orcid.org/0000-0002-9826-018X"},{"@type":"Person","name":"Frank Lange","url":"https://orcid.org/0000-0002-9346-6031"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -70,7 +70,7 @@ $(function(){
 
 
 <dl>
-<dt>Modified on: 26-11-2025</dt>
+<dt>Modified on: 02-12-2025</dt>
 <dt>This version:</dt>
 <dd><a href="https://purl.org/ontology/modalia#">https://purl.org/ontology/modalia#</a></dd>
 <dt>Latest version:</dt>
@@ -1334,9 +1334,6 @@ This section provides details for each class and property defined by MoDALIA.
   <h3>article<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://purl.org/ontology/bibo/Article</p>
   <div class="comment">
-   <span class="markdown">Class representing OERs that are articles (e.g academic article)</span>
-  </div>
-  <div class="comment">
    <span class="markdown">A written composition in prose, usually nonfiction, on a specific topic, forming an independent part of a book or other publication, as a newspaper or magazine.</span>
   </div>
   <dl>
@@ -1360,19 +1357,8 @@ This section provides details for each class and property defined by MoDALIA.
   <h3>assessment<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/kim/hcrt/assessment</p>
   <div class="comment">
-   <span class="markdown">Class representing OERs that are in form of assessment of knowledge.</span>
-  </div>
-  <div class="comment">
    <span class="markdown">The description of an activity or resource used to ensure attainment of a learning objective or learning outcome.</span>
   </div>
-  <dl>
-   <dt>
-    editorial note
-   </dt>
-   <dd>
-    Kind of Source: paraphrase. Source of definition: ISO/IEC 19788-5:2014, 14
-   </dd>
-  </dl>
   <dl class="description">
    <dt>
     has super-classes
@@ -1717,7 +1703,7 @@ This section provides details for each class and property defined by MoDALIA.
   <h3>course<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/kim/hcrt/course</p>
   <div class="comment">
-   <span class="markdown">An educational course comprises one or more educational events and/or creative works which aims to build knowledge, competence or ability of learners.</span>
+   <span class="markdown">An educational course comprises one or more educational events and/or creative works that aim to build knowledge, competence or ability of learners.</span>
   </div>
   <dl>
    <dt>
@@ -1752,7 +1738,7 @@ This section provides details for each class and property defined by MoDALIA.
   <h3>data<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/kim/hcrt/data</p>
   <div class="comment">
-   <span class="markdown">Any form of digital representation, e.g. facts, measurements, records, or observations about the world. Data may be in any format or medium taking the form of text, notes, numbers, symbols, images, films, video, sound recordings, pictorial reproductions, drawing, graphical representations, procedural manuals, forms, data files, data processing algorithms, or statistical records.</span>
+   <span class="markdown">Any form of digital representation, e.g. facts, measurements, records, or observations about the world. Data may be in any format or medium taking the form of text, notes, numbers, symbols, images, films, video, sound recordings, pictorial reproductions, drawings, graphical representations, procedural manuals, forms, data files, data processing algorithms, or statistical records.</span>
   </div>
   <dl class="description">
    <dt>
@@ -1826,9 +1812,6 @@ This section provides details for each class and property defined by MoDALIA.
   <h3>diagram<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/kim/hcrt/diagram</p>
   <div class="comment">
-   <span class="markdown">Class representing an OER that is a diagram</span>
-  </div>
-  <div class="comment">
    <span class="markdown"> An image that illustrates the structure and/or its component substructures and/or relations with other structures by using lines, shapes, text, and other symbols. </span>
   </div>
   <dl>
@@ -1867,7 +1850,7 @@ This section provides details for each class and property defined by MoDALIA.
     Example
    </dt>
    <dd>
-    <pre>e.g Engineering</pre>
+    <pre>e.g., Engineering</pre>
    </dd>
   </dl>
   <dl class="description">
@@ -2171,10 +2154,7 @@ This section provides details for each class and property defined by MoDALIA.
   <h3>learning objective<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://purl.org/ontology/modalia#LearningObjective</p>
   <div class="comment">
-   <span class="markdown">The Learning Goal can vary depending on the personalisation level. For example a user might care to learn some specific topics and not all the skill set.</span>
-  </div>
-  <div class="comment">
-   <span class="markdown">A learning objective describes the verifiable increase in knowledge, skills and attitudes in relation to a specific learning content’ (Stangl, n.d.), which should be achieved at the end of a learning process. (cf. Gundermann, 2024)</span>
+   <span class="markdown">A learning objective describes the verifiable increase in knowledge, skills and attitudes in relation to a specific learning content’ (Stangl, n.d.), which should be achieved at the end of a learning process. (cf. Gundermann, 2024).</span>
   </div>
   <dl>
    <dt>
@@ -2281,7 +2261,7 @@ This section provides details for each class and property defined by MoDALIA.
   <h3>learning resource type<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://purl.org/ontology/modalia#LearningResourceType</p>
   <div class="comment">
-   <span class="markdown">The type of the learning resource can be lecture, experiment, Assessment, etc.</span>
+   <span class="markdown">The pedagogical type of the resource: information for the educational use. This includes the most specific type: rather textbook than book.</span>
   </div>
   <dl class="description">
    <dt>
@@ -2416,14 +2396,6 @@ This section provides details for each class and property defined by MoDALIA.
   <div class="comment">
    <span class="markdown">The general type of data content encoded in a computer file in sense of the modality (text, audio, picture etc.). The media type is to be used for user preferences for the learning style(s). If the resource consists of more than one item with different DOIs, the MediaType is \"multipart\" and the relations are provided in the field \"RelatedWork\".</span>
   </div>
-  <dl>
-   <dt>
-    editorial note
-   </dt>
-   <dd>
-    Kind of Source: Original and paraphrase. Source of definition: https://github.com/patrickmccallum/mimetype-io/blob/master/src/mimeData.json
-   </dd>
-  </dl>
   <dl class="description">
    <dt>
     has sub-classes
@@ -2488,7 +2460,7 @@ This section provides details for each class and property defined by MoDALIA.
   <h3>object<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://semanticscience.org/resource/SIO_000776</p>
   <div class="comment">
-   <span class="markdown">an object that is described (chemical substance, living organism, building, ...)</span>
+   <span class="markdown">An object that is described (chemical substance, living organism, building, ...).</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -2519,7 +2491,7 @@ This section provides details for each class and property defined by MoDALIA.
   <h3>organization<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://schema.org/Organization</p>
   <div class="comment">
-   <span class="markdown">An organization such as a school (including Universities), NGO, corporation, club, etc.</span>
+   <span class="markdown">An organization such as a school (including universities), NGO, corporation, club, etc.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -2556,9 +2528,6 @@ This section provides details for each class and property defined by MoDALIA.
  <div class="entity" id="https://schema.org/Person">
   <h3>person<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://schema.org/Person</p>
-  <div class="comment">
-   <span class="markdown">can be author or contributor</span>
-  </div>
   <div class="comment">
    <span class="markdown">A person (alive, dead, undead, or fictional).</span>
   </div>
@@ -2661,7 +2630,7 @@ This section provides details for each class and property defined by MoDALIA.
   <h3>portal<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/kim/hcrt/portal</p>
   <div class="comment">
-   <span class="markdown">A website that integrates applications, processes and services.</span>
+   <span class="markdown">A website that integrates applications, processes, and services.</span>
   </div>
   <dl>
    <dt>
@@ -2683,9 +2652,6 @@ This section provides details for each class and property defined by MoDALIA.
  <div class="entity" id="Poster">
   <h3>poster<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://purl.org/ontology/modalia#Poster</p>
-  <div class="comment">
-   <span class="markdown">Class representing OERs that are Posters</span>
-  </div>
   <div class="comment">
    <span class="markdown">A large, usually printed placard, bill, or announcement, often illustrated, that is posted to advertise or publicize something.</span>
   </div>
@@ -2930,7 +2896,7 @@ This section provides details for each class and property defined by MoDALIA.
   <h3>RDM skill<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://purl.org/ontology/modalia#RDMSkill</p>
   <div class="comment">
-   <span class="markdown">Research Data Managment Skill</span>
+   <span class="markdown">Research Data Management Skill</span>
   </div>
   <div class="comment">
    <span class="markdown">The ability to carry out RDM tasks.</span>
@@ -2948,7 +2914,7 @@ This section provides details for each class and property defined by MoDALIA.
   <h3>RDM subject cluster<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://purl.org/ontology/modalia#RDMSubjectCluster</p>
   <div class="comment">
-   <span class="markdown">Cluster of RDM topics subjects. Matches Subject area in Learning Objective Matrix version 3 ( https://zenodo.org/records/15846806 )</span>
+   <span class="markdown">Cluster of RDM topics subjects. Matches Subject area in Learning Objective Matrix version 3 ( https://zenodo.org/records/15846806 ).</span>
   </div>
   <dl class="description">
    <dt>
@@ -2984,10 +2950,7 @@ This section provides details for each class and property defined by MoDALIA.
   <h3>recommendation<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://github.com/tibonto/educor#Recommendation</p>
   <div class="comment">
-   <span class="markdown">The recommendation in advanced systems can also be an action (take a small break), an exercise, a knowledge topic, a skill, or a learning path</span>
-  </div>
-  <div class="comment">
-   <span class="markdown">The output of the recommendation system algorithm. The system that reads user profile, content information, ratings and any available rules, in order to generate a meaningful recommendation.</span>
+   <span class="markdown">The output of the recommendation system algorithm based on user profile, content information, ratings and any available rules, in order to generate a meaningful recommendation.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -3041,7 +3004,7 @@ This section provides details for each class and property defined by MoDALIA.
   <h3>research method<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://w3id.org/nfdi4ing/metadata4ing#Method</p>
   <div class="comment">
-   <span class="markdown">a method with which data was obtained</span>
+   <span class="markdown">A method with which data was obtained</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -3237,9 +3200,6 @@ This section provides details for each class and property defined by MoDALIA.
   <h3>software source code<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://schema.org/SoftwareSourceCode</p>
   <div class="comment">
-   <span class="markdown">Computer programming source code. Example: Full (compile ready) solutions, code snippet samples, scripts, templates.</span>
-  </div>
-  <div class="comment">
    <span class="markdown">Source code (also referred to as source or code) is the version of software as it is originally written in plain text (i.e., human readable alphanumeric characters).</span>
   </div>
   <dl>
@@ -3324,14 +3284,6 @@ This section provides details for each class and property defined by MoDALIA.
   <div class="comment">
    <span class="markdown">A teacher who is working at a school for levels 1, 2, or 3 of the 2011 version of the International Standard Classification of Education structure. </span>
   </div>
-  <dl>
-   <dt>
-    editorial note
-   </dt>
-   <dd>
-    Kind of Source: paraphrase. Source of definition: https://uis.unesco.org/sites/default/files/documents/international-standard-classification-of-education-isced-2011-en.pdf
-   </dd>
-  </dl>
   <dl class="description">
    <dt>
     has super-classes
@@ -3345,7 +3297,7 @@ This section provides details for each class and property defined by MoDALIA.
   <h3>teacher user role<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://purl.org/ontology/modalia#TeacherRole</p>
   <div class="comment">
-   <span class="markdown">a person who is using the system as a teacher.</span>
+   <span class="markdown">A person who is using the system as a teacher.</span>
   </div>
   <dl class="description">
    <dt>
@@ -3375,7 +3327,7 @@ This section provides details for each class and property defined by MoDALIA.
   <h3>textbook<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/kim/hcrt/textbook</p>
   <div class="comment">
-   <span class="markdown">Book used as standard work for the formal study of a particular subject. </span>
+   <span class="markdown">A book used as standard work for the formal study of a particular subject. </span>
   </div>
   <dl>
    <dt>
@@ -3421,7 +3373,7 @@ This section provides details for each class and property defined by MoDALIA.
   <h3>tool<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://w3id.org/nfdi4ing/metadata4ing#Tool</p>
   <div class="comment">
-   <span class="markdown">a tool with which data was obtained (microscope, sensor, ...)</span>
+   <span class="markdown">A tool with which data was obtained (microscope, sensor, ...).</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -3467,7 +3419,7 @@ This section provides details for each class and property defined by MoDALIA.
   <h3>user<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://purl.org/ontology/modalia#User</p>
   <div class="comment">
-   <span class="markdown">Registered user in the system, can have different roles e.g learner , teacher , curator, etc</span>
+   <span class="markdown">Registered user in the system, can have different roles e.g., learner , teacher , curator, etc</span>
   </div>
   <dl class="description">
    <dt>
@@ -3524,7 +3476,7 @@ This section provides details for each class and property defined by MoDALIA.
   <h3>VARK auditory<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://purl.org/ontology/modalia#VARKAuditory</p>
   <div class="comment">
-   <span class="markdown">Auditory learning (music, discussion, lectures)</span>
+   <span class="markdown">Auditory learning (music, discussion, lectures).</span>
   </div>
   <dl class="description">
    <dt>
@@ -3539,7 +3491,7 @@ This section provides details for each class and property defined by MoDALIA.
   <h3>VARK kinesthetic<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://purl.org/ontology/modalia#VARKKinesthetic</p>
   <div class="comment">
-   <span class="markdown">Kinesthetic learning (movement, experiments, hands-on activities)</span>
+   <span class="markdown">Kinesthetic learning (movement, experiments, hands-on activities).</span>
   </div>
   <dl class="description">
    <dt>
@@ -3554,7 +3506,7 @@ This section provides details for each class and property defined by MoDALIA.
   <h3>VARK reading<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://purl.org/ontology/modalia#VARKReading</p>
   <div class="comment">
-   <span class="markdown">Reading and writing (making lists, reading textbooks, taking notes)</span>
+   <span class="markdown">Reading and writing (making lists, reading textbooks, taking notes).</span>
   </div>
   <dl class="description">
    <dt>
@@ -3569,7 +3521,7 @@ This section provides details for each class and property defined by MoDALIA.
   <h3>VARK visual<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://purl.org/ontology/modalia#VARKVisual</p>
   <div class="comment">
-   <span class="markdown">Visual learning (pictures, movies, diagrams)</span>
+   <span class="markdown">Visual learning (pictures, movies, diagrams).</span>
   </div>
   <dl class="description">
    <dt>
@@ -3624,14 +3576,6 @@ This section provides details for each class and property defined by MoDALIA.
   <div class="comment">
    <span class="markdown">A sheet containing exercises or tasks to be completed for the purpose of imparting knowledge, attitudes, or skills.</span>
   </div>
-  <dl>
-   <dt>
-    editorial note
-   </dt>
-   <dd>
-    Kind of Source: paraphrase, Original. Source of definition: http://vocab.getty.edu/page/aat/300026367
-   </dd>
-  </dl>
   <dl class="description">
    <dt>
     has super-classes
@@ -3755,9 +3699,6 @@ This section provides details for each class and property defined by MoDALIA.
   <h3>agent<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://id.loc.gov/ontologies/bibframe/agent</p>
   <div class="comment">
-   <span class="markdown">agent</span>
-  </div>
-  <div class="comment">
    <span class="markdown">Property that links a contribution to the agent (e.g., the person or organization making the contribution).</span>
   </div>
   <dl class="definedBy">
@@ -3812,7 +3753,7 @@ This section provides details for each class and property defined by MoDALIA.
   <h3>belongs to cluster<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://purl.org/ontology/modalia#belongsToCluster</p>
   <div class="comment">
-   <span class="markdown">relates RDM Topic to RDM Topic Cluster, similar to LZM</span>
+   <span class="markdown">A property that relates RDM Topic to RDM Topic Cluster, similar to LZM</span>
   </div>
   <div class="description">
    <dl>
@@ -3924,7 +3865,7 @@ This section provides details for each class and property defined by MoDALIA.
   <h3>competency required<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://schema.org/competencyRequired</p>
   <div class="comment">
-   <span class="markdown">prerequisits of a knowledge topic</span>
+   <span class="markdown">Prerequisites of a knowledge topic</span>
   </div>
   <div class="description">
    <dl>
@@ -3967,16 +3908,8 @@ This section provides details for each class and property defined by MoDALIA.
   <h3>continues<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/citedcat-ap/continues</p>
   <div class="comment">
-   <span class="markdown">A related resource which is the direct predecessor of the described resource. This applies to a story, a series of lessons, a serial, a journal etc. Predecessors typically form part of a common whole - such as a series of lectures.</span>
+   <span class="markdown">A related resource which is the direct predecessor of the described resource. This applies to a story, a series of lessons, a serial, a journal, etc. Predecessors typically form part of a common whole - such as a series of lectures.</span>
   </div>
-  <dl>
-   <dt>
-    editorial note
-   </dt>
-   <dd>
-    Kind of Source: S, M. Source of definition: https://github.com/europeana/metis-schema/blob/master/src/main/resources/schema_xsds/EDM-COMMON-MAIN.xsd https://datacite-metadata-schema.readthedocs.io/_/downloads/en/4.6/pdf/
-   </dd>
-  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -4139,7 +4072,7 @@ This section provides details for each class and property defined by MoDALIA.
   <h3>created by<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://purl.org/ontology/modalia#createdBy</p>
   <div class="comment">
-   <span class="markdown">a property defining the user who created a community</span>
+   <span class="markdown">A property defining the user who created a community</span>
   </div>
   <div class="description">
    <dl>
@@ -4239,7 +4172,7 @@ This section provides details for each class and property defined by MoDALIA.
   <h3>essential for<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://purl.org/ontology/modalia#essentialFor</p>
   <div class="comment">
-   <span class="markdown">a property defining the essential skills for a certain job</span>
+   <span class="markdown">A property defining the essential skills for a certain job</span>
   </div>
   <div class="description">
    <dl>
@@ -4282,7 +4215,7 @@ This section provides details for each class and property defined by MoDALIA.
   <h3>gives proficiency level<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://purl.org/ontology/modalia#givesProficiencyLevel</p>
   <div class="comment">
-   <span class="markdown">gives in sense of produce/yield/leads to proficiency level</span>
+   <span class="markdown">gives in the sense of produce/yield/leads to a proficiency level</span>
   </div>
   <div class="description">
    <dl>
@@ -4368,7 +4301,7 @@ This section provides details for each class and property defined by MoDALIA.
   <h3>has learning resource type<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://purl.org/ontology/modalia#hasLearningType</p>
   <div class="comment">
-   <span class="markdown">The pedagogical type of the resource: information for the educational use. (e.g Lecture)</span>
+   <span class="markdown">The pedagogical type of the resource: information for the educational use (e.g., lecture).</span>
   </div>
   <div class="description">
    <p><strong>has characteristics: </strong> functional</p>
@@ -4435,7 +4368,7 @@ This section provides details for each class and property defined by MoDALIA.
   <h3>has owner<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://purl.org/ontology/modalia#hasOwner</p>
   <div class="comment">
-   <span class="markdown">defines the user who owns a specific community. There is only one owner to a specific community</span>
+   <span class="markdown">Defines the user who owns a specific community. There is only one owner of a specific community</span>
   </div>
   <div class="description">
    <p><strong>has characteristics: </strong> functional</p>
@@ -4519,7 +4452,7 @@ This section provides details for each class and property defined by MoDALIA.
   <h3>has source code<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://purl.org/ontology/modalia#hasSourceCode</p>
   <div class="comment">
-   <span class="markdown">The version of text or software as it is originally written in plain text (i.e., human readable alphanumeric characters).</span>
+   <span class="markdown">The version of text or software as it was originally written in plain text (i.e., human-readable alphanumeric characters).</span>
   </div>
   <div class="description">
    <dl>
@@ -4682,16 +4615,8 @@ This section provides details for each class and property defined by MoDALIA.
   <h3>is described by<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://purl.org/ontology/modalia#isDescribedBy</p>
   <div class="comment">
-   <span class="markdown">A related resource that provides a description (detailed account) of the described resource. This can be a manual, an instruction, a documentation, a cookbook, a README file, or something similar.</span>
+   <span class="markdown">A related resource that provides a description (detailed account) of the described resource. This can be a manual, instructions, a documentation, a cookbook, a README file, or something similar.</span>
   </div>
-  <dl>
-   <dt>
-    editorial note
-   </dt>
-   <dd>
-    Kind of Source: paraphrase. Source of definition: https://datacite-metadata-schema.readthedocs.io/_/downloads/en/4.6/pdf/ http://semanticscience.org/resource/SIO_000557
-   </dd>
-  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -4748,7 +4673,7 @@ This section provides details for each class and property defined by MoDALIA.
   <h3>is identical to<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://purl.org/ontology/modalia#isIdenticalTo</p>
   <div class="comment">
-   <span class="markdown">The related work is the same as the described resource but is saved on another location, maybe another institution.</span>
+   <span class="markdown">The related work is the same as the described resource but is saved on another location, possibly at another institution.</span>
   </div>
   <dl>
    <dt>
@@ -4865,7 +4790,7 @@ This section provides details for each class and property defined by MoDALIA.
   <h3>is new version of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://purl.org/ontology/modalia#isNewVersionOf</p>
   <div class="comment">
-   <span class="markdown">The related work is a previous version, or edition of the described resource, of which the described resource has been modified or updated.</span>
+   <span class="markdown">The related work is a previous version or edition of the described resource, of which the described resource has been modified or updated.</span>
   </div>
   <dl>
    <dt>
@@ -4909,7 +4834,7 @@ This section provides details for each class and property defined by MoDALIA.
   <h3>is previous version of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://purl.org/ontology/modalia#isPreviousVersionOf</p>
   <div class="comment">
-   <span class="markdown">The related work is a new version, or edition of the described resource, where the new version has been modified or updated.</span>
+   <span class="markdown">The related work is a new version or edition of the described resource, where the new version has been modified or updated.</span>
   </div>
   <dl>
    <dt>
@@ -5009,7 +4934,7 @@ This section provides details for each class and property defined by MoDALIA.
   <h3>is version of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://purl.org/ontology/modalia#isVersionOf</p>
   <div class="comment">
-   <span class="markdown">A related resource of which the described resource is a version, or edition. Can be used instead of isPreviousVersionOf and isNewVersionOf, if the sequence of versioning is unclear. </span>
+   <span class="markdown">A related resource of which the described resource is a version or edition. Can be used instead of isPreviousVersionOf and isNewVersionOf, if the sequence of versioning is unclear. </span>
   </div>
   <dl>
    <dt>
@@ -5107,7 +5032,7 @@ This section provides details for each class and property defined by MoDALIA.
   <h3>isContinuedBy<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/citedcat-ap/isContinuedBy</p>
   <div class="comment">
-   <span class="markdown">A related resource which is the direct continuation of the described resource. This applies to a story, a series of lessons, a serial, a journal etc. Successors typically form part of a common whole - such as a series of lectures.</span>
+   <span class="markdown">A related resource which is the direct continuation of the described resource. This applies to a story, a series of lessons, a serial, a journal, etc. Successors typically form part of a common whole - such as a series of lectures.</span>
   </div>
   <dl>
    <dt>
@@ -5724,7 +5649,7 @@ This section provides details for each class and property defined by MoDALIA.
   <h3>user likes<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://purl.org/ontology/modalia#userLikes</p>
   <div class="comment">
-   <span class="markdown">the educational resource the user likes</span>
+   <span class="markdown">The educational resource the user likes.</span>
   </div>
   <div class="description">
    <dl>
@@ -5869,7 +5794,7 @@ This section provides details for each class and property defined by MoDALIA.
   <h3>citation<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://purl.org/dc/terms/bibliographicCitation</p>
   <div class="comment">
-   <span class="markdown">Citation text of the OER (APA)</span>
+   <span class="markdown">Citation text of the OER (APA).</span>
   </div>
   <div class="description">
    <dl>
@@ -6044,7 +5969,7 @@ This section provides details for each class and property defined by MoDALIA.
   <h3>fileSize<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://schema.org/fileSize</p>
   <div class="comment">
-   <span class="markdown">Size of the application / package (e.g. 18MB). In the absence of a unit (MB, KB etc.), KB will be assumed.</span>
+   <span class="markdown">Size of the application / package (e.g. 18MB).</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -6118,7 +6043,7 @@ This section provides details for each class and property defined by MoDALIA.
   <h3>has DOI<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://purl.org/ontology/modalia#hasDOI</p>
   <div class="comment">
-   <span class="markdown">the digital object identifier (DOI) of the resource if exists.</span>
+   <span class="markdown">The digital object identifier (DOI) of the resource if exists.</span>
   </div>
   <dl>
    <dt>
@@ -6192,7 +6117,7 @@ This section provides details for each class and property defined by MoDALIA.
   <h3>has ORCID ID<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://w3id.org/nfdi4ing/metadata4ing#orcidId</p>
   <div class="comment">
-   <span class="markdown">Open Researcher and Contributor ID: an identifier, that allows unique identification of a person, usually active in research.</span>
+   <span class="markdown">Open Researcher and Contributor ID: an identifier that allows unique identification of a person, usually active in research.</span>
   </div>
   <div class="description">
    <dl>
@@ -6611,7 +6536,7 @@ This section provides details for each class and property defined by MoDALIA.
   <h3>teaches<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://schema.org/teaches</p>
   <div class="comment">
-   <span class="markdown">The item being described is intended to help a person learn the competency or learning outcome defined by the referenced term.</span>
+   <span class="markdown">The competency, learning outcome, or learning objective the target group is intended to acquire or achieve by the educational resource.</span>
   </div>
   <div class="description">
    <dl>
@@ -6913,14 +6838,6 @@ This section provides details for each class and property defined by MoDALIA.
   <div class="comment">
    <span class="markdown">Advanced beginner learners are individuals who possess some basic knowledge of the field of learning and are able to recognize patterns. They require instructions and need to follow examples.</span>
   </div>
-  <dl>
-   <dt>
-    editorial note
-   </dt>
-   <dd>
-    Kind of Source: paraphrase. Source of definition: Dreyfus2004, Benner1982
-   </dd>
-  </dl>
   <dl class="description">
    <dt>
     belongs to
@@ -6948,9 +6865,6 @@ This section provides details for each class and property defined by MoDALIA.
    </dd>
    <dd>
     <a href="http://www.w3.org/2004/02/skos/core#definition" target="_blank" title="http://www.w3.org/2004/02/skos/core#definition">definition</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Advanced beginner learners are individuals who possess some basic knowledge of the field of learning and are able to recognize patterns. They require instructions and need to follow examples."@en</span>
-   </dd>
-   <dd>
-    <a href="http://www.w3.org/2004/02/skos/core#editorialNote" target="_blank" title="http://www.w3.org/2004/02/skos/core#editorialNote">editorial Note</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Kind of Source: paraphrase. Source of definition: Dreyfus2004, Benner1982"</span>
    </dd>
   </dl>
  </div>
@@ -6996,14 +6910,6 @@ This section provides details for each class and property defined by MoDALIA.
   <div class="comment">
    <span class="markdown">Competent learners have gained moderate experience in the field of learning through consistent application of skills. They possess significant knowledge of the field, are able to evaluate features, and can efficiently and accurately apply various plans and rules according to situations and tasks. At this stage, problem-solving and decision-making are accompanied by emotional involvement.</span>
   </div>
-  <dl>
-   <dt>
-    editorial note
-   </dt>
-   <dd>
-    Kind of Source: paraphrase. Source of definition: Dreyfus2004, Benner1982
-   </dd>
-  </dl>
   <dl class="description">
    <dt>
     belongs to
@@ -7031,9 +6937,6 @@ This section provides details for each class and property defined by MoDALIA.
    </dd>
    <dd>
     <a href="http://www.w3.org/2004/02/skos/core#definition" target="_blank" title="http://www.w3.org/2004/02/skos/core#definition">definition</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Competent learners have gained moderate experience in the field of learning through consistent application of skills. They possess significant knowledge of the field, are able to evaluate features, and can efficiently and accurately apply various plans and rules according to situations and tasks. At this stage, problem-solving and decision-making are accompanied by emotional involvement."@en</span>
-   </dd>
-   <dd>
-    <a href="http://www.w3.org/2004/02/skos/core#editorialNote" target="_blank" title="http://www.w3.org/2004/02/skos/core#editorialNote">editorial Note</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Kind of Source: paraphrase. Source of definition: Dreyfus2004, Benner1982"</span>
    </dd>
   </dl>
  </div>
@@ -7073,7 +6976,7 @@ This section provides details for each class and property defined by MoDALIA.
   <h3>datacollector role<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://purl.org/ontology/modalia#DataCollector</p>
   <div class="comment">
-   <span class="markdown">Person/institution responsible for finding or gathering/collecting data under the guidelines of the author(s) or Principal Investigator (PI). </span>
+   <span class="markdown">Person or institution responsible for finding or gathering/collecting data under the guidelines of the author(s) or Principal Investigator (PI). </span>
   </div>
   <dl>
    <dt>
@@ -7094,7 +6997,7 @@ This section provides details for each class and property defined by MoDALIA.
     has facts
    </dt>
    <dd>
-    <a href="http://www.w3.org/2004/02/skos/core#definition" target="_blank" title="http://www.w3.org/2004/02/skos/core#definition">definition</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Person/institution responsible for finding or gathering/collecting data under the guidelines of the author(s) or Principal Investigator (PI). "@en</span>
+    <a href="http://www.w3.org/2004/02/skos/core#definition" target="_blank" title="http://www.w3.org/2004/02/skos/core#definition">definition</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Person or institution responsible for finding or gathering/collecting data under the guidelines of the author(s) or Principal Investigator (PI). "@en</span>
    </dd>
    <dd>
     <a href="http://www.w3.org/2004/02/skos/core#editorialNote" target="_blank" title="http://www.w3.org/2004/02/skos/core#editorialNote">editorial Note</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Kind of Source: Quotation. Source of definition: http://w3id.org/nfdi4ing/metadata4ing/#DataCollector https://datacite-metadata-schema.readthedocs.io/en/4.6/"</span>
@@ -7235,14 +7138,6 @@ This section provides details for each class and property defined by MoDALIA.
   <div class="comment">
    <span class="markdown">Expert learners are individuals knowledgeable in a specialized field, particularly people with the special skill or knowledge representing mastery of a particular subject. They possess a deep and comprehensive understanding of the subject matter, enabling them to quickly and intuitively analyze new situations and tasks, and develop complex solutions without conscious deliberation.</span>
   </div>
-  <dl>
-   <dt>
-    editorial note
-   </dt>
-   <dd>
-    Kind of Source: Q, S. Source of definition: http://vocab.getty.edu/aat/scopeNote/49454, Dreyfus2004, Benner1982
-   </dd>
-  </dl>
   <dl class="description">
    <dt>
     belongs to
@@ -7270,9 +7165,6 @@ This section provides details for each class and property defined by MoDALIA.
    </dd>
    <dd>
     <a href="http://www.w3.org/2004/02/skos/core#definition" target="_blank" title="http://www.w3.org/2004/02/skos/core#definition">definition</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Expert learners are individuals knowledgeable in a specialized field, particularly people with the special skill or knowledge representing mastery of a particular subject. They possess a deep and comprehensive understanding of the subject matter, enabling them to quickly and intuitively analyze new situations and tasks, and develop complex solutions without conscious deliberation."@en</span>
-   </dd>
-   <dd>
-    <a href="http://www.w3.org/2004/02/skos/core#editorialNote" target="_blank" title="http://www.w3.org/2004/02/skos/core#editorialNote">editorial Note</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Kind of Source: Q, S. Source of definition: http://vocab.getty.edu/aat/scopeNote/49454, Dreyfus2004, Benner1982"</span>
    </dd>
   </dl>
  </div>
@@ -7410,14 +7302,6 @@ This section provides details for each class and property defined by MoDALIA.
   <div class="comment">
    <span class="markdown">Novice learners are individuals who are unpracticed and have little to no knowledge in the field of learning. They lack a fundamental understanding of basic concepts and are not yet able to assess situations and tasks effectively. They require introductions, descriptions, and guidelines.</span>
   </div>
-  <dl>
-   <dt>
-    editorial note
-   </dt>
-   <dd>
-    Kind of Source: O, S. Source of definition: Dreyfus2004, Benner1982
-   </dd>
-  </dl>
   <dl class="description">
    <dt>
     belongs to
@@ -7445,9 +7329,6 @@ This section provides details for each class and property defined by MoDALIA.
    </dd>
    <dd>
     <a href="http://www.w3.org/2004/02/skos/core#definition" target="_blank" title="http://www.w3.org/2004/02/skos/core#definition">definition</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Novice learners are individuals who are unpracticed and have little to no knowledge in the field of learning. They lack a fundamental understanding of basic concepts and are not yet able to assess situations and tasks effectively. They require introductions, descriptions, and guidelines."@en</span>
-   </dd>
-   <dd>
-    <a href="http://www.w3.org/2004/02/skos/core#editorialNote" target="_blank" title="http://www.w3.org/2004/02/skos/core#editorialNote">editorial Note</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Kind of Source: O, S. Source of definition: Dreyfus2004, Benner1982"</span>
    </dd>
   </dl>
  </div>
@@ -7521,14 +7402,6 @@ This section provides details for each class and property defined by MoDALIA.
   <div class="comment">
    <span class="markdown">Proficient learners possess a strong foundation of knowledge and skills, enabling them to perform tasks with a high degree of accuracy and efficiency. They are able to recognize patterns in situations and tasks, and can develop complex solutions through conscious deliberation.</span>
   </div>
-  <dl>
-   <dt>
-    editorial note
-   </dt>
-   <dd>
-    Kind of Source: paraphrase. Source of definition: Dreyfus2004, Benner1982
-   </dd>
-  </dl>
   <dl class="description">
    <dt>
     belongs to
@@ -7556,9 +7429,6 @@ This section provides details for each class and property defined by MoDALIA.
    </dd>
    <dd>
     <a href="http://www.w3.org/2004/02/skos/core#definition" target="_blank" title="http://www.w3.org/2004/02/skos/core#definition">definition</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Proficient learners possess a strong foundation of knowledge and skills, enabling them to perform tasks with a high degree of accuracy and efficiency. They are able to recognize patterns in situations and tasks, and can develop complex solutions through conscious deliberation."@en</span>
-   </dd>
-   <dd>
-    <a href="http://www.w3.org/2004/02/skos/core#editorialNote" target="_blank" title="http://www.w3.org/2004/02/skos/core#editorialNote">editorial Note</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Kind of Source: paraphrase. Source of definition: Dreyfus2004, Benner1982"</span>
    </dd>
   </dl>
  </div>

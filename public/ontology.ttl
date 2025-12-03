@@ -21,7 +21,7 @@
 The ontology is used for making a knowledge graph as a backend to platform for teaching, personal learning, and recommendation.
 The ontology is developed in OWL in Protege 5.5.0."""@en ;
                                       <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
-                                      <http://purl.org/dc/terms/modified> "2025-11-26" ;
+                                      <http://purl.org/dc/terms/modified> "2025-12-02" ;
                                       <http://purl.org/dc/terms/publisher> "ULB TUDa – University and State Library, Technical University, Darmstadt, Germany" ;
                                       <http://purl.org/dc/terms/title> "MoDALIA Ontology"@en ;
                                       <http://purl.org/vocab/vann/preferredNamespacePrefix> "modalia" ;
@@ -154,7 +154,6 @@ xsd:duration rdf:type rdfs:Datatype .
 <http://id.loc.gov/ontologies/bibframe/agent> rdf:type owl:ObjectProperty ;
                                               rdfs:domain <http://id.loc.gov/ontologies/bibframe/Contribution> ;
                                               rdfs:range :Contributor ;
-                                              rdfs:comment "agent"@en ;
                                               rdfs:isDefinedBy <http://id.loc.gov/ontologies/bibframe> ;
                                               <http://www.w3.org/2004/02/skos/core#definition> "Property that links a contribution to the agent (e.g., the person or organization making the contribution)." .
 
@@ -163,16 +162,16 @@ xsd:duration rdf:type rdfs:Datatype .
 <http://id.loc.gov/ontologies/bibframe/contribution> rdf:type owl:ObjectProperty ;
                                                      rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
                                                      rdfs:range <http://id.loc.gov/ontologies/bibframe/Contribution> ;
-                                                     rdfs:comment "Property linking an OER to its contribution (e.g., editing)."@en ;
-                                                     rdfs:label "contribution"@en .
+                                                     rdfs:label "contribution"@en ;
+                                                     <http://www.w3.org/2004/02/skos/core#definition> "Property linking an OER to its contribution (e.g., editing)."@en .
 
 
 ###  http://id.loc.gov/ontologies/bibframe/role
 <http://id.loc.gov/ontologies/bibframe/role> rdf:type owl:ObjectProperty ;
                                              rdfs:domain <http://id.loc.gov/ontologies/bibframe/Contribution> ;
                                              rdfs:range <http://id.loc.gov/ontologies/bibframe/Role> ;
-                                             rdfs:comment "Property that links a contribution to a role (e.g., contactPerson, editor)."@en ;
-                                             rdfs:label "role"@en .
+                                             rdfs:label "role"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "Property that links a contribution to a role (e.g., contactPerson, editor)."@en .
 
 
 ###  http://purl.org/dc/terms/hasPart
@@ -224,8 +223,8 @@ xsd:duration rdf:type rdfs:Datatype .
 <http://purl.org/dc/terms/language> rdf:type owl:ObjectProperty ;
                                     rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
                                     rdfs:range <http://lexvo.org/ontology#Language> ;
-                                    rdfs:comment "language of resource"@en ;
-                                    rdfs:label "language"@en .
+                                    rdfs:label "language"@en ;
+                                    <http://www.w3.org/2004/02/skos/core#definition> "language of resource"@en .
 
 
 ###  http://purl.org/dc/terms/references
@@ -297,8 +296,8 @@ xsd:duration rdf:type rdfs:Datatype .
 :belongsToCluster rdf:type owl:ObjectProperty ;
                   rdfs:domain :RDMTopic ;
                   rdfs:range :RDMSubjectCluster ;
-                  rdfs:comment "relates RDM Topic to RDM Topic Cluster, similar to LZM"@en ;
-                  rdfs:label "belongs to cluster"@en .
+                  rdfs:label "belongs to cluster"@en ;
+                  <http://www.w3.org/2004/02/skos/core#definition> "A property that relates RDM Topic to RDM Topic Cluster, similar to LZM"@en .
 
 
 ###  https://purl.org/ontology/modalia#belongsToLearningPath
@@ -352,8 +351,8 @@ xsd:duration rdf:type rdfs:Datatype .
 :coversManagementOfDataKind rdf:type owl:ObjectProperty ;
                             rdfs:domain :RDMResource ;
                             rdfs:range <http://edamontology.org/data_0006> ;
-                            rdfs:comment "A property that relates a RDMResource to data kind being managed"@en ;
-                            rdfs:label "covers management of data kind"@en .
+                            rdfs:label "covers management of data kind"@en ;
+                            <http://www.w3.org/2004/02/skos/core#definition> "A property that relates a RDMResource to data kind being managed"@en .
 
 
 ###  https://purl.org/ontology/modalia#coversManagementOfDataObtainedWithMethod
@@ -374,8 +373,8 @@ xsd:duration rdf:type rdfs:Datatype .
 :createdBy rdf:type owl:ObjectProperty ;
            rdfs:domain :Community ;
            rdfs:range :User ;
-           rdfs:comment "a property defining the user who created a community"@en ;
-           rdfs:label "created by"@en .
+           rdfs:label "created by"@en ;
+           <http://www.w3.org/2004/02/skos/core#definition> "A property defining the user who created a community"@en .
 
 
 ###  https://purl.org/ontology/modalia#definesLearningPath
@@ -411,16 +410,16 @@ xsd:duration rdf:type rdfs:Datatype .
 :essentialFor rdf:type owl:ObjectProperty ;
               rdfs:domain :Skill ;
               rdfs:range :Job ;
-              rdfs:comment "a property defining the essential skills for a certain job"@en ;
-              rdfs:label "essential for"@en .
+              rdfs:label "essential for"@en ;
+              <http://www.w3.org/2004/02/skos/core#definition> "A property defining the essential skills for a certain job"@en .
 
 
 ###  https://purl.org/ontology/modalia#givesProficiencyLevel
 :givesProficiencyLevel rdf:type owl:ObjectProperty ;
                        rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
                        rdfs:range :Proficiency ;
-                       rdfs:comment "gives in sense of produce/yield/leads to proficiency level"@en ;
-                       rdfs:label "gives proficiency level"@en .
+                       rdfs:label "gives proficiency level"@en ;
+                       <http://www.w3.org/2004/02/skos/core#definition> "gives in the sense of produce/yield/leads to a proficiency level"@en .
 
 
 ###  https://purl.org/ontology/modalia#hasLearningObjective
@@ -455,7 +454,7 @@ xsd:duration rdf:type rdfs:Datatype .
                  rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
                  rdfs:range :LearningResourceType ;
                  rdfs:label "has learning resource type"@en ;
-                 <http://www.w3.org/2004/02/skos/core#definition> "The pedagogical type of the resource: information for the educational use. (e.g Lecture)"@en .
+                 <http://www.w3.org/2004/02/skos/core#definition> "The pedagogical type of the resource: information for the educational use (e.g., lecture)."@en .
 
 
 ###  https://purl.org/ontology/modalia#hasMediaType
@@ -479,7 +478,7 @@ xsd:duration rdf:type rdfs:Datatype .
           rdfs:domain :Community ;
           rdfs:range :User ;
           rdfs:label "has owner"@en ;
-          <http://www.w3.org/2004/02/skos/core#definition> "defines the user who owns a specific community. There is only one owner to a specific community"@en .
+          <http://www.w3.org/2004/02/skos/core#definition> "Defines the user who owns a specific community. There is only one owner of a specific community"@en .
 
 
 ###  https://purl.org/ontology/modalia#hasQuality
@@ -508,7 +507,7 @@ xsd:duration rdf:type rdfs:Datatype .
                rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
                rdfs:range owl:Thing ;
                rdfs:label "has source code"@en ;
-               <http://www.w3.org/2004/02/skos/core#definition> "The version of text or software as it is originally written in plain text (i.e., human readable alphanumeric characters)."@en .
+               <http://www.w3.org/2004/02/skos/core#definition> "The version of text or software as it was originally written in plain text (i.e., human-readable alphanumeric characters)."@en .
 
 
 ###  https://purl.org/ontology/modalia#hasTargetGroup
@@ -543,8 +542,7 @@ xsd:duration rdf:type rdfs:Datatype .
                rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
                rdfs:range owl:Thing ;
                rdfs:label "is described by"@en ;
-               <http://www.w3.org/2004/02/skos/core#definition> "A related resource that provides a description (detailed account) of the described resource. This can be a manual, an instruction, a documentation, a cookbook, a README file, or something similar."@en ;
-               <http://www.w3.org/2004/02/skos/core#editorialNote> "Kind of Source: paraphrase. Source of definition: https://datacite-metadata-schema.readthedocs.io/_/downloads/en/4.6/pdf/ http://semanticscience.org/resource/SIO_000557" ;
+               <http://www.w3.org/2004/02/skos/core#definition> "A related resource that provides a description (detailed account) of the described resource. This can be a manual, instructions, a documentation, a cookbook, a README file, or something similar."@en ;
                <http://www.w3.org/2004/02/skos/core#prefLabel> "Is described by"@en .
 
 
@@ -563,7 +561,7 @@ xsd:duration rdf:type rdfs:Datatype .
                rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
                rdfs:range <https://github.com/tibonto/educor#EducationalResource> ;
                rdfs:label "is identical to"@en ;
-               <http://www.w3.org/2004/02/skos/core#definition> "The related work is the same as the described resource but is saved on another location, maybe another institution."@en ;
+               <http://www.w3.org/2004/02/skos/core#definition> "The related work is the same as the described resource but is saved on another location, possibly at another institution."@en ;
                <http://www.w3.org/2004/02/skos/core#editorialNote> "Kind of Source: Modified quotation. Source of definition: https://datacite-metadata-schema.readthedocs.io/_/downloads/en/4.6/pdf" ;
                <http://www.w3.org/2004/02/skos/core#prefLabel> "Is identical to"@en .
 
@@ -601,7 +599,7 @@ xsd:duration rdf:type rdfs:Datatype .
                 rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
                 rdfs:range <https://github.com/tibonto/educor#EducationalResource> ;
                 rdfs:label "is new version of"@en ;
-                <http://www.w3.org/2004/02/skos/core#definition> "The related work is a previous version, or edition of the described resource, of which the described resource has been modified or updated."@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "The related work is a previous version or edition of the described resource, of which the described resource has been modified or updated."@en ;
                 <http://www.w3.org/2004/02/skos/core#editorialNote> "Kind of Source: Modified quotation. Source of definition: https://datacite-metadata-schema.readthedocs.io/_/downloads/en/4.6/pdf  http://purl.org/dc/terms/isVersionOf" ;
                 <http://www.w3.org/2004/02/skos/core#prefLabel> "Is new version of"@en .
 
@@ -612,7 +610,7 @@ xsd:duration rdf:type rdfs:Datatype .
                      rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
                      rdfs:range <https://github.com/tibonto/educor#EducationalResource> ;
                      rdfs:label "is previous version of"@en ;
-                     <http://www.w3.org/2004/02/skos/core#definition> "The related work is a new version, or edition of the described resource, where the new version has been modified or updated."@en ;
+                     <http://www.w3.org/2004/02/skos/core#definition> "The related work is a new version or edition of the described resource, where the new version has been modified or updated."@en ;
                      <http://www.w3.org/2004/02/skos/core#editorialNote> "Kind of Source: Modified quotation. Source of definition: https://datacite-metadata-schema.readthedocs.io/_/downloads/en/4.6/pdf  http://purl.org/dc/terms/isVersionOf" ;
                      <http://www.w3.org/2004/02/skos/core#prefLabel> "Is previous version of"@en .
 
@@ -642,7 +640,7 @@ xsd:duration rdf:type rdfs:Datatype .
              rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
              rdfs:range <https://github.com/tibonto/educor#EducationalResource> ;
              rdfs:label "is version of"@en ;
-             <http://www.w3.org/2004/02/skos/core#definition> "A related resource of which the described resource is a version, or edition. Can be used instead of isPreviousVersionOf and isNewVersionOf, if the sequence of versioning is unclear. "@en ;
+             <http://www.w3.org/2004/02/skos/core#definition> "A related resource of which the described resource is a version or edition. Can be used instead of isPreviousVersionOf and isNewVersionOf, if the sequence of versioning is unclear. "@en ;
              <http://www.w3.org/2004/02/skos/core#editorialNote> "Kind of Source: Modified quotation. Source of definition:  http://purl.org/dc/terms/isVersionOf" ;
              <http://www.w3.org/2004/02/skos/core#prefLabel> "Is version of"@en .
 
@@ -651,8 +649,8 @@ xsd:duration rdf:type rdfs:Datatype .
 :optionalFor rdf:type owl:ObjectProperty ;
              rdfs:domain :Skill ;
              rdfs:range :Job ;
-             rdfs:comment "Defines the skills that are optional for a certain job"@en ;
-             rdfs:label "optional for"@en .
+             rdfs:label "optional for"@en ;
+             <http://www.w3.org/2004/02/skos/core#definition> "Defines the skills that are optional for a certain job"@en .
 
 
 ###  https://purl.org/ontology/modalia#recommender
@@ -729,7 +727,7 @@ xsd:duration rdf:type rdfs:Datatype .
            rdfs:domain :User ;
            rdfs:range <https://github.com/tibonto/educor#EducationalResource> ;
            rdfs:label "user likes"@en ;
-           <http://www.w3.org/2004/02/skos/core#definition> "the educational resource the user likes"@en .
+           <http://www.w3.org/2004/02/skos/core#definition> "The educational resource the user likes."@en .
 
 
 ###  https://purl.org/ontology/modalia#userViews
@@ -744,8 +742,8 @@ xsd:duration rdf:type rdfs:Datatype .
 <https://schema.org/author> rdf:type owl:ObjectProperty ;
                             rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
                             rdfs:range rdf:List ;
-                            rdfs:comment "Property linking an OER  to a list of authors."@en ;
-                            rdfs:label "author"@en .
+                            rdfs:label "author"@en ;
+                            <http://www.w3.org/2004/02/skos/core#definition> "Property linking an OER to a list of authors."@en .
 
 
 ###  https://schema.org/competencyRequired
@@ -753,7 +751,7 @@ xsd:duration rdf:type rdfs:Datatype .
                                         rdfs:domain <https://github.com/tibonto/educor#KnowledgeTopic> ;
                                         rdfs:range <https://github.com/tibonto/educor#KnowledgeTopic> ;
                                         rdfs:label "competency required"@en ;
-                                        <http://www.w3.org/2004/02/skos/core#definition> "prerequisits of a knowledge topic"@en .
+                                        <http://www.w3.org/2004/02/skos/core#definition> "Prerequisites of a knowledge topic"@en .
 
 
 ###  https://schema.org/isBasedOn
@@ -781,8 +779,7 @@ xsd:duration rdf:type rdfs:Datatype .
                                          rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
                                          rdfs:range <https://github.com/tibonto/educor#EducationalResource> ;
                                          rdfs:label "continues"@en ;
-                                         <http://www.w3.org/2004/02/skos/core#definition> "A related resource which is the direct predecessor of the described resource. This applies to a story, a series of lessons, a serial, a journal etc. Predecessors typically form part of a common whole - such as a  series of lectures."@en ;
-                                         <http://www.w3.org/2004/02/skos/core#editorialNote> "Kind of Source: S, M. Source of definition: https://github.com/europeana/metis-schema/blob/master/src/main/resources/schema_xsds/EDM-COMMON-MAIN.xsd  https://datacite-metadata-schema.readthedocs.io/_/downloads/en/4.6/pdf/" ;
+                                         <http://www.w3.org/2004/02/skos/core#definition> "A related resource which is the direct predecessor of the described resource. This applies to a story, a series of lessons, a serial, a journal, etc. Predecessors typically form part of a common whole - such as a  series of lectures."@en ;
                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Continues"@en .
 
 
@@ -800,7 +797,7 @@ xsd:duration rdf:type rdfs:Datatype .
                                              rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
                                              rdfs:range <https://github.com/tibonto/educor#EducationalResource> ;
                                              rdfs:label "isContinuedBy"@en ;
-                                             <http://www.w3.org/2004/02/skos/core#definition> "A related resource which is the direct continuation of the described resource. This applies to a story, a series of lessons, a serial, a journal etc. Successors typically form part of a common whole - such as a  series of lectures."@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "A related resource which is the direct continuation of the described resource. This applies to a story, a series of lessons, a serial, a journal, etc. Successors typically form part of a common whole - such as a  series of lectures."@en ;
                                              <http://www.w3.org/2004/02/skos/core#editorialNote> "Kind of Source: Modified quotation. Source of definition: https://github.com/europeana/metis-schema/blob/master/src/main/resources/schema_xsds/EDM-COMMON-MAIN.xsd" ;
                                              <http://www.w3.org/2004/02/skos/core#prefLabel> "Is continued by"@en .
 
@@ -835,8 +832,8 @@ xsd:duration rdf:type rdfs:Datatype .
 <http://purl.org/dc/terms/bibliographicCitation> rdf:type owl:DatatypeProperty ;
                                                  rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
                                                  rdfs:range xsd:string ;
-                                                 rdfs:comment "Citation text of the OER (APA)"@en ;
-                                                 rdfs:label "citation"@en .
+                                                 rdfs:label "citation"@en ;
+                                                 <http://www.w3.org/2004/02/skos/core#definition> "Citation text of the OER (APA)."@en .
 
 
 ###  http://purl.org/dc/terms/format
@@ -885,7 +882,7 @@ xsd:duration rdf:type rdfs:Datatype .
                                                                                    )
                                                             ] ;
                                                  rdfs:isDefinedBy "http://w3id.org/nfdi4ing/metadata4ing" ;
-                                                 <http://www.w3.org/2004/02/skos/core#altLabel> "has research organization registry id"@en ,
+                                                 <http://www.w3.org/2004/02/skos/core#altLabel> "has research organization registry ID"@en ,
                                                                                                 "hat Forschungsorganisationsid"@de ;
                                                  <http://www.w3.org/2004/02/skos/core#definition> "A Research Organization Registry identifier that persistently and uniquely identifies a research organization"@en ,
                                                                                                   "Ein persistenter Identifikator für Organisationen, vergeben durch die Research Organization Registry, der eine Forschungseinrichtung eindeutig identifiziert."@de ;
@@ -906,7 +903,7 @@ xsd:duration rdf:type rdfs:Datatype .
                                                                                     ]
                                                                                   )
                                                            ] ;
-                                                <http://www.w3.org/2004/02/skos/core#definition> "Open Researcher and Contributor ID: an identifier, that allows unique identification of a person, usually active in research."@en ,
+                                                <http://www.w3.org/2004/02/skos/core#definition> "Open Researcher and Contributor ID: an identifier that allows unique identification of a person, usually active in research."@en ,
                                                                                                  "Open Researcher and Contributor ID: ein persistenter Identifikator, der eine in der Forschung tätige Person eindeutig identifiziert."@de ;
                                                 <http://www.w3.org/2004/02/skos/core#prefLabel> "has ORCID ID"@en ,
                                                                                                 "hat ORCID ID"@de .
@@ -916,9 +913,9 @@ xsd:duration rdf:type rdfs:Datatype .
 :authorUnordered rdf:type owl:DatatypeProperty ;
                  rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
                  rdfs:range xsd:string ;
-                 rdfs:comment "A property that links the OER to its authors in unordered way (according to order in authorship list) to improve performance."@en ,
-                              "authorUnordered"@en ;
-                 rdfs:label "has author (unordered)"@en .
+                 rdfs:label "has author (unordered)"@en ;
+                 <http://www.w3.org/2004/02/skos/core#definition> "A property that links the OER to its authors in unordered way (according to order in authorship list) to improve performance."@en ,
+                                                                  "authorUnordered"@en .
 
 
 ###  https://purl.org/ontology/modalia#commentDate
@@ -949,8 +946,8 @@ xsd:duration rdf:type rdfs:Datatype .
 :hasDOI rdf:type owl:DatatypeProperty ;
         rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
         rdfs:range xsd:string ;
-        rdfs:comment "the digital object identifier (DOI) of the resource if exists."@en ;
         rdfs:label "has DOI"@en ;
+        <http://www.w3.org/2004/02/skos/core#definition> "The digital object identifier (DOI) of the resource if exists."@en ;
         <http://www.w3.org/2004/02/skos/core#example> "example: 10.18450/dataman/90" .
 
 
@@ -1010,8 +1007,8 @@ xsd:duration rdf:type rdfs:Datatype .
 <https://schema.org/abstract> rdf:type owl:DatatypeProperty ;
                               rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
                               rdfs:range xsd:string ;
-                              rdfs:comment "An abstract is a short description that summarizes an OER."@en ;
-                              rdfs:label "abstract"@en .
+                              rdfs:label "abstract"@en ;
+                              <http://www.w3.org/2004/02/skos/core#definition> "An abstract is a short description that summarizes an OER."@en .
 
 
 ###  https://schema.org/accessibilityFeature
@@ -1036,8 +1033,8 @@ xsd:duration rdf:type rdfs:Datatype .
 <https://schema.org/downloadUrl> rdf:type owl:DatatypeProperty ;
                                  rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
                                  rdfs:range xsd:anyURI ;
-                                 rdfs:comment "If the OER can be downloaded, URL to download it."@en ;
-                                 rdfs:label "has download URL"@en .
+                                 rdfs:label "has download URL"@en ;
+                                 <http://www.w3.org/2004/02/skos/core#definition> "If the OER can be downloaded, URL to download it."@en .
 
 
 ###  https://schema.org/email
@@ -1056,8 +1053,8 @@ xsd:duration rdf:type rdfs:Datatype .
                                                           )
                                             ] ;
                                 rdfs:range xsd:string ;
-                                rdfs:comment "Family name. In the U.S., the last name of a Person."@en ;
-                                rdfs:label "familyName"@en .
+                                rdfs:label "familyName"@en ;
+                                <http://www.w3.org/2004/02/skos/core#definition> "Family name. In the U.S., the last name of a Person."@en .
 
 
 ###  https://schema.org/fileSize
@@ -1066,7 +1063,7 @@ xsd:duration rdf:type rdfs:Datatype .
                               rdfs:range xsd:string ;
                               rdfs:isDefinedBy "https://schema.org/"@en ;
                               rdfs:label "fileSize"@en ;
-                              <http://www.w3.org/2004/02/skos/core#definition> "Size of the application / package (e.g. 18MB). In the absence of a unit (MB, KB etc.), KB will be assumed."@en .
+                              <http://www.w3.org/2004/02/skos/core#definition> "Size of the application / package (e.g. 18MB)."@en .
 
 
 ###  https://schema.org/givenName
@@ -1116,8 +1113,8 @@ xsd:duration rdf:type rdfs:Datatype .
 <https://schema.org/keywords> rdf:type owl:DatatypeProperty ;
                               rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
                               rdfs:range xsd:string ;
-                              rdfs:comment "Keywords or tags used to describe some item."@en ;
-                              rdfs:label "keywords"@en .
+                              rdfs:label "keywords"@en ;
+                              <http://www.w3.org/2004/02/skos/core#definition> "Keywords or tags used to describe some item."@en .
 
 
 ###  https://schema.org/ratingValue
@@ -1147,8 +1144,8 @@ xsd:duration rdf:type rdfs:Datatype .
 <https://schema.org/teaches> rdf:type owl:DatatypeProperty ;
                              rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
                              rdfs:range xsd:string ;
-                             rdfs:comment "The item being described is intended to help a person learn the competency or learning outcome defined by the referenced term."@en ;
-                             rdfs:label "teaches"@en .
+                             rdfs:label "teaches"@en ;
+                             <http://www.w3.org/2004/02/skos/core#definition> "The competency, learning outcome, or learning objective the target group is intended to acquire or achieve by the educational resource."@en .
 
 
 ###  https://schema.org/timeRequired
@@ -1172,8 +1169,8 @@ xsd:duration rdf:type rdfs:Datatype .
 <https://schema.org/version> rdf:type owl:DatatypeProperty ;
                              rdfs:domain <https://github.com/tibonto/educor#EducationalResource> ;
                              rdfs:range xsd:string ;
-                             rdfs:comment "The version of the OER."@en ;
-                             rdfs:label "version"@en .
+                             rdfs:label "version"@en ;
+                             <http://www.w3.org/2004/02/skos/core#definition> "The version of the OER."@en .
 
 
 #################################################################
@@ -1235,7 +1232,6 @@ xsd:duration rdf:type rdfs:Datatype .
 ###  http://purl.org/ontology/bibo/Article
 <http://purl.org/ontology/bibo/Article> rdf:type owl:Class ;
                                         rdfs:subClassOf :LearningResourceType ;
-                                        rdfs:comment "Class representing OERs that are articles (e.g academic article)"@en ;
                                         rdfs:label "article"@en ;
                                         <http://www.w3.org/2004/02/skos/core#definition> "A written composition in prose, usually nonfiction, on a specific topic, forming an independent part of a book or other publication, as a newspaper or magazine."@en ;
                                         <http://www.w3.org/2004/02/skos/core#editorialNote> "Kind of Source: Quotation. Source of definition: http://purl.org/ontology/bibo/Article" ;
@@ -1292,7 +1288,7 @@ xsd:duration rdf:type rdfs:Datatype .
 <http://semanticscience.org/resource/SIO_000776> rdf:type owl:Class ;
                                                  rdfs:isDefinedBy <http://semanticscience.org> ;
                                                  rdfs:label "object"@en ;
-                                                 <http://www.w3.org/2004/02/skos/core#definition> "an object that is described (chemical substance, living organism, building, ...)"@en ;
+                                                 <http://www.w3.org/2004/02/skos/core#definition> "An object that is described (chemical substance, living organism, building, ...)."@en ;
                                                  <http://www.w3.org/2004/02/skos/core#example> "mouse cells"@en .
 
 
@@ -1300,7 +1296,7 @@ xsd:duration rdf:type rdfs:Datatype .
 <http://w3id.org/nfdi4ing/metadata4ing#Method> rdf:type owl:Class ;
                                                rdfs:isDefinedBy <http://w3id.org/nfdi4ing/metadata4ing> ;
                                                rdfs:label "research method"@en ;
-                                               <http://www.w3.org/2004/02/skos/core#definition> "a method with which data was obtained"@en ;
+                                               <http://www.w3.org/2004/02/skos/core#definition> "A method with which data was obtained"@en ;
                                                <http://www.w3.org/2004/02/skos/core#example> "bioassay, microscopy, measurement"@en .
 
 
@@ -1308,7 +1304,7 @@ xsd:duration rdf:type rdfs:Datatype .
 <http://w3id.org/nfdi4ing/metadata4ing#Tool> rdf:type owl:Class ;
                                              rdfs:isDefinedBy <http://w3id.org/nfdi4ing/metadata4ing> ;
                                              rdfs:label "tool"@en ;
-                                             <http://www.w3.org/2004/02/skos/core#definition> "a tool with which data was obtained (microscope, sensor, ...)"@en .
+                                             <http://www.w3.org/2004/02/skos/core#definition> "A tool with which data was obtained (microscope, sensor, ...)."@en .
 
 
 ###  http://www.w3.org/1999/02/22-rdf-syntax-ns#List
@@ -1344,10 +1340,9 @@ rdf:List rdf:type owl:Class .
 
 ###  https://github.com/tibonto/educor#Recommendation
 <https://github.com/tibonto/educor#Recommendation> rdf:type owl:Class ;
-                                                   rdfs:comment "The recommendation in advanced systems can also be an action (take a small break), an exercise, a knowledge topic, a skill, or a learning path"@en ;
                                                    rdfs:isDefinedBy <https://github.com/tibonto/educor> ;
                                                    rdfs:label "recommendation"@en ;
-                                                   <http://www.w3.org/2004/02/skos/core#definition> "The output of the recommendation system algorithm. The system that reads user profile, content information, ratings and any available rules, in order to generate a meaningful recommendation."@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "The output of the recommendation system algorithm based on user profile, content information, ratings and any available rules, in order to generate a meaningful recommendation."@en ;
                                                    <http://www.w3.org/2004/02/skos/core#example> "The recommendation is \"Quadratic Equation\""@en .
 
 
@@ -1456,7 +1451,7 @@ rdf:List rdf:type owl:Class .
             rdfs:label "discipline"@en ;
             rdfs:seeAlso "http://purl.org/spar/fabio/SubjectDiscipline"@en ;
             <http://www.w3.org/2004/02/skos/core#definition> "The discipline or university/college subject the learning resource belongs to."@en ;
-            <http://www.w3.org/2004/02/skos/core#example> "e.g Engineering"@en .
+            <http://www.w3.org/2004/02/skos/core#example> "e.g., Engineering"@en .
 
 
 ###  https://purl.org/ontology/modalia#EducationalLevel
@@ -1491,10 +1486,9 @@ rdf:List rdf:type owl:Class .
 
 ###  https://purl.org/ontology/modalia#LearningObjective
 :LearningObjective rdf:type owl:Class ;
-                   rdfs:comment "The Learning Goal can vary depending on the personalisation level. For example a user might care to learn some specific topics and not all the skill set."@en ;
                    rdfs:label "learning objective"@en ;
                    rdfs:seeAlso "https://github.com/tibonto/educor#LearningGoal" ;
-                   <http://www.w3.org/2004/02/skos/core#definition> "A learning objective describes the verifiable increase in knowledge, skills and attitudes in relation to a specific learning content’ (Stangl, n.d.), which should be achieved at the end of a learning process. (cf. Gundermann, 2024)"@en ;
+                   <http://www.w3.org/2004/02/skos/core#definition> "A learning objective describes the verifiable increase in knowledge, skills and attitudes in relation to a specific learning content’ (Stangl, n.d.), which should be achieved at the end of a learning process. (cf. Gundermann, 2024)."@en ;
                    <http://www.w3.org/2004/02/skos/core#editorialNote> "source https://zenodo.org/records/15846806/files/Glossary_LOM-RDM_V3_eng.pdf" .
 
 
@@ -1514,7 +1508,7 @@ rdf:List rdf:type owl:Class .
 ###  https://purl.org/ontology/modalia#LearningResourceType
 :LearningResourceType rdf:type owl:Class ;
                       rdfs:label "learning resource type"@en ;
-                      <http://www.w3.org/2004/02/skos/core#definition> "The type of the learning resource can be lecture, experiment, Assessment, etc."@en .
+                      <http://www.w3.org/2004/02/skos/core#definition> "The pedagogical type of the resource: information for the educational use. This includes the most specific type: rather textbook than book."@en .
 
 
 ###  https://purl.org/ontology/modalia#Lecture
@@ -1545,8 +1539,7 @@ rdf:List rdf:type owl:Class .
 ###  https://purl.org/ontology/modalia#MediaType
 :MediaType rdf:type owl:Class ;
            rdfs:label "media type"@en ;
-           <http://www.w3.org/2004/02/skos/core#definition> "The general type of data content encoded in a computer file in sense of the modality (text, audio, picture etc.).  The media type is to be used  for user preferences for the learning style(s). If the resource consists of more than one item with different DOIs, the MediaType is \\\"multipart\\\" and the relations are provided in the field \\\"RelatedWork\\\"."@en ;
-           <http://www.w3.org/2004/02/skos/core#editorialNote> "Kind of Source: Original and paraphrase. Source of definition: https://github.com/patrickmccallum/mimetype-io/blob/master/src/mimeData.json" .
+           <http://www.w3.org/2004/02/skos/core#definition> "The general type of data content encoded in a computer file in sense of the modality (text, audio, picture etc.).  The media type is to be used  for user preferences for the learning style(s). If the resource consists of more than one item with different DOIs, the MediaType is \\\"multipart\\\" and the relations are provided in the field \\\"RelatedWork\\\"."@en .
 
 
 ###  https://purl.org/ontology/modalia#Multipart
@@ -1599,7 +1592,6 @@ rdf:List rdf:type owl:Class .
 ###  https://purl.org/ontology/modalia#Poster
 :Poster rdf:type owl:Class ;
         rdfs:subClassOf :LearningResourceType ;
-        rdfs:comment "Class representing OERs that are Posters"@en ;
         rdfs:label "poster"@en ;
         <http://www.w3.org/2004/02/skos/core#definition> "A large, usually printed placard, bill, or announcement, often illustrated, that is posted to advertise or publicize something."@en ;
         <http://www.w3.org/2004/02/skos/core#editorialNote> "Kind of Source: Quotation. Source of definition: https://schema.org/Poster" ;
@@ -1656,14 +1648,14 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 ###  https://purl.org/ontology/modalia#RDMResource
 :RDMResource rdf:type owl:Class ;
              rdfs:subClassOf <https://github.com/tibonto/educor#EducationalResource> ;
-             rdfs:comment "OER related to research data management"@en ;
-             rdfs:label "RDM resource"@en .
+             rdfs:label "RDM resource"@en ;
+             <http://www.w3.org/2004/02/skos/core#definition> "OER related to research data management"@en .
 
 
 ###  https://purl.org/ontology/modalia#RDMSkill
 :RDMSkill rdf:type owl:Class ;
           rdfs:subClassOf :Skill ;
-          rdfs:comment "Research Data Managment Skill"@en ;
+          rdfs:comment "Research Data Management Skill"@en ;
           rdfs:label "RDM skill"@en ;
           <http://www.w3.org/2004/02/skos/core#definition> "The ability to carry out RDM tasks."@en .
 
@@ -1671,7 +1663,7 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 ###  https://purl.org/ontology/modalia#RDMSubjectCluster
 :RDMSubjectCluster rdf:type owl:Class ;
                    rdfs:label "RDM subject cluster"@en ;
-                   <http://www.w3.org/2004/02/skos/core#definition> "Cluster of RDM topics subjects. Matches Subject area in Learning Objective Matrix version 3 ( https://zenodo.org/records/15846806 )"@en .
+                   <http://www.w3.org/2004/02/skos/core#definition> "Cluster of RDM topics subjects. Matches Subject area in Learning Objective Matrix version 3 ( https://zenodo.org/records/15846806 )."@en .
 
 
 ###  https://purl.org/ontology/modalia#RDMTopic
@@ -1706,8 +1698,8 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 
 ###  https://purl.org/ontology/modalia#Skill
 :Skill rdf:type owl:Class ;
-       rdfs:comment "The ability to carry out specific tasks in a job."@en ;
-       rdfs:label "skill"@en .
+       rdfs:label "skill"@en ;
+       <http://www.w3.org/2004/02/skos/core#definition> "The ability to carry out specific tasks in a job."@en .
 
 
 ###  https://purl.org/ontology/modalia#StudentSchool
@@ -1737,7 +1729,7 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 :TeacherRole rdf:type owl:Class ;
              rdfs:subClassOf :UserRole ;
              rdfs:label "teacher user role"@en ;
-             <http://www.w3.org/2004/02/skos/core#definition> "a person who is using the system as a teacher."@en .
+             <http://www.w3.org/2004/02/skos/core#definition> "A person who is using the system as a teacher."@en .
 
 
 ###  https://purl.org/ontology/modalia#TeacherSchool
@@ -1746,7 +1738,6 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
                rdfs:label "teacher (school)"@en ;
                rdfs:seeAlso "https://www.wikidata.org/wiki/Q37226"@en ;
                <http://www.w3.org/2004/02/skos/core#definition> "A teacher who is working at a school for levels 1, 2, or 3 of the 2011 version of the International Standard Classification of Education structure. "@en ;
-               <http://www.w3.org/2004/02/skos/core#editorialNote> "Kind of Source: paraphrase. Source of definition: https://uis.unesco.org/sites/default/files/documents/international-standard-classification-of-education-isced-2011-en.pdf" ;
                <http://www.w3.org/2004/02/skos/core#prefLabel> "Teacher (School)"@en .
 
 
@@ -1763,7 +1754,7 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 :User rdf:type owl:Class ;
       rdfs:label "user"@en ;
       rdfs:seeAlso <http://xmlns.com/foaf/0.1/Person> ;
-      <http://www.w3.org/2004/02/skos/core#definition> "Registered user in the system, can have different roles e.g learner , teacher , curator, etc"@en .
+      <http://www.w3.org/2004/02/skos/core#definition> "Registered user in the system, can have different roles e.g., learner , teacher , curator, etc"@en .
 
 
 ###  https://purl.org/ontology/modalia#UserComment
@@ -1782,28 +1773,28 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 :VARKAuditory rdf:type owl:Class ;
               rdfs:subClassOf <https://github.com/tibonto/educor#LearningPreference> ;
               rdfs:label "VARK auditory"@en ;
-              <http://www.w3.org/2004/02/skos/core#definition> "Auditory learning (music, discussion, lectures)"@en .
+              <http://www.w3.org/2004/02/skos/core#definition> "Auditory learning (music, discussion, lectures)."@en .
 
 
 ###  https://purl.org/ontology/modalia#VARKKinesthetic
 :VARKKinesthetic rdf:type owl:Class ;
                  rdfs:subClassOf <https://github.com/tibonto/educor#LearningPreference> ;
                  rdfs:label "VARK kinesthetic"@en ;
-                 <http://www.w3.org/2004/02/skos/core#definition> "Kinesthetic learning (movement, experiments, hands-on activities)"@en .
+                 <http://www.w3.org/2004/02/skos/core#definition> "Kinesthetic learning (movement, experiments, hands-on activities)."@en .
 
 
 ###  https://purl.org/ontology/modalia#VARKReading
 :VARKReading rdf:type owl:Class ;
              rdfs:subClassOf <https://github.com/tibonto/educor#LearningPreference> ;
              rdfs:label "VARK reading"@en ;
-             <http://www.w3.org/2004/02/skos/core#definition> "Reading and writing (making lists, reading textbooks, taking notes)"@en .
+             <http://www.w3.org/2004/02/skos/core#definition> "Reading and writing (making lists, reading textbooks, taking notes)."@en .
 
 
 ###  https://purl.org/ontology/modalia#VARKVisual
 :VARKVisual rdf:type owl:Class ;
             rdfs:subClassOf <https://github.com/tibonto/educor#LearningPreference> ;
             rdfs:label "VARK visual"@en ;
-            <http://www.w3.org/2004/02/skos/core#definition> "Visual learning (pictures, movies, diagrams)"@en .
+            <http://www.w3.org/2004/02/skos/core#definition> "Visual learning (pictures, movies, diagrams)."@en .
 
 
 ###  https://schema.org/AudioObject
@@ -1827,15 +1818,15 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
                                   rdfs:isDefinedBy <https://schema.org> ;
                                   rdfs:label "organization"@en ;
                                   rdfs:seeAlso <http://xmlns.com/foaf/0.1/Organization> ;
-                                  <http://www.w3.org/2004/02/skos/core#definition> "An organization such as a school (including Universities), NGO, corporation, club, etc."@en .
+                                  <http://www.w3.org/2004/02/skos/core#definition> "An organization such as a school (including universities), NGO, corporation, club, etc."@en .
 
 
 ###  https://schema.org/Person
 <https://schema.org/Person> rdf:type owl:Class ;
-                            rdfs:comment "can be author or contributor"@en ;
                             rdfs:isDefinedBy <https://schema.org> ;
                             rdfs:label "person"@en ;
-                            <http://www.w3.org/2004/02/skos/core#definition> "A person (alive, dead, undead, or fictional)."@en .
+                            <http://www.w3.org/2004/02/skos/core#definition> "A person (alive, dead, undead, or fictional)."@en ,
+                                                                             "can be author or contributor"@en .
 
 
 ###  https://schema.org/PodcastEpisode
@@ -1877,7 +1868,6 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 ###  https://schema.org/SoftwareSourceCode
 <https://schema.org/SoftwareSourceCode> rdf:type owl:Class ;
                                         rdfs:subClassOf :LearningResourceType ;
-                                        rdfs:comment "Computer programming source code. Example: Full (compile ready) solutions, code snippet samples, scripts, templates."@en ;
                                         rdfs:label "software source code"@en ;
                                         <http://www.w3.org/2004/02/skos/core#definition> "Source code (also referred to as source or code) is the version of software as it is originally written in plain text (i.e., human readable alphanumeric characters)."@en ;
                                         <http://www.w3.org/2004/02/skos/core#editorialNote> "Kind of Source: Quotation. Source of definition: https://w3id.org/emmo#EMMO_348d39f7_6a17_49d1_9860_9b33b69b51de" ;
@@ -1912,10 +1902,8 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 ###  https://w3id.org/kim/hcrt/assessment
 <https://w3id.org/kim/hcrt/assessment> rdf:type owl:Class ;
                                        rdfs:subClassOf :LearningResourceType ;
-                                       rdfs:comment "Class representing OERs that are in form of assessment of knowledge."@en ;
                                        rdfs:label "assessment"@en ;
                                        <http://www.w3.org/2004/02/skos/core#definition> "The description of an activity or resource used to ensure attainment of a learning objective or learning outcome."@en ;
-                                       <http://www.w3.org/2004/02/skos/core#editorialNote> "Kind of Source: paraphrase. Source of definition: ISO/IEC 19788-5:2014, 14" ;
                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Assessment"@en .
 
 
@@ -1932,7 +1920,7 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 <https://w3id.org/kim/hcrt/course> rdf:type owl:Class ;
                                    rdfs:subClassOf :LearningResourceType ;
                                    rdfs:label "course"@en ;
-                                   <http://www.w3.org/2004/02/skos/core#definition> "An educational course comprises one or more educational events and/or creative works which aims to build knowledge, competence or ability of learners."@en ;
+                                   <http://www.w3.org/2004/02/skos/core#definition> "An educational course comprises one or more educational events and/or creative works that aim to build knowledge, competence or ability of learners."@en ;
                                    <http://www.w3.org/2004/02/skos/core#editorialNote> "Kind of Source: Modified quotation. Source of definition: https://schema.org/Course" ;
                                    <http://www.w3.org/2004/02/skos/core#prefLabel> "Course"@en .
 
@@ -1941,14 +1929,13 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 <https://w3id.org/kim/hcrt/data> rdf:type owl:Class ;
                                  rdfs:subClassOf :LearningResourceType ;
                                  rdfs:label "data"@en ;
-                                 <http://www.w3.org/2004/02/skos/core#definition> "Any form of digital representation, e.g. facts, measurements, records, or observations about the world. Data may be in any format or medium taking the form of text, notes, numbers, symbols, images, films, video, sound recordings, pictorial reproductions, drawing, graphical representations, procedural manuals, forms, data files, data processing algorithms, or statistical records."@en ;
+                                 <http://www.w3.org/2004/02/skos/core#definition> "Any form of digital representation, e.g. facts, measurements, records, or observations about the world. Data may be in any format or medium taking the form of text, notes, numbers, symbols, images, films, video, sound recordings, pictorial reproductions, drawings, graphical representations, procedural manuals, forms, data files, data processing algorithms, or statistical records."@en ;
                                  <http://www.w3.org/2004/02/skos/core#prefLabel> "Data"@en .
 
 
 ###  https://w3id.org/kim/hcrt/diagram
 <https://w3id.org/kim/hcrt/diagram> rdf:type owl:Class ;
                                     rdfs:subClassOf :LearningResourceType ;
-                                    rdfs:comment "Class representing an OER that is a diagram"@en ;
                                     rdfs:label "diagram"@en ;
                                     <http://www.w3.org/2004/02/skos/core#definition> " An image that illustrates the structure and/or its component substructures and/or relations with other structures by using lines, shapes, text, and other symbols. "@en ;
                                     <http://www.w3.org/2004/02/skos/core#editorialNote> "Kind of Source: Modified quotation. Source of definition: https://schema.org/diagram " ;
@@ -1989,8 +1976,7 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
                                   <http://www.w3.org/2004/02/skos/core#definition> "Material to be consulted for authoritative factual information, such as a dictionary, encyclopaedia, entry, handbook, standard, or field guide, or an informative web page such as an institutional, research group or project home page."@en ;
                                   <http://www.w3.org/2004/02/skos/core#editorialNote> "Kind of Source: Modified quotation. Source of definition: http://purl.org/spar/fabio/ReferenceWork " ;
                                   <http://www.w3.org/2004/02/skos/core#example> "glossary, encyclopedia, dictionary"@en ;
-                                  <http://www.w3.org/2004/02/skos/core#prefLabel> "Reference Work"@en ;
-                                  <http://www.w3.org/2004/02/skos/core#scopeNote> "zum Beispiel Glossar, Enzyklopädie, Lexikonzum Beispiel Glossar, Enzyklopädie, Lexikon"@de .
+                                  <http://www.w3.org/2004/02/skos/core#prefLabel> "Reference Work"@en .
 
 
 ###  https://w3id.org/kim/hcrt/lesson_plan
@@ -2021,7 +2007,7 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 <https://w3id.org/kim/hcrt/portal> rdf:type owl:Class ;
                                    rdfs:subClassOf :LearningResourceType ;
                                    rdfs:label "portal"@en ;
-                                   <http://www.w3.org/2004/02/skos/core#definition> "A website that integrates applications, processes and services."@en ;
+                                   <http://www.w3.org/2004/02/skos/core#definition> "A website that integrates applications, processes, and services."@en ;
                                    <http://www.w3.org/2004/02/skos/core#editorialNote> "Kind of Source: Modified quotation. Source of definition: https://www.wikidata.org/wiki/Q186165" ;
                                    <http://www.w3.org/2004/02/skos/core#prefLabel> "Portal"@en .
 
@@ -2056,8 +2042,7 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
                                        rdfs:subClassOf :LearningResourceType ;
                                        rdfs:label "simulation"@en ;
                                        <http://www.w3.org/2004/02/skos/core#definition> "The reproducing of characteristics, conditions, and/or systems, often by the use of a model or a representation. "@en ;
-                                       <http://www.w3.org/2004/02/skos/core#editorialNote> """Kind of Source: Modified quotation. Source of definition: ISO/IEC 19788-5:2014 , 32
-""" ;
+                                       <http://www.w3.org/2004/02/skos/core#editorialNote> "Kind of Source: Modified quotation. Source of definition: ISO/IEC 19788-5:2014 , 32" ;
                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Simulation"@en .
 
 
@@ -2065,7 +2050,7 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
 <https://w3id.org/kim/hcrt/textbook> rdf:type owl:Class ;
                                      rdfs:subClassOf :LearningResourceType ;
                                      rdfs:label "textbook"@en ;
-                                     <http://www.w3.org/2004/02/skos/core#definition> "Book used as standard work for the formal study of a particular subject.  "@en ;
+                                     <http://www.w3.org/2004/02/skos/core#definition> "A book used as standard work for the formal study of a particular subject.  "@en ;
                                      <http://www.w3.org/2004/02/skos/core#editorialNote> "Kind of Source: Quotation. Source of definition: https://vocab.getty.edu/aat/300026384" ;
                                      <http://www.w3.org/2004/02/skos/core#prefLabel> "Textbook"@en .
 
@@ -2075,7 +2060,6 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
                                       rdfs:subClassOf :LearningResourceType ;
                                       rdfs:label "worksheet"@en ;
                                       <http://www.w3.org/2004/02/skos/core#definition> "A sheet containing exercises or tasks to be completed for the purpose of imparting knowledge, attitudes, or skills."@en ;
-                                      <http://www.w3.org/2004/02/skos/core#editorialNote> "Kind of Source: paraphrase, Original. Source of definition: http://vocab.getty.edu/page/aat/300026367" ;
                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "Worksheet"@en .
 
 
@@ -2106,8 +2090,7 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
           :isMoreProficientThan :Novice ;
           :hasOrder 2 ;
           rdfs:label "advanced beginner"@en ;
-          <http://www.w3.org/2004/02/skos/core#definition> "Advanced beginner learners are individuals who possess some basic knowledge of the field of learning and are able to recognize patterns. They require instructions and need to follow examples."@en ;
-          <http://www.w3.org/2004/02/skos/core#editorialNote> "Kind of Source: paraphrase. Source of definition: Dreyfus2004, Benner1982" .
+          <http://www.w3.org/2004/02/skos/core#definition> "Advanced beginner learners are individuals who possess some basic knowledge of the field of learning and are able to recognize patterns. They require instructions and need to follow examples."@en .
 
 
 ###  https://purl.org/ontology/modalia#Competent
@@ -2119,8 +2102,7 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
                                  :Novice ;
            :hasOrder 3 ;
            rdfs:label "competent"@en ;
-           <http://www.w3.org/2004/02/skos/core#definition> "Competent learners have gained moderate experience in the field of learning through consistent application of skills. They possess significant knowledge of the field, are able to evaluate features, and can efficiently and accurately apply various plans and rules according to situations and tasks. At this stage, problem-solving and decision-making are accompanied by emotional involvement."@en ;
-           <http://www.w3.org/2004/02/skos/core#editorialNote> "Kind of Source: paraphrase. Source of definition: Dreyfus2004, Benner1982" .
+           <http://www.w3.org/2004/02/skos/core#definition> "Competent learners have gained moderate experience in the field of learning through consistent application of skills. They possess significant knowledge of the field, are able to evaluate features, and can efficiently and accurately apply various plans and rules according to situations and tasks. At this stage, problem-solving and decision-making are accompanied by emotional involvement."@en .
 
 
 ###  https://purl.org/ontology/modalia#ContactPerson
@@ -2137,7 +2119,7 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
                         <http://id.loc.gov/ontologies/bibframe/Role> ;
                rdfs:label "datacollector role"@en ;
                rdfs:seeAlso <http://w3id.org/nfdi4ing/metadata4ing#DataCollector> ;
-               <http://www.w3.org/2004/02/skos/core#definition> "Person/institution responsible for finding or gathering/collecting data under the guidelines of the author(s) or Principal Investigator (PI). "@en ;
+               <http://www.w3.org/2004/02/skos/core#definition> "Person or institution responsible for finding or gathering/collecting data under the guidelines of the author(s) or Principal Investigator (PI). "@en ;
                <http://www.w3.org/2004/02/skos/core#editorialNote> "Kind of Source: Quotation. Source of definition: http://w3id.org/nfdi4ing/metadata4ing/#DataCollector https://datacite-metadata-schema.readthedocs.io/en/4.6/" .
 
 
@@ -2186,8 +2168,7 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
                               :Proficient ;
         :hasOrder 5 ;
         rdfs:label "expert"@en ;
-        <http://www.w3.org/2004/02/skos/core#definition> "Expert learners are individuals knowledgeable in a specialized field, particularly people with the special skill or knowledge representing mastery of a particular subject. They possess a deep and comprehensive understanding of the subject matter, enabling them to quickly and intuitively analyze new situations and tasks, and develop complex solutions without conscious deliberation."@en ;
-        <http://www.w3.org/2004/02/skos/core#editorialNote> "Kind of Source: Q, S. Source of definition: http://vocab.getty.edu/aat/scopeNote/49454, Dreyfus2004, Benner1982" .
+        <http://www.w3.org/2004/02/skos/core#definition> "Expert learners are individuals knowledgeable in a specialized field, particularly people with the special skill or knowledge representing mastery of a particular subject. They possess a deep and comprehensive understanding of the subject matter, enabling them to quickly and intuitively analyze new situations and tasks, and develop complex solutions without conscious deliberation."@en .
 
 
 ###  https://purl.org/ontology/modalia#HostingInstitution
@@ -2235,8 +2216,7 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
                               :Proficient ;
         :hasOrder 1 ;
         rdfs:label "novice"@en ;
-        <http://www.w3.org/2004/02/skos/core#definition> "Novice learners are individuals who are unpracticed and have little to no knowledge in the field of learning. They lack a fundamental understanding of basic concepts and are not yet able to assess situations and tasks effectively. They require introductions, descriptions, and guidelines."@en ;
-        <http://www.w3.org/2004/02/skos/core#editorialNote> "Kind of Source: O, S. Source of definition: Dreyfus2004, Benner1982" .
+        <http://www.w3.org/2004/02/skos/core#definition> "Novice learners are individuals who are unpracticed and have little to no knowledge in the field of learning. They lack a fundamental understanding of basic concepts and are not yet able to assess situations and tasks effectively. They require introductions, descriptions, and guidelines."@en .
 
 
 ###  https://purl.org/ontology/modalia#OtherRole
@@ -2266,8 +2246,7 @@ The five stages of proficiency in the novice to expert model are: novice, advanc
                                   :Novice ;
             :hasOrder 4 ;
             rdfs:label "proficient"@en ;
-            <http://www.w3.org/2004/02/skos/core#definition> "Proficient learners possess a strong foundation of knowledge and skills, enabling them to perform tasks with a high degree of accuracy and efficiency. They are able to recognize patterns in situations and tasks, and can develop complex solutions through conscious deliberation."@en ;
-            <http://www.w3.org/2004/02/skos/core#editorialNote> "Kind of Source: paraphrase. Source of definition: Dreyfus2004, Benner1982" .
+            <http://www.w3.org/2004/02/skos/core#definition> "Proficient learners possess a strong foundation of knowledge and skills, enabling them to perform tasks with a high degree of accuracy and efficiency. They are able to recognize patterns in situations and tasks, and can develop complex solutions through conscious deliberation."@en .
 
 
 ###  https://purl.org/ontology/modalia#ProjectLeader
