@@ -2,14 +2,13 @@
 
 ## Getting started
 
-The Ontology is in Work packages 11 and 12 in the project proposal. Initial
-draft based on the six use cases in the proposal and EduCor.
+This ontology was developed under Work Packages 11 and 12 of the project proposal. The initial draft integrates requirements from
+ the six core use cases in the proposal and the EduCor ontology.
 
-- Added Job class and relations with Skill class (essentialFor and optionalFor)
 
 ## Documentation
 
-Documentation of MoDALIA is found
+The documentation of MoDALIA ontology is available
 [here](https://dalia.pages.rwth-aachen.de/dalia-ontology/index-en.html)
 
 ## Patterns
@@ -20,10 +19,8 @@ Documentation of MoDALIA is found
 - D Learning path pattern
 - E Recommendation pattern
 - F User profile pattern
-- G Assessment pattern
-- H User enrollment pattern
-- I User role pattern
-- J Community pattern
+- G Community pattern
+- H Domain-specific-data pattern
 
 ## Contributing
 
@@ -52,7 +49,7 @@ $ npx --yes prettier --write --prose-wrap always "**/*.md"
 - Ilkou, E. et al. (2021). EduCOR: An Educational and Career-Oriented
   Recommendation Ontology. In: Hotho, A., et al. The Semantic Web ISWC 2021.
   ISWC 2021. Lecture Notes in Computer Science(), vol 12922. Springer, Cham.
-  https://doi.org/10.1007/978-3-030-88361-4_32
+  https://doi.org/10.1007/978-3-030-88361-4_32 .
 - Koutsomitropoulos, Dimitrios A.; Solomou, Georgia D. (2018): A learning object
   ontology repository to support annotation and discovery of educational
   resources using semantic thesauri. In IFLA journal 44 (1), pp.4–22.
