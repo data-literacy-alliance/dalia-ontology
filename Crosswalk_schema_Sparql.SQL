@@ -15,7 +15,7 @@ CONSTRUCT {
             schema:license ?license ;
             schema:url ?url ;
             schema:author ?author ;
-            schema:dateCreated ?dateCreated ;
+            schema:datePublished ?datePublished ;
             schema:timeRequired ?timeRequired ;
             schema:identifier ?identifier ;
             schema:learningResourceType ?mediaType ;
@@ -25,8 +25,8 @@ CONSTRUCT {
 			schema:provider ?providerName ;
 			schema:abstract ?abstract ;
 			schema:teaches ?objectives ;
-			schema:image ?img ;
-			schema:citation ?citation .
+			schema:image ?img .
+			# --schema:citation ?citation .
             #--bf:contribution ?contribution .
 
   #?contribution a bf:Contribution ;
@@ -52,7 +52,7 @@ WHERE {
 				bind(concat(?gn,' ',?fn) as ?author)}
 	optional { ?resource dcterms:language ?language . }
 	optional{?resource dcterms:license ?license }
-	optional{?resource dcterms:created ?dateCreated .}
+	optional{?resource schema:datePublished ?datePublished .}
 	optional{?resource schema:timeRequired ?timeRequired }
 	optional{?resource schema:identifier ?identifier }
 	optional{?resource  mo:hasMediaType ?mediaType }
