@@ -1,58 +1,49 @@
-## Q1: How to retrieve OERs from multiple sources for a learning goal?
-
+# 1. Educational Resource Identification:
+## CQ1- Which resources are of a specific learning resource type (e.g., Tutorial, Book, Case Study, Lecture)?
 ```sparql
-SELECT * 
+SELECT ?resource ?title
 WHERE {
-    ?learningpath ec:hasLearningGoal ?lg .
-    ?learningpath ec:consistsOfKnowledge ?Kt .
-    ?Kt ec:hasLearningResource ?Lo .
+    ?resource rdf:type ec:EducationalResource .
+    ?resource modalia:hasLearningType modalia:Tutorial .
+    ?resource dcterms:title ?title . 
 }
+ORDER BY ?title
 ```
 
-## Q2(Q4): How to retrieve required OERs for a certain job skill?
-
+## CQ2- Which resources are targeted at a given target group (e.g., BachelorStudent, PhDStudent)?
 ```sparql
-SELECT * 
+SELECT ?resource ?title
 WHERE {
-    ?Skill requiresKnowledgeTopic ?Kt .
-    ?Kt hasLearningResource ?Lo .
+    ?resource rdf:type ec:EducationalResource .
+    ?resource modalia:hasTargetGroup modalia:PhDStudent .
+    ?resource dcterms:title ?title . 
 }
+ORDER BY ?title
 ```
 
-## Q5: What is required to generate a personalized learning path?
-
-## Q6: How to personalize a learning recommendation based on a user’s psychological state?
-
-## Q7: How to provide OERs for a specific Job? (Use case 4 in proposal)
-
+## CQ3- Which resources are associated with a media type (Video, Text, Code)?
 ```sparql
-SELECT * 
+SELECT ?resource ?title
 WHERE {
-    ?skill ec:essentialFor ?job .
-	?skill ec:requiresKnowledgeTopic ?Kt .
-	?Kt ec:hasLearningResource ?Lo .
+    ?resource rdf:type ec:EducationalResource .
+    ?resource modalia:hasMediaType schema:VideoObject .
+    ?resource dcterms:title ?title . 
 }
+ORDER BY ?title
 ```
 
-### https://github.com/tibonto/educor#LearningGoal
+# 2. RDM and Skill Relationships
+## CQ4- Which resources teach a specific skill (e.g., RDM skill)?
+## CQ5- Which resources require a minimum proficiency level of ‘competent’ or above?
+## CQ6- Given a job and its required skills, which OERs teach or support those skills?
+## CQ7- Which RDM topics are covered by resources in the ontology?
 
-Benner's Novice to Expert The five stages of proficiency in the novice to expert
-model are: novice, advanced beginner, competent, proficient, and expert (Benner,
-1982).
+# 3. Learning Paths and Objectives
+## CQ8- Which educational resources are part of a given learning path?
 
-```
-:LearningGoal rdf:type owl:Class ;
-              rdfs:comment "The Learning Goal can vary depending on the personalisation level. For example a user might care to learn some specific topics and not all the skill set."@en ;
-              rdfs:label "LearningGoal"@en ;
-              <http://www.w3.org/2004/02/skos/core#definition> "The reach point of a learning path. The completion of a set of knowledge topics which can lead to mastering a skill. The learning goal in our design can be a Skill or a Knowledge Topic"@en ;
-              <http://www.w3.org/2004/02/skos/core#example> "A learning goal could be the skill \"Python Programming\" or the last Knowledge Topic in this skill set the \"Virtual environments in Python\""@en .
-```
 
-### https://w3id.org/ccso/ccso#LearningOutcome
+# 4. User
+## CQ9- Which resources has a user bookmarked, viewed, or liked?
 
-```ttl
-<https://w3id.org/ccso/ccso#LearningOutcome> rdf:type owl:Class ;
-	 rdfs:label "LearningOutcome"@en ;
-	 <http://www.w3.org/2004/02/skos/core#definition> "The learning outcomes and demonstrable skills or knowledge that will be acquired by a student as a result of the learning goal. It is found in text format."@en ;
-	 <http://www.w3.org/2004/02/skos/core#example> "The learning outcome of \"Python Programming\" could be  \"The student understands the syntax and semantics of the basic Python language elements.\""@en .
-```
+# 5. Domain-specific Questions
+## CQ10- Which OERs address the documentation of a given kind of data (e.g., BioAssay data or (S)Tensor data)?
