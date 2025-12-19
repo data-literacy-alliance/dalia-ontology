@@ -33,9 +33,29 @@ ORDER BY ?title
 ```
 
 ## CQ4- Which resources require a minimum proficiency level of ‘competent’ or above?
+```sparql
+SELECT ?resource ?title
+WHERE {
+    ?resource rdf:type ec:EducationalResource .
+    ?resource modalia:requiresProficiencyLevel modalia:Competent .
+    ?resource dcterms:title ?title .
+}
+ORDER BY ?title
+```
 
 # 2. RDM and Skill Relationships
 ## CQ5- Which resources teach a specific skill (e.g., RDM skill)?
+```sparql
+SELECT ?resource ?title
+WHERE {
+	?resource rdf:type ec:EducationalResource .
+    ?Skill :requiresKnowledge ?Kt .
+    ?resource :covers ?Kt .
+    ?resource dcterms:title ?title .
+}
+ORDER BY ?title
+```
+
 ## CQ6- Given a job and its required skills, which OERs teach or support those skills?
 ## CQ7- Which RDM topics are covered by resources in the KG?
 
