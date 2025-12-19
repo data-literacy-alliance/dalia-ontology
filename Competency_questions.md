@@ -32,11 +32,12 @@ WHERE {
 ORDER BY ?title
 ```
 
+## CQ4- Which resources require a minimum proficiency level of ‘competent’ or above?
+
 # 2. RDM and Skill Relationships
-## CQ4- Which resources teach a specific skill (e.g., RDM skill)?
-## CQ5- Which resources require a minimum proficiency level of ‘competent’ or above?
+## CQ5- Which resources teach a specific skill (e.g., RDM skill)?
 ## CQ6- Given a job and its required skills, which OERs teach or support those skills?
-## CQ7- Which RDM topics are covered by resources in the ontology?
+## CQ7- Which RDM topics are covered by resources in the KG?
 
 # 3. Learning Paths and Objectives
 ## CQ8- Which educational resources are part of a given learning path?
